@@ -47,8 +47,9 @@
 		7518EA3F20D5EB6F003A11F1 /* BTRIRCDDBGateways.m in Sources */ = {isa = PBXBuildFile; fileRef = 7518EA3E20D5EB6F003A11F1 /* BTRIRCDDBGateways.m */; };
 		7518EA4220D5EB84003A11F1 /* BTRDExtraLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 7518EA4020D5EB83003A11F1 /* BTRDExtraLink.m */; };
 		755A49F020CDF28B003A11F1 /* DV3KVocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755A49EF20CDF28B003A11F1 /* DV3KVocoder.swift */; };
+		75DBE1A120D85EE6003A11F1 /* ReflectorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DBE1A020D85EE6003A11F1 /* ReflectorsViewController.swift */; };
 		75E07AC320CD7D54003A11F1 /* BTRAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E07AC220CD7D54003A11F1 /* BTRAppDelegate.swift */; };
-		75E07AC520CD7D54003A11F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E07AC420CD7D54003A11F1 /* ViewController.swift */; };
+		75E07AC520CD7D54003A11F1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E07AC420CD7D54003A11F1 /* MainViewController.swift */; };
 		75E07ACA20CD7D56003A11F1 /* NewMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75E07AC820CD7D56003A11F1 /* NewMain.storyboard */; };
 		75E07AD620CD7D56003A11F1 /* DStarDelightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E07AD520CD7D56003A11F1 /* DStarDelightUITests.swift */; };
 /* End PBXBuildFile section */
@@ -148,9 +149,10 @@
 		758A971920D5E664003A11F1 /* MASShortcut.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MASShortcut.m; sourceTree = "<group>"; };
 		758A971A20D5E664003A11F1 /* MASShortcut.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASShortcut.h; sourceTree = "<group>"; };
 		758A971D20D5E664003A11F1 /* MASDictionaryTransformer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASDictionaryTransformer.h; sourceTree = "<group>"; };
+		75DBE1A020D85EE6003A11F1 /* ReflectorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectorsViewController.swift; sourceTree = "<group>"; };
 		75E07ABF20CD7D54003A11F1 /* DStarDelight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DStarDelight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75E07AC220CD7D54003A11F1 /* BTRAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTRAppDelegate.swift; sourceTree = "<group>"; };
-		75E07AC420CD7D54003A11F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		75E07AC420CD7D54003A11F1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		75E07ACB20CD7D56003A11F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75E07ACC20CD7D56003A11F1 /* DStarDelight.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DStarDelight.entitlements; sourceTree = "<group>"; };
 		75E07AD120CD7D56003A11F1 /* DStarDelightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DStarDelightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -339,10 +341,11 @@
 			isa = PBXGroup;
 			children = (
 				75E07AC220CD7D54003A11F1 /* BTRAppDelegate.swift */,
-				75E07AC420CD7D54003A11F1 /* ViewController.swift */,
+				75E07AC420CD7D54003A11F1 /* MainViewController.swift */,
 				75E07AC820CD7D56003A11F1 /* NewMain.storyboard */,
 				755A49EF20CDF28B003A11F1 /* DV3KVocoder.swift */,
 				75174DD620D07BB5003A11F1 /* BTRAudioHandler.swift */,
+				75DBE1A020D85EE6003A11F1 /* ReflectorsViewController.swift */,
 			);
 			path = DStarDelight;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 				7518EA3920D5EB31003A11F1 /* BTRDPlusAuthenticator.m in Sources */,
 				7518EA3F20D5EB6F003A11F1 /* BTRIRCDDBGateways.m in Sources */,
 				7518EA1820D5E8B7003A11F1 /* BTRDV3KNetworkVocoder.m in Sources */,
+				75DBE1A120D85EE6003A11F1 /* ReflectorsViewController.swift in Sources */,
 				7518EA1C20D5E8B7003A11F1 /* BTRDV3KSerialVocoder.m in Sources */,
 				7518EA0020D5E839003A11F1 /* PortMapper.m in Sources */,
 				7500A80D20D5F1E0003A11F1 /* BTRLinkDriver.m in Sources */,
@@ -505,7 +509,7 @@
 				755A49F020CDF28B003A11F1 /* DV3KVocoder.swift in Sources */,
 				75E07AC320CD7D54003A11F1 /* BTRAppDelegate.swift in Sources */,
 				75020EED20D7217F003A11F1 /* BTRAudioViewController.m in Sources */,
-				75E07AC520CD7D54003A11F1 /* ViewController.swift in Sources */,
+				75E07AC520CD7D54003A11F1 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
