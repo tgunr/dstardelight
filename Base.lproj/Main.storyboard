@@ -12,11 +12,11 @@
                 <application id="hnw-xV-0zn" sceneMemberID="viewController">
                     <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
                         <items>
-                            <menuItem title="Buster" id="1Xt-HY-uBw">
+                            <menuItem title="DStarDelight" id="1Xt-HY-uBw">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Buster" systemMenu="apple" id="uQy-DD-JDr">
+                                <menu key="submenu" title="DStarDelight" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
-                                        <menuItem title="About Buster" id="5kV-Vb-QxS">
+                                        <menuItem title="About DStarDelight" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
@@ -52,7 +52,7 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                                        <menuItem title="Quit Buster" keyEquivalent="q" id="4sb-4s-VLi">
+                                        <menuItem title="Quit DStarDelight" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
                                                 <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
                                             </connections>
@@ -147,7 +147,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="BTRAppDelegate"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="DStarDelight" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="410" y="-59"/>
@@ -156,7 +156,7 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Buster" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="mainWindowPosition" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="DStarDelight" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="mainWindowPosition" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="125" y="794" width="480" height="148"/>
@@ -378,14 +378,14 @@
                                             <rect key="frame" x="10" y="33" width="727" height="238"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <scrollView focusRingType="none" fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0W-jh-odz" userLabel="Heard List Table">
+                                                <scrollView focusRingType="none" fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="42" horizontalPageScroll="10" verticalLineScroll="42" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0W-jh-odz" userLabel="Heard List Table">
                                                     <rect key="frame" x="3" y="-3" width="727" height="206"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <clipView key="contentView" focusRingType="none" ambiguous="YES" id="aW3-z5-Yuz">
                                                         <rect key="frame" x="1" y="0.0" width="725" height="205"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
-                                                            <tableView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" typeSelect="NO" rowSizeStyle="automatic" headerView="fIV-dn-Sen" viewBased="YES" id="SQj-UE-91n">
+                                                            <tableView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="40" rowSizeStyle="automatic" headerView="fIV-dn-Sen" viewBased="YES" id="SQj-UE-91n">
                                                                 <rect key="frame" x="0.0" y="0.0" width="725" height="182"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <size key="intercellSpacing" width="3" height="2"/>
@@ -841,13 +841,13 @@
                                             <rect key="frame" x="10" y="33" width="727" height="238"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <scrollView ambiguous="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hs-eE-kW3" userLabel="Reflector Table">
+                                                <scrollView ambiguous="YES" autohidesScrollers="YES" horizontalLineScroll="42" horizontalPageScroll="10" verticalLineScroll="42" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hs-eE-kW3" userLabel="Reflector Table">
                                                     <rect key="frame" x="17" y="17" width="107" height="218"/>
                                                     <clipView key="contentView" ambiguous="YES" id="1Kq-Ls-MnY">
                                                         <rect key="frame" x="1" y="0.0" width="105" height="217"/>
-                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
-                                                            <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnReordering="NO" columnResizing="NO" autosaveColumns="NO" typeSelect="NO" rowSizeStyle="automatic" headerView="ua2-e3-GrD" viewBased="YES" id="Y0L-Zn-cZW">
+                                                            <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnReordering="NO" columnResizing="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="40" rowSizeStyle="automatic" headerView="ua2-e3-GrD" viewBased="YES" id="Y0L-Zn-cZW">
                                                                 <rect key="frame" x="0.0" y="0.0" width="105" height="194"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <size key="intercellSpacing" width="3" height="2"/>
@@ -1933,9 +1933,9 @@
     <resources>
         <image name="Broken Chain" width="512" height="512"/>
         <image name="Chain" width="512" height="512"/>
-        <image name="Chip" width="164.57142639160156" height="138.85714721679688"/>
+        <image name="Chip" width="170.66667175292969" height="141.33332824707031"/>
         <image name="Gray LED" width="40" height="40"/>
-        <image name="Microphone" width="128" height="128"/>
+        <image name="Microphone" width="1024" height="1024"/>
         <image name="NSAddTemplate" width="11" height="11"/>
         <image name="NSPreferencesGeneral" width="32" height="32"/>
         <image name="NSRemoveTemplate" width="11" height="11"/>
