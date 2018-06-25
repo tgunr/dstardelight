@@ -46,10 +46,11 @@
 		7518EA3920D5EB31003A11F1 /* BTRDPlusAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7518EA3820D5EB31003A11F1 /* BTRDPlusAuthenticator.m */; };
 		7518EA3F20D5EB6F003A11F1 /* BTRIRCDDBGateways.m in Sources */ = {isa = PBXBuildFile; fileRef = 7518EA3E20D5EB6F003A11F1 /* BTRIRCDDBGateways.m */; };
 		7518EA4220D5EB84003A11F1 /* BTRDExtraLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 7518EA4020D5EB83003A11F1 /* BTRDExtraLink.m */; };
+		7534D49F20E1855A003A11F1 /* AMBEServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7534D49E20E1855A003A11F1 /* AMBEServer.swift */; };
 		755A49F020CDF28B003A11F1 /* DV3KVocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755A49EF20CDF28B003A11F1 /* DV3KVocoder.swift */; };
 		75C9A39720E16C27003A11F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C9A39620E16C27003A11F1 /* AppDelegate.swift */; };
 		75C9A39920E16C27003A11F1 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C9A39820E16C27003A11F1 /* FirstViewController.swift */; };
-		75C9A39B20E16C27003A11F1 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C9A39A20E16C27003A11F1 /* SecondViewController.swift */; };
+		75C9A39B20E16C27003A11F1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C9A39A20E16C27003A11F1 /* SettingsViewController.swift */; };
 		75C9A39E20E16C27003A11F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C9A39C20E16C27003A11F1 /* Main.storyboard */; };
 		75C9A3A020E16C29003A11F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75C9A39F20E16C29003A11F1 /* Assets.xcassets */; };
 		75C9A3A320E16C29003A11F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C9A3A120E16C29003A11F1 /* LaunchScreen.storyboard */; };
@@ -155,6 +156,7 @@
 		7518EA4020D5EB83003A11F1 /* BTRDExtraLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRDExtraLink.m; sourceTree = "<group>"; };
 		7518EA4120D5EB84003A11F1 /* BTRDExtraLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRDExtraLink.h; sourceTree = "<group>"; };
 		7518EA4420D5EBEE003A11F1 /* BTRDCSLink.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTRDCSLink.m; sourceTree = "<group>"; };
+		7534D49E20E1855A003A11F1 /* AMBEServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMBEServer.swift; sourceTree = "<group>"; };
 		755A49EF20CDF28B003A11F1 /* DV3KVocoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DV3KVocoder.swift; sourceTree = "<group>"; };
 		758A971520D5E662003A11F1 /* DStarDelight-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DStarDelight-Bridging-Header.h"; sourceTree = "<group>"; };
 		758A971620D5E663003A11F1 /* MASKeyCodes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASKeyCodes.h; sourceTree = "<group>"; };
@@ -166,7 +168,7 @@
 		75C9A39420E16C27003A11F1 /* DStarDelightIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DStarDelightIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C9A39620E16C27003A11F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75C9A39820E16C27003A11F1 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		75C9A39A20E16C27003A11F1 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		75C9A39A20E16C27003A11F1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		75C9A39D20E16C27003A11F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		75C9A39F20E16C29003A11F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75C9A3A220E16C29003A11F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -359,11 +361,12 @@
 			children = (
 				75C9A39620E16C27003A11F1 /* AppDelegate.swift */,
 				75C9A39820E16C27003A11F1 /* FirstViewController.swift */,
-				75C9A39A20E16C27003A11F1 /* SecondViewController.swift */,
+				75C9A39A20E16C27003A11F1 /* SettingsViewController.swift */,
 				75C9A39C20E16C27003A11F1 /* Main.storyboard */,
 				75C9A39F20E16C29003A11F1 /* Assets.xcassets */,
 				75C9A3A120E16C29003A11F1 /* LaunchScreen.storyboard */,
 				75C9A3A420E16C29003A11F1 /* Info.plist */,
+				7534D49E20E1855A003A11F1 /* AMBEServer.swift */,
 			);
 			path = DStarDelightIOS;
 			sourceTree = "<group>";
@@ -603,9 +606,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75C9A39B20E16C27003A11F1 /* SecondViewController.swift in Sources */,
+				75C9A39B20E16C27003A11F1 /* SettingsViewController.swift in Sources */,
 				75C9A39720E16C27003A11F1 /* AppDelegate.swift in Sources */,
 				75C9A39920E16C27003A11F1 /* FirstViewController.swift in Sources */,
+				7534D49F20E1855A003A11F1 /* AMBEServer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

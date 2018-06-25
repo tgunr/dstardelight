@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  SettingsViewController.swift
 //  DStarDelightIOS
 //
 //  Created by Dave Carlton on 6/25/18.
@@ -8,8 +8,14 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var connectionStatus: UIImageView!
+    
+    @IBOutlet weak var ambeServer: UITextField!
+    @IBOutlet weak var serverPort: UITextField!
+    @IBOutlet weak var testButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
