@@ -48,11 +48,12 @@
 		7518EA4220D5EB84003A11F1 /* BTRDExtraLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 7518EA4020D5EB83003A11F1 /* BTRDExtraLink.m */; };
 		7534D49F20E1855A003A11F1 /* AMBEServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7534D49E20E1855A003A11F1 /* AMBEServer.swift */; };
 		755A49F020CDF28B003A11F1 /* DV3KVocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755A49EF20CDF28B003A11F1 /* DV3KVocoder.swift */; };
+		75B2332020E19619003A11F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75B2331F20E19618003A11F1 /* Assets.xcassets */; };
+		75B2332220E19673003A11F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75B2332120E19672003A11F1 /* Assets.xcassets */; };
 		75C9A39720E16C27003A11F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C9A39620E16C27003A11F1 /* AppDelegate.swift */; };
 		75C9A39920E16C27003A11F1 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C9A39820E16C27003A11F1 /* FirstViewController.swift */; };
 		75C9A39B20E16C27003A11F1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C9A39A20E16C27003A11F1 /* SettingsViewController.swift */; };
 		75C9A39E20E16C27003A11F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C9A39C20E16C27003A11F1 /* Main.storyboard */; };
-		75C9A3A020E16C29003A11F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75C9A39F20E16C29003A11F1 /* Assets.xcassets */; };
 		75C9A3A320E16C29003A11F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C9A3A120E16C29003A11F1 /* LaunchScreen.storyboard */; };
 		75C9A3AE20E16C29003A11F1 /* DStarDelightIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C9A3AD20E16C29003A11F1 /* DStarDelightIOSUITests.swift */; };
 		75DBE1A120D85EE6003A11F1 /* ReflectorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DBE1A020D85EE6003A11F1 /* ReflectorsViewController.swift */; };
@@ -165,12 +166,13 @@
 		758A971920D5E664003A11F1 /* MASShortcut.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MASShortcut.m; sourceTree = "<group>"; };
 		758A971A20D5E664003A11F1 /* MASShortcut.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASShortcut.h; sourceTree = "<group>"; };
 		758A971D20D5E664003A11F1 /* MASDictionaryTransformer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASDictionaryTransformer.h; sourceTree = "<group>"; };
+		75B2331F20E19618003A11F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Icon Set/Assets.xcassets"; sourceTree = "<group>"; };
+		75B2332120E19672003A11F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Icon Set/Assets.xcassets"; sourceTree = "<group>"; };
 		75C9A39420E16C27003A11F1 /* DStarDelightIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DStarDelightIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C9A39620E16C27003A11F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75C9A39820E16C27003A11F1 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		75C9A39A20E16C27003A11F1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		75C9A39D20E16C27003A11F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		75C9A39F20E16C29003A11F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75C9A3A220E16C29003A11F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75C9A3A420E16C29003A11F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75C9A3A920E16C29003A11F1 /* DStarDelightIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DStarDelightIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -359,14 +361,14 @@
 		75C9A39520E16C27003A11F1 /* DStarDelightIOS */ = {
 			isa = PBXGroup;
 			children = (
+				75C9A3A120E16C29003A11F1 /* LaunchScreen.storyboard */,
+				75C9A39C20E16C27003A11F1 /* Main.storyboard */,
 				75C9A39620E16C27003A11F1 /* AppDelegate.swift */,
 				75C9A39820E16C27003A11F1 /* FirstViewController.swift */,
 				75C9A39A20E16C27003A11F1 /* SettingsViewController.swift */,
-				75C9A39C20E16C27003A11F1 /* Main.storyboard */,
-				75C9A39F20E16C29003A11F1 /* Assets.xcassets */,
-				75C9A3A120E16C29003A11F1 /* LaunchScreen.storyboard */,
 				75C9A3A420E16C29003A11F1 /* Info.plist */,
 				7534D49E20E1855A003A11F1 /* AMBEServer.swift */,
+				75B2331F20E19618003A11F1 /* Assets.xcassets */,
 			);
 			path = DStarDelightIOS;
 			sourceTree = "<group>";
@@ -383,7 +385,6 @@
 		75E07AB620CD7D54003A11F1 = {
 			isa = PBXGroup;
 			children = (
-				75020ECE20D7032F003A11F1 /* Main.storyboard */,
 				75C9A39520E16C27003A11F1 /* DStarDelightIOS */,
 				75C9A3AC20E16C29003A11F1 /* DStarDelightIOSUITests */,
 				75E07AE120CD7E0D003A11F1 /* Frameworks */,
@@ -409,12 +410,14 @@
 		75E07AC120CD7D54003A11F1 /* DStarDelight */ = {
 			isa = PBXGroup;
 			children = (
+				75020ECE20D7032F003A11F1 /* Main.storyboard */,
 				75E07AC220CD7D54003A11F1 /* BTRAppDelegate.swift */,
 				75E07AC420CD7D54003A11F1 /* MainViewController.swift */,
 				75E07AC820CD7D56003A11F1 /* NewMain.storyboard */,
 				755A49EF20CDF28B003A11F1 /* DV3KVocoder.swift */,
 				75174DD620D07BB5003A11F1 /* BTRAudioHandler.swift */,
 				75DBE1A020D85EE6003A11F1 /* ReflectorsViewController.swift */,
+				75B2332120E19672003A11F1 /* Assets.xcassets */,
 			);
 			path = DStarDelight;
 			sourceTree = "<group>";
@@ -517,7 +520,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Polymicro Systems";
 				TargetAttributes = {
 					75C9A39320E16C27003A11F1 = {
@@ -564,7 +567,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75C9A3A320E16C29003A11F1 /* LaunchScreen.storyboard in Resources */,
-				75C9A3A020E16C29003A11F1 /* Assets.xcassets in Resources */,
+				75B2332020E19619003A11F1 /* Assets.xcassets in Resources */,
 				75C9A39E20E16C27003A11F1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -584,6 +587,7 @@
 				75020ECD20D6FBF6003A11F1 /* Images.xcassets in Resources */,
 				75E07ACA20CD7D56003A11F1 /* NewMain.storyboard in Resources */,
 				75020EC920D6FA26003A11F1 /* DCSReflectors.plist in Resources */,
+				75B2332220E19673003A11F1 /* Assets.xcassets in Resources */,
 				7518EA1B20D5E8B7003A11F1 /* BTRSerialVocoderView.xib in Resources */,
 				75020ECA20D6FA26003A11F1 /* Credits.html in Resources */,
 				75020ED020D7032F003A11F1 /* Main.storyboard in Resources */,
@@ -857,9 +861,11 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Carbon.framework;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -917,6 +923,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Carbon.framework;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
