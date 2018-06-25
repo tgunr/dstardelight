@@ -20,8 +20,6 @@
 		75020EDB20D70C86003A11F1 /* BTRAddPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75020ED920D70C86003A11F1 /* BTRAddPopupController.m */; };
 		75020EDC20D70D9E003A11F1 /* MASDictionaryTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 758A971720D5E663003A11F1 /* MASDictionaryTransformer.m */; };
 		75020EDD20D70F79003A11F1 /* MASShortcut.m in Sources */ = {isa = PBXBuildFile; fileRef = 758A971920D5E664003A11F1 /* MASShortcut.m */; };
-		75020EDE20D71536003A11F1 /* BTRAudioHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7518EA2920D5EA52003A11F1 /* BTRAudioHandler.m */; };
-		75020EE120D718DD003A11F1 /* BTRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75020EDF20D718DD003A11F1 /* BTRAppDelegate.m */; };
 		75020EE420D720EB003A11F1 /* BTRCallFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 75020EE220D720EA003A11F1 /* BTRCallFormatter.m */; };
 		75020EE720D72147003A11F1 /* BTRVocoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75020EE620D72146003A11F1 /* BTRVocoderViewController.m */; };
 		75020EEA20D7215F003A11F1 /* BTRGeneralPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75020EE820D7215F003A11F1 /* BTRGeneralPreferencesController.m */; };
@@ -61,6 +59,7 @@
 		75E07AC520CD7D54003A11F1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E07AC420CD7D54003A11F1 /* MainViewController.swift */; };
 		75E07ACA20CD7D56003A11F1 /* NewMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75E07AC820CD7D56003A11F1 /* NewMain.storyboard */; };
 		75E07AD620CD7D56003A11F1 /* DStarDelightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E07AD520CD7D56003A11F1 /* DStarDelightUITests.swift */; };
+		75F7D22120E1A99B003A11F1 /* BTRAudioHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75174DD620D07BB5003A11F1 /* BTRAudioHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -629,8 +628,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75020EDE20D71536003A11F1 /* BTRAudioHandler.m in Sources */,
-				75020EE120D718DD003A11F1 /* BTRAppDelegate.m in Sources */,
+				75E07AC520CD7D54003A11F1 /* MainViewController.swift in Sources */,
+				75DBE1A120D85EE6003A11F1 /* ReflectorsViewController.swift in Sources */,
+				755A49F020CDF28B003A11F1 /* DV3KVocoder.swift in Sources */,
+				75E07AC320CD7D54003A11F1 /* BTRAppDelegate.swift in Sources */,
+				75F7D22120E1A99B003A11F1 /* BTRAudioHandler.swift in Sources */,
 				75020EE720D72147003A11F1 /* BTRVocoderViewController.m in Sources */,
 				75020EDD20D70F79003A11F1 /* MASShortcut.m in Sources */,
 				75020EF620D72273003A11F1 /* MASShortcutView.m in Sources */,
@@ -644,7 +646,6 @@
 				7518EA3920D5EB31003A11F1 /* BTRDPlusAuthenticator.m in Sources */,
 				7518EA3F20D5EB6F003A11F1 /* BTRIRCDDBGateways.m in Sources */,
 				7518EA1820D5E8B7003A11F1 /* BTRDV3KNetworkVocoder.m in Sources */,
-				75DBE1A120D85EE6003A11F1 /* ReflectorsViewController.swift in Sources */,
 				7518EA1C20D5E8B7003A11F1 /* BTRDV3KSerialVocoder.m in Sources */,
 				7518EA0020D5E839003A11F1 /* PortMapper.m in Sources */,
 				7500A80D20D5F1E0003A11F1 /* BTRLinkDriver.m in Sources */,
@@ -658,11 +659,8 @@
 				7518EA3320D5EABD003A11F1 /* BTRDPlusLink.m in Sources */,
 				7518EA2320D5E97B003A11F1 /* BTRDataEngine.m in Sources */,
 				75020EF820D722A5003A11F1 /* MASShortcutValidator.m in Sources */,
-				7518EA0620D5E88D003A11F1 /* TPCircularBuffer+AudioBufferList.c in Sources */,
-				755A49F020CDF28B003A11F1 /* DV3KVocoder.swift in Sources */,
-				75E07AC320CD7D54003A11F1 /* BTRAppDelegate.swift in Sources */,
 				75020EED20D7217F003A11F1 /* BTRAudioViewController.m in Sources */,
-				75E07AC520CD7D54003A11F1 /* MainViewController.swift in Sources */,
+				7518EA0620D5E88D003A11F1 /* TPCircularBuffer+AudioBufferList.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
