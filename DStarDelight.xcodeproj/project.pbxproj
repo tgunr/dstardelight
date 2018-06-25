@@ -47,6 +47,13 @@
 		7518EA3F20D5EB6F003A11F1 /* BTRIRCDDBGateways.m in Sources */ = {isa = PBXBuildFile; fileRef = 7518EA3E20D5EB6F003A11F1 /* BTRIRCDDBGateways.m */; };
 		7518EA4220D5EB84003A11F1 /* BTRDExtraLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 7518EA4020D5EB83003A11F1 /* BTRDExtraLink.m */; };
 		755A49F020CDF28B003A11F1 /* DV3KVocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755A49EF20CDF28B003A11F1 /* DV3KVocoder.swift */; };
+		75C9A39720E16C27003A11F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C9A39620E16C27003A11F1 /* AppDelegate.swift */; };
+		75C9A39920E16C27003A11F1 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C9A39820E16C27003A11F1 /* FirstViewController.swift */; };
+		75C9A39B20E16C27003A11F1 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C9A39A20E16C27003A11F1 /* SecondViewController.swift */; };
+		75C9A39E20E16C27003A11F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C9A39C20E16C27003A11F1 /* Main.storyboard */; };
+		75C9A3A020E16C29003A11F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75C9A39F20E16C29003A11F1 /* Assets.xcassets */; };
+		75C9A3A320E16C29003A11F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C9A3A120E16C29003A11F1 /* LaunchScreen.storyboard */; };
+		75C9A3AE20E16C29003A11F1 /* DStarDelightIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C9A3AD20E16C29003A11F1 /* DStarDelightIOSUITests.swift */; };
 		75DBE1A120D85EE6003A11F1 /* ReflectorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DBE1A020D85EE6003A11F1 /* ReflectorsViewController.swift */; };
 		75E07AC320CD7D54003A11F1 /* BTRAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E07AC220CD7D54003A11F1 /* BTRAppDelegate.swift */; };
 		75E07AC520CD7D54003A11F1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E07AC420CD7D54003A11F1 /* MainViewController.swift */; };
@@ -55,6 +62,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		75C9A3AA20E16C29003A11F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 75E07AB720CD7D54003A11F1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75C9A39320E16C27003A11F1;
+			remoteInfo = DStarDelightIOS;
+		};
 		75E07AD220CD7D56003A11F1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 75E07AB720CD7D54003A11F1 /* Project object */;
@@ -149,6 +163,17 @@
 		758A971920D5E664003A11F1 /* MASShortcut.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MASShortcut.m; sourceTree = "<group>"; };
 		758A971A20D5E664003A11F1 /* MASShortcut.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASShortcut.h; sourceTree = "<group>"; };
 		758A971D20D5E664003A11F1 /* MASDictionaryTransformer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASDictionaryTransformer.h; sourceTree = "<group>"; };
+		75C9A39420E16C27003A11F1 /* DStarDelightIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DStarDelightIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		75C9A39620E16C27003A11F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		75C9A39820E16C27003A11F1 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		75C9A39A20E16C27003A11F1 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		75C9A39D20E16C27003A11F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		75C9A39F20E16C29003A11F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		75C9A3A220E16C29003A11F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		75C9A3A420E16C29003A11F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75C9A3A920E16C29003A11F1 /* DStarDelightIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DStarDelightIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		75C9A3AD20E16C29003A11F1 /* DStarDelightIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DStarDelightIOSUITests.swift; sourceTree = "<group>"; };
+		75C9A3AF20E16C29003A11F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75DBE1A020D85EE6003A11F1 /* ReflectorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectorsViewController.swift; sourceTree = "<group>"; };
 		75E07ABF20CD7D54003A11F1 /* DStarDelight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DStarDelight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75E07AC220CD7D54003A11F1 /* BTRAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTRAppDelegate.swift; sourceTree = "<group>"; };
@@ -162,6 +187,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		75C9A39120E16C27003A11F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75C9A3A620E16C29003A11F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		75E07ABC20CD7D54003A11F1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -315,10 +354,35 @@
 			path = BTR;
 			sourceTree = "<group>";
 		};
+		75C9A39520E16C27003A11F1 /* DStarDelightIOS */ = {
+			isa = PBXGroup;
+			children = (
+				75C9A39620E16C27003A11F1 /* AppDelegate.swift */,
+				75C9A39820E16C27003A11F1 /* FirstViewController.swift */,
+				75C9A39A20E16C27003A11F1 /* SecondViewController.swift */,
+				75C9A39C20E16C27003A11F1 /* Main.storyboard */,
+				75C9A39F20E16C29003A11F1 /* Assets.xcassets */,
+				75C9A3A120E16C29003A11F1 /* LaunchScreen.storyboard */,
+				75C9A3A420E16C29003A11F1 /* Info.plist */,
+			);
+			path = DStarDelightIOS;
+			sourceTree = "<group>";
+		};
+		75C9A3AC20E16C29003A11F1 /* DStarDelightIOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				75C9A3AD20E16C29003A11F1 /* DStarDelightIOSUITests.swift */,
+				75C9A3AF20E16C29003A11F1 /* Info.plist */,
+			);
+			path = DStarDelightIOSUITests;
+			sourceTree = "<group>";
+		};
 		75E07AB620CD7D54003A11F1 = {
 			isa = PBXGroup;
 			children = (
 				75020ECE20D7032F003A11F1 /* Main.storyboard */,
+				75C9A39520E16C27003A11F1 /* DStarDelightIOS */,
+				75C9A3AC20E16C29003A11F1 /* DStarDelightIOSUITests */,
 				75E07AE120CD7E0D003A11F1 /* Frameworks */,
 				75E07AC120CD7D54003A11F1 /* DStarDelight */,
 				758A971420D5E61F003A11F1 /* BTR */,
@@ -333,6 +397,8 @@
 			children = (
 				75E07ABF20CD7D54003A11F1 /* DStarDelight.app */,
 				75E07AD120CD7D56003A11F1 /* DStarDelightUITests.xctest */,
+				75C9A39420E16C27003A11F1 /* DStarDelightIOS.app */,
+				75C9A3A920E16C29003A11F1 /* DStarDelightIOSUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -371,6 +437,41 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		75C9A39320E16C27003A11F1 /* DStarDelightIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75C9A3B420E16C29003A11F1 /* Build configuration list for PBXNativeTarget "DStarDelightIOS" */;
+			buildPhases = (
+				75C9A39020E16C27003A11F1 /* Sources */,
+				75C9A39120E16C27003A11F1 /* Frameworks */,
+				75C9A39220E16C27003A11F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DStarDelightIOS;
+			productName = DStarDelightIOS;
+			productReference = 75C9A39420E16C27003A11F1 /* DStarDelightIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		75C9A3A820E16C29003A11F1 /* DStarDelightIOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75C9A3B520E16C29003A11F1 /* Build configuration list for PBXNativeTarget "DStarDelightIOSUITests" */;
+			buildPhases = (
+				75C9A3A520E16C29003A11F1 /* Sources */,
+				75C9A3A620E16C29003A11F1 /* Frameworks */,
+				75C9A3A720E16C29003A11F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				75C9A3AB20E16C29003A11F1 /* PBXTargetDependency */,
+			);
+			name = DStarDelightIOSUITests;
+			productName = DStarDelightIOSUITests;
+			productReference = 75C9A3A920E16C29003A11F1 /* DStarDelightIOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		75E07ABE20CD7D54003A11F1 /* DStarDelight */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75E07ADA20CD7D56003A11F1 /* Build configuration list for PBXNativeTarget "DStarDelight" */;
@@ -412,10 +513,17 @@
 		75E07AB720CD7D54003A11F1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1000;
+				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Polymicro Systems";
 				TargetAttributes = {
+					75C9A39320E16C27003A11F1 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					75C9A3A820E16C29003A11F1 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 75C9A39320E16C27003A11F1;
+					};
 					75E07ABE20CD7D54003A11F1 = {
 						CreatedOnToolsVersion = 10.0;
 						LastSwiftMigration = 1000;
@@ -441,11 +549,30 @@
 			targets = (
 				75E07ABE20CD7D54003A11F1 /* DStarDelight */,
 				75E07AD020CD7D56003A11F1 /* DStarDelightUITests */,
+				75C9A39320E16C27003A11F1 /* DStarDelightIOS */,
+				75C9A3A820E16C29003A11F1 /* DStarDelightIOSUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		75C9A39220E16C27003A11F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75C9A3A320E16C29003A11F1 /* LaunchScreen.storyboard in Resources */,
+				75C9A3A020E16C29003A11F1 /* Assets.xcassets in Resources */,
+				75C9A39E20E16C27003A11F1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75C9A3A720E16C29003A11F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		75E07ABD20CD7D54003A11F1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -472,6 +599,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		75C9A39020E16C27003A11F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75C9A39B20E16C27003A11F1 /* SecondViewController.swift in Sources */,
+				75C9A39720E16C27003A11F1 /* AppDelegate.swift in Sources */,
+				75C9A39920E16C27003A11F1 /* FirstViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75C9A3A520E16C29003A11F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75C9A3AE20E16C29003A11F1 /* DStarDelightIOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		75E07ABB20CD7D54003A11F1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -524,6 +669,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		75C9A3AB20E16C29003A11F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75C9A39320E16C27003A11F1 /* DStarDelightIOS */;
+			targetProxy = 75C9A3AA20E16C29003A11F1 /* PBXContainerItemProxy */;
+		};
 		75E07AD320CD7D56003A11F1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 75E07ABE20CD7D54003A11F1 /* DStarDelight */;
@@ -540,6 +690,22 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
+		75C9A39C20E16C27003A11F1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75C9A39D20E16C27003A11F1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		75C9A3A120E16C29003A11F1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75C9A3A220E16C29003A11F1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		75E07AC820CD7D56003A11F1 /* NewMain.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -551,6 +717,108 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		75C9A3B020E16C29003A11F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = NL3267E99V;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = DStarDelightIOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = net.polymicro.DStarDelightIOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		75C9A3B120E16C29003A11F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = NL3267E99V;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = DStarDelightIOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.polymicro.DStarDelightIOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		75C9A3B220E16C29003A11F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = NL3267E99V;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = DStarDelightIOSUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = net.polymicro.DStarDelightIOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DStarDelightIOS;
+			};
+			name = Debug;
+		};
+		75C9A3B320E16C29003A11F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = NL3267E99V;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = DStarDelightIOSUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.polymicro.DStarDelightIOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DStarDelightIOS;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		75E07AD820CD7D56003A11F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -744,6 +1012,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		75C9A3B420E16C29003A11F1 /* Build configuration list for PBXNativeTarget "DStarDelightIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75C9A3B020E16C29003A11F1 /* Debug */,
+				75C9A3B120E16C29003A11F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		75C9A3B520E16C29003A11F1 /* Build configuration list for PBXNativeTarget "DStarDelightIOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75C9A3B220E16C29003A11F1 /* Debug */,
+				75C9A3B320E16C29003A11F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		75E07ABA20CD7D54003A11F1 /* Build configuration list for PBXProject "DStarDelight" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
