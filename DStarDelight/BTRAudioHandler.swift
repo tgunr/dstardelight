@@ -506,8 +506,20 @@ func getAllDevices() -> [AudioDeviceID] {
     return devices
 }
 
+let BTRAudioDeviceChanged = "BTRAudioDeviceChanged"
+
 @objc
 class BTRAudioHandler: NSObject {
+//    var vocoder: BTRVocoderDriver?
+    var inputDevice = AudioDeviceID()
+    var outputDevice = AudioDeviceID()
+    private(set) var defaultInputDevice = AudioDeviceID()
+    private(set) var defaultOutputDevice = AudioDeviceID()
+    var xmit = false
+    var outputVolume: Float = 0.0
+    var receiving = false
+
+@objc
     class func enumerateInputDevices() -> [Dictionary<String, Any>] {
         var result:[Dictionary<String, Any>]  = []
         let devices = enumerateDevices(inOut: .In)
@@ -523,6 +535,7 @@ class BTRAudioHandler: NSObject {
         return result
     }
     
+@objc
     class func enumerateOutputDevices() -> [Dictionary<String, Any>] {
         var result:[Dictionary<String, Any>]  = []
         let devices = enumerateDevices(inOut: .Out)
