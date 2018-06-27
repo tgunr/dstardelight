@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		75E087DE20E30841003A11F1 /* DV3KVocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E087DD20E30841003A11F1 /* DV3KVocoder.swift */; };
 		75E087E020E30895003A11F1 /* VcoderDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E087DF20E30895003A11F1 /* VcoderDriver.swift */; };
+		75E0888720E3387D003A11F1 /* AudioHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D27D20E306A6003A11F1 /* AudioHandler.swift */; };
 		75F7D25820E30620003A11F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D25720E30620003A11F1 /* AppDelegate.swift */; };
 		75F7D25A20E30620003A11F1 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D25920E30620003A11F1 /* RootViewController.swift */; };
 		75F7D25C20E30620003A11F1 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D25B20E30620003A11F1 /* DataViewController.swift */; };
@@ -259,6 +260,7 @@
 				75F7D29120E306A6003A11F1 /* SlowDataDelegate.swift in Sources */,
 				75F7D25C20E30620003A11F1 /* DataViewController.swift in Sources */,
 				75F7D28F20E306A6003A11F1 /* LinkDriverProtocol.swift in Sources */,
+				75E0888720E3387D003A11F1 /* AudioHandler.swift in Sources */,
 				75F7D28A20E306A6003A11F1 /* DataEngineDelegate.swift in Sources */,
 				75F7D28E20E306A6003A11F1 /* LinkDriverDelegate.swift in Sources */,
 				75F7D25820E30620003A11F1 /* AppDelegate.swift in Sources */,
@@ -358,7 +360,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -412,7 +414,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -427,6 +429,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NL3267E99V;
 				INFOPLIST_FILE = DStarDelightIOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -444,6 +447,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NL3267E99V;
 				INFOPLIST_FILE = DStarDelightIOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

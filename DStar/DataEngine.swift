@@ -9,7 +9,26 @@
 import Foundation
 class BTRDataEngine: NSObject, BTRLinkDriverDelegate, BTRSlowDataDelegate {
     
-    let sharedInstance = BTRDataEngine()
+    static let sharedInstance = BTRDataEngine()
+    private(set) weak var network: (NSObject & BTRLinkDriverProtocol)?
+    weak var vocoder: BTRVocoderDriver?
+    private(set) var audio: AudioHandler?
+    private(set) var slowData: BTRSlowDataCoder?
+    weak var delegate: (NSObject & BTRDataEngineDelegate)?
+    private(set) var linkDriverDestinations = [String]()
+
+    override init() {
+    }
+
+    class func registerVocoderDriver(_ driver: AnyClass) {
+    }
+    
+    class func registerLinkDriver(_ driver: AnyClass) {
+    }
+    
+    class func vocoderDrivers() -> [Any]? {
+        return nil
+    }
 
     func addData(_ data: UnsafeMutableRawPointer?, streamId: Int) {
         
@@ -55,20 +74,6 @@ class BTRDataEngine: NSObject, BTRLinkDriverDelegate, BTRSlowDataDelegate {
         
     }
     
-    private(set) weak var network: (NSObject & BTRLinkDriverProtocol)?
-    weak var vocoder: BTRVocoderDriver?
-//    private(set) var audio: BTRAudioHandler?
-    private(set) var slowData: BTRSlowDataCoder?
-    weak var delegate: (NSObject & BTRDataEngineDelegate)?
-    private(set) var linkDriverDestinations = [String]()
-
-    class func registerVocoderDriver(_ driver: AnyClass) {
-    }
-    class func registerLinkDriver(_ driver: AnyClass) {
-    }
-    class func vocoderDrivers() -> [Any]? {
-        return nil
-    }
     func isDestinationValid(_ destination: String?) -> Bool {
         return false
     }
