@@ -29,7 +29,7 @@
 
 @protocol BTRVocoderDriver;
 
-NSString * const BTRAudioDeviceChanged;
+extern NSString * const BTRAudioDeviceChanged;
 
 @interface BTRAudioHandler : NSObject
 
