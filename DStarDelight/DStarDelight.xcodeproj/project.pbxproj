@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		758B49C020E41302003A11F1 /* New.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 758B49BE20E41301003A11F1 /* New.storyboard */; };
+		758B49C220E4196D003A11F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 758B49C120E4196D003A11F1 /* Main.storyboard */; };
+		758B49C720E41AA7003A11F1 /* BTRMapPopupController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 758B49C420E41AA7003A11F1 /* BTRMapPopupController.xib */; };
+		758B49CB20E41BD8003A11F1 /* BTRAddPopupController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 758B49CA20E41BD8003A11F1 /* BTRAddPopupController.xib */; };
+		758B49CF20E41C92003A11F1 /* DefaultPreferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 758B49CC20E41C92003A11F1 /* DefaultPreferences.plist */; };
+		758B49D020E41C92003A11F1 /* DExtraReflectors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 758B49CD20E41C92003A11F1 /* DExtraReflectors.plist */; };
+		758B49D120E41C92003A11F1 /* DCSReflectors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 758B49CE20E41C92003A11F1 /* DCSReflectors.plist */; };
+		758B49D420E41F0D003A11F1 /* BTRDestinationCallFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 758B49D320E41F0D003A11F1 /* BTRDestinationCallFormatter.m */; };
 		75E087F420E31574003A11F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75E087F320E31574003A11F1 /* Assets.xcassets */; };
 		75E087FA20E31574003A11F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E087F920E31574003A11F1 /* main.m */; };
 		75E0880520E31575003A11F1 /* DStarDelightUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0880420E31575003A11F1 /* DStarDelightUITests.m */; };
@@ -43,7 +51,6 @@
 		75E0887E20E3177F003A11F1 /* BTRNetworkVocoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0885A20E3177F003A11F1 /* BTRNetworkVocoderViewController.m */; };
 		75E0887F20E3177F003A11F1 /* BTRSerialVocoderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75E0885B20E3177F003A11F1 /* BTRSerialVocoderView.xib */; };
 		75E0888020E3177F003A11F1 /* BTRSerialVocoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0885D20E3177F003A11F1 /* BTRSerialVocoderViewController.m */; };
-		75E0888320E319B4003A11F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75E0888120E319B4003A11F1 /* Main.storyboard */; };
 		75E0888520E31A8C003A11F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75E0888420E31A8C003A11F1 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +65,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		758B49BF20E41302003A11F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../../Old/DStarDelight/Base.lproj/New.storyboard; sourceTree = "<group>"; };
+		758B49C120E4196D003A11F1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		758B49C420E41AA7003A11F1 /* BTRMapPopupController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BTRMapPopupController.xib; sourceTree = "<group>"; };
+		758B49CA20E41BD8003A11F1 /* BTRAddPopupController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BTRAddPopupController.xib; path = ../../../buster.1/Buster/BTRAddPopupController.xib; sourceTree = "<group>"; };
+		758B49CC20E41C92003A11F1 /* DefaultPreferences.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DefaultPreferences.plist; sourceTree = "<group>"; };
+		758B49CD20E41C92003A11F1 /* DExtraReflectors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DExtraReflectors.plist; sourceTree = "<group>"; };
+		758B49CE20E41C92003A11F1 /* DCSReflectors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DCSReflectors.plist; sourceTree = "<group>"; };
+		758B49D220E41F0C003A11F1 /* BTRDestinationCallFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRDestinationCallFormatter.h; sourceTree = "<group>"; };
+		758B49D320E41F0D003A11F1 /* BTRDestinationCallFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRDestinationCallFormatter.m; sourceTree = "<group>"; };
 		75E087EA20E31572003A11F1 /* DStarDelight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DStarDelight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75E087F320E31574003A11F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75E087F820E31574003A11F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -139,7 +155,6 @@
 		75E0885C20E3177F003A11F1 /* BTRSerialVocoderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRSerialVocoderViewController.h; sourceTree = "<group>"; };
 		75E0885D20E3177F003A11F1 /* BTRSerialVocoderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRSerialVocoderViewController.m; sourceTree = "<group>"; };
 		75E0885E20E3177F003A11F1 /* BTRVocoderDriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRVocoderDriver.h; sourceTree = "<group>"; };
-		75E0888220E319B4003A11F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../../DStarDelight1/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		75E0888420E31A8C003A11F1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../../Resources/Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -182,13 +197,19 @@
 		75E087EC20E31572003A11F1 /* DStarDelight */ = {
 			isa = PBXGroup;
 			children = (
+				758B49CE20E41C92003A11F1 /* DCSReflectors.plist */,
+				758B49CC20E41C92003A11F1 /* DefaultPreferences.plist */,
+				758B49CD20E41C92003A11F1 /* DExtraReflectors.plist */,
+				758B49CA20E41BD8003A11F1 /* BTRAddPopupController.xib */,
+				758B49C420E41AA7003A11F1 /* BTRMapPopupController.xib */,
 				75E0880F20E3177F003A11F1 /* BTR */,
 				75E087F320E31574003A11F1 /* Assets.xcassets */,
 				75E0888420E31A8C003A11F1 /* Images.xcassets */,
 				75E087F820E31574003A11F1 /* Info.plist */,
 				75E087F920E31574003A11F1 /* main.m */,
 				75E087FB20E31574003A11F1 /* DStarDelight.entitlements */,
-				75E0888120E319B4003A11F1 /* Main.storyboard */,
+				758B49BE20E41301003A11F1 /* New.storyboard */,
+				758B49C120E4196D003A11F1 /* Main.storyboard */,
 			);
 			path = DStarDelight;
 			sourceTree = "<group>";
@@ -205,6 +226,8 @@
 		75E0880F20E3177F003A11F1 /* BTR */ = {
 			isa = PBXGroup;
 			children = (
+				758B49D220E41F0C003A11F1 /* BTRDestinationCallFormatter.h */,
+				758B49D320E41F0D003A11F1 /* BTRDestinationCallFormatter.m */,
 				75E0881020E3177F003A11F1 /* BTRAddPopupController.h */,
 				75E0881120E3177F003A11F1 /* BTRAddPopupController.m */,
 				75E0881220E3177F003A11F1 /* BTRAppDelegate.h */,
@@ -404,10 +427,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				75E087F420E31574003A11F1 /* Assets.xcassets in Resources */,
+				758B49C720E41AA7003A11F1 /* BTRMapPopupController.xib in Resources */,
+				758B49CF20E41C92003A11F1 /* DefaultPreferences.plist in Resources */,
+				758B49C020E41302003A11F1 /* New.storyboard in Resources */,
+				758B49D020E41C92003A11F1 /* DExtraReflectors.plist in Resources */,
 				75E0888520E31A8C003A11F1 /* Images.xcassets in Resources */,
+				758B49C220E4196D003A11F1 /* Main.storyboard in Resources */,
 				75E0887F20E3177F003A11F1 /* BTRSerialVocoderView.xib in Resources */,
+				758B49D120E41C92003A11F1 /* DCSReflectors.plist in Resources */,
+				758B49CB20E41BD8003A11F1 /* BTRAddPopupController.xib in Resources */,
 				75E0887D20E3177F003A11F1 /* BTRNetworkVocoderView.xib in Resources */,
-				75E0888320E319B4003A11F1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +485,7 @@
 				75E0887720E3177F003A11F1 /* PortMapper.m in Sources */,
 				75E0887E20E3177F003A11F1 /* BTRNetworkVocoderViewController.m in Sources */,
 				75E0887520E3177F003A11F1 /* MASShortcutView.m in Sources */,
+				758B49D420E41F0D003A11F1 /* BTRDestinationCallFormatter.m in Sources */,
 				75E0886120E3177F003A11F1 /* BTRAprsLocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,12 +509,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		75E0888120E319B4003A11F1 /* Main.storyboard */ = {
+		758B49BE20E41301003A11F1 /* New.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				75E0888220E319B4003A11F1 /* Base */,
+				758B49BF20E41302003A11F1 /* Base */,
 			);
-			name = Main.storyboard;
+			name = New.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

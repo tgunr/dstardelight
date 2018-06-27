@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>voiceAnnounceOnStatusChange</key>
+	<true/>
+	<key>courtesyTone</key>
+	<true/>
+	<key>myCall</key>
+	<string>NO0CAL</string>
+	<key>myCall2</key>
+	<string></string>
+	<key>rpt1Call</key>
+	<string>NO0CAL G</string>
+	<key>rpt2Call</key>
+	<string>NO0CAL B</string>
+	<key>slowDataMessage</key>
+	<string>Buster 1.0</string>
+	<key>gatewayAddr</key>
+	<string>127.0.0.1</string>
+	<key>gatewayPort</key>
+	<real>20010</real>
+	<key>repeaterPort</key>
+	<integer>20011</integer>
+	<key>DV3KSerialVocoderSpeed</key>
+	<integer>230400</integer>
+	<key>DV3KNetworkVocoderPort</key>
+	<integer>2460</integer>
+	<key>VocoderDriver</key>
+	<string>BTRDV3KSerialVocoder</string>
+	<key>destinationCalls</key>
+	<array>
+		<string>CQCQCQ</string>
+	</array>
+	<key>shortcutValue</key>
+	<dict>
+		<key>keyCode</key>
+		<integer>96</integer>
+		<key>modifierFlags</key>
+		<integer>0</integer>
+	</dict>
+	<key>outputVolume</key>
+	<integer>1</integer>
+</dict>
+</plist>

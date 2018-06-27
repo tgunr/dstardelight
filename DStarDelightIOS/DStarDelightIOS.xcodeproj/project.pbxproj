@@ -41,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		758B49D520E4259E003A11F1 /* DCSLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCSLink.swift; sourceTree = "<group>"; };
+		758B49D720E43913003A11F1 /* DStarIOSPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DStarIOSPlayground.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		75E087DD20E30841003A11F1 /* DV3KVocoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DV3KVocoder.swift; sourceTree = "<group>"; };
 		75E087DF20E30895003A11F1 /* VcoderDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VcoderDriver.swift; sourceTree = "<group>"; };
 		75F7D25420E30620003A11F1 /* DStarDelightIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DStarDelightIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +91,7 @@
 		75F7D24B20E30620003A11F1 = {
 			isa = PBXGroup;
 			children = (
+				758B49D720E43913003A11F1 /* DStarIOSPlayground.playground */,
 				75F7D27B20E306A6003A11F1 /* DStar */,
 				75F7D25620E30620003A11F1 /* DStarDelightIOS */,
 				75F7D26F20E30622003A11F1 /* DStarDelightIOSUITests */,
@@ -132,17 +135,18 @@
 		75F7D27B20E306A6003A11F1 /* DStar */ = {
 			isa = PBXGroup;
 			children = (
+				75F7D27E20E306A6003A11F1 /* DataEngine.swift */,
 				75F7D27C20E306A6003A11F1 /* APRSLocation.swift */,
 				75E087DF20E30895003A11F1 /* VcoderDriver.swift */,
 				75F7D27D20E306A6003A11F1 /* AudioHandler.swift */,
 				75E087DD20E30841003A11F1 /* DV3KVocoder.swift */,
-				75F7D27E20E306A6003A11F1 /* DataEngine.swift */,
 				75F7D27F20E306A6003A11F1 /* DataEngineDelegate.swift */,
 				75F7D28020E306A6003A11F1 /* DPlusAuthenticator.swift */,
-				75F7D28120E306A6003A11F1 /* DPlusLink.swift */,
 				75F7D28220E306A6003A11F1 /* IRCDDBGateway.swift */,
 				75F7D28320E306A6003A11F1 /* LinkDriverDelegate.swift */,
 				75F7D28420E306A6003A11F1 /* LinkDriverProtocol.swift */,
+				75F7D28120E306A6003A11F1 /* DPlusLink.swift */,
+				758B49D520E4259E003A11F1 /* DCSLink.swift */,
 				75F7D28520E306A6003A11F1 /* SlowDataCoder.swift */,
 				75F7D28620E306A6003A11F1 /* SlowDataDelegate.swift */,
 			);
