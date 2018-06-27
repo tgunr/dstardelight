@@ -7,6 +7,9 @@
 //
 
 import Foundation
+
+var linkDriverClasses = [AnyClass]()
+
 class BTRDataEngine: NSObject, BTRLinkDriverDelegate, BTRSlowDataDelegate {
     
     static let sharedInstance = BTRDataEngine()
@@ -16,6 +19,7 @@ class BTRDataEngine: NSObject, BTRLinkDriverDelegate, BTRSlowDataDelegate {
     private(set) var slowData: BTRSlowDataCoder?
     weak var delegate: (NSObject & BTRDataEngineDelegate)?
     private(set) var linkDriverDestinations = [String]()
+    private var vocoderDrivers: [AnyHashable]? = nil
 
     override init() {
     }
@@ -24,6 +28,7 @@ class BTRDataEngine: NSObject, BTRLinkDriverDelegate, BTRSlowDataDelegate {
     }
     
     class func registerLinkDriver(_ driver: AnyClass) {
+        linkDriverClasses.append(driver)
     }
     
     class func vocoderDrivers() -> [Any]? {
