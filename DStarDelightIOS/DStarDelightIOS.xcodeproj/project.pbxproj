@@ -44,6 +44,11 @@
 		753AB26A20E473D9003A11F1 /* BTRIRCDDBGateways.h in Headers */ = {isa = PBXBuildFile; fileRef = 753AB26920E473D9003A11F1 /* BTRIRCDDBGateways.h */; };
 		757DEE1D20E477CF003A11F1 /* BTRDExtraLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE1C20E477CF003A11F1 /* BTRDExtraLink.m */; };
 		757DEE1F20E47837003A11F1 /* BTRDExtraLink.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE1E20E47837003A11F1 /* BTRDExtraLink.h */; };
+		757DEE2620E54153003A11F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 757DEE2120E54152003A11F1 /* Images.xcassets */; };
+		757DEE2720E54153003A11F1 /* DefaultPreferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 757DEE2220E54152003A11F1 /* DefaultPreferences.plist */; };
+		757DEE2820E54153003A11F1 /* DExtraReflectors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 757DEE2320E54152003A11F1 /* DExtraReflectors.plist */; };
+		757DEE2920E54153003A11F1 /* DCSReflectors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 757DEE2420E54153003A11F1 /* DCSReflectors.plist */; };
+		757DEE2A20E54153003A11F1 /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = 757DEE2520E54153003A11F1 /* Credits.html */; };
 		75F7D25820E30620003A11F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D25720E30620003A11F1 /* AppDelegate.swift */; };
 		75F7D25A20E30620003A11F1 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D25920E30620003A11F1 /* RootViewController.swift */; };
 		75F7D25C20E30620003A11F1 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D25B20E30620003A11F1 /* DataViewController.swift */; };
@@ -126,6 +131,11 @@
 		753AB26920E473D9003A11F1 /* BTRIRCDDBGateways.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BTRIRCDDBGateways.h; path = BTR/BTRIRCDDBGateways.h; sourceTree = SOURCE_ROOT; };
 		757DEE1C20E477CF003A11F1 /* BTRDExtraLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRDExtraLink.m; sourceTree = "<group>"; };
 		757DEE1E20E47837003A11F1 /* BTRDExtraLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BTRDExtraLink.h; path = BTR/BTRDExtraLink.h; sourceTree = SOURCE_ROOT; };
+		757DEE2120E54152003A11F1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../../Resources/Images.xcassets; sourceTree = "<group>"; };
+		757DEE2220E54152003A11F1 /* DefaultPreferences.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = DefaultPreferences.plist; path = ../../Resources/DefaultPreferences.plist; sourceTree = "<group>"; };
+		757DEE2320E54152003A11F1 /* DExtraReflectors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = DExtraReflectors.plist; path = ../../Resources/DExtraReflectors.plist; sourceTree = "<group>"; };
+		757DEE2420E54153003A11F1 /* DCSReflectors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = DCSReflectors.plist; path = ../../Resources/DCSReflectors.plist; sourceTree = "<group>"; };
+		757DEE2520E54153003A11F1 /* Credits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = Credits.html; path = ../../Resources/Credits.html; sourceTree = "<group>"; };
 		758B49D520E4259E003A11F1 /* DCSLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCSLink.swift; sourceTree = "<group>"; };
 		758B49D720E43913003A11F1 /* DStarIOSPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DStarIOSPlayground.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		75E087DD20E30841003A11F1 /* DV3KVocoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DV3KVocoder.swift; sourceTree = "<group>"; };
@@ -234,15 +244,32 @@
 			path = Headers;
 			sourceTree = "<group>";
 		};
+		757DEE2020E540EC003A11F1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				757DEE2520E54153003A11F1 /* Credits.html */,
+				757DEE2420E54153003A11F1 /* DCSReflectors.plist */,
+				757DEE2220E54152003A11F1 /* DefaultPreferences.plist */,
+				757DEE2320E54152003A11F1 /* DExtraReflectors.plist */,
+				757DEE2120E54152003A11F1 /* Images.xcassets */,
+				75F7D26220E30621003A11F1 /* Assets.xcassets */,
+				75F7D26420E30621003A11F1 /* LaunchScreen.storyboard */,
+				75F7D26720E30621003A11F1 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		75F7D24B20E30620003A11F1 = {
 			isa = PBXGroup;
 			children = (
+				75F7D25F20E30620003A11F1 /* Main.storyboard */,
 				758B49D720E43913003A11F1 /* DStarIOSPlayground.playground */,
 				75F7D27B20E306A6003A11F1 /* DStar */,
 				75F7D25620E30620003A11F1 /* DStarDelightIOS */,
 				75F7D26F20E30622003A11F1 /* DStarDelightIOSUITests */,
 				753AB20E20E45C44003A11F1 /* BTR */,
 				75F7D25520E30620003A11F1 /* Products */,
+				757DEE2020E540EC003A11F1 /* Resources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -263,10 +290,6 @@
 				75F7D25920E30620003A11F1 /* RootViewController.swift */,
 				75F7D25B20E30620003A11F1 /* DataViewController.swift */,
 				75F7D25D20E30620003A11F1 /* ModelController.swift */,
-				75F7D25F20E30620003A11F1 /* Main.storyboard */,
-				75F7D26220E30621003A11F1 /* Assets.xcassets */,
-				75F7D26420E30621003A11F1 /* LaunchScreen.storyboard */,
-				75F7D26720E30621003A11F1 /* Info.plist */,
 			);
 			path = DStarDelightIOS;
 			sourceTree = "<group>";
@@ -449,8 +472,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				75F7D26620E30621003A11F1 /* LaunchScreen.storyboard in Resources */,
+				757DEE2720E54153003A11F1 /* DefaultPreferences.plist in Resources */,
+				757DEE2620E54153003A11F1 /* Images.xcassets in Resources */,
+				757DEE2920E54153003A11F1 /* DCSReflectors.plist in Resources */,
 				75F7D26320E30621003A11F1 /* Assets.xcassets in Resources */,
+				757DEE2A20E54153003A11F1 /* Credits.html in Resources */,
 				75F7D26120E30620003A11F1 /* Main.storyboard in Resources */,
+				757DEE2820E54153003A11F1 /* DExtraReflectors.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
