@@ -17,6 +17,7 @@
 // along with this program; if not, write to the Free Software
 // Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
+#import <UIKit/UIKit.h>
 
 #import "BTRDPlusAuthenticator.h"
 
@@ -87,18 +88,18 @@ static const unsigned long long NSEC_PER_HOUR = 3600ull * NSEC_PER_SEC;
 - (id) init {
     self = [super init];
     if(self) {
-        _authenticationHost = [NSHost hostWithName:@"opendstar.org"];
+//        _authenticationHost = [NSHost hostWithName:@"opendstar.org"];
         _reflectorList = nil;
         _authCall = @"";
         _suffix = '2';
         _authenticated = NO;
         
         BTRDPlusAuthenticator __weak *weakSelf = self;
-        [[[NSWorkspace sharedWorkspace] notificationCenter] addObserverForName:NSWorkspaceDidWakeNotification object:NULL queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notification) {
-            NSLog(@"Waking from sleep, reauthenticating");
-            [weakSelf authenticate];
-        }];
-        [self bind:@"authCall" toObject:[NSUserDefaultsController sharedUserDefaultsController] withKeyPath:@"values.myCall" options:nil];
+//        [[[NSWorkspace sharedWorkspace] notificationCenter] addObserverForName:NSWorkspaceDidWakeNotification object:NULL queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notification) {
+//            NSLog(@"Waking from sleep, reauthenticating");
+//            [weakSelf authenticate];
+//        }];
+//        [self bind:@"authCall" toObject:[NSUserDefaultsController sharedUserDefaultsController] withKeyPath:@"values.myCall" options:nil];
         [self startAuthTimer];
     }
     return self;
@@ -152,7 +153,7 @@ static const unsigned long long NSEC_PER_HOUR = 3600ull * NSEC_PER_SEC;
         .sin_len = sizeof(struct sockaddr_in),
         .sin_family = AF_INET,
         .sin_port = htons(20001),
-        .sin_addr.s_addr = inet_addr([self.authenticationHost.address cStringUsingEncoding:NSUTF8StringEncoding])
+//        .sin_addr.s_addr = inet_addr([self.authenticationHost.address cStringUsingEncoding:NSUTF8StringEncoding])
     };
     
     if(connect(authSocket, (const struct sockaddr *) &addr, (socklen_t) sizeof(addr))) {

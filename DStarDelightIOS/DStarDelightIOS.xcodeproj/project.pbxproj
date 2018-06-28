@@ -37,6 +37,11 @@
 		753AB25C20E47007003A11F1 /* PortMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 753AB25B20E47007003A11F1 /* PortMapper.h */; };
 		753AB25E20E47020003A11F1 /* PortMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 753AB25D20E47020003A11F1 /* PortMapper.m */; };
 		753AB26020E47234003A11F1 /* DStarUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 753AB25F20E47234003A11F1 /* DStarUtils.h */; };
+		753AB26220E4733C003A11F1 /* BTRDPlusLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 753AB26120E4733C003A11F1 /* BTRDPlusLink.m */; };
+		753AB26420E4739F003A11F1 /* BTRIRCDDBGateways.m in Sources */ = {isa = PBXBuildFile; fileRef = 753AB26320E4739F003A11F1 /* BTRIRCDDBGateways.m */; };
+		753AB26620E473AD003A11F1 /* BTRDPlusAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = 753AB26520E473AD003A11F1 /* BTRDPlusAuthenticator.m */; };
+		753AB26820E473C3003A11F1 /* BTRDPlusAuthenticator.h in Headers */ = {isa = PBXBuildFile; fileRef = 753AB26720E473C2003A11F1 /* BTRDPlusAuthenticator.h */; };
+		753AB26A20E473D9003A11F1 /* BTRIRCDDBGateways.h in Headers */ = {isa = PBXBuildFile; fileRef = 753AB26920E473D9003A11F1 /* BTRIRCDDBGateways.h */; };
 		75F7D25820E30620003A11F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D25720E30620003A11F1 /* AppDelegate.swift */; };
 		75F7D25A20E30620003A11F1 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D25920E30620003A11F1 /* RootViewController.swift */; };
 		75F7D25C20E30620003A11F1 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D25B20E30620003A11F1 /* DataViewController.swift */; };
@@ -112,6 +117,11 @@
 		753AB25B20E47007003A11F1 /* PortMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PortMapper.h; path = BTR/Portmapper/PortMapper.h; sourceTree = SOURCE_ROOT; };
 		753AB25D20E47020003A11F1 /* PortMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PortMapper.m; path = Portmapper/PortMapper.m; sourceTree = "<group>"; };
 		753AB25F20E47234003A11F1 /* DStarUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DStarUtils.h; path = ../../../BTR/DStarUtils.h; sourceTree = "<group>"; };
+		753AB26120E4733C003A11F1 /* BTRDPlusLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRDPlusLink.m; sourceTree = "<group>"; };
+		753AB26320E4739F003A11F1 /* BTRIRCDDBGateways.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRIRCDDBGateways.m; sourceTree = "<group>"; };
+		753AB26520E473AD003A11F1 /* BTRDPlusAuthenticator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRDPlusAuthenticator.m; sourceTree = "<group>"; };
+		753AB26720E473C2003A11F1 /* BTRDPlusAuthenticator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BTRDPlusAuthenticator.h; path = BTR/BTRDPlusAuthenticator.h; sourceTree = SOURCE_ROOT; };
+		753AB26920E473D9003A11F1 /* BTRIRCDDBGateways.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BTRIRCDDBGateways.h; path = BTR/BTRIRCDDBGateways.h; sourceTree = SOURCE_ROOT; };
 		758B49D520E4259E003A11F1 /* DCSLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCSLink.swift; sourceTree = "<group>"; };
 		758B49D720E43913003A11F1 /* DStarIOSPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DStarIOSPlayground.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		75E087DD20E30841003A11F1 /* DV3KVocoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DV3KVocoder.swift; sourceTree = "<group>"; };
@@ -180,6 +190,9 @@
 				753AB25120E46DC5003A11F1 /* BTRDCSLink.m */,
 				753AB25920E46FD3003A11F1 /* BTRLinkDriver.m */,
 				753AB25D20E47020003A11F1 /* PortMapper.m */,
+				753AB26120E4733C003A11F1 /* BTRDPlusLink.m */,
+				753AB26320E4739F003A11F1 /* BTRIRCDDBGateways.m */,
+				753AB26520E473AD003A11F1 /* BTRDPlusAuthenticator.m */,
 				753AB21020E45C44003A11F1 /* Info.plist */,
 				753AB22820E4602B003A11F1 /* TPCircularBuffer.c */,
 				753AB22920E4602B003A11F1 /* TPCircularBuffer.h */,
@@ -209,6 +222,8 @@
 				753AB25520E46E29003A11F1 /* BTRDataEngineDelegate.h */,
 				753AB25720E46E53003A11F1 /* BTRLinkDriverSubclass.h */,
 				753AB25B20E47007003A11F1 /* PortMapper.h */,
+				753AB26720E473C2003A11F1 /* BTRDPlusAuthenticator.h */,
+				753AB26920E473D9003A11F1 /* BTRIRCDDBGateways.h */,
 			);
 			path = Headers;
 			sourceTree = "<group>";
@@ -293,8 +308,10 @@
 				753AB23120E46282003A11F1 /* BTRDV3KVocoderSubclass.h in Headers */,
 				753AB23B20E4634C003A11F1 /* BTRLinkDriverProtocol.h in Headers */,
 				753AB21120E45C44003A11F1 /* BTR.h in Headers */,
+				753AB26820E473C3003A11F1 /* BTRDPlusAuthenticator.h in Headers */,
 				753AB23420E4629A003A11F1 /* BTRDV3KVocoder.h in Headers */,
 				753AB24920E46A04003A11F1 /* BTRAprsLocation.h in Headers */,
+				753AB26A20E473D9003A11F1 /* BTRIRCDDBGateways.h in Headers */,
 				753AB26020E47234003A11F1 /* DStarUtils.h in Headers */,
 				753AB23F20E46391003A11F1 /* BTRSlowDataDelegate.h in Headers */,
 				753AB22320E45E88003A11F1 /* BTRDataEngine.h in Headers */,
@@ -449,10 +466,13 @@
 				753AB24720E46727003A11F1 /* BTRAudioHandler.m in Sources */,
 				753AB24620E46722003A11F1 /* BTRSlowDataCoder.m in Sources */,
 				753AB25A20E46FD3003A11F1 /* BTRLinkDriver.m in Sources */,
+				753AB26620E473AD003A11F1 /* BTRDPlusAuthenticator.m in Sources */,
 				753AB23520E4629A003A11F1 /* BTRDV3KVocoder.m in Sources */,
 				753AB25E20E47020003A11F1 /* PortMapper.m in Sources */,
 				753AB24020E46594003A11F1 /* BTRDataEngine.m in Sources */,
 				753AB24B20E46A36003A11F1 /* BTRAprsLocation.m in Sources */,
+				753AB26420E4739F003A11F1 /* BTRIRCDDBGateways.m in Sources */,
+				753AB26220E4733C003A11F1 /* BTRDPlusLink.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
