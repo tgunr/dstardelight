@@ -100,8 +100,8 @@ NS_INLINE size_t dstar_frame_size(struct dstar_frame *frame) {
     }
 }
 
-NS_INLINE BOOL isSequenceAhead(uint8 incoming, uint8 counter, uint8 max) {
-    uint8 halfmax = max / 2;
+NS_INLINE BOOL isSequenceAhead(UInt8 incoming, UInt8 counter, UInt8 max) {
+    UInt8 halfmax = max / 2;
     
     if(counter < halfmax) {
         if(incoming <= counter + halfmax) return YES;
@@ -113,8 +113,8 @@ NS_INLINE BOOL isSequenceAhead(uint8 incoming, uint8 counter, uint8 max) {
     return NO;
 }
 
-NS_INLINE uint16 dstar_calc_sum(struct dstar_header_data *header) {
-    uint16 crc = 0xFFFF;
+NS_INLINE UInt16 dstar_calc_sum(struct dstar_header_data *header) {
+    UInt16 crc = 0xFFFF;
     
     for(char *packetPointer = (char *) header; packetPointer < (char *) &(header->sum); ++packetPointer)
         crc = (crc >> 8) ^ ccittTab[(crc & 0x00FF) ^ *packetPointer];

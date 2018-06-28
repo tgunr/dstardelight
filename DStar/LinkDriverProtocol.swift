@@ -7,7 +7,7 @@
 //
 
 import Foundation
-enum linkState : Int {
+enum linkState1 : Int {
     case unlinked
     case connected
     case linking
