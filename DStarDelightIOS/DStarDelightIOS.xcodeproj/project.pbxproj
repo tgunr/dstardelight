@@ -22,9 +22,20 @@
 		753AB23B20E4634C003A11F1 /* BTRLinkDriverProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 753AB23A20E4634C003A11F1 /* BTRLinkDriverProtocol.h */; };
 		753AB23D20E46376003A11F1 /* BTRSlowDataCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 753AB23C20E46376003A11F1 /* BTRSlowDataCoder.h */; };
 		753AB23F20E46391003A11F1 /* BTRSlowDataDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 753AB23E20E46390003A11F1 /* BTRSlowDataDelegate.h */; };
-		75E087DE20E30841003A11F1 /* DV3KVocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E087DD20E30841003A11F1 /* DV3KVocoder.swift */; };
-		75E087E020E30895003A11F1 /* VcoderDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E087DF20E30895003A11F1 /* VcoderDriver.swift */; };
-		75E0888720E3387D003A11F1 /* AudioHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D27D20E306A6003A11F1 /* AudioHandler.swift */; };
+		753AB24020E46594003A11F1 /* BTRDataEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 753AB22020E45E88003A11F1 /* BTRDataEngine.m */; };
+		753AB24220E46643003A11F1 /* BTRDPlusLink.h in Headers */ = {isa = PBXBuildFile; fileRef = 753AB24120E46642003A11F1 /* BTRDPlusLink.h */; };
+		753AB24420E46651003A11F1 /* BTRDExtraLink.h in Headers */ = {isa = PBXBuildFile; fileRef = 753AB24320E46651003A11F1 /* BTRDExtraLink.h */; };
+		753AB24620E46722003A11F1 /* BTRSlowDataCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 753AB24520E46722003A11F1 /* BTRSlowDataCoder.m */; };
+		753AB24720E46727003A11F1 /* BTRAudioHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 753AB22520E45EFC003A11F1 /* BTRAudioHandler.m */; };
+		753AB24920E46A04003A11F1 /* BTRAprsLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = 753AB24820E46A04003A11F1 /* BTRAprsLocation.h */; };
+		753AB24B20E46A36003A11F1 /* BTRAprsLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 753AB24A20E46A36003A11F1 /* BTRAprsLocation.m */; };
+		753AB25220E46DC5003A11F1 /* BTRDCSLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 753AB25120E46DC5003A11F1 /* BTRDCSLink.m */; };
+		753AB25420E46E04003A11F1 /* BTRLinkDriverDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 753AB25320E46E04003A11F1 /* BTRLinkDriverDelegate.h */; };
+		753AB25620E46E29003A11F1 /* BTRDataEngineDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 753AB25520E46E29003A11F1 /* BTRDataEngineDelegate.h */; };
+		753AB25820E46E54003A11F1 /* BTRLinkDriverSubclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 753AB25720E46E53003A11F1 /* BTRLinkDriverSubclass.h */; };
+		753AB25A20E46FD3003A11F1 /* BTRLinkDriver.m in Sources */ = {isa = PBXBuildFile; fileRef = 753AB25920E46FD3003A11F1 /* BTRLinkDriver.m */; };
+		753AB25C20E47007003A11F1 /* PortMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 753AB25B20E47007003A11F1 /* PortMapper.h */; };
+		753AB25E20E47020003A11F1 /* PortMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 753AB25D20E47020003A11F1 /* PortMapper.m */; };
 		75F7D25820E30620003A11F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D25720E30620003A11F1 /* AppDelegate.swift */; };
 		75F7D25A20E30620003A11F1 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D25920E30620003A11F1 /* RootViewController.swift */; };
 		75F7D25C20E30620003A11F1 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D25B20E30620003A11F1 /* DataViewController.swift */; };
@@ -33,16 +44,6 @@
 		75F7D26320E30621003A11F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75F7D26220E30621003A11F1 /* Assets.xcassets */; };
 		75F7D26620E30621003A11F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75F7D26420E30621003A11F1 /* LaunchScreen.storyboard */; };
 		75F7D27120E30622003A11F1 /* DStarDelightIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D27020E30622003A11F1 /* DStarDelightIOSUITests.swift */; };
-		75F7D28720E306A6003A11F1 /* APRSLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D27C20E306A6003A11F1 /* APRSLocation.swift */; };
-		75F7D28920E306A6003A11F1 /* DataEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D27E20E306A6003A11F1 /* DataEngine.swift */; };
-		75F7D28A20E306A6003A11F1 /* DataEngineDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D27F20E306A6003A11F1 /* DataEngineDelegate.swift */; };
-		75F7D28B20E306A6003A11F1 /* DPlusAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D28020E306A6003A11F1 /* DPlusAuthenticator.swift */; };
-		75F7D28C20E306A6003A11F1 /* DPlusLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D28120E306A6003A11F1 /* DPlusLink.swift */; };
-		75F7D28D20E306A6003A11F1 /* IRCDDBGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D28220E306A6003A11F1 /* IRCDDBGateway.swift */; };
-		75F7D28E20E306A6003A11F1 /* LinkDriverDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D28320E306A6003A11F1 /* LinkDriverDelegate.swift */; };
-		75F7D28F20E306A6003A11F1 /* LinkDriverProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D28420E306A6003A11F1 /* LinkDriverProtocol.swift */; };
-		75F7D29020E306A6003A11F1 /* SlowDataCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D28520E306A6003A11F1 /* SlowDataCoder.swift */; };
-		75F7D29120E306A6003A11F1 /* SlowDataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D28620E306A6003A11F1 /* SlowDataDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,21 +82,34 @@
 		753AB20F20E45C44003A11F1 /* BTR.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTR.h; sourceTree = "<group>"; };
 		753AB21020E45C44003A11F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		753AB22020E45E88003A11F1 /* BTRDataEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BTRDataEngine.m; path = Engine/BTRDataEngine.m; sourceTree = "<group>"; };
-		753AB22120E45E88003A11F1 /* BTRDataEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BTRDataEngine.h; path = Engine/BTRDataEngine.h; sourceTree = "<group>"; };
+		753AB22120E45E88003A11F1 /* BTRDataEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRDataEngine.h; sourceTree = "<group>"; };
 		753AB22420E45EFC003A11F1 /* BTRAudioHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRAudioHandler.h; sourceTree = "<group>"; };
 		753AB22520E45EFC003A11F1 /* BTRAudioHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRAudioHandler.m; sourceTree = "<group>"; };
 		753AB22820E4602B003A11F1 /* TPCircularBuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = TPCircularBuffer.c; path = ../../BTR/TPCircularBuffer/TPCircularBuffer.c; sourceTree = "<group>"; };
 		753AB22920E4602B003A11F1 /* TPCircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TPCircularBuffer.h; path = ../../BTR/TPCircularBuffer/TPCircularBuffer.h; sourceTree = "<group>"; };
-		753AB22C20E46265003A11F1 /* BTRDV3KNetworkVocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BTRDV3KNetworkVocoder.h; path = "Vocoder Drivers/BTRDV3KNetworkVocoder.h"; sourceTree = "<group>"; };
+		753AB22C20E46265003A11F1 /* BTRDV3KNetworkVocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRDV3KNetworkVocoder.h; sourceTree = "<group>"; };
 		753AB22D20E46265003A11F1 /* BTRDV3KNetworkVocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BTRDV3KNetworkVocoder.m; path = "Vocoder Drivers/BTRDV3KNetworkVocoder.m"; sourceTree = "<group>"; };
-		753AB23020E46282003A11F1 /* BTRDV3KVocoderSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BTRDV3KVocoderSubclass.h; path = "Vocoder Drivers/BTRDV3KVocoderSubclass.h"; sourceTree = "<group>"; };
-		753AB23220E4629A003A11F1 /* BTRDV3KVocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BTRDV3KVocoder.h; path = "Vocoder Drivers/BTRDV3KVocoder.h"; sourceTree = "<group>"; };
+		753AB23020E46282003A11F1 /* BTRDV3KVocoderSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRDV3KVocoderSubclass.h; sourceTree = "<group>"; };
+		753AB23220E4629A003A11F1 /* BTRDV3KVocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRDV3KVocoder.h; sourceTree = "<group>"; };
 		753AB23320E4629A003A11F1 /* BTRDV3KVocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BTRDV3KVocoder.m; path = "Vocoder Drivers/BTRDV3KVocoder.m"; sourceTree = "<group>"; };
-		753AB23620E462B1003A11F1 /* BTRDV3KPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BTRDV3KPacket.h; path = "Vocoder Drivers/BTRDV3KPacket.h"; sourceTree = "<group>"; };
-		753AB23820E4631B003A11F1 /* BTRVocoderDriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BTRVocoderDriver.h; path = "Vocoder Drivers/BTRVocoderDriver.h"; sourceTree = "<group>"; };
+		753AB23620E462B1003A11F1 /* BTRDV3KPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRDV3KPacket.h; sourceTree = "<group>"; };
+		753AB23820E4631B003A11F1 /* BTRVocoderDriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRVocoderDriver.h; sourceTree = "<group>"; };
 		753AB23A20E4634C003A11F1 /* BTRLinkDriverProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRLinkDriverProtocol.h; sourceTree = "<group>"; };
 		753AB23C20E46376003A11F1 /* BTRSlowDataCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRSlowDataCoder.h; sourceTree = "<group>"; };
 		753AB23E20E46390003A11F1 /* BTRSlowDataDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRSlowDataDelegate.h; sourceTree = "<group>"; };
+		753AB24120E46642003A11F1 /* BTRDPlusLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRDPlusLink.h; sourceTree = "<group>"; };
+		753AB24320E46651003A11F1 /* BTRDExtraLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRDExtraLink.h; sourceTree = "<group>"; };
+		753AB24520E46722003A11F1 /* BTRSlowDataCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRSlowDataCoder.m; sourceTree = "<group>"; };
+		753AB24820E46A04003A11F1 /* BTRAprsLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRAprsLocation.h; sourceTree = "<group>"; };
+		753AB24A20E46A36003A11F1 /* BTRAprsLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRAprsLocation.m; sourceTree = "<group>"; };
+		753AB24C20E46CA5003A11F1 /* DStarDelightIOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DStarDelightIOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		753AB25120E46DC5003A11F1 /* BTRDCSLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRDCSLink.m; sourceTree = "<group>"; };
+		753AB25320E46E04003A11F1 /* BTRLinkDriverDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BTRLinkDriverDelegate.h; path = BTR/BTRLinkDriverDelegate.h; sourceTree = SOURCE_ROOT; };
+		753AB25520E46E29003A11F1 /* BTRDataEngineDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BTRDataEngineDelegate.h; path = BTR/Engine/BTRDataEngineDelegate.h; sourceTree = SOURCE_ROOT; };
+		753AB25720E46E53003A11F1 /* BTRLinkDriverSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BTRLinkDriverSubclass.h; path = BTR/BTRLinkDriverSubclass.h; sourceTree = SOURCE_ROOT; };
+		753AB25920E46FD3003A11F1 /* BTRLinkDriver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRLinkDriver.m; sourceTree = "<group>"; };
+		753AB25B20E47007003A11F1 /* PortMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PortMapper.h; path = BTR/Portmapper/PortMapper.h; sourceTree = SOURCE_ROOT; };
+		753AB25D20E47020003A11F1 /* PortMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PortMapper.m; path = Portmapper/PortMapper.m; sourceTree = "<group>"; };
 		758B49D520E4259E003A11F1 /* DCSLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCSLink.swift; sourceTree = "<group>"; };
 		758B49D720E43913003A11F1 /* DStarIOSPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DStarIOSPlayground.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		75E087DD20E30841003A11F1 /* DV3KVocoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DV3KVocoder.swift; sourceTree = "<group>"; };
@@ -154,26 +168,46 @@
 		753AB20E20E45C44003A11F1 /* BTR */ = {
 			isa = PBXGroup;
 			children = (
-				753AB20F20E45C44003A11F1 /* BTR.h */,
-				753AB22120E45E88003A11F1 /* BTRDataEngine.h */,
-				753AB22020E45E88003A11F1 /* BTRDataEngine.m */,
-				753AB22420E45EFC003A11F1 /* BTRAudioHandler.h */,
-				753AB22520E45EFC003A11F1 /* BTRAudioHandler.m */,
-				753AB23020E46282003A11F1 /* BTRDV3KVocoderSubclass.h */,
-				753AB22C20E46265003A11F1 /* BTRDV3KNetworkVocoder.h */,
+				753AB25020E46D85003A11F1 /* Headers */,
+				753AB24A20E46A36003A11F1 /* BTRAprsLocation.m */,
+				753AB24520E46722003A11F1 /* BTRSlowDataCoder.m */,
 				753AB22D20E46265003A11F1 /* BTRDV3KNetworkVocoder.m */,
-				753AB23220E4629A003A11F1 /* BTRDV3KVocoder.h */,
+				753AB22020E45E88003A11F1 /* BTRDataEngine.m */,
+				753AB22520E45EFC003A11F1 /* BTRAudioHandler.m */,
 				753AB23320E4629A003A11F1 /* BTRDV3KVocoder.m */,
-				753AB23620E462B1003A11F1 /* BTRDV3KPacket.h */,
-				753AB23820E4631B003A11F1 /* BTRVocoderDriver.h */,
-				753AB23A20E4634C003A11F1 /* BTRLinkDriverProtocol.h */,
-				753AB23C20E46376003A11F1 /* BTRSlowDataCoder.h */,
-				753AB23E20E46390003A11F1 /* BTRSlowDataDelegate.h */,
+				753AB25120E46DC5003A11F1 /* BTRDCSLink.m */,
+				753AB25920E46FD3003A11F1 /* BTRLinkDriver.m */,
+				753AB25D20E47020003A11F1 /* PortMapper.m */,
 				753AB21020E45C44003A11F1 /* Info.plist */,
 				753AB22820E4602B003A11F1 /* TPCircularBuffer.c */,
 				753AB22920E4602B003A11F1 /* TPCircularBuffer.h */,
 			);
 			path = BTR;
+			sourceTree = "<group>";
+		};
+		753AB25020E46D85003A11F1 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				753AB20F20E45C44003A11F1 /* BTR.h */,
+				753AB22120E45E88003A11F1 /* BTRDataEngine.h */,
+				753AB22420E45EFC003A11F1 /* BTRAudioHandler.h */,
+				753AB23020E46282003A11F1 /* BTRDV3KVocoderSubclass.h */,
+				753AB22C20E46265003A11F1 /* BTRDV3KNetworkVocoder.h */,
+				753AB23220E4629A003A11F1 /* BTRDV3KVocoder.h */,
+				753AB23620E462B1003A11F1 /* BTRDV3KPacket.h */,
+				753AB23820E4631B003A11F1 /* BTRVocoderDriver.h */,
+				753AB23A20E4634C003A11F1 /* BTRLinkDriverProtocol.h */,
+				753AB23C20E46376003A11F1 /* BTRSlowDataCoder.h */,
+				753AB23E20E46390003A11F1 /* BTRSlowDataDelegate.h */,
+				753AB24120E46642003A11F1 /* BTRDPlusLink.h */,
+				753AB24320E46651003A11F1 /* BTRDExtraLink.h */,
+				753AB24820E46A04003A11F1 /* BTRAprsLocation.h */,
+				753AB25320E46E04003A11F1 /* BTRLinkDriverDelegate.h */,
+				753AB25520E46E29003A11F1 /* BTRDataEngineDelegate.h */,
+				753AB25720E46E53003A11F1 /* BTRLinkDriverSubclass.h */,
+				753AB25B20E47007003A11F1 /* PortMapper.h */,
+			);
+			path = Headers;
 			sourceTree = "<group>";
 		};
 		75F7D24B20E30620003A11F1 = {
@@ -239,6 +273,7 @@
 				758B49D520E4259E003A11F1 /* DCSLink.swift */,
 				75F7D28520E306A6003A11F1 /* SlowDataCoder.swift */,
 				75F7D28620E306A6003A11F1 /* SlowDataDelegate.swift */,
+				753AB24C20E46CA5003A11F1 /* DStarDelightIOS-Bridging-Header.h */,
 			);
 			name = DStar;
 			path = ../DStar;
@@ -251,14 +286,21 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				753AB25620E46E29003A11F1 /* BTRDataEngineDelegate.h in Headers */,
 				753AB23120E46282003A11F1 /* BTRDV3KVocoderSubclass.h in Headers */,
 				753AB23B20E4634C003A11F1 /* BTRLinkDriverProtocol.h in Headers */,
 				753AB21120E45C44003A11F1 /* BTR.h in Headers */,
 				753AB23420E4629A003A11F1 /* BTRDV3KVocoder.h in Headers */,
+				753AB24920E46A04003A11F1 /* BTRAprsLocation.h in Headers */,
 				753AB23F20E46391003A11F1 /* BTRSlowDataDelegate.h in Headers */,
 				753AB22320E45E88003A11F1 /* BTRDataEngine.h in Headers */,
+				753AB25820E46E54003A11F1 /* BTRLinkDriverSubclass.h in Headers */,
+				753AB24420E46651003A11F1 /* BTRDExtraLink.h in Headers */,
+				753AB24220E46643003A11F1 /* BTRDPlusLink.h in Headers */,
 				753AB23D20E46376003A11F1 /* BTRSlowDataCoder.h in Headers */,
 				753AB23720E462B1003A11F1 /* BTRDV3KPacket.h in Headers */,
+				753AB25420E46E04003A11F1 /* BTRLinkDriverDelegate.h in Headers */,
+				753AB25C20E47007003A11F1 /* PortMapper.h in Headers */,
 				753AB23920E4631B003A11F1 /* BTRVocoderDriver.h in Headers */,
 				753AB22E20E46265003A11F1 /* BTRDV3KNetworkVocoder.h in Headers */,
 				753AB22B20E4602B003A11F1 /* TPCircularBuffer.h in Headers */,
@@ -338,6 +380,7 @@
 					};
 					75F7D25320E30620003A11F1 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 					75F7D26B20E30622003A11F1 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -398,7 +441,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				753AB22A20E4602B003A11F1 /* TPCircularBuffer.c in Sources */,
+				753AB25220E46DC5003A11F1 /* BTRDCSLink.m in Sources */,
+				753AB24720E46727003A11F1 /* BTRAudioHandler.m in Sources */,
+				753AB24620E46722003A11F1 /* BTRSlowDataCoder.m in Sources */,
+				753AB25A20E46FD3003A11F1 /* BTRLinkDriver.m in Sources */,
 				753AB23520E4629A003A11F1 /* BTRDV3KVocoder.m in Sources */,
+				753AB25E20E47020003A11F1 /* PortMapper.m in Sources */,
+				753AB24020E46594003A11F1 /* BTRDataEngine.m in Sources */,
+				753AB24B20E46A36003A11F1 /* BTRAprsLocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,23 +456,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75F7D29020E306A6003A11F1 /* SlowDataCoder.swift in Sources */,
 				75F7D25A20E30620003A11F1 /* RootViewController.swift in Sources */,
-				75F7D28D20E306A6003A11F1 /* IRCDDBGateway.swift in Sources */,
-				75F7D28920E306A6003A11F1 /* DataEngine.swift in Sources */,
-				75F7D28720E306A6003A11F1 /* APRSLocation.swift in Sources */,
 				75F7D25E20E30620003A11F1 /* ModelController.swift in Sources */,
-				75F7D29120E306A6003A11F1 /* SlowDataDelegate.swift in Sources */,
 				75F7D25C20E30620003A11F1 /* DataViewController.swift in Sources */,
-				75F7D28F20E306A6003A11F1 /* LinkDriverProtocol.swift in Sources */,
-				75E0888720E3387D003A11F1 /* AudioHandler.swift in Sources */,
-				75F7D28A20E306A6003A11F1 /* DataEngineDelegate.swift in Sources */,
-				75F7D28E20E306A6003A11F1 /* LinkDriverDelegate.swift in Sources */,
 				75F7D25820E30620003A11F1 /* AppDelegate.swift in Sources */,
-				75E087E020E30895003A11F1 /* VcoderDriver.swift in Sources */,
-				75E087DE20E30841003A11F1 /* DV3KVocoder.swift in Sources */,
-				75F7D28C20E306A6003A11F1 /* DPlusLink.swift in Sources */,
-				75F7D28B20E306A6003A11F1 /* DPlusAuthenticator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,6 +679,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = NL3267E99V;
 				INFOPLIST_FILE = DStarDelightIOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -651,6 +689,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.polymicro.DStarDelightIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "../DStar/DStarDelightIOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -660,6 +700,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = NL3267E99V;
 				INFOPLIST_FILE = DStarDelightIOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -669,6 +710,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.polymicro.DStarDelightIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "../DStar/DStarDelightIOS-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

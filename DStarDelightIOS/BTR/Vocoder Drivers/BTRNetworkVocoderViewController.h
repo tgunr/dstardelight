@@ -28,7 +28,7 @@
 
 @class BTRDV3KNetworkVocoder;
 
-@interface BTRNetworkVocoderViewController : NSViewController
+@interface BTRNetworkVocoderViewController : UIViewController
 
 @property (weak) IBOutlet NSTextField *productId;
 @property (weak) IBOutlet NSTextField *version;

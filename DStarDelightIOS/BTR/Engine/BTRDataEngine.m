@@ -1,6 +1,6 @@
 #import "BTRDataEngine.h"
 
-#import "BTRDV3KSerialVocoder.h"
+//#import "BTRDV3KSerialVocoder.h"
 #import "BTRDV3KNetworkVocoder.h"
 #import "BTRAudioHandler.h"
 #import "BTRSlowDataCoder.h"
@@ -51,24 +51,24 @@ static NSMutableArray <Class> *linkDriverClasses = nil;
             [newLinkDrivers addObject:newDriver];
             newDriver.linkQueue = self.linkQueue;
             newDriver.delegate = self;
-            [newDriver bind:@"myCall" toObject:[NSUserDefaultsController sharedUserDefaultsController] withKeyPath:@"values.myCall" options:nil];
-            [newDriver bind:@"myCall2" toObject:[NSUserDefaultsController sharedUserDefaultsController] withKeyPath:@"values.myCall2" options:nil];
+//            [newDriver bind:@"myCall" toObject:[NSUserDefaultsController sharedUserDefaultsController] withKeyPath:@"values.myCall" options:nil];
+//            [newDriver bind:@"myCall2" toObject:[NSUserDefaultsController sharedUserDefaultsController] withKeyPath:@"values.myCall2" options:nil];
         }
         _linkDrivers = [NSArray arrayWithArray:newLinkDrivers];
         
         BTRDataEngine __weak *weakSelf = self;
-        [[[NSWorkspace sharedWorkspace] notificationCenter] addObserverForName:NSWorkspaceWillSleepNotification object:NULL queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notification) {
-            [weakSelf.audio stop];
-            [weakSelf.vocoder stop];
-            weakSelf.sleepDestination = weakSelf.network.linkTarget;
-            [weakSelf.network unlink];
-        }];
+//        [[[NSWorkspace sharedWorkspace] notificationCenter] addObserverForName:NSWorkspaceWillSleepNotification object:NULL queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notification) {
+//            [weakSelf.audio stop];
+//            [weakSelf.vocoder stop];
+//            weakSelf.sleepDestination = weakSelf.network.linkTarget;
+//            [weakSelf.network unlink];
+//        }];
         
-        [[[NSWorkspace sharedWorkspace] notificationCenter] addObserverForName:NSWorkspaceDidWakeNotification object:NULL queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notification) {
-            [weakSelf.audio start];
-            [weakSelf.vocoder start];
-            [weakSelf linkTo:self.sleepDestination];
-        }];        
+//        [[[NSWorkspace sharedWorkspace] notificationCenter] addObserverForName:NSWorkspaceDidWakeNotification object:NULL queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notification) {
+//            [weakSelf.audio start];
+//            [weakSelf.vocoder start];
+//            [weakSelf linkTo:self.sleepDestination];
+//        }];        
     }
     
     return self;

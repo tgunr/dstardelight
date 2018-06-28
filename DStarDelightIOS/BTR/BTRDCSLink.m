@@ -132,7 +132,8 @@ static NSDictionary *_reflectorList;
 }
 
 -(NSString *)getAddressForReflector:(NSString *)reflector {
-    return [NSHost hostWithName:[BTRDCSLink reflectorList][reflector]].address;
+    return @"NSHost needs replacing";
+    //    return [NSHost hostWithName:[BTRDCSLink reflectorList][reflector]].address;
 }
 
 -(BOOL)canHandleLinkTo:(NSString *)linkTarget {

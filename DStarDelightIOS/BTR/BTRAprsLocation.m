@@ -27,8 +27,8 @@
 
 #import "BTRAprsLocation.h"
 
-NS_INLINE uint16 gps_calc_sum(unsigned char *data, size_t length) {
-    uint16 crc = 0xFFFF;
+NS_INLINE UInt16 gps_calc_sum(unsigned char *data, size_t length) {
+    UInt16 crc = 0xFFFF;
     
     for(int j = 0; j < length; ++j) {
         unsigned int ch = data[j] & 0xFF;

@@ -444,7 +444,7 @@
 
     switch(frame->type) {
         case 0x10: {
-            uint16 calculatedSum = dstar_calc_sum(&frame->header);
+            UInt16 calculatedSum = dstar_calc_sum(&frame->header);
             if(self.hasReliableChecksum && frame->header.sum != 0xFFFF && frame->header.sum != calculatedSum) {
                 NSLog(@"Header checksum mismatch: expected 0x%04hX calculated 0x%04hX", frame->header.sum, calculatedSum);
                 return;
