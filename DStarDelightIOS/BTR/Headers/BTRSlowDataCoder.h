@@ -24,7 +24,7 @@
  * Copyright (c) 2015 Jeremy McDermond (NH6Z). All rights reserved.
  *
  */
-#import <AppKit/AppKit.h>
+#import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
 #import "BTRSlowDataDelegate.h"
