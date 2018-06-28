@@ -49,6 +49,7 @@
 		757DEE2820E54153003A11F1 /* DExtraReflectors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 757DEE2320E54152003A11F1 /* DExtraReflectors.plist */; };
 		757DEE2920E54153003A11F1 /* DCSReflectors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 757DEE2420E54153003A11F1 /* DCSReflectors.plist */; };
 		757DEE2A20E54153003A11F1 /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = 757DEE2520E54153003A11F1 /* Credits.html */; };
+		757DEE3020E54727003A11F1 /* TPCircularBuffer+AudioBufferList.c in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE2E20E54713003A11F1 /* TPCircularBuffer+AudioBufferList.c */; };
 		75F7D25820E30620003A11F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D25720E30620003A11F1 /* AppDelegate.swift */; };
 		75F7D25A20E30620003A11F1 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D25920E30620003A11F1 /* RootViewController.swift */; };
 		75F7D25C20E30620003A11F1 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D25B20E30620003A11F1 /* DataViewController.swift */; };
@@ -98,8 +99,8 @@
 		753AB22120E45E88003A11F1 /* BTRDataEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRDataEngine.h; sourceTree = "<group>"; };
 		753AB22420E45EFC003A11F1 /* BTRAudioHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRAudioHandler.h; sourceTree = "<group>"; };
 		753AB22520E45EFC003A11F1 /* BTRAudioHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRAudioHandler.m; sourceTree = "<group>"; };
-		753AB22820E4602B003A11F1 /* TPCircularBuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = TPCircularBuffer.c; path = ../../BTR/TPCircularBuffer/TPCircularBuffer.c; sourceTree = "<group>"; };
-		753AB22920E4602B003A11F1 /* TPCircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TPCircularBuffer.h; path = ../../BTR/TPCircularBuffer/TPCircularBuffer.h; sourceTree = "<group>"; };
+		753AB22820E4602B003A11F1 /* TPCircularBuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TPCircularBuffer.c; sourceTree = "<group>"; };
+		753AB22920E4602B003A11F1 /* TPCircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCircularBuffer.h; sourceTree = "<group>"; };
 		753AB22C20E46265003A11F1 /* BTRDV3KNetworkVocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRDV3KNetworkVocoder.h; sourceTree = "<group>"; };
 		753AB22D20E46265003A11F1 /* BTRDV3KNetworkVocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BTRDV3KNetworkVocoder.m; path = "Vocoder Drivers/BTRDV3KNetworkVocoder.m"; sourceTree = "<group>"; };
 		753AB23020E46282003A11F1 /* BTRDV3KVocoderSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRDV3KVocoderSubclass.h; sourceTree = "<group>"; };
@@ -136,6 +137,8 @@
 		757DEE2320E54152003A11F1 /* DExtraReflectors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = DExtraReflectors.plist; path = ../../Resources/DExtraReflectors.plist; sourceTree = "<group>"; };
 		757DEE2420E54153003A11F1 /* DCSReflectors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = DCSReflectors.plist; path = ../../Resources/DCSReflectors.plist; sourceTree = "<group>"; };
 		757DEE2520E54153003A11F1 /* Credits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = Credits.html; path = ../../Resources/Credits.html; sourceTree = "<group>"; };
+		757DEE2D20E54713003A11F1 /* TPCircularBuffer+AudioBufferList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TPCircularBuffer+AudioBufferList.h"; sourceTree = "<group>"; };
+		757DEE2E20E54713003A11F1 /* TPCircularBuffer+AudioBufferList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "TPCircularBuffer+AudioBufferList.c"; sourceTree = "<group>"; };
 		758B49D520E4259E003A11F1 /* DCSLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCSLink.swift; sourceTree = "<group>"; };
 		758B49D720E43913003A11F1 /* DStarIOSPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DStarIOSPlayground.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		75E087DD20E30841003A11F1 /* DV3KVocoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DV3KVocoder.swift; sourceTree = "<group>"; };
@@ -209,8 +212,6 @@
 				753AB26520E473AD003A11F1 /* BTRDPlusAuthenticator.m */,
 				757DEE1C20E477CF003A11F1 /* BTRDExtraLink.m */,
 				753AB21020E45C44003A11F1 /* Info.plist */,
-				753AB22820E4602B003A11F1 /* TPCircularBuffer.c */,
-				753AB22920E4602B003A11F1 /* TPCircularBuffer.h */,
 			);
 			path = BTR;
 			sourceTree = "<group>";
@@ -259,6 +260,26 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		757DEE2B20E545EF003A11F1 /* TPCircularBuffer */ = {
+			isa = PBXGroup;
+			children = (
+				753AB22820E4602B003A11F1 /* TPCircularBuffer.c */,
+				753AB22920E4602B003A11F1 /* TPCircularBuffer.h */,
+				757DEE2E20E54713003A11F1 /* TPCircularBuffer+AudioBufferList.c */,
+				757DEE2D20E54713003A11F1 /* TPCircularBuffer+AudioBufferList.h */,
+			);
+			name = TPCircularBuffer;
+			path = ../../Frameworks/TPCircularBuffer;
+			sourceTree = "<group>";
+		};
+		757DEE2C20E5462C003A11F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				757DEE2B20E545EF003A11F1 /* TPCircularBuffer */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
 		75F7D24B20E30620003A11F1 = {
 			isa = PBXGroup;
 			children = (
@@ -270,6 +291,7 @@
 				753AB20E20E45C44003A11F1 /* BTR */,
 				75F7D25520E30620003A11F1 /* Products */,
 				757DEE2020E540EC003A11F1 /* Resources */,
+				757DEE2C20E5462C003A11F1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -503,6 +525,7 @@
 				753AB25A20E46FD3003A11F1 /* BTRLinkDriver.m in Sources */,
 				753AB26620E473AD003A11F1 /* BTRDPlusAuthenticator.m in Sources */,
 				753AB23520E4629A003A11F1 /* BTRDV3KVocoder.m in Sources */,
+				757DEE3020E54727003A11F1 /* TPCircularBuffer+AudioBufferList.c in Sources */,
 				753AB25E20E47020003A11F1 /* PortMapper.m in Sources */,
 				753AB24020E46594003A11F1 /* BTRDataEngine.m in Sources */,
 				753AB24B20E46A36003A11F1 /* BTRAprsLocation.m in Sources */,
@@ -741,7 +764,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = NL3267E99V;
-				INFOPLIST_FILE = DStarDelightIOS/Info.plist;
+				INFOPLIST_FILE = Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -762,7 +785,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = NL3267E99V;
-				INFOPLIST_FILE = DStarDelightIOS/Info.plist;
+				INFOPLIST_FILE = Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

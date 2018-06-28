@@ -1,0 +1,3 @@
+[submodule "Frameworks/TPCircularBuffer"]
+	path = Frameworks/TPCircularBuffer
+	url = https://github.com/michaeltyson/TPCircularBuffer.git
