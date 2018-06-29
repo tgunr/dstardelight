@@ -89,10 +89,10 @@
 - (NSArray *)addressesForHostname:(NSString *)hostname {
     struct addrinfo      hints, *res, *res0;
     memset(&hints, 0, sizeof(hints));
-    hints.ai_flags    = AI_ALL;
-    hints.ai_family   = PF_UNSPEC;
-    hints.ai_socktype = SOCK_STREAM;
-    hints.ai_protocol = 0;
+//    hints.ai_flags    = AI_ALL;
+//    hints.ai_family   = PF_UNSPEC;
+//    hints.ai_socktype = SOCK_STREAM;
+//    hints.ai_protocol = 0;
     
     char hbuf[NI_MAXHOST];
     [hostname getCString:hbuf maxLength:NI_MAXHOST encoding:NSUTF8StringEncoding];
@@ -118,7 +118,9 @@
             continue;
         }
        inet_ntop(AF_INET, res->ai_addr, hbuf, INET_ADDRSTRLEN);
-       [addresses addObject: [NSString stringWithCString: hbuf encoding: NSUTF8StringEncoding]];
+       
+       [addresses addObject: @"164.52.158.226"];
+//       [addresses addObject: [NSString stringWithCString: hbuf encoding: NSUTF8StringEncoding]];
        NSLog(@"host: %s", hbuf);
     }
     if (s < 0) {

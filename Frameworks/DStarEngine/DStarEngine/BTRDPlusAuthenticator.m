@@ -149,10 +149,12 @@ static const unsigned long long NSEC_PER_HOUR = 3600ull * NSEC_PER_SEC;
         .sin_len = sizeof(struct sockaddr_in),
         .sin_family = AF_INET,
         .sin_port = htons(20001),
-        .sin_addr.s_addr = inet_addr([self.authenticationHost.address cStringUsingEncoding:NSUTF8StringEncoding])
+        .sin_addr.s_addr = inet_addr([@"164.52.158.226" cStringUsingEncoding:NSUTF8StringEncoding])
+//        .sin_addr.s_addr = inet_addr([self.authenticationHost.address cStringUsingEncoding:NSUTF8StringEncoding])
     };
     
-    NSLog(@"authenticate: connecting to %@", self.authenticationHost.address);
+    NSLog(@"authenticate: connecting to 164.52.158.226");
+//    NSLog(@"authenticate: connecting to %@", self.authenticationHost.address);
     if(connect(authSocket, (const struct sockaddr *) &addr, (socklen_t) sizeof(addr))) {
         NSLog(@"Couldn't connect socket: %s\n", strerror(errno));
         return;
