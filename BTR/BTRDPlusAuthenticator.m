@@ -156,10 +156,12 @@ static const unsigned long long NSEC_PER_HOUR = 3600ull * NSEC_PER_SEC;
         .sin_addr.s_addr = inet_addr([self.authenticationHost.address cStringUsingEncoding:NSUTF8StringEncoding])
     };
     
+    NSLog(@"authenticate: connecting to %@", self.authenticationHost.address);
     if(connect(authSocket, (const struct sockaddr *) &addr, (socklen_t) sizeof(addr))) {
         NSLog(@"Couldn't connect socket: %s\n", strerror(errno));
         return;
     }
+    NSLog(@"authenticate: connected");
     
     struct dplus_authentication_request request;
     memcpy(&request, &requestTemplate, sizeof(requestTemplate));
