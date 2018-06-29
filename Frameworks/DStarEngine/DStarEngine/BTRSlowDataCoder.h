@@ -24,20 +24,18 @@
  * Copyright (c) 2015 Jeremy McDermond (NH6Z). All rights reserved.
  *
  */
+#import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 
-@protocol BTRLinkDriverDelegate <NSObject>
+#import "BTRSlowDataDelegate.h"
+
+
+@interface BTRSlowDataCoder : NSObject <CLLocationManagerDelegate>
 
 -(void)addData:(void *)data streamId:(NSUInteger)streamId;
 -(void)getBytes:(void *)bytes forSequence:(NSUInteger)sequence;
 
-#pragma mark - Delegate methods
--(void)destinationWillLink:(NSString *)destination;
--(void)destinationDidLink:(NSString *)destination;
--(void)destinationDidUnlink:(NSString *)destination;
--(void)destinationDidConnect:(NSString *)destination;
--(void)streamDidStart:(NSDictionary *)header;
--(void)streamDidEnd:(NSNumber *)streamId atTime:(NSDate *)date;
-
--(void)destinationDidError:(NSString *)destination error:(NSError *)error;
+@property (nonatomic, copy) NSString *message;
+@property (nonatomic, weak) NSObject <BTRSlowDataDelegate> *delegate;
 
 @end

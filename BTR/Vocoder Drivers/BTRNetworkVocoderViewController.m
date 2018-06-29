@@ -28,7 +28,7 @@
 #import "BTRNetworkVocoderViewController.h"
 
 #import "BTRDV3KNetworkVocoder.h"
-#import "BTRDataEngine.h"
+#import <DStarEngine/BTRDataEngine.h>
 
 @interface BTRNetworkVocoderViewController ()
 

@@ -24,15 +24,17 @@
  * Copyright (c) 2015 Jeremy McDermond (NH6Z). All rights reserved.
  *
  */
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-@class BTRDV3KNetworkVocoder;
+#import "BTRVocoderDriver.h"
 
-@interface BTRNetworkVocoderViewController : UIViewController
+@class BTRAudioHandler;
 
-@property (weak) IBOutlet NSTextField *productId;
-@property (weak) IBOutlet NSTextField *version;
-@property (weak) BTRDV3KNetworkVocoder *driver;
+@interface BTRDV3KVocoder : NSObject <BTRVocoderDriver>
 
--(IBAction)doTest:(id)sender;
+- (id) init;
+
+@property (nonatomic, readonly, copy) NSString *productId;
+@property (nonatomic, readonly, copy) NSString *version;
+
 @end

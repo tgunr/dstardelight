@@ -24,12 +24,15 @@
  * Copyright (c) 2015 Jeremy McDermond (NH6Z). All rights reserved.
  *
  */
+#import <Foundation/Foundation.h>
 
-@class BTRAprsLocation;
+@class BTRDV3KNetworkVocoder;
 
-@protocol BTRSlowDataDelegate <NSObject>
+@interface BTRNetworkVocoderViewController : UIViewController
 
--(void)slowDataReceived:(NSString *)slowData forStreamId:(NSNumber *)streamId;
--(void)locationReceived:(BTRAprsLocation *)location forStreamId:(NSNumber *)streamId;
+@property (weak) IBOutlet NSTextField *productId;
+@property (weak) IBOutlet NSTextField *version;
+@property (weak) BTRDV3KNetworkVocoder *driver;
 
+-(IBAction)doTest:(id)sender;
 @end

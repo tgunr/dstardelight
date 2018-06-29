@@ -27,8 +27,9 @@
 
 #import "BTRAudioViewController.h"
 
-#import "BTRDataEngine.h"
-#import "BTRAudioHandler.h"
+#import <DStarEngine/BTRDataEngine.h>
+#import <DStarEngine/BTRAudioHandler.h>
+#import <CoreAudio/CoreAudio.h>
 
 @interface BTRAudioViewController ()
 -(void)refreshDevices;
@@ -37,7 +38,7 @@
 @implementation BTRAudioViewController
 
 - (void) setSelectedInput:(NSInteger)_selectedInput {
-    [BTRDataEngine sharedInstance].audio.inputDevice = (AudioDeviceID) _selectedInput;
+//    [BTRDataEngine sharedInstance].audio.inputDevice = (AudioDeviceID) _selectedInput;
     
     for(NSDictionary *entry in [BTRAudioHandler enumerateInputDevices])
         if(((NSNumber *)entry[@"id"]).integerValue == _selectedInput)
@@ -49,7 +50,7 @@
 }
 
 - (void) setSelectedOutput:(NSInteger)_selectedOutput {
-    [BTRDataEngine sharedInstance].audio.outputDevice = (AudioDeviceID) _selectedOutput;
+//    [BTRDataEngine sharedInstance].audio.outputDevice = (AudioDeviceID) _selectedOutput;
     
     for(NSDictionary *entry in [BTRAudioHandler enumerateOutputDevices])
         if(((NSNumber *)entry[@"id"]).integerValue == _selectedOutput)

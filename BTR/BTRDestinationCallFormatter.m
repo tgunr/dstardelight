@@ -26,7 +26,7 @@
  */
 
 #import "BTRDestinationCallFormatter.h"
-#import "BTRDataEngine.h"
+#import <DStarEngine/BTRDataEngine.h>
 
 @interface BTRDestinationCallFormatter ()
 

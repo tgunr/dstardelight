@@ -25,7 +25,7 @@
  *
  */
 
-#import "BTRDV3KVocoder.h"
+#import <DStarEngine/BTRDV3KVocoder.h>
 
 #import "BTRDV3KPacket.h"
 

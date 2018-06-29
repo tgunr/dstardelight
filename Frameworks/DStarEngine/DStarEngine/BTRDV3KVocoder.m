@@ -33,7 +33,7 @@
 #import "BTRAudioHandler.h"
 
 // XXX
-#import "BTRSerialVocoderViewController.h"
+//#import "BTRSerialVocoderViewController.h"
 
 static const struct dv3k_packet bleepPacket = {
     .start_byte = DV3K_START_BYTE,
@@ -79,7 +79,7 @@ static const struct dv3k_packet dv3k_audio = {
     struct dv3k_packet *responsePacket;
 }
 
-- (BOOL) sendCtrlPacket:(struct dv3k_packet)packet expectResponse:(uint8)response;
+- (BOOL) sendCtrlPacket:(struct dv3k_packet)packet expectResponse:(UInt8)response;
 - (void) processPacket;
 @end
 
@@ -115,7 +115,7 @@ static const struct dv3k_packet dv3k_audio = {
 
 - (void) dealloc {
     free(responsePacket);
-    NSLog(@"In dealloc for %@", [self className]);
+    NSLog(@"In dealloc for %@", self);
 }
 
 #pragma mark - Methods for subclasses to implement
@@ -146,15 +146,15 @@ static const struct dv3k_packet dv3k_audio = {
     [self doesNotRecognizeSelector:_cmd];
 }
 
--(NSViewController *)configurationViewController {
-    [self doesNotRecognizeSelector:_cmd];
-}
+//-(UIViewController *)configurationViewController {
+//    [self doesNotRecognizeSelector:_cmd];
+//}
 
 #pragma clang diagnostic pop
 
 #pragma mark - Packet sending
 
-- (BOOL) sendCtrlPacket:(struct dv3k_packet)packet expectResponse:(uint8)response {
+- (BOOL) sendCtrlPacket:(struct dv3k_packet)packet expectResponse:(UInt8)response {
     
     if(self.started == YES) {
         NSLog(@"Called sendCtrlPacket: when started\n");

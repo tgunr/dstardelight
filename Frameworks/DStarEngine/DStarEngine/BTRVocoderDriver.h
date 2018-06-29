@@ -24,19 +24,23 @@
  * Copyright (c) 2015 Jeremy McDermond (NH6Z). All rights reserved.
  *
  */
+#import <Foundation/Foundation.h>
 
-@import CoreLocation;
+@protocol BTRLinkDriverProtocol;
 
-@protocol BTRDataEngineDelegate <NSObject>
+@class BTRAudioHandler;
 
--(void)streamDidStart:(NSDictionary *)header;
--(void)streamDidEnd:(NSNumber *)streamId atTime:(NSDate *)date;
--(void)slowDataReceived:(NSString *)slowData forStreamId:(NSNumber *)streamId;
--(void)locationReceived:(CLLocation *)location forStreamId:(NSNumber *)streamId;
--(void)destinationDidLink:(NSString *)destination;
--(void)destinationDidUnlink:(NSString *)destination;
--(void)destinationDidError:(NSString *)destination error:(NSError *)error;
--(void)destinationWillLink:(NSString *)destination;
--(void)destinationDidConnect:(NSString *)destination;
+@protocol BTRVocoderDriver <NSObject>
+- (void) decodeData:(void *) data lastPacket:(BOOL)last;
+- (void) encodeData:(void *) data lastPacket:(BOOL)last;
+
+- (BOOL) start;
+- (void) stop;
+
++(NSString *)driverName;
+
+@property (nonatomic) BTRAudioHandler *audio;
+@property (nonatomic) NSObject <BTRLinkDriverProtocol> *network;
+//@property (nonatomic, readonly) NSViewController *configurationViewController;
 
 @end

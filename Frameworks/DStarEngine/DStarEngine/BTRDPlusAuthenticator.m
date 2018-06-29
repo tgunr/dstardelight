@@ -17,9 +17,9 @@
 // along with this program; if not, write to the Free Software
 // Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
-
 #import "BTRDPlusAuthenticator.h"
 
+#import "DNSHost.h"
 #import <arpa/inet.h>
 #import <sys/ioctl.h>
 #import "DStarUtils.h"
@@ -73,7 +73,7 @@ static const unsigned long long NSEC_PER_HOUR = 3600ull * NSEC_PER_SEC;
     dispatch_source_t authTimerSource;
 }
 
-@property (nonatomic) NSHost *authenticationHost;
+@property (nonatomic) DNSHost *authenticationHost;
 @property (nonatomic, readwrite) NSDictionary *reflectorList;
 @property (nonatomic, getter=isAuthenticated, readwrite) BOOL authenticated;
 @property (nonatomic, readonly) char suffix;
@@ -88,18 +88,14 @@ static const unsigned long long NSEC_PER_HOUR = 3600ull * NSEC_PER_SEC;
 - (id) init {
     self = [super init];
     if(self) {
-        _authenticationHost = [NSHost hostWithName: DSTARAUTHHOST];
+        _authenticationHost = [DNSHost hostWithName: DSTARAUTHHOST];
         _reflectorList = nil;
-        _authCall = @"";
+        _authCall = @"WD6EZL";
         _suffix = '2';
         _authenticated = NO;
         
-        BTRDPlusAuthenticator __weak *weakSelf = self;
-        [[[NSWorkspace sharedWorkspace] notificationCenter] addObserverForName:NSWorkspaceDidWakeNotification object:NULL queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notification) {
-            NSLog(@"Waking from sleep, reauthenticating");
-            [weakSelf authenticate];
-        }];
-        [self bind:@"authCall" toObject:[NSUserDefaultsController sharedUserDefaultsController] withKeyPath:@"values.myCall" options:nil];
+//        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reauthenicate)     name:UIApplicationDidBecomeActiveNotification object:nil];
+//        [self bind:@"authCall" toObject:[NSUserDefaultsController sharedUserDefaultsController] withKeyPath:@"values.myCall" options:nil];
         [self startAuthTimer];
     }
     return self;
@@ -135,7 +131,7 @@ static const unsigned long long NSEC_PER_HOUR = 3600ull * NSEC_PER_SEC;
     dispatch_resume(authTimerSource);
 }
 
--(void) authenticate {
+- (void) authenticate {
     self.authenticated = NO;
     
     NSLog(@"Performing DPlus authentication");
@@ -162,7 +158,7 @@ static const unsigned long long NSEC_PER_HOUR = 3600ull * NSEC_PER_SEC;
         return;
     }
     NSLog(@"authenticate: connected");
-    
+
     struct dplus_authentication_request request;
     memcpy(&request, &requestTemplate, sizeof(requestTemplate));
     strncpy(request.authCall, [[self.authCall stringByPaddingToLength:8 withString:@" " startingAtIndex:0] cStringUsingEncoding:NSUTF8StringEncoding], sizeof(request.authCall));
@@ -234,4 +230,8 @@ static const unsigned long long NSEC_PER_HOUR = 3600ull * NSEC_PER_SEC;
         self.authenticated = YES;
 }
 
+- (void) reauthenicate {
+    NSLog(@"Waking from sleep, reauthenticating");
+    [self authenticate];
+}
 @end
