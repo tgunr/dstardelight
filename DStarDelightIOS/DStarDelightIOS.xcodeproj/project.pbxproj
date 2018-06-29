@@ -50,6 +50,9 @@
 		757DEE2920E54153003A11F1 /* DCSReflectors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 757DEE2420E54153003A11F1 /* DCSReflectors.plist */; };
 		757DEE2A20E54153003A11F1 /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = 757DEE2520E54153003A11F1 /* Credits.html */; };
 		757DEE3020E54727003A11F1 /* TPCircularBuffer+AudioBufferList.c in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE2E20E54713003A11F1 /* TPCircularBuffer+AudioBufferList.c */; };
+		757DEE3220E54DCA003A11F1 /* DNS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE3120E54DCA003A11F1 /* DNS.swift */; };
+		757DEE3420E56E65003A11F1 /* DNSHost.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE3320E56E65003A11F1 /* DNSHost.m */; };
+		757DEE3620E5C12F003A11F1 /* DNSHost.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE3520E5C12F003A11F1 /* DNSHost.h */; };
 		75F7D25820E30620003A11F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D25720E30620003A11F1 /* AppDelegate.swift */; };
 		75F7D25A20E30620003A11F1 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D25920E30620003A11F1 /* RootViewController.swift */; };
 		75F7D25C20E30620003A11F1 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D25B20E30620003A11F1 /* DataViewController.swift */; };
@@ -139,6 +142,9 @@
 		757DEE2520E54153003A11F1 /* Credits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = Credits.html; path = ../../Resources/Credits.html; sourceTree = "<group>"; };
 		757DEE2D20E54713003A11F1 /* TPCircularBuffer+AudioBufferList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TPCircularBuffer+AudioBufferList.h"; sourceTree = "<group>"; };
 		757DEE2E20E54713003A11F1 /* TPCircularBuffer+AudioBufferList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "TPCircularBuffer+AudioBufferList.c"; sourceTree = "<group>"; };
+		757DEE3120E54DCA003A11F1 /* DNS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNS.swift; sourceTree = "<group>"; };
+		757DEE3320E56E65003A11F1 /* DNSHost.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNSHost.m; sourceTree = "<group>"; };
+		757DEE3520E5C12F003A11F1 /* DNSHost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DNSHost.h; path = Headers/DNSHost.h; sourceTree = "<group>"; };
 		758B49D520E4259E003A11F1 /* DCSLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCSLink.swift; sourceTree = "<group>"; };
 		758B49D720E43913003A11F1 /* DStarIOSPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DStarIOSPlayground.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		75E087DD20E30841003A11F1 /* DV3KVocoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DV3KVocoder.swift; sourceTree = "<group>"; };
@@ -197,8 +203,11 @@
 		753AB20E20E45C44003A11F1 /* BTR */ = {
 			isa = PBXGroup;
 			children = (
+				753AB24C20E46CA5003A11F1 /* DStarDelightIOS-Bridging-Header.h */,
 				753AB25020E46D85003A11F1 /* Headers */,
 				753AB24A20E46A36003A11F1 /* BTRAprsLocation.m */,
+				757DEE3320E56E65003A11F1 /* DNSHost.m */,
+				757DEE3520E5C12F003A11F1 /* DNSHost.h */,
 				753AB24520E46722003A11F1 /* BTRSlowDataCoder.m */,
 				753AB22D20E46265003A11F1 /* BTRDV3KNetworkVocoder.m */,
 				753AB22020E45E88003A11F1 /* BTRDataEngine.m */,
@@ -206,11 +215,11 @@
 				753AB23320E4629A003A11F1 /* BTRDV3KVocoder.m */,
 				753AB25120E46DC5003A11F1 /* BTRDCSLink.m */,
 				753AB25920E46FD3003A11F1 /* BTRLinkDriver.m */,
+				757DEE1C20E477CF003A11F1 /* BTRDExtraLink.m */,
 				753AB25D20E47020003A11F1 /* PortMapper.m */,
 				753AB26120E4733C003A11F1 /* BTRDPlusLink.m */,
 				753AB26320E4739F003A11F1 /* BTRIRCDDBGateways.m */,
 				753AB26520E473AD003A11F1 /* BTRDPlusAuthenticator.m */,
-				757DEE1C20E477CF003A11F1 /* BTRDExtraLink.m */,
 				753AB21020E45C44003A11F1 /* Info.plist */,
 			);
 			path = BTR;
@@ -342,7 +351,7 @@
 				758B49D520E4259E003A11F1 /* DCSLink.swift */,
 				75F7D28520E306A6003A11F1 /* SlowDataCoder.swift */,
 				75F7D28620E306A6003A11F1 /* SlowDataDelegate.swift */,
-				753AB24C20E46CA5003A11F1 /* DStarDelightIOS-Bridging-Header.h */,
+				757DEE3120E54DCA003A11F1 /* DNS.swift */,
 			);
 			name = DStar;
 			path = ../DStar;
@@ -358,6 +367,7 @@
 				753AB25620E46E29003A11F1 /* BTRDataEngineDelegate.h in Headers */,
 				753AB23120E46282003A11F1 /* BTRDV3KVocoderSubclass.h in Headers */,
 				753AB23B20E4634C003A11F1 /* BTRLinkDriverProtocol.h in Headers */,
+				757DEE3620E5C12F003A11F1 /* DNSHost.h in Headers */,
 				753AB21120E45C44003A11F1 /* BTR.h in Headers */,
 				753AB26820E473C3003A11F1 /* BTRDPlusAuthenticator.h in Headers */,
 				757DEE1F20E47837003A11F1 /* BTRDExtraLink.h in Headers */,
@@ -518,6 +528,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				757DEE3420E56E65003A11F1 /* DNSHost.m in Sources */,
 				753AB22A20E4602B003A11F1 /* TPCircularBuffer.c in Sources */,
 				753AB25220E46DC5003A11F1 /* BTRDCSLink.m in Sources */,
 				753AB24720E46727003A11F1 /* BTRAudioHandler.m in Sources */,
@@ -543,6 +554,7 @@
 				75F7D25E20E30620003A11F1 /* ModelController.swift in Sources */,
 				75F7D25C20E30620003A11F1 /* DataViewController.swift in Sources */,
 				75F7D25820E30620003A11F1 /* AppDelegate.swift in Sources */,
+				757DEE3220E54DCA003A11F1 /* DNS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,6 +712,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "BTR/DStarDelightIOS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -753,6 +766,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "BTR/DStarDelightIOS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -772,7 +786,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.polymicro.DStarDelightIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "../DStar/DStarDelightIOS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -793,7 +806,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.polymicro.DStarDelightIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "../DStar/DStarDelightIOS-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

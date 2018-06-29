@@ -1,129 +1,131 @@
 //
-//  DNS.m
-//  BTR
+//  DNSHost.m
 //
 //  Created by Dave Carlton on 6/28/18.
 //  Copyright © 2018 Polymicro Systems. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <netdb.h>
-#include <ifaddrs.h>
-#include <arpa/inet.h>
-
-
-@interface DNS : NSObject
-@private
-NSArray     *names;
-NSArray     *addresses;
-id        reserved;
-}
-
-@property (nullable, readonly, copy) NSString *name;    // arbitrary choice
-@property (readonly, copy) NSArray<NSString *> *names;    // unordered list
-
-@property (nullable, readonly, copy) NSString *address;    // arbitrary choice
-@property (readonly, copy) NSArray<NSString *> *addresses;    // unordered list of IPv6 and IPv4 addresses
-
-@property (nullable, readonly, copy) NSString *localizedName API_AVAILABLE(macos(10.6)) API_UNAVAILABLE(ios, watchos, tvos);
-
-+ (instancetype)currentHost;
-+ (instancetype)hostWithName:(nullable NSString *)name;
-+ (instancetype)hostWithAddress:(NSString *)address;
-- (BOOL)isEqualToHost:(NSHost *)aHost;
-- (NSError *)convertCFStreamErrorIntoNSError:(CFStreamError) streamError;
-+ (NSArray *)hostnamesForAddress:(NSString *)address;
-@end
+#import "DNSHost.h"
 
 @implementation DNSHost
 
+@synthesize name;
+@synthesize names;    // unordered list
+@synthesize address;    // arbitrary choice
+@synthesize addresses;    // unordered list of IPv6 and IPv4 addresses
+@synthesize localizedName;
+
 + (instancetype)currentHost {
+    DNSHost *me = [[DNSHost alloc] init];
+    me.address = [me getLocalIPAddress];
+    me.names = [me hostnamesForAddress: me.address];
+    me.name = me.names[0];
+    me.addresses = [me addressesForHostname:me.name];
+    return me;
 }
 
 + (instancetype)hostWithName:(nullable NSString *)name {
+    DNSHost *me = [[DNSHost alloc] init];
+    me.addresses = [me addressesForHostname: name];
+    me.address = me.addresses[0];
+    me.names = [me hostnamesForAddress: me.address];
+    me.name = me.names[0];
+    return me;
 }
 
 + (instancetype)hostWithAddress:(NSString *)address {
-
+    DNSHost *me = [[DNSHost alloc] init];
+    me.names = [me hostnamesForAddress: address];
+    me.name = me.names[0];
+    me.addresses = [me addressesForHostname: me.name];
+    me.address = me.addresses[0];
+    return me;
 }
 
 - (BOOL)isEqualToHost:(DNSHost *)aHost {
-}
-
-+ (NSError *)convertCFStreamErrorIntoNSError:(CFStreamError) streamError {
-    NSError *err = [NSError errorWithDomain:[[NSBundle mainBundle] bundleIdentifier] code:streamError.error userInfo:NULL];
-    return err;
-}
-
-+ (NSArray *)hostnamesForAddress:(NSString *)address {
-    // Get the host reference for the given address.
-    CFStreamError streamError;
-    struct addrinfo      hints;
-    struct addrinfo      *result = NULL;
-    memset(&hints, 0, sizeof(hints));
-    hints.ai_flags    = AI_NUMERICHOST;
-    hints.ai_family   = PF_UNSPEC;
-    hints.ai_socktype = SOCK_STREAM;
-    hints.ai_protocol = 0;
-    int errorStatus = getaddrinfo([address cStringUsingEncoding:NSASCIIStringEncoding], NULL, &hints, &result);
-    if (errorStatus != 0) return nil;
-    CFDataRef addressRef = CFDataCreate(NULL, (UInt8 *)result->ai_addr, result->ai_addrlen);
-    if (addressRef == nil) return nil;
-    freeaddrinfo(result);
-    CFHostRef hostRef = CFHostCreateWithAddress(kCFAllocatorDefault, addressRef);
-    if (hostRef == nil) return nil;
-    CFRelease(addressRef);
-    BOOL isSuccess = CFHostStartInfoResolution(hostRef, kCFHostNames, &streamError);
-    // always false
-    if (!isSuccess){
-        NSLog(@"error:%@",[self convertCFStreamErrorIntoNSError:streamError]);
-        // error:Error Domain=kCFErrorDomainCFNetwork Code=2 "The operation couldn’t be completed. (kCFErrorDomainCFNetwork error 2.)" UserInfo=0x1cd29190 {kCFGetAddrInfoFailureKey=8}
-        return nil;
+    Boolean found = false;
+    NSArray * taddrs = aHost.addresses;
+    NSArray * saddrs = self.addresses;
+    for (NSString *taddr in taddrs) {
+        for (NSString *saddr in saddrs) {
+            if (saddr == taddr) {
+                found = true;
+                break;
+            }
+        }
+        if (found) {
+            break;
+        }
     }
+    return found;
+}
 
-    // Get the hostnames for the host reference.
-    CFArrayRef hostnamesRef = CFHostGetNames(hostRef, NULL);
+// Get the hostname for the given address.
+- (NSArray *)hostnamesForAddress:(NSString *)address {
+    struct addrinfo      hints;
+    memset(&hints, 0, sizeof(hints));
+//    hints.ai_flags    = AI_NUMERICHOST;
+//    hints.ai_family   = PF_UNSPEC;
+//    hints.ai_socktype = SOCK_STREAM;
+//    hints.ai_protocol = 0;
+    
+    // TODO: Maybe should first get all addresses if they are not yet in and loop thru them
+    struct sockaddr_in sa;
+    sa.sin_family = AF_INET;
+    char node[NI_MAXHOST];
+    char hbuf[NI_MAXHOST];
+    [address getCString:hbuf maxLength:NI_MAXHOST encoding:NSUTF8StringEncoding];
+//    [@"76.173.89.2" getCString:hbuf maxLength:NI_MAXHOST encoding:NSUTF8StringEncoding];
+    inet_pton(AF_INET, hbuf, &sa.sin_addr);
+    int res = getnameinfo((struct sockaddr*)&sa, sizeof(sa), node, sizeof(node), NULL, 0, 0);
     NSMutableArray *hostnames = [NSMutableArray array];
-    for (int currentIndex = 0; currentIndex < [(__bridge NSArray *)hostnamesRef count]; currentIndex++) {
-        [hostnames addObject:[(__bridge NSArray *)hostnamesRef objectAtIndex:currentIndex]];
+    if (res == 0) {
+        [hostnames addObject: [NSString stringWithCString: node encoding: NSUTF8StringEncoding]];
     }
     return hostnames;
 }
 
-+ (NSArray *)addressesForHostname:(NSString *)hostname {
-    // Get the host reference for the given address.
-    CFStreamError streamError;
-    struct addrinfo      hints;
-    struct addrinfo      *result = NULL;
+// Get the host addresses for the given hostname.
+- (NSArray *)addressesForHostname:(NSString *)hostname {
+    struct addrinfo      hints, *res, *res0;
     memset(&hints, 0, sizeof(hints));
-    hints.ai_flags    = AI_NUMERICHOST;
+    hints.ai_flags    = AI_ALL;
     hints.ai_family   = PF_UNSPEC;
     hints.ai_socktype = SOCK_STREAM;
     hints.ai_protocol = 0;
-//    int errorStatus = getaddrinfo([address cStringUsingEncoding:NSASCIIStringEncoding], NULL, &hints, &result);
-//    if (errorStatus != 0) return nil;
-    CFDataRef addressRef = CFDataCreate(NULL, (UInt8 *)result->ai_addr, result->ai_addrlen);
-    if (addressRef == nil) return nil;
-    freeaddrinfo(result);
-    CFHostRef hostRef = CFHostCreateWithName(kCFAllocatorDefault, (__bridge CFStringRef _Nonnull)(hostname));
-    if (hostRef == nil) return nil;
-    CFRelease(addressRef);
-    BOOL isSuccess = CFHostStartInfoResolution(hostRef, kCFHostAddresses, &streamError);
-    // always false
-    if (!isSuccess){
-        NSLog(@"error:%@",[self convertCFStreamErrorIntoNSError:streamError]);
-        // error:Error Domain=kCFErrorDomainCFNetwork Code=2 "The operation couldn’t be completed. (kCFErrorDomainCFNetwork error 2.)" UserInfo=0x1cd29190 {kCFGetAddrInfoFailureKey=8}
-        return nil;
-    }
     
-    // Get the hostnames for the host reference.
-    CFArrayRef addressesRef = CFHostGetAddressing(hostRef, NULL);
-    NSMutableArray *addresses = [NSMutableArray array];
-    for (int currentIndex = 0; currentIndex < [(__bridge NSArray *)addressesRef count]; currentIndex++) {
-        [addresses addObject:[(__bridge NSArray *)addressesRef objectAtIndex:currentIndex]];
+    char hbuf[NI_MAXHOST];
+    [hostname getCString:hbuf maxLength:NI_MAXHOST encoding:NSUTF8StringEncoding];
+    int err= getaddrinfo([hostname UTF8String], [@"80" UTF8String], &hints, &res0);
+    if (err) {
+        NSLog(@"%s", gai_strerror(err));
     }
+    int s = -1;
+    char *cause = NULL;
+    NSMutableArray *addresses = [NSMutableArray array];
+   for (res = res0; res; res = res->ai_next) {
+        s = socket(res->ai_family, res->ai_socktype,
+                   res->ai_protocol);
+        if (s < 0) {
+            cause = "socket";
+            continue;
+        }
+        
+        if (connect(s, res->ai_addr, res->ai_addrlen) < 0) {
+            cause = "connect";
+            close(s);
+            s = -1;
+            continue;
+        }
+       inet_ntop(AF_INET, res->ai_addr, hbuf, INET_ADDRSTRLEN);
+       [addresses addObject: [NSString stringWithCString: hbuf encoding: NSUTF8StringEncoding]];
+       NSLog(@"host: %s", hbuf);
+    }
+    if (s < 0) {
+        NSLog(@"cause: %s", cause);
+        /*NOTREACHED*/
+    }
+    freeaddrinfo(res0);
     return addresses;
 }
 
@@ -155,11 +157,12 @@ id        reserved;
     // Free memory
     freeifaddrs(interfaces);
     return address;
-    
 }
 
-+ (NSString *)hostWithName:[BTRDCSLink reflectorList][reflector]].address;
+- (NSError *)convertCFStreamErrorIntoNSError:(CFStreamError) streamError {
+    NSError *err = [NSError errorWithDomain:[[NSBundle mainBundle] bundleIdentifier] code:streamError.error userInfo:NULL];
+    return err;
+}
 
-[NSHost hostWithAddress:self.address];
 @end
 

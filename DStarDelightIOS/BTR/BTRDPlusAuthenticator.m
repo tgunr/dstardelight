@@ -21,8 +21,10 @@
 
 #import "BTRDPlusAuthenticator.h"
 
+#import "DNSHost.h"
 #import <arpa/inet.h>
 #import <sys/ioctl.h>
+#import "DStarUtils.h"
 
 struct dplus_authentication_request {
     char length;
@@ -73,7 +75,7 @@ static const unsigned long long NSEC_PER_HOUR = 3600ull * NSEC_PER_SEC;
     dispatch_source_t authTimerSource;
 }
 
-@property (nonatomic) NSHost *authenticationHost;
+@property (nonatomic) DNSHost *authenticationHost;
 @property (nonatomic, readwrite) NSDictionary *reflectorList;
 @property (nonatomic, getter=isAuthenticated, readwrite) BOOL authenticated;
 @property (nonatomic, readonly) char suffix;
@@ -88,17 +90,14 @@ static const unsigned long long NSEC_PER_HOUR = 3600ull * NSEC_PER_SEC;
 - (id) init {
     self = [super init];
     if(self) {
-//        _authenticationHost = [NSHost hostWithName:@"opendstar.org"];
+        _authenticationHost = [DNSHost hostWithName: DSTARAUTHHOST];
         _reflectorList = nil;
         _authCall = @"";
         _suffix = '2';
         _authenticated = NO;
         
         BTRDPlusAuthenticator __weak *weakSelf = self;
-//        [[[NSWorkspace sharedWorkspace] notificationCenter] addObserverForName:NSWorkspaceDidWakeNotification object:NULL queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notification) {
-//            NSLog(@"Waking from sleep, reauthenticating");
-//            [weakSelf authenticate];
-//        }];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reauthenicate)     name:UIApplicationDidBecomeActiveNotification object:nil];
 //        [self bind:@"authCall" toObject:[NSUserDefaultsController sharedUserDefaultsController] withKeyPath:@"values.myCall" options:nil];
         [self startAuthTimer];
     }
@@ -135,7 +134,7 @@ static const unsigned long long NSEC_PER_HOUR = 3600ull * NSEC_PER_SEC;
     dispatch_resume(authTimerSource);
 }
 
--(void) authenticate {
+- (void) authenticate {
     self.authenticated = NO;
     
     NSLog(@"Performing DPlus authentication");
@@ -153,7 +152,7 @@ static const unsigned long long NSEC_PER_HOUR = 3600ull * NSEC_PER_SEC;
         .sin_len = sizeof(struct sockaddr_in),
         .sin_family = AF_INET,
         .sin_port = htons(20001),
-//        .sin_addr.s_addr = inet_addr([self.authenticationHost.address cStringUsingEncoding:NSUTF8StringEncoding])
+        .sin_addr.s_addr = inet_addr([self.authenticationHost.address cStringUsingEncoding:NSUTF8StringEncoding])
     };
     
     if(connect(authSocket, (const struct sockaddr *) &addr, (socklen_t) sizeof(addr))) {
@@ -232,4 +231,8 @@ static const unsigned long long NSEC_PER_HOUR = 3600ull * NSEC_PER_SEC;
         self.authenticated = YES;
 }
 
+- (void) reauthenicate {
+    NSLog(@"Waking from sleep, reauthenticating");
+    [self authenticate];
+}
 @end

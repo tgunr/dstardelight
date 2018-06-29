@@ -10,13 +10,17 @@ import UIKit
 import BTR
 
 @UIApplicationMain
+@objc
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    var engine: BTRDataEngine?
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-    let engine = BTRDataEngine.sharedInstance()
+        engine = BTRDataEngine.sharedInstance()
+        if engine != nil {
+            engine?.appDelegate = self
+        }
         return true
     }
 

@@ -22,6 +22,7 @@
 
 #import <arpa/inet.h>
 #import <sys/ioctl.h>
+#import "DStarUtils.h"
 
 struct dplus_authentication_request {
     char length;
@@ -87,7 +88,7 @@ static const unsigned long long NSEC_PER_HOUR = 3600ull * NSEC_PER_SEC;
 - (id) init {
     self = [super init];
     if(self) {
-        _authenticationHost = [NSHost hostWithName:@"opendstar.org"];
+        _authenticationHost = [NSHost hostWithName: DSTARAUTHHOST];
         _reflectorList = nil;
         _authCall = @"";
         _suffix = '2';

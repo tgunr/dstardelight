@@ -1,13 +1,13 @@
 //
 //  BTRDCSLink.m
-//  Buster
+//  DstarDelight
 //
 //  Created by Jeremy McDermond on 10/2/15.
 //  Copyright © 2015 NH6Z. All rights reserved.
 //
 
 #import "BTRDCSLink.h"
-
+#import "DNSHost.h"
 #import "BTRLinkDriverSubclass.h"
 #import "BTRDataEngine.h"
 #import "DStarUtils.h"
@@ -132,8 +132,7 @@ static NSDictionary *_reflectorList;
 }
 
 -(NSString *)getAddressForReflector:(NSString *)reflector {
-    return @"NSHost needs replacing";
-    //    return [NSHost hostWithName:[BTRDCSLink reflectorList][reflector]].address;
+    return [DNSHost hostWithName:[BTRDCSLink reflectorList][reflector]].address;
 }
 
 -(BOOL)canHandleLinkTo:(NSString *)linkTarget {

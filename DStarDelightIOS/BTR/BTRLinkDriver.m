@@ -116,7 +116,7 @@
         _txSequence = 0;
         
         dispatch_queue_attr_t dispatchQueueAttr = dispatch_queue_attr_make_with_qos_class(DISPATCH_QUEUE_SERIAL, QOS_CLASS_USER_INITIATED, -1);
-        _writeQueue = dispatch_queue_create("net.nh6z.Buster.LinkWrite", dispatchQueueAttr);
+        _writeQueue = dispatch_queue_create("net.polymicro.DstarDelight.LinkWrite", dispatchQueueAttr);
         
         [[NSNotificationCenter defaultCenter] addObserverForName: PortMapperChangedNotification
                                                           object: nil

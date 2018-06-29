@@ -44,7 +44,7 @@ static NSMutableArray <Class> *linkDriverClasses = nil;
         _slowData.delegate = self;
         
         //  Instantiate all the link drivers
-        _linkQueue = dispatch_queue_create("net.nh6z.Buster.LinkOperations", DISPATCH_QUEUE_SERIAL);
+        _linkQueue = dispatch_queue_create("net.polymicro.DStardelight.LinkOp", DISPATCH_QUEUE_SERIAL);
         NSMutableArray <id <BTRLinkDriverProtocol>> *newLinkDrivers = [[NSMutableArray alloc] init];
         for(Class driver in linkDriverClasses) {
             NSObject <BTRLinkDriverProtocol> *newDriver = [[driver alloc] init];

@@ -321,7 +321,8 @@
 				75E0884D20E3177F003A11F1 /* TPCircularBuffer.c */,
 				75E0884E20E3177F003A11F1 /* TPCircularBuffer.h */,
 			);
-			path = TPCircularBuffer;
+			name = TPCircularBuffer;
+			path = ../Frameworks/TPCircularBuffer;
 			sourceTree = "<group>";
 		};
 		75E0884F20E3177F003A11F1 /* Vocoder Drivers */ = {

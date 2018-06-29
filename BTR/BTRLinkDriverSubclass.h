@@ -1,6 +1,6 @@
 //
 //  BTRLinkDriverSubclass.h
-//  Buster
+//  DstarDelight
 //
 //  Created by Jeremy McDermond on 8/18/15.
 //  Copyright (c) 2015 NH6Z. All rights reserved.
