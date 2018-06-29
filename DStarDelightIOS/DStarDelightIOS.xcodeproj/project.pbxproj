@@ -12,8 +12,6 @@
 		757DEE2820E54153003A11F1 /* DExtraReflectors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 757DEE2320E54152003A11F1 /* DExtraReflectors.plist */; };
 		757DEE2920E54153003A11F1 /* DCSReflectors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 757DEE2420E54153003A11F1 /* DCSReflectors.plist */; };
 		757DEE2A20E54153003A11F1 /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = 757DEE2520E54153003A11F1 /* Credits.html */; };
-		757DEEF320E6EBE7003A11F1 /* DStarEngineIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757DEEF220E6EBE7003A11F1 /* DStarEngineIOS.framework */; };
-		757DEEF520E6EBF7003A11F1 /* DStarEngineIOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 757DEEF420E6EBF7003A11F1 /* DStarEngineIOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		75F7D25820E30620003A11F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D25720E30620003A11F1 /* AppDelegate.swift */; };
 		75F7D25A20E30620003A11F1 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D25920E30620003A11F1 /* RootViewController.swift */; };
 		75F7D25C20E30620003A11F1 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D25B20E30620003A11F1 /* DataViewController.swift */; };
@@ -41,7 +39,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				757DEEF520E6EBF7003A11F1 /* DStarEngineIOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -49,7 +46,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		753AB21020E45C44003A11F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		753AB21020E45C44003A11F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Resources/Info.plist; sourceTree = "<group>"; };
 		753AB22020E45E88003A11F1 /* BTRDataEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BTRDataEngine.m; path = ../../Frameworks/DStarEngine/DStarEngine/BTRDataEngine.m; sourceTree = "<group>"; };
 		753AB22520E45EFC003A11F1 /* BTRAudioHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BTRAudioHandler.m; path = ../../Frameworks/DStarEngine/DStarEngine/BTRAudioHandler.m; sourceTree = "<group>"; };
 		753AB22820E4602B003A11F1 /* TPCircularBuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TPCircularBuffer.c; sourceTree = "<group>"; };
@@ -76,8 +73,6 @@
 		757DEE3120E54DCA003A11F1 /* DNS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNS.swift; sourceTree = "<group>"; };
 		757DEE3320E56E65003A11F1 /* DNSHost.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DNSHost.m; path = ../../Frameworks/DStarEngine/DStarEngine/DNSHost.m; sourceTree = "<group>"; };
 		757DEE3520E5C12F003A11F1 /* DNSHost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DNSHost.h; path = ../../Frameworks/DStarEngine/DStarEngine/DNSHost.h; sourceTree = "<group>"; };
-		757DEEF220E6EBE7003A11F1 /* DStarEngineIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DStarEngineIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		757DEEF420E6EBF7003A11F1 /* DStarEngineIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DStarEngineIOS.framework; path = "../DerivedData/Build/Products/Debug-iphoneos/DStarEngineIOS.framework"; sourceTree = "<group>"; };
 		758B49D520E4259E003A11F1 /* DCSLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCSLink.swift; sourceTree = "<group>"; };
 		758B49D720E43913003A11F1 /* DStarIOSPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DStarIOSPlayground.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		75E087DD20E30841003A11F1 /* DV3KVocoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DV3KVocoder.swift; sourceTree = "<group>"; };
@@ -112,7 +107,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				757DEEF320E6EBE7003A11F1 /* DStarEngineIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,7 +174,6 @@
 		757DEE2C20E5462C003A11F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				757DEEF220E6EBE7003A11F1 /* DStarEngineIOS.framework */,
 				757DEE2B20E545EF003A11F1 /* TPCircularBuffer */,
 			);
 			path = Frameworks;
@@ -189,7 +182,6 @@
 		75F7D24B20E30620003A11F1 = {
 			isa = PBXGroup;
 			children = (
-				757DEEF420E6EBF7003A11F1 /* DStarEngineIOS.framework */,
 				75F7D25F20E30620003A11F1 /* Main.storyboard */,
 				758B49D720E43913003A11F1 /* DStarIOSPlayground.playground */,
 				75F7D27B20E306A6003A11F1 /* DStar */,
@@ -463,7 +455,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OBJC_BRIDGING_HEADER = "BTR/DStarDelightIOS-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Sources/HAM/DStarDelight/Frameworks/DStarEngine/DStarEngine/DStarDelightIOS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -517,7 +509,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OBJC_BRIDGING_HEADER = "BTR/DStarDelightIOS-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Sources/HAM/DStarDelight/Frameworks/DStarEngine/DStarEngine/DStarDelightIOS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -529,7 +521,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = NL3267E99V;
-				INFOPLIST_FILE = Resources/Info.plist;
+				INFOPLIST_FILE = /Sources/HAM/DStarDelight/DStarDelightIOS/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -537,7 +529,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.polymicro.DStarDelightIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Sources/HAM/DStarDelight/Frameworks/DStarEngine/DStarEngine/DStarDelightIOS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -550,7 +541,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = NL3267E99V;
-				INFOPLIST_FILE = Resources/Info.plist;
+				INFOPLIST_FILE = /Sources/HAM/DStarDelight/DStarDelightIOS/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -558,7 +549,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.polymicro.DStarDelightIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Sources/HAM/DStarDelight/Frameworks/DStarEngine/DStarEngine/DStarDelightIOS-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
