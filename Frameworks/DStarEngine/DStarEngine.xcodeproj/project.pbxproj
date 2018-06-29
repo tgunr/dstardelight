@@ -29,7 +29,6 @@
 		757DEE9020E6D62C003A11F1 /* DStarUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE8F20E6D62C003A11F1 /* DStarUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757DEE9220E6D6FC003A11F1 /* BTRLinkDriver.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE9120E6D6FB003A11F1 /* BTRLinkDriver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757DEE9620E6D7D9003A11F1 /* BTRDCSLink.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE9520E6D7D9003A11F1 /* BTRDCSLink.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		757DEEA020E6DEA5003A11F1 /* DStarDelightIOS-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE5920E6D4DE003A11F1 /* DStarDelightIOS-Bridging-Header.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757DEEA120E6DEA5003A11F1 /* BTR.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE5B20E6D4DF003A11F1 /* BTR.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757DEEA220E6DEA5003A11F1 /* BTRDataEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE5D20E6D4DF003A11F1 /* BTRDataEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757DEEA320E6DEA5003A11F1 /* BTRDataEngineDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6B20E6D4DF003A11F1 /* BTRDataEngineDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -96,6 +95,7 @@
 		757DEEEF20E6E2EE003A11F1 /* PortMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE4E20E6D4DD003A11F1 /* PortMapper.m */; };
 		757DEEF020E6E322003A11F1 /* TPCircularBuffer+AudioBufferList.c in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE8420E6D5CF003A11F1 /* TPCircularBuffer+AudioBufferList.c */; };
 		757DEEF120E6E322003A11F1 /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE8620E6D5CF003A11F1 /* TPCircularBuffer.c */; };
+		757DEEF720E6EC7B003A11F1 /* DStarDelight-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEEF620E6EC7A003A11F1 /* DStarDelight-Bridging-Header.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -149,6 +149,7 @@
 		757DEEBF20E6E28B003A11F1 /* DStarEngineIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DStarEngineIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		757DEEC120E6E28C003A11F1 /* DStarEngineIOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DStarEngineIOS.h; sourceTree = "<group>"; };
 		757DEEC220E6E28C003A11F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		757DEEF620E6EC7A003A11F1 /* DStarDelight-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DStarDelight-Bridging-Header.h"; path = "DStarEngine/DStarDelight-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +193,7 @@
 			children = (
 				757DEE9D20E6DC15003A11F1 /* DStarEngine.h */,
 				757DEE8220E6D5CF003A11F1 /* TPCircularBuffer */,
+				757DEEF620E6EC7A003A11F1 /* DStarDelight-Bridging-Header.h */,
 				757DEE5920E6D4DE003A11F1 /* DStarDelightIOS-Bridging-Header.h */,
 				757DEE8F20E6D62C003A11F1 /* DStarUtils.h */,
 				757DEE5B20E6D4DF003A11F1 /* BTR.h */,
@@ -266,9 +268,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				757DEEB620E6DEF1003A11F1 /* DStarEngine.h in Headers */,
-				757DEEA020E6DEA5003A11F1 /* DStarDelightIOS-Bridging-Header.h in Headers */,
 				757DEE8B20E6D5D0003A11F1 /* TPCircularBuffer+AudioBufferList.h in Headers */,
 				757DEE8D20E6D5D0003A11F1 /* TPCircularBuffer.h in Headers */,
+				757DEEF720E6EC7B003A11F1 /* DStarDelight-Bridging-Header.h in Headers */,
 				757DEE9020E6D62C003A11F1 /* DStarUtils.h in Headers */,
 				757DEEA120E6DEA5003A11F1 /* BTR.h in Headers */,
 				757DEEA220E6DEA5003A11F1 /* BTRDataEngine.h in Headers */,
@@ -304,7 +306,6 @@
 				757DEEC720E6E2D2003A11F1 /* DStarEngine.h in Headers */,
 				757DEEC820E6E2D2003A11F1 /* TPCircularBuffer+AudioBufferList.h in Headers */,
 				757DEEC920E6E2D2003A11F1 /* TPCircularBuffer.h in Headers */,
-				757DEECA20E6E2D2003A11F1 /* DStarDelightIOS-Bridging-Header.h in Headers */,
 				757DEECB20E6E2D2003A11F1 /* DStarUtils.h in Headers */,
 				757DEECC20E6E2D2003A11F1 /* BTR.h in Headers */,
 				757DEECD20E6E2D2003A11F1 /* BTRDataEngine.h in Headers */,
@@ -329,6 +330,7 @@
 				757DEEE020E6E2D2003A11F1 /* BTRAprsLocation.h in Headers */,
 				757DEEE120E6E2D2003A11F1 /* DNSHost.h in Headers */,
 				757DEEE220E6E2D2003A11F1 /* PortMapper.h in Headers */,
+				757DEECA20E6E2D2003A11F1 /* DStarDelightIOS-Bridging-Header.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

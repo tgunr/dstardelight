@@ -8,7 +8,7 @@
       location = "group:DStarDelight/DStarDelight.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:DStarDelightIOS/DStarDelightIOS.xcodeproj">
+      location = "group:Frameworks/DStarEngine/DStarEngine">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

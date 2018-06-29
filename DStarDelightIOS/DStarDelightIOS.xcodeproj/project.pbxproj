@@ -7,30 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		753AB21420E45C44003A11F1 /* BTR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 753AB20D20E45C44003A11F1 /* BTR.framework */; };
-		753AB21520E45C44003A11F1 /* BTR.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 753AB20D20E45C44003A11F1 /* BTR.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		753AB22A20E4602B003A11F1 /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 753AB22820E4602B003A11F1 /* TPCircularBuffer.c */; };
-		753AB22B20E4602B003A11F1 /* TPCircularBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 753AB22920E4602B003A11F1 /* TPCircularBuffer.h */; };
-		753AB23520E4629A003A11F1 /* BTRDV3KVocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 753AB23320E4629A003A11F1 /* BTRDV3KVocoder.m */; };
-		753AB24020E46594003A11F1 /* BTRDataEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 753AB22020E45E88003A11F1 /* BTRDataEngine.m */; };
-		753AB24620E46722003A11F1 /* BTRSlowDataCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 753AB24520E46722003A11F1 /* BTRSlowDataCoder.m */; };
-		753AB24720E46727003A11F1 /* BTRAudioHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 753AB22520E45EFC003A11F1 /* BTRAudioHandler.m */; };
-		753AB24B20E46A36003A11F1 /* BTRAprsLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 753AB24A20E46A36003A11F1 /* BTRAprsLocation.m */; };
-		753AB25220E46DC5003A11F1 /* BTRDCSLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 753AB25120E46DC5003A11F1 /* BTRDCSLink.m */; };
-		753AB25A20E46FD3003A11F1 /* BTRLinkDriver.m in Sources */ = {isa = PBXBuildFile; fileRef = 753AB25920E46FD3003A11F1 /* BTRLinkDriver.m */; };
-		753AB25E20E47020003A11F1 /* PortMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 753AB25D20E47020003A11F1 /* PortMapper.m */; };
-		753AB26220E4733C003A11F1 /* BTRDPlusLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 753AB26120E4733C003A11F1 /* BTRDPlusLink.m */; };
-		753AB26420E4739F003A11F1 /* BTRIRCDDBGateways.m in Sources */ = {isa = PBXBuildFile; fileRef = 753AB26320E4739F003A11F1 /* BTRIRCDDBGateways.m */; };
-		753AB26620E473AD003A11F1 /* BTRDPlusAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = 753AB26520E473AD003A11F1 /* BTRDPlusAuthenticator.m */; };
-		757DEE1D20E477CF003A11F1 /* BTRDExtraLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE1C20E477CF003A11F1 /* BTRDExtraLink.m */; };
 		757DEE2620E54153003A11F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 757DEE2120E54152003A11F1 /* Images.xcassets */; };
 		757DEE2720E54153003A11F1 /* DefaultPreferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 757DEE2220E54152003A11F1 /* DefaultPreferences.plist */; };
 		757DEE2820E54153003A11F1 /* DExtraReflectors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 757DEE2320E54152003A11F1 /* DExtraReflectors.plist */; };
 		757DEE2920E54153003A11F1 /* DCSReflectors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 757DEE2420E54153003A11F1 /* DCSReflectors.plist */; };
 		757DEE2A20E54153003A11F1 /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = 757DEE2520E54153003A11F1 /* Credits.html */; };
-		757DEE3020E54727003A11F1 /* TPCircularBuffer+AudioBufferList.c in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE2E20E54713003A11F1 /* TPCircularBuffer+AudioBufferList.c */; };
-		757DEE3420E56E65003A11F1 /* DNSHost.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE3320E56E65003A11F1 /* DNSHost.m */; };
-		757DEE3620E5C12F003A11F1 /* DNSHost.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE3520E5C12F003A11F1 /* DNSHost.h */; };
+		757DEEF320E6EBE7003A11F1 /* DStarEngineIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757DEEF220E6EBE7003A11F1 /* DStarEngineIOS.framework */; };
+		757DEEF520E6EBF7003A11F1 /* DStarEngineIOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 757DEEF420E6EBF7003A11F1 /* DStarEngineIOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		75F7D25820E30620003A11F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D25720E30620003A11F1 /* AppDelegate.swift */; };
 		75F7D25A20E30620003A11F1 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D25920E30620003A11F1 /* RootViewController.swift */; };
 		75F7D25C20E30620003A11F1 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D25B20E30620003A11F1 /* DataViewController.swift */; };
@@ -42,13 +25,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		753AB21220E45C44003A11F1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 75F7D24C20E30620003A11F1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 753AB20C20E45C44003A11F1;
-			remoteInfo = BTR;
-		};
 		75F7D26D20E30622003A11F1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 75F7D24C20E30620003A11F1 /* Project object */;
@@ -65,7 +41,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				753AB21520E45C44003A11F1 /* BTR.framework in Embed Frameworks */,
+				757DEEF520E6EBF7003A11F1 /* DStarEngineIOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,7 +49,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		753AB20D20E45C44003A11F1 /* BTR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BTR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		753AB21020E45C44003A11F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		753AB22020E45E88003A11F1 /* BTRDataEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BTRDataEngine.m; path = ../../Frameworks/DStarEngine/DStarEngine/BTRDataEngine.m; sourceTree = "<group>"; };
 		753AB22520E45EFC003A11F1 /* BTRAudioHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BTRAudioHandler.m; path = ../../Frameworks/DStarEngine/DStarEngine/BTRAudioHandler.m; sourceTree = "<group>"; };
@@ -101,6 +76,8 @@
 		757DEE3120E54DCA003A11F1 /* DNS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNS.swift; sourceTree = "<group>"; };
 		757DEE3320E56E65003A11F1 /* DNSHost.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DNSHost.m; path = ../../Frameworks/DStarEngine/DStarEngine/DNSHost.m; sourceTree = "<group>"; };
 		757DEE3520E5C12F003A11F1 /* DNSHost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DNSHost.h; path = ../../Frameworks/DStarEngine/DStarEngine/DNSHost.h; sourceTree = "<group>"; };
+		757DEEF220E6EBE7003A11F1 /* DStarEngineIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DStarEngineIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		757DEEF420E6EBF7003A11F1 /* DStarEngineIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DStarEngineIOS.framework; path = "../DerivedData/Build/Products/Debug-iphoneos/DStarEngineIOS.framework"; sourceTree = "<group>"; };
 		758B49D520E4259E003A11F1 /* DCSLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCSLink.swift; sourceTree = "<group>"; };
 		758B49D720E43913003A11F1 /* DStarIOSPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DStarIOSPlayground.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		75E087DD20E30841003A11F1 /* DV3KVocoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DV3KVocoder.swift; sourceTree = "<group>"; };
@@ -131,18 +108,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		753AB20A20E45C44003A11F1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		75F7D25120E30620003A11F1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				753AB21420E45C44003A11F1 /* BTR.framework in Frameworks */,
+				757DEEF320E6EBE7003A11F1 /* DStarEngineIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +180,7 @@
 		757DEE2C20E5462C003A11F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				757DEEF220E6EBE7003A11F1 /* DStarEngineIOS.framework */,
 				757DEE2B20E545EF003A11F1 /* TPCircularBuffer */,
 			);
 			path = Frameworks;
@@ -218,6 +189,7 @@
 		75F7D24B20E30620003A11F1 = {
 			isa = PBXGroup;
 			children = (
+				757DEEF420E6EBF7003A11F1 /* DStarEngineIOS.framework */,
 				75F7D25F20E30620003A11F1 /* Main.storyboard */,
 				758B49D720E43913003A11F1 /* DStarIOSPlayground.playground */,
 				75F7D27B20E306A6003A11F1 /* DStar */,
@@ -235,7 +207,6 @@
 			children = (
 				75F7D25420E30620003A11F1 /* DStarDelightIOS.app */,
 				75F7D26C20E30622003A11F1 /* DStarDelightIOSUITests.xctest */,
-				753AB20D20E45C44003A11F1 /* BTR.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -285,37 +256,7 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		753AB20820E45C44003A11F1 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				757DEE3620E5C12F003A11F1 /* DNSHost.h in Headers */,
-				753AB22B20E4602B003A11F1 /* TPCircularBuffer.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		753AB20C20E45C44003A11F1 /* BTR */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 753AB21820E45C44003A11F1 /* Build configuration list for PBXNativeTarget "BTR" */;
-			buildPhases = (
-				753AB20820E45C44003A11F1 /* Headers */,
-				753AB20920E45C44003A11F1 /* Sources */,
-				753AB20A20E45C44003A11F1 /* Frameworks */,
-				753AB20B20E45C44003A11F1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = BTR;
-			productName = BTR;
-			productReference = 753AB20D20E45C44003A11F1 /* BTR.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		75F7D25320E30620003A11F1 /* DStarDelightIOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75F7D27520E30622003A11F1 /* Build configuration list for PBXNativeTarget "DStarDelightIOS" */;
@@ -328,7 +269,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				753AB21320E45C44003A11F1 /* PBXTargetDependency */,
 			);
 			name = DStarDelightIOS;
 			productName = DStarDelightIOS;
@@ -363,9 +303,6 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Polymicro Systems";
 				TargetAttributes = {
-					753AB20C20E45C44003A11F1 = {
-						CreatedOnToolsVersion = 10.0;
-					};
 					75F7D25320E30620003A11F1 = {
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 1000;
@@ -391,19 +328,11 @@
 			targets = (
 				75F7D25320E30620003A11F1 /* DStarDelightIOS */,
 				75F7D26B20E30622003A11F1 /* DStarDelightIOSUITests */,
-				753AB20C20E45C44003A11F1 /* BTR */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		753AB20B20E45C44003A11F1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		75F7D25220E30620003A11F1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -429,28 +358,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		753AB20920E45C44003A11F1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				757DEE3420E56E65003A11F1 /* DNSHost.m in Sources */,
-				753AB22A20E4602B003A11F1 /* TPCircularBuffer.c in Sources */,
-				753AB25220E46DC5003A11F1 /* BTRDCSLink.m in Sources */,
-				753AB24720E46727003A11F1 /* BTRAudioHandler.m in Sources */,
-				753AB24620E46722003A11F1 /* BTRSlowDataCoder.m in Sources */,
-				753AB25A20E46FD3003A11F1 /* BTRLinkDriver.m in Sources */,
-				753AB26620E473AD003A11F1 /* BTRDPlusAuthenticator.m in Sources */,
-				753AB23520E4629A003A11F1 /* BTRDV3KVocoder.m in Sources */,
-				757DEE3020E54727003A11F1 /* TPCircularBuffer+AudioBufferList.c in Sources */,
-				753AB25E20E47020003A11F1 /* PortMapper.m in Sources */,
-				753AB24020E46594003A11F1 /* BTRDataEngine.m in Sources */,
-				753AB24B20E46A36003A11F1 /* BTRAprsLocation.m in Sources */,
-				753AB26420E4739F003A11F1 /* BTRIRCDDBGateways.m in Sources */,
-				753AB26220E4733C003A11F1 /* BTRDPlusLink.m in Sources */,
-				757DEE1D20E477CF003A11F1 /* BTRDExtraLink.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		75F7D25020E30620003A11F1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -473,11 +380,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		753AB21320E45C44003A11F1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 753AB20C20E45C44003A11F1 /* BTR */;
-			targetProxy = 753AB21220E45C44003A11F1 /* PBXContainerItemProxy */;
-		};
 		75F7D26E20E30622003A11F1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 75F7D25320E30620003A11F1 /* DStarDelightIOS */;
@@ -505,61 +407,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		753AB21620E45C44003A11F1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = NL3267E99V;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = BTR/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				PRODUCT_BUNDLE_IDENTIFIER = net.polymicro.BTR;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		753AB21720E45C44003A11F1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = NL3267E99V;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = BTR/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = net.polymicro.BTR;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		75F7D27320E30622003A11F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -690,6 +537,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.polymicro.DStarDelightIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Sources/HAM/DStarDelight/Frameworks/DStarEngine/DStarEngine/DStarDelightIOS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -710,6 +558,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.polymicro.DStarDelightIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Sources/HAM/DStarDelight/Frameworks/DStarEngine/DStarEngine/DStarDelightIOS-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -758,15 +607,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		753AB21820E45C44003A11F1 /* Build configuration list for PBXNativeTarget "BTR" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				753AB21620E45C44003A11F1 /* Debug */,
-				753AB21720E45C44003A11F1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		75F7D24F20E30620003A11F1 /* Build configuration list for PBXProject "DStarDelightIOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
