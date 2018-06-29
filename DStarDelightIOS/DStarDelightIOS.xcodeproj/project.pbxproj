@@ -50,7 +50,6 @@
 		757DEE2920E54153003A11F1 /* DCSReflectors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 757DEE2420E54153003A11F1 /* DCSReflectors.plist */; };
 		757DEE2A20E54153003A11F1 /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = 757DEE2520E54153003A11F1 /* Credits.html */; };
 		757DEE3020E54727003A11F1 /* TPCircularBuffer+AudioBufferList.c in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE2E20E54713003A11F1 /* TPCircularBuffer+AudioBufferList.c */; };
-		757DEE3220E54DCA003A11F1 /* DNS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE3120E54DCA003A11F1 /* DNS.swift */; };
 		757DEE3420E56E65003A11F1 /* DNSHost.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE3320E56E65003A11F1 /* DNSHost.m */; };
 		757DEE3620E5C12F003A11F1 /* DNSHost.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE3520E5C12F003A11F1 /* DNSHost.h */; };
 		75F7D25820E30620003A11F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D25720E30620003A11F1 /* AppDelegate.swift */; };
@@ -554,7 +553,6 @@
 				75F7D25E20E30620003A11F1 /* ModelController.swift in Sources */,
 				75F7D25C20E30620003A11F1 /* DataViewController.swift in Sources */,
 				75F7D25820E30620003A11F1 /* AppDelegate.swift in Sources */,
-				757DEE3220E54DCA003A11F1 /* DNS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

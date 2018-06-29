@@ -24,7 +24,7 @@
     return me;
 }
 
-+ (instancetype)hostWithName:(nullable NSString *)name {
++ (instancetype)hostWithName:(NSString *)name {
     DNSHost *me = [[DNSHost alloc] init];
     me.addresses = [me addressesForHostname: name];
     me.address = me.addresses[0];

@@ -31,7 +31,7 @@
 @property NSString *localizedName;
 
 + (instancetype)currentHost;
-+ (instancetype)hostWithName:(nullable NSString *)name;
++ (instancetype)hostWithName:(NSString *)name;
 + (instancetype)hostWithAddress:(NSString *)address;
 - (BOOL)isEqualToHost:(NSHost *)aHost;
 - (NSError *)convertCFStreamErrorIntoNSError:(CFStreamError) streamError;
