@@ -1,15 +1,15 @@
 #import <AudioToolbox/AudioToolbox.h>
 
-@protocol BTRVocoderDriver;
+@protocol DSEVocoderDriver;
 
 extern NSString * const AudioDeviceChanged;
 static inline BOOL CheckStatus(OSStatus error, const char *operation);
 
 @interface STUBAudioHandler : NSObject
 
-@property (nonatomic) AudioDeviceID inputDevice;
-@property (nonatomic) AudioDeviceID outputDevice;
-@property (nonatomic) id<BTRVocoderDriver> vocoder;
+@property (nonatomic) id inputDevice;
+@property (nonatomic) id outputDevice;
+@property (nonatomic) id<DSEVocoderDriver> vocoder;
 @property (nonatomic) BOOL receiving;
 @property id delegate;
 

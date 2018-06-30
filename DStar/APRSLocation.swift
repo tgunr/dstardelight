@@ -9,7 +9,7 @@
 import Foundation
 import CoreLocation
 import MapKit
-class BTRAprsLocation: NSObject, MKAnnotation {
+class DSEAprsLocation: NSObject, MKAnnotation {
     var coordinate: CLLocationCoordinate2D
     
     var location: CLLocation?

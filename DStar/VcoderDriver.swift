@@ -7,9 +7,9 @@
 //
 
 import Foundation
-protocol BTRVocoderDriver: NSObjectProtocol {
-//    var audio: BTRAudioHandler? { get set }
-    var network: (NSObject & BTRLinkDriverProtocol)? { get set }
+protocol DSEVocoderDriver: NSObjectProtocol {
+//    var audio: DSEAudioHandler? { get set }
+    var network: (NSObject & DSELinkDriverProtocol)? { get set }
 //    private(set) var configurationViewController: NSViewController? { get }
     static func driverName() -> String?
     func decodeData(_ data: UnsafeMutableRawPointer?, lastPacket last: Bool)

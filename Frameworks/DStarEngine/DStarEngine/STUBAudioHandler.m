@@ -5,8 +5,8 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import "TPCircularBuffer.h"
 #import "TPCircularBuffer+AudioBufferList.h"
-//#import "BTRVocoderDriver.h"
-//#import "BTRLinkDriverProtocol.h"
+//#import "DSEVocoderDriver.h"
+//#import "DSELinkDriverProtocol.h"
 #import <Objection/Objection.h>
 
 static const AudioComponentDescription componentDescription = {

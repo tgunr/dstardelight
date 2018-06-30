@@ -1,12 +1,13 @@
+
 #import <AudioToolbox/AudioToolbox.h>
 #import <DStarEngine/STUBAudioHandler.h>
 
-@protocol BTRVocoderDriver;
+@protocol DSEVocoderDriver;
 
 extern NSString * const DSAudioDeviceChanged;
 
 @interface DSAudioHandler : STUBAudioHandler
-//@property (nonatomic) id<BTRVocoderDriver> vocoder;
+//@property (nonatomic) id<DSEVocoderDriver> vocoder;
 @property (nonatomic) AudioDeviceID inputDevice;
 @property (nonatomic) AudioDeviceID outputDevice;
 @property (nonatomic, readonly) AudioDeviceID defaultInputDevice;

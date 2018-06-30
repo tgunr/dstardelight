@@ -1,6 +1,6 @@
 //
 //  DNSHost.h
-//  BTR
+//  DSE
 //
 //  Created by Dave Carlton on 6/28/18.
 //  Copyright © 2018 Polymicro Systems. All rights reserved.

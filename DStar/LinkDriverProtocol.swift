@@ -13,12 +13,12 @@ enum linkState1 : Int {
     case linking
     case linked
 }
-protocol BTRLinkDriverProtocol: class {
+protocol DSELinkDriverProtocol: class {
     var linkTarget: String { get }
-    var vocoder: BTRVocoderDriver? { get set }
+    var vocoder: DSEVocoderDriver? { get set }
     var myCall: String { get set }
     var myCall2: String { get set }
-    var delegate: (NSObject & BTRLinkDriverDelegate)? { get set }
+    var delegate: (NSObject & DSELinkDriverDelegate)? { get set }
     var linkQueue: DispatchQueue? { get set }
     var destinations: [String] { get }
     func canHandleLink(to reflector: String?) -> Bool

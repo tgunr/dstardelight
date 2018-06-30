@@ -4,9 +4,9 @@
 #import <AudioUnit/AudioUnit.h>
 #import <AudioToolbox/AudioToolbox.h>
 #import <DStarEngine/TPCircularBuffer.h>
-#import <DStarEngine/BTRVocoderDriver.h>
+#import <DStarEngine/DSEVocoderDriver.h>
 //#import "TPCircularBuffer+AudioBufferList.h"
-//#import "BTRLinkDriverProtocol.h"
+//#import "DSELinkDriverProtocol.h"
 
 static const AudioComponentDescription componentDescription = {
     .componentType = kAudioUnitType_Output,

@@ -8,7 +8,7 @@
 
 import Foundation
 import CoreLocation
-protocol BTRDataEngineDelegate: NSObjectProtocol {
+protocol DSEDataEngineDelegate: NSObjectProtocol {
     func streamDidStart(_ header: [AnyHashable: Any]?)
     func streamDidEnd(_ streamId: NSNumber?, atTime date: Date?)
     func slowDataReceived(_ slowData: String?, forStreamId streamId: NSNumber?)

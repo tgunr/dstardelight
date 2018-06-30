@@ -146,7 +146,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="BTRAppDelegate"/>
+                <customObject id="Voe-Tx-rLC" customClass="DSEAppDelegate"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="410" y="-59"/>
@@ -205,7 +205,7 @@
         <!--General-->
         <scene sceneID="plL-MQ-FZW">
             <objects>
-                <viewController title="General" id="qq2-Ge-0JC" customClass="BTRGeneralPreferencesController" sceneMemberID="viewController">
+                <viewController title="General" id="qq2-Ge-0JC" customClass="DSEGeneralPreferencesController" sceneMemberID="viewController">
                     <view key="view" id="1SU-Tj-tJk">
                         <rect key="frame" x="0.0" y="0.0" width="424" height="182"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -231,7 +231,7 @@
                                                 <constraint firstAttribute="width" constant="61" id="yzP-y8-Hw6"/>
                                             </constraints>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="" drawsBackground="YES" id="BtH-1v-Zk6">
-                                                <customFormatter key="formatter" id="zdH-fr-t0E" customClass="BTRCallFormatter"/>
+                                                <customFormatter key="formatter" id="zdH-fr-t0E" customClass="DSECallFormatter"/>
                                                 <font key="font" metaFont="fixedUser" size="11"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -263,7 +263,7 @@
                                                 <constraint firstAttribute="width" constant="35" id="nQL-Zj-38Q"/>
                                             </constraints>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="hgq-Ow-Dm0">
-                                                <customFormatter key="formatter" id="eYK-rG-zrI" customClass="BTRCallFormatter">
+                                                <customFormatter key="formatter" id="eYK-rG-zrI" customClass="DSECallFormatter">
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
                                                             <integer key="value" value="4"/>
@@ -284,7 +284,7 @@
                                                 <constraint firstAttribute="height" constant="22" id="EK5-lw-P3t"/>
                                             </constraints>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="JBu-bj-JNp">
-                                                <customFormatter key="formatter" id="pQW-6a-kM5" customClass="BTRMessageFormatter"/>
+                                                <customFormatter key="formatter" id="pQW-6a-kM5" customClass="DSEMessageFormatter"/>
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -358,7 +358,7 @@
         <!--Main Window View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="BTRMainWindowViewController" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="DSEMainWindowViewController" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="696" height="217"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -395,7 +395,7 @@
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="mfa-SF-tPo">
                                                                     <rect key="frame" x="-2" y="0.0" width="76" height="17"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" id="3w7-wp-A8A">
-                                                                        <customFormatter key="formatter" id="PvT-2M-SY3" customClass="BTRDestinationCallFormatter"/>
+                                                                        <customFormatter key="formatter" id="PvT-2M-SY3" customClass="DSEDestinationCallFormatter"/>
                                                                         <font key="font" metaFont="fixedUser" size="11"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -549,7 +549,7 @@
                                                                                 <rect key="frame" x="0.0" y="0.0" width="86" height="17"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                                 <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" id="2Ut-sW-kYb">
-                                                                                    <customFormatter key="formatter" id="ddP-st-0VX" customClass="BTRCallFormatter"/>
+                                                                                    <customFormatter key="formatter" id="ddP-st-0VX" customClass="DSECallFormatter"/>
                                                                                     <font key="font" metaFont="fixedUser" size="11"/>
                                                                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -579,7 +579,7 @@
                                                                     <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                                 </tableHeaderCell>
                                                                 <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" placeholderString="" id="v59-pX-kS2">
-                                                                    <customFormatter key="formatter" id="r86-CO-5cX" customClass="BTRCallFormatter"/>
+                                                                    <customFormatter key="formatter" id="r86-CO-5cX" customClass="DSECallFormatter"/>
                                                                     <font key="font" metaFont="fixedUser" size="11"/>
                                                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -594,7 +594,7 @@
                                                                                 <rect key="frame" x="0.0" y="0.0" width="57" height="17"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                                 <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" id="pGv-id-Wfp">
-                                                                                    <customFormatter key="formatter" id="oIK-WT-ro9" customClass="BTRCallFormatter"/>
+                                                                                    <customFormatter key="formatter" id="oIK-WT-ro9" customClass="DSECallFormatter"/>
                                                                                     <font key="font" metaFont="fixedUser" size="11"/>
                                                                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -624,7 +624,7 @@
                                                                     <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                                 </tableHeaderCell>
                                                                 <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" id="uTh-9m-T67">
-                                                                    <customFormatter key="formatter" id="Qh1-iF-voi" customClass="BTRCallFormatter"/>
+                                                                    <customFormatter key="formatter" id="Qh1-iF-voi" customClass="DSECallFormatter"/>
                                                                     <font key="font" metaFont="fixedUser" size="11"/>
                                                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -639,7 +639,7 @@
                                                                                 <rect key="frame" x="0.0" y="0.0" width="57" height="17"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                                 <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" id="CN0-ZS-Bxv">
-                                                                                    <customFormatter key="formatter" id="6uq-E7-nm7" customClass="BTRCallFormatter"/>
+                                                                                    <customFormatter key="formatter" id="6uq-E7-nm7" customClass="DSECallFormatter"/>
                                                                                     <font key="font" metaFont="fixedUser" size="11"/>
                                                                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -669,7 +669,7 @@
                                                                     <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                                 </tableHeaderCell>
                                                                 <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" id="UR4-Bp-WFF">
-                                                                    <customFormatter key="formatter" id="8Rf-WG-7KF" customClass="BTRCallFormatter"/>
+                                                                    <customFormatter key="formatter" id="8Rf-WG-7KF" customClass="DSECallFormatter"/>
                                                                     <font key="font" metaFont="fixedUser" size="11"/>
                                                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -684,7 +684,7 @@
                                                                                 <rect key="frame" x="0.0" y="0.0" width="57" height="17"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                                 <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" id="fWQ-V4-3gG">
-                                                                                    <customFormatter key="formatter" id="JZF-oB-7Ss" customClass="BTRCallFormatter"/>
+                                                                                    <customFormatter key="formatter" id="JZF-oB-7Ss" customClass="DSECallFormatter"/>
                                                                                     <font key="font" metaFont="fixedUser" size="11"/>
                                                                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -1059,7 +1059,7 @@
         <!--Audio-->
         <scene sceneID="elY-lg-nZP">
             <objects>
-                <viewController title="Audio" id="PTa-5A-wC9" customClass="BTRAudioViewController" sceneMemberID="viewController">
+                <viewController title="Audio" id="PTa-5A-wC9" customClass="DSEAudioViewController" sceneMemberID="viewController">
                     <view key="view" id="XSw-uU-Ge2">
                         <rect key="frame" x="0.0" y="0.0" width="424" height="138"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1181,7 +1181,7 @@
         <!--Vocoder View Controller-->
         <scene sceneID="WY5-J8-QDS">
             <objects>
-                <viewController id="j40-Ta-dZo" customClass="BTRVocoderViewController" sceneMemberID="viewController">
+                <viewController id="j40-Ta-dZo" customClass="DSEVocoderViewController" sceneMemberID="viewController">
                     <view key="view" id="5Qn-ag-Rae">
                         <rect key="frame" x="0.0" y="0.0" width="424" height="233"/>
                         <autoresizingMask key="autoresizingMask"/>

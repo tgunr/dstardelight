@@ -7,8 +7,8 @@
 //
 
 import Foundation
-class BTRDV3KVocoder: NSObject, BTRVocoderDriver {
-    var network: (NSObject & BTRLinkDriverProtocol)?
+class DSEDV3KVocoder: NSObject, DSEVocoderDriver {
+    var network: (NSObject & DSELinkDriverProtocol)?
     
     static func driverName() -> String? {
         return ""

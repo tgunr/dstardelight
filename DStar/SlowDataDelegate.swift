@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol BTRSlowDataDelegate: NSObjectProtocol {
+protocol DSESlowDataDelegate: NSObjectProtocol {
     func slowDataReceived(_ slowData: String?, forStreamId streamId: NSNumber?)
-    func locationReceived(_ location: BTRAprsLocation?, forStreamId streamId: NSNumber?)
+    func locationReceived(_ location: DSEAprsLocation?, forStreamId streamId: NSNumber?)
 }
