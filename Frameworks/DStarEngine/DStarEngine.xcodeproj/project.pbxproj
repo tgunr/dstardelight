@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7525482D20E7E490003A11F1 /* objective_category_swizzle_object.h in Headers */ = {isa = PBXBuildFile; fileRef = 7525482B20E7E490003A11F1 /* objective_category_swizzle_object.h */; };
 		757DEE7420E6D4DF003A11F1 /* STUBAudioHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5720E6D4DE003A11F1 /* STUBAudioHandler.m */; };
 		757DEE7520E6D4DF003A11F1 /* BTRDExtraLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5820E6D4DE003A11F1 /* BTRDExtraLink.m */; };
 		757DEE7620E6D4DF003A11F1 /* BTRDPlusAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5120E6D4DD003A11F1 /* BTRDPlusAuthenticator.m */; };
@@ -99,6 +100,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7525482B20E7E490003A11F1 /* objective_category_swizzle_object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = objective_category_swizzle_object.h; sourceTree = "<group>"; };
+		7525482C20E7E490003A11F1 /* objective_category_swizzle_object.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = objective_category_swizzle_object.m; sourceTree = "<group>"; };
 		757DEE4120E6D45A003A11F1 /* DStarEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DStarEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		757DEE4520E6D45A003A11F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		757DEE4C20E6D4DC003A11F1 /* BTRDCSLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRDCSLink.m; sourceTree = "<group>"; };
@@ -233,6 +236,8 @@
 				757DEE6D20E6D4DF003A11F1 /* PortMapper.h */,
 				757DEE4E20E6D4DD003A11F1 /* PortMapper.m */,
 				757DEE4520E6D45A003A11F1 /* Info.plist */,
+				7525482B20E7E490003A11F1 /* objective_category_swizzle_object.h */,
+				7525482C20E7E490003A11F1 /* objective_category_swizzle_object.m */,
 			);
 			path = DStarEngine;
 			sourceTree = "<group>";
@@ -291,6 +296,7 @@
 				757DEEB020E6DEA5003A11F1 /* BTRLinkDriverDelegate.h in Headers */,
 				757DEEB120E6DEA5003A11F1 /* BTRLinkDriverSubclass.h in Headers */,
 				757DEEB220E6DEA5003A11F1 /* BTRDExtraLink.h in Headers */,
+				7525482D20E7E490003A11F1 /* objective_category_swizzle_object.h in Headers */,
 				757DEE9220E6D6FC003A11F1 /* BTRLinkDriver.h in Headers */,
 				757DEEB320E6DEA5003A11F1 /* BTRAprsLocation.h in Headers */,
 				757DEEB420E6DEA5003A11F1 /* DNSHost.h in Headers */,
