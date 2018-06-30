@@ -7,7 +7,7 @@
 //
 
 import Foundation
-protocol BTRLinkDriverDelegate: NSObjectProtocol {
+protocol DSELinkDriverDelegate: NSObjectProtocol {
     func addData(_ data: UnsafeMutableRawPointer?, streamId: Int)
     func getBytes(_ bytes: UnsafeMutableRawPointer?, forSequence sequence: Int)
     // MARK: - Delegate methods

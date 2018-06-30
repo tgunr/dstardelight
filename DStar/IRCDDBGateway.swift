@@ -7,6 +7,6 @@
 //
 
 import Foundation
-class BTRIRCDDBGateways: NSObject {
+class DSEIRCDDBGateways: NSObject {
     var gateways = [AnyHashable: Any]()
 }

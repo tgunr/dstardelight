@@ -65,7 +65,7 @@ func dcsFrameTemplateInit () {
 }
 private var _reflectorList = [AnyHashable: Any]()
 
-class BTRDCSLink {
+class DSEDCSLink {
     private var repeaterSequence: Int = 0
 
 //    class private func reflectorList() -> [AnyHashable: Any]? {

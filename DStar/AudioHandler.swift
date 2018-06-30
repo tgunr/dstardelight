@@ -8,7 +8,7 @@
 import CoreAudioKit
 import CoreAudio
 
-let AudioDeviceChanged = "BTRAudioDeviceChanged"
+let AudioDeviceChanged = "DSAudioDeviceChanged"
 enum InOut {
     case In, Out
 }
@@ -40,7 +40,7 @@ class iosAudioDevice {
 }
 
 class AudioHandler {
-    var vocoder: BTRVocoderDriver?
+    var vocoder: DSEVocoderDriver?
     var inputDevice: iosAudioDevice?
     var outputDevice: iosAudioDevice?
     var defaultInputDevice: iosAudioDevice?

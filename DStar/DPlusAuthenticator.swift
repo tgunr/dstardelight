@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class BTRDPlusAuthenticator: NSObject {
+class DSEDPlusAuthenticator: NSObject {
     var authCall = ""
     private(set) var reflectorList = [AnyHashable: Any]()
     private(set) var authenticated = false

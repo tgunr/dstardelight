@@ -10,14 +10,14 @@ import Foundation
 
 var linkDriverClasses = [AnyClass]()
 
-class BTRDataEngine: NSObject, BTRLinkDriverDelegate, BTRSlowDataDelegate {
+class DSEDataEngine: NSObject, DSELinkDriverDelegate, DSESlowDataDelegate {
     
-    static let sharedInstance = BTRDataEngine()
-    private(set) weak var network: (NSObject & BTRLinkDriverProtocol)?
-    weak var vocoder: BTRVocoderDriver?
+    static let sharedInstance = DSEDataEngine()
+    private(set) weak var network: (NSObject & DSELinkDriverProtocol)?
+    weak var vocoder: DSEVocoderDriver?
     private(set) var audio: AudioHandler?
-    private(set) var slowData: BTRSlowDataCoder?
-    weak var delegate: (NSObject & BTRDataEngineDelegate)?
+    private(set) var slowData: DSESlowDataCoder?
+    weak var delegate: (NSObject & DSEDataEngineDelegate)?
     private(set) var linkDriverDestinations = [String]()
     private var vocoderDrivers: [AnyHashable]? = nil
 
@@ -75,7 +75,7 @@ class BTRDataEngine: NSObject, BTRLinkDriverDelegate, BTRSlowDataDelegate {
         
     }
     
-    func locationReceived(_ location: BTRAprsLocation?, forStreamId streamId: NSNumber?) {
+    func locationReceived(_ location: DSEAprsLocation?, forStreamId streamId: NSNumber?) {
         
     }
     

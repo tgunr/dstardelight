@@ -14,10 +14,10 @@ import DStarEngineIOS
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var engine: BTRDataEngine?
+    var engine: DSEDataEngine?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        engine = BTRDataEngine.sharedInstance()
+        engine = DSEDataEngine.sharedInstance()
         if engine != nil {
             engine?.appDelegate = self
         }

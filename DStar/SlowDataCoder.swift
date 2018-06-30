@@ -8,9 +8,9 @@
 
 import Foundation
 import CoreLocation
-class BTRSlowDataCoder: NSObject, CLLocationManagerDelegate {
+class DSESlowDataCoder: NSObject, CLLocationManagerDelegate {
     var message = ""
-    weak var delegate: (NSObject & BTRSlowDataDelegate)?
+    weak var delegate: (NSObject & DSESlowDataDelegate)?
     func addData(_ data: UnsafeMutableRawPointer?, streamId: Int) {
     }
     func getBytes(_ bytes: UnsafeMutableRawPointer?, forSequence sequence: Int) {
