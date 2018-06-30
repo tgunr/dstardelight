@@ -228,15 +228,15 @@
 				758B49CD20E41C92003A11F1 /* DExtraReflectors.plist */,
 				758B49CA20E41BD8003A11F1 /* DSEAddPopupController.xib */,
 				758B49C420E41AA7003A11F1 /* DSEMapPopupController.xib */,
+				758B49C120E4196D003A11F1 /* Main.storyboard */,
+				758B49BE20E41301003A11F1 /* New.storyboard */,
+				7525484120E7F084003A11F1 /* DStarDelight.h */,
 				75E0880F20E3177F003A11F1 /* DS */,
 				75E087F320E31574003A11F1 /* Assets.xcassets */,
 				75E0888420E31A8C003A11F1 /* Images.xcassets */,
 				75E087F820E31574003A11F1 /* Info.plist */,
 				75E087F920E31574003A11F1 /* main.m */,
 				75E087FB20E31574003A11F1 /* DStarDelight.entitlements */,
-				758B49BE20E41301003A11F1 /* New.storyboard */,
-				758B49C120E4196D003A11F1 /* Main.storyboard */,
-				7525484120E7F084003A11F1 /* DStarDelight.h */,
 			);
 			path = DStarDelight;
 			sourceTree = "<group>";

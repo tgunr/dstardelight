@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14269.14" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14269.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -367,7 +368,7 @@
                                 <rect key="frame" x="620" y="18" width="77" height="200"/>
                                 <clipView key="contentView" id="BYJ-Mb-T1W">
                                     <rect key="frame" x="1" y="0.0" width="75" height="199"/>
-                                    <autoresizingMask key="autoresizingMask"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnReordering="NO" columnResizing="NO" autosaveColumns="NO" typeSelect="NO" rowSizeStyle="automatic" headerView="8E1-QA-SES" viewBased="YES" id="sF2-ua-GZt">
                                             <rect key="frame" x="0.0" y="0.0" width="75" height="176"/>
@@ -475,7 +476,7 @@
                                             <rect key="frame" x="-1" y="-1" width="622" height="180"/>
                                             <clipView key="contentView" focusRingType="none" id="9L5-uZ-DAf">
                                                 <rect key="frame" x="1" y="0.0" width="620" height="179"/>
-                                                <autoresizingMask key="autoresizingMask"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <tableView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" typeSelect="NO" rowSizeStyle="automatic" headerView="wbE-2Z-g0q" viewBased="YES" id="rqv-8N-voe">
                                                         <rect key="frame" x="0.0" y="0.0" width="701" height="156"/>
@@ -1231,9 +1232,9 @@
     <resources>
         <image name="Broken Chain" width="512" height="512"/>
         <image name="Chain" width="512" height="512"/>
-        <image name="Chip" width="164.57142639160156" height="138.85714721679688"/>
+        <image name="Chip" width="170.66667175292969" height="141.33332824707031"/>
         <image name="Gray LED" width="40" height="40"/>
-        <image name="Microphone" width="128" height="128"/>
+        <image name="Microphone" width="1024" height="1024"/>
         <image name="NSAddTemplate" width="11" height="11"/>
         <image name="NSPreferencesGeneral" width="32" height="32"/>
         <image name="NSRemoveTemplate" width="11" height="11"/>
