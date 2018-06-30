@@ -1,5 +1,5 @@
 
-#import "BTRAudioHandler.h"
+#import "STUBAudioHandler.h"
 
 #import <AudioUnit/AudioUnit.h>
 #import <AudioToolbox/AudioToolbox.h>
@@ -32,7 +32,7 @@ NSString * const BTRAudioDeviceChanged = @"BTRAudioDeviceChanged";
 
 static inline BOOL CheckStatus(OSStatus error, const char *operation);
 
-@interface BTRAudioHandler () {
+@interface STUBAudioHandler () {
     AudioUnit outputUnit;
     dispatch_source_t inputAudioSource;
     AudioConverterRef inputConverter;
@@ -60,7 +60,7 @@ static inline BOOL CheckStatus(OSStatus error, const char *operation);
 static OSStatus playbackThreadCallback (void *userData, AudioUnitRenderActionFlags *actionFlags, const AudioTimeStamp *inTimeStamp, UInt32 inBusNumber, UInt32 inNumberFrames, AudioBufferList *ioData) {
     int32_t availableBytes;
     void *bufferTail;
-    BTRAudioHandler *self = (__bridge BTRAudioHandler *) userData;
+    STUBAudioHandler *self = (__bridge STUBAudioHandler *) userData;
     
     for(unsigned int i = 0; i < ioData->mNumberBuffers; ++i) {
         bufferTail = TPCircularBufferTail(self.playbackBuffer, &availableBytes);
@@ -80,7 +80,7 @@ static OSStatus playbackThreadCallback (void *userData, AudioUnitRenderActionFla
 }
 
 //static OSStatus recordThreadCallback (void *userData, AudioUnitRenderActionFlags *actionFlags, const AudioTimeStamp *inTimeStamp, UInt32 inBusNumber, UInt32 inNumberFrames, AudioBufferList *ioData) {
-//    BTRAudioHandler *audioHandler = (__bridge BTRAudioHandler *) userData;
+//    STUBAudioHandler *audioHandler = (__bridge STUBAudioHandler *) userData;
 //
 //    OSStatus error;
 //
@@ -102,7 +102,7 @@ static OSStatus playbackThreadCallback (void *userData, AudioUnitRenderActionFla
 //}
 
 //static OSStatus audioConverterCallback(AudioConverterRef inAudioConverter, UInt32 *ioNumberDataPackets, AudioBufferList *ioData, AudioStreamPacketDescription **outDataPacketDescription, void *inUserData) {
-//    BTRAudioHandler *audioHandler = (__bridge BTRAudioHandler *) inUserData;
+//    STUBAudioHandler *audioHandler = (__bridge STUBAudioHandler *) inUserData;
 //    AudioTimeStamp timestamp;
 //
 //    ioData->mNumberBuffers = 1;
@@ -120,14 +120,14 @@ static OSStatus playbackThreadCallback (void *userData, AudioUnitRenderActionFla
 //}
 
 //static OSStatus AudioDevicesChanged(AudioObjectID inObjectID, UInt32 inNumberAddress, const AudioObjectPropertyAddress inAddresses[], void *inClientData) {
-//    BTRAudioHandler *handler = (__bridge BTRAudioHandler *) inClientData;
+//    STUBAudioHandler *handler = (__bridge STUBAudioHandler *) inClientData;
 //    AudioDeviceID inputDevice = handler.inputDevice;
 //    AudioDeviceID outputDevice = handler.outputDevice;
 //    
-//    if(NSNotFound == [[BTRAudioHandler enumerateInputDevices] indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop){ return ((NSNumber *)((NSDictionary *)obj)[@"id"]).intValue == handler.inputDevice; }])
+//    if(NSNotFound == [[STUBAudioHandler enumerateInputDevices] indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop){ return ((NSNumber *)((NSDictionary *)obj)[@"id"]).intValue == handler.inputDevice; }])
 //        inputDevice = handler.defaultInputDevice;
 //    
-//    if(NSNotFound == [[BTRAudioHandler enumerateOutputDevices] indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop){ return ((NSNumber *)((NSDictionary *)obj)[@"id"]).intValue == handler.outputDevice; }])
+//    if(NSNotFound == [[STUBAudioHandler enumerateOutputDevices] indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop){ return ((NSNumber *)((NSDictionary *)obj)[@"id"]).intValue == handler.outputDevice; }])
 //        outputDevice = handler.defaultOutputDevice;
 //    
 //    [handler setInputDevice:inputDevice andOutputDevice:outputDevice];
@@ -138,7 +138,7 @@ static OSStatus playbackThreadCallback (void *userData, AudioUnitRenderActionFla
 //}
 
 
-@implementation BTRAudioHandler
+@implementation STUBAudioHandler
 
 - (id) init {
     self = [super init];
@@ -256,7 +256,7 @@ static OSStatus playbackThreadCallback (void *userData, AudioUnitRenderActionFla
 //        inputAudioSource = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0));
 //        dispatch_source_set_timer(inputAudioSource, dispatch_time(DISPATCH_TIME_NOW, 100ul * NSEC_PER_MSEC), 20ull * NSEC_PER_MSEC, 1ull * NSEC_PER_MSEC);
 //
-//        BTRAudioHandler __weak *weakSelf = self;
+//        STUBAudioHandler __weak *weakSelf = self;
 //        dispatch_source_set_event_handler(inputAudioSource, ^{
 //            AudioBufferList bufferList;
 //            AudioTimeStamp timestamp;
@@ -453,7 +453,7 @@ static inline BOOL CheckStatus(OSStatus error, const char *operation) {
 //    NSParameterAssert(scope == kAudioObjectPropertyScopeOutput ||
 //                      scope == kAudioObjectPropertyScopeInput);
 //    
-//    [BTRAudioHandler enumerateDevicesWithBlock:^(AudioDeviceID deviceId){
+//    [STUBAudioHandler enumerateDevicesWithBlock:^(AudioDeviceID deviceId){
 //        NSString *deviceName;
 //        NSString *deviceUID;
 //        OSStatus status;

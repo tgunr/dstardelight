@@ -4,7 +4,7 @@
 
 extern NSString * const BTRAudioDeviceChanged;
 
-@interface BTRAudioHandler : NSObject
+@interface STUBAudioHandler : NSObject
 
 -(void) queueAudioData:(void *)audioData withLength:(UInt32)length;
 -(BOOL) start;

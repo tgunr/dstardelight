@@ -2,7 +2,7 @@
 
 //#import "BTRDV3KSerialVocoder.h"
 #import "BTRDV3KNetworkVocoder.h"
-#import "BTRAudioHandler.h"
+#import "STUBAudioHandler.h"
 #import "BTRSlowDataCoder.h"
 #import "BTRDPlusLink.h"
 #import "BTRDExtraLink.h"
@@ -13,7 +13,7 @@ static NSMutableArray <Class> *linkDriverClasses = nil;
 @interface BTRDataEngine ()
 
 @property (nonatomic, readwrite) NSObject <BTRLinkDriverProtocol> *network;
-@property (nonatomic, readwrite) BTRAudioHandler *audio;
+@property (nonatomic, readwrite) STUBAudioHandler *audio;
 @property (nonatomic, copy) NSString *sleepDestination;
 @property (nonatomic, readonly) NSArray <id <BTRLinkDriverProtocol>> *linkDrivers;
 @property (nonatomic, readonly) dispatch_queue_t linkQueue;
@@ -33,7 +33,7 @@ static NSMutableArray <Class> *linkDriverClasses = nil;
 -(id) init {
     self = [super init];
     if(self) {
-        _audio = [[BTRAudioHandler alloc] init];
+        _audio = [[STUBAudioHandler alloc] init];
         _network = nil;
         Class vocoderDriver = NSClassFromString([[NSUserDefaults standardUserDefaults] stringForKey:@"VocoderDriver"]);
         self.vocoder = [[vocoderDriver alloc] init];

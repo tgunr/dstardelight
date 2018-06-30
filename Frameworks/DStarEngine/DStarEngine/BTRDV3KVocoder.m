@@ -30,7 +30,7 @@
 
 #import "BTRDataEngine.h"
 #import "BTRDV3KPacket.h"
-#import "BTRAudioHandler.h"
+#import "STUBAudioHandler.h"
 
 // XXX
 //#import "BTRSerialVocoderViewController.h"

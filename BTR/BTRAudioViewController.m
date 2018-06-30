@@ -28,7 +28,7 @@
 #import "BTRAudioViewController.h"
 
 #import <DStarEngine/BTRDataEngine.h>
-#import <DStarEngine/BTRAudioHandler.h>
+#import "DSAudioHandler.h"
 #import <CoreAudio/CoreAudio.h>
 
 @interface BTRAudioViewController ()

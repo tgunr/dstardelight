@@ -32,7 +32,7 @@
 #import "MASDictionaryTransformer.h"
 #import <DStarEngine/BTRDataEngine.h>
 #import <DStarEngine/BTRSlowDataCoder.h>
-#import <DStarEngine/BTRAudioHandler.h>
+#import "DSAudioHandler.h"
 #import "BTRMapPopupController.h"
 #import <DStarEngine/BTRAprsLocation.h>
 #import "BTRAddPopupController.h"
