@@ -37,7 +37,7 @@
 
 @property (nonatomic, readonly) NSObject <BTRLinkDriverProtocol> *network;
 @property (nonatomic) id <BTRVocoderDriver> vocoder;
-@property (nonatomic, readonly) STUBAudioHandler *audio;
+@property (nonatomic, readonly) id audio;
 @property (nonatomic, readonly) BTRSlowDataCoder *slowData;
 @property (nonatomic) NSObject <BTRDataEngineDelegate> *delegate;
 @property (nonatomic, readonly) NSArray<NSString *> *linkDriverDestinations;

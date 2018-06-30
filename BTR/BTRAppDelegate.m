@@ -30,7 +30,7 @@
 #import <DStarEngine/BTRDataEngine.h>
 #import "BTRDV3KSerialVocoder.h"
 #import <DStarEngine/BTRSlowDataCoder.h>
-#import <DStarEngine/BTRAudioHandler.h>
+#import "DSAudioHandler.h"
 
 @interface BTRAppDelegate () 
 @end
@@ -50,43 +50,44 @@
     [engine.slowData bind:@"message" toObject:[NSUserDefaultsController sharedUserDefaultsController] withKeyPath:@"values.slowDataMessage" options:nil];
     
     NSString *inputUid = [[NSUserDefaults standardUserDefaults] stringForKey:@"inputAudioDevice"];
+    DSAudioHandler *engineaudio = (DSAudioHandler *)[BTRDataEngine sharedInstance].audio;
     if(!inputUid) {
-        engine.audio.inputDevice = engine.audio.defaultInputDevice;
+        engineaudio.inputDevice = engineaudio.defaultInputDevice;
     } else {
-//        for(NSDictionary *entry in [BTRAudioHandler enumerateInputDevices])
-//            if([entry[@"uid"] isEqualToString:inputUid])
-//                engine.audio.inputDevice = ((NSNumber *)entry[@"id"]).intValue;
+        for(NSDictionary *entry in [DSAudioHandler enumerateInputDevices])
+            if([entry[@"uid"] isEqualToString:inputUid])
+                engineaudio.inputDevice = ((NSNumber *)entry[@"id"]).intValue;
      }
     
     NSString *outputUid = [[NSUserDefaults standardUserDefaults] stringForKey:@"outputAudioDevice"];
     if(!outputUid) {
-        engine.audio.outputDevice = engine.audio.defaultOutputDevice;
+        engineaudio.outputDevice = engineaudio.defaultOutputDevice;
     } else {
-//        for(NSDictionary *entry in [BTRAudioHandler enumerateOutputDevices])
-//            if([entry[@"uid"] isEqualToString:outputUid])
-//                engine.audio.outputDevice = ((NSNumber *)entry[@"id"]).intValue;
+        for(NSDictionary *entry in [DSAudioHandler enumerateOutputDevices])
+            if([entry[@"uid"] isEqualToString:outputUid])
+                engineaudio.outputDevice = ((NSNumber *)entry[@"id"]).intValue;
     }
     
-    [[NSNotificationCenter defaultCenter] addObserverForName: BTRAudioDeviceChanged
+    [[NSNotificationCenter defaultCenter] addObserverForName: DSAudioDeviceChanged
                                                       object: nil
                                                        queue: [NSOperationQueue mainQueue]
                                                   usingBlock: ^(NSNotification *notification) {
-                                                      for(NSDictionary *entry in [BTRAudioHandler enumerateInputDevices]) {
-                                                          if(((NSNumber *)entry[@"id"]).intValue == engine.audio.inputDevice) {
+                                                      for(NSDictionary *entry in [DSAudioHandler enumerateInputDevices]) {
+                                                          if(((NSNumber *)entry[@"id"]).intValue == engineaudio.inputDevice) {
                                                               [[NSUserDefaults standardUserDefaults] setObject:entry[@"uid"] forKey:@"inputAudioDevice"];
                                                           }
                                                       }
                                                       
-                                                      for(NSDictionary *entry in [BTRAudioHandler enumerateOutputDevices]) {
-                                                          if(((NSNumber *)entry[@"id"]).intValue == engine.audio.outputDevice) {
+                                                      for(NSDictionary *entry in [DSAudioHandler enumerateOutputDevices]) {
+                                                          if(((NSNumber *)entry[@"id"]).intValue == engineaudio.outputDevice) {
                                                               [[NSUserDefaults standardUserDefaults] setObject:entry[@"uid"] forKey:@"outputAudioDevice"];
                                                           }
                                                       }
                                                   }];
 
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [engine.audio start];
-        engine.audio.outputVolume = [[NSUserDefaults standardUserDefaults] floatForKey:@"outputVolume"];
+        [engineaudio start];
+        engineaudio.outputVolume = [[NSUserDefaults standardUserDefaults] floatForKey:@"outputVolume"];
         
         if(![engine.vocoder start])
             dispatch_async(dispatch_get_main_queue(), ^{

@@ -3,9 +3,8 @@
 
 #import <AudioUnit/AudioUnit.h>
 #import <AudioToolbox/AudioToolbox.h>
-
 #import "TPCircularBuffer.h"
-//#import "TPCircularBuffer+AudioBufferList.h"
+#import "TPCircularBuffer+AudioBufferList.h"
 //#import "BTRVocoderDriver.h"
 //#import "BTRLinkDriverProtocol.h"
 

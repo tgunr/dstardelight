@@ -345,7 +345,8 @@
 }
 
 - (IBAction)doVolumeChange:(id)sender {
-    [BTRDataEngine sharedInstance].audio.outputVolume = self.volumeSlider.floatValue;
+    DSAudioHandler *engineaudio = (DSAudioHandler *)[BTRDataEngine sharedInstance].audio;
+    engineaudio.outputVolume = self.volumeSlider.floatValue;
     [[NSUserDefaults standardUserDefaults] setFloat:self.volumeSlider.floatValue forKey:@"outputVolume"];
 }
 
@@ -360,12 +361,13 @@
         return;
     }
     [self.view.window makeFirstResponder:self.view];
-    
-    [BTRDataEngine sharedInstance].audio.xmit = YES;    
+    DSAudioHandler *audio = (DSAudioHandler *)[BTRDataEngine sharedInstance].audio;
+    audio.xmit = YES;
 }
 
 -(void)endTx {
-    [BTRDataEngine sharedInstance].audio.xmit = NO;
+    DSAudioHandler *audio = (DSAudioHandler *)[BTRDataEngine sharedInstance].audio;
+    audio.xmit = NO;
     self.statusLED.image = [NSImage imageNamed:@"Gray LED"];
 }
 

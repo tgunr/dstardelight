@@ -22,7 +22,6 @@ extern NSString * const BTRAudioDeviceChanged;
 @property (nonatomic, readonly) id defaultOutputDevice;
 @property (nonatomic) BOOL xmit;
 @property (nonatomic) float outputVolume;
-
 @property (nonatomic) BOOL receiving;
-
+@property id delegate;
 @end

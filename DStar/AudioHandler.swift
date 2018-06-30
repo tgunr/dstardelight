@@ -8,7 +8,7 @@
 import CoreAudioKit
 import CoreAudio
 
-let AudioDeviceChanged = "BTRAudioDeviceChanged"
+let AudioDeviceChanged = "DSAudioDeviceChanged"
 enum InOut {
     case In, Out
 }

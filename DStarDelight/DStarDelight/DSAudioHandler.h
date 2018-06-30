@@ -1,4 +1,5 @@
 #import <AudioToolbox/AudioToolbox.h>
+#import <DStarEngine/STUBAudioHandler.h>
 
 @protocol BTRVocoderDriver;
 
@@ -13,13 +14,13 @@ extern NSString * const DSAudioDeviceChanged;
 +(NSArray *)enumerateInputDevices;
 +(NSArray *)enumerateOutputDevices;
 
--(void)setInputDevice:(id)_inputDevice andOutputDevice:(id)_outputDevice;
+-(void)setInputDevice:(AudioDeviceID)_inputDevice andOutputDevice:(AudioDeviceID)_outputDevice;
 
 @property (nonatomic) id<BTRVocoderDriver> vocoder;
-@property (nonatomic) id inputDevice;
-@property (nonatomic) id outputDevice;
-@property (nonatomic, readonly) id defaultInputDevice;
-@property (nonatomic, readonly) id defaultOutputDevice;
+@property (nonatomic) AudioDeviceID inputDevice;
+@property (nonatomic) AudioDeviceID outputDevice;
+@property (nonatomic, readonly) AudioDeviceID defaultInputDevice;
+@property (nonatomic, readonly) AudioDeviceID defaultOutputDevice;
 @property (nonatomic) BOOL xmit;
 @property (nonatomic) float outputVolume;
 
