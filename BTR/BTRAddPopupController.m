@@ -27,7 +27,7 @@
 
 #import "BTRAddPopupController.h"
 
-#import "BTRDataEngine.h"
+#import <DStarEngine/BTRDataEngine.h>
 
 @interface BTRAddPopupController ()
 

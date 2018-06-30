@@ -30,11 +30,11 @@
 //#import "BTRAppDelegate.h"
 #import "MASShortcut.h"
 #import "MASDictionaryTransformer.h"
-#import "BTRDataEngine.h"
-#import "BTRSlowDataCoder.h"
-#import "BTRAudioHandler.h"
+#import <DStarEngine/BTRDataEngine.h>
+#import <DStarEngine/BTRSlowDataCoder.h>
+#import <DStarEngine/BTRAudioHandler.h>
 #import "BTRMapPopupController.h"
-#import "BTRAprsLocation.h"
+#import <DStarEngine/BTRAprsLocation.h>
 #import "BTRAddPopupController.h"
 
 

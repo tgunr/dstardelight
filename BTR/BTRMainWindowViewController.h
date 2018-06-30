@@ -26,7 +26,7 @@
  */
 #import <AppKit/AppKit.h>
 
-#import "BTRDataEngineDelegate.h"
+#import <DStarEngine/BTRDataEngineDelegate.h>
 
 @class MASShortcut;
 

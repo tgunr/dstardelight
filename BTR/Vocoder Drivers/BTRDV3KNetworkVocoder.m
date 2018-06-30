@@ -27,7 +27,7 @@
 
 #import "BTRDV3KNetworkVocoder.h"
 #import "BTRDV3KVocoderSubclass.h"
-#import "BTRDataEngine.h"
+#import <DStarEngine/BTRDataEngine.h>
 #import "BTRNetworkVocoderViewController.h"
 
 #import <arpa/inet.h>

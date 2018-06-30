@@ -27,7 +27,7 @@
 
 #import "BTRSerialVocoderViewController.h"
 
-#import "BTRDataEngine.h"
+#import <DStarEngine/BTRDataEngine.h>
 #import "BTRDV3KSerialVocoder.h"
 
 @interface BTRSerialVocoderViewController ()

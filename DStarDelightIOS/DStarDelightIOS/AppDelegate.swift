@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import BTR
+import DStarEngineIOS
 
 @UIApplicationMain
 @objc

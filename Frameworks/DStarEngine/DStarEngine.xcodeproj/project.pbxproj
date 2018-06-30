@@ -1,0 +1,733 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		757DEE7420E6D4DF003A11F1 /* BTRAudioHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5720E6D4DE003A11F1 /* BTRAudioHandler.m */; };
+		757DEE7520E6D4DF003A11F1 /* BTRDExtraLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5820E6D4DE003A11F1 /* BTRDExtraLink.m */; };
+		757DEE7620E6D4DF003A11F1 /* BTRDPlusAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5120E6D4DD003A11F1 /* BTRDPlusAuthenticator.m */; };
+		757DEE7720E6D4DF003A11F1 /* BTRSlowDataCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5620E6D4DE003A11F1 /* BTRSlowDataCoder.m */; };
+		757DEE7820E6D4DF003A11F1 /* BTRDataEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE4F20E6D4DD003A11F1 /* BTRDataEngine.m */; };
+		757DEE7920E6D4DF003A11F1 /* BTRIRCDDBGateways.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5020E6D4DD003A11F1 /* BTRIRCDDBGateways.m */; };
+		757DEE7B20E6D4DF003A11F1 /* BTRLinkDriver.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5520E6D4DE003A11F1 /* BTRLinkDriver.m */; };
+		757DEE7C20E6D4DF003A11F1 /* PortMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE4E20E6D4DD003A11F1 /* PortMapper.m */; };
+		757DEE7D20E6D4DF003A11F1 /* BTRDPlusLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE7220E6D4DF003A11F1 /* BTRDPlusLink.m */; };
+		757DEE7E20E6D4DF003A11F1 /* BTRDCSLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE4C20E6D4DC003A11F1 /* BTRDCSLink.m */; };
+		757DEE7F20E6D4DF003A11F1 /* BTRAprsLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE7320E6D4DF003A11F1 /* BTRAprsLocation.m */; };
+		757DEE8020E6D4DF003A11F1 /* DNSHost.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5A20E6D4DE003A11F1 /* DNSHost.m */; };
+		757DEE8120E6D4DF003A11F1 /* BTRDV3KVocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5220E6D4DD003A11F1 /* BTRDV3KVocoder.m */; };
+		757DEE8920E6D5D0003A11F1 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 757DEE8320E6D5CF003A11F1 /* README.markdown */; };
+		757DEE8A20E6D5D0003A11F1 /* TPCircularBuffer+AudioBufferList.c in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE8420E6D5CF003A11F1 /* TPCircularBuffer+AudioBufferList.c */; };
+		757DEE8B20E6D5D0003A11F1 /* TPCircularBuffer+AudioBufferList.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE8520E6D5CF003A11F1 /* TPCircularBuffer+AudioBufferList.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEE8C20E6D5D0003A11F1 /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE8620E6D5CF003A11F1 /* TPCircularBuffer.c */; };
+		757DEE8D20E6D5D0003A11F1 /* TPCircularBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE8720E6D5CF003A11F1 /* TPCircularBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEE8E20E6D5D0003A11F1 /* TPCircularBuffer.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 757DEE8820E6D5CF003A11F1 /* TPCircularBuffer.podspec */; };
+		757DEE9020E6D62C003A11F1 /* DStarUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE8F20E6D62C003A11F1 /* DStarUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEE9220E6D6FC003A11F1 /* BTRLinkDriver.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE9120E6D6FB003A11F1 /* BTRLinkDriver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEE9620E6D7D9003A11F1 /* BTRDCSLink.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE9520E6D7D9003A11F1 /* BTRDCSLink.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEEA120E6DEA5003A11F1 /* BTR.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE5B20E6D4DF003A11F1 /* BTR.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEEA220E6DEA5003A11F1 /* BTRDataEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE5D20E6D4DF003A11F1 /* BTRDataEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEEA320E6DEA5003A11F1 /* BTRDataEngineDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6B20E6D4DF003A11F1 /* BTRDataEngineDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEEA420E6DEA5003A11F1 /* BTRAudioHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE5E20E6D4DF003A11F1 /* BTRAudioHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEEA520E6DEA5003A11F1 /* BTRDV3KVocoderSubclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE5F20E6D4DF003A11F1 /* BTRDV3KVocoderSubclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEEA620E6DEA5003A11F1 /* BTRDV3KNetworkVocoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6020E6D4DF003A11F1 /* BTRDV3KNetworkVocoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEEA720E6DEA5003A11F1 /* BTRDV3KVocoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6120E6D4DF003A11F1 /* BTRDV3KVocoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEEA820E6DEA5003A11F1 /* BTRDV3KPacket.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6220E6D4DF003A11F1 /* BTRDV3KPacket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEEA920E6DEA5003A11F1 /* BTRVocoderDriver.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6320E6D4DF003A11F1 /* BTRVocoderDriver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEEAA20E6DEA5003A11F1 /* BTRLinkDriverProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6420E6D4DF003A11F1 /* BTRLinkDriverProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEEAB20E6DEA5003A11F1 /* BTRSlowDataCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6520E6D4DF003A11F1 /* BTRSlowDataCoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEEAC20E6DEA5003A11F1 /* BTRSlowDataDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6620E6D4DF003A11F1 /* BTRSlowDataDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEEAD20E6DEA5003A11F1 /* BTRDPlusAuthenticator.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6E20E6D4DF003A11F1 /* BTRDPlusAuthenticator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEEAE20E6DEA5003A11F1 /* BTRIRCDDBGateways.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6F20E6D4DF003A11F1 /* BTRIRCDDBGateways.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEEAF20E6DEA5003A11F1 /* BTRDPlusLink.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6720E6D4DF003A11F1 /* BTRDPlusLink.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEEB020E6DEA5003A11F1 /* BTRLinkDriverDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6A20E6D4DF003A11F1 /* BTRLinkDriverDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEEB120E6DEA5003A11F1 /* BTRLinkDriverSubclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6C20E6D4DF003A11F1 /* BTRLinkDriverSubclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEEB220E6DEA5003A11F1 /* BTRDExtraLink.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6820E6D4DF003A11F1 /* BTRDExtraLink.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEEB320E6DEA5003A11F1 /* BTRAprsLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6920E6D4DF003A11F1 /* BTRAprsLocation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEEB420E6DEA5003A11F1 /* DNSHost.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE4D20E6D4DC003A11F1 /* DNSHost.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEEB520E6DEA5003A11F1 /* PortMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6D20E6D4DF003A11F1 /* PortMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEEB620E6DEF1003A11F1 /* DStarEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE9D20E6DC15003A11F1 /* DStarEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEEC320E6E28C003A11F1 /* DStarEngineIOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEEC120E6E28C003A11F1 /* DStarEngineIOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEEC720E6E2D2003A11F1 /* DStarEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE9D20E6DC15003A11F1 /* DStarEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEEC820E6E2D2003A11F1 /* TPCircularBuffer+AudioBufferList.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE8520E6D5CF003A11F1 /* TPCircularBuffer+AudioBufferList.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEEC920E6E2D2003A11F1 /* TPCircularBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE8720E6D5CF003A11F1 /* TPCircularBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEECA20E6E2D2003A11F1 /* DStarDelightIOS-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE5920E6D4DE003A11F1 /* DStarDelightIOS-Bridging-Header.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEECB20E6E2D2003A11F1 /* DStarUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE8F20E6D62C003A11F1 /* DStarUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEECC20E6E2D2003A11F1 /* BTR.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE5B20E6D4DF003A11F1 /* BTR.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEECD20E6E2D2003A11F1 /* BTRDataEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE5D20E6D4DF003A11F1 /* BTRDataEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEECE20E6E2D2003A11F1 /* BTRDataEngineDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6B20E6D4DF003A11F1 /* BTRDataEngineDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEECF20E6E2D2003A11F1 /* BTRAudioHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE5E20E6D4DF003A11F1 /* BTRAudioHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEED020E6E2D2003A11F1 /* BTRDV3KVocoderSubclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE5F20E6D4DF003A11F1 /* BTRDV3KVocoderSubclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEED120E6E2D2003A11F1 /* BTRDV3KNetworkVocoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6020E6D4DF003A11F1 /* BTRDV3KNetworkVocoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEED220E6E2D2003A11F1 /* BTRDV3KVocoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6120E6D4DF003A11F1 /* BTRDV3KVocoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEED320E6E2D2003A11F1 /* BTRDV3KPacket.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6220E6D4DF003A11F1 /* BTRDV3KPacket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEED420E6E2D2003A11F1 /* BTRVocoderDriver.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6320E6D4DF003A11F1 /* BTRVocoderDriver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEED520E6E2D2003A11F1 /* BTRLinkDriverProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6420E6D4DF003A11F1 /* BTRLinkDriverProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEED620E6E2D2003A11F1 /* BTRSlowDataCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6520E6D4DF003A11F1 /* BTRSlowDataCoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEED720E6E2D2003A11F1 /* BTRSlowDataDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6620E6D4DF003A11F1 /* BTRSlowDataDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEED820E6E2D2003A11F1 /* BTRDPlusAuthenticator.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6E20E6D4DF003A11F1 /* BTRDPlusAuthenticator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEED920E6E2D2003A11F1 /* BTRIRCDDBGateways.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6F20E6D4DF003A11F1 /* BTRIRCDDBGateways.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEEDA20E6E2D2003A11F1 /* BTRDCSLink.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE9520E6D7D9003A11F1 /* BTRDCSLink.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEEDB20E6E2D2003A11F1 /* BTRDPlusLink.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6720E6D4DF003A11F1 /* BTRDPlusLink.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEEDC20E6E2D2003A11F1 /* BTRLinkDriverDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6A20E6D4DF003A11F1 /* BTRLinkDriverDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEEDD20E6E2D2003A11F1 /* BTRLinkDriverSubclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6C20E6D4DF003A11F1 /* BTRLinkDriverSubclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEEDE20E6E2D2003A11F1 /* BTRDExtraLink.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6820E6D4DF003A11F1 /* BTRDExtraLink.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEEDF20E6E2D2003A11F1 /* BTRLinkDriver.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE9120E6D6FB003A11F1 /* BTRLinkDriver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEEE020E6E2D2003A11F1 /* BTRAprsLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6920E6D4DF003A11F1 /* BTRAprsLocation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEEE120E6E2D2003A11F1 /* DNSHost.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE4D20E6D4DC003A11F1 /* DNSHost.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEEE220E6E2D2003A11F1 /* PortMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6D20E6D4DF003A11F1 /* PortMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEEE320E6E2EE003A11F1 /* BTRDataEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE4F20E6D4DD003A11F1 /* BTRDataEngine.m */; };
+		757DEEE420E6E2EE003A11F1 /* BTRAudioHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5720E6D4DE003A11F1 /* BTRAudioHandler.m */; };
+		757DEEE520E6E2EE003A11F1 /* BTRDV3KVocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5220E6D4DD003A11F1 /* BTRDV3KVocoder.m */; };
+		757DEEE620E6E2EE003A11F1 /* BTRSlowDataCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5620E6D4DE003A11F1 /* BTRSlowDataCoder.m */; };
+		757DEEE720E6E2EE003A11F1 /* BTRDPlusAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5120E6D4DD003A11F1 /* BTRDPlusAuthenticator.m */; };
+		757DEEE820E6E2EE003A11F1 /* BTRIRCDDBGateways.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5020E6D4DD003A11F1 /* BTRIRCDDBGateways.m */; };
+		757DEEE920E6E2EE003A11F1 /* BTRDCSLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE4C20E6D4DC003A11F1 /* BTRDCSLink.m */; };
+		757DEEEA20E6E2EE003A11F1 /* BTRDPlusLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE7220E6D4DF003A11F1 /* BTRDPlusLink.m */; };
+		757DEEEB20E6E2EE003A11F1 /* BTRDExtraLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5820E6D4DE003A11F1 /* BTRDExtraLink.m */; };
+		757DEEEC20E6E2EE003A11F1 /* BTRLinkDriver.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5520E6D4DE003A11F1 /* BTRLinkDriver.m */; };
+		757DEEED20E6E2EE003A11F1 /* BTRAprsLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE7320E6D4DF003A11F1 /* BTRAprsLocation.m */; };
+		757DEEEE20E6E2EE003A11F1 /* DNSHost.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5A20E6D4DE003A11F1 /* DNSHost.m */; };
+		757DEEEF20E6E2EE003A11F1 /* PortMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE4E20E6D4DD003A11F1 /* PortMapper.m */; };
+		757DEEF020E6E322003A11F1 /* TPCircularBuffer+AudioBufferList.c in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE8420E6D5CF003A11F1 /* TPCircularBuffer+AudioBufferList.c */; };
+		757DEEF120E6E322003A11F1 /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE8620E6D5CF003A11F1 /* TPCircularBuffer.c */; };
+		757DEEF720E6EC7B003A11F1 /* DStarDelight-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEEF620E6EC7A003A11F1 /* DStarDelight-Bridging-Header.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		757DEE4120E6D45A003A11F1 /* DStarEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DStarEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		757DEE4520E6D45A003A11F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		757DEE4C20E6D4DC003A11F1 /* BTRDCSLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRDCSLink.m; sourceTree = "<group>"; };
+		757DEE4D20E6D4DC003A11F1 /* DNSHost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNSHost.h; sourceTree = "<group>"; };
+		757DEE4E20E6D4DD003A11F1 /* PortMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PortMapper.m; sourceTree = "<group>"; };
+		757DEE4F20E6D4DD003A11F1 /* BTRDataEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRDataEngine.m; sourceTree = "<group>"; };
+		757DEE5020E6D4DD003A11F1 /* BTRIRCDDBGateways.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRIRCDDBGateways.m; sourceTree = "<group>"; };
+		757DEE5120E6D4DD003A11F1 /* BTRDPlusAuthenticator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRDPlusAuthenticator.m; sourceTree = "<group>"; };
+		757DEE5220E6D4DD003A11F1 /* BTRDV3KVocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRDV3KVocoder.m; sourceTree = "<group>"; };
+		757DEE5520E6D4DE003A11F1 /* BTRLinkDriver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRLinkDriver.m; sourceTree = "<group>"; };
+		757DEE5620E6D4DE003A11F1 /* BTRSlowDataCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRSlowDataCoder.m; sourceTree = "<group>"; };
+		757DEE5720E6D4DE003A11F1 /* BTRAudioHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRAudioHandler.m; sourceTree = "<group>"; };
+		757DEE5820E6D4DE003A11F1 /* BTRDExtraLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRDExtraLink.m; sourceTree = "<group>"; };
+		757DEE5920E6D4DE003A11F1 /* DStarDelightIOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DStarDelightIOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		757DEE5A20E6D4DE003A11F1 /* DNSHost.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNSHost.m; sourceTree = "<group>"; };
+		757DEE5B20E6D4DF003A11F1 /* BTR.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTR.h; sourceTree = "<group>"; };
+		757DEE5D20E6D4DF003A11F1 /* BTRDataEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRDataEngine.h; sourceTree = "<group>"; };
+		757DEE5E20E6D4DF003A11F1 /* BTRAudioHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRAudioHandler.h; sourceTree = "<group>"; };
+		757DEE5F20E6D4DF003A11F1 /* BTRDV3KVocoderSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRDV3KVocoderSubclass.h; sourceTree = "<group>"; };
+		757DEE6020E6D4DF003A11F1 /* BTRDV3KNetworkVocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRDV3KNetworkVocoder.h; sourceTree = "<group>"; };
+		757DEE6120E6D4DF003A11F1 /* BTRDV3KVocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRDV3KVocoder.h; sourceTree = "<group>"; };
+		757DEE6220E6D4DF003A11F1 /* BTRDV3KPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRDV3KPacket.h; sourceTree = "<group>"; };
+		757DEE6320E6D4DF003A11F1 /* BTRVocoderDriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRVocoderDriver.h; sourceTree = "<group>"; };
+		757DEE6420E6D4DF003A11F1 /* BTRLinkDriverProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRLinkDriverProtocol.h; sourceTree = "<group>"; };
+		757DEE6520E6D4DF003A11F1 /* BTRSlowDataCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRSlowDataCoder.h; sourceTree = "<group>"; };
+		757DEE6620E6D4DF003A11F1 /* BTRSlowDataDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRSlowDataDelegate.h; sourceTree = "<group>"; };
+		757DEE6720E6D4DF003A11F1 /* BTRDPlusLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRDPlusLink.h; sourceTree = "<group>"; };
+		757DEE6820E6D4DF003A11F1 /* BTRDExtraLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRDExtraLink.h; sourceTree = "<group>"; };
+		757DEE6920E6D4DF003A11F1 /* BTRAprsLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRAprsLocation.h; sourceTree = "<group>"; };
+		757DEE6A20E6D4DF003A11F1 /* BTRLinkDriverDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRLinkDriverDelegate.h; sourceTree = "<group>"; };
+		757DEE6B20E6D4DF003A11F1 /* BTRDataEngineDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRDataEngineDelegate.h; sourceTree = "<group>"; };
+		757DEE6C20E6D4DF003A11F1 /* BTRLinkDriverSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRLinkDriverSubclass.h; sourceTree = "<group>"; };
+		757DEE6D20E6D4DF003A11F1 /* PortMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PortMapper.h; sourceTree = "<group>"; };
+		757DEE6E20E6D4DF003A11F1 /* BTRDPlusAuthenticator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRDPlusAuthenticator.h; sourceTree = "<group>"; };
+		757DEE6F20E6D4DF003A11F1 /* BTRIRCDDBGateways.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRIRCDDBGateways.h; sourceTree = "<group>"; };
+		757DEE7220E6D4DF003A11F1 /* BTRDPlusLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRDPlusLink.m; sourceTree = "<group>"; };
+		757DEE7320E6D4DF003A11F1 /* BTRAprsLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRAprsLocation.m; sourceTree = "<group>"; };
+		757DEE8320E6D5CF003A11F1 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.markdown; sourceTree = "<group>"; };
+		757DEE8420E6D5CF003A11F1 /* TPCircularBuffer+AudioBufferList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "TPCircularBuffer+AudioBufferList.c"; sourceTree = "<group>"; };
+		757DEE8520E6D5CF003A11F1 /* TPCircularBuffer+AudioBufferList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TPCircularBuffer+AudioBufferList.h"; sourceTree = "<group>"; };
+		757DEE8620E6D5CF003A11F1 /* TPCircularBuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TPCircularBuffer.c; sourceTree = "<group>"; };
+		757DEE8720E6D5CF003A11F1 /* TPCircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCircularBuffer.h; sourceTree = "<group>"; };
+		757DEE8820E6D5CF003A11F1 /* TPCircularBuffer.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TPCircularBuffer.podspec; sourceTree = "<group>"; };
+		757DEE8F20E6D62C003A11F1 /* DStarUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DStarUtils.h; path = DStarEngine/DStarUtils.h; sourceTree = SOURCE_ROOT; };
+		757DEE9120E6D6FB003A11F1 /* BTRLinkDriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRLinkDriver.h; sourceTree = "<group>"; };
+		757DEE9520E6D7D9003A11F1 /* BTRDCSLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRDCSLink.h; sourceTree = "<group>"; };
+		757DEE9D20E6DC15003A11F1 /* DStarEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DStarEngine.h; sourceTree = "<group>"; };
+		757DEEBF20E6E28B003A11F1 /* DStarEngineIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DStarEngineIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		757DEEC120E6E28C003A11F1 /* DStarEngineIOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DStarEngineIOS.h; sourceTree = "<group>"; };
+		757DEEC220E6E28C003A11F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		757DEEF620E6EC7A003A11F1 /* DStarDelight-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DStarDelight-Bridging-Header.h"; path = "DStarEngine/DStarDelight-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		757DEE3E20E6D45A003A11F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		757DEEBC20E6E28B003A11F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		757DEE3720E6D45A003A11F1 = {
+			isa = PBXGroup;
+			children = (
+				757DEE4320E6D45A003A11F1 /* DStarEngine */,
+				757DEEC020E6E28C003A11F1 /* DStarEngineIOS */,
+				757DEE4220E6D45A003A11F1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		757DEE4220E6D45A003A11F1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				757DEE4120E6D45A003A11F1 /* DStarEngine.framework */,
+				757DEEBF20E6E28B003A11F1 /* DStarEngineIOS.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		757DEE4320E6D45A003A11F1 /* DStarEngine */ = {
+			isa = PBXGroup;
+			children = (
+				757DEE9D20E6DC15003A11F1 /* DStarEngine.h */,
+				757DEE8220E6D5CF003A11F1 /* TPCircularBuffer */,
+				757DEEF620E6EC7A003A11F1 /* DStarDelight-Bridging-Header.h */,
+				757DEE5920E6D4DE003A11F1 /* DStarDelightIOS-Bridging-Header.h */,
+				757DEE8F20E6D62C003A11F1 /* DStarUtils.h */,
+				757DEE5B20E6D4DF003A11F1 /* BTR.h */,
+				757DEE5D20E6D4DF003A11F1 /* BTRDataEngine.h */,
+				757DEE4F20E6D4DD003A11F1 /* BTRDataEngine.m */,
+				757DEE6B20E6D4DF003A11F1 /* BTRDataEngineDelegate.h */,
+				757DEE5E20E6D4DF003A11F1 /* BTRAudioHandler.h */,
+				757DEE5720E6D4DE003A11F1 /* BTRAudioHandler.m */,
+				757DEE5F20E6D4DF003A11F1 /* BTRDV3KVocoderSubclass.h */,
+				757DEE6020E6D4DF003A11F1 /* BTRDV3KNetworkVocoder.h */,
+				757DEE6120E6D4DF003A11F1 /* BTRDV3KVocoder.h */,
+				757DEE5220E6D4DD003A11F1 /* BTRDV3KVocoder.m */,
+				757DEE6220E6D4DF003A11F1 /* BTRDV3KPacket.h */,
+				757DEE6320E6D4DF003A11F1 /* BTRVocoderDriver.h */,
+				757DEE6420E6D4DF003A11F1 /* BTRLinkDriverProtocol.h */,
+				757DEE6520E6D4DF003A11F1 /* BTRSlowDataCoder.h */,
+				757DEE5620E6D4DE003A11F1 /* BTRSlowDataCoder.m */,
+				757DEE6620E6D4DF003A11F1 /* BTRSlowDataDelegate.h */,
+				757DEE6E20E6D4DF003A11F1 /* BTRDPlusAuthenticator.h */,
+				757DEE5120E6D4DD003A11F1 /* BTRDPlusAuthenticator.m */,
+				757DEE6F20E6D4DF003A11F1 /* BTRIRCDDBGateways.h */,
+				757DEE5020E6D4DD003A11F1 /* BTRIRCDDBGateways.m */,
+				757DEE9520E6D7D9003A11F1 /* BTRDCSLink.h */,
+				757DEE4C20E6D4DC003A11F1 /* BTRDCSLink.m */,
+				757DEE6720E6D4DF003A11F1 /* BTRDPlusLink.h */,
+				757DEE7220E6D4DF003A11F1 /* BTRDPlusLink.m */,
+				757DEE6A20E6D4DF003A11F1 /* BTRLinkDriverDelegate.h */,
+				757DEE6C20E6D4DF003A11F1 /* BTRLinkDriverSubclass.h */,
+				757DEE6820E6D4DF003A11F1 /* BTRDExtraLink.h */,
+				757DEE5820E6D4DE003A11F1 /* BTRDExtraLink.m */,
+				757DEE9120E6D6FB003A11F1 /* BTRLinkDriver.h */,
+				757DEE5520E6D4DE003A11F1 /* BTRLinkDriver.m */,
+				757DEE6920E6D4DF003A11F1 /* BTRAprsLocation.h */,
+				757DEE7320E6D4DF003A11F1 /* BTRAprsLocation.m */,
+				757DEE4D20E6D4DC003A11F1 /* DNSHost.h */,
+				757DEE5A20E6D4DE003A11F1 /* DNSHost.m */,
+				757DEE6D20E6D4DF003A11F1 /* PortMapper.h */,
+				757DEE4E20E6D4DD003A11F1 /* PortMapper.m */,
+				757DEE4520E6D45A003A11F1 /* Info.plist */,
+			);
+			path = DStarEngine;
+			sourceTree = "<group>";
+		};
+		757DEE8220E6D5CF003A11F1 /* TPCircularBuffer */ = {
+			isa = PBXGroup;
+			children = (
+				757DEE8320E6D5CF003A11F1 /* README.markdown */,
+				757DEE8420E6D5CF003A11F1 /* TPCircularBuffer+AudioBufferList.c */,
+				757DEE8520E6D5CF003A11F1 /* TPCircularBuffer+AudioBufferList.h */,
+				757DEE8620E6D5CF003A11F1 /* TPCircularBuffer.c */,
+				757DEE8720E6D5CF003A11F1 /* TPCircularBuffer.h */,
+				757DEE8820E6D5CF003A11F1 /* TPCircularBuffer.podspec */,
+			);
+			name = TPCircularBuffer;
+			path = ../../TPCircularBuffer;
+			sourceTree = "<group>";
+		};
+		757DEEC020E6E28C003A11F1 /* DStarEngineIOS */ = {
+			isa = PBXGroup;
+			children = (
+				757DEEC120E6E28C003A11F1 /* DStarEngineIOS.h */,
+				757DEEC220E6E28C003A11F1 /* Info.plist */,
+			);
+			path = DStarEngineIOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		757DEE3C20E6D45A003A11F1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				757DEEB620E6DEF1003A11F1 /* DStarEngine.h in Headers */,
+				757DEE8B20E6D5D0003A11F1 /* TPCircularBuffer+AudioBufferList.h in Headers */,
+				757DEE8D20E6D5D0003A11F1 /* TPCircularBuffer.h in Headers */,
+				757DEEF720E6EC7B003A11F1 /* DStarDelight-Bridging-Header.h in Headers */,
+				757DEE9020E6D62C003A11F1 /* DStarUtils.h in Headers */,
+				757DEEA120E6DEA5003A11F1 /* BTR.h in Headers */,
+				757DEEA220E6DEA5003A11F1 /* BTRDataEngine.h in Headers */,
+				757DEEA320E6DEA5003A11F1 /* BTRDataEngineDelegate.h in Headers */,
+				757DEEA420E6DEA5003A11F1 /* BTRAudioHandler.h in Headers */,
+				757DEEA520E6DEA5003A11F1 /* BTRDV3KVocoderSubclass.h in Headers */,
+				757DEEA620E6DEA5003A11F1 /* BTRDV3KNetworkVocoder.h in Headers */,
+				757DEEA720E6DEA5003A11F1 /* BTRDV3KVocoder.h in Headers */,
+				757DEEA820E6DEA5003A11F1 /* BTRDV3KPacket.h in Headers */,
+				757DEEA920E6DEA5003A11F1 /* BTRVocoderDriver.h in Headers */,
+				757DEEAA20E6DEA5003A11F1 /* BTRLinkDriverProtocol.h in Headers */,
+				757DEEAB20E6DEA5003A11F1 /* BTRSlowDataCoder.h in Headers */,
+				757DEEAC20E6DEA5003A11F1 /* BTRSlowDataDelegate.h in Headers */,
+				757DEEAD20E6DEA5003A11F1 /* BTRDPlusAuthenticator.h in Headers */,
+				757DEEAE20E6DEA5003A11F1 /* BTRIRCDDBGateways.h in Headers */,
+				757DEE9620E6D7D9003A11F1 /* BTRDCSLink.h in Headers */,
+				757DEEAF20E6DEA5003A11F1 /* BTRDPlusLink.h in Headers */,
+				757DEEB020E6DEA5003A11F1 /* BTRLinkDriverDelegate.h in Headers */,
+				757DEEB120E6DEA5003A11F1 /* BTRLinkDriverSubclass.h in Headers */,
+				757DEEB220E6DEA5003A11F1 /* BTRDExtraLink.h in Headers */,
+				757DEE9220E6D6FC003A11F1 /* BTRLinkDriver.h in Headers */,
+				757DEEB320E6DEA5003A11F1 /* BTRAprsLocation.h in Headers */,
+				757DEEB420E6DEA5003A11F1 /* DNSHost.h in Headers */,
+				757DEEB520E6DEA5003A11F1 /* PortMapper.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		757DEEBA20E6E28B003A11F1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				757DEEC320E6E28C003A11F1 /* DStarEngineIOS.h in Headers */,
+				757DEEC720E6E2D2003A11F1 /* DStarEngine.h in Headers */,
+				757DEEC820E6E2D2003A11F1 /* TPCircularBuffer+AudioBufferList.h in Headers */,
+				757DEEC920E6E2D2003A11F1 /* TPCircularBuffer.h in Headers */,
+				757DEECB20E6E2D2003A11F1 /* DStarUtils.h in Headers */,
+				757DEECC20E6E2D2003A11F1 /* BTR.h in Headers */,
+				757DEECD20E6E2D2003A11F1 /* BTRDataEngine.h in Headers */,
+				757DEECE20E6E2D2003A11F1 /* BTRDataEngineDelegate.h in Headers */,
+				757DEECF20E6E2D2003A11F1 /* BTRAudioHandler.h in Headers */,
+				757DEED020E6E2D2003A11F1 /* BTRDV3KVocoderSubclass.h in Headers */,
+				757DEED120E6E2D2003A11F1 /* BTRDV3KNetworkVocoder.h in Headers */,
+				757DEED220E6E2D2003A11F1 /* BTRDV3KVocoder.h in Headers */,
+				757DEED320E6E2D2003A11F1 /* BTRDV3KPacket.h in Headers */,
+				757DEED420E6E2D2003A11F1 /* BTRVocoderDriver.h in Headers */,
+				757DEED520E6E2D2003A11F1 /* BTRLinkDriverProtocol.h in Headers */,
+				757DEED620E6E2D2003A11F1 /* BTRSlowDataCoder.h in Headers */,
+				757DEED720E6E2D2003A11F1 /* BTRSlowDataDelegate.h in Headers */,
+				757DEED820E6E2D2003A11F1 /* BTRDPlusAuthenticator.h in Headers */,
+				757DEED920E6E2D2003A11F1 /* BTRIRCDDBGateways.h in Headers */,
+				757DEEDA20E6E2D2003A11F1 /* BTRDCSLink.h in Headers */,
+				757DEEDB20E6E2D2003A11F1 /* BTRDPlusLink.h in Headers */,
+				757DEEDC20E6E2D2003A11F1 /* BTRLinkDriverDelegate.h in Headers */,
+				757DEEDD20E6E2D2003A11F1 /* BTRLinkDriverSubclass.h in Headers */,
+				757DEEDE20E6E2D2003A11F1 /* BTRDExtraLink.h in Headers */,
+				757DEEDF20E6E2D2003A11F1 /* BTRLinkDriver.h in Headers */,
+				757DEEE020E6E2D2003A11F1 /* BTRAprsLocation.h in Headers */,
+				757DEEE120E6E2D2003A11F1 /* DNSHost.h in Headers */,
+				757DEEE220E6E2D2003A11F1 /* PortMapper.h in Headers */,
+				757DEECA20E6E2D2003A11F1 /* DStarDelightIOS-Bridging-Header.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		757DEE4020E6D45A003A11F1 /* DStarEngine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 757DEE4920E6D45A003A11F1 /* Build configuration list for PBXNativeTarget "DStarEngine" */;
+			buildPhases = (
+				757DEE3C20E6D45A003A11F1 /* Headers */,
+				757DEE3D20E6D45A003A11F1 /* Sources */,
+				757DEE3E20E6D45A003A11F1 /* Frameworks */,
+				757DEE3F20E6D45A003A11F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DStarEngine;
+			productName = DStarEngine;
+			productReference = 757DEE4120E6D45A003A11F1 /* DStarEngine.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		757DEEBE20E6E28B003A11F1 /* DStarEngineIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 757DEEC420E6E28C003A11F1 /* Build configuration list for PBXNativeTarget "DStarEngineIOS" */;
+			buildPhases = (
+				757DEEBA20E6E28B003A11F1 /* Headers */,
+				757DEEBB20E6E28B003A11F1 /* Sources */,
+				757DEEBC20E6E28B003A11F1 /* Frameworks */,
+				757DEEBD20E6E28B003A11F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DStarEngineIOS;
+			productName = DStarEngineIOS;
+			productReference = 757DEEBF20E6E28B003A11F1 /* DStarEngineIOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		757DEE3820E6D45A003A11F1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Polymicro Systems";
+				TargetAttributes = {
+					757DEE4020E6D45A003A11F1 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					757DEEBE20E6E28B003A11F1 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = 757DEE3B20E6D45A003A11F1 /* Build configuration list for PBXProject "DStarEngine" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 757DEE3720E6D45A003A11F1;
+			productRefGroup = 757DEE4220E6D45A003A11F1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				757DEE4020E6D45A003A11F1 /* DStarEngine */,
+				757DEEBE20E6E28B003A11F1 /* DStarEngineIOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		757DEE3F20E6D45A003A11F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				757DEE8920E6D5D0003A11F1 /* README.markdown in Resources */,
+				757DEE8E20E6D5D0003A11F1 /* TPCircularBuffer.podspec in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		757DEEBD20E6E28B003A11F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		757DEE3D20E6D45A003A11F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				757DEE7520E6D4DF003A11F1 /* BTRDExtraLink.m in Sources */,
+				757DEE7920E6D4DF003A11F1 /* BTRIRCDDBGateways.m in Sources */,
+				757DEE7720E6D4DF003A11F1 /* BTRSlowDataCoder.m in Sources */,
+				757DEE7B20E6D4DF003A11F1 /* BTRLinkDriver.m in Sources */,
+				757DEE7420E6D4DF003A11F1 /* BTRAudioHandler.m in Sources */,
+				757DEE8C20E6D5D0003A11F1 /* TPCircularBuffer.c in Sources */,
+				757DEE8020E6D4DF003A11F1 /* DNSHost.m in Sources */,
+				757DEE7C20E6D4DF003A11F1 /* PortMapper.m in Sources */,
+				757DEE8A20E6D5D0003A11F1 /* TPCircularBuffer+AudioBufferList.c in Sources */,
+				757DEE7620E6D4DF003A11F1 /* BTRDPlusAuthenticator.m in Sources */,
+				757DEE7E20E6D4DF003A11F1 /* BTRDCSLink.m in Sources */,
+				757DEE7820E6D4DF003A11F1 /* BTRDataEngine.m in Sources */,
+				757DEE8120E6D4DF003A11F1 /* BTRDV3KVocoder.m in Sources */,
+				757DEE7D20E6D4DF003A11F1 /* BTRDPlusLink.m in Sources */,
+				757DEE7F20E6D4DF003A11F1 /* BTRAprsLocation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		757DEEBB20E6E28B003A11F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				757DEEE320E6E2EE003A11F1 /* BTRDataEngine.m in Sources */,
+				757DEEE420E6E2EE003A11F1 /* BTRAudioHandler.m in Sources */,
+				757DEEE520E6E2EE003A11F1 /* BTRDV3KVocoder.m in Sources */,
+				757DEEE620E6E2EE003A11F1 /* BTRSlowDataCoder.m in Sources */,
+				757DEEE720E6E2EE003A11F1 /* BTRDPlusAuthenticator.m in Sources */,
+				757DEEE820E6E2EE003A11F1 /* BTRIRCDDBGateways.m in Sources */,
+				757DEEE920E6E2EE003A11F1 /* BTRDCSLink.m in Sources */,
+				757DEEEA20E6E2EE003A11F1 /* BTRDPlusLink.m in Sources */,
+				757DEEEB20E6E2EE003A11F1 /* BTRDExtraLink.m in Sources */,
+				757DEEEC20E6E2EE003A11F1 /* BTRLinkDriver.m in Sources */,
+				757DEEED20E6E2EE003A11F1 /* BTRAprsLocation.m in Sources */,
+				757DEEEE20E6E2EE003A11F1 /* DNSHost.m in Sources */,
+				757DEEEF20E6E2EE003A11F1 /* PortMapper.m in Sources */,
+				757DEEF020E6E322003A11F1 /* TPCircularBuffer+AudioBufferList.c in Sources */,
+				757DEEF120E6E322003A11F1 /* TPCircularBuffer.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		757DEE4720E6D45A003A11F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = NL3267E99V;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		757DEE4820E6D45A003A11F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = NL3267E99V;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		757DEE4A20E6D45A003A11F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = NL3267E99V;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = DStarEngine/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = net.polymicro.DStarEngine;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		757DEE4B20E6D45A003A11F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = NL3267E99V;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = DStarEngine/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = net.polymicro.DStarEngine;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		757DEEC520E6E28C003A11F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = NL3267E99V;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DStarEngineIOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.polymicro.DStarEngineIOS;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		757DEEC620E6E28C003A11F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = NL3267E99V;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DStarEngineIOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.polymicro.DStarEngineIOS;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		757DEE3B20E6D45A003A11F1 /* Build configuration list for PBXProject "DStarEngine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				757DEE4720E6D45A003A11F1 /* Debug */,
+				757DEE4820E6D45A003A11F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		757DEE4920E6D45A003A11F1 /* Build configuration list for PBXNativeTarget "DStarEngine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				757DEE4A20E6D45A003A11F1 /* Debug */,
+				757DEE4B20E6D45A003A11F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		757DEEC420E6E28C003A11F1 /* Build configuration list for PBXNativeTarget "DStarEngineIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				757DEEC520E6E28C003A11F1 /* Debug */,
+				757DEEC620E6E28C003A11F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 757DEE3820E6D45A003A11F1 /* Project object */;
+}

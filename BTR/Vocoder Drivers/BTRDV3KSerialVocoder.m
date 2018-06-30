@@ -34,7 +34,7 @@
 #import <IOKit/usb/IOUSBLib.h>
 
 #import "BTRDV3KPacket.h"
-#import "BTRDataEngine.h"
+#import <DStarEngine/BTRDataEngine.h>
 #import "BTRSerialVocoderViewController.h"
 
 #pragma mark - Device removal and insertion
@@ -81,8 +81,8 @@ static void VocoderAdded(void *refCon, io_iterator_t iterator) {
             [self start];
         }
         
-        if(self.configurationViewController)
-            [(BTRSerialVocoderViewController *)self.configurationViewController refreshDevices];
+//        if(self.configurationViewController)
+//            [(BTRSerialVocoderViewController *)self.configurationViewController refreshDevices];
     });
 }
 
@@ -100,8 +100,8 @@ static void VocoderRemoved(void *refCon, io_iterator_t iterator) {
     };
  
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 5ull * NSEC_PER_MSEC), dispatch_get_main_queue(), ^{
-        if(self.configurationViewController)
-            [(BTRSerialVocoderViewController *)self.configurationViewController refreshDevices];
+//        if(self.configurationViewController)
+//            [(BTRSerialVocoderViewController *)self.configurationViewController refreshDevices];
     });
 }
 

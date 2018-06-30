@@ -27,10 +27,10 @@
 
 #import "BTRAppDelegate.h"
 
-#import "BTRDataEngine.h"
+#import <DStarEngine/BTRDataEngine.h>
 #import "BTRDV3KSerialVocoder.h"
-#import "BTRSlowDataCoder.h"
-#import "BTRAudioHandler.h"
+#import <DStarEngine/BTRSlowDataCoder.h>
+#import <DStarEngine/BTRAudioHandler.h>
 
 @interface BTRAppDelegate () 
 @end
@@ -53,18 +53,18 @@
     if(!inputUid) {
         engine.audio.inputDevice = engine.audio.defaultInputDevice;
     } else {
-        for(NSDictionary *entry in [BTRAudioHandler enumerateInputDevices])
-            if([entry[@"uid"] isEqualToString:inputUid])
-                engine.audio.inputDevice = ((NSNumber *)entry[@"id"]).intValue;
+//        for(NSDictionary *entry in [BTRAudioHandler enumerateInputDevices])
+//            if([entry[@"uid"] isEqualToString:inputUid])
+//                engine.audio.inputDevice = ((NSNumber *)entry[@"id"]).intValue;
      }
     
     NSString *outputUid = [[NSUserDefaults standardUserDefaults] stringForKey:@"outputAudioDevice"];
     if(!outputUid) {
         engine.audio.outputDevice = engine.audio.defaultOutputDevice;
     } else {
-        for(NSDictionary *entry in [BTRAudioHandler enumerateOutputDevices])
-            if([entry[@"uid"] isEqualToString:outputUid])
-                engine.audio.outputDevice = ((NSNumber *)entry[@"id"]).intValue;
+//        for(NSDictionary *entry in [BTRAudioHandler enumerateOutputDevices])
+//            if([entry[@"uid"] isEqualToString:outputUid])
+//                engine.audio.outputDevice = ((NSNumber *)entry[@"id"]).intValue;
     }
     
     [[NSNotificationCenter defaultCenter] addObserverForName: BTRAudioDeviceChanged

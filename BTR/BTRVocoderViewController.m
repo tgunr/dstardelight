@@ -26,8 +26,7 @@
  */
 
 #import "BTRVocoderViewController.h"
-
-#import "BTRDataEngine.h"
+#import <DStarEngine/BTRDataEngine.h>
 
 @interface BTRVocoderViewController ()
 
@@ -51,7 +50,7 @@
             [self.vocoderType selectItem:addedItem];
     }
     
-    [self replaceConfigurationViewControllerWith:[[BTRDataEngine sharedInstance].vocoder configurationViewController]];
+//    [self replaceConfigurationViewControllerWith:[[BTRDataEngine sharedInstance].vocoder configurationViewController]];
 }
 
 -(void)replaceConfigurationViewControllerWith:(NSViewController *)viewController {
@@ -95,7 +94,7 @@
     
     NSLog(@"doing select vocoder");
     
-    [self replaceConfigurationViewControllerWith:[newVocoder configurationViewController]];
+//    [self replaceConfigurationViewControllerWith:[newVocoder configurationViewController]];
     [self replaceCurrentVocoderWith:newVocoder];
     [[NSUserDefaults standardUserDefaults] setObject:NSStringFromClass(driver) forKey:@"VocoderDriver"];
  }
