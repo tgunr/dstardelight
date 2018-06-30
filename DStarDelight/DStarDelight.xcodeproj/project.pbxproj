@@ -44,6 +44,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		7525482020E7C19A003A11F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7525481B20E7C19A003A11F1 /* DStarEngine.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 757DEE4120E6D45A003A11F1;
+			remoteInfo = DStarEngine;
+		};
+		7525482220E7C19A003A11F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7525481B20E7C19A003A11F1 /* DStarEngine.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 757DEEBF20E6E28B003A11F1;
+			remoteInfo = DStarEngineIOS;
+		};
+		7525482620E7C566003A11F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7525481B20E7C19A003A11F1 /* DStarEngine.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 757DEE4020E6D45A003A11F1;
+			remoteInfo = DStarEngine;
+		};
 		75E0880120E31575003A11F1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 75E087E220E31572003A11F1 /* Project object */;
@@ -56,6 +77,7 @@
 /* Begin PBXFileReference section */
 		7525480B20E6FDD5003A11F1 /* DSAudioHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSAudioHandler.m; path = DStarDelight/DSAudioHandler.m; sourceTree = SOURCE_ROOT; };
 		7525480C20E6FDD5003A11F1 /* DSAudioHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSAudioHandler.h; path = DStarDelight/DSAudioHandler.h; sourceTree = SOURCE_ROOT; };
+		7525481B20E7C19A003A11F1 /* DStarEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DStarEngine.xcodeproj; path = ../Frameworks/DStarEngine/DStarEngine.xcodeproj; sourceTree = "<group>"; };
 		757DEE9A20E6D98E003A11F1 /* DStarEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DStarEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		758B49BF20E41302003A11F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../../Old/DStarDelight/Base.lproj/New.storyboard; sourceTree = "<group>"; };
 		758B49C120E4196D003A11F1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -136,6 +158,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7525481C20E7C19A003A11F1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7525482120E7C19A003A11F1 /* DStarEngine.framework */,
+				7525482320E7C19A003A11F1 /* DStarEngineIOS.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		757DEE9920E6D98E003A11F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +178,7 @@
 		75E087E120E31572003A11F1 = {
 			isa = PBXGroup;
 			children = (
+				7525481B20E7C19A003A11F1 /* DStarEngine.xcodeproj */,
 				75E087EC20E31572003A11F1 /* DStarDelight */,
 				75E0880320E31575003A11F1 /* DStarDelightUITests */,
 				75E087EB20E31572003A11F1 /* Products */,
@@ -274,6 +306,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7525482720E7C566003A11F1 /* PBXTargetDependency */,
 			);
 			name = DStarDelight;
 			productName = DStarDelight;
@@ -327,6 +360,12 @@
 			mainGroup = 75E087E120E31572003A11F1;
 			productRefGroup = 75E087EB20E31572003A11F1 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 7525481C20E7C19A003A11F1 /* Products */;
+					ProjectRef = 7525481B20E7C19A003A11F1 /* DStarEngine.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				75E087E920E31572003A11F1 /* DStarDelight */,
@@ -334,6 +373,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		7525482120E7C19A003A11F1 /* DStarEngine.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DStarEngine.framework;
+			remoteRef = 7525482020E7C19A003A11F1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7525482320E7C19A003A11F1 /* DStarEngineIOS.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DStarEngineIOS.framework;
+			remoteRef = 7525482220E7C19A003A11F1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		75E087E820E31572003A11F1 /* Resources */ = {
@@ -403,6 +459,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		7525482720E7C566003A11F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DStarEngine;
+			targetProxy = 7525482620E7C566003A11F1 /* PBXContainerItemProxy */;
+		};
 		75E0880220E31575003A11F1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 75E087E920E31572003A11F1 /* DStarDelight */;

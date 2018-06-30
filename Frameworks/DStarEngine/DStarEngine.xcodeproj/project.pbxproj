@@ -192,9 +192,9 @@
 			isa = PBXGroup;
 			children = (
 				757DEE9D20E6DC15003A11F1 /* DStarEngine.h */,
-				757DEE8220E6D5CF003A11F1 /* TPCircularBuffer */,
-				757DEEF620E6EC7A003A11F1 /* DStarDelight-Bridging-Header.h */,
 				757DEE5920E6D4DE003A11F1 /* DStarDelightIOS-Bridging-Header.h */,
+				757DEEF620E6EC7A003A11F1 /* DStarDelight-Bridging-Header.h */,
+				757DEE8220E6D5CF003A11F1 /* TPCircularBuffer */,
 				757DEE8F20E6D62C003A11F1 /* DStarUtils.h */,
 				757DEE5B20E6D4DF003A11F1 /* BTR.h */,
 				757DEE5D20E6D4DF003A11F1 /* BTRDataEngine.h */,
