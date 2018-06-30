@@ -1,16 +1,20 @@
 PODS:
+  - Objection (1.6.1)
   - SwiftSocket (2.0.2)
 
 DEPENDENCIES:
+  - Objection (= 1.6.1)
   - SwiftSocket
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Objection
     - SwiftSocket
 
 SPEC CHECKSUMS:
+  Objection: ed03f2219cb22d2b5b893114219fe6c7e3263bde
   SwiftSocket: 6f4c9c63fbc5c1d61188936bb3c599fd546f40ae
 
-PODFILE CHECKSUM: 29f6ee5a81477c0cb56d380dcd5d6d48f5318ab3
+PODFILE CHECKSUM: 772a843c5cb8dbfc4f38eb4ef3235a860816f2da
 
 COCOAPODS: 1.5.3

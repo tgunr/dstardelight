@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16DCE1BE4209EF3169648CFF /* Pods_DStarDelightIOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE95EAA9A6E6D6A1912DC106 /* Pods_DStarDelightIOSUITests.framework */; };
 		757DEE2620E54153003A11F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 757DEE2120E54152003A11F1 /* Images.xcassets */; };
 		757DEE2720E54153003A11F1 /* DefaultPreferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 757DEE2220E54152003A11F1 /* DefaultPreferences.plist */; };
 		757DEE2820E54153003A11F1 /* DExtraReflectors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 757DEE2320E54152003A11F1 /* DExtraReflectors.plist */; };
@@ -20,6 +21,7 @@
 		75F7D26320E30621003A11F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75F7D26220E30621003A11F1 /* Assets.xcassets */; };
 		75F7D26620E30621003A11F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75F7D26420E30621003A11F1 /* LaunchScreen.storyboard */; };
 		75F7D27120E30622003A11F1 /* DStarDelightIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D27020E30622003A11F1 /* DStarDelightIOSUITests.swift */; };
+		7C5A71B12D43F082CC71423D /* Pods_DStarDelightIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C304C9874146BCA1E721C957 /* Pods_DStarDelightIOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3192EC3E528C8A7D67564A06 /* Pods-DStarDelightIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DStarDelightIOS.release.xcconfig"; path = "../Pods/Target Support Files/Pods-DStarDelightIOS/Pods-DStarDelightIOS.release.xcconfig"; sourceTree = "<group>"; };
+		54582B8DAD417F8A3EE75E2A /* Pods-DStarDelightIOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DStarDelightIOSUITests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-DStarDelightIOSUITests/Pods-DStarDelightIOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7525481220E7C18F003A11F1 /* DStarEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DStarEngine.xcodeproj; path = ../Frameworks/DStarEngine/DStarEngine.xcodeproj; sourceTree = "<group>"; };
 		753AB21020E45C44003A11F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Resources/Info.plist; sourceTree = "<group>"; };
 		753AB22020E45E88003A11F1 /* BTRDataEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BTRDataEngine.m; path = ../../Frameworks/DStarEngine/DStarEngine/BTRDataEngine.m; sourceTree = "<group>"; };
@@ -122,6 +126,10 @@
 		75F7D28420E306A6003A11F1 /* LinkDriverProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkDriverProtocol.swift; sourceTree = "<group>"; };
 		75F7D28520E306A6003A11F1 /* SlowDataCoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlowDataCoder.swift; sourceTree = "<group>"; };
 		75F7D28620E306A6003A11F1 /* SlowDataDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlowDataDelegate.swift; sourceTree = "<group>"; };
+		876342CF6005263226DE1227 /* Pods-DStarDelightIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DStarDelightIOS.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-DStarDelightIOS/Pods-DStarDelightIOS.debug.xcconfig"; sourceTree = "<group>"; };
+		C304C9874146BCA1E721C957 /* Pods_DStarDelightIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DStarDelightIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE95EAA9A6E6D6A1912DC106 /* Pods_DStarDelightIOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DStarDelightIOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEC0AEAD206219F4B16C6A0D /* Pods-DStarDelightIOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DStarDelightIOSUITests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-DStarDelightIOSUITests/Pods-DStarDelightIOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C5A71B12D43F082CC71423D /* Pods_DStarDelightIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,12 +145,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16DCE1BE4209EF3169648CFF /* Pods_DStarDelightIOSUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02FE0A72DB90995FBD604F0B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				876342CF6005263226DE1227 /* Pods-DStarDelightIOS.debug.xcconfig */,
+				3192EC3E528C8A7D67564A06 /* Pods-DStarDelightIOS.release.xcconfig */,
+				54582B8DAD417F8A3EE75E2A /* Pods-DStarDelightIOSUITests.debug.xcconfig */,
+				FEC0AEAD206219F4B16C6A0D /* Pods-DStarDelightIOSUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7525481320E7C18F003A11F1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +226,8 @@
 			isa = PBXGroup;
 			children = (
 				757DEE2B20E545EF003A11F1 /* TPCircularBuffer */,
+				C304C9874146BCA1E721C957 /* Pods_DStarDelightIOS.framework */,
+				FE95EAA9A6E6D6A1912DC106 /* Pods_DStarDelightIOSUITests.framework */,
 			);
 			name = Frameworks;
 			path = ../Frameworks;
@@ -223,6 +246,7 @@
 				75F7D25520E30620003A11F1 /* Products */,
 				757DEE2020E540EC003A11F1 /* Resources */,
 				757DEE2C20E5462C003A11F1 /* Frameworks */,
+				02FE0A72DB90995FBD604F0B /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -285,10 +309,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75F7D27520E30622003A11F1 /* Build configuration list for PBXNativeTarget "DStarDelightIOS" */;
 			buildPhases = (
+				2E54898EEF715BF2F4EB0F32 /* [CP] Check Pods Manifest.lock */,
 				75F7D25020E30620003A11F1 /* Sources */,
 				75F7D25120E30620003A11F1 /* Frameworks */,
 				75F7D25220E30620003A11F1 /* Resources */,
 				753AB21920E45C44003A11F1 /* Embed Frameworks */,
+				C0091F45412C85374503C667 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -304,6 +330,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75F7D27820E30622003A11F1 /* Build configuration list for PBXNativeTarget "DStarDelightIOSUITests" */;
 			buildPhases = (
+				10A5F932666F7D9D40184E5F /* [CP] Check Pods Manifest.lock */,
 				75F7D26820E30622003A11F1 /* Sources */,
 				75F7D26920E30622003A11F1 /* Frameworks */,
 				75F7D26A20E30622003A11F1 /* Resources */,
@@ -405,6 +432,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		10A5F932666F7D9D40184E5F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DStarDelightIOSUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2E54898EEF715BF2F4EB0F32 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DStarDelightIOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0091F45412C85374503C667 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/../Pods/Target Support Files/Pods-DStarDelightIOS/Pods-DStarDelightIOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Objection-iOS/Objection.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftSocket/SwiftSocket.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Objection.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSocket.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-DStarDelightIOS/Pods-DStarDelightIOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		75F7D25020E30620003A11F1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -497,6 +583,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -558,6 +645,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -578,11 +666,15 @@
 		};
 		75F7D27620E30622003A11F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 876342CF6005263226DE1227 /* Pods-DStarDelightIOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = NL3267E99V;
-				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../DerivedData/Build/Products/Debug-iphonesimulator/DStarEngineIOS.framework\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../DerivedData/Build/Products/Debug-iphonesimulator/DStarEngineIOS.framework\"",
+				);
 				INFOPLIST_FILE = /Sources/HAM/DStarDelight/DStarDelightIOS/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -599,11 +691,15 @@
 		};
 		75F7D27720E30622003A11F1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3192EC3E528C8A7D67564A06 /* Pods-DStarDelightIOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = NL3267E99V;
-				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../DerivedData/Build/Products/Debug-iphonesimulator/DStarEngineIOS.framework\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../DerivedData/Build/Products/Debug-iphonesimulator/DStarEngineIOS.framework\"",
+				);
 				INFOPLIST_FILE = /Sources/HAM/DStarDelight/DStarDelightIOS/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -619,6 +715,7 @@
 		};
 		75F7D27920E30622003A11F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54582B8DAD417F8A3EE75E2A /* Pods-DStarDelightIOSUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -639,6 +736,7 @@
 		};
 		75F7D27A20E30622003A11F1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEC0AEAD206219F4B16C6A0D /* Pods-DStarDelightIOSUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

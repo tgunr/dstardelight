@@ -97,9 +97,12 @@
 		757DEEF020E6E322003A11F1 /* TPCircularBuffer+AudioBufferList.c in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE8420E6D5CF003A11F1 /* TPCircularBuffer+AudioBufferList.c */; };
 		757DEEF120E6E322003A11F1 /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE8620E6D5CF003A11F1 /* TPCircularBuffer.c */; };
 		757DEEF720E6EC7B003A11F1 /* DStarDelight-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEEF620E6EC7A003A11F1 /* DStarDelight-Bridging-Header.h */; };
+		DAD72E09031F3920B85091B2 /* Pods_DStarEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7212D167D6C756614567357E /* Pods_DStarEngine.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27B9CCE75D890092F889FB0B /* Pods-DStarEngine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DStarEngine.debug.xcconfig"; path = "../../Pods/Target Support Files/Pods-DStarEngine/Pods-DStarEngine.debug.xcconfig"; sourceTree = "<group>"; };
+		7212D167D6C756614567357E /* Pods_DStarEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DStarEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7525482B20E7E490003A11F1 /* objective_category_swizzle_object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = objective_category_swizzle_object.h; sourceTree = "<group>"; };
 		7525482C20E7E490003A11F1 /* objective_category_swizzle_object.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = objective_category_swizzle_object.m; sourceTree = "<group>"; };
 		757DEE4120E6D45A003A11F1 /* DStarEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DStarEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,6 +156,7 @@
 		757DEEC120E6E28C003A11F1 /* DStarEngineIOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DStarEngineIOS.h; sourceTree = "<group>"; };
 		757DEEC220E6E28C003A11F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		757DEEF620E6EC7A003A11F1 /* DStarDelight-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DStarDelight-Bridging-Header.h"; path = "DStarEngine/DStarDelight-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		CA18322C9102220F07F8C34E /* Pods-DStarEngine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DStarEngine.release.xcconfig"; path = "../../Pods/Target Support Files/Pods-DStarEngine/Pods-DStarEngine.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAD72E09031F3920B85091B2 /* Pods_DStarEngine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,12 +178,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4EAE270F3A9BA21FD8FD72C6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				27B9CCE75D890092F889FB0B /* Pods-DStarEngine.debug.xcconfig */,
+				CA18322C9102220F07F8C34E /* Pods-DStarEngine.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		757DEE3720E6D45A003A11F1 = {
 			isa = PBXGroup;
 			children = (
 				757DEE4320E6D45A003A11F1 /* DStarEngine */,
 				757DEEC020E6E28C003A11F1 /* DStarEngineIOS */,
 				757DEE4220E6D45A003A11F1 /* Products */,
+				4EAE270F3A9BA21FD8FD72C6 /* Pods */,
+				AFD45E58F7CF008735B01258 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -265,6 +281,14 @@
 			path = DStarEngineIOS;
 			sourceTree = "<group>";
 		};
+		AFD45E58F7CF008735B01258 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7212D167D6C756614567357E /* Pods_DStarEngine.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -347,6 +371,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 757DEE4920E6D45A003A11F1 /* Build configuration list for PBXNativeTarget "DStarEngine" */;
 			buildPhases = (
+				67BA2B857E35956419C6A705 /* [CP] Check Pods Manifest.lock */,
 				757DEE3C20E6D45A003A11F1 /* Headers */,
 				757DEE3D20E6D45A003A11F1 /* Sources */,
 				757DEE3E20E6D45A003A11F1 /* Frameworks */,
@@ -432,6 +457,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		67BA2B857E35956419C6A705 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DStarEngine-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		757DEE3D20E6D45A003A11F1 /* Sources */ = {
@@ -520,6 +566,7 @@
 				DEVELOPMENT_TEAM = NL3267E99V;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -582,6 +629,7 @@
 				DEVELOPMENT_TEAM = NL3267E99V;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -600,6 +648,7 @@
 		};
 		757DEE4A20E6D45A003A11F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27B9CCE75D890092F889FB0B /* Pods-DStarEngine.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -626,6 +675,7 @@
 		};
 		757DEE4B20E6D45A003A11F1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA18322C9102220F07F8C34E /* Pods-DStarEngine.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
