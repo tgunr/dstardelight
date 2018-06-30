@@ -31,13 +31,13 @@
 #import "BTRSlowDataDelegate.h"
 
 @class AppDelegate;
-@class BTRAudioHandler, BTRVocoderProtocol, BTRSlowDataCoder;
+@class STUBAudioHandler, BTRVocoderProtocol, BTRSlowDataCoder;
 
 @interface BTRDataEngine : NSObject <BTRLinkDriverDelegate, BTRSlowDataDelegate>
 
 @property (nonatomic, readonly) NSObject <BTRLinkDriverProtocol> *network;
 @property (nonatomic) id <BTRVocoderDriver> vocoder;
-@property (nonatomic, readonly) BTRAudioHandler *audio;
+@property (nonatomic, readonly) id audio;
 @property (nonatomic, readonly) BTRSlowDataCoder *slowData;
 @property (nonatomic) NSObject <BTRDataEngineDelegate> *delegate;
 @property (nonatomic, readonly) NSArray<NSString *> *linkDriverDestinations;

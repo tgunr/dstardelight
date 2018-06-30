@@ -28,7 +28,7 @@
 
 @protocol BTRLinkDriverProtocol;
 
-@class BTRAudioHandler;
+@class STUBAudioHandler;
 
 @protocol BTRVocoderDriver <NSObject>
 - (void) decodeData:(void *) data lastPacket:(BOOL)last;
@@ -39,7 +39,7 @@
 
 +(NSString *)driverName;
 
-@property (nonatomic) BTRAudioHandler *audio;
+@property (nonatomic) STUBAudioHandler *audio;
 @property (nonatomic) NSObject <BTRLinkDriverProtocol> *network;
 //@property (nonatomic, readonly) NSViewController *configurationViewController;
 

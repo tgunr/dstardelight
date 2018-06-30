@@ -28,7 +28,7 @@
 
 #import "BTRVocoderDriver.h"
 
-@class BTRAudioHandler;
+@class STUBAudioHandler;
 
 @interface BTRDV3KVocoder : NSObject <BTRVocoderDriver>
 

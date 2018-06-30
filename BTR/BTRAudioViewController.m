@@ -28,7 +28,7 @@
 #import "BTRAudioViewController.h"
 
 #import <DStarEngine/BTRDataEngine.h>
-#import <DStarEngine/BTRAudioHandler.h>
+#import "DSAudioHandler.h"
 #import <CoreAudio/CoreAudio.h>
 
 @interface BTRAudioViewController ()
@@ -40,26 +40,28 @@
 - (void) setSelectedInput:(NSInteger)_selectedInput {
 //    [BTRDataEngine sharedInstance].audio.inputDevice = (AudioDeviceID) _selectedInput;
     
-    for(NSDictionary *entry in [BTRAudioHandler enumerateInputDevices])
+    for(NSDictionary *entry in [DSAudioHandler enumerateInputDevices])
         if(((NSNumber *)entry[@"id"]).integerValue == _selectedInput)
             [[NSUserDefaults standardUserDefaults] setObject:entry[@"uid"] forKey:@"inputAudioDevice"];
 }
 
 - (NSInteger) selectedInput {
-    return [BTRDataEngine sharedInstance].audio.inputDevice;
+    DSAudioHandler *engineaudio = (DSAudioHandler *)[BTRDataEngine sharedInstance].audio;
+    return engineaudio.inputDevice;
 }
 
 - (void) setSelectedOutput:(NSInteger)_selectedOutput {
 //    [BTRDataEngine sharedInstance].audio.outputDevice = (AudioDeviceID) _selectedOutput;
     
-    for(NSDictionary *entry in [BTRAudioHandler enumerateOutputDevices])
+    for(NSDictionary *entry in [DSAudioHandler enumerateOutputDevices])
         if(((NSNumber *)entry[@"id"]).integerValue == _selectedOutput)
             [[NSUserDefaults standardUserDefaults] setObject:entry[@"uid"] forKey:@"outputAudioDevice"];
 
 }
 
 - (NSInteger)selectedOutput {
-    return [BTRDataEngine sharedInstance].audio.outputDevice;
+    DSAudioHandler *engineaudio = (DSAudioHandler *)[BTRDataEngine sharedInstance].audio;
+    return engineaudio.outputDevice;
 }
 
 - (void)setCourtesyTone:(BOOL)value {
@@ -82,25 +84,27 @@
 
 -(void)refreshDevices {
     [self.inputDeviceMenu removeAllItems];
-    for(NSDictionary *entry in [BTRAudioHandler enumerateInputDevices]) {
+    for(NSDictionary *entry in [DSAudioHandler enumerateInputDevices]) {
         [self.inputDeviceMenu addItemWithTitle:entry[@"description"]];
         [self.inputDeviceMenu itemWithTitle:entry[@"description"]].tag = ((NSNumber *)entry[@"id"]).integerValue;
     }
-    [self.inputDeviceMenu selectItemWithTag:[BTRDataEngine sharedInstance].audio.inputDevice];
+    DSAudioHandler *engineaudio = (DSAudioHandler *)[BTRDataEngine sharedInstance].audio;
+    [self.inputDeviceMenu selectItemWithTag:engineaudio.inputDevice];
     
     [self.outputDeviceMenu removeAllItems];
-    for(NSDictionary *entry in [BTRAudioHandler enumerateOutputDevices]) {
+    for(NSDictionary *entry in [DSAudioHandler enumerateOutputDevices]) {
         [self.outputDeviceMenu addItemWithTitle:entry[@"description"]];
         [self.outputDeviceMenu itemWithTitle:entry[@"description"]].tag = ((NSNumber *)entry[@"id"]).integerValue;
     }
-    [self.outputDeviceMenu selectItemWithTag:[BTRDataEngine sharedInstance].audio.outputDevice];
+    NSInteger tag = engineaudio.outputDevice;
+    [self.outputDeviceMenu selectItemWithTag: tag];
 }
 
 -(void)viewDidLoad {
     [self refreshDevices];
     
     __weak BTRAudioViewController * const weakSelf = self;
-    [[NSNotificationCenter defaultCenter] addObserverForName:BTRAudioDeviceChanged
+    [[NSNotificationCenter defaultCenter] addObserverForName:DSAudioDeviceChanged
                                                       object:nil
                                                        queue:[NSOperationQueue mainQueue]
                                                   usingBlock:^(NSNotification *notification){
@@ -109,7 +113,7 @@
 }
 
 -(void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:BTRAudioDeviceChanged object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:DSAudioDeviceChanged object:nil];
 }
 
 @end

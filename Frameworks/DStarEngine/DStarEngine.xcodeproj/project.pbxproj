@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		757DEE7420E6D4DF003A11F1 /* BTRAudioHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5720E6D4DE003A11F1 /* BTRAudioHandler.m */; };
+		757DEE7420E6D4DF003A11F1 /* STUBAudioHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5720E6D4DE003A11F1 /* STUBAudioHandler.m */; };
 		757DEE7520E6D4DF003A11F1 /* BTRDExtraLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5820E6D4DE003A11F1 /* BTRDExtraLink.m */; };
 		757DEE7620E6D4DF003A11F1 /* BTRDPlusAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5120E6D4DD003A11F1 /* BTRDPlusAuthenticator.m */; };
 		757DEE7720E6D4DF003A11F1 /* BTRSlowDataCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5620E6D4DE003A11F1 /* BTRSlowDataCoder.m */; };
@@ -32,7 +32,7 @@
 		757DEEA120E6DEA5003A11F1 /* BTR.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE5B20E6D4DF003A11F1 /* BTR.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757DEEA220E6DEA5003A11F1 /* BTRDataEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE5D20E6D4DF003A11F1 /* BTRDataEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757DEEA320E6DEA5003A11F1 /* BTRDataEngineDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6B20E6D4DF003A11F1 /* BTRDataEngineDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		757DEEA420E6DEA5003A11F1 /* BTRAudioHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE5E20E6D4DF003A11F1 /* BTRAudioHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEEA420E6DEA5003A11F1 /* STUBAudioHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE5E20E6D4DF003A11F1 /* STUBAudioHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757DEEA520E6DEA5003A11F1 /* BTRDV3KVocoderSubclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE5F20E6D4DF003A11F1 /* BTRDV3KVocoderSubclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757DEEA620E6DEA5003A11F1 /* BTRDV3KNetworkVocoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6020E6D4DF003A11F1 /* BTRDV3KNetworkVocoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757DEEA720E6DEA5003A11F1 /* BTRDV3KVocoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6120E6D4DF003A11F1 /* BTRDV3KVocoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -60,7 +60,7 @@
 		757DEECC20E6E2D2003A11F1 /* BTR.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE5B20E6D4DF003A11F1 /* BTR.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757DEECD20E6E2D2003A11F1 /* BTRDataEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE5D20E6D4DF003A11F1 /* BTRDataEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757DEECE20E6E2D2003A11F1 /* BTRDataEngineDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6B20E6D4DF003A11F1 /* BTRDataEngineDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		757DEECF20E6E2D2003A11F1 /* BTRAudioHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE5E20E6D4DF003A11F1 /* BTRAudioHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEECF20E6E2D2003A11F1 /* STUBAudioHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE5E20E6D4DF003A11F1 /* STUBAudioHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757DEED020E6E2D2003A11F1 /* BTRDV3KVocoderSubclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE5F20E6D4DF003A11F1 /* BTRDV3KVocoderSubclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757DEED120E6E2D2003A11F1 /* BTRDV3KNetworkVocoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6020E6D4DF003A11F1 /* BTRDV3KNetworkVocoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757DEED220E6E2D2003A11F1 /* BTRDV3KVocoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6120E6D4DF003A11F1 /* BTRDV3KVocoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -81,7 +81,7 @@
 		757DEEE120E6E2D2003A11F1 /* DNSHost.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE4D20E6D4DC003A11F1 /* DNSHost.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757DEEE220E6E2D2003A11F1 /* PortMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6D20E6D4DF003A11F1 /* PortMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757DEEE320E6E2EE003A11F1 /* BTRDataEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE4F20E6D4DD003A11F1 /* BTRDataEngine.m */; };
-		757DEEE420E6E2EE003A11F1 /* BTRAudioHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5720E6D4DE003A11F1 /* BTRAudioHandler.m */; };
+		757DEEE420E6E2EE003A11F1 /* STUBAudioHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5720E6D4DE003A11F1 /* STUBAudioHandler.m */; };
 		757DEEE520E6E2EE003A11F1 /* BTRDV3KVocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5220E6D4DD003A11F1 /* BTRDV3KVocoder.m */; };
 		757DEEE620E6E2EE003A11F1 /* BTRSlowDataCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5620E6D4DE003A11F1 /* BTRSlowDataCoder.m */; };
 		757DEEE720E6E2EE003A11F1 /* BTRDPlusAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5120E6D4DD003A11F1 /* BTRDPlusAuthenticator.m */; };
@@ -110,13 +110,13 @@
 		757DEE5220E6D4DD003A11F1 /* BTRDV3KVocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRDV3KVocoder.m; sourceTree = "<group>"; };
 		757DEE5520E6D4DE003A11F1 /* BTRLinkDriver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRLinkDriver.m; sourceTree = "<group>"; };
 		757DEE5620E6D4DE003A11F1 /* BTRSlowDataCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRSlowDataCoder.m; sourceTree = "<group>"; };
-		757DEE5720E6D4DE003A11F1 /* BTRAudioHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRAudioHandler.m; sourceTree = "<group>"; };
+		757DEE5720E6D4DE003A11F1 /* STUBAudioHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STUBAudioHandler.m; sourceTree = "<group>"; };
 		757DEE5820E6D4DE003A11F1 /* BTRDExtraLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRDExtraLink.m; sourceTree = "<group>"; };
 		757DEE5920E6D4DE003A11F1 /* DStarDelightIOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DStarDelightIOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		757DEE5A20E6D4DE003A11F1 /* DNSHost.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNSHost.m; sourceTree = "<group>"; };
 		757DEE5B20E6D4DF003A11F1 /* BTR.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTR.h; sourceTree = "<group>"; };
 		757DEE5D20E6D4DF003A11F1 /* BTRDataEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRDataEngine.h; sourceTree = "<group>"; };
-		757DEE5E20E6D4DF003A11F1 /* BTRAudioHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRAudioHandler.h; sourceTree = "<group>"; };
+		757DEE5E20E6D4DF003A11F1 /* STUBAudioHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STUBAudioHandler.h; sourceTree = "<group>"; };
 		757DEE5F20E6D4DF003A11F1 /* BTRDV3KVocoderSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRDV3KVocoderSubclass.h; sourceTree = "<group>"; };
 		757DEE6020E6D4DF003A11F1 /* BTRDV3KNetworkVocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRDV3KNetworkVocoder.h; sourceTree = "<group>"; };
 		757DEE6120E6D4DF003A11F1 /* BTRDV3KVocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRDV3KVocoder.h; sourceTree = "<group>"; };
@@ -200,8 +200,8 @@
 				757DEE5D20E6D4DF003A11F1 /* BTRDataEngine.h */,
 				757DEE4F20E6D4DD003A11F1 /* BTRDataEngine.m */,
 				757DEE6B20E6D4DF003A11F1 /* BTRDataEngineDelegate.h */,
-				757DEE5E20E6D4DF003A11F1 /* BTRAudioHandler.h */,
-				757DEE5720E6D4DE003A11F1 /* BTRAudioHandler.m */,
+				757DEE5E20E6D4DF003A11F1 /* STUBAudioHandler.h */,
+				757DEE5720E6D4DE003A11F1 /* STUBAudioHandler.m */,
 				757DEE5F20E6D4DF003A11F1 /* BTRDV3KVocoderSubclass.h */,
 				757DEE6020E6D4DF003A11F1 /* BTRDV3KNetworkVocoder.h */,
 				757DEE6120E6D4DF003A11F1 /* BTRDV3KVocoder.h */,
@@ -275,7 +275,7 @@
 				757DEEA120E6DEA5003A11F1 /* BTR.h in Headers */,
 				757DEEA220E6DEA5003A11F1 /* BTRDataEngine.h in Headers */,
 				757DEEA320E6DEA5003A11F1 /* BTRDataEngineDelegate.h in Headers */,
-				757DEEA420E6DEA5003A11F1 /* BTRAudioHandler.h in Headers */,
+				757DEEA420E6DEA5003A11F1 /* STUBAudioHandler.h in Headers */,
 				757DEEA520E6DEA5003A11F1 /* BTRDV3KVocoderSubclass.h in Headers */,
 				757DEEA620E6DEA5003A11F1 /* BTRDV3KNetworkVocoder.h in Headers */,
 				757DEEA720E6DEA5003A11F1 /* BTRDV3KVocoder.h in Headers */,
@@ -310,7 +310,7 @@
 				757DEECC20E6E2D2003A11F1 /* BTR.h in Headers */,
 				757DEECD20E6E2D2003A11F1 /* BTRDataEngine.h in Headers */,
 				757DEECE20E6E2D2003A11F1 /* BTRDataEngineDelegate.h in Headers */,
-				757DEECF20E6E2D2003A11F1 /* BTRAudioHandler.h in Headers */,
+				757DEECF20E6E2D2003A11F1 /* STUBAudioHandler.h in Headers */,
 				757DEED020E6E2D2003A11F1 /* BTRDV3KVocoderSubclass.h in Headers */,
 				757DEED120E6E2D2003A11F1 /* BTRDV3KNetworkVocoder.h in Headers */,
 				757DEED220E6E2D2003A11F1 /* BTRDV3KVocoder.h in Headers */,
@@ -436,7 +436,7 @@
 				757DEE7920E6D4DF003A11F1 /* BTRIRCDDBGateways.m in Sources */,
 				757DEE7720E6D4DF003A11F1 /* BTRSlowDataCoder.m in Sources */,
 				757DEE7B20E6D4DF003A11F1 /* BTRLinkDriver.m in Sources */,
-				757DEE7420E6D4DF003A11F1 /* BTRAudioHandler.m in Sources */,
+				757DEE7420E6D4DF003A11F1 /* STUBAudioHandler.m in Sources */,
 				757DEE8C20E6D5D0003A11F1 /* TPCircularBuffer.c in Sources */,
 				757DEE8020E6D4DF003A11F1 /* DNSHost.m in Sources */,
 				757DEE7C20E6D4DF003A11F1 /* PortMapper.m in Sources */,
@@ -455,7 +455,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				757DEEE320E6E2EE003A11F1 /* BTRDataEngine.m in Sources */,
-				757DEEE420E6E2EE003A11F1 /* BTRAudioHandler.m in Sources */,
+				757DEEE420E6E2EE003A11F1 /* STUBAudioHandler.m in Sources */,
 				757DEEE520E6E2EE003A11F1 /* BTRDV3KVocoder.m in Sources */,
 				757DEEE620E6E2EE003A11F1 /* BTRSlowDataCoder.m in Sources */,
 				757DEEE720E6E2EE003A11F1 /* BTRDPlusAuthenticator.m in Sources */,

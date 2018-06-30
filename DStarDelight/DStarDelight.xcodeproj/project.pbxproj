@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7525480D20E6FDD6003A11F1 /* DSAudioHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525480B20E6FDD5003A11F1 /* DSAudioHandler.m */; };
 		757DEE9B20E6D98E003A11F1 /* DStarEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757DEE9A20E6D98E003A11F1 /* DStarEngine.framework */; };
 		757DEEB920E6DFF3003A11F1 /* DStarEngine.framework in Resources */ = {isa = PBXBuildFile; fileRef = 757DEE9A20E6D98E003A11F1 /* DStarEngine.framework */; };
 		758B49C020E41302003A11F1 /* New.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 758B49BE20E41301003A11F1 /* New.storyboard */; };
@@ -53,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7525480B20E6FDD5003A11F1 /* DSAudioHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSAudioHandler.m; path = DStarDelight/DSAudioHandler.m; sourceTree = SOURCE_ROOT; };
+		7525480C20E6FDD5003A11F1 /* DSAudioHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSAudioHandler.h; path = DStarDelight/DSAudioHandler.h; sourceTree = SOURCE_ROOT; };
 		757DEE9A20E6D98E003A11F1 /* DStarEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DStarEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		758B49BF20E41302003A11F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../../Old/DStarDelight/Base.lproj/New.storyboard; sourceTree = "<group>"; };
 		758B49C120E4196D003A11F1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -192,6 +195,8 @@
 		75E0880F20E3177F003A11F1 /* BTR */ = {
 			isa = PBXGroup;
 			children = (
+				7525480C20E6FDD5003A11F1 /* DSAudioHandler.h */,
+				7525480B20E6FDD5003A11F1 /* DSAudioHandler.m */,
 				758B49D220E41F0C003A11F1 /* BTRDestinationCallFormatter.h */,
 				758B49D320E41F0D003A11F1 /* BTRDestinationCallFormatter.m */,
 				75E0881020E3177F003A11F1 /* BTRAddPopupController.h */,
@@ -380,6 +385,7 @@
 				75E0887A20E3177F003A11F1 /* BTRDV3KNetworkVocoder.m in Sources */,
 				75E0885F20E3177F003A11F1 /* BTRAddPopupController.m in Sources */,
 				75E0886D20E3177F003A11F1 /* BTRMapPopupController.m in Sources */,
+				7525480D20E6FDD6003A11F1 /* DSAudioHandler.m in Sources */,
 				75E0887E20E3177F003A11F1 /* BTRNetworkVocoderViewController.m in Sources */,
 				75E0887520E3177F003A11F1 /* MASShortcutView.m in Sources */,
 				758B49D420E41F0D003A11F1 /* BTRDestinationCallFormatter.m in Sources */,
