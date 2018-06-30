@@ -596,10 +596,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = DStarDelight/DStarDelight.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 98LGF33H43;
+				DEVELOPMENT_TEAM = NL3267E99V;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../DerivedData/Build/Products/Debug/DStarEngine.framework\"";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../DerivedData/Build/Products/Debug/DStarEngine.framework\"";
 				INFOPLIST_FILE = DStarDelight/Info.plist;
@@ -617,9 +618,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = DStarDelight/DStarDelight.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 98LGF33H43;
+				DEVELOPMENT_TEAM = NL3267E99V;
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../DerivedData/Build/Products/Debug/DStarEngine.framework\"";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../DerivedData/Build/Products/Debug/DStarEngine.framework\"";
 				INFOPLIST_FILE = DStarDelight/Info.plist;
