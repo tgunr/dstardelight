@@ -6,7 +6,8 @@
 //  Copyright © 2018 Polymicro Systems. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
+//#import <Objection/Objection.h>
 
 //! Project version number for DStarEngine.
 FOUNDATION_EXPORT double DStarEngineVersionNumber;

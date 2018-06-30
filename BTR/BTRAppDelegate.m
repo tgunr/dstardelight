@@ -31,6 +31,7 @@
 #import "BTRDV3KSerialVocoder.h"
 #import <DStarEngine/BTRSlowDataCoder.h>
 #import "DSAudioHandler.h"
+#import <Objection/Objection.h>
 
 @interface BTRAppDelegate () 
 @end
