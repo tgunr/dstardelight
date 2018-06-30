@@ -5,7 +5,7 @@
 
 extern NSString * const DSAudioDeviceChanged;
 
-@interface DSAudioHandler : NSObject
+@interface DSAudioHandler : STUBAudioHandler
 
 -(void) queueAudioData:(void *)audioData withLength:(UInt32)length;
 -(BOOL) start;
@@ -16,7 +16,7 @@ extern NSString * const DSAudioDeviceChanged;
 
 -(void)setInputDevice:(AudioDeviceID)_inputDevice andOutputDevice:(AudioDeviceID)_outputDevice;
 
-@property (nonatomic) id<BTRVocoderDriver> vocoder;
+//@property (nonatomic) id<BTRVocoderDriver> vocoder;
 @property (nonatomic) AudioDeviceID inputDevice;
 @property (nonatomic) AudioDeviceID outputDevice;
 @property (nonatomic, readonly) AudioDeviceID defaultInputDevice;
@@ -24,6 +24,7 @@ extern NSString * const DSAudioDeviceChanged;
 @property (nonatomic) BOOL xmit;
 @property (nonatomic) float outputVolume;
 
-@property (nonatomic) BOOL receiving;
+//@property (nonatomic) BOOL receiving;
 
++(NSArray *)enumerateDevices:(AudioObjectPropertyScope)scope;
 @end

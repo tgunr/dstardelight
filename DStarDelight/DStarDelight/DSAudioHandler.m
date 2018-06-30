@@ -138,6 +138,10 @@ static OSStatus AudioDevicesChanged(AudioObjectID inObjectID, UInt32 inNumberAdd
 
 
 @implementation DSAudioHandler
+@synthesize xmit;
+@synthesize inputDevice;
+@synthesize outputDevice;
+@synthesize receiving;
 
 - (id) init {
     self = [super init];
@@ -151,19 +155,19 @@ static OSStatus AudioDevicesChanged(AudioObjectID inObjectID, UInt32 inNumberAdd
         
         _inputFormat = malloc(sizeof(AudioStreamBasicDescription));
         
-        _xmit = NO;
+        xmit = NO;
         inputConverter = NULL;
         _inputUnit = NULL;
         outputUnit = NULL;
         
         status = AUDIO_STATUS_STOPPED;
         
-        _inputDevice = 0;
-        _outputDevice = 0;
+        inputDevice = 0;
+        outputDevice = 0;
         
         _hardwareSampleRate = 0.0;
         
-        _receiving = NO;
+        receiving = NO;
         
         AudioObjectPropertyAddress propertyAddress = {
             kAudioHardwarePropertyDevices,
@@ -205,10 +209,10 @@ static OSStatus AudioDevicesChanged(AudioObjectID inObjectID, UInt32 inNumberAdd
 }
 
 - (void) setInputDevice:(AudioDeviceID)inputDevice {
-    if(_inputDevice == inputDevice)
+    if(self.inputDevice == inputDevice)
         return;
     
-    _inputDevice = inputDevice;
+    self.inputDevice = inputDevice;
     
     if(status == AUDIO_STATUS_STARTED) {
         [self stop];
@@ -217,10 +221,10 @@ static OSStatus AudioDevicesChanged(AudioObjectID inObjectID, UInt32 inNumberAdd
 }
 
 - (void) setOutputDevice:(AudioDeviceID)outputDevice {
-    if(_outputDevice == outputDevice)
+    if(self.outputDevice == outputDevice)
         return;
     
-    _outputDevice = outputDevice;
+    self.outputDevice = outputDevice;
     
     if(status == AUDIO_STATUS_STARTED) {
         [self stop];
@@ -229,11 +233,11 @@ static OSStatus AudioDevicesChanged(AudioObjectID inObjectID, UInt32 inNumberAdd
 }
 
 -(void)setInputDevice:(AudioDeviceID)inputDevice andOutputDevice:(AudioDeviceID)outputDevice {
-    if(_inputDevice == inputDevice && _outputDevice == outputDevice)
+    if(self.inputDevice == inputDevice && self.outputDevice == outputDevice)
         return;
     
-    _inputDevice = inputDevice;
-    _outputDevice = outputDevice;
+    self.inputDevice = inputDevice;
+    self.outputDevice = outputDevice;
     
     if(status == AUDIO_STATUS_STARTED) {
         [self stop];
@@ -242,7 +246,7 @@ static OSStatus AudioDevicesChanged(AudioObjectID inObjectID, UInt32 inNumberAdd
 }
 
 - (void) setXmit:(BOOL)xmit {
-    if(_xmit == xmit)
+    if(self.xmit == xmit)
         return;
 
     if(xmit) {
@@ -289,11 +293,11 @@ static OSStatus AudioDevicesChanged(AudioObjectID inObjectID, UInt32 inNumberAdd
 
         dispatch_resume(inputAudioSource);
     }
-    _xmit = xmit;
+    self.xmit = xmit;
 }
 
 -(void)setReceiving:(BOOL)receiving {
-    _receiving = receiving;
+    self.receiving = receiving;
     
     if(receiving)
         TPCircularBufferClear(self.playbackBuffer);
@@ -439,13 +443,14 @@ static inline BOOL CheckStatus(OSStatus error, const char *operation) {
     
     AudioObjectPropertyAddress propertyAddress = { kAudioHardwarePropertyDefaultOutputDevice, kAudioObjectPropertyScopeGlobal, kAudioObjectPropertyElementMaster };
     
+    AudioDeviceID outDevice = self.outputDevice;
     if(self.outputDevice == 0) {
-        UInt32 defaultDeviceSize = sizeof(_outputDevice);
-        if(!CheckStatus(AudioObjectGetPropertyData(kAudioObjectSystemObject, &propertyAddress, 0, NULL, &defaultDeviceSize, &_outputDevice), "AudioUnitGetPropertyData(kAudioHardwarePropertyDefaultInputDevice)"))
+        UInt32 defaultDeviceSize = sizeof(self.outputDevice);
+        if(!CheckStatus(AudioObjectGetPropertyData(kAudioObjectSystemObject, &propertyAddress, 0, NULL, &defaultDeviceSize, &outDevice), "AudioUnitGetPropertyData(kAudioHardwarePropertyDefaultInputDevice)"))
             return NO;
     }
     
-    if(!CheckStatus(AudioUnitSetProperty(outputUnit, kAudioOutputUnitProperty_CurrentDevice, kAudioUnitScope_Global, 0, &_outputDevice, sizeof(AudioDeviceID)), "AudioUnitSetProperty(kAudioOutputUnitProperty_CurrentDevice)"))
+    if(!CheckStatus(AudioUnitSetProperty(outputUnit, kAudioOutputUnitProperty_CurrentDevice, kAudioUnitScope_Global, 0, &outDevice, sizeof(AudioDeviceID)), "AudioUnitSetProperty(kAudioOutputUnitProperty_CurrentDevice)"))
         return NO;
     
     
@@ -479,13 +484,14 @@ static inline BOOL CheckStatus(OSStatus error, const char *operation) {
     
     propertyAddress.mSelector = kAudioHardwarePropertyDefaultInputDevice;
     
+    AudioDeviceID inDevice = self.inputDevice;
     if(self.inputDevice == 0) {
-        AudioDeviceID defaultDeviceSize = sizeof(_inputDevice);
-        if(!CheckStatus(AudioObjectGetPropertyData(kAudioObjectSystemObject, &propertyAddress, 0, NULL, &defaultDeviceSize, &_inputDevice), "AudioUnitGetPropertyData(kAudioHardwarePropertyDefaultInputDevice)"))
+        AudioDeviceID defaultDeviceSize = sizeof(self.inputDevice);
+        if(!CheckStatus(AudioObjectGetPropertyData(kAudioObjectSystemObject, &propertyAddress, 0, NULL, &defaultDeviceSize, &inDevice), "AudioUnitGetPropertyData(kAudioHardwarePropertyDefaultInputDevice)"))
             return NO;
     }
     
-    if(!CheckStatus(AudioUnitSetProperty(self.inputUnit, kAudioOutputUnitProperty_CurrentDevice, kAudioUnitScope_Global, 0, &_inputDevice, sizeof(AudioDeviceID)), "AudioUnitSetProperty(kAudioOutputUnitProperty_CurrentDevice)"))
+    if(!CheckStatus(AudioUnitSetProperty(self.inputUnit, kAudioOutputUnitProperty_CurrentDevice, kAudioUnitScope_Global, 0, &inDevice, sizeof(AudioDeviceID)), "AudioUnitSetProperty(kAudioOutputUnitProperty_CurrentDevice)"))
         return NO;
     
     renderCallback.inputProc = recordThreadCallback;
