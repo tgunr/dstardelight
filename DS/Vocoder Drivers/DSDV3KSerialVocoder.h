@@ -1,8 +1,8 @@
 
 
-#import "DSDV3KVocoderSubclass.h"
+#import <DStarEngine/DStarEngine.h>
 
-@interface DSEDV3KSerialVocoder : DSEDV3KVocoder
+@interface DSDV3KSerialVocoder : DSEDV3KVocoder
 
 + (NSArray *)ports;
 

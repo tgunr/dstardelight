@@ -1,12 +1,16 @@
+//
+//  STUBAudioHandler.m
+//
 
 #import "STUBAudioHandler.h"
+
 #import <Foundation/Foundation.h>
 #import <AudioUnit/AudioUnit.h>
 #import <AudioToolbox/AudioToolbox.h>
 #import "TPCircularBuffer.h"
 #import "TPCircularBuffer+AudioBufferList.h"
-//#import "DSEVocoderDriver.h"
-//#import "DSELinkDriverProtocol.h"
+#import "DSEVocoderDriver.h"
+#import "DSELinkDriverProtocol.h"
 #import <Objection/Objection.h>
 
 static const AudioComponentDescription componentDescription = {
@@ -128,99 +132,17 @@ static inline BOOL CheckStatus(OSStatus error, const char *operation) {
     } status;
 }
 
-////@property (nonatomic, readwrite) AudioDeviceID defaultInputDevice;
-////@property (nonatomic, readwrite) AudioDeviceID defaultOutputDevice;
-//
+@property (nonatomic, readwrite) AudioDeviceID defaultInputDevice;
+@property (nonatomic, readwrite) AudioDeviceID defaultOutputDevice;
 @property (nonatomic, readonly) TPCircularBuffer *recordBuffer;
 @property (nonatomic, readonly) TPCircularBuffer *playbackBuffer;
-//
-//@property (nonatomic, readonly) AudioStreamBasicDescription *inputFormat;
-//@property (nonatomic, readonly) AudioUnit inputUnit;
-//
-//@property (nonatomic) double hardwareSampleRate;
-//
-////+(NSArray *)enumerateDevices:(AudioObjectPropertyScope)scope;
+@property (nonatomic, readonly) AudioStreamBasicDescription *inputFormat;
+@property (nonatomic, readonly) AudioUnit inputUnit;
+@property (nonatomic) double hardwareSampleRate;
 @end
-
-static OSStatus playbackThreadCallback (void *userData, AudioUnitRenderActionFlags *actionFlags, const AudioTimeStamp *inTimeStamp, UInt32 inBusNumber, UInt32 inNumberFrames, AudioBufferList *ioData) {
-    
-    NSLog(@"The method playbackThreadCallback in AudioHandler must be overridden.");
-    NSError * unimp = [NSError errorWithDomain:NSOSStatusErrorDomain code:unimpErr userInfo:NULL];
-    @throw unimp;
-    return unimpErr;
-
-}
-
-static OSStatus recordThreadCallback (void *userData, AudioUnitRenderActionFlags *actionFlags, const AudioTimeStamp *inTimeStamp, UInt32 inBusNumber, UInt32 inNumberFrames, AudioBufferList *ioData) {
-
-    NSLog(@"The method recordThreadCallback in AudioHandler must be overridden.");
-    NSError * unimp = [NSError errorWithDomain:NSOSStatusErrorDomain code:unimpErr userInfo:NULL];
-    @throw unimp;
-    return unimpErr;
-}
-
-static OSStatus audioConverterCallback(AudioConverterRef inAudioConverter, UInt32 *ioNumberDataPackets, AudioBufferList *ioData, AudioStreamPacketDescription **outDataPacketDescription, void *inUserData) {
-
-    NSLog(@"The method audioConverterCallback in AudioHandler must be overridden.");
-    NSError * unimp = [NSError errorWithDomain:NSOSStatusErrorDomain code:unimpErr userInfo:NULL];
-    @throw unimp;
-    return unimpErr;
-}
-
-static OSStatus AudioDevicesChanged(AudioObjectID inObjectID, UInt32 inNumberAddress, const AudioObjectPropertyAddress inAddresses[], void *inClientData) {
-
-    NSLog(@"The method AudioDevicesChanged in AudioHandler must be overridden.");
-    NSError * unimp = [NSError errorWithDomain:NSOSStatusErrorDomain code:unimpErr userInfo:NULL];
-    @throw unimp;
-    return unimpErr;
-}
 
 @implementation STUBAudioHandler
 
-//- (id) init {
-//    self = [super init];
-//
-//    if(self) {
-//        _playbackBuffer = malloc(sizeof(TPCircularBuffer));
-//        TPCircularBufferInit(_playbackBuffer, 16384);
-//
-//        _recordBuffer = malloc(sizeof(TPCircularBuffer));
-//        TPCircularBufferInit(_recordBuffer, 16384);
-//
-//        _inputFormat = malloc(sizeof(AudioStreamBasicDescription));
-//
-//        _xmit = NO;
-//        inputConverter = NULL;
-//        _inputUnit = NULL;
-//        outputUnit = NULL;
-//
-//        status = AUDIO_STATUS_STOPPED;
-//
-//        _inputDevice = 0;
-//        _outputDevice = 0;
-//
-//        _hardwareSampleRate = 0.0;
-//
-//        _receiving = NO;
-//
-////        AudioObjectPropertyAddress propertyAddress = {
-////            kAudioHardwarePropertyDevices,
-////            kAudioObjectPropertyScopeGlobal,
-////            kAudioObjectPropertyElementMaster
-////        };
-////
-////        AudioObjectAddPropertyListener(kAudioObjectSystemObject, &propertyAddress, AudioDevicesChanged, (__bridge void *) self);
-//    }
-//
-//    return self;
-//}
-//
-//- (void) dealloc {
-//    free(_playbackBuffer);
-//    free(_recordBuffer);
-//    free(_inputFormat);
-//}
-//
 -(void)setOutputVolume:(float)outputVolume {
     if(!outputUnit)
         return;
@@ -242,7 +164,7 @@ static OSStatus AudioDevicesChanged(AudioObjectID inObjectID, UInt32 inNumberAdd
     return volume;
 }
 
-- (void) setInputDevice:(id)inputDevice {
+-(void) setInputDevice:(UInt32)inputDevice {
     if(self.inputDevice == inputDevice)
         return;
 
@@ -254,7 +176,7 @@ static OSStatus AudioDevicesChanged(AudioObjectID inObjectID, UInt32 inNumberAdd
     }
 }
 
-- (void) setOutputDevice:(id)outputDevice {
+-(void) setOutputDevice:(UInt32)outputDevice {
     if(self.outputDevice == outputDevice)
         return;
 
@@ -266,7 +188,7 @@ static OSStatus AudioDevicesChanged(AudioObjectID inObjectID, UInt32 inNumberAdd
     }
 }
 
--(void)setInputDevice:(id)inputDevice andOutputDevice:(id)outputDevice {
+-(void) setInputDevice:(UInt32)inputDevice andOutputDevice:(UInt32)outputDevice {
     if(_inputDevice == inputDevice && _outputDevice == outputDevice)
         return;
 
@@ -278,7 +200,6 @@ static OSStatus AudioDevicesChanged(AudioObjectID inObjectID, UInt32 inNumberAdd
         [self start];
     }
 }
-
 
 - (void) setXmit:(BOOL)xmit {
  
@@ -297,7 +218,7 @@ static OSStatus AudioDevicesChanged(AudioObjectID inObjectID, UInt32 inNumberAdd
         TPCircularBufferClear(self.playbackBuffer);
 }
 
-- (id) defaultOutputDevice {
+-(UInt32) defaultOutputDevice {
     AudioObjectPropertyAddress propertyAddress = { kAudioHardwarePropertyDefaultOutputDevice, kAudioObjectPropertyScopeGlobal, kAudioObjectPropertyElementMaster };
     id device;
 
@@ -308,7 +229,7 @@ static OSStatus AudioDevicesChanged(AudioObjectID inObjectID, UInt32 inNumberAdd
     return device;
 }
 
-- (AudioDeviceID) defaultInputDevice {
+-(UInt32) defaultInputDevice {
     AudioObjectPropertyAddress propertyAddress = {
         kAudioHardwarePropertyDefaultInputDevice,
         kAudioObjectPropertyScopeGlobal,
@@ -323,14 +244,13 @@ static OSStatus AudioDevicesChanged(AudioObjectID inObjectID, UInt32 inNumberAdd
     return device;
 }
 
-
 -(void) queueAudioData:(void *)audioData withLength:(UInt32)length {
     if(TPCircularBufferProduceBytes(self.playbackBuffer, audioData, length) == false) {
         NSLog(@"No space left in buffer\n");
     }
 }
 
-- (BOOL) start {
+-(BOOL) start {
 
     NSAssert(NO, @"The method %@ in %@ must be overridden.",
              NSStringFromSelector(_cmd), NSStringFromClass([self class]));
@@ -342,7 +262,7 @@ static OSStatus AudioDevicesChanged(AudioObjectID inObjectID, UInt32 inNumberAdd
 
 }
 
--(void)stop {
+-(void) stop {
     if(status != AUDIO_STATUS_STARTED)
         return;
 
@@ -356,8 +276,7 @@ static OSStatus AudioDevicesChanged(AudioObjectID inObjectID, UInt32 inNumberAdd
     status = AUDIO_STATUS_STOPPED;
 }
 
-
-+(NSArray *)enumerateDevices:(id)scope {
++(NSArray *) enumerateDevices:(id)scope {
     NSAssert(NO, @"The method %@ in %@ must be overridden.",
              NSStringFromSelector(_cmd), NSStringFromClass([self class]));
     return NULL;

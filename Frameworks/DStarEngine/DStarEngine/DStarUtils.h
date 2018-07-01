@@ -1,6 +1,24 @@
-#import <Foundation/Foundation.h>
+//
+// DStarUtils.h
+//  DStarEngine
+//
+//  Created by Dave Carlton on 6/30/18.
+//  Copyright © 2018 Polymicro Systems. All rights reserved.
+//
 
-#define DSTARAUTHHOST @"opendstar.org"
+#import <Foundation/Foundation.h>
+#import "DStarEngine.h"
+
+@interface DSVars: NSObject
+
+@property id audioHandler;
+
++ (DSVars *) shared;
+
+@end
+
+extern const NSString *DSTARAUTHHOST;
+extern const NSString *DEFAULT_VOCODER;
 
 static const unsigned short ccittTab[] = {
     0x0000,0x1189,0x2312,0x329b,0x4624,0x57ad,0x6536,0x74bf,

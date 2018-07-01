@@ -42,14 +42,14 @@ static bool isFTDIPort(io_object_t device) {
 }
 
 static void VocoderAdded(void *refCon, io_iterator_t iterator) {
-    DSEDV3KSerialVocoder *self = (__bridge DSEDV3KSerialVocoder *) refCon;
+    DSDV3KSerialVocoder *self = (__bridge DSDV3KSerialVocoder *) refCon;
     //  This is needed to disarm the iterator.  Otherwise we won't get any more events.
     while(IOIteratorNext(iterator));
     
     //  We need to wait 5ms for the device system to catch up, otherwise the io files won't all be created yet and the device won't open.
     //  If there's only one possible port, we'll try it and see if it's a DV3K.
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 5ull * NSEC_PER_MSEC), dispatch_get_main_queue(), ^{
-        NSArray *ports = [DSEDV3KSerialVocoder ports];
+        NSArray *ports = [DSDV3KSerialVocoder ports];
         if(ports.count == 1) {
             self.serialPort = ports[0];
             [[NSUserDefaults standardUserDefaults] setObject:self.serialPort forKey:@"DV3KSerialVocoderPort"];
@@ -62,7 +62,7 @@ static void VocoderAdded(void *refCon, io_iterator_t iterator) {
 }
 
 static void VocoderRemoved(void *refCon, io_iterator_t iterator) {
-    DSEDV3KSerialVocoder *self = (__bridge DSEDV3KSerialVocoder *) refCon;
+    DSDV3KSerialVocoder *self = (__bridge DSDV3KSerialVocoder *) refCon;
     io_object_t serialDevice;
     
     //  If one of the devices that's being removed is the active device, we need to shut down the vocoder engine.
@@ -80,7 +80,7 @@ static void VocoderRemoved(void *refCon, io_iterator_t iterator) {
     });
 }
 
-@interface DSEDV3KSerialVocoder () {
+@interface DSDV3KSerialVocoder () {
     IONotificationPortRef gNotifyPort;
     io_iterator_t deviceAddedIterator;
     io_iterator_t deviceRemovedIterator;
@@ -89,7 +89,7 @@ static void VocoderRemoved(void *refCon, io_iterator_t iterator) {
 
 @end
 
-@implementation DSEDV3KSerialVocoder
+@implementation DSDV3KSerialVocoder
 
 +(void) load {
     [DSEDataEngine registerVocoderDriver:self];
@@ -185,7 +185,7 @@ static void VocoderRemoved(void *refCon, io_iterator_t iterator) {
         _serialPort = [[NSUserDefaults standardUserDefaults] stringForKey:@"DV3KSerialVocoderPort"];
         
         if(!_serialPort || (_serialPort && ![[NSURL fileURLWithPath:_serialPort] checkResourceIsReachableAndReturnError:NULL])) {
-            NSArray *ports = [DSEDV3KSerialVocoder ports];
+            NSArray *ports = [DSDV3KSerialVocoder ports];
             
             if(ports.count == 1) {
                 [[NSUserDefaults standardUserDefaults] setObject:ports[0] forKey:@"DV3KSerialVocoderPort"];
@@ -232,7 +232,7 @@ static void VocoderRemoved(void *refCon, io_iterator_t iterator) {
         
         mach_port_deallocate(mach_task_self(), masterPort);
         
-        // DSEDV3KSerialVocoder __weak *weakSelf = self;
+        // DSDV3KSerialVocoder __weak *weakSelf = self;
         /* [[NSNotificationCenter defaultCenter] addObserverForName:NSUserDefaultsDidChangeNotification
                                                           object:nil
                                                            queue:[NSOperationQueue mainQueue]

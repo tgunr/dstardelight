@@ -1,9 +1,12 @@
+//
+//  DSEDataEngine.h
+//
 
-
-#import "DSEVocoderDriver.h"
-#import "DSELinkDriverProtocol.h"
+#import "DStarEngine.h"
+#import "DSELinkDriverDelegate.h"
+#import "DSESlowDataCoder.h"
 #import "DSEDataEngineDelegate.h"
-#import "DSESlowDataDelegate.h"
+#import "DSEVocoderDriver.h"
 
 @class AppDelegate;
 @class STUBAudioHandler, DSEVocoderProtocol, DSESlowDataCoder;

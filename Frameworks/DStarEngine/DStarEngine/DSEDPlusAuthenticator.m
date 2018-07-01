@@ -18,7 +18,6 @@
 // Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 #import "DSEDPlusAuthenticator.h"
-
 #import "DNSHost.h"
 #import <arpa/inet.h>
 #import <sys/ioctl.h>

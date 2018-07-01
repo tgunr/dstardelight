@@ -3,8 +3,8 @@
 
 #import <AudioUnit/AudioUnit.h>
 #import <AudioToolbox/AudioToolbox.h>
-#import <DStarEngine/TPCircularBuffer.h>
-#import <DStarEngine/DSEVocoderDriver.h>
+#import <DStarEngine/DStarEngine.h>
+
 //#import "TPCircularBuffer+AudioBufferList.h"
 //#import "DSELinkDriverProtocol.h"
 
@@ -138,10 +138,10 @@ static OSStatus AudioDevicesChanged(AudioObjectID inObjectID, UInt32 inNumberAdd
 
 
 @implementation DSAudioHandler
-@synthesize xmit;
-@synthesize inputDevice;
-@synthesize outputDevice;
-@synthesize receiving;
+//@synthesize xmit;
+//@synthesize inputDevice;
+//@synthesize outputDevice;
+//@synthesize receiving;
 
 - (id) init {
     self = [super init];
@@ -155,19 +155,19 @@ static OSStatus AudioDevicesChanged(AudioObjectID inObjectID, UInt32 inNumberAdd
         
         _inputFormat = malloc(sizeof(AudioStreamBasicDescription));
         
-        xmit = NO;
+        _xmit = NO;
         inputConverter = NULL;
         _inputUnit = NULL;
         outputUnit = NULL;
         
         status = AUDIO_STATUS_STOPPED;
         
-        inputDevice = 0;
-        outputDevice = 0;
+        _inputDevice = 0;
+        _outputDevice = 0;
         
         _hardwareSampleRate = 0.0;
         
-        receiving = NO;
+        _receiving = NO;
         
         AudioObjectPropertyAddress propertyAddress = {
             kAudioHardwarePropertyDevices,
@@ -212,7 +212,7 @@ static OSStatus AudioDevicesChanged(AudioObjectID inObjectID, UInt32 inNumberAdd
     if(self.inputDevice == inputDevice)
         return;
     
-    self.inputDevice = inputDevice;
+    _inputDevice = inputDevice;
     
     if(status == AUDIO_STATUS_STARTED) {
         [self stop];
@@ -224,7 +224,7 @@ static OSStatus AudioDevicesChanged(AudioObjectID inObjectID, UInt32 inNumberAdd
     if(self.outputDevice == outputDevice)
         return;
     
-    self.outputDevice = outputDevice;
+    _outputDevice = outputDevice;
     
     if(status == AUDIO_STATUS_STARTED) {
         [self stop];
@@ -303,7 +303,7 @@ static OSStatus AudioDevicesChanged(AudioObjectID inObjectID, UInt32 inNumberAdd
         TPCircularBufferClear(self.playbackBuffer);
 }
 
-- (id) defaultOutputDevice {
+- (AudioDeviceID) defaultOutputDevice {
     AudioObjectPropertyAddress propertyAddress = { kAudioHardwarePropertyDefaultOutputDevice, kAudioObjectPropertyScopeGlobal, kAudioObjectPropertyElementMaster };
     id device;
 

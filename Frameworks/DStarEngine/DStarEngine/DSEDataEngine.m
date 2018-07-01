@@ -1,11 +1,13 @@
-#import "DSEDataEngine.h"
+//
+//  DSEDataEngine.m
+//
 
-//#import "DSEDV3KSerialVocoder.h"
-#import "DSEDV3KNetworkVocoder.h"
+#import "DStarEngine.h"
+
+#import "DSEDataEngine.h"
+#import "DSELinkDriverProtocol.h"
+#import "DStarUtils.h"
 #import "STUBAudioHandler.h"
-#import "DSESlowDataCoder.h"
-#import "DSEDPlusLink.h"
-#import "DSEDExtraLink.h"
 
 static NSMutableArray *vocoderDrivers = nil;
 static NSMutableArray <Class> *linkDriverClasses = nil;
@@ -33,12 +35,16 @@ static NSMutableArray <Class> *linkDriverClasses = nil;
 -(id) init {
     self = [super init];
     if(self) {
-        _audio = [[STUBAudioHandler alloc] init];
+        self.audio = [[DSVars shared] audioHandler];
         _network = nil;
-        Class vocoderDriver = NSClassFromString([[NSUserDefaults standardUserDefaults] stringForKey:@"VocoderDriver"]);
+        id vocoderDriverString = [[NSUserDefaults standardUserDefaults] stringForKey:@"VocoderDriver"];
+        Class vocoderDriver = NSClassFromString(vocoderDriverString);
+        if (vocoderDriver == nil) {
+            vocoderDriver = NSClassFromString(DEFAULT_VOCODER);
+        }
         self.vocoder = [[vocoderDriver alloc] init];
         
-        _vocoder.audio = _audio;
+        _vocoder.audio = self.audio;
         
         _slowData = [[DSESlowDataCoder alloc] init];
         _slowData.delegate = self;

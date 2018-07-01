@@ -28,13 +28,13 @@
 #import "DSEDV3KNetworkVocoder.h"
 #import "DSEDV3KVocoderSubclass.h"
 #import "DSEDataEngine.h"
-#import "DSENetworkVocoderViewController.h"
+#import "DSNetworkVocoderViewController.h"
 
 #import <arpa/inet.h>
 #import <sys/ioctl.h>
 
 @interface DSEDV3KNetworkVocoder () {
-    DSENetworkVocoderViewController *_configurationViewController;
+    DSNetworkVocoderViewController *_configurationViewController;
 }
 
 @end
@@ -75,7 +75,7 @@
     super.productId = productId;
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        ((DSENetworkVocoderViewController *)self.configurationViewController).productId.stringValue = productId;
+        ((DSNetworkVocoderViewController *)self.configurationViewController).productId.stringValue = productId;
     });
 }
 
@@ -83,7 +83,7 @@
     super.version = version;
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        ((DSENetworkVocoderViewController *)self.configurationViewController).version.stringValue = version;
+        ((DSNetworkVocoderViewController *)self.configurationViewController).version.stringValue = version;
     });
 }
 
@@ -111,7 +111,7 @@
 
 -(NSViewController *)configurationViewController {
     if(!_configurationViewController) {
-        _configurationViewController = [[DSENetworkVocoderViewController alloc] init];
+        _configurationViewController = [[DSNetworkVocoderViewController alloc] init];
         _configurationViewController.driver = self;
     }
     return _configurationViewController;

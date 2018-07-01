@@ -48,8 +48,9 @@ Copyright © 2007 Apple Inc. All Rights Reserved.
 
 */
 
-
 #import "PortMapper.h"
+#import "DStarEngine.h"
+
 #import <dns_sd.h>
 #import <sys/types.h>
 #import <sys/socket.h>

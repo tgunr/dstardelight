@@ -2,10 +2,10 @@
 
 #import "DSEDV3KVocoder.h"
 #import "DSEDV3KVocoderSubclass.h"
-
 #import "DSEDataEngine.h"
 #import "DSEDV3KPacket.h"
 #import "STUBAudioHandler.h"
+#import "DSELinkDriverProtocol.h"
 
 // XXX
 //#import "DSESerialVocoderViewController.h"
@@ -302,7 +302,7 @@ static const struct dv3k_packet dv3k_audio = {
 
 - (void) decodeData:(void *) data lastPacket:(BOOL)last {
     [self enqueueWithLastPacket:last andBlock:^(struct dv3k_packet *packet) {
-        memcpy(packet, &dv3k_ambe, sizeof(dv3k_ambe));
+        memcpy(packet, &self->dv3k_ambe, sizeof(dv3k_ambe));
         memcpy(&packet->payload.ambe.data.data, data, sizeof(packet->payload.ambe.data.data));
     }];
 }

@@ -1,15 +1,13 @@
 
 
+#import <DStarEngine/DSEDataEngine.h>
 #import "DSNetworkVocoderViewController.h"
 
-#import "DSDV3KNetworkVocoder.h"
-#import <DStarEngine/DSEDataEngine.h>
-
-@interface DSENetworkVocoderViewController ()
+@interface DSNetworkVocoderViewController ()
 
 @end
 
-@implementation DSENetworkVocoderViewController
+@implementation DSNetworkVocoderViewController
 
 - (id) init {
     self = [super initWithNibName:@"DSENetworkVocoderView" bundle:nil];

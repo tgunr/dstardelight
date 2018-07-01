@@ -1,12 +1,9 @@
 
 
 #import "DSAppDelegate.h"
-
-#import <DStarEngine/DSEDataEngine.h>
+#import <DStarEngine/DStarEngine.h>
 #import "DSDV3KSerialVocoder.h"
-#import <DStarEngine/DSESlowDataCoder.h>
 #import "DSAudioHandler.h"
-#import <Objection/Objection.h>
 
 @interface DSEAppDelegate () 
 @end
@@ -14,10 +11,10 @@
 @implementation DSEAppDelegate
 
 -(void) awakeFromNib {
-    
-    JSObjectionInjector *injector = [JSObjection createInjector];
-    [JSObjection setDefaultInjector:injector];
+    DSAudioHandler *audioHandler = [[DSAudioHandler alloc] init];
+    [[DSVars shared] setAudioHandler:audioHandler];
 
+    
     NSURL *defaultPrefsFile = [[NSBundle mainBundle]
                                URLForResource:@"DefaultPreferences" withExtension:@"plist"];
     NSDictionary *defaultPrefs =
@@ -26,6 +23,7 @@
 }
 
 - (void)applicationWillFinishLaunching:(NSNotification *)aNotification {
+    
     DSEDataEngine *engine = [DSEDataEngine sharedInstance];
     [engine.slowData bind:@"message" toObject:[NSUserDefaultsController sharedUserDefaultsController] withKeyPath:@"values.slowDataMessage" options:nil];
     

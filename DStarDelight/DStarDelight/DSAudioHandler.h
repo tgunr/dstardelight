@@ -6,15 +6,15 @@
 
 extern NSString * const DSAudioDeviceChanged;
 
-@interface DSAudioHandler : STUBAudioHandler
-//@property (nonatomic) id<DSEVocoderDriver> vocoder;
+@interface DSAudioHandler : NSObject
+@property (nonatomic) id<DSEVocoderDriver> vocoder;
 @property (nonatomic) AudioDeviceID inputDevice;
 @property (nonatomic) AudioDeviceID outputDevice;
 @property (nonatomic, readonly) AudioDeviceID defaultInputDevice;
 @property (nonatomic, readonly) AudioDeviceID defaultOutputDevice;
 @property (nonatomic) BOOL xmit;
 @property (nonatomic) float outputVolume;
-//@property (nonatomic) BOOL receiving;
+@property (nonatomic) BOOL receiving;
 
 -(void) queueAudioData:(void *)audioData withLength:(UInt32)length;
 

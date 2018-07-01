@@ -33,7 +33,7 @@
 
 -(void)refreshDevices {
     [self.serialPortPopup removeAllItems];
-    [self.serialPortPopup addItemsWithTitles:[DSEDV3KSerialVocoder ports]];
+    [self.serialPortPopup addItemsWithTitles:[DSDV3KSerialVocoder ports]];
 }
 
 -(void)dealloc {

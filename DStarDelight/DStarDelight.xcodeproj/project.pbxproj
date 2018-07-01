@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		3CC77E6D0D3F8CC704880E8D /* Pods_DStarDelightUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7897DD4BFEDD90011800AD /* Pods_DStarDelightUITests.framework */; };
 		7525480D20E6FDD6003A11F1 /* DSAudioHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525480B20E6FDD5003A11F1 /* DSAudioHandler.m */; };
+		7525485320E98AAB003A11F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E087F920E31574003A11F1 /* main.m */; };
 		757DEE9B20E6D98E003A11F1 /* DStarEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757DEE9A20E6D98E003A11F1 /* DStarEngine.framework */; };
-		757DEEB920E6DFF3003A11F1 /* DStarEngine.framework in Resources */ = {isa = PBXBuildFile; fileRef = 757DEE9A20E6D98E003A11F1 /* DStarEngine.framework */; };
 		758B49C020E41302003A11F1 /* New.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 758B49BE20E41301003A11F1 /* New.storyboard */; };
 		758B49C220E4196D003A11F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 758B49C120E4196D003A11F1 /* Main.storyboard */; };
 		758B49C720E41AA7003A11F1 /* DSEMapPopupController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 758B49C420E41AA7003A11F1 /* DSEMapPopupController.xib */; };
@@ -20,7 +20,6 @@
 		758B49D120E41C92003A11F1 /* DCSReflectors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 758B49CE20E41C92003A11F1 /* DCSReflectors.plist */; };
 		758B49D420E41F0D003A11F1 /* DSDestinationCallFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 758B49D320E41F0D003A11F1 /* DSDestinationCallFormatter.m */; };
 		75E087F420E31574003A11F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75E087F320E31574003A11F1 /* Assets.xcassets */; };
-		75E087FA20E31574003A11F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E087F920E31574003A11F1 /* main.m */; };
 		75E0880520E31575003A11F1 /* DStarDelightUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0880420E31575003A11F1 /* DStarDelightUITests.m */; };
 		75E0885F20E3177F003A11F1 /* DSAddPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0881120E3177F003A11F1 /* DSAddPopupController.m */; };
 		75E0886020E3177F003A11F1 /* DSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0881320E3177F003A11F1 /* DSAppDelegate.m */; };
@@ -35,7 +34,6 @@
 		75E0887320E3177F003A11F1 /* MASShortcut.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0884120E3177F003A11F1 /* MASShortcut.m */; };
 		75E0887420E3177F003A11F1 /* MASShortcutValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0884320E3177F003A11F1 /* MASShortcutValidator.m */; };
 		75E0887520E3177F003A11F1 /* MASShortcutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0884520E3177F003A11F1 /* MASShortcutView.m */; };
-		75E0887A20E3177F003A11F1 /* DSDV3KNetworkVocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0885120E3177F003A11F1 /* DSDV3KNetworkVocoder.m */; };
 		75E0887B20E3177F003A11F1 /* DSDV3KSerialVocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0885420E3177F003A11F1 /* DSDV3KSerialVocoder.m */; };
 		75E0887D20E3177F003A11F1 /* DSNetworkVocoderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75E0885820E3177F003A11F1 /* DSNetworkVocoderView.xib */; };
 		75E0887E20E3177F003A11F1 /* DSNetworkVocoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0885A20E3177F003A11F1 /* DSNetworkVocoderViewController.m */; };
@@ -129,20 +127,16 @@
 		75E0884320E3177F003A11F1 /* MASShortcutValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASShortcutValidator.m; sourceTree = "<group>"; };
 		75E0884420E3177F003A11F1 /* MASShortcutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASShortcutView.h; sourceTree = "<group>"; };
 		75E0884520E3177F003A11F1 /* MASShortcutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASShortcutView.m; sourceTree = "<group>"; };
-		75E0885020E3177F003A11F1 /* DSDV3KNetworkVocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDV3KNetworkVocoder.h; sourceTree = "<group>"; };
-		75E0885120E3177F003A11F1 /* DSDV3KNetworkVocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDV3KNetworkVocoder.m; sourceTree = "<group>"; };
 		75E0885220E3177F003A11F1 /* DSDV3KPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDV3KPacket.h; sourceTree = "<group>"; };
 		75E0885320E3177F003A11F1 /* DSDV3KSerialVocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDV3KSerialVocoder.h; sourceTree = "<group>"; };
 		75E0885420E3177F003A11F1 /* DSDV3KSerialVocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDV3KSerialVocoder.m; sourceTree = "<group>"; };
-		75E0885720E3177F003A11F1 /* DSDV3KVocoderSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDV3KVocoderSubclass.h; sourceTree = "<group>"; };
 		75E0885820E3177F003A11F1 /* DSNetworkVocoderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSNetworkVocoderView.xib; sourceTree = "<group>"; };
 		75E0885920E3177F003A11F1 /* DSNetworkVocoderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSNetworkVocoderViewController.h; sourceTree = "<group>"; };
 		75E0885A20E3177F003A11F1 /* DSNetworkVocoderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSNetworkVocoderViewController.m; sourceTree = "<group>"; };
 		75E0885B20E3177F003A11F1 /* DSSerialVocoderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSSerialVocoderView.xib; sourceTree = "<group>"; };
 		75E0885C20E3177F003A11F1 /* DSSerialVocoderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSSerialVocoderViewController.h; sourceTree = "<group>"; };
 		75E0885D20E3177F003A11F1 /* DSSerialVocoderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSSerialVocoderViewController.m; sourceTree = "<group>"; };
-		75E0885E20E3177F003A11F1 /* DSVocoderDriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSVocoderDriver.h; sourceTree = "<group>"; };
-		75E0888420E31A8C003A11F1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../../Resources/Images.xcassets; sourceTree = "<group>"; };
+		75E0888420E31A8C003A11F1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B32ABE4921FB7F512B104837 /* Pods-DStarDelight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DStarDelight.release.xcconfig"; path = "../Pods/Target Support Files/Pods-DStarDelight/Pods-DStarDelight.release.xcconfig"; sourceTree = "<group>"; };
 		BCAC0CB724613FB9B2EAD4C6 /* Pods_DStarDelight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DStarDelight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E743F5056F66E6004CE683A7 /* Pods-DStarDelight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DStarDelight.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-DStarDelight/Pods-DStarDelight.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,8 +147,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				757DEE9B20E6D98E003A11F1 /* DStarEngine.framework in Frameworks */,
 				8CDB699A4364EA9801D300D1 /* Pods_DStarDelight.framework in Frameworks */,
+				757DEE9B20E6D98E003A11F1 /* DStarEngine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +181,20 @@
 				7525482320E7C19A003A11F1 /* DStarEngineIOS.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		7525485220E988D0003A11F1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				75E087F320E31574003A11F1 /* Assets.xcassets */,
+				75E0888420E31A8C003A11F1 /* Images.xcassets */,
+				758B49CE20E41C92003A11F1 /* DCSReflectors.plist */,
+				758B49CC20E41C92003A11F1 /* DefaultPreferences.plist */,
+				758B49CD20E41C92003A11F1 /* DExtraReflectors.plist */,
+				75E087F820E31574003A11F1 /* Info.plist */,
+				75E087FB20E31574003A11F1 /* DStarDelight.entitlements */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		757DEE9920E6D98E003A11F1 /* Frameworks */ = {
@@ -223,20 +231,16 @@
 		75E087EC20E31572003A11F1 /* DStarDelight */ = {
 			isa = PBXGroup;
 			children = (
-				758B49CE20E41C92003A11F1 /* DCSReflectors.plist */,
-				758B49CC20E41C92003A11F1 /* DefaultPreferences.plist */,
-				758B49CD20E41C92003A11F1 /* DExtraReflectors.plist */,
+				7525485220E988D0003A11F1 /* Resources */,
 				758B49CA20E41BD8003A11F1 /* DSEAddPopupController.xib */,
 				758B49C420E41AA7003A11F1 /* DSEMapPopupController.xib */,
+				75E0885820E3177F003A11F1 /* DSNetworkVocoderView.xib */,
+				75E0885B20E3177F003A11F1 /* DSSerialVocoderView.xib */,
 				758B49C120E4196D003A11F1 /* Main.storyboard */,
 				758B49BE20E41301003A11F1 /* New.storyboard */,
 				7525484120E7F084003A11F1 /* DStarDelight.h */,
 				75E0880F20E3177F003A11F1 /* DS */,
-				75E087F320E31574003A11F1 /* Assets.xcassets */,
-				75E0888420E31A8C003A11F1 /* Images.xcassets */,
-				75E087F820E31574003A11F1 /* Info.plist */,
 				75E087F920E31574003A11F1 /* main.m */,
-				75E087FB20E31574003A11F1 /* DStarDelight.entitlements */,
 			);
 			path = DStarDelight;
 			sourceTree = "<group>";
@@ -301,19 +305,13 @@
 		75E0884F20E3177F003A11F1 /* Vocoder Drivers */ = {
 			isa = PBXGroup;
 			children = (
-				75E0885020E3177F003A11F1 /* DSDV3KNetworkVocoder.h */,
-				75E0885120E3177F003A11F1 /* DSDV3KNetworkVocoder.m */,
 				75E0885220E3177F003A11F1 /* DSDV3KPacket.h */,
 				75E0885320E3177F003A11F1 /* DSDV3KSerialVocoder.h */,
 				75E0885420E3177F003A11F1 /* DSDV3KSerialVocoder.m */,
-				75E0885720E3177F003A11F1 /* DSDV3KVocoderSubclass.h */,
-				75E0885820E3177F003A11F1 /* DSNetworkVocoderView.xib */,
 				75E0885920E3177F003A11F1 /* DSNetworkVocoderViewController.h */,
 				75E0885A20E3177F003A11F1 /* DSNetworkVocoderViewController.m */,
-				75E0885B20E3177F003A11F1 /* DSSerialVocoderView.xib */,
 				75E0885C20E3177F003A11F1 /* DSSerialVocoderViewController.h */,
 				75E0885D20E3177F003A11F1 /* DSSerialVocoderViewController.m */,
-				75E0885E20E3177F003A11F1 /* DSVocoderDriver.h */,
 			);
 			path = "Vocoder Drivers";
 			sourceTree = "<group>";
@@ -425,7 +423,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				757DEEB920E6DFF3003A11F1 /* DStarEngine.framework in Resources */,
 				75E087F420E31574003A11F1 /* Assets.xcassets in Resources */,
 				758B49C720E41AA7003A11F1 /* DSEMapPopupController.xib in Resources */,
 				758B49CF20E41C92003A11F1 /* DefaultPreferences.plist in Resources */,
@@ -476,10 +473,12 @@
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-DStarDelight/Pods-DStarDelight-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Objection-macOS/Objection.framework",
+				"${BUILT_PRODUCTS_DIR}/Typhoon/Typhoon.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Objection.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Typhoon.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -510,20 +509,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7525485320E98AAB003A11F1 /* main.m in Sources */,
 				75E0886420E3177F003A11F1 /* DSCallFormatter.m in Sources */,
 				75E0887420E3177F003A11F1 /* MASShortcutValidator.m in Sources */,
 				75E0887B20E3177F003A11F1 /* DSDV3KSerialVocoder.m in Sources */,
 				75E0886020E3177F003A11F1 /* DSAppDelegate.m in Sources */,
 				75E0887320E3177F003A11F1 /* MASShortcut.m in Sources */,
 				75E0888020E3177F003A11F1 /* DSSerialVocoderViewController.m in Sources */,
-				75E087FA20E31574003A11F1 /* main.m in Sources */,
 				75E0886C20E3177F003A11F1 /* DSMainWindowViewController.m in Sources */,
 				75E0887220E3177F003A11F1 /* MASDictionaryTransformer.m in Sources */,
 				75E0886920E3177F003A11F1 /* DSGeneralPreferencesController.m in Sources */,
 				75E0886320E3177F003A11F1 /* DSAudioViewController.m in Sources */,
 				75E0886E20E3177F003A11F1 /* DSMessageFormatter.m in Sources */,
 				75E0887020E3177F003A11F1 /* DSVocoderViewController.m in Sources */,
-				75E0887A20E3177F003A11F1 /* DSDV3KNetworkVocoder.m in Sources */,
 				75E0885F20E3177F003A11F1 /* DSAddPopupController.m in Sources */,
 				75E0886D20E3177F003A11F1 /* DSMapPopupController.m in Sources */,
 				7525480D20E6FDD6003A11F1 /* DSAudioHandler.m in Sources */,
@@ -693,7 +691,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../DerivedData/Build/Products/Debug/DStarEngine.framework\"",
 				);
-				INFOPLIST_FILE = DStarDelight/Info.plist;
+				INFOPLIST_FILE = DStarDelight/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -718,7 +716,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../DerivedData/Build/Products/Debug/DStarEngine.framework\"",
 				);
-				INFOPLIST_FILE = DStarDelight/Info.plist;
+				INFOPLIST_FILE = DStarDelight/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",

@@ -5,7 +5,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="DSENetworkVocoderViewController">
+        <customObject id="-2" userLabel="File's Owner" customClass="DSNetworkVocoderViewController">
             <connections>
                 <outlet property="productId" destination="NYt-fb-KVF" id="UyK-cz-anW"/>
                 <outlet property="version" destination="lYi-zs-KF6" id="D5E-LG-Zzh"/>
