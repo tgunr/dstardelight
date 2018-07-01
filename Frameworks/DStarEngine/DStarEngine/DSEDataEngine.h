@@ -9,7 +9,7 @@
 #import "DSEVocoderDriver.h"
 
 @class AppDelegate;
-@class STUBAudioHandler, DSEVocoderProtocol, DSESlowDataCoder;
+@class DSEAudioHandler, DSEVocoderProtocol, DSESlowDataCoder;
 
 @interface DSEDataEngine : NSObject <DSELinkDriverDelegate, DSESlowDataDelegate>
 

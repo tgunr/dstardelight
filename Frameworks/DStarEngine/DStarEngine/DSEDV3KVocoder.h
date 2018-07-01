@@ -3,7 +3,7 @@
 
 #import "DSEVocoderDriver.h"
 
-@class STUBAudioHandler;
+@class DSEAudioHandler;
 
 @interface DSEDV3KVocoder : NSObject <DSEVocoderDriver>
 

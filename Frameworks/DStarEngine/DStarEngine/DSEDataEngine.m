@@ -7,7 +7,7 @@
 #import "DSEDataEngine.h"
 #import "DSELinkDriverProtocol.h"
 #import "DStarUtils.h"
-#import "STUBAudioHandler.h"
+#import "DSEAudioHandler.h"
 
 static NSMutableArray *vocoderDrivers = nil;
 static NSMutableArray <Class> *linkDriverClasses = nil;
@@ -15,7 +15,7 @@ static NSMutableArray <Class> *linkDriverClasses = nil;
 @interface DSEDataEngine ()
 
 @property (nonatomic, readwrite) NSObject <DSELinkDriverProtocol> *network;
-@property (nonatomic, readwrite) STUBAudioHandler *audio;
+@property (nonatomic, readwrite) DSEAudioHandler *audio;
 @property (nonatomic, copy) NSString *sleepDestination;
 @property (nonatomic, readonly) NSArray <id <DSELinkDriverProtocol>> *linkDrivers;
 @property (nonatomic, readonly) dispatch_queue_t linkQueue;

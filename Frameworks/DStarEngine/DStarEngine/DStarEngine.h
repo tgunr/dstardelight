@@ -39,6 +39,6 @@ FOUNDATION_EXPORT const unsigned char DStarEngineVersionString[];
 #import "DSEVocoderDriver.h"
 #import "DStarEngine.h"
 #import "DStarUtils.h"
-#import "STUBAudioHandler.h"
+#import "DSEAudioHandler.h"
 #import "TPCircularBuffer.h"
 #import "TPCircularBuffer+AudioBufferList.h"

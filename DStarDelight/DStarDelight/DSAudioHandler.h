@@ -1,6 +1,6 @@
 
 #import <AudioToolbox/AudioToolbox.h>
-#import <DStarEngine/STUBAudioHandler.h>
+#import <DStarEngine/DSEAudioHandler.h>
 
 @protocol DSEVocoderDriver;
 

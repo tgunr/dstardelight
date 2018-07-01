@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		7525484E20E82280003A11F1 /* DStarUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525484D20E82280003A11F1 /* DStarUtils.m */; };
 		7525484F20E82280003A11F1 /* DStarUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525484D20E82280003A11F1 /* DStarUtils.m */; };
-		757DEE7420E6D4DF003A11F1 /* STUBAudioHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5720E6D4DE003A11F1 /* STUBAudioHandler.m */; };
+		757DEE7420E6D4DF003A11F1 /* DSEAudioHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5720E6D4DE003A11F1 /* DSEAudioHandler.m */; };
 		757DEE7520E6D4DF003A11F1 /* DSEDExtraLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5820E6D4DE003A11F1 /* DSEDExtraLink.m */; };
 		757DEE7620E6D4DF003A11F1 /* DSEDPlusAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5120E6D4DD003A11F1 /* DSEDPlusAuthenticator.m */; };
 		757DEE7720E6D4DF003A11F1 /* DSESlowDataCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5620E6D4DE003A11F1 /* DSESlowDataCoder.m */; };
@@ -33,7 +33,7 @@
 		757DEE9620E6D7D9003A11F1 /* DSEDCSLink.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE9520E6D7D9003A11F1 /* DSEDCSLink.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757DEEA220E6DEA5003A11F1 /* DSEDataEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE5D20E6D4DF003A11F1 /* DSEDataEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757DEEA320E6DEA5003A11F1 /* DSEDataEngineDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6B20E6D4DF003A11F1 /* DSEDataEngineDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		757DEEA420E6DEA5003A11F1 /* STUBAudioHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE5E20E6D4DF003A11F1 /* STUBAudioHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEEA420E6DEA5003A11F1 /* DSEAudioHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE5E20E6D4DF003A11F1 /* DSEAudioHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757DEEA520E6DEA5003A11F1 /* DSEDV3KVocoderSubclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE5F20E6D4DF003A11F1 /* DSEDV3KVocoderSubclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757DEEA620E6DEA5003A11F1 /* DSEDV3KNetworkVocoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6020E6D4DF003A11F1 /* DSEDV3KNetworkVocoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757DEEA720E6DEA5003A11F1 /* DSEDV3KVocoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6120E6D4DF003A11F1 /* DSEDV3KVocoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -60,7 +60,7 @@
 		757DEECB20E6E2D2003A11F1 /* DStarUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE8F20E6D62C003A11F1 /* DStarUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757DEECD20E6E2D2003A11F1 /* DSEDataEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE5D20E6D4DF003A11F1 /* DSEDataEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757DEECE20E6E2D2003A11F1 /* DSEDataEngineDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6B20E6D4DF003A11F1 /* DSEDataEngineDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		757DEECF20E6E2D2003A11F1 /* STUBAudioHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE5E20E6D4DF003A11F1 /* STUBAudioHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		757DEECF20E6E2D2003A11F1 /* DSEAudioHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE5E20E6D4DF003A11F1 /* DSEAudioHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757DEED020E6E2D2003A11F1 /* DSEDV3KVocoderSubclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE5F20E6D4DF003A11F1 /* DSEDV3KVocoderSubclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757DEED120E6E2D2003A11F1 /* DSEDV3KNetworkVocoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6020E6D4DF003A11F1 /* DSEDV3KNetworkVocoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757DEED220E6E2D2003A11F1 /* DSEDV3KVocoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6120E6D4DF003A11F1 /* DSEDV3KVocoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -81,7 +81,7 @@
 		757DEEE120E6E2D2003A11F1 /* DNSHost.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE4D20E6D4DC003A11F1 /* DNSHost.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757DEEE220E6E2D2003A11F1 /* PortMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEE6D20E6D4DF003A11F1 /* PortMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757DEEE320E6E2EE003A11F1 /* DSEDataEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE4F20E6D4DD003A11F1 /* DSEDataEngine.m */; };
-		757DEEE420E6E2EE003A11F1 /* STUBAudioHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5720E6D4DE003A11F1 /* STUBAudioHandler.m */; };
+		757DEEE420E6E2EE003A11F1 /* DSEAudioHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5720E6D4DE003A11F1 /* DSEAudioHandler.m */; };
 		757DEEE520E6E2EE003A11F1 /* DSEDV3KVocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5220E6D4DD003A11F1 /* DSEDV3KVocoder.m */; };
 		757DEEE620E6E2EE003A11F1 /* DSESlowDataCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5620E6D4DE003A11F1 /* DSESlowDataCoder.m */; };
 		757DEEE720E6E2EE003A11F1 /* DSEDPlusAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5120E6D4DD003A11F1 /* DSEDPlusAuthenticator.m */; };
@@ -116,12 +116,12 @@
 		757DEE5220E6D4DD003A11F1 /* DSEDV3KVocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEDV3KVocoder.m; sourceTree = "<group>"; };
 		757DEE5520E6D4DE003A11F1 /* DSELinkDriver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSELinkDriver.m; sourceTree = "<group>"; };
 		757DEE5620E6D4DE003A11F1 /* DSESlowDataCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSESlowDataCoder.m; sourceTree = "<group>"; };
-		757DEE5720E6D4DE003A11F1 /* STUBAudioHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STUBAudioHandler.m; sourceTree = "<group>"; };
+		757DEE5720E6D4DE003A11F1 /* DSEAudioHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEAudioHandler.m; sourceTree = "<group>"; };
 		757DEE5820E6D4DE003A11F1 /* DSEDExtraLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEDExtraLink.m; sourceTree = "<group>"; };
 		757DEE5920E6D4DE003A11F1 /* DStarDelightIOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DStarDelightIOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		757DEE5A20E6D4DE003A11F1 /* DNSHost.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNSHost.m; sourceTree = "<group>"; };
 		757DEE5D20E6D4DF003A11F1 /* DSEDataEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEDataEngine.h; sourceTree = "<group>"; };
-		757DEE5E20E6D4DF003A11F1 /* STUBAudioHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STUBAudioHandler.h; sourceTree = "<group>"; };
+		757DEE5E20E6D4DF003A11F1 /* DSEAudioHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEAudioHandler.h; sourceTree = "<group>"; };
 		757DEE5F20E6D4DF003A11F1 /* DSEDV3KVocoderSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEDV3KVocoderSubclass.h; sourceTree = "<group>"; };
 		757DEE6020E6D4DF003A11F1 /* DSEDV3KNetworkVocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEDV3KNetworkVocoder.h; sourceTree = "<group>"; };
 		757DEE6120E6D4DF003A11F1 /* DSEDV3KVocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEDV3KVocoder.h; sourceTree = "<group>"; };
@@ -218,8 +218,8 @@
 				757DEE5D20E6D4DF003A11F1 /* DSEDataEngine.h */,
 				757DEE4F20E6D4DD003A11F1 /* DSEDataEngine.m */,
 				757DEE6B20E6D4DF003A11F1 /* DSEDataEngineDelegate.h */,
-				757DEE5E20E6D4DF003A11F1 /* STUBAudioHandler.h */,
-				757DEE5720E6D4DE003A11F1 /* STUBAudioHandler.m */,
+				757DEE5E20E6D4DF003A11F1 /* DSEAudioHandler.h */,
+				757DEE5720E6D4DE003A11F1 /* DSEAudioHandler.m */,
 				757DEE5F20E6D4DF003A11F1 /* DSEDV3KVocoderSubclass.h */,
 				757DEE6020E6D4DF003A11F1 /* DSEDV3KNetworkVocoder.h */,
 				757DEE6120E6D4DF003A11F1 /* DSEDV3KVocoder.h */,
@@ -302,7 +302,7 @@
 				757DEE9020E6D62C003A11F1 /* DStarUtils.h in Headers */,
 				757DEEA220E6DEA5003A11F1 /* DSEDataEngine.h in Headers */,
 				757DEEA320E6DEA5003A11F1 /* DSEDataEngineDelegate.h in Headers */,
-				757DEEA420E6DEA5003A11F1 /* STUBAudioHandler.h in Headers */,
+				757DEEA420E6DEA5003A11F1 /* DSEAudioHandler.h in Headers */,
 				757DEEA520E6DEA5003A11F1 /* DSEDV3KVocoderSubclass.h in Headers */,
 				757DEEA620E6DEA5003A11F1 /* DSEDV3KNetworkVocoder.h in Headers */,
 				757DEEA720E6DEA5003A11F1 /* DSEDV3KVocoder.h in Headers */,
@@ -336,7 +336,7 @@
 				757DEECB20E6E2D2003A11F1 /* DStarUtils.h in Headers */,
 				757DEECD20E6E2D2003A11F1 /* DSEDataEngine.h in Headers */,
 				757DEECE20E6E2D2003A11F1 /* DSEDataEngineDelegate.h in Headers */,
-				757DEECF20E6E2D2003A11F1 /* STUBAudioHandler.h in Headers */,
+				757DEECF20E6E2D2003A11F1 /* DSEAudioHandler.h in Headers */,
 				757DEED020E6E2D2003A11F1 /* DSEDV3KVocoderSubclass.h in Headers */,
 				757DEED120E6E2D2003A11F1 /* DSEDV3KNetworkVocoder.h in Headers */,
 				757DEED220E6E2D2003A11F1 /* DSEDV3KVocoder.h in Headers */,
@@ -484,7 +484,7 @@
 				757DEE7920E6D4DF003A11F1 /* DSEIRCDDBGateways.m in Sources */,
 				757DEE7720E6D4DF003A11F1 /* DSESlowDataCoder.m in Sources */,
 				757DEE7B20E6D4DF003A11F1 /* DSELinkDriver.m in Sources */,
-				757DEE7420E6D4DF003A11F1 /* STUBAudioHandler.m in Sources */,
+				757DEE7420E6D4DF003A11F1 /* DSEAudioHandler.m in Sources */,
 				757DEE8C20E6D5D0003A11F1 /* TPCircularBuffer.c in Sources */,
 				7525484E20E82280003A11F1 /* DStarUtils.m in Sources */,
 				757DEE8020E6D4DF003A11F1 /* DNSHost.m in Sources */,
@@ -504,7 +504,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				757DEEE320E6E2EE003A11F1 /* DSEDataEngine.m in Sources */,
-				757DEEE420E6E2EE003A11F1 /* STUBAudioHandler.m in Sources */,
+				757DEEE420E6E2EE003A11F1 /* DSEAudioHandler.m in Sources */,
 				757DEEE520E6E2EE003A11F1 /* DSEDV3KVocoder.m in Sources */,
 				757DEEE620E6E2EE003A11F1 /* DSESlowDataCoder.m in Sources */,
 				757DEEE720E6E2EE003A11F1 /* DSEDPlusAuthenticator.m in Sources */,

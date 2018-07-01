@@ -1,8 +1,8 @@
 //
-//  STUBAudioHandler.m
+//  DSEAudioHandler.m
 //
 
-#import "STUBAudioHandler.h"
+#import "DSEAudioHandler.h"
 
 #import <Foundation/Foundation.h>
 #import <AudioUnit/AudioUnit.h>
@@ -121,7 +121,7 @@ static inline BOOL CheckStatus(OSStatus error, const char *operation) {
     return NO;
 }
 
-@interface STUBAudioHandler () {
+@interface DSEAudioHandler () {
     AudioUnit outputUnit;
     dispatch_source_t inputAudioSource;
     AudioConverterRef inputConverter;
@@ -141,7 +141,7 @@ static inline BOOL CheckStatus(OSStatus error, const char *operation) {
 @property (nonatomic) double hardwareSampleRate;
 @end
 
-@implementation STUBAudioHandler
+@implementation DSEAudioHandler
 
 -(void)setOutputVolume:(float)outputVolume {
     if(!outputUnit)

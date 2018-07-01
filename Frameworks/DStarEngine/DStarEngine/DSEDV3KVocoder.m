@@ -4,7 +4,7 @@
 #import "DSEDV3KVocoderSubclass.h"
 #import "DSEDataEngine.h"
 #import "DSEDV3KPacket.h"
-#import "STUBAudioHandler.h"
+#import "DSEAudioHandler.h"
 #import "DSELinkDriverProtocol.h"
 
 // XXX

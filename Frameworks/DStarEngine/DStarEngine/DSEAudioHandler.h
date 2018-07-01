@@ -1,5 +1,5 @@
 //
-//  STUBAudioHandler.h
+//  DSEAudioHandler.h
 //
 
 #import <AudioToolbox/AudioToolbox.h>
@@ -10,7 +10,7 @@
 extern NSString * const AudioDeviceChanged;
 static inline BOOL CheckStatus(OSStatus error, const char *operation);
 
-@interface STUBAudioHandler : NSObject
+@interface DSEAudioHandler : NSObject
 
 @property (nonatomic) UInt32 inputDevice;
 @property (nonatomic) UInt32 outputDevice;

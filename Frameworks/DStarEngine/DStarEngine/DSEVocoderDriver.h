@@ -3,7 +3,7 @@
 
 @protocol DSELinkDriverProtocol;
 
-@class STUBAudioHandler;
+@class DSEAudioHandler;
 
 @protocol DSEVocoderDriver <NSObject>
 - (void) decodeData:(void *) data lastPacket:(BOOL)last;
@@ -14,7 +14,7 @@
 
 +(NSString *)driverName;
 
-@property (nonatomic) STUBAudioHandler *audio;
+@property (nonatomic) DSEAudioHandler *audio;
 @property (nonatomic) NSObject <DSELinkDriverProtocol> *network;
 //@property (nonatomic, readonly) NSViewController *configurationViewController;
 
