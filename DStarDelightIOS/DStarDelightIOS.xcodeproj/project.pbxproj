@@ -73,22 +73,9 @@
 		54582B8DAD417F8A3EE75E2A /* Pods-DStarDelightIOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DStarDelightIOSUITests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-DStarDelightIOSUITests/Pods-DStarDelightIOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7525481220E7C18F003A11F1 /* DStarEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DStarEngine.xcodeproj; path = ../Frameworks/DStarEngine/DStarEngine.xcodeproj; sourceTree = "<group>"; };
 		753AB21020E45C44003A11F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Resources/Info.plist; sourceTree = "<group>"; };
-		753AB22020E45E88003A11F1 /* DSIDataEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSIDataEngine.m; path = ../../Frameworks/DStarEngine/DStarEngine/DSIDataEngine.m; sourceTree = "<group>"; };
-		753AB22520E45EFC003A11F1 /* DSIAudioHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSIAudioHandler.m; path = ../../Frameworks/DStarEngine/DStarEngine/DSIAudioHandler.m; sourceTree = "<group>"; };
 		753AB22820E4602B003A11F1 /* TPCircularBuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TPCircularBuffer.c; sourceTree = "<group>"; };
 		753AB22920E4602B003A11F1 /* TPCircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCircularBuffer.h; sourceTree = "<group>"; };
-		753AB22D20E46265003A11F1 /* DSIDV3KNetworkVocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSIDV3KNetworkVocoder.m; path = ../../Frameworks/DStarEngine/DStarEngine/DSIDV3KNetworkVocoder.m; sourceTree = "<group>"; };
-		753AB23320E4629A003A11F1 /* DSIDV3KVocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSIDV3KVocoder.m; path = ../../Frameworks/DStarEngine/DStarEngine/DSIDV3KVocoder.m; sourceTree = "<group>"; };
-		753AB24520E46722003A11F1 /* DSISlowDataCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSISlowDataCoder.m; path = ../../Frameworks/DStarEngine/DStarEngine/DSISlowDataCoder.m; sourceTree = "<group>"; };
-		753AB24A20E46A36003A11F1 /* DSIAprsLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSIAprsLocation.m; path = ../../Frameworks/DStarEngine/DStarEngine/DSIAprsLocation.m; sourceTree = "<group>"; };
-		753AB24C20E46CA5003A11F1 /* DStarDelightIOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "DStarDelightIOS-Bridging-Header.h"; path = "../../Frameworks/DStarEngine/DStarEngine/DStarDelightIOS-Bridging-Header.h"; sourceTree = "<group>"; };
-		753AB25120E46DC5003A11F1 /* DSIDCSLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSIDCSLink.m; path = ../../Frameworks/DStarEngine/DStarEngine/DSIDCSLink.m; sourceTree = "<group>"; };
-		753AB25920E46FD3003A11F1 /* DSILinkDriver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSILinkDriver.m; path = ../../Frameworks/DStarEngine/DStarEngine/DSILinkDriver.m; sourceTree = "<group>"; };
-		753AB25D20E47020003A11F1 /* PortMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PortMapper.m; path = ../../Frameworks/DStarEngine/DStarEngine/PortMapper.m; sourceTree = "<group>"; };
-		753AB26120E4733C003A11F1 /* DSIDPlusLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSIDPlusLink.m; path = ../../Frameworks/DStarEngine/DStarEngine/DSIDPlusLink.m; sourceTree = "<group>"; };
-		753AB26320E4739F003A11F1 /* DSIIRCDDBGateways.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSIIRCDDBGateways.m; path = ../../Frameworks/DStarEngine/DStarEngine/DSIIRCDDBGateways.m; sourceTree = "<group>"; };
-		753AB26520E473AD003A11F1 /* DSIDPlusAuthenticator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSIDPlusAuthenticator.m; path = ../../Frameworks/DStarEngine/DStarEngine/DSIDPlusAuthenticator.m; sourceTree = "<group>"; };
-		757DEE1C20E477CF003A11F1 /* DSIDExtraLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSIDExtraLink.m; path = ../../Frameworks/DStarEngine/DStarEngine/DSIDExtraLink.m; sourceTree = "<group>"; };
+		753AB24C20E46CA5003A11F1 /* DStarDelightIOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DStarDelightIOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		757DEE2120E54152003A11F1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../../Resources/Images.xcassets; sourceTree = "<group>"; };
 		757DEE2220E54152003A11F1 /* DefaultPreferences.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = DefaultPreferences.plist; path = ../../Resources/DefaultPreferences.plist; sourceTree = "<group>"; };
 		757DEE2320E54152003A11F1 /* DExtraReflectors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = DExtraReflectors.plist; path = ../../Resources/DExtraReflectors.plist; sourceTree = "<group>"; };
@@ -97,8 +84,6 @@
 		757DEE2D20E54713003A11F1 /* TPCircularBuffer+AudioBufferList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TPCircularBuffer+AudioBufferList.h"; sourceTree = "<group>"; };
 		757DEE2E20E54713003A11F1 /* TPCircularBuffer+AudioBufferList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "TPCircularBuffer+AudioBufferList.c"; sourceTree = "<group>"; };
 		757DEE3120E54DCA003A11F1 /* DNS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNS.swift; sourceTree = "<group>"; };
-		757DEE3320E56E65003A11F1 /* DNSHost.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DNSHost.m; path = ../../Frameworks/DStarEngine/DStarEngine/DNSHost.m; sourceTree = "<group>"; };
-		757DEE3520E5C12F003A11F1 /* DNSHost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DNSHost.h; path = ../../Frameworks/DStarEngine/DStarEngine/DNSHost.h; sourceTree = "<group>"; };
 		758B49D520E4259E003A11F1 /* DCSLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCSLink.swift; sourceTree = "<group>"; };
 		758B49D720E43913003A11F1 /* DStarIOSPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DStarIOSPlayground.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		75E087DD20E30841003A11F1 /* DV3KVocoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DV3KVocoder.swift; sourceTree = "<group>"; };
@@ -175,22 +160,6 @@
 		753AB20E20E45C44003A11F1 /* DSI */ = {
 			isa = PBXGroup;
 			children = (
-				753AB24C20E46CA5003A11F1 /* DStarDelightIOS-Bridging-Header.h */,
-				753AB24A20E46A36003A11F1 /* DSIAprsLocation.m */,
-				757DEE3320E56E65003A11F1 /* DNSHost.m */,
-				757DEE3520E5C12F003A11F1 /* DNSHost.h */,
-				753AB24520E46722003A11F1 /* DSISlowDataCoder.m */,
-				753AB22D20E46265003A11F1 /* DSIDV3KNetworkVocoder.m */,
-				753AB22020E45E88003A11F1 /* DSIDataEngine.m */,
-				753AB22520E45EFC003A11F1 /* DSIAudioHandler.m */,
-				753AB23320E4629A003A11F1 /* DSIDV3KVocoder.m */,
-				753AB25120E46DC5003A11F1 /* DSIDCSLink.m */,
-				753AB25920E46FD3003A11F1 /* DSILinkDriver.m */,
-				757DEE1C20E477CF003A11F1 /* DSIDExtraLink.m */,
-				753AB25D20E47020003A11F1 /* PortMapper.m */,
-				753AB26120E4733C003A11F1 /* DSIDPlusLink.m */,
-				753AB26320E4739F003A11F1 /* DSIIRCDDBGateways.m */,
-				753AB26520E473AD003A11F1 /* DSIDPlusAuthenticator.m */,
 				753AB21020E45C44003A11F1 /* Info.plist */,
 			);
 			path = DSI;
@@ -238,6 +207,7 @@
 			children = (
 				7525481220E7C18F003A11F1 /* DStarEngine.xcodeproj */,
 				75F7D25F20E30620003A11F1 /* Main.storyboard */,
+				753AB24C20E46CA5003A11F1 /* DStarDelightIOS-Bridging-Header.h */,
 				758B49D720E43913003A11F1 /* DStarIOSPlayground.playground */,
 				75F7D27B20E306A6003A11F1 /* DStar */,
 				75F7D25620E30620003A11F1 /* DStarDelightIOS */,

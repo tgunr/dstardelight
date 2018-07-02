@@ -11,7 +11,6 @@
 #import "TPCircularBuffer+AudioBufferList.h"
 #import "DSEVocoderDriver.h"
 #import "DSELinkDriverProtocol.h"
-#import <Objection/Objection.h>
 
 static const AudioComponentDescription componentDescription = {
     .componentType = kAudioUnitType_Output,
@@ -132,8 +131,8 @@ static inline BOOL CheckStatus(OSStatus error, const char *operation) {
     } status;
 }
 
-@property (nonatomic, readwrite) AudioDeviceID defaultInputDevice;
-@property (nonatomic, readwrite) AudioDeviceID defaultOutputDevice;
+@property (nonatomic, readwrite) UInt32 defaultInputDevice;
+@property (nonatomic, readwrite) UInt32 defaultOutputDevice;
 @property (nonatomic, readonly) TPCircularBuffer *recordBuffer;
 @property (nonatomic, readonly) TPCircularBuffer *playbackBuffer;
 @property (nonatomic, readonly) AudioStreamBasicDescription *inputFormat;
@@ -207,8 +206,6 @@ static inline BOOL CheckStatus(OSStatus error, const char *operation) {
              NSStringFromSelector(_cmd), NSStringFromClass([self class]));
     
     NSLog(@"The method playbackThreadCallback in AudioHandler must be overridden.");
-    NSError * unimp = [NSError errorWithDomain:NSOSStatusErrorDomain code:unimpErr userInfo:NULL];
-    @throw unimp;
 }
 
 -(void)setReceiving:(BOOL)receiving {
@@ -219,29 +216,19 @@ static inline BOOL CheckStatus(OSStatus error, const char *operation) {
 }
 
 -(UInt32) defaultOutputDevice {
-    AudioObjectPropertyAddress propertyAddress = { kAudioHardwarePropertyDefaultOutputDevice, kAudioObjectPropertyScopeGlobal, kAudioObjectPropertyElementMaster };
-    id device;
-
-    UInt32 deviceSize = sizeof(device);
-    if(!CheckStatus(AudioObjectGetPropertyData(kAudioObjectSystemObject, &propertyAddress, 0, NULL, &deviceSize, &device), "AudioUnitGetPropertyData(kAudioHardwarePropertyDefaultOutputDevice)"))
-        return 0;
-
-    return device;
+    NSAssert(NO, @"The method %@ in %@ must be overridden.",
+             NSStringFromSelector(_cmd), NSStringFromClass([self class]));
+    
+    NSLog(@"The method playbackThreadCallback in AudioHandler must be overridden.");
+    return -1;
 }
 
 -(UInt32) defaultInputDevice {
-    AudioObjectPropertyAddress propertyAddress = {
-        kAudioHardwarePropertyDefaultInputDevice,
-        kAudioObjectPropertyScopeGlobal,
-        kAudioObjectPropertyElementMaster };
-    AudioDeviceID device;
-
-    UInt32 deviceSize = sizeof(device);
-    OSStatus stat = AudioObjectGetPropertyData(kAudioObjectSystemObject, &propertyAddress, 0, NULL, &deviceSize, &device);
-    if(!CheckStatus(stat, "AudioUnitGetPropertyData(kAudioHardwarePropertyDefaultInputDevice"))
-        return 0;
-
-    return device;
+    NSAssert(NO, @"The method %@ in %@ must be overridden.",
+             NSStringFromSelector(_cmd), NSStringFromClass([self class]));
+    
+    NSLog(@"The method playbackThreadCallback in AudioHandler must be overridden.");
+    return -1;
 }
 
 -(void) queueAudioData:(void *)audioData withLength:(UInt32)length {
@@ -256,9 +243,7 @@ static inline BOOL CheckStatus(OSStatus error, const char *operation) {
              NSStringFromSelector(_cmd), NSStringFromClass([self class]));
 
     NSLog(@"The method playbackThreadCallback in AudioHandler must be overridden.");
-    NSError * unimp = [NSError errorWithDomain:NSOSStatusErrorDomain code:unimpErr userInfo:NULL];
-    @throw unimp;
-    return unimpErr;
+    return false;
 
 }
 
