@@ -246,7 +246,7 @@ static OSStatus AudioDevicesChanged(AudioObjectID inObjectID, UInt32 inNumberAdd
 }
 
 - (void) setXmit:(BOOL)xmit {
-    if(self.xmit == xmit)
+    if(_xmit == xmit)
         return;
 
     if(xmit) {
@@ -293,7 +293,7 @@ static OSStatus AudioDevicesChanged(AudioObjectID inObjectID, UInt32 inNumberAdd
 
         dispatch_resume(inputAudioSource);
     }
-    self.xmit = xmit;
+    _xmit = xmit;
 }
 
 -(void)setReceiving:(BOOL)receiving {
