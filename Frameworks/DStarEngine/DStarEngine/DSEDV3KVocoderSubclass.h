@@ -1,4 +1,6 @@
-
+//
+// DSEDV3KVocoderSubclass.h
+//
 
 #import "DSEDV3KVocoder.h"
 
@@ -10,7 +12,6 @@
 @property (nonatomic) int descriptor;
 @property (nonatomic, readwrite, copy) NSString *productId;
 @property (nonatomic, readwrite, copy) NSString *version;
-
 
 - (BOOL) openPort;
 - (BOOL) setNonblocking;

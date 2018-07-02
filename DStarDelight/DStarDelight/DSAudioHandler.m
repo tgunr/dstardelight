@@ -297,7 +297,7 @@ static OSStatus AudioDevicesChanged(AudioObjectID inObjectID, UInt32 inNumberAdd
 }
 
 -(void)setReceiving:(BOOL)receiving {
-    self.receiving = receiving;
+    _receiving = receiving;
     
     if(receiving)
         TPCircularBufferClear(self.playbackBuffer);

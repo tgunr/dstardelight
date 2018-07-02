@@ -56,6 +56,7 @@ static const struct dv3k_packet dv3k_audio = {
 
 - (BOOL) sendCtrlPacket:(struct dv3k_packet)packet expectResponse:(UInt8)response;
 - (void) processPacket;
+
 @end
 
 @implementation DSEDV3KVocoder

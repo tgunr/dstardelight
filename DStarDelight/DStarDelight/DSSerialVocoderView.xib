@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14269.14" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14269.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="DSESerialVocoderViewController">
+        <customObject id="-2" userLabel="File's Owner" customClass="DSSerialVocoderViewController">
             <connections>
                 <outlet property="productId" destination="Fnl-wr-HId" id="5o2-gE-Fec"/>
                 <outlet property="serialPortPopup" destination="sz0-YY-29Z" id="Ecw-6p-spx"/>

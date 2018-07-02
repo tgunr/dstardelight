@@ -10,7 +10,8 @@
 
 #import "DSDV3KPacket.h"
 #import <DStarEngine/DSEDataEngine.h>
-#import "DSSerialVocoderViewController.h"
+//#import "DSSerialVocoderViewController.h"
+#import "DSEDV3KVocoderSubclass.h"
 
 #pragma mark - Device removal and insertion
 
@@ -56,8 +57,8 @@ static void VocoderAdded(void *refCon, io_iterator_t iterator) {
             [self start];
         }
         
-//        if(self.configurationViewController)
-//            [(DSESerialVocoderViewController *)self.configurationViewController refreshDevices];
+//        if(self.serialConfigurationViewController)
+//            [(DSESerialVocoderViewController *)self.serialConfigurationViewController refreshDevices];
     });
 }
 
@@ -75,8 +76,8 @@ static void VocoderRemoved(void *refCon, io_iterator_t iterator) {
     };
  
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 5ull * NSEC_PER_MSEC), dispatch_get_main_queue(), ^{
-//        if(self.configurationViewController)
-//            [(DSESerialVocoderViewController *)self.configurationViewController refreshDevices];
+//        if(self.serialConfigurationViewController)
+//            [(DSESerialVocoderViewController *)self.serialConfigurationViewController refreshDevices];
     });
 }
 
@@ -84,7 +85,7 @@ static void VocoderRemoved(void *refCon, io_iterator_t iterator) {
     IONotificationPortRef gNotifyPort;
     io_iterator_t deviceAddedIterator;
     io_iterator_t deviceRemovedIterator;
-    DSESerialVocoderViewController *_configurationViewController;
+    id _serialConfigurationViewController;
 }
 
 @end
@@ -125,14 +126,15 @@ static void VocoderRemoved(void *refCon, io_iterator_t iterator) {
     return @"Thumb DV";
 }
 
--(NSViewController *) configurationViewController {
-    if(!_configurationViewController) {
-        _configurationViewController = [[DSESerialVocoderViewController alloc] init];
-        _configurationViewController.driver = self;
-     }
-    return _configurationViewController;
-}
-
+//-(NSViewController *) configurationViewController {
+//    if(!_serialConfigurationViewController) {
+//        _serialConfigurationViewController = [[DSVars shared] serialConfigurationViewController];
+//        
+//        [self.serialConfigurationViewController setDriver: self];
+//     }
+//    return _serialConfigurationViewController;
+//}
+//
 #pragma mark - Port enumeration
 
 + (NSArray *) ports {
@@ -256,17 +258,17 @@ static void VocoderRemoved(void *refCon, io_iterator_t iterator) {
 - (void) setProductId:(NSString *)productId {
     super.productId = productId;
     
-    dispatch_async(dispatch_get_main_queue(), ^{
-        ((DSESerialVocoderViewController *)self.configurationViewController).productId.stringValue = productId;
-    });
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        ((DSESerialVocoderViewController *)self.configurationViewController).productId.stringValue = productId;
+//    });
 }
 
 - (void) setVersion:(NSString *)version {
     super.version = version;
     
-    dispatch_async(dispatch_get_main_queue(), ^{
-        ((DSESerialVocoderViewController *)self.configurationViewController).version.stringValue = version;
-    });
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        ((DSESerialVocoderViewController *)self.configurationViewController).version.stringValue = version;
+//    });
 }
 
 - (BOOL) openPort {

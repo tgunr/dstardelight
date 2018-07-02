@@ -11,7 +11,10 @@
 
 @interface DSVars: NSObject
 
+@property id appDelegate;
 @property id audioHandler;
+@property id networkConfigurationViewController;
+@property id serialConfigurationViewController;
 
 + (DSVars *) shared;
 

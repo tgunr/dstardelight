@@ -2,7 +2,7 @@
 
 #import "DSAppDelegate.h"
 #import <DStarEngine/DStarEngine.h>
-#import "DSDV3KSerialVocoder.h"
+//#import "DSDV3KSerialVocoder.h"
 #import "DSAudioHandler.h"
 
 @interface DSEAppDelegate () 

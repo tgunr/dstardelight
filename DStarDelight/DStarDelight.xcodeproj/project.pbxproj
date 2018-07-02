@@ -34,7 +34,6 @@
 		75E0887320E3177F003A11F1 /* MASShortcut.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0884120E3177F003A11F1 /* MASShortcut.m */; };
 		75E0887420E3177F003A11F1 /* MASShortcutValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0884320E3177F003A11F1 /* MASShortcutValidator.m */; };
 		75E0887520E3177F003A11F1 /* MASShortcutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0884520E3177F003A11F1 /* MASShortcutView.m */; };
-		75E0887B20E3177F003A11F1 /* DSDV3KSerialVocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0885420E3177F003A11F1 /* DSDV3KSerialVocoder.m */; };
 		75E0887D20E3177F003A11F1 /* DSNetworkVocoderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75E0885820E3177F003A11F1 /* DSNetworkVocoderView.xib */; };
 		75E0887E20E3177F003A11F1 /* DSNetworkVocoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0885A20E3177F003A11F1 /* DSNetworkVocoderViewController.m */; };
 		75E0887F20E3177F003A11F1 /* DSSerialVocoderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75E0885B20E3177F003A11F1 /* DSSerialVocoderView.xib */; };
@@ -127,9 +126,6 @@
 		75E0884320E3177F003A11F1 /* MASShortcutValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASShortcutValidator.m; sourceTree = "<group>"; };
 		75E0884420E3177F003A11F1 /* MASShortcutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASShortcutView.h; sourceTree = "<group>"; };
 		75E0884520E3177F003A11F1 /* MASShortcutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASShortcutView.m; sourceTree = "<group>"; };
-		75E0885220E3177F003A11F1 /* DSDV3KPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDV3KPacket.h; sourceTree = "<group>"; };
-		75E0885320E3177F003A11F1 /* DSDV3KSerialVocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDV3KSerialVocoder.h; sourceTree = "<group>"; };
-		75E0885420E3177F003A11F1 /* DSDV3KSerialVocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDV3KSerialVocoder.m; sourceTree = "<group>"; };
 		75E0885820E3177F003A11F1 /* DSNetworkVocoderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSNetworkVocoderView.xib; sourceTree = "<group>"; };
 		75E0885920E3177F003A11F1 /* DSNetworkVocoderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSNetworkVocoderViewController.h; sourceTree = "<group>"; };
 		75E0885A20E3177F003A11F1 /* DSNetworkVocoderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSNetworkVocoderViewController.m; sourceTree = "<group>"; };
@@ -305,9 +301,6 @@
 		75E0884F20E3177F003A11F1 /* Vocoder Drivers */ = {
 			isa = PBXGroup;
 			children = (
-				75E0885220E3177F003A11F1 /* DSDV3KPacket.h */,
-				75E0885320E3177F003A11F1 /* DSDV3KSerialVocoder.h */,
-				75E0885420E3177F003A11F1 /* DSDV3KSerialVocoder.m */,
 				75E0885920E3177F003A11F1 /* DSNetworkVocoderViewController.h */,
 				75E0885A20E3177F003A11F1 /* DSNetworkVocoderViewController.m */,
 				75E0885C20E3177F003A11F1 /* DSSerialVocoderViewController.h */,
@@ -512,7 +505,6 @@
 				7525485320E98AAB003A11F1 /* main.m in Sources */,
 				75E0886420E3177F003A11F1 /* DSCallFormatter.m in Sources */,
 				75E0887420E3177F003A11F1 /* MASShortcutValidator.m in Sources */,
-				75E0887B20E3177F003A11F1 /* DSDV3KSerialVocoder.m in Sources */,
 				75E0886020E3177F003A11F1 /* DSAppDelegate.m in Sources */,
 				75E0887320E3177F003A11F1 /* MASShortcut.m in Sources */,
 				75E0888020E3177F003A11F1 /* DSSerialVocoderViewController.m in Sources */,

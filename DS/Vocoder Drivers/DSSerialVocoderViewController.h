@@ -3,7 +3,7 @@
 
 @class DSDV3KSerialVocoder;
 
-@interface DSESerialVocoderViewController : NSViewController
+@interface DSSerialVocoderViewController : NSViewController
 @property (weak) IBOutlet NSPopUpButton *serialPortPopup;
 @property (weak) IBOutlet NSPopUpButton *speedPopup;
 @property (weak) IBOutlet NSTextField *productId;
