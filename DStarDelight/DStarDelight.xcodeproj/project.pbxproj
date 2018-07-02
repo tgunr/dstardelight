@@ -458,7 +458,7 @@
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-DStarDelight/Pods-DStarDelight-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Objection-macOS/Objection.framework",
-				"${BUILT_PRODUCTS_DIR}/Typhoon/Typhoon.framework",
+				"${BUILT_PRODUCTS_DIR}/Typhoon-macOS/Typhoon.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
