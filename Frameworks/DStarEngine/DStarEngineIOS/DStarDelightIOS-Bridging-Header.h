@@ -4,4 +4,5 @@
 
 //#import "DSESlowDataCoder.h"
 //#import <DStarEngine/DStarEngine.h>
-//#import "/Sources/HAM/DStarDelight/Frameworks/DStarEngine/DStarEngine/DStarEngine.h"
+#import "/Sources/HAM/DStarDelight/Frameworks/DStarEngine/DStarEngine/DStarEngine.h"
+#import "DSEDataEngineIOS.h"

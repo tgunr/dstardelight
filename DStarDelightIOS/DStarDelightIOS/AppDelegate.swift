@@ -10,7 +10,6 @@ import UIKit
 import DStarEngineIOS
 
 @UIApplicationMain
-@objc
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?

@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7510E78020EABC3B003A11F1 /* DSDV3KPacket.h in Headers */ = {isa = PBXBuildFile; fileRef = 7525485F20E9AE94003A11F1 /* DSDV3KPacket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7510E78120EABC3B003A11F1 /* DSEDV3KVocoderSubclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 7525485E20E9AE94003A11F1 /* DSEDV3KVocoderSubclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7510E78220EABC3B003A11F1 /* DSEDV3KNetworkVocoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 7525485920E9AE93003A11F1 /* DSEDV3KNetworkVocoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7510E78320EABC3B003A11F1 /* DSDV3KSerialVocoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 7525485D20E9AE94003A11F1 /* DSDV3KSerialVocoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7510E78420EABC3B003A11F1 /* DSDV3KNetworkVocoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 7525485B20E9AE94003A11F1 /* DSDV3KNetworkVocoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7510E78520EABC3B003A11F1 /* objective_category_swizzle_object.h in Headers */ = {isa = PBXBuildFile; fileRef = 7525482B20E7E490003A11F1 /* objective_category_swizzle_object.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7525484E20E82280003A11F1 /* DStarUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525484D20E82280003A11F1 /* DStarUtils.m */; };
 		7525484F20E82280003A11F1 /* DStarUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525484D20E82280003A11F1 /* DStarUtils.m */; };
-		7525486020E9AE94003A11F1 /* DSEDV3KNetworkVocoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 7525485920E9AE93003A11F1 /* DSEDV3KNetworkVocoder.h */; };
+		7525486020E9AE94003A11F1 /* DSEDV3KNetworkVocoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 7525485920E9AE93003A11F1 /* DSEDV3KNetworkVocoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7525486120E9AE94003A11F1 /* DSDV3KNetworkVocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525485A20E9AE93003A11F1 /* DSDV3KNetworkVocoder.m */; };
-		7525486220E9AE94003A11F1 /* DSDV3KNetworkVocoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 7525485B20E9AE94003A11F1 /* DSDV3KNetworkVocoder.h */; };
+		7525486220E9AE94003A11F1 /* DSDV3KNetworkVocoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 7525485B20E9AE94003A11F1 /* DSDV3KNetworkVocoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7525486320E9AE94003A11F1 /* DSDV3KSerialVocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525485C20E9AE94003A11F1 /* DSDV3KSerialVocoder.m */; };
-		7525486420E9AE94003A11F1 /* DSDV3KSerialVocoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 7525485D20E9AE94003A11F1 /* DSDV3KSerialVocoder.h */; };
-		7525486520E9AE94003A11F1 /* DSEDV3KVocoderSubclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 7525485E20E9AE94003A11F1 /* DSEDV3KVocoderSubclass.h */; };
-		7525486620E9AE94003A11F1 /* DSDV3KPacket.h in Headers */ = {isa = PBXBuildFile; fileRef = 7525485F20E9AE94003A11F1 /* DSDV3KPacket.h */; };
+		7525486420E9AE94003A11F1 /* DSDV3KSerialVocoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 7525485D20E9AE94003A11F1 /* DSDV3KSerialVocoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7525486520E9AE94003A11F1 /* DSEDV3KVocoderSubclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 7525485E20E9AE94003A11F1 /* DSEDV3KVocoderSubclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7525486620E9AE94003A11F1 /* DSDV3KPacket.h in Headers */ = {isa = PBXBuildFile; fileRef = 7525485F20E9AE94003A11F1 /* DSDV3KPacket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		757DEE7420E6D4DF003A11F1 /* DSEAudioHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5720E6D4DE003A11F1 /* DSEAudioHandler.m */; };
 		757DEE7520E6D4DF003A11F1 /* DSEDExtraLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5820E6D4DE003A11F1 /* DSEDExtraLink.m */; };
 		757DEE7620E6D4DF003A11F1 /* DSEDPlusAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE5120E6D4DD003A11F1 /* DSEDPlusAuthenticator.m */; };
@@ -98,7 +104,7 @@
 		757DEEEF20E6E2EE003A11F1 /* PortMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE4E20E6D4DD003A11F1 /* PortMapper.m */; };
 		757DEEF020E6E322003A11F1 /* TPCircularBuffer+AudioBufferList.c in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE8420E6D5CF003A11F1 /* TPCircularBuffer+AudioBufferList.c */; };
 		757DEEF120E6E322003A11F1 /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 757DEE8620E6D5CF003A11F1 /* TPCircularBuffer.c */; };
-		757DEEF720E6EC7B003A11F1 /* DStarDelight-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEEF620E6EC7A003A11F1 /* DStarDelight-Bridging-Header.h */; };
+		757DEEF720E6EC7B003A11F1 /* DStarDelight-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 757DEEF620E6EC7A003A11F1 /* DStarDelight-Bridging-Header.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DAD72E09031F3920B85091B2 /* Pods_DStarEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7212D167D6C756614567357E /* Pods_DStarEngine.framework */; };
 /* End PBXBuildFile section */
 
@@ -218,8 +224,9 @@
 			isa = PBXGroup;
 			children = (
 				757DEE9D20E6DC15003A11F1 /* DStarEngine.h */,
-				757DEE5920E6D4DE003A11F1 /* DStarDelightIOS-Bridging-Header.h */,
 				757DEEF620E6EC7A003A11F1 /* DStarDelight-Bridging-Header.h */,
+				757DEEC120E6E28C003A11F1 /* DStarEngineIOS.h */,
+				757DEE5920E6D4DE003A11F1 /* DStarDelightIOS-Bridging-Header.h */,
 				757DEE8220E6D5CF003A11F1 /* TPCircularBuffer */,
 				7525485F20E9AE94003A11F1 /* DSDV3KPacket.h */,
 				7525485E20E9AE94003A11F1 /* DSEDV3KVocoderSubclass.h */,
@@ -287,7 +294,6 @@
 		757DEEC020E6E28C003A11F1 /* DStarEngineIOS */ = {
 			isa = PBXGroup;
 			children = (
-				757DEEC120E6E28C003A11F1 /* DStarEngineIOS.h */,
 				757DEEC220E6E28C003A11F1 /* Info.plist */,
 			);
 			path = DStarEngineIOS;
@@ -311,18 +317,13 @@
 				757DEEB620E6DEF1003A11F1 /* DStarEngine.h in Headers */,
 				757DEE8B20E6D5D0003A11F1 /* TPCircularBuffer+AudioBufferList.h in Headers */,
 				757DEE8D20E6D5D0003A11F1 /* TPCircularBuffer.h in Headers */,
-				757DEEF720E6EC7B003A11F1 /* DStarDelight-Bridging-Header.h in Headers */,
 				757DEE9020E6D62C003A11F1 /* DStarUtils.h in Headers */,
-				7525486020E9AE94003A11F1 /* DSEDV3KNetworkVocoder.h in Headers */,
 				757DEEA220E6DEA5003A11F1 /* DSEDataEngine.h in Headers */,
 				757DEEA320E6DEA5003A11F1 /* DSEDataEngineDelegate.h in Headers */,
-				7525486520E9AE94003A11F1 /* DSEDV3KVocoderSubclass.h in Headers */,
 				757DEEA420E6DEA5003A11F1 /* DSEAudioHandler.h in Headers */,
 				757DEEA720E6DEA5003A11F1 /* DSEDV3KVocoder.h in Headers */,
 				757DEEA820E6DEA5003A11F1 /* DSEDV3KPacket.h in Headers */,
 				757DEEA920E6DEA5003A11F1 /* DSEVocoderDriver.h in Headers */,
-				7525486620E9AE94003A11F1 /* DSDV3KPacket.h in Headers */,
-				7525486420E9AE94003A11F1 /* DSDV3KSerialVocoder.h in Headers */,
 				757DEEAA20E6DEA5003A11F1 /* DSELinkDriverProtocol.h in Headers */,
 				757DEEAB20E6DEA5003A11F1 /* DSESlowDataCoder.h in Headers */,
 				757DEEAC20E6DEA5003A11F1 /* DSESlowDataDelegate.h in Headers */,
@@ -332,9 +333,14 @@
 				757DEEAF20E6DEA5003A11F1 /* DSEDPlusLink.h in Headers */,
 				757DEEB020E6DEA5003A11F1 /* DSELinkDriverDelegate.h in Headers */,
 				757DEEB120E6DEA5003A11F1 /* DSELinkDriverSubclass.h in Headers */,
+				757DEEF720E6EC7B003A11F1 /* DStarDelight-Bridging-Header.h in Headers */,
+				7525486020E9AE94003A11F1 /* DSEDV3KNetworkVocoder.h in Headers */,
+				7525486520E9AE94003A11F1 /* DSEDV3KVocoderSubclass.h in Headers */,
+				7525486620E9AE94003A11F1 /* DSDV3KPacket.h in Headers */,
+				7525486420E9AE94003A11F1 /* DSDV3KSerialVocoder.h in Headers */,
+				7525486220E9AE94003A11F1 /* DSDV3KNetworkVocoder.h in Headers */,
 				757DEEB220E6DEA5003A11F1 /* DSEDExtraLink.h in Headers */,
 				757DEE9220E6D6FC003A11F1 /* DSELinkDriver.h in Headers */,
-				7525486220E9AE94003A11F1 /* DSDV3KNetworkVocoder.h in Headers */,
 				757DEEB320E6DEA5003A11F1 /* DSEAprsLocation.h in Headers */,
 				757DEEB420E6DEA5003A11F1 /* DNSHost.h in Headers */,
 				757DEEB520E6DEA5003A11F1 /* PortMapper.h in Headers */,
@@ -371,6 +377,12 @@
 				757DEEE120E6E2D2003A11F1 /* DNSHost.h in Headers */,
 				757DEEE220E6E2D2003A11F1 /* PortMapper.h in Headers */,
 				757DEECA20E6E2D2003A11F1 /* DStarDelightIOS-Bridging-Header.h in Headers */,
+				7510E78020EABC3B003A11F1 /* DSDV3KPacket.h in Headers */,
+				7510E78120EABC3B003A11F1 /* DSEDV3KVocoderSubclass.h in Headers */,
+				7510E78220EABC3B003A11F1 /* DSEDV3KNetworkVocoder.h in Headers */,
+				7510E78320EABC3B003A11F1 /* DSDV3KSerialVocoder.h in Headers */,
+				7510E78420EABC3B003A11F1 /* DSDV3KNetworkVocoder.h in Headers */,
+				7510E78520EABC3B003A11F1 /* objective_category_swizzle_object.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
