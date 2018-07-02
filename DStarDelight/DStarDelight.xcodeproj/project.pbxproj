@@ -10,14 +10,13 @@
 		3CC77E6D0D3F8CC704880E8D /* Pods_DStarDelightUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7897DD4BFEDD90011800AD /* Pods_DStarDelightUITests.framework */; };
 		7525480D20E6FDD6003A11F1 /* DSAudioHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525480B20E6FDD5003A11F1 /* DSAudioHandler.m */; };
 		7525485320E98AAB003A11F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E087F920E31574003A11F1 /* main.m */; };
+		7525488820EAA9D6003A11F1 /* SharedResources in Resources */ = {isa = PBXBuildFile; fileRef = 7525488720EAA9D6003A11F1 /* SharedResources */; };
 		757DEE9B20E6D98E003A11F1 /* DStarEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757DEE9A20E6D98E003A11F1 /* DStarEngine.framework */; };
 		758B49C020E41302003A11F1 /* New.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 758B49BE20E41301003A11F1 /* New.storyboard */; };
 		758B49C220E4196D003A11F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 758B49C120E4196D003A11F1 /* Main.storyboard */; };
 		758B49C720E41AA7003A11F1 /* DSEMapPopupController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 758B49C420E41AA7003A11F1 /* DSEMapPopupController.xib */; };
 		758B49CB20E41BD8003A11F1 /* DSEAddPopupController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 758B49CA20E41BD8003A11F1 /* DSEAddPopupController.xib */; };
 		758B49CF20E41C92003A11F1 /* DefaultPreferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 758B49CC20E41C92003A11F1 /* DefaultPreferences.plist */; };
-		758B49D020E41C92003A11F1 /* DExtraReflectors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 758B49CD20E41C92003A11F1 /* DExtraReflectors.plist */; };
-		758B49D120E41C92003A11F1 /* DCSReflectors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 758B49CE20E41C92003A11F1 /* DCSReflectors.plist */; };
 		758B49D420E41F0D003A11F1 /* DSDestinationCallFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 758B49D320E41F0D003A11F1 /* DSDestinationCallFormatter.m */; };
 		75E087F420E31574003A11F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75E087F320E31574003A11F1 /* Assets.xcassets */; };
 		75E0880520E31575003A11F1 /* DStarDelightUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0880420E31575003A11F1 /* DStarDelightUITests.m */; };
@@ -38,7 +37,6 @@
 		75E0887E20E3177F003A11F1 /* DSNetworkVocoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0885A20E3177F003A11F1 /* DSNetworkVocoderViewController.m */; };
 		75E0887F20E3177F003A11F1 /* DSSerialVocoderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75E0885B20E3177F003A11F1 /* DSSerialVocoderView.xib */; };
 		75E0888020E3177F003A11F1 /* DSSerialVocoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0885D20E3177F003A11F1 /* DSSerialVocoderViewController.m */; };
-		75E0888520E31A8C003A11F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75E0888420E31A8C003A11F1 /* Images.xcassets */; };
 		8CDB699A4364EA9801D300D1 /* Pods_DStarDelight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCAC0CB724613FB9B2EAD4C6 /* Pods_DStarDelight.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,19 +79,18 @@
 		7525480C20E6FDD5003A11F1 /* DSAudioHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSAudioHandler.h; path = DStarDelight/DSAudioHandler.h; sourceTree = SOURCE_ROOT; };
 		7525481B20E7C19A003A11F1 /* DStarEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DStarEngine.xcodeproj; path = ../Frameworks/DStarEngine/DStarEngine.xcodeproj; sourceTree = "<group>"; };
 		7525484120E7F084003A11F1 /* DStarDelight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DStarDelight.h; sourceTree = "<group>"; };
+		7525488720EAA9D6003A11F1 /* SharedResources */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SharedResources; path = ../SharedResources; sourceTree = "<group>"; };
 		757DEE9A20E6D98E003A11F1 /* DStarEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DStarEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		758B49BF20E41302003A11F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../../Old/DStarDelight/Base.lproj/New.storyboard; sourceTree = "<group>"; };
 		758B49C120E4196D003A11F1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		758B49C420E41AA7003A11F1 /* DSEMapPopupController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSEMapPopupController.xib; sourceTree = "<group>"; };
 		758B49CA20E41BD8003A11F1 /* DSEAddPopupController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DSEAddPopupController.xib; path = ../../../buster.1/Buster/DSEAddPopupController.xib; sourceTree = "<group>"; };
 		758B49CC20E41C92003A11F1 /* DefaultPreferences.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DefaultPreferences.plist; sourceTree = "<group>"; };
-		758B49CD20E41C92003A11F1 /* DExtraReflectors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DExtraReflectors.plist; sourceTree = "<group>"; };
-		758B49CE20E41C92003A11F1 /* DCSReflectors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DCSReflectors.plist; sourceTree = "<group>"; };
 		758B49D220E41F0C003A11F1 /* DSDestinationCallFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDestinationCallFormatter.h; sourceTree = "<group>"; };
 		758B49D320E41F0D003A11F1 /* DSDestinationCallFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDestinationCallFormatter.m; sourceTree = "<group>"; };
 		75E087EA20E31572003A11F1 /* DStarDelight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DStarDelight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75E087F320E31574003A11F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		75E087F820E31574003A11F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75E087F820E31574003A11F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = SOURCE_ROOT; };
 		75E087F920E31574003A11F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		75E087FB20E31574003A11F1 /* DStarDelight.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DStarDelight.entitlements; sourceTree = "<group>"; };
 		75E0880020E31575003A11F1 /* DStarDelightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DStarDelightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,7 +129,6 @@
 		75E0885B20E3177F003A11F1 /* DSSerialVocoderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSSerialVocoderView.xib; sourceTree = "<group>"; };
 		75E0885C20E3177F003A11F1 /* DSSerialVocoderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSSerialVocoderViewController.h; sourceTree = "<group>"; };
 		75E0885D20E3177F003A11F1 /* DSSerialVocoderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSSerialVocoderViewController.m; sourceTree = "<group>"; };
-		75E0888420E31A8C003A11F1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B32ABE4921FB7F512B104837 /* Pods-DStarDelight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DStarDelight.release.xcconfig"; path = "../Pods/Target Support Files/Pods-DStarDelight/Pods-DStarDelight.release.xcconfig"; sourceTree = "<group>"; };
 		BCAC0CB724613FB9B2EAD4C6 /* Pods_DStarDelight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DStarDelight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E743F5056F66E6004CE683A7 /* Pods-DStarDelight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DStarDelight.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-DStarDelight/Pods-DStarDelight.debug.xcconfig"; sourceTree = "<group>"; };
@@ -183,10 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				75E087F320E31574003A11F1 /* Assets.xcassets */,
-				75E0888420E31A8C003A11F1 /* Images.xcassets */,
-				758B49CE20E41C92003A11F1 /* DCSReflectors.plist */,
 				758B49CC20E41C92003A11F1 /* DefaultPreferences.plist */,
-				758B49CD20E41C92003A11F1 /* DExtraReflectors.plist */,
 				75E087F820E31574003A11F1 /* Info.plist */,
 				75E087FB20E31574003A11F1 /* DStarDelight.entitlements */,
 			);
@@ -207,6 +200,8 @@
 			isa = PBXGroup;
 			children = (
 				7525481B20E7C19A003A11F1 /* DStarEngine.xcodeproj */,
+				7525485220E988D0003A11F1 /* Resources */,
+				7525488720EAA9D6003A11F1 /* SharedResources */,
 				75E087EC20E31572003A11F1 /* DStarDelight */,
 				75E0880320E31575003A11F1 /* DStarDelightUITests */,
 				75E087EB20E31572003A11F1 /* Products */,
@@ -227,7 +222,6 @@
 		75E087EC20E31572003A11F1 /* DStarDelight */ = {
 			isa = PBXGroup;
 			children = (
-				7525485220E988D0003A11F1 /* Resources */,
 				758B49CA20E41BD8003A11F1 /* DSEAddPopupController.xib */,
 				758B49C420E41AA7003A11F1 /* DSEMapPopupController.xib */,
 				75E0885820E3177F003A11F1 /* DSNetworkVocoderView.xib */,
@@ -420,13 +414,11 @@
 				758B49C720E41AA7003A11F1 /* DSEMapPopupController.xib in Resources */,
 				758B49CF20E41C92003A11F1 /* DefaultPreferences.plist in Resources */,
 				758B49C020E41302003A11F1 /* New.storyboard in Resources */,
-				758B49D020E41C92003A11F1 /* DExtraReflectors.plist in Resources */,
-				75E0888520E31A8C003A11F1 /* Images.xcassets in Resources */,
 				758B49C220E4196D003A11F1 /* Main.storyboard in Resources */,
 				75E0887F20E3177F003A11F1 /* DSSerialVocoderView.xib in Resources */,
-				758B49D120E41C92003A11F1 /* DCSReflectors.plist in Resources */,
 				758B49CB20E41BD8003A11F1 /* DSEAddPopupController.xib in Resources */,
 				75E0887D20E3177F003A11F1 /* DSNetworkVocoderView.xib in Resources */,
+				7525488820EAA9D6003A11F1 /* SharedResources in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -683,7 +675,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../DerivedData/Build/Products/Debug/DStarEngine.framework\"",
 				);
-				INFOPLIST_FILE = DStarDelight/Resources/Info.plist;
+				INFOPLIST_FILE = Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -708,7 +700,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../DerivedData/Build/Products/Debug/DStarEngine.framework\"",
 				);
-				INFOPLIST_FILE = DStarDelight/Resources/Info.plist;
+				INFOPLIST_FILE = Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",

@@ -15,7 +15,7 @@
 	<key>rpt2Call</key>
 	<string>NO0CAL B</string>
 	<key>slowDataMessage</key>
-	<string>DStarDelight</string>
+	<string>DstarDelight 1.0</string>
 	<key>gatewayAddr</key>
 	<string>127.0.0.1</string>
 	<key>gatewayPort</key>

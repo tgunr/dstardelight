@@ -128,7 +128,7 @@
 		757DEE5620E6D4DE003A11F1 /* DSESlowDataCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSESlowDataCoder.m; sourceTree = "<group>"; };
 		757DEE5720E6D4DE003A11F1 /* DSEAudioHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEAudioHandler.m; sourceTree = "<group>"; };
 		757DEE5820E6D4DE003A11F1 /* DSEDExtraLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEDExtraLink.m; sourceTree = "<group>"; };
-		757DEE5920E6D4DE003A11F1 /* DStarDelightIOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DStarDelightIOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		757DEE5920E6D4DE003A11F1 /* DStarDelightIOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "DStarDelightIOS-Bridging-Header.h"; path = "../DStarEngineIOS/DStarDelightIOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		757DEE5A20E6D4DE003A11F1 /* DNSHost.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNSHost.m; sourceTree = "<group>"; };
 		757DEE5D20E6D4DF003A11F1 /* DSEDataEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEDataEngine.h; sourceTree = "<group>"; };
 		757DEE5E20E6D4DF003A11F1 /* DSEAudioHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEAudioHandler.h; sourceTree = "<group>"; };
