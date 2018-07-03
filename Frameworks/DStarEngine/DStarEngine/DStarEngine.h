@@ -16,17 +16,16 @@ FOUNDATION_EXPORT const unsigned char DStarEngineVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <DStarEngine/PublicHeader.h>
 
-
 #import "DNSHost.h"
 #import "DSEAprsLocation.h"
 #import "DSEDCSLink.h"
 #import "DSEDExtraLink.h"
 #import "DSEDPlusAuthenticator.h"
 #import "DSEDPlusLink.h"
-//#import "DSEDV3KNetworkVocoder.h"
+#import "DSEDV3KNetworkVocoder.h"
 #import "DSEDV3KPacket.h"
 #import "DSEDV3KVocoder.h"
-//#import "DSEDV3KVocoderSubclass.h"
+#import "DSEDV3KVocoderSubclass.h"
 #import "DSEDataEngine.h"
 #import "DSEDataEngineDelegate.h"
 #import "DSEIRCDDBGateways.h"
