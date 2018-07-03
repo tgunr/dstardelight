@@ -9,8 +9,7 @@ target 'DStarEngine' do
     inherit! :search_paths
     platform :osx, 10.13
 
-    pod 'Objection', '1.6.1'
-    pod 'Typhoon'
+    pod 'SwiftSocket'
 
 end
 
@@ -22,8 +21,7 @@ target 'DStarDelight' do
   inherit! :search_paths
 
   # Pods for DStarDelight
-  pod 'Objection', '1.6.1'
-  pod 'Typhoon'
+  pod 'SwiftSocket'
 
   target 'DStarDelightUITests' do
     inherit! :search_paths
@@ -40,8 +38,6 @@ target 'DStarDelightIOS' do
   inherit! :search_paths
 
   # Pods for DStarDelightIOS
-  pod 'Objection', '1.6.1'
-  pod 'Typhoon'
   pod 'SwiftSocket'
 
   target 'DStarDelightIOSUITests' do

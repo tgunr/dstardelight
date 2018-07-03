@@ -1,31 +1,16 @@
 PODS:
-  - Objection (1.6.1)
   - SwiftSocket (2.0.2)
-  - Typhoon (4.0.5):
-    - Typhoon/DeallocNotifier (= 4.0.5)
-    - Typhoon/IntrospectionUtils (= 4.0.5)
-    - Typhoon/no-arc (= 4.0.5)
-  - Typhoon/DeallocNotifier (4.0.5)
-  - Typhoon/IntrospectionUtils (4.0.5)
-  - Typhoon/no-arc (4.0.5):
-    - Typhoon/IntrospectionUtils
 
 DEPENDENCIES:
-  - Objection (= 1.6.1)
   - SwiftSocket
-  - Typhoon
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - Objection
     - SwiftSocket
-    - Typhoon
 
 SPEC CHECKSUMS:
-  Objection: ed03f2219cb22d2b5b893114219fe6c7e3263bde
   SwiftSocket: 6f4c9c63fbc5c1d61188936bb3c599fd546f40ae
-  Typhoon: 58ae5754d3d0aa819119d8c107aed0dd67f1eb3b
 
-PODFILE CHECKSUM: be9e922896e4f25d11a460c64e88c38f4da4f424
+PODFILE CHECKSUM: 17c684f45589051cf276c2ed66c69d3a5888e9d4
 
 COCOAPODS: 1.5.3
