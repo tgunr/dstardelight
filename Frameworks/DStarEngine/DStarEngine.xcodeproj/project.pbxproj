@@ -11,13 +11,10 @@
 		7510E78120EABC3B003A11F1 /* DSEDV3KVocoderSubclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 7525485E20E9AE94003A11F1 /* DSEDV3KVocoderSubclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7510E78220EABC3B003A11F1 /* DSEDV3KNetworkVocoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 7525485920E9AE93003A11F1 /* DSEDV3KNetworkVocoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7510E78320EABC3B003A11F1 /* DSDV3KSerialVocoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 7525485D20E9AE94003A11F1 /* DSDV3KSerialVocoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7510E78420EABC3B003A11F1 /* DSDV3KNetworkVocoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 7525485B20E9AE94003A11F1 /* DSDV3KNetworkVocoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7510E78520EABC3B003A11F1 /* objective_category_swizzle_object.h in Headers */ = {isa = PBXBuildFile; fileRef = 7525482B20E7E490003A11F1 /* objective_category_swizzle_object.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7525484E20E82280003A11F1 /* DStarUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525484D20E82280003A11F1 /* DStarUtils.m */; };
 		7525484F20E82280003A11F1 /* DStarUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525484D20E82280003A11F1 /* DStarUtils.m */; };
 		7525486020E9AE94003A11F1 /* DSEDV3KNetworkVocoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 7525485920E9AE93003A11F1 /* DSEDV3KNetworkVocoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7525486120E9AE94003A11F1 /* DSDV3KNetworkVocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525485A20E9AE93003A11F1 /* DSDV3KNetworkVocoder.m */; };
-		7525486220E9AE94003A11F1 /* DSDV3KNetworkVocoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 7525485B20E9AE94003A11F1 /* DSDV3KNetworkVocoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7525486320E9AE94003A11F1 /* DSDV3KSerialVocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525485C20E9AE94003A11F1 /* DSDV3KSerialVocoder.m */; };
 		7525486420E9AE94003A11F1 /* DSDV3KSerialVocoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 7525485D20E9AE94003A11F1 /* DSDV3KSerialVocoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7525486520E9AE94003A11F1 /* DSEDV3KVocoderSubclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 7525485E20E9AE94003A11F1 /* DSEDV3KVocoderSubclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -115,8 +112,6 @@
 		7525482C20E7E490003A11F1 /* objective_category_swizzle_object.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = objective_category_swizzle_object.m; sourceTree = "<group>"; };
 		7525484D20E82280003A11F1 /* DStarUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DStarUtils.m; sourceTree = "<group>"; };
 		7525485920E9AE93003A11F1 /* DSEDV3KNetworkVocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEDV3KNetworkVocoder.h; sourceTree = "<group>"; };
-		7525485A20E9AE93003A11F1 /* DSDV3KNetworkVocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDV3KNetworkVocoder.m; sourceTree = "<group>"; };
-		7525485B20E9AE94003A11F1 /* DSDV3KNetworkVocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDV3KNetworkVocoder.h; sourceTree = "<group>"; };
 		7525485C20E9AE94003A11F1 /* DSDV3KSerialVocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDV3KSerialVocoder.m; sourceTree = "<group>"; };
 		7525485D20E9AE94003A11F1 /* DSDV3KSerialVocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDV3KSerialVocoder.h; sourceTree = "<group>"; };
 		7525485E20E9AE94003A11F1 /* DSEDV3KVocoderSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEDV3KVocoderSubclass.h; sourceTree = "<group>"; };
@@ -233,8 +228,6 @@
 				7525485920E9AE93003A11F1 /* DSEDV3KNetworkVocoder.h */,
 				7525485D20E9AE94003A11F1 /* DSDV3KSerialVocoder.h */,
 				7525485C20E9AE94003A11F1 /* DSDV3KSerialVocoder.m */,
-				7525485B20E9AE94003A11F1 /* DSDV3KNetworkVocoder.h */,
-				7525485A20E9AE93003A11F1 /* DSDV3KNetworkVocoder.m */,
 				757DEE8F20E6D62C003A11F1 /* DStarUtils.h */,
 				7525484D20E82280003A11F1 /* DStarUtils.m */,
 				757DEE5D20E6D4DF003A11F1 /* DSEDataEngine.h */,
@@ -338,7 +331,6 @@
 				7525486520E9AE94003A11F1 /* DSEDV3KVocoderSubclass.h in Headers */,
 				7525486620E9AE94003A11F1 /* DSDV3KPacket.h in Headers */,
 				7525486420E9AE94003A11F1 /* DSDV3KSerialVocoder.h in Headers */,
-				7525486220E9AE94003A11F1 /* DSDV3KNetworkVocoder.h in Headers */,
 				757DEEB220E6DEA5003A11F1 /* DSEDExtraLink.h in Headers */,
 				757DEE9220E6D6FC003A11F1 /* DSELinkDriver.h in Headers */,
 				757DEEB320E6DEA5003A11F1 /* DSEAprsLocation.h in Headers */,
@@ -381,7 +373,6 @@
 				7510E78120EABC3B003A11F1 /* DSEDV3KVocoderSubclass.h in Headers */,
 				7510E78220EABC3B003A11F1 /* DSEDV3KNetworkVocoder.h in Headers */,
 				7510E78320EABC3B003A11F1 /* DSDV3KSerialVocoder.h in Headers */,
-				7510E78420EABC3B003A11F1 /* DSDV3KNetworkVocoder.h in Headers */,
 				7510E78520EABC3B003A11F1 /* objective_category_swizzle_object.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -516,7 +507,6 @@
 				7525484E20E82280003A11F1 /* DStarUtils.m in Sources */,
 				757DEE8020E6D4DF003A11F1 /* DNSHost.m in Sources */,
 				757DEE7C20E6D4DF003A11F1 /* PortMapper.m in Sources */,
-				7525486120E9AE94003A11F1 /* DSDV3KNetworkVocoder.m in Sources */,
 				757DEE8A20E6D5D0003A11F1 /* TPCircularBuffer+AudioBufferList.c in Sources */,
 				757DEE7620E6D4DF003A11F1 /* DSEDPlusAuthenticator.m in Sources */,
 				757DEE7E20E6D4DF003A11F1 /* DSEDCSLink.m in Sources */,
