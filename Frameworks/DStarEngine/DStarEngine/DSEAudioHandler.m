@@ -164,10 +164,10 @@ static inline BOOL CheckStatus(OSStatus error, const char *operation) {
 }
 
 -(void) setInputDevice:(UInt32)inputDevice {
-    if(self.inputDevice == inputDevice)
+    if(_inputDevice == inputDevice)
         return;
 
-    self.inputDevice = inputDevice;
+    _inputDevice = inputDevice;
 
     if(status == AUDIO_STATUS_STARTED) {
         [self stop];
@@ -176,10 +176,10 @@ static inline BOOL CheckStatus(OSStatus error, const char *operation) {
 }
 
 -(void) setOutputDevice:(UInt32)outputDevice {
-    if(self.outputDevice == outputDevice)
+    if(_outputDevice == outputDevice)
         return;
 
-    self.outputDevice = outputDevice;
+    _outputDevice = outputDevice;
 
     if(status == AUDIO_STATUS_STARTED) {
         [self stop];

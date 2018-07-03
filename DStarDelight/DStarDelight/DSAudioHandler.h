@@ -1,20 +1,19 @@
 
 #import <AudioToolbox/AudioToolbox.h>
-#import <DStarEngine/DSEAudioHandler.h>
-
-@protocol DSEVocoderDriver;
+#import <DStarEngine/DStarEngine.h>
 
 extern NSString * const DSAudioDeviceChanged;
 
-@interface DSAudioHandler : NSObject
-@property (nonatomic) id<DSEVocoderDriver> vocoder;
-@property (nonatomic) AudioDeviceID inputDevice;
-@property (nonatomic) AudioDeviceID outputDevice;
-@property (nonatomic, readonly) AudioDeviceID defaultInputDevice;
-@property (nonatomic, readonly) AudioDeviceID defaultOutputDevice;
-@property (nonatomic) BOOL xmit;
-@property (nonatomic) float outputVolume;
-@property (nonatomic) BOOL receiving;
+@protocol DSEVocoderDriver;
+
+@interface DSAudioHandler : DSEAudioHandler
+//@property (nonatomic) id<DSEVocoderDriver> vocoder;
+//@property (nonatomic) AudioDeviceID inputDevice;
+//@property (nonatomic) AudioDeviceID outputDevice;
+//@property (nonatomic, readonly) AudioDeviceID defaultInputDevice;
+//@property (nonatomic, readonly) AudioDeviceID defaultOutputDevice;
+//@property (nonatomic) BOOL xmit;
+//@property (nonatomic) float outputVolume;
 
 -(void) queueAudioData:(void *)audioData withLength:(UInt32)length;
 

@@ -16,6 +16,7 @@ static inline BOOL CheckStatus(OSStatus error, const char *operation);
 @property (nonatomic) UInt32 outputDevice;
 @property (nonatomic) id<DSEVocoderDriver> vocoder;
 @property (nonatomic) BOOL receiving;
+@property (nonatomic) BOOL xmit;
 
 @property id delegate;
 
