@@ -1,6 +1,7 @@
 
 #import "DSAudioHandler.h"
 #import "TPCircularBuffer.h"
+#import "TPCircularBuffer+AudioBufferList.h"
 
 static const AudioComponentDescription componentDescription = {
     .componentType = kAudioUnitType_Output,
@@ -75,7 +76,8 @@ static OSStatus recordThreadCallback (void *userData, AudioUnitRenderActionFlags
 
     OSStatus error;
 
-    AudioBufferList *bufferList = TPCircularBufferPrepareEmptyAudioBufferListWithAudioFormat(audioHandler.recordBuffer, audioHandler.inputFormat, inNumberFrames, inTimeStamp);
+    AudioBufferList *bufferList;
+    bufferList = TPCircularBufferPrepareEmptyAudioBufferListWithAudioFormat(audioHandler.recordBuffer, audioHandler.inputFormat, inNumberFrames, inTimeStamp);
     if(!bufferList) {
         NSLog(@"recordBuffer is full");
         return kIOReturnSuccess;
