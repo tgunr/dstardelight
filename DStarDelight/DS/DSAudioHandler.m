@@ -289,7 +289,7 @@ static OSStatus AudioDevicesChanged(AudioObjectID inObjectID, UInt32 inNumberAdd
     return volume;
 }
 
--(void) setInputDevice:(UInt32)inputDevice {
+-(void) setInputDevice:(AudioDeviceID)inputDevice {
     if(_inputDevice == inputDevice)
         return;
     
@@ -301,7 +301,7 @@ static OSStatus AudioDevicesChanged(AudioObjectID inObjectID, UInt32 inNumberAdd
     }
 }
 
--(void) setOutputDevice:(UInt32)outputDevice {
+-(void) setOutputDevice:(AudioDeviceID)outputDevice {
     if(_outputDevice == outputDevice)
         return;
     
@@ -313,7 +313,7 @@ static OSStatus AudioDevicesChanged(AudioObjectID inObjectID, UInt32 inNumberAdd
     }
 }
 
--(void) setInputDevice:(UInt32)inputDevice andOutputDevice:(UInt32)outputDevice {
+-(void) setInputDevice:(AudioDeviceID)inputDevice andOutputDevice:(AudioDeviceID)outputDevice {
     if(_inputDevice == inputDevice && _outputDevice == outputDevice)
         return;
     
@@ -333,83 +333,11 @@ static OSStatus AudioDevicesChanged(AudioObjectID inObjectID, UInt32 inNumberAdd
         TPCircularBufferClear(self.playbackBuffer);
 }
 
-//-(void) stop {
-//    if(status != AUDIO_STATUS_STARTED)
-//        return;
-//
-//    NSLog(@"Stopping audio");
-//
-//    if(inputConverter) {
-//        AudioConverterDispose(inputConverter);
-//        inputConverter = NULL;
-//    }
-//
-//    status = AUDIO_STATUS_STOPPED;
-//}
-//
-//+(NSArray *) enumerateDevices:(id)scope {
-//    NSAssert(NO, @"The method %@ in %@ must be overridden.",
-//             NSStringFromSelector(_cmd), NSStringFromClass([self class]));
-//    return NULL;
-//}
-//
-
-//- (void) setXmit:(BOOL)xmit {
-//    if(_xmit == xmit)
-//        return;
-//
-//    if(xmit) {
-//        if(inputConverter)
-//            AudioConverterReset(inputConverter);
-//
-//        TPCircularBufferClear(self.recordBuffer);
-//
-//        inputAudioSource = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0));
-//        dispatch_source_set_timer(inputAudioSource, dispatch_time(DISPATCH_TIME_NOW, 100ul * NSEC_PER_MSEC), 20ull * NSEC_PER_MSEC, 1ull * NSEC_PER_MSEC);
-//
-//        DSAudioHandler __weak *weakSelf = self;
-//        dispatch_source_set_event_handler(inputAudioSource, ^{
-//            AudioBufferList bufferList;
-//            AudioTimeStamp timestamp;
-//            UInt32 numSamples = 160;
-//            BOOL last = NO;
-//
-//            bufferList.mNumberBuffers = 1;
-//            bufferList.mBuffers[0].mNumberChannels = 1;
-//            bufferList.mBuffers[0].mDataByteSize = numSamples * sizeof(short);
-//            bufferList.mBuffers[0].mData = calloc(1, bufferList.mBuffers[0].mDataByteSize);
-//
-//            if(weakSelf.hardwareSampleRate == 8000.0) {
-//                TPCircularBufferDequeueBufferListFrames(self.recordBuffer, &numSamples, &bufferList, &timestamp, self.inputFormat);
-//            } else {
-//                OSStatus error = AudioConverterFillComplexBuffer(self->inputConverter, audioConverterCallback, (__bridge void *)(weakSelf), &numSamples, &bufferList, NULL);
-//
-//                if(error != noErr && error != kAudioConverterErr_UnspecifiedError) {
-//                    NSLog(@"Error in audio converter: %d", error);
-//                    return;
-//                }
-//            }
-//
-//            if(!weakSelf.xmit && numSamples == 0) {
-//                last = YES;
-//                dispatch_source_cancel(self->inputAudioSource);
-//            }
-//
-//            [weakSelf.vocoder encodeData:bufferList.mBuffers[0].mData lastPacket:last];
-//
-//            free(bufferList.mBuffers[0].mData);
-//        });
-//
-//        dispatch_resume(inputAudioSource);
-//    }
-//    _xmit = xmit;
-//}
-//
 - (AudioDeviceID) defaultOutputDevice {
     AudioObjectPropertyAddress propertyAddress = { kAudioHardwarePropertyDefaultOutputDevice, kAudioObjectPropertyScopeGlobal, kAudioObjectPropertyElementMaster };
-    UInt32 device;
+    AudioDeviceID device;
 
-    UInt32 deviceSize = sizeof(device);
+    AudioDeviceID deviceSize = sizeof(device);
     if(!CheckStatus(AudioObjectGetPropertyData(kAudioObjectSystemObject, &propertyAddress, 0, NULL, &deviceSize, &device), "AudioUnitGetPropertyData(kAudioHardwarePropertyDefaultOutputDevice)"))
         return 0;
 
@@ -423,7 +351,7 @@ static OSStatus AudioDevicesChanged(AudioObjectID inObjectID, UInt32 inNumberAdd
         kAudioObjectPropertyElementMaster };
     AudioDeviceID device;
 
-    UInt32 deviceSize = sizeof(device);
+    AudioDeviceID deviceSize = sizeof(device);
     OSStatus stat = AudioObjectGetPropertyData(kAudioObjectSystemObject, &propertyAddress, 0, NULL, &deviceSize, &device);
     if(!CheckStatus(stat, "AudioUnitGetPropertyData(kAudioHardwarePropertyDefaultInputDevice"))
         return 0;
@@ -437,93 +365,6 @@ static OSStatus AudioDevicesChanged(AudioObjectID inObjectID, UInt32 inNumberAdd
     }
 }
 
-//static inline BOOL CheckStatus(OSStatus error, const char *operation) {
-//    if(error == noErr)
-//        return YES;
-//    
-//    char str[20] = "";
-//    // see if it appears to be a 4-char-code
-//    *(UInt32 *)(str + 1) = CFSwapInt32HostToBig(error);
-//    if (isprint(str[1]) && isprint(str[2]) && isprint(str[3]) && isprint(str[4])) {
-//        str[0] = str[5] = '\'';
-//        str[6] = '\0';
-//    } else {
-//        // no, format it as an integer
-//        sprintf(str, "%d", (int)error);
-//    }
-//    
-//    switch(error) {
-//        case kAudioUnitErr_InvalidProperty:
-//            NSLog(@"Error: %s (%s) kAudioUnitErr_InvalidProperty", operation, str);
-//            break;
-//            
-//        case kAudioUnitErr_InvalidParameter:
-//            NSLog(@"Error: %s (%s) kAudioUnitErr_InvalidParameter", operation, str);
-//            break;
-//            
-//        case kAudioUnitErr_InvalidElement:
-//            NSLog(@"Error: %s (%s) kAudioUnitErr_InvalidElement", operation, str);
-//            break;
-//            
-//        case kAudioUnitErr_NoConnection:
-//            NSLog(@"Error: %s (%s) kAudioUnitErr_NoConnection", operation, str);
-//            break;
-//            
-//        case kAudioUnitErr_FailedInitialization:
-//            NSLog(@"Error: %s (%s) kAudioUnitErr_FailedInitialization", operation, str);
-//            break;
-//            
-//        case kAudioUnitErr_TooManyFramesToProcess:
-//            NSLog(@"Error: %s (%s) kAudioUnitErr_TooManyFramesToProcess", operation, str);
-//            break;
-//            
-//        case kAudioUnitErr_InvalidFile:
-//            NSLog(@"Error: %s (%s) kAudioUnitErr_InvalidFile", operation, str);
-//            break;
-//            
-//        case kAudioUnitErr_FormatNotSupported:
-//            NSLog(@"Error: %s (%s) kAudioUnitErr_FormatNotSupported", operation, str);
-//            break;
-//            
-//        case kAudioUnitErr_Uninitialized:
-//            NSLog(@"Error: %s (%s) kAudioUnitErr_Uninitialized", operation, str);
-//            break;
-//            
-//        case kAudioUnitErr_InvalidScope:
-//            NSLog(@"Error: %s (%s) kAudioUnitErr_InvalidScope", operation, str);
-//            break;
-//            
-//        case kAudioUnitErr_PropertyNotWritable:
-//            NSLog(@"Error: %s (%s) kAudioUnitErr_PropertyNotWritable", operation, str);
-//            break;
-//            
-//        case kAudioUnitErr_InvalidPropertyValue:
-//            NSLog(@"Error: %s (%s) kAudioUnitErr_InvalidPropertyValue", operation, str);
-//            break;
-//            
-//        case kAudioUnitErr_PropertyNotInUse:
-//            NSLog(@"Error: %s (%s) kAudioUnitErr_PropertyNotInUse", operation, str);
-//            break;
-//            
-//        case kAudioUnitErr_Initialized:
-//            NSLog(@"Error: %s (%s) kAudioUnitErr_Initialized", operation, str);
-//            break;
-//            
-//        case kAudioUnitErr_InvalidOfflineRender:
-//            NSLog(@"Error: %s (%s) kAudioUnitErr_InvalidOfflineRender", operation, str);
-//            break;
-//            
-//        case kAudioUnitErr_Unauthorized:
-//            NSLog(@"Error: %s (%s) kAudioUnitErr_Unauthorized", operation, str);
-//            break;
-//        default:
-//            NSLog(@"Error: %s (%s)", operation, str);
-//            break;
-//    }
-//
-//    return NO;
-//}
-//
 - (BOOL) start {
     AudioComponent outputComponent;
     
@@ -818,7 +659,7 @@ static OSStatus AudioDevicesChanged(AudioObjectID inObjectID, UInt32 inNumberAdd
     return [NSArray arrayWithArray:devices];
 }
 
-- (void)setDefaultInputDevice:(id)defaultInputDevice {
+-(void) setDefaultInputDevice:(AudioDeviceID)defaultInputDevice {
     _defaultOutputDevice = defaultInputDevice;
 }
 

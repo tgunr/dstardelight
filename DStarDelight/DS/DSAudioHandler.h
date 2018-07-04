@@ -11,8 +11,8 @@ static inline BOOL CheckStatus(OSStatus error, const char *operation);
 
 @interface DSAudioHandler : NSObject
 
-@property (nonatomic) UInt32 inputDevice;
-@property (nonatomic) UInt32 outputDevice;
+@property (nonatomic) AudioDeviceID inputDevice;
+@property (nonatomic) AudioDeviceID outputDevice;
 @property (nonatomic) id<DSEVocoderDriver> vocoder;
 @property (nonatomic) BOOL receiving;
 @property (nonatomic) BOOL xmit;
@@ -21,14 +21,14 @@ static inline BOOL CheckStatus(OSStatus error, const char *operation);
 
 -(void) setOutputVolume:(float)outputVolume;
 -(float) outputVolume;
--(void) setInputDevice:(UInt32)inputDevice;
--(void) setOutputDevice:(UInt32)outputDevice;
--(void) setInputDevice:(UInt32)_inputDevice andOutputDevice:(UInt32)_outputDevice;
+-(void) setInputDevice:(AudioDeviceID)inputDevice;
+-(void) setOutputDevice:(AudioDeviceID)outputDevice;
+-(void) setInputDevice:(AudioDeviceID)_inputDevice andOutputDevice:(AudioDeviceID)_outputDevice;
 -(void) setXmit:(BOOL)xmit;
 -(void) setReceiving:(BOOL)receiving;
 -(UInt32) defaultOutputDevice;
 -(UInt32) defaultInputDevice;
--(void) queueAudioData:(void *)audioData withLength:(UInt32)length;
+-(void) queueAudioData:(void *)audioData withLength:(AudioDeviceID)length;
 -(BOOL) start;
 -(void) stop;
 +(NSArray *)enumerateDevices:(AudioObjectPropertyScope)scope;

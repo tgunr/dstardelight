@@ -72,7 +72,7 @@
         [engineaudio start];
         engineaudio.outputVolume = [[NSUserDefaults standardUserDefaults] floatForKey:@"outputVolume"];
 
-        BOOL started = [engine.vocoder start];
+        [engine.vocoder start];
     });
 }
 
