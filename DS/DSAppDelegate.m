@@ -62,16 +62,9 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [engineaudio start];
         engineaudio.outputVolume = [[NSUserDefaults standardUserDefaults] floatForKey:@"outputVolume"];
-        
-        if(![engine.vocoder start])
-            dispatch_async(dispatch_get_main_queue(), ^{
-                NSAlert *alert = [[NSAlert alloc] init];
-                alert.alertStyle = NSAlertStyleWarning;
-                alert.messageText = @"Cannot Open the Serial Port";
-                alert.informativeText = @"Please check your serial port and speed settings in the Preferences menu";
-                [alert runModal];
-            });
-    });    
+
+        BOOL started = [engine.vocoder start];
+    });
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
