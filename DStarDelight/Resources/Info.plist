@@ -24,6 +24,14 @@
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2018 Polymicro Systems. All rights reserved.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Your location is needed for display to others</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Your location is needed for display to others</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Your location is needed for display to others</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Your location is needed for display to others</string>
 	<key>NSMainStoryboardFile</key>
 	<string>Main</string>
 	<key>NSPrincipalClass</key>

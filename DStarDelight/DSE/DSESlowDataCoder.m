@@ -285,4 +285,34 @@ NS_INLINE void SCRAMBLE(unsigned char *data) {
     }
 }
 
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
+    switch (status) {
+        case kCLAuthorizationStatusAuthorized:
+            NSLog(@"Location Services are now Authorised");
+            [_locationManager startUpdatingLocation];
+            
+            break;
+            
+        case kCLAuthorizationStatusDenied:
+            NSLog(@"Location Services are now Denied");
+            break;
+            
+        case kCLAuthorizationStatusNotDetermined:
+            NSLog(@"Location Services are now Not Determined");
+            
+            //  We need to triger the OS to ask the user for permission.
+            [_locationManager startUpdatingLocation];
+            [_locationManager stopUpdatingLocation];
+            
+            break;
+            
+        case kCLAuthorizationStatusRestricted:
+            NSLog(@"Location Services are now Restricted");
+            break;
+            
+        default:
+            break;
+    }
+
+}
 @end
