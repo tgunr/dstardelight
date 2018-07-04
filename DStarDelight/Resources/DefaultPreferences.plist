@@ -27,7 +27,7 @@
 	<key>DV3KNetworkVocoderPort</key>
 	<integer>2460</integer>
 	<key>VocoderDriver</key>
-	<string>DSDV3KSerialVocoder</string>
+	<string>DSEDV3KNetworkVocoder</string>
 	<key>destinationCalls</key>
 	<array>
 		<string>CQCQCQ</string>

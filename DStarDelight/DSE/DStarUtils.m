@@ -11,7 +11,7 @@
 #import <Foundation/Foundation.h>
 
 const NSString *DSTARAUTHHOST = @"opendstar.org";
-const NSString *DEFAULT_VOCODER = @"DSDV3KSerialVocoder";
+const NSString *DEFAULT_VOCODER = @"DSEDV3KNetworkVocoder";
 @implementation DSVars
 
 + (DSVars *) shared {
