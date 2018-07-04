@@ -84,7 +84,7 @@
 		758B49BF20E41302003A11F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../../Old/DStarDelight/Base.lproj/New.storyboard; sourceTree = "<group>"; };
 		758B49C120E4196D003A11F1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		758B49C420E41AA7003A11F1 /* DSEMapPopupController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSEMapPopupController.xib; sourceTree = "<group>"; };
-		758B49CA20E41BD8003A11F1 /* DSEAddPopupController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DSEAddPopupController.xib; path = ../../../buster.1/Buster/DSEAddPopupController.xib; sourceTree = "<group>"; };
+		758B49CA20E41BD8003A11F1 /* DSEAddPopupController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSEAddPopupController.xib; sourceTree = "<group>"; };
 		758B49CC20E41C92003A11F1 /* DefaultPreferences.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DefaultPreferences.plist; sourceTree = "<group>"; };
 		758B49D220E41F0C003A11F1 /* DSDestinationCallFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDestinationCallFormatter.h; sourceTree = "<group>"; };
 		758B49D320E41F0D003A11F1 /* DSDestinationCallFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDestinationCallFormatter.m; sourceTree = "<group>"; };
