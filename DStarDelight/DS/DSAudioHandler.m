@@ -1,5 +1,6 @@
 
 #import "DSAudioHandler.h"
+#import "TPCircularBuffer.h"
 
 static const AudioComponentDescription componentDescription = {
     .componentType = kAudioUnitType_Output,
@@ -626,15 +627,15 @@ static inline BOOL CheckStatus(OSStatus error, const char *operation) {
     
         free(bufferList);
         bufferList = NULL;
-    
-        [devices addObject: @{ @"description":deviceName, @"uid":deviceUID, @"id":[NSNumber numberWithInt:deviceId] }];
+        NSDictionary *object = @{ @"description":deviceName, @"uid":deviceUID, @"id":[NSNumber numberWithInt:deviceId] };
+        [devices addObject: object];
     }];
 
     return [NSArray arrayWithArray:devices];
 }
 
-- (void)setDefaultInputDevice:(id)SetDefaultInputDevice {
-    _defaultOutputDevice = SetDefaultInputDevice;
+- (void)setDefaultInputDevice:(id)defaultInputDevice {
+    _defaultOutputDevice = defaultInputDevice;
 }
 
 @end

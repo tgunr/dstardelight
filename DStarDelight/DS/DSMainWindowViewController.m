@@ -5,13 +5,12 @@
 //#import "DSEAppDelegate.h"
 #import "MASShortcut.h"
 #import "MASDictionaryTransformer.h"
-#import <DStarEngine/DSEDataEngine.h>
-#import <DStarEngine/DSESlowDataCoder.h>
+#import "DSESlowDataCoder.h"
 #import "DSAudioHandler.h"
 #import "DSMapPopupController.h"
-#import <DStarEngine/DSEAprsLocation.h>
+#import "DSEAprsLocation.h"
 #import "DSAddPopupController.h"
-
+#import "DSEDataEngine.h"
 
 @import MapKit;
 

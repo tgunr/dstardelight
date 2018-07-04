@@ -1,6 +1,6 @@
 
 #import <AudioToolbox/AudioToolbox.h>
-#import <DStarEngine/DStarEngine.h>
+#import "DSEAudioHandler.h"
 
 extern NSString * const DSAudioDeviceChanged;
 

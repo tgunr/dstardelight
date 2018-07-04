@@ -1,8 +1,6 @@
 
-
 #import "DSAddPopupController.h"
-
-#import <DStarEngine/DSEDataEngine.h>
+#import "DSEDataEngine.h"
 
 @interface DSEAddPopupController ()
 

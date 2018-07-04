@@ -7,14 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3CC77E6D0D3F8CC704880E8D /* Pods_DStarDelightUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7897DD4BFEDD90011800AD /* Pods_DStarDelightUITests.framework */; };
 		7525480D20E6FDD6003A11F1 /* DSAudioHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525480B20E6FDD5003A11F1 /* DSAudioHandler.m */; };
-		7525485320E98AAB003A11F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E087F920E31574003A11F1 /* main.m */; };
 		7525488820EAA9D6003A11F1 /* SharedResources in Resources */ = {isa = PBXBuildFile; fileRef = 7525488720EAA9D6003A11F1 /* SharedResources */; };
-		757DEE9B20E6D98E003A11F1 /* DStarEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 757DEE9A20E6D98E003A11F1 /* DStarEngine.framework */; };
+		756A408A20EC5FA1003A11F1 /* DSEAudioHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 756A408820EC5FA0003A11F1 /* DSEAudioHandler.m */; };
+		756A408F20EC607B003A11F1 /* DSEDataEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 756A408E20EC607B003A11F1 /* DSEDataEngine.m */; };
+		756A40A120EC60B7003A11F1 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 756A409120EC60B6003A11F1 /* README.markdown */; };
+		756A40A220EC60B7003A11F1 /* TPCircularBuffer+AudioBufferList.c in Sources */ = {isa = PBXBuildFile; fileRef = 756A409220EC60B6003A11F1 /* TPCircularBuffer+AudioBufferList.c */; };
+		756A40A320EC60B7003A11F1 /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 756A409420EC60B6003A11F1 /* TPCircularBuffer.c */; };
+		756A40A420EC60B7003A11F1 /* TPCircularBuffer.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 756A409620EC60B6003A11F1 /* TPCircularBuffer.podspec */; };
+		756A40A520EC60B7003A11F1 /* DSEDataEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 756A409720EC60B6003A11F1 /* DSEDataEngine.m */; };
+		756A40A620EC60B7003A11F1 /* DSDV3KSerialVocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 756A409A20EC60B6003A11F1 /* DSDV3KSerialVocoder.m */; };
+		756A40A720EC60B7003A11F1 /* DStarUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 756A409D20EC60B7003A11F1 /* DStarUtils.m */; };
+		756A40C420EC60D8003A11F1 /* DSEDPlusLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 756A40AB20EC60D3003A11F1 /* DSEDPlusLink.m */; };
+		756A40C520EC60D8003A11F1 /* PortMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 756A40AC20EC60D3003A11F1 /* PortMapper.m */; };
+		756A40C620EC60D8003A11F1 /* DSEDPlusAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = 756A40AF20EC60D3003A11F1 /* DSEDPlusAuthenticator.m */; };
+		756A40C720EC60D8003A11F1 /* DSESlowDataCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 756A40B120EC60D4003A11F1 /* DSESlowDataCoder.m */; };
+		756A40C820EC60D8003A11F1 /* DSELinkDriver.m in Sources */ = {isa = PBXBuildFile; fileRef = 756A40B320EC60D4003A11F1 /* DSELinkDriver.m */; };
+		756A40C920EC60D8003A11F1 /* DNSHost.m in Sources */ = {isa = PBXBuildFile; fileRef = 756A40B420EC60D5003A11F1 /* DNSHost.m */; };
+		756A40CA20EC60D8003A11F1 /* DSEDV3KVocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 756A40BA20EC60D6003A11F1 /* DSEDV3KVocoder.m */; };
+		756A40CB20EC60D8003A11F1 /* DSEAprsLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 756A40BC20EC60D6003A11F1 /* DSEAprsLocation.m */; };
+		756A40CC20EC60D8003A11F1 /* DSEIRCDDBGateways.m in Sources */ = {isa = PBXBuildFile; fileRef = 756A40BD20EC60D7003A11F1 /* DSEIRCDDBGateways.m */; };
+		756A40CD20EC60D8003A11F1 /* DSEDCSLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 756A40BE20EC60D7003A11F1 /* DSEDCSLink.m */; };
+		756A40CE20EC60D8003A11F1 /* DSEDExtraLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 756A40C020EC60D7003A11F1 /* DSEDExtraLink.m */; };
 		758B49C020E41302003A11F1 /* New.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 758B49BE20E41301003A11F1 /* New.storyboard */; };
 		758B49C220E4196D003A11F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 758B49C120E4196D003A11F1 /* Main.storyboard */; };
-		758B49C720E41AA7003A11F1 /* DSEMapPopupController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 758B49C420E41AA7003A11F1 /* DSEMapPopupController.xib */; };
 		758B49CB20E41BD8003A11F1 /* DSEAddPopupController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 758B49CA20E41BD8003A11F1 /* DSEAddPopupController.xib */; };
 		758B49CF20E41C92003A11F1 /* DefaultPreferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 758B49CC20E41C92003A11F1 /* DefaultPreferences.plist */; };
 		758B49D420E41F0D003A11F1 /* DSDestinationCallFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 758B49D320E41F0D003A11F1 /* DSDestinationCallFormatter.m */; };
@@ -29,39 +45,13 @@
 		75E0886D20E3177F003A11F1 /* DSMapPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0882F20E3177F003A11F1 /* DSMapPopupController.m */; };
 		75E0886E20E3177F003A11F1 /* DSMessageFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0883120E3177F003A11F1 /* DSMessageFormatter.m */; };
 		75E0887020E3177F003A11F1 /* DSVocoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0883620E3177F003A11F1 /* DSVocoderViewController.m */; };
-		75E0887220E3177F003A11F1 /* MASDictionaryTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0883E20E3177F003A11F1 /* MASDictionaryTransformer.m */; };
-		75E0887320E3177F003A11F1 /* MASShortcut.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0884120E3177F003A11F1 /* MASShortcut.m */; };
-		75E0887420E3177F003A11F1 /* MASShortcutValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0884320E3177F003A11F1 /* MASShortcutValidator.m */; };
-		75E0887520E3177F003A11F1 /* MASShortcutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0884520E3177F003A11F1 /* MASShortcutView.m */; };
 		75E0887D20E3177F003A11F1 /* DSNetworkVocoderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75E0885820E3177F003A11F1 /* DSNetworkVocoderView.xib */; };
-		75E0887E20E3177F003A11F1 /* DSNetworkVocoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0885A20E3177F003A11F1 /* DSNetworkVocoderViewController.m */; };
 		75E0887F20E3177F003A11F1 /* DSSerialVocoderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75E0885B20E3177F003A11F1 /* DSSerialVocoderView.xib */; };
-		75E0888020E3177F003A11F1 /* DSSerialVocoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0885D20E3177F003A11F1 /* DSSerialVocoderViewController.m */; };
-		8CDB699A4364EA9801D300D1 /* Pods_DStarDelight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCAC0CB724613FB9B2EAD4C6 /* Pods_DStarDelight.framework */; };
+		B1F5E821A03E073C27C643FF /* libPods-DStarDelight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEB7436A6B48A35A03347650 /* libPods-DStarDelight.a */; };
+		ECB524EB7423893D975D71B9 /* libPods-DStarDelightUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FBD8596DEF8A4BB1161AA109 /* libPods-DStarDelightUITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7525482020E7C19A003A11F1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7525481B20E7C19A003A11F1 /* DStarEngine.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 757DEE4120E6D45A003A11F1;
-			remoteInfo = DStarEngine;
-		};
-		7525482220E7C19A003A11F1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7525481B20E7C19A003A11F1 /* DStarEngine.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 757DEEBF20E6E28B003A11F1;
-			remoteInfo = DStarEngineIOS;
-		};
-		7525482620E7C566003A11F1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7525481B20E7C19A003A11F1 /* DStarEngine.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 757DEE4020E6D45A003A11F1;
-			remoteInfo = DStarEngine;
-		};
 		75E0880120E31575003A11F1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 75E087E220E31572003A11F1 /* Project object */;
@@ -74,24 +64,112 @@
 /* Begin PBXFileReference section */
 		11AAC06FD0BD3CD5D4ED35A6 /* Pods-DStarDelightUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DStarDelightUITests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-DStarDelightUITests/Pods-DStarDelightUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1EAF11B8B9A5B827B20DC83E /* Pods-DStarDelightUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DStarDelightUITests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-DStarDelightUITests/Pods-DStarDelightUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		2A7897DD4BFEDD90011800AD /* Pods_DStarDelightUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DStarDelightUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7525480B20E6FDD5003A11F1 /* DSAudioHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSAudioHandler.m; path = DStarDelight/DSAudioHandler.m; sourceTree = SOURCE_ROOT; };
-		7525480C20E6FDD5003A11F1 /* DSAudioHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSAudioHandler.h; path = DStarDelight/DSAudioHandler.h; sourceTree = SOURCE_ROOT; };
-		7525481B20E7C19A003A11F1 /* DStarEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DStarEngine.xcodeproj; path = ../Frameworks/DStarEngine/DStarEngine.xcodeproj; sourceTree = "<group>"; };
-		7525484120E7F084003A11F1 /* DStarDelight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DStarDelight.h; sourceTree = "<group>"; };
+		7525480B20E6FDD5003A11F1 /* DSAudioHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSAudioHandler.m; path = DS/DSAudioHandler.m; sourceTree = SOURCE_ROOT; };
+		7525480C20E6FDD5003A11F1 /* DSAudioHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSAudioHandler.h; path = DS/DSAudioHandler.h; sourceTree = SOURCE_ROOT; };
+		7525484120E7F084003A11F1 /* DStarDelight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DStarDelight.h; path = DS/DStarDelight.h; sourceTree = SOURCE_ROOT; };
 		7525488720EAA9D6003A11F1 /* SharedResources */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SharedResources; path = ../SharedResources; sourceTree = "<group>"; };
-		757DEE9A20E6D98E003A11F1 /* DStarEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DStarEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		756A408820EC5FA0003A11F1 /* DSEAudioHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEAudioHandler.m; sourceTree = "<group>"; };
+		756A408920EC5FA0003A11F1 /* DSEAudioHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEAudioHandler.h; sourceTree = "<group>"; };
+		756A408C20EC607B003A11F1 /* DSEDataEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEDataEngine.h; sourceTree = "<group>"; };
+		756A408D20EC607B003A11F1 /* DSEDataEngineDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEDataEngineDelegate.h; sourceTree = "<group>"; };
+		756A408E20EC607B003A11F1 /* DSEDataEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEDataEngine.m; sourceTree = "<group>"; };
+		756A409120EC60B6003A11F1 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.markdown; sourceTree = "<group>"; };
+		756A409220EC60B6003A11F1 /* TPCircularBuffer+AudioBufferList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "TPCircularBuffer+AudioBufferList.c"; sourceTree = "<group>"; };
+		756A409320EC60B6003A11F1 /* TPCircularBuffer+AudioBufferList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TPCircularBuffer+AudioBufferList.h"; sourceTree = "<group>"; };
+		756A409420EC60B6003A11F1 /* TPCircularBuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TPCircularBuffer.c; sourceTree = "<group>"; };
+		756A409520EC60B6003A11F1 /* TPCircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCircularBuffer.h; sourceTree = "<group>"; };
+		756A409620EC60B6003A11F1 /* TPCircularBuffer.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TPCircularBuffer.podspec; sourceTree = "<group>"; };
+		756A409720EC60B6003A11F1 /* DSEDataEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEDataEngine.m; sourceTree = "<group>"; };
+		756A409820EC60B6003A11F1 /* DSDV3KSerialVocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDV3KSerialVocoder.h; sourceTree = "<group>"; };
+		756A409920EC60B6003A11F1 /* DSEDV3KVocoderSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEDV3KVocoderSubclass.h; sourceTree = "<group>"; };
+		756A409A20EC60B6003A11F1 /* DSDV3KSerialVocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDV3KSerialVocoder.m; sourceTree = "<group>"; };
+		756A409B20EC60B6003A11F1 /* DSEDataEngineDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEDataEngineDelegate.h; sourceTree = "<group>"; };
+		756A409C20EC60B6003A11F1 /* DSEDataEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEDataEngine.h; sourceTree = "<group>"; };
+		756A409D20EC60B7003A11F1 /* DStarUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DStarUtils.m; sourceTree = "<group>"; };
+		756A409E20EC60B7003A11F1 /* DSEDV3KNetworkVocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEDV3KNetworkVocoder.h; sourceTree = "<group>"; };
+		756A409F20EC60B7003A11F1 /* DStarUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DStarUtils.h; sourceTree = "<group>"; };
+		756A40A020EC60B7003A11F1 /* DSDV3KPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDV3KPacket.h; sourceTree = "<group>"; };
+		756A40A820EC60D2003A11F1 /* DSEDPlusLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEDPlusLink.h; sourceTree = "<group>"; };
+		756A40A920EC60D2003A11F1 /* DSEDV3KPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEDV3KPacket.h; sourceTree = "<group>"; };
+		756A40AA20EC60D2003A11F1 /* DSEDPlusAuthenticator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEDPlusAuthenticator.h; sourceTree = "<group>"; };
+		756A40AB20EC60D3003A11F1 /* DSEDPlusLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEDPlusLink.m; sourceTree = "<group>"; };
+		756A40AC20EC60D3003A11F1 /* PortMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PortMapper.m; sourceTree = "<group>"; };
+		756A40AD20EC60D3003A11F1 /* DSELinkDriverDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSELinkDriverDelegate.h; sourceTree = "<group>"; };
+		756A40AE20EC60D3003A11F1 /* DSEVocoderDriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEVocoderDriver.h; sourceTree = "<group>"; };
+		756A40AF20EC60D3003A11F1 /* DSEDPlusAuthenticator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEDPlusAuthenticator.m; sourceTree = "<group>"; };
+		756A40B020EC60D4003A11F1 /* DSEDCSLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEDCSLink.h; sourceTree = "<group>"; };
+		756A40B120EC60D4003A11F1 /* DSESlowDataCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSESlowDataCoder.m; sourceTree = "<group>"; };
+		756A40B220EC60D4003A11F1 /* DSEDV3KVocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEDV3KVocoder.h; sourceTree = "<group>"; };
+		756A40B320EC60D4003A11F1 /* DSELinkDriver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSELinkDriver.m; sourceTree = "<group>"; };
+		756A40B420EC60D5003A11F1 /* DNSHost.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNSHost.m; sourceTree = "<group>"; };
+		756A40B520EC60D5003A11F1 /* DSELinkDriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSELinkDriver.h; sourceTree = "<group>"; };
+		756A40B620EC60D5003A11F1 /* DSEIRCDDBGateways.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEIRCDDBGateways.h; sourceTree = "<group>"; };
+		756A40B720EC60D5003A11F1 /* DNSHost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNSHost.h; sourceTree = "<group>"; };
+		756A40B820EC60D5003A11F1 /* DSELinkDriverSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSELinkDriverSubclass.h; sourceTree = "<group>"; };
+		756A40B920EC60D6003A11F1 /* DSEDExtraLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEDExtraLink.h; sourceTree = "<group>"; };
+		756A40BA20EC60D6003A11F1 /* DSEDV3KVocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEDV3KVocoder.m; sourceTree = "<group>"; };
+		756A40BB20EC60D6003A11F1 /* PortMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PortMapper.h; sourceTree = "<group>"; };
+		756A40BC20EC60D6003A11F1 /* DSEAprsLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEAprsLocation.m; sourceTree = "<group>"; };
+		756A40BD20EC60D7003A11F1 /* DSEIRCDDBGateways.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEIRCDDBGateways.m; sourceTree = "<group>"; };
+		756A40BE20EC60D7003A11F1 /* DSEDCSLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEDCSLink.m; sourceTree = "<group>"; };
+		756A40BF20EC60D7003A11F1 /* DSESlowDataDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSESlowDataDelegate.h; sourceTree = "<group>"; };
+		756A40C020EC60D7003A11F1 /* DSEDExtraLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEDExtraLink.m; sourceTree = "<group>"; };
+		756A40C120EC60D7003A11F1 /* DSEAprsLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEAprsLocation.h; sourceTree = "<group>"; };
+		756A40C220EC60D8003A11F1 /* DSELinkDriverProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSELinkDriverProtocol.h; sourceTree = "<group>"; };
+		756A40C320EC60D8003A11F1 /* DSESlowDataCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSESlowDataCoder.h; sourceTree = "<group>"; };
+		756A40CF20EC610B003A11F1 /* DStarDelight-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DStarDelight-Bridging-Header.h"; sourceTree = "<group>"; };
+		756A40D020EC610C003A11F1 /* DStarEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DStarEngine.h; sourceTree = "<group>"; };
 		758B49BF20E41302003A11F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../../Old/DStarDelight/Base.lproj/New.storyboard; sourceTree = "<group>"; };
 		758B49C120E4196D003A11F1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		758B49C420E41AA7003A11F1 /* DSEMapPopupController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSEMapPopupController.xib; sourceTree = "<group>"; };
 		758B49CA20E41BD8003A11F1 /* DSEAddPopupController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSEAddPopupController.xib; sourceTree = "<group>"; };
 		758B49CC20E41C92003A11F1 /* DefaultPreferences.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DefaultPreferences.plist; sourceTree = "<group>"; };
 		758B49D220E41F0C003A11F1 /* DSDestinationCallFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDestinationCallFormatter.h; sourceTree = "<group>"; };
 		758B49D320E41F0D003A11F1 /* DSDestinationCallFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDestinationCallFormatter.m; sourceTree = "<group>"; };
+		75945C8220EC62F2003A11F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		75945C8320EC62F2003A11F1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		75945C8420EC62F2003A11F1 /* BTRDCSLink.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTRDCSLink.h; sourceTree = "<group>"; };
+		75945C8520EC62F2003A11F1 /* DSAddPopupController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSAddPopupController.h; sourceTree = "<group>"; };
+		75945C8620EC62F2003A11F1 /* DSAddPopupController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSAddPopupController.m; sourceTree = "<group>"; };
+		75945C8720EC62F2003A11F1 /* DSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSAppDelegate.h; sourceTree = "<group>"; };
+		75945C8820EC62F2003A11F1 /* DSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSAppDelegate.m; sourceTree = "<group>"; };
+		75945C8920EC62F2003A11F1 /* DSAudioHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSAudioHandler.h; sourceTree = "<group>"; };
+		75945C8A20EC62F2003A11F1 /* DSAudioHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSAudioHandler.m; sourceTree = "<group>"; };
+		75945C8B20EC62F2003A11F1 /* DSAudioViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSAudioViewController.h; sourceTree = "<group>"; };
+		75945C8C20EC62F2003A11F1 /* DSAudioViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSAudioViewController.m; sourceTree = "<group>"; };
+		75945C8D20EC62F2003A11F1 /* DSCallFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSCallFormatter.h; sourceTree = "<group>"; };
+		75945C8E20EC62F2003A11F1 /* DSCallFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSCallFormatter.m; sourceTree = "<group>"; };
+		75945C8F20EC62F2003A11F1 /* DSDestinationCallFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSDestinationCallFormatter.h; sourceTree = "<group>"; };
+		75945C9020EC62F2003A11F1 /* DSDestinationCallFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSDestinationCallFormatter.m; sourceTree = "<group>"; };
+		75945C9120EC62F2003A11F1 /* DSGeneralPreferencesController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSGeneralPreferencesController.h; sourceTree = "<group>"; };
+		75945C9220EC62F2003A11F1 /* DSGeneralPreferencesController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSGeneralPreferencesController.m; sourceTree = "<group>"; };
+		75945C9320EC62F2003A11F1 /* DSMainWindowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSMainWindowViewController.h; sourceTree = "<group>"; };
+		75945C9420EC62F2003A11F1 /* DSMainWindowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSMainWindowViewController.m; sourceTree = "<group>"; };
+		75945C9520EC62F2003A11F1 /* DSMapPopupController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSMapPopupController.h; sourceTree = "<group>"; };
+		75945C9620EC62F2003A11F1 /* DSMapPopupController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSMapPopupController.m; sourceTree = "<group>"; };
+		75945C9720EC62F2003A11F1 /* DSMessageFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSMessageFormatter.h; sourceTree = "<group>"; };
+		75945C9820EC62F2003A11F1 /* DSMessageFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSMessageFormatter.m; sourceTree = "<group>"; };
+		75945C9920EC62F2003A11F1 /* DStarDelight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DStarDelight.h; sourceTree = "<group>"; };
+		75945C9A20EC62F2003A11F1 /* DSVocoderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSVocoderViewController.h; sourceTree = "<group>"; };
+		75945C9B20EC62F2003A11F1 /* DSVocoderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSVocoderViewController.m; sourceTree = "<group>"; };
+		75945C9C20EC62F2003A11F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		75945C9E20EC62F2003A11F1 /* MASDictionaryTransformer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASDictionaryTransformer.h; sourceTree = "<group>"; };
+		75945C9F20EC62F2003A11F1 /* MASDictionaryTransformer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MASDictionaryTransformer.m; sourceTree = "<group>"; };
+		75945CA020EC62F2003A11F1 /* MASKeyCodes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASKeyCodes.h; sourceTree = "<group>"; };
+		75945CA120EC62F2003A11F1 /* MASShortcut.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASShortcut.h; sourceTree = "<group>"; };
+		75945CA220EC62F2003A11F1 /* MASShortcut.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MASShortcut.m; sourceTree = "<group>"; };
+		75945CA320EC62F2003A11F1 /* MASShortcutValidator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASShortcutValidator.h; sourceTree = "<group>"; };
+		75945CA420EC62F2003A11F1 /* MASShortcutValidator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MASShortcutValidator.m; sourceTree = "<group>"; };
+		75945CA520EC62F2003A11F1 /* MASShortcutView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASShortcutView.h; sourceTree = "<group>"; };
+		75945CA620EC62F2003A11F1 /* MASShortcutView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MASShortcutView.m; sourceTree = "<group>"; };
+		75945CAA20EC62F2003A11F1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		75945CAB20EC62F2003A11F1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		75945CAD20EC62F2003A11F1 /* DSNetworkVocoderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSNetworkVocoderViewController.h; sourceTree = "<group>"; };
+		75945CAE20EC62F2003A11F1 /* DSNetworkVocoderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSNetworkVocoderViewController.m; sourceTree = "<group>"; };
+		75945CAF20EC62F2003A11F1 /* DSSerialVocoderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSSerialVocoderViewController.h; sourceTree = "<group>"; };
+		75945CB020EC62F2003A11F1 /* DSSerialVocoderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSSerialVocoderViewController.m; sourceTree = "<group>"; };
 		75E087EA20E31572003A11F1 /* DStarDelight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DStarDelight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75E087F320E31574003A11F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75E087F820E31574003A11F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = SOURCE_ROOT; };
-		75E087F920E31574003A11F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		75E087FB20E31574003A11F1 /* DStarDelight.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DStarDelight.entitlements; sourceTree = "<group>"; };
 		75E0880020E31575003A11F1 /* DStarDelightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DStarDelightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75E0880420E31575003A11F1 /* DStarDelightUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DStarDelightUITests.m; sourceTree = "<group>"; };
@@ -114,24 +192,12 @@
 		75E0883120E3177F003A11F1 /* DSMessageFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSMessageFormatter.m; sourceTree = "<group>"; };
 		75E0883520E3177F003A11F1 /* DSVocoderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSVocoderViewController.h; sourceTree = "<group>"; };
 		75E0883620E3177F003A11F1 /* DSVocoderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSVocoderViewController.m; sourceTree = "<group>"; };
-		75E0883D20E3177F003A11F1 /* MASDictionaryTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASDictionaryTransformer.h; sourceTree = "<group>"; };
-		75E0883E20E3177F003A11F1 /* MASDictionaryTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASDictionaryTransformer.m; sourceTree = "<group>"; };
-		75E0883F20E3177F003A11F1 /* MASKeyCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASKeyCodes.h; sourceTree = "<group>"; };
-		75E0884020E3177F003A11F1 /* MASShortcut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASShortcut.h; sourceTree = "<group>"; };
-		75E0884120E3177F003A11F1 /* MASShortcut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASShortcut.m; sourceTree = "<group>"; };
-		75E0884220E3177F003A11F1 /* MASShortcutValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASShortcutValidator.h; sourceTree = "<group>"; };
-		75E0884320E3177F003A11F1 /* MASShortcutValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASShortcutValidator.m; sourceTree = "<group>"; };
-		75E0884420E3177F003A11F1 /* MASShortcutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASShortcutView.h; sourceTree = "<group>"; };
-		75E0884520E3177F003A11F1 /* MASShortcutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASShortcutView.m; sourceTree = "<group>"; };
 		75E0885820E3177F003A11F1 /* DSNetworkVocoderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSNetworkVocoderView.xib; sourceTree = "<group>"; };
-		75E0885920E3177F003A11F1 /* DSNetworkVocoderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSNetworkVocoderViewController.h; sourceTree = "<group>"; };
-		75E0885A20E3177F003A11F1 /* DSNetworkVocoderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSNetworkVocoderViewController.m; sourceTree = "<group>"; };
-		75E0885B20E3177F003A11F1 /* DSSerialVocoderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSSerialVocoderView.xib; sourceTree = "<group>"; };
-		75E0885C20E3177F003A11F1 /* DSSerialVocoderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSSerialVocoderViewController.h; sourceTree = "<group>"; };
-		75E0885D20E3177F003A11F1 /* DSSerialVocoderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSSerialVocoderViewController.m; sourceTree = "<group>"; };
+		75E0885B20E3177F003A11F1 /* DSSerialVocoderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DSSerialVocoderView.xib; path = Storybooks/DSSerialVocoderView.xib; sourceTree = SOURCE_ROOT; };
 		B32ABE4921FB7F512B104837 /* Pods-DStarDelight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DStarDelight.release.xcconfig"; path = "../Pods/Target Support Files/Pods-DStarDelight/Pods-DStarDelight.release.xcconfig"; sourceTree = "<group>"; };
-		BCAC0CB724613FB9B2EAD4C6 /* Pods_DStarDelight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DStarDelight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E743F5056F66E6004CE683A7 /* Pods-DStarDelight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DStarDelight.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-DStarDelight/Pods-DStarDelight.debug.xcconfig"; sourceTree = "<group>"; };
+		EEB7436A6B48A35A03347650 /* libPods-DStarDelight.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DStarDelight.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBD8596DEF8A4BB1161AA109 /* libPods-DStarDelightUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DStarDelightUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,8 +205,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CDB699A4364EA9801D300D1 /* Pods_DStarDelight.framework in Frameworks */,
-				757DEE9B20E6D98E003A11F1 /* DStarEngine.framework in Frameworks */,
+				B1F5E821A03E073C27C643FF /* libPods-DStarDelight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +213,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CC77E6D0D3F8CC704880E8D /* Pods_DStarDelightUITests.framework in Frameworks */,
+				ECB524EB7423893D975D71B9 /* libPods-DStarDelightUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,15 +231,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		7525481C20E7C19A003A11F1 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				7525482120E7C19A003A11F1 /* DStarEngine.framework */,
-				7525482320E7C19A003A11F1 /* DStarEngineIOS.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		7525485220E988D0003A11F1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,23 +242,178 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		756A408B20EC5FAB003A11F1 /* DSE */ = {
+			isa = PBXGroup;
+			children = (
+				756A409020EC60B6003A11F1 /* TPCircularBuffer */,
+				756A40D020EC610C003A11F1 /* DStarEngine.h */,
+				756A40CF20EC610B003A11F1 /* DStarDelight-Bridging-Header.h */,
+				756A409F20EC60B7003A11F1 /* DStarUtils.h */,
+				756A409D20EC60B7003A11F1 /* DStarUtils.m */,
+				756A408C20EC607B003A11F1 /* DSEDataEngine.h */,
+				756A40A020EC60B7003A11F1 /* DSDV3KPacket.h */,
+				756A409920EC60B6003A11F1 /* DSEDV3KVocoderSubclass.h */,
+				756A409E20EC60B7003A11F1 /* DSEDV3KNetworkVocoder.h */,
+				756A409820EC60B6003A11F1 /* DSDV3KSerialVocoder.h */,
+				756A409A20EC60B6003A11F1 /* DSDV3KSerialVocoder.m */,
+				756A409C20EC60B6003A11F1 /* DSEDataEngine.h */,
+				756A408E20EC607B003A11F1 /* DSEDataEngine.m */,
+				756A408D20EC607B003A11F1 /* DSEDataEngineDelegate.h */,
+				756A409720EC60B6003A11F1 /* DSEDataEngine.m */,
+				756A409B20EC60B6003A11F1 /* DSEDataEngineDelegate.h */,
+				756A408920EC5FA0003A11F1 /* DSEAudioHandler.h */,
+				756A408820EC5FA0003A11F1 /* DSEAudioHandler.m */,
+				756A40B220EC60D4003A11F1 /* DSEDV3KVocoder.h */,
+				756A40BA20EC60D6003A11F1 /* DSEDV3KVocoder.m */,
+				756A40A920EC60D2003A11F1 /* DSEDV3KPacket.h */,
+				756A40AE20EC60D3003A11F1 /* DSEVocoderDriver.h */,
+				756A40C220EC60D8003A11F1 /* DSELinkDriverProtocol.h */,
+				756A40C320EC60D8003A11F1 /* DSESlowDataCoder.h */,
+				756A40B120EC60D4003A11F1 /* DSESlowDataCoder.m */,
+				756A40BF20EC60D7003A11F1 /* DSESlowDataDelegate.h */,
+				756A40AA20EC60D2003A11F1 /* DSEDPlusAuthenticator.h */,
+				756A40AF20EC60D3003A11F1 /* DSEDPlusAuthenticator.m */,
+				756A40B620EC60D5003A11F1 /* DSEIRCDDBGateways.h */,
+				756A40BD20EC60D7003A11F1 /* DSEIRCDDBGateways.m */,
+				756A40B020EC60D4003A11F1 /* DSEDCSLink.h */,
+				756A40BE20EC60D7003A11F1 /* DSEDCSLink.m */,
+				756A40A820EC60D2003A11F1 /* DSEDPlusLink.h */,
+				756A40AB20EC60D3003A11F1 /* DSEDPlusLink.m */,
+				756A40AD20EC60D3003A11F1 /* DSELinkDriverDelegate.h */,
+				756A40B820EC60D5003A11F1 /* DSELinkDriverSubclass.h */,
+				756A40B920EC60D6003A11F1 /* DSEDExtraLink.h */,
+				756A40C020EC60D7003A11F1 /* DSEDExtraLink.m */,
+				756A40B520EC60D5003A11F1 /* DSELinkDriver.h */,
+				756A40B320EC60D4003A11F1 /* DSELinkDriver.m */,
+				756A40C120EC60D7003A11F1 /* DSEAprsLocation.h */,
+				756A40BC20EC60D6003A11F1 /* DSEAprsLocation.m */,
+				756A40B720EC60D5003A11F1 /* DNSHost.h */,
+				756A40B420EC60D5003A11F1 /* DNSHost.m */,
+				756A40BB20EC60D6003A11F1 /* PortMapper.h */,
+				756A40AC20EC60D3003A11F1 /* PortMapper.m */,
+			);
+			path = DSE;
+			sourceTree = "<group>";
+		};
+		756A409020EC60B6003A11F1 /* TPCircularBuffer */ = {
+			isa = PBXGroup;
+			children = (
+				756A409120EC60B6003A11F1 /* README.markdown */,
+				756A409220EC60B6003A11F1 /* TPCircularBuffer+AudioBufferList.c */,
+				756A409320EC60B6003A11F1 /* TPCircularBuffer+AudioBufferList.h */,
+				756A409420EC60B6003A11F1 /* TPCircularBuffer.c */,
+				756A409520EC60B6003A11F1 /* TPCircularBuffer.h */,
+				756A409620EC60B6003A11F1 /* TPCircularBuffer.podspec */,
+			);
+			name = TPCircularBuffer;
+			path = ../../Frameworks/TPCircularBuffer;
+			sourceTree = "<group>";
+		};
 		757DEE9920E6D98E003A11F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				757DEE9A20E6D98E003A11F1 /* DStarEngine.framework */,
-				BCAC0CB724613FB9B2EAD4C6 /* Pods_DStarDelight.framework */,
-				2A7897DD4BFEDD90011800AD /* Pods_DStarDelightUITests.framework */,
+				EEB7436A6B48A35A03347650 /* libPods-DStarDelight.a */,
+				FBD8596DEF8A4BB1161AA109 /* libPods-DStarDelightUITests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		75945C8120EC62F2003A11F1 /* DS */ = {
+			isa = PBXGroup;
+			children = (
+				758B49D320E41F0D003A11F1 /* DSDestinationCallFormatter.m */,
+				75E0881020E3177F003A11F1 /* DSAddPopupController.h */,
+				75E0881320E3177F003A11F1 /* DSAppDelegate.m */,
+				75E0881B20E3177F003A11F1 /* DSCallFormatter.m */,
+				75E0882320E3177F003A11F1 /* DSGeneralPreferencesController.h */,
+				75E0882420E3177F003A11F1 /* DSGeneralPreferencesController.m */,
+				75E0882C20E3177F003A11F1 /* DSMainWindowViewController.h */,
+				75E0882D20E3177F003A11F1 /* DSMainWindowViewController.m */,
+				75E0882E20E3177F003A11F1 /* DSMapPopupController.h */,
+				75E0883520E3177F003A11F1 /* DSVocoderViewController.h */,
+				7525484120E7F084003A11F1 /* DStarDelight.h */,
+				7525480C20E6FDD5003A11F1 /* DSAudioHandler.h */,
+				7525480B20E6FDD5003A11F1 /* DSAudioHandler.m */,
+				758B49D220E41F0C003A11F1 /* DSDestinationCallFormatter.h */,
+				75E0881120E3177F003A11F1 /* DSAddPopupController.m */,
+				75E0881220E3177F003A11F1 /* DSAppDelegate.h */,
+				75E0881820E3177F003A11F1 /* DSAudioViewController.h */,
+				75E0881920E3177F003A11F1 /* DSAudioViewController.m */,
+				75E0881A20E3177F003A11F1 /* DSCallFormatter.h */,
+				75E0882F20E3177F003A11F1 /* DSMapPopupController.m */,
+				75E0883020E3177F003A11F1 /* DSMessageFormatter.h */,
+				75E0883120E3177F003A11F1 /* DSMessageFormatter.m */,
+				75E0883620E3177F003A11F1 /* DSVocoderViewController.m */,
+				75945C8220EC62F2003A11F1 /* AppDelegate.h */,
+				75945C8320EC62F2003A11F1 /* AppDelegate.m */,
+				75945C8420EC62F2003A11F1 /* BTRDCSLink.h */,
+				75945C8520EC62F2003A11F1 /* DSAddPopupController.h */,
+				75945C8620EC62F2003A11F1 /* DSAddPopupController.m */,
+				75945C8720EC62F2003A11F1 /* DSAppDelegate.h */,
+				75945C8820EC62F2003A11F1 /* DSAppDelegate.m */,
+				75945C8920EC62F2003A11F1 /* DSAudioHandler.h */,
+				75945C8A20EC62F2003A11F1 /* DSAudioHandler.m */,
+				75945C8B20EC62F2003A11F1 /* DSAudioViewController.h */,
+				75945C8C20EC62F2003A11F1 /* DSAudioViewController.m */,
+				75945C8D20EC62F2003A11F1 /* DSCallFormatter.h */,
+				75945C8E20EC62F2003A11F1 /* DSCallFormatter.m */,
+				75945C8F20EC62F2003A11F1 /* DSDestinationCallFormatter.h */,
+				75945C9020EC62F2003A11F1 /* DSDestinationCallFormatter.m */,
+				75945C9120EC62F2003A11F1 /* DSGeneralPreferencesController.h */,
+				75945C9220EC62F2003A11F1 /* DSGeneralPreferencesController.m */,
+				75945C9320EC62F2003A11F1 /* DSMainWindowViewController.h */,
+				75945C9420EC62F2003A11F1 /* DSMainWindowViewController.m */,
+				75945C9520EC62F2003A11F1 /* DSMapPopupController.h */,
+				75945C9620EC62F2003A11F1 /* DSMapPopupController.m */,
+				75945C9720EC62F2003A11F1 /* DSMessageFormatter.h */,
+				75945C9820EC62F2003A11F1 /* DSMessageFormatter.m */,
+				75945C9920EC62F2003A11F1 /* DStarDelight.h */,
+				75945C9A20EC62F2003A11F1 /* DSVocoderViewController.h */,
+				75945C9B20EC62F2003A11F1 /* DSVocoderViewController.m */,
+				75945CAA20EC62F2003A11F1 /* ViewController.h */,
+				75945CAB20EC62F2003A11F1 /* ViewController.m */,
+				75945CAC20EC62F2003A11F1 /* ViewControllers */,
+				75945C9C20EC62F2003A11F1 /* main.m */,
+				75945C9D20EC62F2003A11F1 /* MASShortcut */,
+			);
+			path = DS;
+			sourceTree = "<group>";
+		};
+		75945C9D20EC62F2003A11F1 /* MASShortcut */ = {
+			isa = PBXGroup;
+			children = (
+				75945C9E20EC62F2003A11F1 /* MASDictionaryTransformer.h */,
+				75945C9F20EC62F2003A11F1 /* MASDictionaryTransformer.m */,
+				75945CA020EC62F2003A11F1 /* MASKeyCodes.h */,
+				75945CA120EC62F2003A11F1 /* MASShortcut.h */,
+				75945CA220EC62F2003A11F1 /* MASShortcut.m */,
+				75945CA320EC62F2003A11F1 /* MASShortcutValidator.h */,
+				75945CA420EC62F2003A11F1 /* MASShortcutValidator.m */,
+				75945CA520EC62F2003A11F1 /* MASShortcutView.h */,
+				75945CA620EC62F2003A11F1 /* MASShortcutView.m */,
+			);
+			path = MASShortcut;
+			sourceTree = "<group>";
+		};
+		75945CAC20EC62F2003A11F1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				75945CAD20EC62F2003A11F1 /* DSNetworkVocoderViewController.h */,
+				75945CAE20EC62F2003A11F1 /* DSNetworkVocoderViewController.m */,
+				75945CAF20EC62F2003A11F1 /* DSSerialVocoderViewController.h */,
+				75945CB020EC62F2003A11F1 /* DSSerialVocoderViewController.m */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		75E087E120E31572003A11F1 = {
 			isa = PBXGroup;
 			children = (
-				7525481B20E7C19A003A11F1 /* DStarEngine.xcodeproj */,
+				756A408B20EC5FAB003A11F1 /* DSE */,
+				75945C8120EC62F2003A11F1 /* DS */,
 				7525485220E988D0003A11F1 /* Resources */,
 				7525488720EAA9D6003A11F1 /* SharedResources */,
-				75E087EC20E31572003A11F1 /* DStarDelight */,
+				75E087EC20E31572003A11F1 /* Storybooks */,
 				75E0880320E31575003A11F1 /* DStarDelightUITests */,
 				75E087EB20E31572003A11F1 /* Products */,
 				757DEE9920E6D98E003A11F1 /* Frameworks */,
@@ -219,20 +430,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		75E087EC20E31572003A11F1 /* DStarDelight */ = {
+		75E087EC20E31572003A11F1 /* Storybooks */ = {
 			isa = PBXGroup;
 			children = (
-				758B49CA20E41BD8003A11F1 /* DSEAddPopupController.xib */,
-				758B49C420E41AA7003A11F1 /* DSEMapPopupController.xib */,
 				75E0885820E3177F003A11F1 /* DSNetworkVocoderView.xib */,
+				758B49CA20E41BD8003A11F1 /* DSEAddPopupController.xib */,
 				75E0885B20E3177F003A11F1 /* DSSerialVocoderView.xib */,
 				758B49C120E4196D003A11F1 /* Main.storyboard */,
 				758B49BE20E41301003A11F1 /* New.storyboard */,
-				7525484120E7F084003A11F1 /* DStarDelight.h */,
-				75E0880F20E3177F003A11F1 /* DS */,
-				75E087F920E31574003A11F1 /* main.m */,
 			);
-			path = DStarDelight;
+			path = Storybooks;
 			sourceTree = "<group>";
 		};
 		75E0880320E31575003A11F1 /* DStarDelightUITests */ = {
@@ -242,65 +449,6 @@
 				75E0880620E31575003A11F1 /* Info.plist */,
 			);
 			path = DStarDelightUITests;
-			sourceTree = "<group>";
-		};
-		75E0880F20E3177F003A11F1 /* DS */ = {
-			isa = PBXGroup;
-			children = (
-				7525480C20E6FDD5003A11F1 /* DSAudioHandler.h */,
-				7525480B20E6FDD5003A11F1 /* DSAudioHandler.m */,
-				758B49D220E41F0C003A11F1 /* DSDestinationCallFormatter.h */,
-				758B49D320E41F0D003A11F1 /* DSDestinationCallFormatter.m */,
-				75E0881020E3177F003A11F1 /* DSAddPopupController.h */,
-				75E0881120E3177F003A11F1 /* DSAddPopupController.m */,
-				75E0881220E3177F003A11F1 /* DSAppDelegate.h */,
-				75E0881320E3177F003A11F1 /* DSAppDelegate.m */,
-				75E0881820E3177F003A11F1 /* DSAudioViewController.h */,
-				75E0881920E3177F003A11F1 /* DSAudioViewController.m */,
-				75E0881A20E3177F003A11F1 /* DSCallFormatter.h */,
-				75E0881B20E3177F003A11F1 /* DSCallFormatter.m */,
-				75E0882320E3177F003A11F1 /* DSGeneralPreferencesController.h */,
-				75E0882420E3177F003A11F1 /* DSGeneralPreferencesController.m */,
-				75E0882C20E3177F003A11F1 /* DSMainWindowViewController.h */,
-				75E0882D20E3177F003A11F1 /* DSMainWindowViewController.m */,
-				75E0882E20E3177F003A11F1 /* DSMapPopupController.h */,
-				75E0882F20E3177F003A11F1 /* DSMapPopupController.m */,
-				75E0883020E3177F003A11F1 /* DSMessageFormatter.h */,
-				75E0883120E3177F003A11F1 /* DSMessageFormatter.m */,
-				75E0883520E3177F003A11F1 /* DSVocoderViewController.h */,
-				75E0883620E3177F003A11F1 /* DSVocoderViewController.m */,
-				75E0883C20E3177F003A11F1 /* MASShortcut */,
-				75E0884F20E3177F003A11F1 /* Vocoder Drivers */,
-			);
-			name = DS;
-			path = ../../DS;
-			sourceTree = "<group>";
-		};
-		75E0883C20E3177F003A11F1 /* MASShortcut */ = {
-			isa = PBXGroup;
-			children = (
-				75E0883D20E3177F003A11F1 /* MASDictionaryTransformer.h */,
-				75E0883E20E3177F003A11F1 /* MASDictionaryTransformer.m */,
-				75E0883F20E3177F003A11F1 /* MASKeyCodes.h */,
-				75E0884020E3177F003A11F1 /* MASShortcut.h */,
-				75E0884120E3177F003A11F1 /* MASShortcut.m */,
-				75E0884220E3177F003A11F1 /* MASShortcutValidator.h */,
-				75E0884320E3177F003A11F1 /* MASShortcutValidator.m */,
-				75E0884420E3177F003A11F1 /* MASShortcutView.h */,
-				75E0884520E3177F003A11F1 /* MASShortcutView.m */,
-			);
-			path = MASShortcut;
-			sourceTree = "<group>";
-		};
-		75E0884F20E3177F003A11F1 /* Vocoder Drivers */ = {
-			isa = PBXGroup;
-			children = (
-				75E0885920E3177F003A11F1 /* DSNetworkVocoderViewController.h */,
-				75E0885A20E3177F003A11F1 /* DSNetworkVocoderViewController.m */,
-				75E0885C20E3177F003A11F1 /* DSSerialVocoderViewController.h */,
-				75E0885D20E3177F003A11F1 /* DSSerialVocoderViewController.m */,
-			);
-			path = "Vocoder Drivers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,12 +462,10 @@
 				75E087E620E31572003A11F1 /* Sources */,
 				75E087E720E31572003A11F1 /* Frameworks */,
 				75E087E820E31572003A11F1 /* Resources */,
-				26A62B198D676876EF976A4E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7525482720E7C566003A11F1 /* PBXTargetDependency */,
 			);
 			name = DStarDelight;
 			productName = DStarDelight;
@@ -374,12 +520,6 @@
 			mainGroup = 75E087E120E31572003A11F1;
 			productRefGroup = 75E087EB20E31572003A11F1 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 7525481C20E7C19A003A11F1 /* Products */;
-					ProjectRef = 7525481B20E7C19A003A11F1 /* DStarEngine.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				75E087E920E31572003A11F1 /* DStarDelight */,
@@ -388,34 +528,18 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		7525482120E7C19A003A11F1 /* DStarEngine.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = DStarEngine.framework;
-			remoteRef = 7525482020E7C19A003A11F1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		7525482320E7C19A003A11F1 /* DStarEngineIOS.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = DStarEngineIOS.framework;
-			remoteRef = 7525482220E7C19A003A11F1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
 		75E087E820E31572003A11F1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				75E087F420E31574003A11F1 /* Assets.xcassets in Resources */,
-				758B49C720E41AA7003A11F1 /* DSEMapPopupController.xib in Resources */,
+				756A40A420EC60B7003A11F1 /* TPCircularBuffer.podspec in Resources */,
 				758B49CF20E41C92003A11F1 /* DefaultPreferences.plist in Resources */,
 				758B49C020E41302003A11F1 /* New.storyboard in Resources */,
 				758B49C220E4196D003A11F1 /* Main.storyboard in Resources */,
 				75E0887F20E3177F003A11F1 /* DSSerialVocoderView.xib in Resources */,
+				756A40A120EC60B7003A11F1 /* README.markdown in Resources */,
 				758B49CB20E41BD8003A11F1 /* DSEAddPopupController.xib in Resources */,
 				75E0887D20E3177F003A11F1 /* DSNetworkVocoderView.xib in Resources */,
 				7525488820EAA9D6003A11F1 /* SharedResources in Resources */,
@@ -450,23 +574,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		26A62B198D676876EF976A4E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/../Pods/Target Support Files/Pods-DStarDelight/Pods-DStarDelight-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SwiftSocket-macOS/SwiftSocket.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSocket.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-DStarDelight/Pods-DStarDelight-frameworks.sh\"\n";
-		};
 		E38A527183CD79BB3180EFB3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -492,23 +599,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7525485320E98AAB003A11F1 /* main.m in Sources */,
+				756A40CE20EC60D8003A11F1 /* DSEDExtraLink.m in Sources */,
+				756A40A320EC60B7003A11F1 /* TPCircularBuffer.c in Sources */,
+				756A40C620EC60D8003A11F1 /* DSEDPlusAuthenticator.m in Sources */,
+				756A40A620EC60B7003A11F1 /* DSDV3KSerialVocoder.m in Sources */,
+				756A40CD20EC60D8003A11F1 /* DSEDCSLink.m in Sources */,
 				75E0886420E3177F003A11F1 /* DSCallFormatter.m in Sources */,
-				75E0887420E3177F003A11F1 /* MASShortcutValidator.m in Sources */,
+				756A40C920EC60D8003A11F1 /* DNSHost.m in Sources */,
 				75E0886020E3177F003A11F1 /* DSAppDelegate.m in Sources */,
-				75E0887320E3177F003A11F1 /* MASShortcut.m in Sources */,
-				75E0888020E3177F003A11F1 /* DSSerialVocoderViewController.m in Sources */,
 				75E0886C20E3177F003A11F1 /* DSMainWindowViewController.m in Sources */,
-				75E0887220E3177F003A11F1 /* MASDictionaryTransformer.m in Sources */,
+				756A40C820EC60D8003A11F1 /* DSELinkDriver.m in Sources */,
+				756A40C420EC60D8003A11F1 /* DSEDPlusLink.m in Sources */,
+				756A40C720EC60D8003A11F1 /* DSESlowDataCoder.m in Sources */,
 				75E0886920E3177F003A11F1 /* DSGeneralPreferencesController.m in Sources */,
 				75E0886320E3177F003A11F1 /* DSAudioViewController.m in Sources */,
+				756A40CA20EC60D8003A11F1 /* DSEDV3KVocoder.m in Sources */,
+				756A408F20EC607B003A11F1 /* DSEDataEngine.m in Sources */,
 				75E0886E20E3177F003A11F1 /* DSMessageFormatter.m in Sources */,
 				75E0887020E3177F003A11F1 /* DSVocoderViewController.m in Sources */,
+				756A40A720EC60B7003A11F1 /* DStarUtils.m in Sources */,
 				75E0885F20E3177F003A11F1 /* DSAddPopupController.m in Sources */,
+				756A40A220EC60B7003A11F1 /* TPCircularBuffer+AudioBufferList.c in Sources */,
 				75E0886D20E3177F003A11F1 /* DSMapPopupController.m in Sources */,
 				7525480D20E6FDD6003A11F1 /* DSAudioHandler.m in Sources */,
-				75E0887E20E3177F003A11F1 /* DSNetworkVocoderViewController.m in Sources */,
-				75E0887520E3177F003A11F1 /* MASShortcutView.m in Sources */,
+				756A40CB20EC60D8003A11F1 /* DSEAprsLocation.m in Sources */,
+				756A40CC20EC60D8003A11F1 /* DSEIRCDDBGateways.m in Sources */,
+				756A40A520EC60B7003A11F1 /* DSEDataEngine.m in Sources */,
+				756A40C520EC60D8003A11F1 /* PortMapper.m in Sources */,
+				756A408A20EC5FA1003A11F1 /* DSEAudioHandler.m in Sources */,
 				758B49D420E41F0D003A11F1 /* DSDestinationCallFormatter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -524,11 +642,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7525482720E7C566003A11F1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = DStarEngine;
-			targetProxy = 7525482620E7C566003A11F1 /* PBXContainerItemProxy */;
-		};
 		75E0880220E31575003A11F1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 75E087E920E31572003A11F1 /* DStarDelight */;

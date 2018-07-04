@@ -1,8 +1,8 @@
 
 
 #import "DSAppDelegate.h"
-#import <DStarEngine/DStarEngine.h>
 #import "DSAudioHandler.h"
+#import "DStarUtils.h"
 
 @implementation DSEAppDelegate
 
@@ -31,9 +31,9 @@
             engineaudio.inputDevice = inputDevice;
         } else {
             NSArray *inputDevices = [DSAudioHandler enumerateInputDevices];
-            id firstDevice = [inputDevices objectAtIndex:0];
-            engineaudio.setDefaultInputDevice = firstDevice;
-            engineaudio.inputDevice = firstDevice;
+            NSDictionary *firstDevice = [inputDevices objectAtIndex:0];
+            [engineaudio setDefaultInputDevice:  firstDevice];
+            engineaudio.inputDevice = (AudioDeviceID)firstDevice;
             [[NSNotificationCenter defaultCenter] postNotificationName:DSAudioDeviceChanged object: nil];
         }
     } else {

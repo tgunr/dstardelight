@@ -9,8 +9,8 @@
 #import <IOKit/usb/IOUSBLib.h>
 
 #import "DSDV3KPacket.h"
-#import <DStarEngine/DSEDataEngine.h>
-//#import "DSSerialVocoderViewController.h"
+#import "DSEDataEngine.h"
+#import "DSSerialVocoderViewController.h"
 #import "DSEDV3KVocoderSubclass.h"
 
 #pragma mark - Device removal and insertion

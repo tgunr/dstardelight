@@ -1,7 +1,7 @@
 
 #import <AppKit/AppKit.h>
 
-#import <DStarEngine/DSEDataEngineDelegate.h>
+#import "DSEDataEngineDelegate.h"
 
 @class MASShortcut;
 

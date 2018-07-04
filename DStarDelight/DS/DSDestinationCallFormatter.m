@@ -1,7 +1,8 @@
 
 
 #import "DSDestinationCallFormatter.h"
-#import <DStarEngine/DSEDataEngine.h>
+
+#import "DSEDataEngine.h"
 
 @interface DSEDestinationCallFormatter ()
 
