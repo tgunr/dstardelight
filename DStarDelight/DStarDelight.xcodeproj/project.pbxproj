@@ -42,7 +42,7 @@
 		756A40CE20EC60D8003A11F1 /* DSEDExtraLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 756A40C020EC60D7003A11F1 /* DSEDExtraLink.m */; };
 		758B49C020E41302003A11F1 /* New.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 758B49BE20E41301003A11F1 /* New.storyboard */; };
 		758B49C220E4196D003A11F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 758B49C120E4196D003A11F1 /* Main.storyboard */; };
-		758B49CB20E41BD8003A11F1 /* DSEAddPopupController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 758B49CA20E41BD8003A11F1 /* DSEAddPopupController.xib */; };
+		758B49CB20E41BD8003A11F1 /* DSAddPopupController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 758B49CA20E41BD8003A11F1 /* DSAddPopupController.xib */; };
 		758B49CF20E41C92003A11F1 /* DefaultPreferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 758B49CC20E41C92003A11F1 /* DefaultPreferences.plist */; };
 		758B49D420E41F0D003A11F1 /* DSDestinationCallFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 758B49D320E41F0D003A11F1 /* DSDestinationCallFormatter.m */; };
 		75E087F420E31574003A11F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75E087F320E31574003A11F1 /* Assets.xcassets */; };
@@ -124,7 +124,7 @@
 		756A40D020EC610C003A11F1 /* DStarEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DStarEngine.h; sourceTree = "<group>"; };
 		758B49BF20E41302003A11F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../../Old/DStarDelight/Base.lproj/New.storyboard; sourceTree = "<group>"; };
 		758B49C120E4196D003A11F1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		758B49CA20E41BD8003A11F1 /* DSEAddPopupController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSEAddPopupController.xib; sourceTree = "<group>"; };
+		758B49CA20E41BD8003A11F1 /* DSAddPopupController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSAddPopupController.xib; sourceTree = "<group>"; };
 		758B49CC20E41C92003A11F1 /* DefaultPreferences.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DefaultPreferences.plist; sourceTree = "<group>"; };
 		758B49D220E41F0C003A11F1 /* DSDestinationCallFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDestinationCallFormatter.h; sourceTree = "<group>"; };
 		758B49D320E41F0D003A11F1 /* DSDestinationCallFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDestinationCallFormatter.m; sourceTree = "<group>"; };
@@ -374,7 +374,7 @@
 			isa = PBXGroup;
 			children = (
 				75E0885820E3177F003A11F1 /* DSNetworkVocoderView.xib */,
-				758B49CA20E41BD8003A11F1 /* DSEAddPopupController.xib */,
+				758B49CA20E41BD8003A11F1 /* DSAddPopupController.xib */,
 				75E0885B20E3177F003A11F1 /* DSSerialVocoderView.xib */,
 				758B49C120E4196D003A11F1 /* Main.storyboard */,
 				758B49BE20E41301003A11F1 /* New.storyboard */,
@@ -478,7 +478,7 @@
 				758B49C220E4196D003A11F1 /* Main.storyboard in Resources */,
 				75E0887F20E3177F003A11F1 /* DSSerialVocoderView.xib in Resources */,
 				756A40A120EC60B7003A11F1 /* README.markdown in Resources */,
-				758B49CB20E41BD8003A11F1 /* DSEAddPopupController.xib in Resources */,
+				758B49CB20E41BD8003A11F1 /* DSAddPopupController.xib in Resources */,
 				75E0887D20E3177F003A11F1 /* DSNetworkVocoderView.xib in Resources */,
 				7525488820EAA9D6003A11F1 /* SharedResources in Resources */,
 			);

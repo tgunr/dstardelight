@@ -2,11 +2,11 @@
 
 #import "DSMessageFormatter.h"
 
-@interface DSEMessageFormatter ()
+@interface DSMessageFormatter ()
 
 @end
 
-@implementation DSEMessageFormatter
+@implementation DSMessageFormatter
 
 - (BOOL) isPartialStringValid:(NSString *__autoreleasing *)partialStringPtr proposedSelectedRange:(NSRangePointer)proposedSelRangePtr originalString:(NSString *)origString originalSelectedRange:(NSRange)origSelRange errorDescription:(NSString *__autoreleasing *)error {
     

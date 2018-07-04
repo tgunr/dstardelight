@@ -1,7 +1,7 @@
 
 #import <AppKit/AppKit.h>
  
-@interface DSEAddPopupController : NSViewController <NSControlTextEditingDelegate, NSPopoverDelegate>
+@interface DSAddPopupController : NSViewController <NSControlTextEditingDelegate, NSPopoverDelegate>
 
 @property (nonatomic) NSArrayController *reflectorArrayController;
 @property (weak) IBOutlet NSTextFieldCell *destinationField;

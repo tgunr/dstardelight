@@ -93,8 +93,8 @@ static const unsigned long long NSEC_PER_HOUR = 3600ull * NSEC_PER_SEC;
         _suffix = '2';
         _authenticated = NO;
         
-//        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reauthenicate)     name:UIApplicationDidBecomeActiveNotification object:nil];
-//        [self bind:@"authCall" toObject:[NSUserDefaultsController sharedUserDefaultsController] withKeyPath:@"values.myCall" options:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reauthenicate)     name:NSApplicationDidBecomeActiveNotification object:nil];
+        [self bind:@"authCall" toObject:[NSUserDefaultsController sharedUserDefaultsController] withKeyPath:@"values.myCall" options:nil];
         [self startAuthTimer];
     }
     return self;

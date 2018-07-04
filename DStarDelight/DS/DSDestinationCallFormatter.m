@@ -4,11 +4,11 @@
 
 #import "DSEDataEngine.h"
 
-@interface DSEDestinationCallFormatter ()
+@interface DSDestinationCallFormatter ()
 
 @end
 
-@implementation DSEDestinationCallFormatter
+@implementation DSDestinationCallFormatter
 
 - (BOOL) getObjectValue:(out __autoreleasing id *)obj forString:(NSString *)string errorDescription:(out NSString *__autoreleasing *)error {
     *obj = [string stringByReplacingOccurrencesOfString:@"•" withString:@" "];

@@ -2,13 +2,13 @@
 #import "DSAddPopupController.h"
 #import "DSEDataEngine.h"
 
-@interface DSEAddPopupController ()
+@interface DSAddPopupController ()
 
 @property (nonatomic, getter=inAutoComplete) BOOL complete;
 
 @end
 
-@implementation DSEAddPopupController
+@implementation DSAddPopupController
 
 -(void)awakeFromNib {
     [self.moduleField removeAllItems];

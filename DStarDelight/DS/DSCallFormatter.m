@@ -2,14 +2,14 @@
 
 #import "DSCallFormatter.h"
 
-@interface DSECallFormatter () {
+@interface DSCallFormatter () {
     NSCharacterSet *invalidChars;
     NSRegularExpression *commandRegex;
 }
 
 @end
 
-@implementation DSECallFormatter
+@implementation DSCallFormatter
 
 - (id) init {
     self = [super init];

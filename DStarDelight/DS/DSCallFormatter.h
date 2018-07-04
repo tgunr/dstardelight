@@ -1,7 +1,7 @@
 
 #import <AppKit/AppKit.h>
 
-@interface DSECallFormatter : NSFormatter
+@interface DSCallFormatter : NSFormatter
 
 @property (nonatomic) NSUInteger maxLength;
 

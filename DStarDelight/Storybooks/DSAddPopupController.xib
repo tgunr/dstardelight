@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14269.14" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9060"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14269.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="BTRAddPopupController">
+        <customObject id="-2" userLabel="File's Owner" customClass="DSAddPopupController">
             <connections>
                 <outlet property="destinationField" destination="3lr-YQ-k99" id="5bC-ZI-vD2"/>
                 <outlet property="moduleField" destination="LG0-2N-dnr" id="Lya-fl-cn3"/>
@@ -19,10 +21,11 @@
             <subviews>
                 <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="irZ-NF-YKT">
                     <rect key="frame" x="0.0" y="0.0" width="215" height="57"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <subviews>
                         <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LG0-2N-dnr">
                             <rect key="frame" x="108" y="14" width="54" height="26"/>
-                            <animations/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="5Cf-QO-wyY">
                                 <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="menu"/>
@@ -43,9 +46,9 @@
                         </popUpButton>
                         <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lb8-Zo-rS1">
                             <rect key="frame" x="6" y="17" width="96" height="22"/>
-                            <animations/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="3lr-YQ-k99">
-                                <customFormatter key="formatter" id="2u1-Om-h5K" customClass="BTRCallFormatter">
+                                <customFormatter key="formatter" id="2u1-Om-h5K" customClass="DSCallFormatter">
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
                                             <integer key="value" value="7"/>
@@ -53,7 +56,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </customFormatter>
                                 <font key="font" metaFont="fixedUser" size="11"/>
-                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                             </textFieldCell>
                             <connections>
@@ -62,7 +65,7 @@
                         </textField>
                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pud-zM-Jue">
                             <rect key="frame" x="167" y="18" width="38" height="19"/>
-                            <animations/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <buttonCell key="cell" type="roundRect" title="Add" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Dfe-DU-SPQ">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="cellTitle"/>
@@ -72,10 +75,8 @@
                             </connections>
                         </button>
                     </subviews>
-                    <animations/>
                 </view>
             </subviews>
-            <animations/>
             <point key="canvasLocation" x="686.5" y="306.5"/>
         </customView>
     </objects>

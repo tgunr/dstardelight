@@ -1,6 +1,6 @@
 
 #import <AppKit/AppKit.h>
 
-@interface DSEMessageFormatter : NSFormatter
+@interface DSMessageFormatter : NSFormatter
 
 @end

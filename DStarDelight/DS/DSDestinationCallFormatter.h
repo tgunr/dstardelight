@@ -2,6 +2,6 @@
 
 #import "DSCallFormatter.h"
 
-@interface DSEDestinationCallFormatter : DSECallFormatter
+@interface DSDestinationCallFormatter : DSCallFormatter
 
 @end

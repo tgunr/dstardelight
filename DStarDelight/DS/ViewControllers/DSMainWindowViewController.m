@@ -164,7 +164,7 @@
     self.mapPopover.delegate = (DSEMapPopupController *) self.mapPopover.contentViewController;
     
     self.addPopover = [[NSPopover alloc] init];
-    DSEAddPopupController *addController = [[DSEAddPopupController alloc] initWithNibName:nil bundle:nil];
+    DSAddPopupController *addController = [[DSAddPopupController alloc] initWithNibName:nil bundle:nil];
     addController.reflectorArrayController = self.reflectorTableController;
     self.addPopover.contentViewController = addController;
     self.addPopover.behavior = NSPopoverBehaviorSemitransient;
