@@ -178,6 +178,7 @@ static NSMutableArray <Class> *linkDriverClasses = nil;
         [self.delegate streamDidEnd:streamId atTime:time];
     });
 }
+
 -(void)slowDataReceived:(NSString *)slowData forStreamId:(NSNumber *)streamId {
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.delegate slowDataReceived:slowData forStreamId:streamId];
