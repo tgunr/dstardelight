@@ -1,13 +1,6 @@
 
 #import "DSAudioHandler.h"
 
-#import <AudioUnit/AudioUnit.h>
-#import <AudioToolbox/AudioToolbox.h>
-#import <DStarEngine/DStarEngine.h>
-
-//#import "TPCircularBuffer+AudioBufferList.h"
-//#import "DSELinkDriverProtocol.h"
-
 static const AudioComponentDescription componentDescription = {
     .componentType = kAudioUnitType_Output,
 //    .componentSubType = kAudioUnitSubType_HALOutput,
@@ -42,18 +35,16 @@ static inline BOOL CheckStatus(OSStatus error, const char *operation);
     } status;
 }
 
-//@property (nonatomic, readwrite) AudioDeviceID defaultInputDevice;
-//@property (nonatomic, readwrite) AudioDeviceID defaultOutputDevice;
-
+@property (nonatomic, readwrite) AudioDeviceID defaultInputDevice;
+@property (nonatomic, readwrite) AudioDeviceID defaultOutputDevice;
 @property (nonatomic, readonly) TPCircularBuffer *recordBuffer;
 @property (nonatomic, readonly) TPCircularBuffer *playbackBuffer;
-
 @property (nonatomic, readonly) AudioStreamBasicDescription *inputFormat;
 @property (nonatomic, readonly) AudioUnit inputUnit;
 
 @property (nonatomic) double hardwareSampleRate;
 
-//+(NSArray *)enumerateDevices:(AudioObjectPropertyScope)scope;
++ (NSArray *)enumerateDevices:(AudioObjectPropertyScope)scope;
 @end
 
 static OSStatus playbackThreadCallback (void *userData, AudioUnitRenderActionFlags *actionFlags, const AudioTimeStamp *inTimeStamp, UInt32 inBusNumber, UInt32 inNumberFrames, AudioBufferList *ioData) {
@@ -138,30 +129,26 @@ static OSStatus AudioDevicesChanged(AudioObjectID inObjectID, UInt32 inNumberAdd
 
 
 @implementation DSAudioHandler
-////@synthesize xmit;
-//@dynamic inputDevice;
-//@dynamic outputDevice;
-//@dynamic receiving;
 
 - (id) init {
     self = [super init];
-    
+
     if(self) {
         _playbackBuffer = malloc(sizeof(TPCircularBuffer));
         TPCircularBufferInit(_playbackBuffer, 16384);
-        
+
         _recordBuffer = malloc(sizeof(TPCircularBuffer));
         TPCircularBufferInit(_recordBuffer, 16384);
-        
+
         _inputFormat = malloc(sizeof(AudioStreamBasicDescription));
-        
+
         self.xmit = NO;
         inputConverter = NULL;
         _inputUnit = NULL;
         outputUnit = NULL;
-        
+
         status = AUDIO_STATUS_STOPPED;
-        
+
         self.inputDevice = 0;
         self.outputDevice = 0;
         
@@ -374,7 +361,7 @@ static inline BOOL CheckStatus(OSStatus error, const char *operation) {
     AudioDeviceID outDevice = self.outputDevice;
     if(self.outputDevice == 0) {
         UInt32 defaultDeviceSize = sizeof(self.outputDevice);
-        if(!CheckStatus(AudioObjectGetPropertyData(kAudioObjectSystemObject, &propertyAddress, 0, NULL, &defaultDeviceSize, &outDevice), "AudioUnitGetPropertyData(kAudioHardwarePropertyDefaultInputDevice)"))
+        if(!CheckStatus(AudioObjectGetPropertyData(kAudioObjectSystemObject, &propertyAddress, 0, NULL, &defaultDeviceSize, &outDevice), "AudioUnitGetPropertyData(kAudioHardwarePropertyDefaultOutputDevice)"))
             return NO;
     }
     
