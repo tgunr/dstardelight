@@ -12,6 +12,9 @@ extern NSString * const DSAudioDeviceChanged;
 -(void) stop;
 
 +(NSArray *)enumerateInputDevices;
+
+- (void)setDefaultInputDevice:(id)defaultInputDevice;
+
 +(NSArray *)enumerateOutputDevices;
 
 @end

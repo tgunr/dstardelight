@@ -633,4 +633,8 @@ static inline BOOL CheckStatus(OSStatus error, const char *operation) {
     return [NSArray arrayWithArray:devices];
 }
 
+- (void)setDefaultInputDevice:(id)SetDefaultInputDevice {
+    _defaultOutputDevice = SetDefaultInputDevice;
+}
+
 @end
