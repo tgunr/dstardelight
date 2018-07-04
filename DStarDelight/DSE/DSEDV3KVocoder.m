@@ -4,8 +4,8 @@
 #import "DSEDV3KVocoderSubclass.h"
 #import "DSEDataEngine.h"
 #import "DSEDV3KPacket.h"
-#import "DSEAudioHandler.h"
 #import "DSELinkDriverProtocol.h"
+#import "DSAudioHandler.h"
 
 // XXX
 //#import "DSESerialVocoderViewController.h"
@@ -77,8 +77,8 @@ static const struct dv3k_packet dv3k_audio = {
         dv3k_ambe.payload.ambe.data.num_bits = sizeof(dv3k_ambe.payload.ambe.data.data) * 8;
         
         dispatch_queue_attr_t dispatchQueueAttr = dispatch_queue_attr_make_with_qos_class(DISPATCH_QUEUE_SERIAL, QOS_CLASS_USER_INITIATED, -1);
-        dispatchQueue = dispatch_queue_create("net.nh6z.Dummy.SerialIO.Write", dispatchQueueAttr);
-        // readDispatchQueue = dispatch_queue_create("net.nh6z.Dummy.SerialIO.Read", dispatchQueueAttr);
+        dispatchQueue = dispatch_queue_create("net.polymicro.Dummy.SerialIO.Write", dispatchQueueAttr);
+        // readDispatchQueue = dispatch_queue_create("net.polymicro.Dummy.SerialIO.Read", dispatchQueueAttr);
         dispatchSource = NULL;
         
         responsePacket = calloc(1, sizeof(struct dv3k_packet));
@@ -122,9 +122,9 @@ static const struct dv3k_packet dv3k_audio = {
     [self doesNotRecognizeSelector:_cmd];
 }
 
-//-(UIViewController *)configurationViewController {
-//    [self doesNotRecognizeSelector:_cmd];
-//}
+-(NSViewController *)configurationViewController {
+    [self doesNotRecognizeSelector:_cmd];
+}
 
 #pragma clang diagnostic pop
 

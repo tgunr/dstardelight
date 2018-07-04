@@ -15,7 +15,7 @@
 
 @property (nonatomic, readonly) NSObject <DSELinkDriverProtocol> *network;
 @property (nonatomic) id <DSEVocoderDriver> vocoder;
-@property (nonatomic, readonly) id audio;
+@property (nonatomic, readonly) DSAudioHandler *audio;
 @property (nonatomic, readonly) DSESlowDataCoder *slowData;
 @property (nonatomic) NSObject <DSEDataEngineDelegate> *delegate;
 @property (nonatomic, readonly) NSArray<NSString *> *linkDriverDestinations;

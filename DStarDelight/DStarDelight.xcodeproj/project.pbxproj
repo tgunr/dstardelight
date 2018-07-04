@@ -14,7 +14,7 @@
 		754A461D20EC6E65003A11F1 /* MASShortcut.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945CA220EC62F2003A11F1 /* MASShortcut.m */; };
 		754A461E20EC6E65003A11F1 /* MASShortcutValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945CA420EC62F2003A11F1 /* MASShortcutValidator.m */; };
 		754A461F20EC6E65003A11F1 /* MASShortcutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945CA620EC62F2003A11F1 /* MASShortcutView.m */; };
-		756A408A20EC5FA1003A11F1 /* DSEAudioHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 756A408820EC5FA0003A11F1 /* DSEAudioHandler.m */; };
+		754A462220ECC1BB003A11F1 /* DSDV3KNetworkVocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 754A462120ECC1BB003A11F1 /* DSDV3KNetworkVocoder.m */; };
 		756A40A120EC60B7003A11F1 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 756A409120EC60B6003A11F1 /* README.markdown */; };
 		756A40A220EC60B7003A11F1 /* TPCircularBuffer+AudioBufferList.c in Sources */ = {isa = PBXBuildFile; fileRef = 756A409220EC60B6003A11F1 /* TPCircularBuffer+AudioBufferList.c */; };
 		756A40A320EC60B7003A11F1 /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 756A409420EC60B6003A11F1 /* TPCircularBuffer.c */; };
@@ -68,8 +68,8 @@
 		7525480C20E6FDD5003A11F1 /* DSAudioHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSAudioHandler.h; path = DS/DSAudioHandler.h; sourceTree = SOURCE_ROOT; };
 		7525484120E7F084003A11F1 /* DStarDelight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DStarDelight.h; path = DS/DStarDelight.h; sourceTree = SOURCE_ROOT; };
 		7525488720EAA9D6003A11F1 /* SharedResources */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SharedResources; path = ../SharedResources; sourceTree = "<group>"; };
-		756A408820EC5FA0003A11F1 /* DSEAudioHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSEAudioHandler.m; sourceTree = "<group>"; };
-		756A408920EC5FA0003A11F1 /* DSEAudioHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEAudioHandler.h; sourceTree = "<group>"; };
+		754A462020ECC1BB003A11F1 /* DSDV3KNetworkVocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDV3KNetworkVocoder.h; sourceTree = "<group>"; };
+		754A462120ECC1BB003A11F1 /* DSDV3KNetworkVocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDV3KNetworkVocoder.m; sourceTree = "<group>"; };
 		756A408D20EC607B003A11F1 /* DSEDataEngineDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEDataEngineDelegate.h; sourceTree = "<group>"; };
 		756A409120EC60B6003A11F1 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.markdown; sourceTree = "<group>"; };
 		756A409220EC60B6003A11F1 /* TPCircularBuffer+AudioBufferList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "TPCircularBuffer+AudioBufferList.c"; sourceTree = "<group>"; };
@@ -83,7 +83,6 @@
 		756A409A20EC60B6003A11F1 /* DSDV3KSerialVocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDV3KSerialVocoder.m; sourceTree = "<group>"; };
 		756A409C20EC60B6003A11F1 /* DSEDataEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEDataEngine.h; sourceTree = "<group>"; };
 		756A409D20EC60B7003A11F1 /* DStarUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DStarUtils.m; sourceTree = "<group>"; };
-		756A409E20EC60B7003A11F1 /* DSEDV3KNetworkVocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEDV3KNetworkVocoder.h; sourceTree = "<group>"; };
 		756A409F20EC60B7003A11F1 /* DStarUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DStarUtils.h; sourceTree = "<group>"; };
 		756A40A020EC60B7003A11F1 /* DSDV3KPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDV3KPacket.h; sourceTree = "<group>"; };
 		756A40A820EC60D2003A11F1 /* DSEDPlusLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEDPlusLink.h; sourceTree = "<group>"; };
@@ -234,14 +233,13 @@
 				756A409D20EC60B7003A11F1 /* DStarUtils.m */,
 				756A40A020EC60B7003A11F1 /* DSDV3KPacket.h */,
 				756A409920EC60B6003A11F1 /* DSEDV3KVocoderSubclass.h */,
-				756A409E20EC60B7003A11F1 /* DSEDV3KNetworkVocoder.h */,
 				756A409820EC60B6003A11F1 /* DSDV3KSerialVocoder.h */,
 				756A409A20EC60B6003A11F1 /* DSDV3KSerialVocoder.m */,
+				754A462020ECC1BB003A11F1 /* DSDV3KNetworkVocoder.h */,
+				754A462120ECC1BB003A11F1 /* DSDV3KNetworkVocoder.m */,
 				756A409C20EC60B6003A11F1 /* DSEDataEngine.h */,
 				756A408D20EC607B003A11F1 /* DSEDataEngineDelegate.h */,
 				756A409720EC60B6003A11F1 /* DSEDataEngine.m */,
-				756A408920EC5FA0003A11F1 /* DSEAudioHandler.h */,
-				756A408820EC5FA0003A11F1 /* DSEAudioHandler.m */,
 				756A40B220EC60D4003A11F1 /* DSEDV3KVocoder.h */,
 				756A40BA20EC60D6003A11F1 /* DSEDV3KVocoder.m */,
 				756A40A920EC60D2003A11F1 /* DSEDV3KPacket.h */,
@@ -562,12 +560,12 @@
 				75E0885F20E3177F003A11F1 /* DSAddPopupController.m in Sources */,
 				756A40A220EC60B7003A11F1 /* TPCircularBuffer+AudioBufferList.c in Sources */,
 				75E0886D20E3177F003A11F1 /* DSMapPopupController.m in Sources */,
+				754A462220ECC1BB003A11F1 /* DSDV3KNetworkVocoder.m in Sources */,
 				7525480D20E6FDD6003A11F1 /* DSAudioHandler.m in Sources */,
 				756A40CB20EC60D8003A11F1 /* DSEAprsLocation.m in Sources */,
 				756A40CC20EC60D8003A11F1 /* DSEIRCDDBGateways.m in Sources */,
 				756A40A520EC60B7003A11F1 /* DSEDataEngine.m in Sources */,
 				756A40C520EC60D8003A11F1 /* PortMapper.m in Sources */,
-				756A408A20EC5FA1003A11F1 /* DSEAudioHandler.m in Sources */,
 				758B49D420E41F0D003A11F1 /* DSDestinationCallFormatter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

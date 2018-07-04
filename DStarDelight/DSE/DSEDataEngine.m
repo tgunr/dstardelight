@@ -7,7 +7,8 @@
 #import "DSEDataEngine.h"
 #import "DSELinkDriverProtocol.h"
 #import "DStarUtils.h"
-#import "DSEAudioHandler.h"
+#import "DSAudioHandler.h"
+#import "DSEDV3KNetworkVocoder.h"
 
 static NSMutableArray *vocoderDrivers = nil;
 static NSMutableArray <Class> *linkDriverClasses = nil;
@@ -15,7 +16,7 @@ static NSMutableArray <Class> *linkDriverClasses = nil;
 @interface DSEDataEngine ()
 
 @property (nonatomic, readwrite) NSObject <DSELinkDriverProtocol> *network;
-@property (nonatomic, readwrite) DSEAudioHandler *audio;
+@property (nonatomic, readwrite) DSAudioHandler *audio;
 @property (nonatomic, copy) NSString *sleepDestination;
 @property (nonatomic, readonly) NSArray <id <DSELinkDriverProtocol>> *linkDrivers;
 @property (nonatomic, readonly) dispatch_queue_t linkQueue;
@@ -57,24 +58,24 @@ static NSMutableArray <Class> *linkDriverClasses = nil;
             [newLinkDrivers addObject:newDriver];
             newDriver.linkQueue = self.linkQueue;
             newDriver.delegate = self;
-//            [newDriver bind:@"myCall" toObject:[NSUserDefaultsController sharedUserDefaultsController] withKeyPath:@"values.myCall" options:nil];
-//            [newDriver bind:@"myCall2" toObject:[NSUserDefaultsController sharedUserDefaultsController] withKeyPath:@"values.myCall2" options:nil];
+            [newDriver bind:@"myCall" toObject:[NSUserDefaultsController sharedUserDefaultsController] withKeyPath:@"values.myCall" options:nil];
+            [newDriver bind:@"myCall2" toObject:[NSUserDefaultsController sharedUserDefaultsController] withKeyPath:@"values.myCall2" options:nil];
         }
         _linkDrivers = [NSArray arrayWithArray:newLinkDrivers];
         
         DSEDataEngine __weak *weakSelf = self;
-//        [[[NSWorkspace sharedWorkspace] notificationCenter] addObserverForName:NSWorkspaceWillSleepNotification object:NULL queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notification) {
-//            [weakSelf.audio stop];
-//            [weakSelf.vocoder stop];
-//            weakSelf.sleepDestination = weakSelf.network.linkTarget;
-//            [weakSelf.network unlink];
-//        }];
+        [[[NSWorkspace sharedWorkspace] notificationCenter] addObserverForName:NSWorkspaceWillSleepNotification object:NULL queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notification) {
+            [weakSelf.audio stop];
+            [weakSelf.vocoder stop];
+            weakSelf.sleepDestination = weakSelf.network.linkTarget;
+            [weakSelf.network unlink];
+        }];
         
-//        [[[NSWorkspace sharedWorkspace] notificationCenter] addObserverForName:NSWorkspaceDidWakeNotification object:NULL queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notification) {
-//            [weakSelf.audio start];
-//            [weakSelf.vocoder start];
-//            [weakSelf linkTo:self.sleepDestination];
-//        }];        
+        [[[NSWorkspace sharedWorkspace] notificationCenter] addObserverForName:NSWorkspaceDidWakeNotification object:NULL queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notification) {
+            [weakSelf.audio start];
+            [weakSelf.vocoder start];
+            [weakSelf linkTo:self.sleepDestination];
+        }];        
     }
     
     return self;
