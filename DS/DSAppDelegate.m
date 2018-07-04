@@ -25,8 +25,17 @@
     
     NSString *inputUid = [[NSUserDefaults standardUserDefaults] stringForKey:@"inputAudioDevice"];
     DSAudioHandler *engineaudio = (DSAudioHandler *)[DSEDataEngine sharedInstance].audio;
-    if(!inputUid) {
-        engineaudio.inputDevice = engineaudio.defaultInputDevice;
+    if(inputUid == 0) {
+        AudioDeviceID inputDevice = [engineaudio defaultInputDevice];
+        if (inputDevice != 0) {
+            engineaudio.inputDevice = inputDevice;
+        } else {
+            NSArray *inputDevices = [DSAudioHandler enumerateInputDevices];
+            id firstDevice = [inputDevices objectAtIndex:0];
+            engineaudio.setDefaultInputDevice = firstDevice;
+            engineaudio.inputDevice = firstDevice;
+            [[NSNotificationCenter defaultCenter] postNotificationName:DSAudioDeviceChanged object: nil];
+        }
     } else {
         for(NSDictionary *entry in [DSAudioHandler enumerateInputDevices])
             if([entry[@"uid"] isEqualToString:inputUid])
