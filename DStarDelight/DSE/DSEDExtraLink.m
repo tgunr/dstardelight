@@ -173,8 +173,7 @@ static NSDictionary *_reflectorList;
 }
 
 -(NSString *)getAddressForReflector:(NSString *)reflector {
-    return @"NSHost not on IOS";
-        //    return [NSHost hostWithName:[DSEDExtraLink reflectorList][reflector]].address;
+    return [NSHost hostWithName:[DSEDExtraLink reflectorList][reflector]].address;
 }
 
 @end

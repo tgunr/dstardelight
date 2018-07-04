@@ -91,7 +91,7 @@ static const struct dv3k_packet dv3k_audio = {
 
 - (void) dealloc {
     free(responsePacket);
-    NSLog(@"In dealloc for %@", self);
+    NSLog(@"In dealloc for %@", [self className]);
 }
 
 #pragma mark - Methods for subclasses to implement
