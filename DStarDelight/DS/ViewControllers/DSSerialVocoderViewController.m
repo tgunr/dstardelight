@@ -2,9 +2,6 @@
 
 #import "DSSerialVocoderViewController.h"
 
-#import <DStarEngine/DSEDataEngine.h>
-//#import "DSDV3KSerialVocoder.h"
-
 @interface DSSerialVocoderViewController ()
 @end
 
@@ -13,13 +10,8 @@
 - (id) init {
     self = [super initWithNibName:@"DSESerialVocoderView" bundle:nil];
     
-//    [[DSVars shared] setConfigurationViewController: self];
     return self;
 }
-
-//- (void) setDriver: DSDV3KSerialVocoder *driver {
-//    _driver = driver;
-//}
 
 -(void)viewDidLoad {
     NSLog(@"View Loaded");
@@ -29,16 +21,16 @@
     [super viewDidAppear];
     
     [self refreshDevices];
-//    self.version.stringValue = self.driver.version;
-//    self.productId.stringValue = self.driver.productId;
-//
-//    [self.speedPopup selectItemWithTitle:[NSString stringWithFormat:@"%ld", self.driver.speed]];
-//    [self.serialPortPopup selectItemWithTitle:self.driver.serialPort];
+    self.version.stringValue = self.driver.version;
+    self.productId.stringValue = self.driver.productId;
+
+    [self.speedPopup selectItemWithTitle:[NSString stringWithFormat:@"%ld", self.driver.speed]];
+    [self.serialPortPopup selectItemWithTitle:self.driver.serialPort];
 }
 
 -(void)refreshDevices {
     [self.serialPortPopup removeAllItems];
-//    [self.serialPortPopup addItemsWithTitles:[DSDV3KSerialVocoder ports]];
+    [self.serialPortPopup addItemsWithTitles:[DSDV3KSerialVocoder ports]];
 }
 
 -(void)dealloc {
@@ -46,13 +38,13 @@
 }
 
 -(IBAction)doChangeSerialPort:(id)sender {
-//    self.driver.serialPort = self.serialPortPopup.selectedItem.title;
-//    [[NSUserDefaults standardUserDefaults] setObject:self.driver.serialPort forKey:@"DV3KSerialVocoderPort"];
+    self.driver.serialPort = self.serialPortPopup.selectedItem.title;
+    [[NSUserDefaults standardUserDefaults] setObject:self.driver.serialPort forKey:@"DV3KSerialVocoderPort"];
 }
 
 -(IBAction)doChangeSpeed:(id)sender {
-//    self.driver.speed = self.speedPopup.selectedItem.title.intValue;
-//    [[NSUserDefaults standardUserDefaults] setInteger:self.driver.speed forKey:@"DV3KSerialVocoderSpeed"];
+    self.driver.speed = self.speedPopup.selectedItem.title.intValue;
+    [[NSUserDefaults standardUserDefaults] setInteger:self.driver.speed forKey:@"DV3KSerialVocoderSpeed"];
 }
 
 @end

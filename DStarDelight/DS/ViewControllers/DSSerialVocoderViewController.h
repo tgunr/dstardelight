@@ -1,7 +1,7 @@
 
 #import <AppKit/AppKit.h>
 
-@class DSDV3KSerialVocoder;
+#import "DSDV3KSerialVocoder.h"
 
 @interface DSSerialVocoderViewController : NSViewController
 @property (weak) IBOutlet NSPopUpButton *serialPortPopup;

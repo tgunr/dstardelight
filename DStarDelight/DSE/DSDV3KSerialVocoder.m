@@ -43,7 +43,7 @@ static bool isFTDIPort(io_object_t device) {
 }
 
 static void VocoderAdded(void *refCon, io_iterator_t iterator) {
-    DSDV3KSerialVocoder *self = (__bridge DSDV3KSerialVocoder *) refCon;
+    DSDV3KSerialVocoder *newself = (__bridge DSDV3KSerialVocoder *) refCon;
     //  This is needed to disarm the iterator.  Otherwise we won't get any more events.
     while(IOIteratorNext(iterator));
     
@@ -52,13 +52,13 @@ static void VocoderAdded(void *refCon, io_iterator_t iterator) {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 5ull * NSEC_PER_MSEC), dispatch_get_main_queue(), ^{
         NSArray *ports = [DSDV3KSerialVocoder ports];
         if(ports.count == 1) {
-            self.serialPort = ports[0];
-            [[NSUserDefaults standardUserDefaults] setObject:self.serialPort forKey:@"DV3KSerialVocoderPort"];
-            [self start];
+            newself.serialPort = ports[0];
+            [[NSUserDefaults standardUserDefaults] setObject:newself.serialPort forKey:@"DV3KSerialVocoderPort"];
+            [newself start];
         }
         
-        if(self.configurationViewController)
-            [(DSESerialVocoderViewController *)self.configurationViewController refreshDevices];
+        if(newself.configurationViewController)
+            [(DSSerialVocoderViewController *)newself.configurationViewController refreshDevices];
     });
 }
 
@@ -77,7 +77,7 @@ static void VocoderRemoved(void *refCon, io_iterator_t iterator) {
  
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 5ull * NSEC_PER_MSEC), dispatch_get_main_queue(), ^{
         if(self.configurationViewController)
-            [(BTRSerialVocoderViewController *)self.configurationViewController refreshDevices];
+            [(DSSerialVocoderViewController *)self.configurationViewController refreshDevices];
     });
 }
 
@@ -85,7 +85,7 @@ static void VocoderRemoved(void *refCon, io_iterator_t iterator) {
     IONotificationPortRef gNotifyPort;
     io_iterator_t deviceAddedIterator;
     io_iterator_t deviceRemovedIterator;
-    DSESerialVocoderViewController *_configurationViewController;
+    DSSerialVocoderViewController *_configurationViewController;
 }
 
 @end
@@ -121,14 +121,13 @@ static void VocoderRemoved(void *refCon, io_iterator_t iterator) {
     [self start];
 }
 
-
 +(NSString *) driverName {
     return @"Thumb DV";
 }
 
 -(NSViewController *) configurationViewController {
     if(!_configurationViewController) {
-        _configurationViewController = [[DSESerialVocoderViewController alloc] init];
+        _configurationViewController = [[DSSerialVocoderViewController alloc] init];
         _configurationViewController.driver = self;
      }
     return _configurationViewController;
@@ -258,7 +257,7 @@ static void VocoderRemoved(void *refCon, io_iterator_t iterator) {
     super.productId = productId;
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        ((DSESerialVocoderViewController *)self.configurationViewController).productId.stringValue = productId;
+        ((DSSerialVocoderViewController *)self.configurationViewController).productId.stringValue = productId;
     });
 }
 
@@ -266,7 +265,7 @@ static void VocoderRemoved(void *refCon, io_iterator_t iterator) {
     super.version = version;
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        ((DSESerialVocoderViewController *)self.configurationViewController).version.stringValue = version;
+        ((DSSerialVocoderViewController *)self.configurationViewController).version.stringValue = version;
     });
 }
 

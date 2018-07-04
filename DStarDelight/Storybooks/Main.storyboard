@@ -176,7 +176,7 @@
         <!--Preferences-->
         <scene sceneID="lmm-p7-N0X">
             <objects>
-                <tabViewController title="Preferences" id="aw7-oo-70e" sceneMemberID="viewController">
+                <tabViewController title="Preferences" tabStyle="toolbar" id="aw7-oo-70e" sceneMemberID="viewController">
                     <tabViewItems>
                         <tabViewItem label="General" identifier="" image="NSPreferencesGeneral" id="PeP-cn-9Ib"/>
                         <tabViewItem label="Audio" image="Microphone" id="dWg-a5-ZPJ"/>
@@ -1226,7 +1226,7 @@
                 </viewController>
                 <customObject id="nvC-gc-sMP" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="966" y="577.5"/>
+            <point key="canvasLocation" x="655" y="585"/>
         </scene>
     </scenes>
     <resources>

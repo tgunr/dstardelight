@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7502EC9420ECF139003A11F1 /* DSAddPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945C8620EC62F2003A11F1 /* DSAddPopupController.m */; };
+		7502EC9520ECF139003A11F1 /* DSMainWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945C9420EC62F2003A11F1 /* DSMainWindowViewController.m */; };
+		7502EC9620ECF139003A11F1 /* DSNetworkVocoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945CAE20EC62F2003A11F1 /* DSNetworkVocoderViewController.m */; };
+		7502EC9720ECF139003A11F1 /* DSSerialVocoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945CB020EC62F2003A11F1 /* DSSerialVocoderViewController.m */; };
 		7525480D20E6FDD6003A11F1 /* DSAudioHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525480B20E6FDD5003A11F1 /* DSAudioHandler.m */; };
 		7525488820EAA9D6003A11F1 /* SharedResources in Resources */ = {isa = PBXBuildFile; fileRef = 7525488720EAA9D6003A11F1 /* SharedResources */; };
 		752F94D820ECEACA003A11F1 /* DSMapPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 752F94D720ECEACA003A11F1 /* DSMapPopupController.m */; };
@@ -278,7 +282,6 @@
 			isa = PBXGroup;
 			children = (
 				758B49D320E41F0D003A11F1 /* DSDestinationCallFormatter.m */,
-				75945C8720EC62F2003A11F1 /* DSAppDelegate.h */,
 				75E0881320E3177F003A11F1 /* DSAppDelegate.m */,
 				7525484120E7F084003A11F1 /* DStarDelight.h */,
 				7525480C20E6FDD5003A11F1 /* DSAudioHandler.h */,
@@ -495,6 +498,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75E0886420E3177F003A11F1 /* DSCallFormatter.m in Sources */,
+				758B49D420E41F0D003A11F1 /* DSDestinationCallFormatter.m in Sources */,
+				75E0886E20E3177F003A11F1 /* DSMessageFormatter.m in Sources */,
+				7502EC9420ECF139003A11F1 /* DSAddPopupController.m in Sources */,
+				7502EC9520ECF139003A11F1 /* DSMainWindowViewController.m in Sources */,
+				7502EC9620ECF139003A11F1 /* DSNetworkVocoderViewController.m in Sources */,
+				7502EC9720ECF139003A11F1 /* DSSerialVocoderViewController.m in Sources */,
 				754A461D20EC6E65003A11F1 /* MASShortcut.m in Sources */,
 				754A461E20EC6E65003A11F1 /* MASShortcutValidator.m in Sources */,
 				754A461F20EC6E65003A11F1 /* MASShortcutView.m in Sources */,
@@ -508,7 +518,6 @@
 				756A40A620EC60B7003A11F1 /* DSDV3KSerialVocoder.m in Sources */,
 				752F94D820ECEACA003A11F1 /* DSMapPopupController.m in Sources */,
 				756A40CD20EC60D8003A11F1 /* DSEDCSLink.m in Sources */,
-				75E0886420E3177F003A11F1 /* DSCallFormatter.m in Sources */,
 				752F94DD20ECEB05003A11F1 /* DSAudioViewController.m in Sources */,
 				756A40C920EC60D8003A11F1 /* DNSHost.m in Sources */,
 				75E0886020E3177F003A11F1 /* DSAppDelegate.m in Sources */,
@@ -516,7 +525,6 @@
 				756A40C420EC60D8003A11F1 /* DSEDPlusLink.m in Sources */,
 				756A40C720EC60D8003A11F1 /* DSESlowDataCoder.m in Sources */,
 				756A40CA20EC60D8003A11F1 /* DSEDV3KVocoder.m in Sources */,
-				75E0886E20E3177F003A11F1 /* DSMessageFormatter.m in Sources */,
 				756A40A720EC60B7003A11F1 /* DStarUtils.m in Sources */,
 				756A40A220EC60B7003A11F1 /* TPCircularBuffer+AudioBufferList.c in Sources */,
 				754A462220ECC1BB003A11F1 /* DSDV3KNetworkVocoder.m in Sources */,
@@ -525,7 +533,6 @@
 				756A40CC20EC60D8003A11F1 /* DSEIRCDDBGateways.m in Sources */,
 				756A40A520EC60B7003A11F1 /* DSEDataEngine.m in Sources */,
 				756A40C520EC60D8003A11F1 /* PortMapper.m in Sources */,
-				758B49D420E41F0D003A11F1 /* DSDestinationCallFormatter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,7 +1,8 @@
 
 
-#import <DStarEngine/DSEDataEngine.h>
 #import "DSNetworkVocoderViewController.h"
+
+#import "DSDV3KNetworkVocoder.h"
 
 @interface DSNetworkVocoderViewController ()
 
@@ -10,16 +11,14 @@
 @implementation DSNetworkVocoderViewController
 
 - (id) init {
-    self = [super initWithNibName:@"DSENetworkVocoderView" bundle:nil];
-    
-//    [[DSVars shared] SetNetworkConfigurationViewController: self];
+    self = [super initWithNibName:@"DSNetworkVocoderView" bundle:nil];
 
     return self;
 }
 
 - (void) viewDidAppear {
-//    self.version.stringValue = self.driver.version;
-//    self.productId.stringValue = self.driver.productId;
+    self.version.stringValue = self.driver.version;
+    self.productId.stringValue = self.driver.productId;
 }
 
 -(void)dealloc {
@@ -27,8 +26,8 @@
 }
 
 -(IBAction)doTest:(id)sender {
-//    [self.driver stop];
-//    [self.driver start];
+    [self.driver stop];
+    [self.driver start];
 }
 
 @end

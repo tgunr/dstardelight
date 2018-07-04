@@ -4,6 +4,7 @@
 @protocol DSELinkDriverProtocol;
 
 @class DSAudioHandler;
+@class NSViewController;
 
 @protocol DSEVocoderDriver <NSObject>
 - (void) decodeData:(void *) data lastPacket:(BOOL)last;
@@ -16,6 +17,6 @@
 
 @property (nonatomic) DSAudioHandler *audio;
 @property (nonatomic) NSObject <DSELinkDriverProtocol> *network;
-//@property (nonatomic, readonly) NSViewController *configurationViewController;
+@property (nonatomic, readonly) NSViewController *configurationViewController;
 
 @end
