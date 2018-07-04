@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		7525480D20E6FDD6003A11F1 /* DSAudioHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525480B20E6FDD5003A11F1 /* DSAudioHandler.m */; };
 		7525488820EAA9D6003A11F1 /* SharedResources in Resources */ = {isa = PBXBuildFile; fileRef = 7525488720EAA9D6003A11F1 /* SharedResources */; };
+		754A461B20EC6DDE003A11F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945C9C20EC62F2003A11F1 /* main.m */; };
+		754A461C20EC6E4B003A11F1 /* MASDictionaryTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945C9F20EC62F2003A11F1 /* MASDictionaryTransformer.m */; };
+		754A461D20EC6E65003A11F1 /* MASShortcut.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945CA220EC62F2003A11F1 /* MASShortcut.m */; };
+		754A461E20EC6E65003A11F1 /* MASShortcutValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945CA420EC62F2003A11F1 /* MASShortcutValidator.m */; };
+		754A461F20EC6E65003A11F1 /* MASShortcutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945CA620EC62F2003A11F1 /* MASShortcutView.m */; };
 		756A408A20EC5FA1003A11F1 /* DSEAudioHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 756A408820EC5FA0003A11F1 /* DSEAudioHandler.m */; };
 		756A408F20EC607B003A11F1 /* DSEDataEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 756A408E20EC607B003A11F1 /* DSEDataEngine.m */; };
 		756A40A120EC60B7003A11F1 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 756A409120EC60B6003A11F1 /* README.markdown */; };
@@ -47,8 +52,6 @@
 		75E0887020E3177F003A11F1 /* DSVocoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0883620E3177F003A11F1 /* DSVocoderViewController.m */; };
 		75E0887D20E3177F003A11F1 /* DSNetworkVocoderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75E0885820E3177F003A11F1 /* DSNetworkVocoderView.xib */; };
 		75E0887F20E3177F003A11F1 /* DSSerialVocoderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75E0885B20E3177F003A11F1 /* DSSerialVocoderView.xib */; };
-		B1F5E821A03E073C27C643FF /* libPods-DStarDelight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEB7436A6B48A35A03347650 /* libPods-DStarDelight.a */; };
-		ECB524EB7423893D975D71B9 /* libPods-DStarDelightUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FBD8596DEF8A4BB1161AA109 /* libPods-DStarDelightUITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,8 +65,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		11AAC06FD0BD3CD5D4ED35A6 /* Pods-DStarDelightUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DStarDelightUITests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-DStarDelightUITests/Pods-DStarDelightUITests.release.xcconfig"; sourceTree = "<group>"; };
-		1EAF11B8B9A5B827B20DC83E /* Pods-DStarDelightUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DStarDelightUITests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-DStarDelightUITests/Pods-DStarDelightUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7525480B20E6FDD5003A11F1 /* DSAudioHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSAudioHandler.m; path = DS/DSAudioHandler.m; sourceTree = SOURCE_ROOT; };
 		7525480C20E6FDD5003A11F1 /* DSAudioHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSAudioHandler.h; path = DS/DSAudioHandler.h; sourceTree = SOURCE_ROOT; };
 		7525484120E7F084003A11F1 /* DStarDelight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DStarDelight.h; path = DS/DStarDelight.h; sourceTree = SOURCE_ROOT; };
@@ -194,8 +195,6 @@
 		75E0883620E3177F003A11F1 /* DSVocoderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSVocoderViewController.m; sourceTree = "<group>"; };
 		75E0885820E3177F003A11F1 /* DSNetworkVocoderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSNetworkVocoderView.xib; sourceTree = "<group>"; };
 		75E0885B20E3177F003A11F1 /* DSSerialVocoderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DSSerialVocoderView.xib; path = Storybooks/DSSerialVocoderView.xib; sourceTree = SOURCE_ROOT; };
-		B32ABE4921FB7F512B104837 /* Pods-DStarDelight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DStarDelight.release.xcconfig"; path = "../Pods/Target Support Files/Pods-DStarDelight/Pods-DStarDelight.release.xcconfig"; sourceTree = "<group>"; };
-		E743F5056F66E6004CE683A7 /* Pods-DStarDelight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DStarDelight.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-DStarDelight/Pods-DStarDelight.debug.xcconfig"; sourceTree = "<group>"; };
 		EEB7436A6B48A35A03347650 /* libPods-DStarDelight.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DStarDelight.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBD8596DEF8A4BB1161AA109 /* libPods-DStarDelightUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DStarDelightUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -205,7 +204,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1F5E821A03E073C27C643FF /* libPods-DStarDelight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,24 +211,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECB524EB7423893D975D71B9 /* libPods-DStarDelightUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		58FCAEAA485A7D02460CC1C7 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E743F5056F66E6004CE683A7 /* Pods-DStarDelight.debug.xcconfig */,
-				B32ABE4921FB7F512B104837 /* Pods-DStarDelight.release.xcconfig */,
-				1EAF11B8B9A5B827B20DC83E /* Pods-DStarDelightUITests.debug.xcconfig */,
-				11AAC06FD0BD3CD5D4ED35A6 /* Pods-DStarDelightUITests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		7525485220E988D0003A11F1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -417,7 +403,6 @@
 				75E0880320E31575003A11F1 /* DStarDelightUITests */,
 				75E087EB20E31572003A11F1 /* Products */,
 				757DEE9920E6D98E003A11F1 /* Frameworks */,
-				58FCAEAA485A7D02460CC1C7 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -458,7 +443,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75E0880920E31575003A11F1 /* Build configuration list for PBXNativeTarget "DStarDelight" */;
 			buildPhases = (
-				24A70838F4BA92E3B0E891B6 /* [CP] Check Pods Manifest.lock */,
 				75E087E620E31572003A11F1 /* Sources */,
 				75E087E720E31572003A11F1 /* Frameworks */,
 				75E087E820E31572003A11F1 /* Resources */,
@@ -476,7 +460,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75E0880C20E31575003A11F1 /* Build configuration list for PBXNativeTarget "DStarDelightUITests" */;
 			buildPhases = (
-				E38A527183CD79BB3180EFB3 /* [CP] Check Pods Manifest.lock */,
 				75E087FC20E31575003A11F1 /* Sources */,
 				75E087FD20E31575003A11F1 /* Frameworks */,
 				75E087FE20E31575003A11F1 /* Resources */,
@@ -555,50 +538,18 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		24A70838F4BA92E3B0E891B6 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DStarDelight-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E38A527183CD79BB3180EFB3 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DStarDelightUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		75E087E620E31572003A11F1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				754A461D20EC6E65003A11F1 /* MASShortcut.m in Sources */,
+				754A461E20EC6E65003A11F1 /* MASShortcutValidator.m in Sources */,
+				754A461F20EC6E65003A11F1 /* MASShortcutView.m in Sources */,
+				754A461C20EC6E4B003A11F1 /* MASDictionaryTransformer.m in Sources */,
+				754A461B20EC6DDE003A11F1 /* main.m in Sources */,
+				75E0886920E3177F003A11F1 /* DSGeneralPreferencesController.m in Sources */,
+				75E0886C20E3177F003A11F1 /* DSMainWindowViewController.m in Sources */,
 				756A40CE20EC60D8003A11F1 /* DSEDExtraLink.m in Sources */,
 				756A40A320EC60B7003A11F1 /* TPCircularBuffer.c in Sources */,
 				756A40C620EC60D8003A11F1 /* DSEDPlusAuthenticator.m in Sources */,
@@ -607,11 +558,9 @@
 				75E0886420E3177F003A11F1 /* DSCallFormatter.m in Sources */,
 				756A40C920EC60D8003A11F1 /* DNSHost.m in Sources */,
 				75E0886020E3177F003A11F1 /* DSAppDelegate.m in Sources */,
-				75E0886C20E3177F003A11F1 /* DSMainWindowViewController.m in Sources */,
 				756A40C820EC60D8003A11F1 /* DSELinkDriver.m in Sources */,
 				756A40C420EC60D8003A11F1 /* DSEDPlusLink.m in Sources */,
 				756A40C720EC60D8003A11F1 /* DSESlowDataCoder.m in Sources */,
-				75E0886920E3177F003A11F1 /* DSGeneralPreferencesController.m in Sources */,
 				75E0886320E3177F003A11F1 /* DSAudioViewController.m in Sources */,
 				756A40CA20EC60D8003A11F1 /* DSEDV3KVocoder.m in Sources */,
 				756A408F20EC607B003A11F1 /* DSEDataEngine.m in Sources */,
@@ -774,7 +723,6 @@
 		};
 		75E0880A20E31575003A11F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E743F5056F66E6004CE683A7 /* Pods-DStarDelight.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
@@ -782,16 +730,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = NL3267E99V;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../DerivedData/Build/Products/Debug/DStarEngine.framework\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				OTHER_CODE_SIGN_FLAGS = "--deep";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = net.polymicro.DStarDelight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -799,7 +745,6 @@
 		};
 		75E0880B20E31575003A11F1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B32ABE4921FB7F512B104837 /* Pods-DStarDelight.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = DStarDelight/DStarDelight.entitlements;
@@ -807,16 +752,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = NL3267E99V;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../DerivedData/Build/Products/Debug/DStarEngine.framework\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				OTHER_CODE_SIGN_FLAGS = "--deep";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = net.polymicro.DStarDelight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -824,7 +767,6 @@
 		};
 		75E0880D20E31575003A11F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1EAF11B8B9A5B827B20DC83E /* Pods-DStarDelightUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -843,7 +785,6 @@
 		};
 		75E0880E20E31575003A11F1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 11AAC06FD0BD3CD5D4ED35A6 /* Pods-DStarDelightUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
