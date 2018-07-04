@@ -1,6 +1,5 @@
 
-
-#import <DStarEngine/DSEDataEngine.h>
+#import "DSEDV3KVocoder.h"
 
 @interface DSEDV3KNetworkVocoder : DSEDV3KVocoder
 

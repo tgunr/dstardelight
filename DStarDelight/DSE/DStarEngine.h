@@ -22,7 +22,6 @@ FOUNDATION_EXPORT const unsigned char DStarEngineVersionString[];
 #import "DSEDExtraLink.h"
 #import "DSEDPlusAuthenticator.h"
 #import "DSEDPlusLink.h"
-#import "DSEDV3KNetworkVocoder.h"
 #import "DSEDV3KPacket.h"
 #import "DSEDV3KVocoder.h"
 #import "DSEDV3KVocoderSubclass.h"

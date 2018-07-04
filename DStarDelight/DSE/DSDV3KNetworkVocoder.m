@@ -2,8 +2,8 @@
 
 #import "DSDV3KNetworkVocoder.h"
 
+#import "DSEDataEngine.h"
 #import "DSEDV3KVocoderSubclass.h"
-#import <DStarEngine/DSEDataEngine.h>
 //#import "DSNetworkVocoderViewController.h"
 
 #import <arpa/inet.h>
