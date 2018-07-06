@@ -1226,15 +1226,15 @@
                 </viewController>
                 <customObject id="nvC-gc-sMP" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="655" y="585"/>
+            <point key="canvasLocation" x="567" y="687"/>
         </scene>
     </scenes>
     <resources>
         <image name="Broken Chain" width="512" height="512"/>
         <image name="Chain" width="512" height="512"/>
-        <image name="Chip" width="170.66667175292969" height="141.33332824707031"/>
+        <image name="Chip" width="164.57142639160156" height="138.85714721679688"/>
         <image name="Gray LED" width="40" height="40"/>
-        <image name="Microphone" width="1024" height="1024"/>
+        <image name="Microphone" width="128" height="128"/>
         <image name="NSAddTemplate" width="11" height="11"/>
         <image name="NSPreferencesGeneral" width="32" height="32"/>
         <image name="NSRemoveTemplate" width="11" height="11"/>
