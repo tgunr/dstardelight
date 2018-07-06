@@ -11,6 +11,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DSPrefViewController : NSTabViewController
+@property (weak) IBOutlet NSTabViewItem *GeneralTabView;
+@property (weak) IBOutlet NSTabViewItem *AudioTabView;
+@property (weak) IBOutlet NSTabViewItem *VocoderTabView;
 
 @property (nonatomic) NSInteger selectedDevice;
 

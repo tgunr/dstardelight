@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="PTa-5A-wC9">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14295.6"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Audio-->
+        <scene sceneID="elY-lg-nZP">
+            <objects>
+                <viewController title="Audio" showSeguePresentationStyle="single" id="PTa-5A-wC9" customClass="DSPrefAudioViewController" sceneMemberID="viewController">
+                    <view key="view" id="XSw-uU-Ge2">
+                        <rect key="frame" x="0.0" y="0.0" width="424" height="138"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TRZ-HT-6PH">
+                                <rect key="frame" x="58" y="76" width="35" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Input" id="vtg-eW-9ai">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mVy-ci-K0O">
+                                <rect key="frame" x="97" y="96" width="312" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ctk-Go-p0c"/>
+                                    <constraint firstAttribute="width" constant="307" id="d8k-Qt-eop"/>
+                                </constraints>
+                                <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="wEg-sf-7sk" id="yT2-5W-4CC">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="STx-qH-LV6">
+                                        <items>
+                                            <menuItem title="Item 1" state="on" id="wEg-sf-7sk"/>
+                                            <menuItem title="Item 2" id="Sao-h8-4FT"/>
+                                            <menuItem title="Item 3" id="Lki-6A-HWX"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                                <connections>
+                                    <binding destination="PTa-5A-wC9" name="selectedTag" keyPath="self.selectedOutput" id="44G-QO-L0h"/>
+                                </connections>
+                            </popUpButton>
+                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TXG-GC-K3t">
+                                <rect key="frame" x="97" y="71" width="312" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="307" id="004-cg-u2i"/>
+                                    <constraint firstAttribute="height" constant="21" id="nnL-Wd-qEf"/>
+                                </constraints>
+                                <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Ai7-uP-6ma" id="J6T-a4-Ies">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="bjO-NR-U5E">
+                                        <items>
+                                            <menuItem title="Item 1" state="on" id="Ai7-uP-6ma"/>
+                                            <menuItem title="Item 2" id="IAp-Xk-3p1"/>
+                                            <menuItem title="Item 3" id="Wzx-d8-LWt"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                                <connections>
+                                    <binding destination="PTa-5A-wC9" name="selectedTag" keyPath="self.selectedInput" id="NpK-jS-rK7"/>
+                                </connections>
+                            </popUpButton>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="h5x-4o-35e">
+                                <rect key="frame" x="46" y="101" width="47" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Output" id="TqM-9f-QPD">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="dee-IL-Aaz">
+                                <rect key="frame" x="97" y="38" width="287" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="Zog-on-uc2"/>
+                                    <constraint firstAttribute="width" constant="283" id="mmQ-G5-7rm"/>
+                                </constraints>
+                                <buttonCell key="cell" type="check" title="Play Courtesy Tone at End of Transmissions" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="sRO-D3-EGD">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="PTa-5A-wC9" name="value" keyPath="self.courtesyTone" id="U8X-MB-G66"/>
+                                </connections>
+                            </button>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="x50-db-H91">
+                                <rect key="frame" x="97" y="18" width="242" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="238" id="8f9-nt-kLq"/>
+                                    <constraint firstAttribute="height" constant="14" id="K84-JK-nOu"/>
+                                </constraints>
+                                <buttonCell key="cell" type="check" title="Announce Reflector Status Changes" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="wx5-Qg-WX9">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="PTa-5A-wC9" name="value" keyPath="self.voiceAnnounceOnStatusChange" id="QF2-mx-7WM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="dee-IL-Aaz" firstAttribute="leading" secondItem="TXG-GC-K3t" secondAttribute="leading" id="4do-ez-ICt"/>
+                            <constraint firstItem="mVy-ci-K0O" firstAttribute="leading" secondItem="h5x-4o-35e" secondAttribute="trailing" constant="8" symbolic="YES" id="BlQ-uE-PHn"/>
+                            <constraint firstItem="h5x-4o-35e" firstAttribute="top" secondItem="XSw-uU-Ge2" secondAttribute="top" constant="20" symbolic="YES" id="ByX-X5-voL"/>
+                            <constraint firstItem="x50-db-H91" firstAttribute="top" secondItem="dee-IL-Aaz" secondAttribute="bottom" constant="6" id="JrN-e0-mLZ"/>
+                            <constraint firstItem="TXG-GC-K3t" firstAttribute="centerY" secondItem="TRZ-HT-6PH" secondAttribute="centerY" id="QQ5-DO-9c8"/>
+                            <constraint firstItem="TRZ-HT-6PH" firstAttribute="top" secondItem="h5x-4o-35e" secondAttribute="bottom" constant="8" id="T71-ID-wum"/>
+                            <constraint firstItem="TRZ-HT-6PH" firstAttribute="trailing" secondItem="h5x-4o-35e" secondAttribute="trailing" id="VG9-fc-BEA"/>
+                            <constraint firstItem="x50-db-H91" firstAttribute="leading" secondItem="dee-IL-Aaz" secondAttribute="leading" id="Wkd-3c-wo5"/>
+                            <constraint firstItem="TXG-GC-K3t" firstAttribute="top" secondItem="mVy-ci-K0O" secondAttribute="bottom" constant="4" id="Ypb-W9-Tdz"/>
+                            <constraint firstItem="h5x-4o-35e" firstAttribute="centerY" secondItem="mVy-ci-K0O" secondAttribute="centerY" id="e9L-lJ-IFi"/>
+                            <constraint firstItem="h5x-4o-35e" firstAttribute="leading" secondItem="XSw-uU-Ge2" secondAttribute="leading" constant="48" id="gZw-u5-NcY"/>
+                            <constraint firstItem="TRZ-HT-6PH" firstAttribute="top" secondItem="h5x-4o-35e" secondAttribute="bottom" constant="8" symbolic="YES" id="hbE-0u-afy"/>
+                            <constraint firstAttribute="bottom" secondItem="x50-db-H91" secondAttribute="bottom" constant="20" symbolic="YES" id="rAM-Kh-i4N"/>
+                            <constraint firstItem="dee-IL-Aaz" firstAttribute="top" secondItem="TXG-GC-K3t" secondAttribute="bottom" constant="20" id="tqJ-A9-N6n"/>
+                            <constraint firstItem="TXG-GC-K3t" firstAttribute="leading" secondItem="TRZ-HT-6PH" secondAttribute="trailing" constant="8" symbolic="YES" id="wJ1-Rc-A1O"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="inputDeviceMenu" destination="TXG-GC-K3t" id="KRn-Nt-erf"/>
+                        <outlet property="outputDeviceMenu" destination="mVy-ci-K0O" id="JA7-dP-e26"/>
+                    </connections>
+                </viewController>
+                <customObject id="B0j-BN-CLv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="460" y="373"/>
+        </scene>
+    </scenes>
+</document>

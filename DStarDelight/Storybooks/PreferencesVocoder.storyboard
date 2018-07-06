@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="v4i-35-FCs">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14295.6"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--PrefVocoder-->
+        <scene sceneID="5bR-rV-ysc">
+            <objects>
+                <tabViewController storyboardIdentifier="PrefVocoder" showSeguePresentationStyle="single" selectedTabViewItemIndex="0" id="v4i-35-FCs" userLabel="PrefVocoder" customClass="DSPrefVocoderViewController" sceneMemberID="viewController">
+                    <tabViewItems>
+                        <tabViewItem id="j44-HJ-oBL"/>
+                        <tabViewItem id="ybI-cc-bRs"/>
+                    </tabViewItems>
+                    <tabView key="tabView" type="noTabsNoBorder" id="nrs-Ch-Ri8">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <font key="font" metaFont="message"/>
+                        <connections>
+                            <outlet property="delegate" destination="v4i-35-FCs" id="adq-on-rPg"/>
+                        </connections>
+                    </tabView>
+                    <connections>
+                        <outlet property="tabView" destination="nrs-Ch-Ri8" id="eQL-G5-csb"/>
+                        <segue destination="b6h-Y8-aBJ" kind="relationship" relationship="tabItems" id="iCx-pn-uzX"/>
+                        <segue destination="eEv-yn-pbJ" kind="relationship" relationship="tabItems" id="7Mc-Pc-okE"/>
+                    </connections>
+                </tabViewController>
+                <customObject id="gPc-s5-tjP" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="410" y="688"/>
+        </scene>
+        <!--VocoderSerial-->
+        <scene sceneID="j1I-FQ-hYE">
+            <objects>
+                <controllerPlaceholder storyboardIdentifier="VocoderSerial" storyboardName="VocoderSerial" id="b6h-Y8-aBJ" sceneMemberID="viewController"/>
+                <customObject id="Mm8-wY-0wn" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="224" y="976"/>
+        </scene>
+        <!--VocoderNetwork-->
+        <scene sceneID="Ugl-tL-SCs">
+            <objects>
+                <controllerPlaceholder storyboardIdentifier="VocoderNetwork" storyboardName="VocoderNetwork" id="eEv-yn-pbJ" sceneMemberID="viewController"/>
+                <customObject id="bAS-5s-WIu" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="592" y="976"/>
+        </scene>
+    </scenes>
+</document>

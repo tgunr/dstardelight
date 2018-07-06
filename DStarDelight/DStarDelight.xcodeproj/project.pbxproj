@@ -13,9 +13,16 @@
 		7502EC9720ECF139003A11F1 /* DSPrefVocoderSerialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945CB020EC62F2003A11F1 /* DSPrefVocoderSerialViewController.m */; };
 		7502ECA320EEE320003A11F1 /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7502ECA220EEE320003A11F1 /* Preferences.storyboard */; };
 		7502ECA620EFD980003A11F1 /* DSPrefViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502ECA520EFD97F003A11F1 /* DSPrefViewController.m */; };
-		750A58D020F00545003A11F1 /* Prefs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 750A58CF20F00545003A11F1 /* Prefs.storyboard */; };
+		750A58D220F0202C003A11F1 /* PreferencesVocoder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 750A58D120F0202C003A11F1 /* PreferencesVocoder.storyboard */; };
+		750A58D420F020E2003A11F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 750A58D320F020E2003A11F1 /* Images.xcassets */; };
+		750A58D620F020FB003A11F1 /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = 750A58D520F020FA003A11F1 /* Credits.html */; };
+		750A58D820F02108003A11F1 /* DCSReflectors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 750A58D720F02107003A11F1 /* DCSReflectors.plist */; };
+		750A58DA20F02113003A11F1 /* DExtraReflectors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 750A58D920F02113003A11F1 /* DExtraReflectors.plist */; };
+		750A58DC20F02286003A11F1 /* VocoderSerial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 750A58DB20F02286003A11F1 /* VocoderSerial.storyboard */; };
+		750A58DE20F022AC003A11F1 /* VocoderNetwork.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 750A58DD20F022AC003A11F1 /* VocoderNetwork.storyboard */; };
+		750A58E020F0279A003A11F1 /* PreferencesAudio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 750A58DF20F0279A003A11F1 /* PreferencesAudio.storyboard */; };
+		750A58E220F02811003A11F1 /* PreferencesGeneral.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 750A58E120F02811003A11F1 /* PreferencesGeneral.storyboard */; };
 		7525480D20E6FDD6003A11F1 /* DSAudioHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525480B20E6FDD5003A11F1 /* DSAudioHandler.m */; };
-		7525488820EAA9D6003A11F1 /* SharedResources in Resources */ = {isa = PBXBuildFile; fileRef = 7525488720EAA9D6003A11F1 /* SharedResources */; };
 		752F94D820ECEACA003A11F1 /* DSMapPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 752F94D720ECEACA003A11F1 /* DSMapPopupController.m */; };
 		752F94DA20ECEAE0003A11F1 /* DSPrefVocoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 752F94D920ECEAE0003A11F1 /* DSPrefVocoderViewController.m */; };
 		752F94DD20ECEB05003A11F1 /* DSPrefAudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 752F94DC20ECEB05003A11F1 /* DSPrefAudioViewController.m */; };
@@ -72,7 +79,15 @@
 		7502ECA220EEE320003A11F1 /* Preferences.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Preferences.storyboard; sourceTree = "<group>"; };
 		7502ECA420EFD97F003A11F1 /* DSPrefViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPrefViewController.h; sourceTree = "<group>"; };
 		7502ECA520EFD97F003A11F1 /* DSPrefViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSPrefViewController.m; sourceTree = "<group>"; };
-		750A58CF20F00545003A11F1 /* Prefs.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Prefs.storyboard; sourceTree = "<group>"; };
+		750A58D120F0202C003A11F1 /* PreferencesVocoder.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PreferencesVocoder.storyboard; sourceTree = "<group>"; };
+		750A58D320F020E2003A11F1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../SharedResources/Images.xcassets; sourceTree = "<group>"; };
+		750A58D520F020FA003A11F1 /* Credits.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Credits.html; sourceTree = "<group>"; };
+		750A58D720F02107003A11F1 /* DCSReflectors.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = DCSReflectors.plist; path = ../DCSReflectors.plist; sourceTree = "<group>"; };
+		750A58D920F02113003A11F1 /* DExtraReflectors.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = DExtraReflectors.plist; path = ../DExtraReflectors.plist; sourceTree = "<group>"; };
+		750A58DB20F02286003A11F1 /* VocoderSerial.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VocoderSerial.storyboard; sourceTree = "<group>"; };
+		750A58DD20F022AC003A11F1 /* VocoderNetwork.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VocoderNetwork.storyboard; sourceTree = "<group>"; };
+		750A58DF20F0279A003A11F1 /* PreferencesAudio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PreferencesAudio.storyboard; sourceTree = "<group>"; };
+		750A58E120F02811003A11F1 /* PreferencesGeneral.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PreferencesGeneral.storyboard; sourceTree = "<group>"; };
 		7525480B20E6FDD5003A11F1 /* DSAudioHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSAudioHandler.m; path = DS/DSAudioHandler.m; sourceTree = SOURCE_ROOT; };
 		7525480C20E6FDD5003A11F1 /* DSAudioHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSAudioHandler.h; path = DS/DSAudioHandler.h; sourceTree = SOURCE_ROOT; };
 		7525484120E7F084003A11F1 /* DStarDelight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DStarDelight.h; path = DS/DStarDelight.h; sourceTree = SOURCE_ROOT; };
@@ -203,6 +218,9 @@
 			isa = PBXGroup;
 			children = (
 				75E087F320E31574003A11F1 /* Assets.xcassets */,
+				750A58D920F02113003A11F1 /* DExtraReflectors.plist */,
+				750A58D720F02107003A11F1 /* DCSReflectors.plist */,
+				750A58D520F020FA003A11F1 /* Credits.html */,
 				758B49CC20E41C92003A11F1 /* DefaultPreferences.plist */,
 				75E087F820E31574003A11F1 /* Info.plist */,
 				75E087FB20E31574003A11F1 /* DStarDelight.entitlements */,
@@ -352,6 +370,7 @@
 		75E087E120E31572003A11F1 = {
 			isa = PBXGroup;
 			children = (
+				750A58D320F020E2003A11F1 /* Images.xcassets */,
 				756A408B20EC5FAB003A11F1 /* DSE */,
 				75945C8120EC62F2003A11F1 /* DS */,
 				7525485220E988D0003A11F1 /* Resources */,
@@ -380,9 +399,13 @@
 				758B49CA20E41BD8003A11F1 /* DSAddPopupController.xib */,
 				75E0885B20E3177F003A11F1 /* DSSerialVocoderView.xib */,
 				758B49C120E4196D003A11F1 /* Main.storyboard */,
-				750A58CF20F00545003A11F1 /* Prefs.storyboard */,
-				7502ECA220EEE320003A11F1 /* Preferences.storyboard */,
 				758B49BE20E41301003A11F1 /* New.storyboard */,
+				7502ECA220EEE320003A11F1 /* Preferences.storyboard */,
+				750A58E120F02811003A11F1 /* PreferencesGeneral.storyboard */,
+				750A58DF20F0279A003A11F1 /* PreferencesAudio.storyboard */,
+				750A58D120F0202C003A11F1 /* PreferencesVocoder.storyboard */,
+				750A58DD20F022AC003A11F1 /* VocoderNetwork.storyboard */,
+				750A58DB20F02286003A11F1 /* VocoderSerial.storyboard */,
 			);
 			path = Storybooks;
 			sourceTree = "<group>";
@@ -477,17 +500,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				75E087F420E31574003A11F1 /* Assets.xcassets in Resources */,
+				750A58DC20F02286003A11F1 /* VocoderSerial.storyboard in Resources */,
+				750A58D420F020E2003A11F1 /* Images.xcassets in Resources */,
+				750A58D820F02108003A11F1 /* DCSReflectors.plist in Resources */,
+				750A58DA20F02113003A11F1 /* DExtraReflectors.plist in Resources */,
+				750A58E220F02811003A11F1 /* PreferencesGeneral.storyboard in Resources */,
+				750A58D620F020FB003A11F1 /* Credits.html in Resources */,
 				756A40A420EC60B7003A11F1 /* TPCircularBuffer.podspec in Resources */,
 				758B49CF20E41C92003A11F1 /* DefaultPreferences.plist in Resources */,
 				7502ECA320EEE320003A11F1 /* Preferences.storyboard in Resources */,
 				758B49C020E41302003A11F1 /* New.storyboard in Resources */,
 				758B49C220E4196D003A11F1 /* Main.storyboard in Resources */,
 				75E0887F20E3177F003A11F1 /* DSSerialVocoderView.xib in Resources */,
+				750A58E020F0279A003A11F1 /* PreferencesAudio.storyboard in Resources */,
 				756A40A120EC60B7003A11F1 /* README.markdown in Resources */,
 				758B49CB20E41BD8003A11F1 /* DSAddPopupController.xib in Resources */,
 				75E0887D20E3177F003A11F1 /* DSNetworkVocoderView.xib in Resources */,
-				7525488820EAA9D6003A11F1 /* SharedResources in Resources */,
-				750A58D020F00545003A11F1 /* Prefs.storyboard in Resources */,
+				750A58D220F0202C003A11F1 /* PreferencesVocoder.storyboard in Resources */,
+				750A58DE20F022AC003A11F1 /* VocoderNetwork.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

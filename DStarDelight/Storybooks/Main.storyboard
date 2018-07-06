@@ -25,7 +25,7 @@
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
                                         <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
                                             <connections>
-                                                <segue destination="aw7-oo-70e" kind="modal" id="7qc-5p-jdd"/>
+                                                <segue destination="XSx-Oq-dXr" kind="show" id="rzl-OT-C5I"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
@@ -151,6 +151,14 @@
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="410" y="-59"/>
+        </scene>
+        <!--Preferences-->
+        <scene sceneID="dUi-FD-Rsm">
+            <objects>
+                <controllerPlaceholder storyboardName="Preferences" id="XSx-Oq-dXr" sceneMemberID="viewController"/>
+                <customObject id="bTd-Ta-x5c" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="57" y="138"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
