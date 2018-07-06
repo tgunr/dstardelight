@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!-- Prepared at ar-dns.net - Mon, 29 May 2017 23:53:35 GMT -->
 <plist version="1.0">
 <dict>
 	<key>7K1AYZ</key>
@@ -4627,6 +4626,8 @@
 	<string>46.41.1.127</string>
 	<key>XLX170</key>
 	<string>210.178.113.238</string>
+	<key>XLX180</key>
+	<string>192.241.240.7</string>
 	<key>XLX200</key>
 	<string>176.126.243.213</string>
 	<key>XLX204</key>
@@ -4707,8 +4708,6 @@
 	<string>202.142.213.58</string>
 	<key>XLX555</key>
 	<string>104.167.117.252</string>
-	<key>XLX569</key>
-	<string>219.122.217.203</string>
 	<key>XLX569</key>
 	<string>xlxreflector.jpn.ph</string>
 	<key>XLX570</key>
@@ -5040,8 +5039,6 @@
 	<key>XRF223</key>
 	<string>k0pra.ddns.net</string>
 	<key>XRF226</key>
-	<string>216.158.224.28</string>
-	<key>XRF226</key>
 	<string>xrf.226.ro</string>
 	<key>XRF228</key>
 	<string>xrf228.duckdns.org</string>
@@ -5080,8 +5077,6 @@
 	<key>XRF302</key>
 	<string>xlx302.hopto.org</string>
 	<key>XRF307</key>
-	<string>xlx307.ddns.net</string>
-	<key>XRF307</key>
 	<string>104.167.106.95</string>
 	<key>XRF310</key>
 	<string>server1.xrefl.net</string>
@@ -5099,8 +5094,6 @@
 	<string>xrf317.crossroadsdmr.org</string>
 	<key>XRF318</key>
 	<string>xrf318.xrefl.net</string>
-	<key>XRF332</key>
-	<string>iz7jwr.dtdns.net</string>
 	<key>XRF332</key>
 	<string>188.213.168.99</string>
 	<key>XRF333</key>
@@ -5133,8 +5126,6 @@
 	<string>104.167.117.71</string>
 	<key>XRF400</key>
 	<string>5.196.8.77</string>
-	<key>XRF404</key>
-	<string>163.172.140.188</string>
 	<key>XRF404</key>
 	<string>xlx.bendiksverden.net</string>
 	<key>XRF420</key>
@@ -5169,8 +5160,6 @@
 	<string>shounandstar.dip.jp</string>
 	<key>XRF518</key>
 	<string>xrf518.n18.de</string>
-	<key>XRF519</key>
-	<string>24.55.196.105</string>
 	<key>XRF519</key>
 	<string>xrf519.ve3zin.com</string>
 	<key>XRF520</key>
