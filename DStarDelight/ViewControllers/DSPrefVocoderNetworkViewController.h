@@ -3,7 +3,7 @@
 
 @class DSEDV3KNetworkVocoder;
 
-@interface DSNetworkVocoderViewController : NSViewController
+@interface DSPrefVocoderNetworkViewController : NSViewController
 
 @property (weak) IBOutlet NSTextField *productId;
 @property (weak) IBOutlet NSTextField *version;

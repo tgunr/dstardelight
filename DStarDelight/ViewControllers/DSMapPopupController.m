@@ -2,11 +2,11 @@
 
 #import "DSMapPopupController.h"
 
-@interface DSEMapPopupController ()
+@interface DSMapPopupController ()
 
 @end
 
-@implementation DSEMapPopupController
+@implementation DSMapPopupController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

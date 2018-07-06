@@ -7,9 +7,6 @@
 #import "DSELinkDriverProtocol.h"
 #import "DSAudioHandler.h"
 
-// XXX
-//#import "DSESerialVocoderViewController.h"
-
 static const struct dv3k_packet bleepPacket = {
     .start_byte = DV3K_START_BYTE,
     .header.packet_type = DV3K_TYPE_AMBE,

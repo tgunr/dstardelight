@@ -1,16 +1,16 @@
 
 
-#import "DSAudioViewController.h"
+#import "DSPrefAudioViewController.h"
 
 #import <CoreAudio/CoreAudio.h>
 #import "DSAudioHandler.h"
 #import "DSEDataEngine.h"
 
-@interface DSEAudioViewController ()
+@interface DSPrefAudioViewController ()
 -(void)refreshDevices;
 @end
 
-@implementation DSEAudioViewController
+@implementation DSPrefAudioViewController
 
 - (void) setSelectedInput:(NSInteger)_selectedInput {
 //    [DSEDataEngine sharedInstance].audio.inputDevice = (AudioDeviceID) _selectedInput;
@@ -78,7 +78,7 @@
 -(void)viewDidLoad {
     [self refreshDevices];
     
-    __weak DSEAudioViewController * const weakSelf = self;
+    __weak DSPrefAudioViewController * const weakSelf = self;
     [[NSNotificationCenter defaultCenter] addObserverForName:DSAudioDeviceChanged
                                                       object:nil
                                                        queue:[NSOperationQueue mainQueue]

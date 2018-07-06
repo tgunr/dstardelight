@@ -5,7 +5,7 @@
 
 @class MASShortcut;
 
-@interface DSEMainWindowViewController : NSViewController <NSTableViewDelegate, NSTableViewDataSource, NSControlTextEditingDelegate, DSEDataEngineDelegate>
+@interface DSMainWindowViewController : NSViewController <NSTableViewDelegate, NSTableViewDataSource, NSControlTextEditingDelegate, DSEDataEngineDelegate>
 
 @property (nonatomic, strong) IBOutlet NSArrayController *heardTableController;
 @property (nonatomic, weak) IBOutlet NSTableView *heardTableView;

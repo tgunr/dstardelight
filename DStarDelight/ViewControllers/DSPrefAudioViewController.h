@@ -1,7 +1,7 @@
 
 #import <AppKit/AppKit.h>
 
-@interface DSEAudioViewController : NSViewController
+@interface DSPrefAudioViewController : NSViewController
 @property (nonatomic, weak) IBOutlet NSPopUpButton *outputDeviceMenu;
 @property (nonatomic, weak) IBOutlet NSPopUpButton *inputDeviceMenu;
 

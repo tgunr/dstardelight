@@ -14,7 +14,7 @@
 
 @import MapKit;
 
-@interface DSEMainWindowViewController ()
+@interface DSMainWindowViewController ()
 
 @property (nonatomic) dispatch_source_t qsoTimer;
 @property (nonatomic) NSInteger txButtonState;
@@ -27,7 +27,7 @@
 
 @end
 
-@implementation DSEMainWindowViewController
+@implementation DSMainWindowViewController
 
 +(NSUInteger)findQsoId:(NSNumber *)streamId inArray:(NSArray *)array {
     return [array indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
@@ -42,7 +42,7 @@
 }
 
 -(BOOL)updateQsoId:(NSNumber *)streamId usingBlock:(void(^)(NSMutableDictionary *, NSUInteger))block {
-    NSUInteger qsoIndex = [DSEMainWindowViewController findQsoId:streamId inArray:self.qsoList];
+    NSUInteger qsoIndex = [DSMainWindowViewController findQsoId:streamId inArray:self.qsoList];
     if(qsoIndex == NSNotFound)
         return NO;
 
@@ -74,12 +74,12 @@
     
     if(![self updateQsoId:streamId usingBlock:^(NSMutableDictionary *qso, NSUInteger qsoIndex) {}]) {
         if(self.mapPopover.isShown)
-           ((DSEMapPopupController *)self.mapPopover.contentViewController).suppressClose = YES;
+           ((DSMapPopupController *)self.mapPopover.contentViewController).suppressClose = YES;
 
         [self.qsoList addObject:header];
         [self.heardTableController rearrangeObjects];
         
-        DSEMainWindowViewController __weak *weakSelf = self;
+        DSMainWindowViewController __weak *weakSelf = self;
         self.qsoTimer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_main_queue());
         dispatch_source_set_timer(self.qsoTimer, dispatch_time(DISPATCH_TIME_NOW, 100ull * NSEC_PER_MSEC), 100ull * NSEC_PER_MSEC, 10ull * NSEC_PER_MSEC);
         dispatch_source_set_event_handler(self.qsoTimer, ^{
@@ -103,7 +103,7 @@
             qso[@"color"] = [NSColor blackColor];
     }];
     
-    NSUInteger qsoIndex = [DSEMainWindowViewController findQsoId:streamId inArray:self.heardTableController.arrangedObjects];
+    NSUInteger qsoIndex = [DSMainWindowViewController findQsoId:streamId inArray:self.heardTableController.arrangedObjects];
     
     //  If we can't find the QSO, it's probably not visible and we don't need to reset its color.
     if(qsoIndex != NSNotFound)
@@ -159,9 +159,9 @@
     self.qsoList = [[NSMutableArray alloc] init];
     
     self.mapPopover = [[NSPopover alloc] init];
-    self.mapPopover.contentViewController = [[DSEMapPopupController alloc] initWithNibName:nil bundle:nil];
+    self.mapPopover.contentViewController = [[DSMapPopupController alloc] initWithNibName:nil bundle:nil];
     self.mapPopover.behavior = NSPopoverBehaviorTransient;
-    self.mapPopover.delegate = (DSEMapPopupController *) self.mapPopover.contentViewController;
+    self.mapPopover.delegate = (DSMapPopupController *) self.mapPopover.contentViewController;
     
     self.addPopover = [[NSPopover alloc] init];
     DSAddPopupController *addController = [[DSAddPopupController alloc] initWithNibName:nil bundle:nil];
@@ -261,8 +261,8 @@
         if(!location.callsign)
             location.callsign = qso[@"myCall"];
 
-        ((DSEMapPopupController *)self.mapPopover.contentViewController).annotation = qso[@"location"];
-        ((DSEMapPopupController *)self.mapPopover.contentViewController).qsoId = qso[@"streamId"];
+        ((DSMapPopupController *)self.mapPopover.contentViewController).annotation = qso[@"location"];
+        ((DSMapPopupController *)self.mapPopover.contentViewController).qsoId = qso[@"streamId"];
         NSView *clickedView = [self.heardTableView viewAtColumn:[self.heardTableView columnWithIdentifier:@"Location"] row:self.heardTableView.clickedRow makeIfNecessary:NO];
         [self.mapPopover showRelativeToRect:NSMakeRect(0, 0, 300, 300) ofView:clickedView preferredEdge:NSRectEdgeMaxY];
     }
@@ -437,14 +437,14 @@
     [self resetColorForRowView:rowView atRow:row];
     
     if(self.mapPopover.isShown) {
-        NSUInteger popoverRow = [DSEMainWindowViewController findQsoId:((DSEMapPopupController *)self.mapPopover.contentViewController).qsoId inArray:self.heardTableController.arrangedObjects];
+        NSUInteger popoverRow = [DSMainWindowViewController findQsoId:((DSMapPopupController *)self.mapPopover.contentViewController).qsoId inArray:self.heardTableController.arrangedObjects];
         
         NSAssert(popoverRow != NSNotFound, @"QSO ID %ld not found in popover relocation", popoverRow);
         
         NSView *popoverAnchorView = [self.heardTableView viewAtColumn:[self.heardTableView columnWithIdentifier:@"Location"] row:popoverRow makeIfNecessary:NO];
         if(popoverAnchorView && popoverRow == row) {
             [self.mapPopover showRelativeToRect:NSMakeRect(0, 0, 300, 300) ofView:popoverAnchorView preferredEdge:NSRectEdgeMaxY];
-            ((DSEMapPopupController *)self.mapPopover.contentViewController).suppressClose = NO;
+            ((DSMapPopupController *)self.mapPopover.contentViewController).suppressClose = NO;
         }
 
     }

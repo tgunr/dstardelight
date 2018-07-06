@@ -3,7 +3,7 @@
 
 @class MASShortcut, MASShortcutView;
 
-@interface DSEGeneralPreferencesController : NSViewController
+@interface DSPrefGeneralViewController : NSViewController
 
 @property (nonatomic, weak) IBOutlet MASShortcutView *shortcutView;
 @property (nonatomic) MASShortcut *shortcutValue;

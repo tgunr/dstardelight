@@ -1,7 +1,7 @@
 
 #import <AppKit/AppKit.h>
 
-@interface DSEVocoderViewController : NSViewController
+@interface DSPrefVocoderViewController : NSTabViewController
 @property (weak) IBOutlet NSPopUpButton *vocoderType;
 
 - (IBAction)selectVocoder:(id)sender;

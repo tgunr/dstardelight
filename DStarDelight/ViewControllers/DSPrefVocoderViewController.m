@@ -1,10 +1,10 @@
 
 
-#import "DSVocoderViewController.h"
+#import "DSPrefVocoderViewController.h"
 #import "DSEVocoderDriver.h"
 #import "DSEDataEngine.h"
 
-@interface DSEVocoderViewController ()
+@interface DSPrefVocoderViewController ()
 
 @property (nonatomic) NSViewController *configurationViewController;
 
@@ -12,7 +12,7 @@
 
 @end
 
-@implementation DSEVocoderViewController
+@implementation DSPrefVocoderViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,7 +26,7 @@
             [self.vocoderType selectItem:addedItem];
     }
     
-//    [self replaceConfigurationViewControllerWith:[[DSEDataEngine sharedInstance].vocoder configurationViewController]];
+    [self replaceConfigurationViewControllerWith:[[DSEDataEngine sharedInstance].vocoder configurationViewController]];
 }
 
 -(void)replaceConfigurationViewControllerWith:(NSViewController *)viewController {

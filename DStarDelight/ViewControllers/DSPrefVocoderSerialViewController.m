@@ -1,11 +1,11 @@
 
 
-#import "DSSerialVocoderViewController.h"
+#import "DSPrefVocoderSerialViewController.h"
 
-@interface DSSerialVocoderViewController ()
+@interface DSPrefVocoderSerialViewController ()
 @end
 
-@implementation DSSerialVocoderViewController
+@implementation DSPrefVocoderSerialViewController
 
 - (id) init {
     self = [super initWithNibName:@"DSESerialVocoderView" bundle:nil];

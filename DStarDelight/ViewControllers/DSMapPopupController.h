@@ -2,7 +2,7 @@
 
 @import MapKit;
 
-@interface DSEMapPopupController : NSViewController <NSPopoverDelegate>
+@interface DSMapPopupController : NSViewController <NSPopoverDelegate>
 
 @property (nonatomic) MKPointAnnotation *annotation;
 @property (weak) IBOutlet MKMapView *mapView;

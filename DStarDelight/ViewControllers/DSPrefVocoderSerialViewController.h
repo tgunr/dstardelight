@@ -3,7 +3,7 @@
 
 #import "DSDV3KSerialVocoder.h"
 
-@interface DSSerialVocoderViewController : NSViewController
+@interface DSPrefVocoderSerialViewController : NSViewController
 @property (weak) IBOutlet NSPopUpButton *serialPortPopup;
 @property (weak) IBOutlet NSPopUpButton *speedPopup;
 @property (weak) IBOutlet NSTextField *productId;

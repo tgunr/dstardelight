@@ -4,13 +4,13 @@
 
 #import "DSEDataEngine.h"
 #import "DSEDV3KVocoderSubclass.h"
-//#import "DSNetworkVocoderViewController.h"
+#import "DSPrefVocoderNetworkViewController.h"
 
 #import <arpa/inet.h>
 #import <sys/ioctl.h>
 
 @interface DSEDV3KNetworkVocoder () {
-    id _networkConfigurationViewController;
+    DSPrefVocoderNetworkViewController *_configurationViewController;
 }
 
 @end
@@ -47,21 +47,21 @@
     return @"Network DV3000";
 }
 
-//- (void) setProductId:(NSString *)productId {
-//    super.productId = productId;
-//
-//    dispatch_async(dispatch_get_main_queue(), ^{
-//        ((DSENetworkVocoderViewController *)self.configurationViewController).productId.stringValue = productId;
-//    });
-//}
-//
-//- (void) setVersion:(NSString *)version {
-//    super.version = version;
-//
-//    dispatch_async(dispatch_get_main_queue(), ^{
-//        ((DSENetworkVocoderViewController *)self.configurationViewController).version.stringValue = version;
-//    });
-//}
+- (void) setProductId:(NSString *)productId {
+    super.productId = productId;
+
+    dispatch_async(dispatch_get_main_queue(), ^{
+        ((DSPrefVocoderNetworkViewController *)self.configurationViewController).productId.stringValue = productId;
+    });
+}
+
+- (void) setVersion:(NSString *)version {
+    super.version = version;
+
+    dispatch_async(dispatch_get_main_queue(), ^{
+        ((DSPrefVocoderNetworkViewController *)self.configurationViewController).version.stringValue = version;
+    });
+}
 
 - (void) setPort:(short)port {
     if(_port == port) return;
@@ -85,14 +85,14 @@
     [self start];
 }
 
-//-(NSViewController *)configurationViewController {
-//    if(!_configurationViewController) {
-//        _configurationViewController = [[DSENetworkVocoderViewController alloc] init];
-//        _configurationViewController.driver = self;
-//    }
-//    return _configurationViewController;
-//}
-//
+-(NSViewController *)configurationViewController {
+    if(!_configurationViewController) {
+        _configurationViewController = [[DSPrefVocoderNetworkViewController alloc] init];
+        _configurationViewController.driver = self;
+    }
+    return _configurationViewController;
+}
+
 
 - (BOOL) openPort {
     NSHost *destination = [NSHost hostWithAddress:self.address];

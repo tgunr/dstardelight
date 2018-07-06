@@ -9,13 +9,16 @@
 /* Begin PBXBuildFile section */
 		7502EC9420ECF139003A11F1 /* DSAddPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945C8620EC62F2003A11F1 /* DSAddPopupController.m */; };
 		7502EC9520ECF139003A11F1 /* DSMainWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945C9420EC62F2003A11F1 /* DSMainWindowViewController.m */; };
-		7502EC9620ECF139003A11F1 /* DSNetworkVocoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945CAE20EC62F2003A11F1 /* DSNetworkVocoderViewController.m */; };
-		7502EC9720ECF139003A11F1 /* DSSerialVocoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945CB020EC62F2003A11F1 /* DSSerialVocoderViewController.m */; };
+		7502EC9620ECF139003A11F1 /* DSPrefVocoderNetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945CAE20EC62F2003A11F1 /* DSPrefVocoderNetworkViewController.m */; };
+		7502EC9720ECF139003A11F1 /* DSPrefVocoderSerialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945CB020EC62F2003A11F1 /* DSPrefVocoderSerialViewController.m */; };
+		7502ECA320EEE320003A11F1 /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7502ECA220EEE320003A11F1 /* Preferences.storyboard */; };
+		7502ECA620EFD980003A11F1 /* DSPrefViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502ECA520EFD97F003A11F1 /* DSPrefViewController.m */; };
+		750A58D020F00545003A11F1 /* Prefs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 750A58CF20F00545003A11F1 /* Prefs.storyboard */; };
 		7525480D20E6FDD6003A11F1 /* DSAudioHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7525480B20E6FDD5003A11F1 /* DSAudioHandler.m */; };
 		7525488820EAA9D6003A11F1 /* SharedResources in Resources */ = {isa = PBXBuildFile; fileRef = 7525488720EAA9D6003A11F1 /* SharedResources */; };
 		752F94D820ECEACA003A11F1 /* DSMapPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 752F94D720ECEACA003A11F1 /* DSMapPopupController.m */; };
-		752F94DA20ECEAE0003A11F1 /* DSVocoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 752F94D920ECEAE0003A11F1 /* DSVocoderViewController.m */; };
-		752F94DD20ECEB05003A11F1 /* DSAudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 752F94DC20ECEB05003A11F1 /* DSAudioViewController.m */; };
+		752F94DA20ECEAE0003A11F1 /* DSPrefVocoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 752F94D920ECEAE0003A11F1 /* DSPrefVocoderViewController.m */; };
+		752F94DD20ECEB05003A11F1 /* DSPrefAudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 752F94DC20ECEB05003A11F1 /* DSPrefAudioViewController.m */; };
 		754A461B20EC6DDE003A11F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945C9C20EC62F2003A11F1 /* main.m */; };
 		754A461C20EC6E4B003A11F1 /* MASDictionaryTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945C9F20EC62F2003A11F1 /* MASDictionaryTransformer.m */; };
 		754A461D20EC6E65003A11F1 /* MASShortcut.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945CA220EC62F2003A11F1 /* MASShortcut.m */; };
@@ -49,7 +52,7 @@
 		75E0880520E31575003A11F1 /* DStarDelightUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0880420E31575003A11F1 /* DStarDelightUITests.m */; };
 		75E0886020E3177F003A11F1 /* DSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0881320E3177F003A11F1 /* DSAppDelegate.m */; };
 		75E0886420E3177F003A11F1 /* DSCallFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0881B20E3177F003A11F1 /* DSCallFormatter.m */; };
-		75E0886920E3177F003A11F1 /* DSGeneralPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0882420E3177F003A11F1 /* DSGeneralPreferencesController.m */; };
+		75E0886920E3177F003A11F1 /* DSPrefGeneralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0882420E3177F003A11F1 /* DSPrefGeneralViewController.m */; };
 		75E0886E20E3177F003A11F1 /* DSMessageFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0883120E3177F003A11F1 /* DSMessageFormatter.m */; };
 		75E0887D20E3177F003A11F1 /* DSNetworkVocoderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75E0885820E3177F003A11F1 /* DSNetworkVocoderView.xib */; };
 		75E0887F20E3177F003A11F1 /* DSSerialVocoderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75E0885B20E3177F003A11F1 /* DSSerialVocoderView.xib */; };
@@ -66,15 +69,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7502ECA220EEE320003A11F1 /* Preferences.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Preferences.storyboard; sourceTree = "<group>"; };
+		7502ECA420EFD97F003A11F1 /* DSPrefViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPrefViewController.h; sourceTree = "<group>"; };
+		7502ECA520EFD97F003A11F1 /* DSPrefViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSPrefViewController.m; sourceTree = "<group>"; };
+		750A58CF20F00545003A11F1 /* Prefs.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Prefs.storyboard; sourceTree = "<group>"; };
 		7525480B20E6FDD5003A11F1 /* DSAudioHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DSAudioHandler.m; path = DS/DSAudioHandler.m; sourceTree = SOURCE_ROOT; };
 		7525480C20E6FDD5003A11F1 /* DSAudioHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DSAudioHandler.h; path = DS/DSAudioHandler.h; sourceTree = SOURCE_ROOT; };
 		7525484120E7F084003A11F1 /* DStarDelight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DStarDelight.h; path = DS/DStarDelight.h; sourceTree = SOURCE_ROOT; };
 		7525488720EAA9D6003A11F1 /* SharedResources */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SharedResources; path = ../SharedResources; sourceTree = "<group>"; };
-		752F94D620ECEABB003A11F1 /* DSGeneralPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSGeneralPreferencesController.h; sourceTree = "<group>"; };
+		752F94D620ECEABB003A11F1 /* DSPrefGeneralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPrefGeneralViewController.h; sourceTree = "<group>"; };
 		752F94D720ECEACA003A11F1 /* DSMapPopupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSMapPopupController.m; sourceTree = "<group>"; };
-		752F94D920ECEAE0003A11F1 /* DSVocoderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSVocoderViewController.m; sourceTree = "<group>"; };
-		752F94DB20ECEB05003A11F1 /* DSAudioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSAudioViewController.h; sourceTree = "<group>"; };
-		752F94DC20ECEB05003A11F1 /* DSAudioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAudioViewController.m; sourceTree = "<group>"; };
+		752F94D920ECEAE0003A11F1 /* DSPrefVocoderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSPrefVocoderViewController.m; sourceTree = "<group>"; };
+		752F94DB20ECEB05003A11F1 /* DSPrefAudioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPrefAudioViewController.h; sourceTree = "<group>"; };
+		752F94DC20ECEB05003A11F1 /* DSPrefAudioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSPrefAudioViewController.m; sourceTree = "<group>"; };
 		754A462020ECC1BB003A11F1 /* DSDV3KNetworkVocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDV3KNetworkVocoder.h; sourceTree = "<group>"; };
 		754A462120ECC1BB003A11F1 /* DSDV3KNetworkVocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDV3KNetworkVocoder.m; sourceTree = "<group>"; };
 		756A408D20EC607B003A11F1 /* DSEDataEngineDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEDataEngineDelegate.h; sourceTree = "<group>"; };
@@ -128,12 +135,9 @@
 		758B49CC20E41C92003A11F1 /* DefaultPreferences.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DefaultPreferences.plist; sourceTree = "<group>"; };
 		758B49D220E41F0C003A11F1 /* DSDestinationCallFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDestinationCallFormatter.h; sourceTree = "<group>"; };
 		758B49D320E41F0D003A11F1 /* DSDestinationCallFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDestinationCallFormatter.m; sourceTree = "<group>"; };
-		75945C8220EC62F2003A11F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		75945C8320EC62F2003A11F1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		75945C8520EC62F2003A11F1 /* DSAddPopupController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSAddPopupController.h; sourceTree = "<group>"; };
 		75945C8620EC62F2003A11F1 /* DSAddPopupController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSAddPopupController.m; sourceTree = "<group>"; };
 		75945C8720EC62F2003A11F1 /* DSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSAppDelegate.h; sourceTree = "<group>"; };
-		75945C8820EC62F2003A11F1 /* DSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSAppDelegate.m; sourceTree = "<group>"; };
 		75945C8D20EC62F2003A11F1 /* DSCallFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSCallFormatter.h; sourceTree = "<group>"; };
 		75945C8E20EC62F2003A11F1 /* DSCallFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSCallFormatter.m; sourceTree = "<group>"; };
 		75945C8F20EC62F2003A11F1 /* DSDestinationCallFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSDestinationCallFormatter.h; sourceTree = "<group>"; };
@@ -143,7 +147,7 @@
 		75945C9520EC62F2003A11F1 /* DSMapPopupController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSMapPopupController.h; sourceTree = "<group>"; };
 		75945C9720EC62F2003A11F1 /* DSMessageFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSMessageFormatter.h; sourceTree = "<group>"; };
 		75945C9820EC62F2003A11F1 /* DSMessageFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSMessageFormatter.m; sourceTree = "<group>"; };
-		75945C9A20EC62F2003A11F1 /* DSVocoderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSVocoderViewController.h; sourceTree = "<group>"; };
+		75945C9A20EC62F2003A11F1 /* DSPrefVocoderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSPrefVocoderViewController.h; sourceTree = "<group>"; };
 		75945C9C20EC62F2003A11F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		75945C9E20EC62F2003A11F1 /* MASDictionaryTransformer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASDictionaryTransformer.h; sourceTree = "<group>"; };
 		75945C9F20EC62F2003A11F1 /* MASDictionaryTransformer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MASDictionaryTransformer.m; sourceTree = "<group>"; };
@@ -154,10 +158,10 @@
 		75945CA420EC62F2003A11F1 /* MASShortcutValidator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MASShortcutValidator.m; sourceTree = "<group>"; };
 		75945CA520EC62F2003A11F1 /* MASShortcutView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASShortcutView.h; sourceTree = "<group>"; };
 		75945CA620EC62F2003A11F1 /* MASShortcutView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MASShortcutView.m; sourceTree = "<group>"; };
-		75945CAD20EC62F2003A11F1 /* DSNetworkVocoderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSNetworkVocoderViewController.h; sourceTree = "<group>"; };
-		75945CAE20EC62F2003A11F1 /* DSNetworkVocoderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSNetworkVocoderViewController.m; sourceTree = "<group>"; };
-		75945CAF20EC62F2003A11F1 /* DSSerialVocoderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSSerialVocoderViewController.h; sourceTree = "<group>"; };
-		75945CB020EC62F2003A11F1 /* DSSerialVocoderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSSerialVocoderViewController.m; sourceTree = "<group>"; };
+		75945CAD20EC62F2003A11F1 /* DSPrefVocoderNetworkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSPrefVocoderNetworkViewController.h; sourceTree = "<group>"; };
+		75945CAE20EC62F2003A11F1 /* DSPrefVocoderNetworkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSPrefVocoderNetworkViewController.m; sourceTree = "<group>"; };
+		75945CAF20EC62F2003A11F1 /* DSPrefVocoderSerialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSPrefVocoderSerialViewController.h; sourceTree = "<group>"; };
+		75945CB020EC62F2003A11F1 /* DSPrefVocoderSerialViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSPrefVocoderSerialViewController.m; sourceTree = "<group>"; };
 		75E087EA20E31572003A11F1 /* DStarDelight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DStarDelight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75E087F320E31574003A11F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75E087F820E31574003A11F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = SOURCE_ROOT; };
@@ -168,7 +172,7 @@
 		75E0881320E3177F003A11F1 /* DSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSAppDelegate.m; sourceTree = "<group>"; };
 		75E0881A20E3177F003A11F1 /* DSCallFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSCallFormatter.h; sourceTree = "<group>"; };
 		75E0881B20E3177F003A11F1 /* DSCallFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSCallFormatter.m; sourceTree = "<group>"; };
-		75E0882420E3177F003A11F1 /* DSGeneralPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSGeneralPreferencesController.m; sourceTree = "<group>"; };
+		75E0882420E3177F003A11F1 /* DSPrefGeneralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSPrefGeneralViewController.m; sourceTree = "<group>"; };
 		75E0883020E3177F003A11F1 /* DSMessageFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSMessageFormatter.h; sourceTree = "<group>"; };
 		75E0883120E3177F003A11F1 /* DSMessageFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSMessageFormatter.m; sourceTree = "<group>"; };
 		75E0885820E3177F003A11F1 /* DSNetworkVocoderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSNetworkVocoderView.xib; sourceTree = "<group>"; };
@@ -281,27 +285,23 @@
 		75945C8120EC62F2003A11F1 /* DS */ = {
 			isa = PBXGroup;
 			children = (
-				758B49D320E41F0D003A11F1 /* DSDestinationCallFormatter.m */,
-				75E0881320E3177F003A11F1 /* DSAppDelegate.m */,
 				7525484120E7F084003A11F1 /* DStarDelight.h */,
+				75945C8720EC62F2003A11F1 /* DSAppDelegate.h */,
+				75E0881320E3177F003A11F1 /* DSAppDelegate.m */,
 				7525480C20E6FDD5003A11F1 /* DSAudioHandler.h */,
 				7525480B20E6FDD5003A11F1 /* DSAudioHandler.m */,
-				75E0881B20E3177F003A11F1 /* DSCallFormatter.m */,
-				758B49D220E41F0C003A11F1 /* DSDestinationCallFormatter.h */,
 				75E0881A20E3177F003A11F1 /* DSCallFormatter.h */,
+				75E0881B20E3177F003A11F1 /* DSCallFormatter.m */,
+				758B49D320E41F0D003A11F1 /* DSDestinationCallFormatter.m */,
+				758B49D220E41F0C003A11F1 /* DSDestinationCallFormatter.h */,
 				75E0883020E3177F003A11F1 /* DSMessageFormatter.h */,
 				75E0883120E3177F003A11F1 /* DSMessageFormatter.m */,
-				75945C8220EC62F2003A11F1 /* AppDelegate.h */,
-				75945C8320EC62F2003A11F1 /* AppDelegate.m */,
-				75945C8720EC62F2003A11F1 /* DSAppDelegate.h */,
-				75945C8820EC62F2003A11F1 /* DSAppDelegate.m */,
 				75945C8D20EC62F2003A11F1 /* DSCallFormatter.h */,
 				75945C8E20EC62F2003A11F1 /* DSCallFormatter.m */,
 				75945C8F20EC62F2003A11F1 /* DSDestinationCallFormatter.h */,
 				75945C9020EC62F2003A11F1 /* DSDestinationCallFormatter.m */,
 				75945C9720EC62F2003A11F1 /* DSMessageFormatter.h */,
 				75945C9820EC62F2003A11F1 /* DSMessageFormatter.m */,
-				75945CAC20EC62F2003A11F1 /* ViewControllers */,
 				75945C9C20EC62F2003A11F1 /* main.m */,
 				75945C9D20EC62F2003A11F1 /* MASShortcut */,
 			);
@@ -327,22 +327,24 @@
 		75945CAC20EC62F2003A11F1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				75945C8520EC62F2003A11F1 /* DSAddPopupController.h */,
-				75945C8620EC62F2003A11F1 /* DSAddPopupController.m */,
-				752F94DB20ECEB05003A11F1 /* DSAudioViewController.h */,
-				752F94DC20ECEB05003A11F1 /* DSAudioViewController.m */,
-				752F94D620ECEABB003A11F1 /* DSGeneralPreferencesController.h */,
-				75E0882420E3177F003A11F1 /* DSGeneralPreferencesController.m */,
 				75945C9320EC62F2003A11F1 /* DSMainWindowViewController.h */,
 				75945C9420EC62F2003A11F1 /* DSMainWindowViewController.m */,
+				75945C8520EC62F2003A11F1 /* DSAddPopupController.h */,
+				75945C8620EC62F2003A11F1 /* DSAddPopupController.m */,
 				75945C9520EC62F2003A11F1 /* DSMapPopupController.h */,
 				752F94D720ECEACA003A11F1 /* DSMapPopupController.m */,
-				75945CAD20EC62F2003A11F1 /* DSNetworkVocoderViewController.h */,
-				75945CAE20EC62F2003A11F1 /* DSNetworkVocoderViewController.m */,
-				75945CAF20EC62F2003A11F1 /* DSSerialVocoderViewController.h */,
-				75945CB020EC62F2003A11F1 /* DSSerialVocoderViewController.m */,
-				75945C9A20EC62F2003A11F1 /* DSVocoderViewController.h */,
-				752F94D920ECEAE0003A11F1 /* DSVocoderViewController.m */,
+				7502ECA420EFD97F003A11F1 /* DSPrefViewController.h */,
+				7502ECA520EFD97F003A11F1 /* DSPrefViewController.m */,
+				752F94D620ECEABB003A11F1 /* DSPrefGeneralViewController.h */,
+				75E0882420E3177F003A11F1 /* DSPrefGeneralViewController.m */,
+				752F94DB20ECEB05003A11F1 /* DSPrefAudioViewController.h */,
+				752F94DC20ECEB05003A11F1 /* DSPrefAudioViewController.m */,
+				75945C9A20EC62F2003A11F1 /* DSPrefVocoderViewController.h */,
+				752F94D920ECEAE0003A11F1 /* DSPrefVocoderViewController.m */,
+				75945CAF20EC62F2003A11F1 /* DSPrefVocoderSerialViewController.h */,
+				75945CB020EC62F2003A11F1 /* DSPrefVocoderSerialViewController.m */,
+				75945CAD20EC62F2003A11F1 /* DSPrefVocoderNetworkViewController.h */,
+				75945CAE20EC62F2003A11F1 /* DSPrefVocoderNetworkViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -354,6 +356,7 @@
 				75945C8120EC62F2003A11F1 /* DS */,
 				7525485220E988D0003A11F1 /* Resources */,
 				7525488720EAA9D6003A11F1 /* SharedResources */,
+				75945CAC20EC62F2003A11F1 /* ViewControllers */,
 				75E087EC20E31572003A11F1 /* Storybooks */,
 				75E0880320E31575003A11F1 /* DStarDelightUITests */,
 				75E087EB20E31572003A11F1 /* Products */,
@@ -377,6 +380,8 @@
 				758B49CA20E41BD8003A11F1 /* DSAddPopupController.xib */,
 				75E0885B20E3177F003A11F1 /* DSSerialVocoderView.xib */,
 				758B49C120E4196D003A11F1 /* Main.storyboard */,
+				750A58CF20F00545003A11F1 /* Prefs.storyboard */,
+				7502ECA220EEE320003A11F1 /* Preferences.storyboard */,
 				758B49BE20E41301003A11F1 /* New.storyboard */,
 			);
 			path = Storybooks;
@@ -474,6 +479,7 @@
 				75E087F420E31574003A11F1 /* Assets.xcassets in Resources */,
 				756A40A420EC60B7003A11F1 /* TPCircularBuffer.podspec in Resources */,
 				758B49CF20E41C92003A11F1 /* DefaultPreferences.plist in Resources */,
+				7502ECA320EEE320003A11F1 /* Preferences.storyboard in Resources */,
 				758B49C020E41302003A11F1 /* New.storyboard in Resources */,
 				758B49C220E4196D003A11F1 /* Main.storyboard in Resources */,
 				75E0887F20E3177F003A11F1 /* DSSerialVocoderView.xib in Resources */,
@@ -481,6 +487,7 @@
 				758B49CB20E41BD8003A11F1 /* DSAddPopupController.xib in Resources */,
 				75E0887D20E3177F003A11F1 /* DSNetworkVocoderView.xib in Resources */,
 				7525488820EAA9D6003A11F1 /* SharedResources in Resources */,
+				750A58D020F00545003A11F1 /* Prefs.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,36 +510,37 @@
 				75E0886E20E3177F003A11F1 /* DSMessageFormatter.m in Sources */,
 				7502EC9420ECF139003A11F1 /* DSAddPopupController.m in Sources */,
 				7502EC9520ECF139003A11F1 /* DSMainWindowViewController.m in Sources */,
-				7502EC9620ECF139003A11F1 /* DSNetworkVocoderViewController.m in Sources */,
-				7502EC9720ECF139003A11F1 /* DSSerialVocoderViewController.m in Sources */,
+				7502EC9620ECF139003A11F1 /* DSPrefVocoderNetworkViewController.m in Sources */,
+				7502EC9720ECF139003A11F1 /* DSPrefVocoderSerialViewController.m in Sources */,
 				754A461D20EC6E65003A11F1 /* MASShortcut.m in Sources */,
 				754A461E20EC6E65003A11F1 /* MASShortcutValidator.m in Sources */,
 				754A461F20EC6E65003A11F1 /* MASShortcutView.m in Sources */,
 				754A461C20EC6E4B003A11F1 /* MASDictionaryTransformer.m in Sources */,
-				754A461B20EC6DDE003A11F1 /* main.m in Sources */,
-				75E0886920E3177F003A11F1 /* DSGeneralPreferencesController.m in Sources */,
-				752F94DA20ECEAE0003A11F1 /* DSVocoderViewController.m in Sources */,
+				75E0886920E3177F003A11F1 /* DSPrefGeneralViewController.m in Sources */,
+				752F94DA20ECEAE0003A11F1 /* DSPrefVocoderViewController.m in Sources */,
 				756A40CE20EC60D8003A11F1 /* DSEDExtraLink.m in Sources */,
-				756A40A320EC60B7003A11F1 /* TPCircularBuffer.c in Sources */,
 				756A40C620EC60D8003A11F1 /* DSEDPlusAuthenticator.m in Sources */,
 				756A40A620EC60B7003A11F1 /* DSDV3KSerialVocoder.m in Sources */,
 				752F94D820ECEACA003A11F1 /* DSMapPopupController.m in Sources */,
 				756A40CD20EC60D8003A11F1 /* DSEDCSLink.m in Sources */,
-				752F94DD20ECEB05003A11F1 /* DSAudioViewController.m in Sources */,
+				752F94DD20ECEB05003A11F1 /* DSPrefAudioViewController.m in Sources */,
 				756A40C920EC60D8003A11F1 /* DNSHost.m in Sources */,
 				75E0886020E3177F003A11F1 /* DSAppDelegate.m in Sources */,
 				756A40C820EC60D8003A11F1 /* DSELinkDriver.m in Sources */,
 				756A40C420EC60D8003A11F1 /* DSEDPlusLink.m in Sources */,
 				756A40C720EC60D8003A11F1 /* DSESlowDataCoder.m in Sources */,
+				7502ECA620EFD980003A11F1 /* DSPrefViewController.m in Sources */,
 				756A40CA20EC60D8003A11F1 /* DSEDV3KVocoder.m in Sources */,
 				756A40A720EC60B7003A11F1 /* DStarUtils.m in Sources */,
-				756A40A220EC60B7003A11F1 /* TPCircularBuffer+AudioBufferList.c in Sources */,
 				754A462220ECC1BB003A11F1 /* DSDV3KNetworkVocoder.m in Sources */,
 				7525480D20E6FDD6003A11F1 /* DSAudioHandler.m in Sources */,
 				756A40CB20EC60D8003A11F1 /* DSEAprsLocation.m in Sources */,
 				756A40CC20EC60D8003A11F1 /* DSEIRCDDBGateways.m in Sources */,
 				756A40A520EC60B7003A11F1 /* DSEDataEngine.m in Sources */,
 				756A40C520EC60D8003A11F1 /* PortMapper.m in Sources */,
+				754A461B20EC6DDE003A11F1 /* main.m in Sources */,
+				756A40A320EC60B7003A11F1 /* TPCircularBuffer.c in Sources */,
+				756A40A220EC60B7003A11F1 /* TPCircularBuffer+AudioBufferList.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

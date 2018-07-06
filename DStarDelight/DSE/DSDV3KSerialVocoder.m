@@ -10,7 +10,7 @@
 
 #import "DSDV3KPacket.h"
 #import "DSEDataEngine.h"
-#import "DSSerialVocoderViewController.h"
+#import "DSPrefVocoderSerialViewController.h"
 #import "DSEDV3KVocoderSubclass.h"
 
 #pragma mark - Device removal and insertion
@@ -58,7 +58,7 @@ static void VocoderAdded(void *refCon, io_iterator_t iterator) {
         }
         
         if(newself.configurationViewController)
-            [(DSSerialVocoderViewController *)newself.configurationViewController refreshDevices];
+            [(DSPrefVocoderSerialViewController *)newself.configurationViewController refreshDevices];
     });
 }
 
@@ -77,7 +77,7 @@ static void VocoderRemoved(void *refCon, io_iterator_t iterator) {
  
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 5ull * NSEC_PER_MSEC), dispatch_get_main_queue(), ^{
         if(self.configurationViewController)
-            [(DSSerialVocoderViewController *)self.configurationViewController refreshDevices];
+            [(DSPrefVocoderSerialViewController *)self.configurationViewController refreshDevices];
     });
 }
 
@@ -85,7 +85,7 @@ static void VocoderRemoved(void *refCon, io_iterator_t iterator) {
     IONotificationPortRef gNotifyPort;
     io_iterator_t deviceAddedIterator;
     io_iterator_t deviceRemovedIterator;
-    DSSerialVocoderViewController *_configurationViewController;
+    DSPrefVocoderSerialViewController *_configurationViewController;
 }
 
 @end
@@ -127,7 +127,7 @@ static void VocoderRemoved(void *refCon, io_iterator_t iterator) {
 
 -(NSViewController *) configurationViewController {
     if(!_configurationViewController) {
-        _configurationViewController = [[DSSerialVocoderViewController alloc] init];
+        _configurationViewController = [[DSPrefVocoderSerialViewController alloc] init];
         _configurationViewController.driver = self;
      }
     return _configurationViewController;
@@ -257,7 +257,7 @@ static void VocoderRemoved(void *refCon, io_iterator_t iterator) {
     super.productId = productId;
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        ((DSSerialVocoderViewController *)self.configurationViewController).productId.stringValue = productId;
+        ((DSPrefVocoderSerialViewController *)self.configurationViewController).productId.stringValue = productId;
     });
 }
 
@@ -265,7 +265,7 @@ static void VocoderRemoved(void *refCon, io_iterator_t iterator) {
     super.version = version;
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        ((DSSerialVocoderViewController *)self.configurationViewController).version.stringValue = version;
+        ((DSPrefVocoderSerialViewController *)self.configurationViewController).version.stringValue = version;
     });
 }
 

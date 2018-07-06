@@ -1,15 +1,15 @@
 
 
-#import "DSGeneralPreferencesController.h"
+#import "DSPrefGeneralViewController.h"
 
 #import "MASDictionaryTransformer.h"
 #import "MASShortcut.h"
 #import "MASShortcutView.h"
 
-@interface DSEGeneralPreferencesController ()
+@interface DSPrefGeneralViewController ()
 @end
 
-@implementation DSEGeneralPreferencesController
+@implementation DSPrefGeneralViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
