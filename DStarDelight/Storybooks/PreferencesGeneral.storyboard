@@ -10,14 +10,14 @@
         <scene sceneID="plL-MQ-FZW">
             <objects>
                 <viewController title="General" storyboardIdentifier="PrefGeneral" showSeguePresentationStyle="single" id="qq2-Ge-0JC" customClass="DSPrefGeneralViewController" sceneMemberID="viewController">
-                    <view key="view" id="1SU-Tj-tJk">
-                        <rect key="frame" x="0.0" y="0.0" width="424" height="182"/>
+                    <view key="view" misplaced="YES" id="1SU-Tj-tJk">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <box autoresizesSubviews="NO" borderType="line" title="My Info" translatesAutoresizingMaskIntoConstraints="NO" id="Egh-6W-SY1">
-                                <rect key="frame" x="17" y="79" width="390" height="83"/>
+                                <rect key="frame" x="17" y="79" width="416" height="83"/>
                                 <view key="contentView" id="wen-Ks-40b">
-                                    <rect key="frame" x="1" y="1" width="388" height="67"/>
+                                    <rect key="frame" x="1" y="1" width="414" height="67"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="In3-mF-eFZ">
@@ -77,7 +77,7 @@
                                             </textFieldCell>
                                         </textField>
                                         <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cjh-nh-DIG">
-                                            <rect key="frame" x="81" y="14" width="289" height="22"/>
+                                            <rect key="frame" x="81" y="14" width="315" height="22"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="22" id="EK5-lw-P3t"/>
                                             </constraints>
@@ -109,9 +109,9 @@
                                 </constraints>
                             </box>
                             <box autoresizesSubviews="NO" borderType="line" title="Transmit Key" translatesAutoresizingMaskIntoConstraints="NO" id="kG8-cF-kgG">
-                                <rect key="frame" x="17" y="16" width="390" height="59"/>
+                                <rect key="frame" x="17" y="16" width="416" height="59"/>
                                 <view key="contentView" id="xE0-Bo-EPC">
-                                    <rect key="frame" x="1" y="1" width="388" height="43"/>
+                                    <rect key="frame" x="1" y="1" width="414" height="43"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <customView focusRingType="none" translatesAutoresizingMaskIntoConstraints="NO" id="xt6-wQ-qOz" customClass="MASShortcutView">

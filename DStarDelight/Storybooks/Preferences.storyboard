@@ -6,58 +6,23 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Pref View Controller-->
-        <scene sceneID="uAr-94-lGO">
-            <objects>
-                <viewController id="jp6-Ik-wcG" customClass="DSPrefViewController" sceneMemberID="viewController">
-                    <tabView key="view" id="G0K-Uc-09P">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <font key="font" metaFont="message"/>
-                        <tabViewItems>
-                            <tabViewItem label="Item 0" identifier="" id="Wav-B9-DMc">
-                                <view key="view" id="7SW-wB-IU4">
-                                    <rect key="frame" x="10" y="33" width="430" height="254"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                </view>
-                            </tabViewItem>
-                            <tabViewItem label="Item 1" identifier="" id="JST-cg-Ed7">
-                                <view key="view" id="vV0-0O-XUq">
-                                    <rect key="frame" x="10" y="33" width="430" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </view>
-                            </tabViewItem>
-                            <tabViewItem label="Item 2" identifier="" id="f0S-D4-TNe">
-                                <view key="view" id="fmv-HZ-2Ea">
-                                    <rect key="frame" x="10" y="33" width="430" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </view>
-                            </tabViewItem>
-                        </tabViewItems>
-                    </tabView>
-                </viewController>
-                <customObject id="J3g-vv-yqz" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-371" y="-146"/>
-        </scene>
         <!--Preferences-->
         <scene sceneID="lmm-p7-N0X">
             <objects>
-                <tabViewController title="Preferences" storyboardIdentifier="NSTabViewController-aw7-oo-70e" tabStyle="toolbar" id="aw7-oo-70e" customClass="DSPrefViewController" sceneMemberID="viewController">
+                <tabViewController title="Preferences" storyboardIdentifier="NSTabViewController-aw7-oo-70e" showSeguePresentationStyle="single" tabStyle="toolbar" id="aw7-oo-70e" customClass="DSPrefViewController" sceneMemberID="viewController">
                     <tabViewItems>
-                        <tabViewItem id="K1g-Yo-kn9"/>
-                        <tabViewItem id="OOM-sY-Bo2"/>
-                        <tabViewItem id="CgS-n3-77j"/>
+                        <tabViewItem label="General" image="NSInfo" id="K1g-Yo-kn9"/>
+                        <tabViewItem label="Audio" image="Microphone" id="OOM-sY-Bo2"/>
+                        <tabViewItem label="Vocoder" image="Chip" id="CgS-n3-77j"/>
                     </tabViewItems>
-                    <viewControllerTransitionOptions key="transitionOptions" allowUserInteraction="YES"/>
-                    <tabView key="tabView" id="ZBZ-fl-NSf">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="102"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <tabView key="tabView" type="noTabsNoBorder" id="ZBZ-fl-NSf">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="200"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <font key="font" metaFont="message"/>
                         <tabViewItems>
                             <tabViewItem label="Item 0" identifier="" id="TPM-0i-xbn">
                                 <view key="view" id="S4m-1A-7YA">
-                                    <rect key="frame" x="10" y="33" width="430" height="56"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="450" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </view>
                             </tabViewItem>
@@ -87,7 +52,7 @@
                 <customObject id="FKA-t3-fup" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController appliesImmediately="NO" id="SgX-1v-9BM"/>
             </objects>
-            <point key="canvasLocation" x="306" y="-47"/>
+            <point key="canvasLocation" x="306" y="-0.5"/>
         </scene>
         <!--PreferencesGeneral-->
         <scene sceneID="pMI-Bc-vJV">
@@ -98,10 +63,10 @@
             </objects>
             <point key="canvasLocation" x="127" y="320"/>
         </scene>
-        <!--PreferencesVocoder-->
+        <!--VocoderNetwork-->
         <scene sceneID="wEV-rR-Zrr">
             <objects>
-                <controllerPlaceholder storyboardIdentifier="PrefVocoder" storyboardName="PreferencesVocoder" id="gju-tv-Ehp" sceneMemberID="viewController"/>
+                <controllerPlaceholder storyboardIdentifier="PrefVocoder" storyboardName="VocoderNetwork" id="gju-tv-Ehp" sceneMemberID="viewController"/>
                 <customObject id="Vas-AG-f5v" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="495" y="320"/>
@@ -115,4 +80,9 @@
             <point key="canvasLocation" x="306" y="320"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Chip" width="170.66667175292969" height="141.33332824707031"/>
+        <image name="Microphone" width="1024" height="1024"/>
+        <image name="NSInfo" width="32" height="32"/>
+    </resources>
 </document>
