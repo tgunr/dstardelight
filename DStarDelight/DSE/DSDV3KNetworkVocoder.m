@@ -33,8 +33,8 @@
                                                            queue:[NSOperationQueue mainQueue]
                                                       usingBlock: ^(NSNotification *notification) {
                                                           NSLog(@"User defaults changing");
-                                                          weakSelf.port = (short) [[NSUserDefaults standardUserDefaults] integerForKey:@"DV3KNetworkVocoderPort"];
-                                                          NSString *address =[[NSUserDefaults standardUserDefaults] stringForKey:@"DV3KNetworkVocoderAddress"];
+                                                          weakSelf.port = (short) [[NSUserDefaults standardUserDefaults] integerForKey:@"vocoderNetworkPort"];
+                                                          NSString *address =[[NSUserDefaults standardUserDefaults] stringForKey:@"vocoderNetworkAddress"];
                                                           if(address)
                                                               weakSelf.address = address;
                                                       }];

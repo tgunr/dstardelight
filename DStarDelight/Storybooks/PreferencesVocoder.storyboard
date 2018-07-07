@@ -9,10 +9,10 @@
         <!--PrefVocoder-->
         <scene sceneID="5bR-rV-ysc">
             <objects>
-                <tabViewController storyboardIdentifier="PrefVocoder" showSeguePresentationStyle="single" selectedTabViewItemIndex="0" id="v4i-35-FCs" userLabel="PrefVocoder" customClass="DSPrefVocoderViewController" sceneMemberID="viewController">
+                <tabViewController storyboardIdentifier="PrefVocoder" showSeguePresentationStyle="single" selectedTabViewItemIndex="1" id="v4i-35-FCs" userLabel="PrefVocoder" customClass="DSPrefVocoderViewController" sceneMemberID="viewController">
                     <tabViewItems>
-                        <tabViewItem id="j44-HJ-oBL"/>
-                        <tabViewItem id="ybI-cc-bRs"/>
+                        <tabViewItem label="Local" id="j44-HJ-oBL" userLabel="Serial"/>
+                        <tabViewItem label="Network" id="ybI-cc-bRs" userLabel="Network"/>
                     </tabViewItems>
                     <tabView key="tabView" type="noTabsNoBorder" id="nrs-Ch-Ri8">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>

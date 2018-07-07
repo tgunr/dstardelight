@@ -16,7 +16,7 @@
                         <subviews>
                             <box autoresizesSubviews="NO" fixedFrame="YES" borderType="line" title="Configuration" translatesAutoresizingMaskIntoConstraints="NO" id="aVo-eI-DWT" userLabel="Configuration Box">
                                 <rect key="frame" x="17" y="124" width="245" height="109"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <view key="contentView" id="kt6-hI-UFe">
                                     <rect key="frame" x="1" y="1" width="243" height="93"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,6 +60,9 @@
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="smallSystem"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="doTest:" target="0pf-Ol-1ac" id="z0S-Gw-8gt"/>
+                                            </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Hrt-D2-0gs" userLabel="Port Label">
                                             <rect key="frame" x="38" y="30" width="27" height="14"/>
@@ -86,7 +89,7 @@
                             </box>
                             <box autoresizesSubviews="NO" fixedFrame="YES" borderType="line" title="Connection" translatesAutoresizingMaskIntoConstraints="NO" id="8Pn-Jv-aQq" userLabel="Connection Box">
                                 <rect key="frame" x="17" y="5" width="411" height="115"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <view key="contentView" id="Y5I-NX-nMP">
                                     <rect key="frame" x="1" y="1" width="409" height="99"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -146,8 +149,15 @@
                             </box>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="productId" destination="IJ0-oz-dDM" id="IjB-nl-RQB"/>
+                        <outlet property="version" destination="4K3-ki-4ov" id="sZB-TG-VNP"/>
+                        <outlet property="vocoderAddress" destination="mdS-lq-d3H" id="M8J-CC-9dO"/>
+                        <outlet property="vocoderPort" destination="BFY-YA-NVg" id="PSu-Ry-TUV"/>
+                    </connections>
                 </viewController>
                 <customObject id="xMF-i7-8yL" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController representsSharedInstance="YES" id="lGt-o1-cpA"/>
             </objects>
             <point key="canvasLocation" x="695" y="1177"/>
         </scene>

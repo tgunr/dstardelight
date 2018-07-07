@@ -24,7 +24,7 @@
 	<integer>20011</integer>
 	<key>DV3KSerialVocoderSpeed</key>
 	<integer>230400</integer>
-	<key>DV3KNetworkVocoderPort</key>
+	<key>vocoderNetworkPort</key>
 	<integer>2460</integer>
 	<key>VocoderDriver</key>
 	<string>DSEDV3KNetworkVocoder</string>

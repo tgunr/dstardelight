@@ -11,14 +11,20 @@
 @implementation DSPrefVocoderNetworkViewController
 
 - (id) init {
-    self = [super initWithNibName:@"DSNetworkVocoderView" bundle:nil];
-
+//    self = [super initWithNibName:@"DSNetworkVocoderView" bundle:nil];
+    _productId.stringValue = @"";
+    _version.stringValue = @"";
     return self;
 }
 
 - (void) viewDidAppear {
-    self.version.stringValue = self.driver.version;
-    self.productId.stringValue = self.driver.productId;
+    _vocoderAddress.stringValue = [[NSUserDefaults standardUserDefaults] stringForKey:@"DV3KNetworkVocoderAddress"];
+    _vocoderPort.stringValue = [[NSUserDefaults standardUserDefaults] stringForKey:@"DV3KNetworkVocoderPort"];
+    
+    if (self.driver) {
+        self.version.stringValue = self.driver.version;
+        self.productId.stringValue = self.driver.productId;
+    }
 }
 
 -(void)dealloc {
