@@ -13,7 +13,7 @@
                     <tabViewItems>
                         <tabViewItem label="General" image="NSInfo" id="K1g-Yo-kn9"/>
                         <tabViewItem label="Audio" image="Microphone" id="OOM-sY-Bo2"/>
-                        <tabViewItem label="Vocoder" image="Chip" id="CgS-n3-77j"/>
+                        <tabViewItem label="Vocoder" image="Chip" id="HBA-jA-giJ"/>
                     </tabViewItems>
                     <tabView key="tabView" type="noTabsNoBorder" id="ZBZ-fl-NSf">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="200"/>
@@ -41,12 +41,12 @@
                         </tabViewItems>
                     </tabView>
                     <connections>
-                        <outlet property="AudioTabView" destination="6H0-99-GDk" id="JUx-dr-LJ5"/>
-                        <outlet property="GeneralTabView" destination="TPM-0i-xbn" id="447-Lv-ioh"/>
-                        <outlet property="VocoderTabView" destination="4Aa-SF-3bM" id="qKh-zb-Jgs"/>
+                        <outlet property="AudioTabView" destination="OOM-sY-Bo2" id="plP-6b-QM1"/>
+                        <outlet property="GeneralTabView" destination="K1g-Yo-kn9" id="Lt0-y3-82o"/>
+                        <outlet property="VocoderTabView" destination="HBA-jA-giJ" id="GnT-31-wVI"/>
                         <segue destination="tt5-rn-InE" kind="relationship" relationship="tabItems" id="OEW-cf-XpX"/>
                         <segue destination="5bg-OS-r7z" kind="relationship" relationship="tabItems" id="Zvr-Fg-xVd"/>
-                        <segue destination="gju-tv-Ehp" kind="relationship" relationship="tabItems" id="eCa-Qf-kJ5"/>
+                        <segue destination="gju-tv-Ehp" kind="relationship" relationship="tabItems" id="VzF-JO-hJ6"/>
                     </connections>
                 </tabViewController>
                 <customObject id="FKA-t3-fup" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

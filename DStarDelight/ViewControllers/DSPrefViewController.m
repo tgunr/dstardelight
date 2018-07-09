@@ -19,6 +19,10 @@
     // Do view setup here.
 }
 
+- (void) viewDidAppear: (id) sender {
+    
+}
+
 - (void)tabView:(NSTabView *)tabView didSelectTabViewItem:(NSTabViewItem *) tabViewItem {
     [super tabView:tabView didSelectTabViewItem:tabViewItem];
     NSUInteger index = [tabView indexOfTabViewItem:tabViewItem];

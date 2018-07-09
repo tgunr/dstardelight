@@ -6,24 +6,24 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Audio-->
+        <!--Pref Audio-->
         <scene sceneID="elY-lg-nZP">
             <objects>
-                <viewController title="Audio" storyboardIdentifier="PrefAudio" showSeguePresentationStyle="single" id="PTa-5A-wC9" customClass="DSPrefAudioViewController" sceneMemberID="viewController">
+                <viewController title="Audio" storyboardIdentifier="PrefAudio" showSeguePresentationStyle="single" id="PTa-5A-wC9" userLabel="Pref Audio" customClass="DSPrefAudioViewController" sceneMemberID="viewController">
                     <view key="view" misplaced="YES" id="XSw-uU-Ge2">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="140"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TRZ-HT-6PH">
-                                <rect key="frame" x="58" y="76" width="35" height="17"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TRZ-HT-6PH">
+                                <rect key="frame" x="30" y="76" width="35" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Input" id="vtg-eW-9ai">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mVy-ci-K0O">
-                                <rect key="frame" x="97" y="96" width="312" height="26"/>
+                            <popUpButton verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mVy-ci-K0O">
+                                <rect key="frame" x="69" y="96" width="312" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="ctk-Go-p0c"/>
                                     <constraint firstAttribute="width" constant="307" id="d8k-Qt-eop"/>
@@ -43,8 +43,8 @@
                                     <binding destination="PTa-5A-wC9" name="selectedTag" keyPath="self.selectedOutput" id="44G-QO-L0h"/>
                                 </connections>
                             </popUpButton>
-                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TXG-GC-K3t">
-                                <rect key="frame" x="97" y="71" width="312" height="26"/>
+                            <popUpButton verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TXG-GC-K3t">
+                                <rect key="frame" x="69" y="71" width="312" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="307" id="004-cg-u2i"/>
                                     <constraint firstAttribute="height" constant="21" id="nnL-Wd-qEf"/>
@@ -64,16 +64,16 @@
                                     <binding destination="PTa-5A-wC9" name="selectedTag" keyPath="self.selectedInput" id="NpK-jS-rK7"/>
                                 </connections>
                             </popUpButton>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="h5x-4o-35e">
-                                <rect key="frame" x="46" y="101" width="47" height="17"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h5x-4o-35e">
+                                <rect key="frame" x="18" y="101" width="47" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Output" id="TqM-9f-QPD">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button translatesAutoresizingMaskIntoConstraints="NO" id="dee-IL-Aaz">
-                                <rect key="frame" x="97" y="38" width="287" height="18"/>
+                            <button misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dee-IL-Aaz">
+                                <rect key="frame" x="69" y="38" width="287" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="Zog-on-uc2"/>
                                     <constraint firstAttribute="width" constant="283" id="mmQ-G5-7rm"/>
@@ -86,8 +86,8 @@
                                     <binding destination="PTa-5A-wC9" name="value" keyPath="self.courtesyTone" id="U8X-MB-G66"/>
                                 </connections>
                             </button>
-                            <button translatesAutoresizingMaskIntoConstraints="NO" id="x50-db-H91">
-                                <rect key="frame" x="97" y="18" width="242" height="18"/>
+                            <button misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x50-db-H91">
+                                <rect key="frame" x="69" y="18" width="242" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="238" id="8f9-nt-kLq"/>
                                     <constraint firstAttribute="height" constant="14" id="K84-JK-nOu"/>
@@ -126,7 +126,7 @@
                 </viewController>
                 <customObject id="B0j-BN-CLv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="460" y="373"/>
+            <point key="canvasLocation" x="460" y="293"/>
         </scene>
     </scenes>
 </document>

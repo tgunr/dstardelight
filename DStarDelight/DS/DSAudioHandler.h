@@ -32,11 +32,7 @@ static inline BOOL CheckStatus(OSStatus error, const char *operation);
 -(BOOL) start;
 -(void) stop;
 +(NSArray *)enumerateDevices:(AudioObjectPropertyScope)scope;
-
 +(NSArray *)enumerateInputDevices;
-
--(void)setDefaultInputDevice:(id)defaultInputDevice;
-
 +(NSArray *)enumerateOutputDevices;
 
 @end

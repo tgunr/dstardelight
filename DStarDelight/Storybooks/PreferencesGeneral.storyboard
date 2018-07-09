@@ -6,12 +6,12 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--General-->
+        <!--Pref General-->
         <scene sceneID="plL-MQ-FZW">
             <objects>
-                <viewController title="General" storyboardIdentifier="PrefGeneral" showSeguePresentationStyle="single" id="qq2-Ge-0JC" customClass="DSPrefGeneralViewController" sceneMemberID="viewController">
-                    <view key="view" misplaced="YES" id="1SU-Tj-tJk">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                <viewController title="General" storyboardIdentifier="PrefGeneral" showSeguePresentationStyle="single" id="qq2-Ge-0JC" userLabel="Pref General" customClass="DSPrefGeneralViewController" sceneMemberID="viewController">
+                    <view key="view" id="1SU-Tj-tJk">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="182"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <box autoresizesSubviews="NO" borderType="line" title="My Info" translatesAutoresizingMaskIntoConstraints="NO" id="Egh-6W-SY1">
@@ -147,7 +147,7 @@
                 <customObject id="gSa-GS-ok0" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController appliesImmediately="NO" id="eDD-IH-9g9"/>
             </objects>
-            <point key="canvasLocation" x="694" y="385"/>
+            <point key="canvasLocation" x="694" y="326"/>
         </scene>
     </scenes>
 </document>
