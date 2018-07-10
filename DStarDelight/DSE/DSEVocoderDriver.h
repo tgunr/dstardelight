@@ -17,6 +17,6 @@
 
 @property (nonatomic) DSAudioHandler *audio;
 @property (nonatomic) NSObject <DSELinkDriverProtocol> *network;
-@property (nonatomic, readonly) NSViewController *configurationViewController;
+@property (nonatomic) NSViewController *configurationViewController;
 
 @end

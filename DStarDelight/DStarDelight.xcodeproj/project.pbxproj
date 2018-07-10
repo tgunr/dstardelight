@@ -61,7 +61,7 @@
 		75E0886420E3177F003A11F1 /* DSCallFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0881B20E3177F003A11F1 /* DSCallFormatter.m */; };
 		75E0886920E3177F003A11F1 /* DSPrefGeneralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0882420E3177F003A11F1 /* DSPrefGeneralViewController.m */; };
 		75E0886E20E3177F003A11F1 /* DSMessageFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0883120E3177F003A11F1 /* DSMessageFormatter.m */; };
-		75E0887D20E3177F003A11F1 /* DSNetworkVocoderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75E0885820E3177F003A11F1 /* DSNetworkVocoderView.xib */; };
+		75E0887D20E3177F003A11F1 /* DSPrefVocoderNetworkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75E0885820E3177F003A11F1 /* DSPrefVocoderNetworkViewController.xib */; };
 		75E0887F20E3177F003A11F1 /* DSSerialVocoderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75E0885B20E3177F003A11F1 /* DSSerialVocoderView.xib */; };
 /* End PBXBuildFile section */
 
@@ -190,7 +190,7 @@
 		75E0882420E3177F003A11F1 /* DSPrefGeneralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSPrefGeneralViewController.m; sourceTree = "<group>"; };
 		75E0883020E3177F003A11F1 /* DSMessageFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSMessageFormatter.h; sourceTree = "<group>"; };
 		75E0883120E3177F003A11F1 /* DSMessageFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSMessageFormatter.m; sourceTree = "<group>"; };
-		75E0885820E3177F003A11F1 /* DSNetworkVocoderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSNetworkVocoderView.xib; sourceTree = "<group>"; };
+		75E0885820E3177F003A11F1 /* DSPrefVocoderNetworkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSPrefVocoderNetworkViewController.xib; sourceTree = "<group>"; };
 		75E0885B20E3177F003A11F1 /* DSSerialVocoderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DSSerialVocoderView.xib; path = Storybooks/DSSerialVocoderView.xib; sourceTree = SOURCE_ROOT; };
 		EEB7436A6B48A35A03347650 /* libPods-DStarDelight.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DStarDelight.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBD8596DEF8A4BB1161AA109 /* libPods-DStarDelightUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DStarDelightUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -395,7 +395,7 @@
 		75E087EC20E31572003A11F1 /* Storybooks */ = {
 			isa = PBXGroup;
 			children = (
-				75E0885820E3177F003A11F1 /* DSNetworkVocoderView.xib */,
+				75E0885820E3177F003A11F1 /* DSPrefVocoderNetworkViewController.xib */,
 				758B49CA20E41BD8003A11F1 /* DSAddPopupController.xib */,
 				75E0885B20E3177F003A11F1 /* DSSerialVocoderView.xib */,
 				758B49C120E4196D003A11F1 /* Main.storyboard */,
@@ -515,7 +515,7 @@
 				750A58E020F0279A003A11F1 /* PreferencesAudio.storyboard in Resources */,
 				756A40A120EC60B7003A11F1 /* README.markdown in Resources */,
 				758B49CB20E41BD8003A11F1 /* DSAddPopupController.xib in Resources */,
-				75E0887D20E3177F003A11F1 /* DSNetworkVocoderView.xib in Resources */,
+				75E0887D20E3177F003A11F1 /* DSPrefVocoderNetworkViewController.xib in Resources */,
 				750A58D220F0202C003A11F1 /* PreferencesVocoder.storyboard in Resources */,
 				750A58DE20F022AC003A11F1 /* VocoderNetwork.storyboard in Resources */,
 			);

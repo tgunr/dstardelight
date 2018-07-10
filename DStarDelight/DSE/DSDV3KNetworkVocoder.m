@@ -10,8 +10,9 @@
 #import <sys/ioctl.h>
 
 @interface DSEDV3KNetworkVocoder () {
-    DSPrefVocoderNetworkViewController *_configurationViewController;
+//    DSPrefVocoderNetworkViewController *_configurationViewController;
 }
+//@property (nonatomic)     DSPrefVocoderNetworkViewController *configurationViewController;
 
 @end
 
@@ -28,13 +29,17 @@
         _port = 2460;
         
         DSEDV3KNetworkVocoder __weak *weakSelf = self;
+        _configurationViewController = [[DSPrefVocoderNetworkViewController alloc] initWithNibName:@"DSPrefVocoderNetworkViewController" bundle:nil];
+        
+        DSVars.shared.networkDriver = self;
+        
         [[NSNotificationCenter defaultCenter] addObserverForName:NSUserDefaultsDidChangeNotification
                                                           object:nil
                                                            queue:[NSOperationQueue mainQueue]
                                                       usingBlock: ^(NSNotification *notification) {
                                                           NSLog(@"User defaults changing");
-                                                          weakSelf.port = (short) [[NSUserDefaults standardUserDefaults] integerForKey:@"vocoderNetworkPort"];
-                                                          NSString *address =[[NSUserDefaults standardUserDefaults] stringForKey:@"vocoderNetworkAddress"];
+                                                          weakSelf.port = (short) [[NSUserDefaults standardUserDefaults] integerForKey:@"DV3KNetworkVocoderPort"];
+                                                          NSString *address =[[NSUserDefaults standardUserDefaults] stringForKey:@"DV3KNetworkVocoderAddress"];
                                                           if(address)
                                                               weakSelf.address = address;
                                                       }];
@@ -50,17 +55,15 @@
 - (void) setProductId:(NSString *)productId {
     super.productId = productId;
 
-    dispatch_async(dispatch_get_main_queue(), ^{
-        ((DSPrefVocoderNetworkViewController *)self.configurationViewController).productId.stringValue = productId;
-    });
+    [[DSVars shared] setDV3KProductID:productId];
+    DSVars.shared.DV3KProductID = productId;
+    
 }
 
 - (void) setVersion:(NSString *)version {
     super.version = version;
-
-    dispatch_async(dispatch_get_main_queue(), ^{
-        ((DSPrefVocoderNetworkViewController *)self.configurationViewController).version.stringValue = version;
-    });
+    
+    DSVars.shared.DV3KVersion = version;
 }
 
 - (void) setPort:(short)port {
@@ -87,7 +90,8 @@
 
 -(NSViewController *)configurationViewController {
     if(!_configurationViewController) {
-        _configurationViewController = [[DSPrefVocoderNetworkViewController alloc] init];
+        _configurationViewController = [[DSPrefVocoderNetworkViewController alloc] initWithNibName:nil bundle:nil];
+
         _configurationViewController.driver = self;
     }
     return _configurationViewController;

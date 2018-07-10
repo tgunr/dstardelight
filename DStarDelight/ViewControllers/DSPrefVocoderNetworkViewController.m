@@ -3,6 +3,7 @@
 #import "DSPrefVocoderNetworkViewController.h"
 
 #import "DSDV3KNetworkVocoder.h"
+#import "DStarUtils.h"
 
 @interface DSPrefVocoderNetworkViewController ()
 
@@ -11,9 +12,11 @@
 @implementation DSPrefVocoderNetworkViewController
 
 - (id) init {
-//    self = [super initWithNibName:@"DSNetworkVocoderView" bundle:nil];
     _productId.stringValue = @"";
     _version.stringValue = @"";
+    DSVars.shared.DV3KProductID = _productId.stringValue;
+    DSVars.shared.DV3KVersion = _version.stringValue;
+    DSVars.shared.networkDriver = nil;
     return self;
 }
 
@@ -21,8 +24,8 @@
     NSLog(@"Deallocate");
 }
 
-//- (void)viewWillAppear {
-//    CGFloat newHeight = 29;
+- (void)viewWillAppear {
+    CGFloat newHeight = 29;
 //    NSArray *contents = self.view.subviews;
 //    for (NSView *aView in contents) {
 //        newHeight += aView.bounds.size.height;
@@ -34,22 +37,22 @@
 //    [self setPreferredContentSize:size];
 //    NSRect newBounds = NSMakeRect(self.view.bounds.origin.x, self.view.bounds.origin.y, 497, 283);
 //    self.view.bounds = newBounds;
-//}
+}
 
-- (void) viewDidAppear {
+- (void)viewDidAppear{
     _vocoderAddress.stringValue = [[NSUserDefaults standardUserDefaults] stringForKey:@"DV3KNetworkVocoderAddress"];
     _vocoderPort.stringValue = [[NSUserDefaults standardUserDefaults] stringForKey:@"DV3KNetworkVocoderPort"];
     
-    
-    if (self.driver) {
-        self.version.stringValue = self.driver.version;
-        self.productId.stringValue = self.driver.productId;
+    _driver = DSVars.shared.networkDriver;
+    if (_driver) {
+        self.version.stringValue = _driver.version;
+        self.productId.stringValue = _driver.productId;
     }
 }
 
 -(IBAction)doTest:(id)sender {
-    [self.driver stop];
-    [self.driver start];
+    [_driver stop];
+    [_driver start];
 }
 
 @end

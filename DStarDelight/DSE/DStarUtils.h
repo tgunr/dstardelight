@@ -9,12 +9,17 @@
 #import <Foundation/Foundation.h>
 #import "DStarEngine.h"
 
+@class DSEDV3KNetworkVocoder;
+
 @interface DSVars: NSObject
 
 @property id appDelegate;
 @property id audioHandler;
-@property id networkConfigurationViewController;
-@property id serialConfigurationViewController;
+@property NSString *DV3KProductID;
+@property NSString *DV3KVersion;
+@property DSEDV3KNetworkVocoder *networkDriver;
+//@property id networkConfigurationViewController;
+//@property id serialConfigurationViewController;
 
 + (DSVars *) shared;
 

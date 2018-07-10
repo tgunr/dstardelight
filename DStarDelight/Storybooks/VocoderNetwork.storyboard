@@ -35,6 +35,9 @@
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
+                                            <connections>
+                                                <binding destination="lGt-o1-cpA" name="value" keyPath="values.DV3KNetworkVocoderAddress" id="1mQ-39-BxQ"/>
+                                            </connections>
                                         </textField>
                                         <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BFY-YA-NVg" userLabel="Port Field">
                                             <rect key="frame" x="71" y="27" width="96" height="19"/>
@@ -47,6 +50,9 @@
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
+                                            <connections>
+                                                <binding destination="lGt-o1-cpA" name="value" keyPath="values.DV3KNetworkVocoderPort" id="tMx-vr-quh"/>
+                                            </connections>
                                         </textField>
                                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fBi-uD-nts" userLabel="Test Button">
                                             <rect key="frame" x="179" y="31" width="49" height="28"/>
@@ -55,7 +61,7 @@
                                                 <font key="font" metaFont="smallSystem"/>
                                             </buttonCell>
                                             <connections>
-                                                <action selector="doTest:" target="0pf-Ol-1ac" id="z0S-Gw-8gt"/>
+                                                <action selector="doTest:" target="0pf-Ol-1ac" id="nki-hM-iu2"/>
                                             </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Hrt-D2-0gs" userLabel="Port Label">
@@ -105,6 +111,9 @@
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
+                                            <connections>
+                                                <outlet property="delegate" destination="0pf-Ol-1ac" id="paw-8M-Jgk"/>
+                                            </connections>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0nG-N4-STh" userLabel="Version Label">
                                             <rect key="frame" x="34" y="35" width="44" height="14"/>
