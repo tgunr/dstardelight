@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!-- Prepared at ar-dns.net - Sat, 02 Jun 2018 22:22:58 GMT -->
+<!-- Prepared at ar-dns.net - Mon, 29 May 2017 23:53:31 GMT -->
 <plist version="1.0">
 <dict>
 	<key>DCS000</key>
-	<string>23.111.174.198</string>
+	<string>45.62.255.217</string>
 	<key>DCS001</key>
 	<string>dcs001.xreflector.net</string>
 	<key>DCS002</key>
@@ -14,11 +14,11 @@
 	<key>DCS004</key>
 	<string>dcs004.xreflector.net</string>
 	<key>DCS005</key>
-	<string>dcs.bm-dmr.uk</string>
+	<string>91.121.101.163</string>
+	<key>DCS005</key>
+	<string>www.bm-dmr.uk</string>
 	<key>DCS006</key>
 	<string>dcs006.xreflector.net</string>
-	<key>DCS006</key>
-	<string>107.3.98.11</string>
 	<key>DCS007</key>
 	<string>dcs007.xreflector.net</string>
 	<key>DCS008</key>
@@ -26,13 +26,9 @@
 	<key>DCS009</key>
 	<string>dcs009.xreflector.net</string>
 	<key>DCS010</key>
-	<string>85.197.129.86</string>
-	<key>DCS010</key>
 	<string>dcs010.xreflector.net</string>
 	<key>DCS011</key>
 	<string>dcs011.xreflector.net</string>
-	<key>DCS012</key>
-	<string>194.38.140.205</string>
 	<key>DCS012</key>
 	<string>dcs012.xreflector.net</string>
 	<key>DCS013</key>
@@ -49,8 +45,6 @@
 	<string>dcs018.xreflector.net</string>
 	<key>DCS019</key>
 	<string>dcs019.xreflector.net</string>
-	<key>DCS020</key>
-	<string>94.177.164.25</string>
 	<key>DCS021</key>
 	<string>dcs021.xreflector.net</string>
 	<key>DCS022</key>
@@ -66,11 +60,9 @@
 	<key>DCS027</key>
 	<string>dcs027.xreflector.net</string>
 	<key>DCS028</key>
-	<string>xlx028.org</string>
+	<string>dcs028.xreflector.net</string>
 	<key>DCS029</key>
 	<string>dcs029.xreflector.net</string>
-	<key>DCS030</key>
-	<string>194.59.177.44</string>
 	<key>DCS032</key>
 	<string>dcs032.xreflector.net</string>
 	<key>DCS033</key>
@@ -78,13 +70,9 @@
 	<key>DCS035</key>
 	<string>45.79.94.184</string>
 	<key>DCS036</key>
-	<string>151.12.36.112</string>
-	<key>DCS039</key>
-	<string>79.11.0.140</string>
+	<string>192.168.2.150</string>
 	<key>DCS040</key>
 	<string>109.71.45.29</string>
-	<key>DCS041</key>
-	<string>45.62.226.137</string>
 	<key>DCS044</key>
 	<string>dcs044.xreflector.net</string>
 	<key>DCS045</key>
@@ -92,43 +80,23 @@
 	<key>DCS046</key>
 	<string>176.10.140.161</string>
 	<key>DCS047</key>
-	<string>121.94.194.94</string>
-	<key>DCS049</key>
-	<string>212.71.234.224</string>
-	<key>DCS050</key>
-	<string>212.237.17.133</string>
-	<key>DCS051</key>
-	<string>93.186.254.219</string>
+	<string>222.159.237.81</string>
 	<key>DCS052</key>
-	<string>121.119.96.205</string>
-	<key>DCS053</key>
-	<string>91.214.62.136</string>
+	<string>114.184.89.75</string>
 	<key>DCS054</key>
 	<string>52.86.180.251</string>
-	<key>DCS055</key>
-	<string>52.80.4.154</string>
 	<key>DCS057</key>
-	<string>173.216.181.178</string>
-	<key>DCS058</key>
-	<string>115.162.200.98</string>
-	<key>DCS059</key>
-	<string>18.219.32.21</string>
-	<key>DCS060</key>
-	<string>212.237.36.181</string>
-	<key>DCS061</key>
-	<string>68.115.205.110</string>
+	<string>74.193.209.102</string>
 	<key>DCS062</key>
 	<string>70.88.145.163</string>
 	<key>DCS064</key>
-	<string>122.222.1.50</string>
+	<string>202.241.175.133</string>
 	<key>DCS066</key>
-	<string>79.41.35.72</string>
-	<key>DCS067</key>
-	<string>78.226.112.146</string>
+	<string>203.150.19.26</string>
 	<key>DCS068</key>
 	<string>92.222.145.202</string>
-	<key>DCS069</key>
-	<string>89.36.214.120</string>
+	<key>DCS070</key>
+	<string>58.122.123.18</string>
 	<key>DCS071</key>
 	<string>211.60.41.185</string>
 	<key>DCS072</key>
@@ -139,20 +107,16 @@
 	<string>203.137.116.117</string>
 	<key>DCS077</key>
 	<string>5.249.151.111</string>
-	<key>DCS078</key>
-	<string>109.10.128.221</string>
-	<key>DCS079</key>
-	<string>59.6.196.35</string>
 	<key>DCS080</key>
-	<string>121.86.66.52</string>
+	<string>121.85.180.61</string>
 	<key>DCS081</key>
-	<string>121.84.13.151</string>
+	<string>220.147.140.236</string>
 	<key>DCS082</key>
 	<string>108.21.232.21</string>
 	<key>DCS083</key>
 	<string>108.21.232.22</string>
 	<key>DCS085</key>
-	<string>27.92.11.123</string>
+	<string>119.105.177.125</string>
 	<key>DCS086</key>
 	<string>220.133.89.28</string>
 	<key>DCS087</key>
@@ -161,573 +125,611 @@
 	<string>194.109.192.235</string>
 	<key>DCS089</key>
 	<string>194.109.192.236</string>
-	<key>DCS090</key>
-	<string>91.92.136.252</string>
-	<key>DCS092</key>
-	<string>212.237.30.36</string>
 	<key>DCS093</key>
 	<string>98.29.99.252</string>
 	<key>DCS095</key>
-	<string>203.137.76.53</string>
+	<string>153.224.247.53</string>
 	<key>DCS098</key>
-	<string>118.111.10.231</string>
-	<key>DCS099</key>
-	<string>212.237.59.103</string>
+	<string>111.169.31.153</string>
 	<key>DCS100</key>
 	<string>96.94.7.196</string>
 	<key>DCS101</key>
-	<string>45.62.213.101</string>
+	<string>64.137.180.82</string>
 	<key>DCS102</key>
-	<string>23.111.174.196</string>
+	<string>206.208.56.13</string>
 	<key>DCS103</key>
-	<string>64.137.224.126</string>
+	<string>64.137.183.222</string>
 	<key>DCS104</key>
-	<string>23.111.174.197</string>
+	<string>64.137.226.103</string>
 	<key>DCS105</key>
-	<string>51.254.99.78</string>
-	<key>DCS109</key>
-	<string>182.168.129.195</string>
-	<key>DCS110</key>
-	<string>150.7.164.10</string>
+	<string>64.137.188.224</string>
 	<key>DCS111</key>
-	<string>61.195.96.160</string>
+	<string>dcs111.xreflector.net</string>
 	<key>DCS112</key>
-	<string>80.211.236.189</string>
-	<key>DCS113</key>
-	<string>79.19.150.170</string>
+	<string>92.222.47.175</string>
 	<key>DCS114</key>
-	<string>5.135.188.16</string>
+	<string>91.121.136.94</string>
 	<key>DCS115</key>
 	<string>217.182.128.3</string>
-	<key>DCS116</key>
-	<string>31.185.101.211</string>
 	<key>DCS118</key>
 	<string>5.249.148.252</string>
 	<key>DCS119</key>
-	<string>125.129.207.86</string>
-	<key>DCS121</key>
-	<string>174.37.249.156</string>
-	<key>DCS122</key>
-	<string>83.137.45.100</string>
-	<key>DCS124</key>
-	<string>211.14.169.234</string>
+	<string>210.178.113.106</string>
+	<key>DCS120</key>
+	<string>24.43.83.140</string>
 	<key>DCS125</key>
 	<string>213.181.208.52</string>
-	<key>DCS127</key>
-	<string>190.112.228.107</string>
-	<key>DCS128</key>
-	<string>153.248.144.11</string>
-	<key>DCS129</key>
-	<string>219.116.28.227</string>
-	<key>DCS130</key>
-	<string>194.59.177.45</string>
-	<key>DCS131</key>
-	<string>80.127.118.226</string>
 	<key>DCS132</key>
-	<string>91.203.55.87</string>
-	<key>DCS134</key>
-	<string>159.89.176.86</string>
+	<string>193.106.216.154</string>
 	<key>DCS145</key>
-	<string>178.59.23.138</string>
+	<string>178.59.21.32</string>
 	<key>DCS146</key>
-	<string>93.109.77.230</string>
+	<string>128.0.212.190</string>
 	<key>DCS147</key>
 	<string>46.41.1.127</string>
-	<key>DCS150</key>
-	<string>80.211.10.212</string>
 	<key>DCS170</key>
-	<string>210.178.113.173</string>
-	<key>DCS171</key>
-	<string>121.162.91.45</string>
-	<key>DCS180</key>
-	<string>192.241.240.7</string>
+	<string>210.178.113.238</string>
 	<key>DCS200</key>
-	<string>185.203.119.158</string>
-	<key>DCS202</key>
-	<string>148.251.122.251</string>
+	<string>176.126.243.213</string>
 	<key>DCS204</key>
 	<string>185.85.18.162</string>
-	<key>DCS206</key>
-	<string>193.190.240.227</string>
 	<key>DCS208</key>
 	<string>151.80.155.39</string>
 	<key>DCS210</key>
-	<string>64.137.224.107</string>
+	<string>64.137.244.233</string>
 	<key>DCS212</key>
 	<string>52.38.90.188</string>
+	<key>DCS212</key>
+	<string>xlx212.dstar.club</string>
 	<key>DCS214</key>
-	<string>185.47.129.230</string>
-	<key>DCS215</key>
-	<string>185.87.96.172</string>
-	<key>DCS216</key>
-	<string>74.214.25.135</string>
-	<key>DCS220</key>
-	<string>124.41.83.11</string>
+	<string>89.36.214.120</string>
 	<key>DCS222</key>
-	<string>212.43.96.84</string>
-	<key>DCS224</key>
-	<string>203.137.99.97</string>
+	<string>5.134.124.207</string>
 	<key>DCS226</key>
-	<string>94.176.6.37</string>
+	<string>77.81.104.26</string>
 	<key>DCS227</key>
-	<string>86.125.115.210</string>
-	<key>DCS228</key>
-	<string>212.237.33.114</string>
-	<key>DCS229</key>
-	<string>194.191.4.54</string>
+	<string>86.122.173.9</string>
+	<key>DCS230</key>
+	<string>ref.dstar.cz</string>
 	<key>DCS230</key>
 	<string>80.250.3.114</string>
-	<key>DCS232</key>
-	<string>89.185.97.35</string>
 	<key>DCS235</key>
-	<string>5.150.254.97</string>
-	<key>DCS238</key>
-	<string>172.104.239.219</string>
-	<key>DCS241</key>
-	<string>151.80.158.227</string>
-	<key>DCS242</key>
-	<string>73.14.84.43</string>
-	<key>DCS246</key>
-	<string>172.93.48.159</string>
-	<key>DCS255</key>
-	<string>245.115.35.52</string>
-	<key>DCS261</key>
-	<string>44.144.0.23</string>
+	<string>86.5.193.62</string>
 	<key>DCS262</key>
-	<string>44.144.0.24</string>
-	<key>DCS263</key>
-	<string>85.214.193.146</string>
+	<string>136.243.72.242</string>
 	<key>DCS264</key>
 	<string>52.2.131.118</string>
-	<key>DCS265</key>
-	<string>212.237.51.82</string>
-	<key>DCS266</key>
-	<string>212.237.51.82</string>
+	<key>DCS270</key>
+	<string>dcs270.epf.lu</string>
 	<key>DCS270</key>
 	<string>158.64.26.132</string>
-	<key>DCS280</key>
-	<string>121.86.66.52</string>
-	<key>DCS282</key>
-	<string>211.131.186.73</string>
-	<key>DCS284</key>
-	<string>95.158.165.32</string>
-	<key>DCS285</key>
-	<string>91.92.93.15</string>
-	<key>DCS290</key>
-	<string>94.176.6.45</string>
-	<key>DCS291</key>
-	<string>101.143.242.189</string>
-	<key>DCS295</key>
-	<string>64.137.160.185</string>
-	<key>DCS298</key>
-	<string>111.169.17.74</string>
-	<key>DCS299</key>
-	<string>125.236.227.43</string>
 	<key>DCS300</key>
-	<string>45.62.244.43</string>
-	<key>DCS302</key>
-	<string>144.217.241.23</string>
+	<string>64.137.185.249</string>
 	<key>DCS307</key>
-	<string>104.36.40.243</string>
+	<string>72.174.58.87</string>
+	<key>DCS308</key>
+	<string>xlx308.w6kd.com</string>
 	<key>DCS310</key>
-	<string>52.11.207.121</string>
+	<string>104.233.109.56</string>
 	<key>DCS311</key>
 	<string>78.47.206.12</string>
 	<key>DCS313</key>
-	<string>34.213.108.164</string>
+	<string>xlx313.xrefl.net</string>
+	<key>DCS313</key>
+	<string>52.35.167.210</string>
+	<key>DCS314</key>
+	<string>xlx314.xrefl.net</string>
 	<key>DCS315</key>
-	<string>65.101.7.50</string>
-	<key>DCS317</key>
-	<string>44.48.8.15</string>
-	<key>DCS321</key>
-	<string>31.207.110.45</string>
-	<key>DCS328</key>
-	<string>92.105.181.131</string>
+	<string>xlx315.xrefl.net</string>
+	<key>DCS316</key>
+	<string>xlx316.xrefl.net</string>
 	<key>DCS332</key>
 	<string>188.213.168.99</string>
 	<key>DCS333</key>
 	<string>194.116.29.73</string>
 	<key>DCS334</key>
-	<string>96.47.95.121</string>
-	<key>DCS335</key>
-	<string>185.206.145.2</string>
+	<string>199.119.98.174</string>
 	<key>DCS336</key>
 	<string>23.226.233.133</string>
-	<key>DCS339</key>
-	<string>198.98.53.247</string>
 	<key>DCS357</key>
-	<string>52.39.82.54</string>
-	<key>DCS358</key>
-	<string>78.83.48.71</string>
-	<key>DCS359</key>
-	<string>94.156.172.213</string>
-	<key>DCS360</key>
-	<string>222.229.25.105</string>
+	<string>xlx357.w6kd.com</string>
+	<key>DCS357</key>
+	<string>162.244.28.186</string>
 	<key>DCS365</key>
-	<string>59.139.141.204</string>
+	<string>175.179.113.33</string>
 	<key>DCS370</key>
 	<string>188.213.168.24</string>
-	<key>DCS371</key>
-	<string>212.237.8.77</string>
 	<key>DCS373</key>
-	<string>101.143.25.116</string>
-	<key>DCS374</key>
-	<string>61.195.108.146</string>
-	<key>DCS376</key>
-	<string>75.145.119.225</string>
-	<key>DCS380</key>
-	<string>160.16.65.39</string>
-	<key>DCS382</key>
-	<string>61.116.2.231</string>
-	<key>DCS389</key>
-	<string>106.70.39.247</string>
+	<string>101.141.81.139</string>
 	<key>DCS390</key>
-	<string>149.7.214.253</string>
-	<key>DCS398</key>
-	<string>45.62.243.153</string>
+	<string>31.14.140.230</string>
 	<key>DCS400</key>
-	<string>13.58.192.185</string>
+	<string>213.202.229.15</string>
 	<key>DCS404</key>
-	<string>91.229.143.187</string>
-	<key>DCS410</key>
-	<string>166.78.156.246</string>
-	<key>DCS411</key>
-	<string>61.195.107.113</string>
-	<key>DCS412</key>
-	<string>61.195.107.113</string>
-	<key>DCS431</key>
-	<string>61.195.98.225</string>
+	<string>163.172.140.188</string>
+	<key>DCS425</key>
+	<string>xlx425.xlx.ar-dns.net</string>
 	<key>DCS433</key>
 	<string>217.160.22.17</string>
-	<key>DCS434</key>
-	<string>51.254.128.134</string>
-	<key>DCS438</key>
-	<string>80.211.189.236</string>
-	<key>DCS440</key>
-	<string>114.161.161.90</string>
-	<key>DCS441</key>
-	<string>203.137.99.110</string>
 	<key>DCS444</key>
-	<string>188.68.37.51</string>
-	<key>DCS449</key>
-	<string>159.89.183.117</string>
+	<string>85.214.69.145</string>
 	<key>DCS450</key>
-	<string>64.137.224.233</string>
-	<key>DCS456</key>
-	<string>xrf456.de</string>
-	<key>DCS456</key>
-	<string>54.37.204.187</string>
-	<key>DCS460</key>
-	<string>183.53.65.35</string>
-	<key>DCS464</key>
-	<string>52.192.129.174</string>
-	<key>DCS470</key>
-	<string>104.49.29.243</string>
-	<key>DCS477</key>
-	<string>g7rpg.hubnetwork.uk</string>
-	<key>DCS477</key>
-	<string>139.162.213.89</string>
+	<string>45.62.249.14</string>
 	<key>DCS486</key>
 	<string>51.255.172.249</string>
-	<key>DCS499</key>
-	<string>203.137.76.22</string>
 	<key>DCS500</key>
-	<string>172.104.32.192</string>
-	<key>DCS501</key>
-	<string>58.96.16.38</string>
+	<string>125.63.63.112</string>
 	<key>DCS502</key>
-	<string>190.148.222.28</string>
-	<key>DCS505</key>
-	<string>110.141.219.161</string>
-	<key>DCS508</key>
-	<string>185.188.4.15</string>
-	<key>DCS510</key>
-	<string>110.141.219.161</string>
-	<key>DCS511</key>
-	<string>84.52.159.10</string>
-	<key>DCS515</key>
-	<string>133.130.114.45</string>
+	<string>74.208.88.137</string>
 	<key>DCS518</key>
 	<string>176.9.1.168</string>
 	<key>DCS519</key>
-	<string>167.114.104.65</string>
+	<string>24.55.196.105</string>
 	<key>DCS520</key>
-	<string>119.59.125.192</string>
-	<key>DCS522</key>
-	<string>184.82.171.209</string>
-	<key>DCS525</key>
-	<string>177.11.249.101</string>
-	<key>DCS538</key>
-	<string>133.218.172.211</string>
-	<key>DCS544</key>
-	<string>210.131.32.240</string>
-	<key>DCS550</key>
-	<string>94.177.240.69</string>
-	<key>DCS554</key>
-	<string>52.35.183.178</string>
+	<string>202.142.213.58</string>
 	<key>DCS555</key>
-	<string>64.137.186.11</string>
-	<key>DCS567</key>
-	<string>176.10.140.189</string>
+	<string>104.167.117.252</string>
 	<key>DCS569</key>
-	<string>203.137.111.98</string>
+	<string>219.122.217.203</string>
 	<key>DCS570</key>
-	<string>172.104.13.31</string>
+	<string>104.128.230.153</string>
 	<key>DCS573</key>
 	<string>216.189.148.204</string>
-	<key>DCS583</key>
-	<string>116.70.242.196</string>
-	<key>DCS595</key>
-	<string>175.179.56.111</string>
-	<key>DCS599</key>
-	<string>13.58.10.25</string>
 	<key>DCS600</key>
 	<string>13.69.14.204</string>
-	<key>DCS601</key>
-	<string>51.141.52.193</string>
-	<key>DCS602</key>
-	<string>212.56.100.200</string>
 	<key>DCS603</key>
-	<string>216.10.169.35</string>
-	<key>DCS604</key>
-	<string>139.162.241.24</string>
-	<key>DCS608</key>
-	<string>110.54.43.197</string>
+	<string>24.233.107.8</string>
 	<key>DCS610</key>
-	<string>103.1.213.21</string>
-	<key>DCS626</key>
-	<string>202.137.244.157</string>
-	<key>DCS634</key>
-	<string>61.199.25.130</string>
-	<key>DCS647</key>
-	<string>193.253.115.225</string>
-	<key>DCS651</key>
-	<string>198.96.90.144</string>
-	<key>DCS655</key>
-	<string>146.64.235.19</string>
-	<key>DCS666</key>
-	<string>54.144.216.63</string>
-	<key>DCS672</key>
-	<string>180.27.223.252</string>
-	<key>DCS673</key>
-	<string>180.147.243.178</string>
-	<key>DCS684</key>
-	<string>212.237.17.83</string>
-	<key>DCS689</key>
-	<string>97.107.128.47</string>
+	<string>dcs610.vkradio.com</string>
+	<key>DCS616</key>
+	<string>44.103.39.7</string>
 	<key>DCS699</key>
 	<string>82.102.5.239</string>
 	<key>DCS700</key>
 	<string>78.47.222.93</string>
-	<key>DCS701</key>
-	<string>61.195.107.77</string>
-	<key>DCS703</key>
-	<string>61.195.98.254</string>
 	<key>DCS706</key>
-	<string>93.186.255.126</string>
+	<string>151.80.132.155</string>
 	<key>DCS707</key>
 	<string>90.145.156.196</string>
 	<key>DCS708</key>
-	<string>202.218.37.62</string>
-	<key>DCS709</key>
-	<string>212.237.34.32</string>
-	<key>DCS711</key>
-	<string>212.237.18.27</string>
-	<key>DCS712</key>
-	<string>153.215.212.78</string>
+	<string>180.27.41.154</string>
 	<key>DCS714</key>
 	<string>85.214.119.76</string>
-	<key>DCS717</key>
-	<string>44.137.70.100</string>
-	<key>DCS722</key>
-	<string>80.211.2.161</string>
-	<key>DCS723</key>
-	<string>45.33.118.112</string>
 	<key>DCS724</key>
-	<string>xlx.dvbrazil.com.br</string>
-	<key>DCS724</key>
-	<string>75.99.228.35</string>
-	<key>DCS730</key>
-	<string>186.64.123.59</string>
-	<key>DCS732</key>
-	<string>190.159.68.105</string>
-	<key>DCS733</key>
-	<string>45.56.117.158</string>
+	<string>191.232.36.180</string>
 	<key>DCS737</key>
 	<string>195.130.75.246</string>
-	<key>DCS738</key>
-	<string>210.171.151.238</string>
-	<key>DCS746</key>
-	<string>178.254.34.44</string>
 	<key>DCS747</key>
-	<string>93.209.38.50</string>
-	<key>DCS748</key>
-	<string>64.137.197.36</string>
-	<key>DCS750</key>
-	<string>203.86.206.49</string>
-	<key>DCS752</key>
-	<string>103.240.187.180</string>
+	<string>93.209.44.168</string>
 	<key>DCS755</key>
-	<string>178.22.148.229</string>
+	<string>193.248.45.246</string>
 	<key>DCS766</key>
 	<string>201.62.48.61</string>
 	<key>DCS773</key>
 	<string>94.177.175.230</string>
-	<key>DCS775</key>
-	<string>149.202.61.17</string>
-	<key>DCS776</key>
-	<string>118.237.56.211</string>
 	<key>DCS777</key>
 	<string>45.62.251.163</string>
-	<key>DCS781</key>
-	<string>101.143.242.199</string>
-	<key>DCS782</key>
-	<string>153.221.123.92</string>
 	<key>DCS787</key>
-	<string>87.154.61.151</string>
+	<string>93.201.108.164</string>
 	<key>DCS789</key>
 	<string>75.144.65.122</string>
-	<key>DCS794</key>
-	<string>101.143.242.95</string>
 	<key>DCS800</key>
-	<string>45.62.247.26</string>
-	<key>DCS801</key>
-	<string>213.47.71.17</string>
-	<key>DCS803</key>
-	<string>178.114.184.204</string>
-	<key>DCS806</key>
-	<string>62.203.54.167</string>
+	<string>52.26.26.195</string>
 	<key>DCS807</key>
-	<string>153.167.124.196</string>
-	<key>DCS808</key>
-	<string>18.220.252.27</string>
+	<string>118.6.221.210</string>
 	<key>DCS810</key>
-	<string>64.137.238.189</string>
-	<key>DCS812</key>
-	<string>203.145.233.141</string>
-	<key>DCS813</key>
-	<string>97.76.81.165</string>
+	<string>45.62.237.134</string>
 	<key>DCS828</key>
-	<string>195.225.116.244</string>
-	<key>DCS844</key>
-	<string>137.226.79.122</string>
-	<key>DCS847</key>
-	<string>162.243.4.29</string>
+	<string>5.1.85.55</string>
 	<key>DCS850</key>
 	<string>88.198.94.77</string>
-	<key>DCS858</key>
-	<string>54.227.203.214</string>
-	<key>DCS859</key>
-	<string>54.227.203.214</string>
-	<key>DCS860</key>
-	<string>80.81.9.242</string>
-	<key>DCS865</key>
-	<string>45.32.212.226</string>
-	<key>DCS870</key>
-	<string>103.3.234.95</string>
-	<key>DCS878</key>
-	<string>203.137.123.113</string>
-	<key>DCS880</key>
-	<string>176.10.105.211</string>
-	<key>DCS883</key>
-	<string>125.207.223.87</string>
+	<key>DCS850</key>
+	<string>xrf850.xrfmaster.net</string>
+	<key>DCS873</key>
+	<string>219.122.217.203</string>
 	<key>DCS886</key>
-	<string>118.163.103.178</string>
-	<key>DCS887</key>
-	<string>118.163.103.177</string>
+	<string>118.163.103.179</string>
 	<key>DCS888</key>
 	<string>31.14.135.7</string>
-	<key>DCS889</key>
-	<string>130.149.36.93</string>
-	<key>DCS893</key>
-	<string>219.98.198.126</string>
 	<key>DCS897</key>
-	<string>212.237.2.183</string>
-	<key>DCS900</key>
-	<string>94.177.237.192</string>
-	<key>DCS903</key>
-	<string>80.211.29.226</string>
-	<key>DCS906</key>
-	<string>212.237.11.53</string>
-	<key>DCS907</key>
-	<string>193.153.147.150</string>
-	<key>DCS908</key>
 	<string>92.222.23.124</string>
+	<key>DCS900</key>
+	<string>85.214.114.27</string>
+	<key>DCS902</key>
+	<string>104.233.76.150</string>
+	<key>DCS908</key>
+	<string>164.132.193.165</string>
 	<key>DCS909</key>
 	<string>216.86.147.198</string>
-	<key>DCS910</key>
-	<string>94.177.207.26</string>
 	<key>DCS911</key>
 	<string>5.196.73.89</string>
-	<key>DCS912</key>
-	<string>80.211.1.143</string>
-	<key>DCS919</key>
-	<string>80.211.232.174</string>
-	<key>DCS920</key>
-	<string>81.150.10.62</string>
 	<key>DCS921</key>
 	<string>44.143.184.83</string>
-	<key>DCS922</key>
-	<string>81.150.10.62</string>
-	<key>DCS925</key>
-	<string>90.255.232.101</string>
 	<key>DCS929</key>
 	<string>158.69.166.132</string>
 	<key>DCS930</key>
 	<string>94.177.160.5</string>
-	<key>DCS931</key>
-	<string>68.131.24.8</string>
-	<key>DCS933</key>
-	<string>164.132.104.167</string>
 	<key>DCS935</key>
-	<string>82.61.174.246</string>
-	<key>DCS940</key>
-	<string>202.218.37.121</string>
-	<key>DCS944</key>
-	<string>202.218.34.210</string>
-	<key>DCS945</key>
-	<string>155.94.147.186</string>
-	<key>DCS946</key>
-	<string>212.227.174.45</string>
+	<string>87.11.253.40</string>
 	<key>DCS950</key>
 	<string>158.64.26.134</string>
-	<key>DCS964</key>
-	<string>52.173.142.244</string>
-	<key>DCS965</key>
-	<string>47.23.66.19</string>
 	<key>DCS967</key>
 	<string>95.158.165.32</string>
-	<key>DCS972</key>
-	<string>46.121.158.50</string>
-	<key>DCS973</key>
-	<string>211.14.169.43</string>
-	<key>DCS974</key>
-	<string>94.177.217.52</string>
-	<key>DCS975</key>
-	<string>176.31.161.9</string>
-	<key>DCS976</key>
-	<string>212.237.36.71</string>
+	<key>DCS970</key>
+	<string>81.224.72.172</string>
+	<key>DCS985</key>
+	<string>81.89.101.155</string>
 	<key>DCS986</key>
 	<string>81.89.102.160</string>
-	<key>DCS987</key>
-	<string>185.32.183.148</string>
-	<key>DCS988</key>
-	<string>149.202.61.56</string>
-	<key>DCS989</key>
-	<string>50.27.131.75</string>
-	<key>DCS990</key>
-	<string>35.164.237.63</string>
-	<key>DCS991</key>
-	<string>2.237.27.66</string>
-	<key>DCS995</key>
-	<string>158.69.201.255</string>
-	<key>DCS996</key>
-	<string>47.104.177.248</string>
 	<key>DCS997</key>
-	<string>94.177.187.40</string>
+	<string>213.45.29.230</string>
 	<key>DCS998</key>
 	<string>44.140.236.20</string>
 	<key>DCS999</key>
 	<string>94.177.173.53</string>
+	<key>DCX000</key>
+	<string>xlx000.xlx.ar-dns.net</string>
+	<key>DCX001</key>
+	<string>xrf001.xlx.ar-dns.net</string>
+	<key>DCX004</key>
+	<string>xrf004.xlx.ar-dns.net</string>
+	<key>DCX005</key>
+	<string>xlx005.xlx.ar-dns.net</string>
+	<key>DCX011</key>
+	<string>xrf011.xlx.ar-dns.net</string>
+	<key>DCX018</key>
+	<string>xlx018.xlx.ar-dns.net</string>
+	<key>DCX019</key>
+	<string>xrf019.xlx.ar-dns.net</string>
+	<key>DCX022</key>
+	<string>xrf022.xlx.ar-dns.net</string>
+	<key>DCX026</key>
+	<string>xlx026.xlx.ar-dns.net</string>
+	<key>DCX035</key>
+	<string>xlx035.xlx.ar-dns.net</string>
+	<key>DCX036</key>
+	<string>xlx036.xlx.ar-dns.net</string>
+	<key>DCX040</key>
+	<string>xlx040.xlx.ar-dns.net</string>
+	<key>DCX044</key>
+	<string>xlx044.xlx.ar-dns.net</string>
+	<key>DCX045</key>
+	<string>xlx045.xlx.ar-dns.net</string>
+	<key>DCX046</key>
+	<string>xlx046.xlx.ar-dns.net</string>
+	<key>DCX047</key>
+	<string>xlx047.xlx.ar-dns.net</string>
+	<key>DCX052</key>
+	<string>xlx052.xlx.ar-dns.net</string>
+	<key>DCX054</key>
+	<string>xlx054.xlx.ar-dns.net</string>
+	<key>DCX057</key>
+	<string>xlx057.xlx.ar-dns.net</string>
+	<key>DCX058</key>
+	<string>xlx058.xlx.ar-dns.net</string>
+	<key>DCX060</key>
+	<string>odroidcity.duckdns.org</string>
+	<key>DCX061</key>
+	<string>xlx061.xlx.ar-dns.net</string>
+	<key>DCX062</key>
+	<string>xlx062.xlx.ar-dns.net</string>
+	<key>DCX064</key>
+	<string>xlx064.xlx.ar-dns.net</string>
+	<key>DCX066</key>
+	<string>xlx066.xlx.ar-dns.net</string>
+	<key>DCX067</key>
+	<string>xlx067.xlx.ar-dns.net</string>
+	<key>DCX068</key>
+	<string>xlx068.xlx.ar-dns.net</string>
+	<key>DCX070</key>
+	<string>xlx070.xlx.ar-dns.net</string>
+	<key>DCX071</key>
+	<string>xlx071.xlx.ar-dns.net</string>
+	<key>DCX072</key>
+	<string>xlx072.xlx.ar-dns.net</string>
+	<key>DCX075</key>
+	<string>xlx075.xlx.ar-dns.net</string>
+	<key>DCX076</key>
+	<string>xlx076.xlx.ar-dns.net</string>
+	<key>DCX077</key>
+	<string>xlx077.xlx.ar-dns.net</string>
+	<key>DCX080</key>
+	<string>xlx080.xlx.ar-dns.net</string>
+	<key>DCX081</key>
+	<string>xlx081.xlx.ar-dns.net</string>
+	<key>DCX082</key>
+	<string>xlx082.xlx.ar-dns.net</string>
+	<key>DCX083</key>
+	<string>xlx083.xlx.ar-dns.net</string>
+	<key>DCX085</key>
+	<string>xlx085.xlx.ar-dns.net</string>
+	<key>DCX086</key>
+	<string>xlx086.xlx.ar-dns.net</string>
+	<key>DCX087</key>
+	<string>xlx087.xlx.ar-dns.net</string>
+	<key>DCX088</key>
+	<string>xlx088.xlx.ar-dns.net</string>
+	<key>DCX089</key>
+	<string>xlx089.xlx.ar-dns.net</string>
+	<key>DCX090</key>
+	<string>xlx090.xlx.ar-dns.net</string>
+	<key>DCX093</key>
+	<string>xlx093.xlx.ar-dns.net</string>
+	<key>DCX095</key>
+	<string>xlx095.xlx.ar-dns.net</string>
+	<key>DCX098</key>
+	<string>xlx098.xlx.ar-dns.net</string>
+	<key>DCX100</key>
+	<string>xlx100.xlx.ar-dns.net</string>
+	<key>DCX101</key>
+	<string>xlx101.xlx.ar-dns.net</string>
+	<key>DCX102</key>
+	<string>xlx102.xlx.ar-dns.net</string>
+	<key>DCX103</key>
+	<string>xlx103.xlx.ar-dns.net</string>
+	<key>DCX104</key>
+	<string>xlx104.xlx.ar-dns.net</string>
+	<key>DCX105</key>
+	<string>xlx105.xlx.ar-dns.net</string>
+	<key>DCX111</key>
+	<string>xlx111.xlx.ar-dns.net</string>
+	<key>DCX112</key>
+	<string>xlx112.xlx.ar-dns.net</string>
+	<key>DCX114</key>
+	<string>xlx114.xlx.ar-dns.net</string>
+	<key>DCX115</key>
+	<string>xlx115.xlx.ar-dns.net</string>
+	<key>DCX118</key>
+	<string>xlx118.xlx.ar-dns.net</string>
+	<key>DCX119</key>
+	<string>xlx119.xlx.ar-dns.net</string>
+	<key>DCX120</key>
+	<string>xlx120.xlx.ar-dns.net</string>
+	<key>DCX125</key>
+	<string>xlx125.xlx.ar-dns.net</string>
+	<key>DCX127</key>
+	<string>xlx127.xlx.ar-dns.net</string>
+	<key>DCX132</key>
+	<string>xlx132.xlx.ar-dns.net</string>
+	<key>DCX145</key>
+	<string>xlx145.xlx.ar-dns.net</string>
+	<key>DCX146</key>
+	<string>xlx146.xlx.ar-dns.net</string>
+	<key>DCX147</key>
+	<string>xlx147.xlx.ar-dns.net</string>
+	<key>DCX150</key>
+	<string>xlx150.xlx.ar-dns.net</string>
+	<key>DCX170</key>
+	<string>xlx170.xlx.ar-dns.net</string>
+	<key>DCX171</key>
+	<string>xlx171.xlx.ar-dns.net</string>
+	<key>DCX200</key>
+	<string>xlx200.xlx.ar-dns.net</string>
+	<key>DCX204</key>
+	<string>xlx204.xlx.ar-dns.net</string>
+	<key>DCX208</key>
+	<string>xlx208.xlx.ar-dns.net</string>
+	<key>DCX210</key>
+	<string>xlx210.xlx.ar-dns.net</string>
+	<key>DCX212</key>
+	<string>xlx212.xlx.ar-dns.net</string>
+	<key>DCX214</key>
+	<string>xlx214.xlx.ar-dns.net</string>
+	<key>DCX222</key>
+	<string>xlx222.xlx.ar-dns.net</string>
+	<key>DCX226</key>
+	<string>xlx226.xlx.ar-dns.net</string>
+	<key>DCX227</key>
+	<string>xlx227.xlx.ar-dns.net</string>
+	<key>DCX228</key>
+	<string>xlx228.xlx.ar-dns.net</string>
+	<key>DCX230</key>
+	<string>xlx230.xlx.ar-dns.net</string>
+	<key>DCX235</key>
+	<string>xlx235.xlx.ar-dns.net</string>
+	<key>DCX238</key>
+	<string>xlx238.xlx.ar-dns.net</string>
+	<key>DCX242</key>
+	<string>xlx242.xlx.ar-dns.net</string>
+	<key>DCX246</key>
+	<string>xlx246.xlx.ar-dns.net</string>
+	<key>DCX262</key>
+	<string>xlx262.xlx.ar-dns.net</string>
+	<key>DCX264</key>
+	<string>xlx264.xlx.ar-dns.net</string>
+	<key>DCX270</key>
+	<string>xlx270.xlx.ar-dns.net</string>
+	<key>DCX277</key>
+	<string>xlx277.xlx.ar-dns.net</string>
+	<key>DCX300</key>
+	<string>xlx300.xlx.ar-dns.net</string>
+	<key>DCX302</key>
+	<string>xlx302.xlx.ar-dns.net</string>
+	<key>DCX307</key>
+	<string>xlx307.xlx.ar-dns.net</string>
+	<key>DCX310</key>
+	<string>xlx310.xlx.ar-dns.net</string>
+	<key>DCX311</key>
+	<string>xlx311.xlx.ar-dns.net</string>
+	<key>DCX313</key>
+	<string>xlx313.xlx.ar-dns.net</string>
+	<key>DCX317</key>
+	<string>xlx317.xlx.ar-dns.net</string>
+	<key>DCX332</key>
+	<string>xlx332.xlx.ar-dns.net</string>
+	<key>DCX333</key>
+	<string>xlx333.xlx.ar-dns.net</string>
+	<key>DCX334</key>
+	<string>xlx334.xlx.ar-dns.net</string>
+	<key>DCX336</key>
+	<string>xlx336.xlx.ar-dns.net</string>
+	<key>DCX357</key>
+	<string>xlx357.xlx.ar-dns.net</string>
+	<key>DCX365</key>
+	<string>xlx365.xlx.ar-dns.net</string>
+	<key>DCX370</key>
+	<string>xlx370.xlx.ar-dns.net</string>
+	<key>DCX373</key>
+	<string>xlx373.xlx.ar-dns.net</string>
+	<key>DCX390</key>
+	<string>xlx390.xlx.ar-dns.net</string>
+	<key>DCX400</key>
+	<string>xlx400.xlx.ar-dns.net</string>
+	<key>DCX404</key>
+	<string>xlx404.xlx.ar-dns.net</string>
+	<key>DCX425</key>
+	<string>xlx425.xlx.ar-dns.net</string>
+	<key>DCX433</key>
+	<string>xlx433.xlx.ar-dns.net</string>
+	<key>DCX440</key>
+	<string>xlx440.xlx.ar-dns.net</string>
+	<key>DCX443</key>
+	<string>xlx443.xlx.ar-dns.net</string>
+	<key>DCX444</key>
+	<string>xlx444.xlx.ar-dns.net</string>
+	<key>DCX450</key>
+	<string>xlx450.xlx.ar-dns.net</string>
+	<key>DCX456</key>
+	<string>xlx456.xlx.ar-dns.net</string>
+	<key>DCX486</key>
+	<string>xlx486.xlx.ar-dns.net</string>
+	<key>DCX500</key>
+	<string>xlx500.xlx.ar-dns.net</string>
+	<key>DCX502</key>
+	<string>xlx502.xlx.ar-dns.net</string>
+	<key>DCX515</key>
+	<string>xlx515.xlx.ar-dns.net</string>
+	<key>DCX518</key>
+	<string>xlx518.xlx.ar-dns.net</string>
+	<key>DCX519</key>
+	<string>xlx519.xlx.ar-dns.net</string>
+	<key>DCX520</key>
+	<string>xlx520.xlx.ar-dns.net</string>
+	<key>DCX550</key>
+	<string>xlx550.xlx.ar-dns.net</string>
+	<key>DCX555</key>
+	<string>xlx555.xlx.ar-dns.net</string>
+	<key>DCX569</key>
+	<string>xlx569.xlx.ar-dns.net</string>
+	<key>DCX570</key>
+	<string>xlx570.xlx.ar-dns.net</string>
+	<key>DCX573</key>
+	<string>xlx573.xlx.ar-dns.net</string>
+	<key>DCX595</key>
+	<string>xlx595.xlx.ar-dns.net</string>
+	<key>DCX600</key>
+	<string>xlx600.xlx.ar-dns.net</string>
+	<key>DCX603</key>
+	<string>xlx603.xlx.ar-dns.net</string>
+	<key>DCX610</key>
+	<string>xlx610.xlx.ar-dns.net</string>
+	<key>DCX616</key>
+	<string>xlx616.xlx.ar-dns.net</string>
+	<key>DCX626</key>
+	<string>xlx626.xlx.ar-dns.net</string>
+	<key>DCX666</key>
+	<string>xlx666.xlx.ar-dns.net</string>
+	<key>DCX699</key>
+	<string>xlx699.xlx.ar-dns.net</string>
+	<key>DCX700</key>
+	<string>xlx700.xlx.ar-dns.net</string>
+	<key>DCX706</key>
+	<string>xlx706.xlx.ar-dns.net</string>
+	<key>DCX707</key>
+	<string>xlx707.xlx.ar-dns.net</string>
+	<key>DCX708</key>
+	<string>xlx708.xlx.ar-dns.net</string>
+	<key>DCX714</key>
+	<string>xlx714.xlx.ar-dns.net</string>
+	<key>DCX715</key>
+	<string>xlx715.xlx.ar-dns.net</string>
+	<key>DCX716</key>
+	<string>xlx716.xlx.ar-dns.net</string>
+	<key>DCX724</key>
+	<string>xlx724.xlx.ar-dns.net</string>
+	<key>DCX727</key>
+	<string>xlx727.xlx.ar-dns.net</string>
+	<key>DCX737</key>
+	<string>xlx737.xlx.ar-dns.net</string>
+	<key>DCX747</key>
+	<string>xlx747.xlx.ar-dns.net</string>
+	<key>DCX755</key>
+	<string>xlx755.xlx.ar-dns.net</string>
+	<key>DCX766</key>
+	<string>xlx766.xlx.ar-dns.net</string>
+	<key>DCX773</key>
+	<string>xlx773.xlx.ar-dns.net</string>
+	<key>DCX777</key>
+	<string>xlx777.xlx.ar-dns.net</string>
+	<key>DCX781</key>
+	<string>xlx781.xlx.ar-dns.net</string>
+	<key>DCX787</key>
+	<string>xlx787.xlx.ar-dns.net</string>
+	<key>DCX789</key>
+	<string>xlx789.xlx.ar-dns.net</string>
+	<key>DCX800</key>
+	<string>xlx800.xlx.ar-dns.net</string>
+	<key>DCX801</key>
+	<string>xlx801.xlx.ar-dns.net</string>
+	<key>DCX807</key>
+	<string>xlx807.xlx.ar-dns.net</string>
+	<key>DCX810</key>
+	<string>xlx810.xlx.ar-dns.net</string>
+	<key>DCX813</key>
+	<string>xlx813.xlx.ar-dns.net</string>
+	<key>DCX828</key>
+	<string>xlx828.xlx.ar-dns.net</string>
+	<key>DCX850</key>
+	<string>xlx850.xlx.ar-dns.net</string>
+	<key>DCX870</key>
+	<string>xlx870.xlx.ar-dns.net</string>
+	<key>DCX873</key>
+	<string>xlx873.xlx.ar-dns.net</string>
+	<key>DCX886</key>
+	<string>xlx886.xlx.ar-dns.net</string>
+	<key>DCX888</key>
+	<string>xlx888.xlx.ar-dns.net</string>
+	<key>DCX897</key>
+	<string>xlx897.xlx.ar-dns.net</string>
+	<key>DCX900</key>
+	<string>xlx900.xlx.ar-dns.net</string>
+	<key>DCX901</key>
+	<string>xlx901.xlx.ar-dns.net</string>
+	<key>DCX902</key>
+	<string>xlx902.xlx.ar-dns.net</string>
+	<key>DCX908</key>
+	<string>xlx908.xlx.ar-dns.net</string>
+	<key>DCX909</key>
+	<string>xlx909.xlx.ar-dns.net</string>
+	<key>DCX911</key>
+	<string>xlx911.xlx.ar-dns.net</string>
+	<key>DCX921</key>
+	<string>xlx921.xlx.ar-dns.net</string>
+	<key>DCX929</key>
+	<string>xlx929.xlx.ar-dns.net</string>
+	<key>DCX930</key>
+	<string>xlx930.xlx.ar-dns.net</string>
+	<key>DCX931</key>
+	<string>xlx931.xlx.ar-dns.net</string>
+	<key>DCX935</key>
+	<string>xlx935.xlx.ar-dns.net</string>
+	<key>DCX950</key>
+	<string>xlx950.xlx.ar-dns.net</string>
+	<key>DCX967</key>
+	<string>xlx967.xlx.ar-dns.net</string>
+	<key>DCX970</key>
+	<string>xlx970.xlx.ar-dns.net</string>
+	<key>DCX972</key>
+	<string>xlx972.xlx.ar-dns.net</string>
+	<key>DCX985</key>
+	<string>xlx985.xlx.ar-dns.net</string>
+	<key>DCX986</key>
+	<string>xlx986.xlx.ar-dns.net</string>
+	<key>DCX997</key>
+	<string>xlx997.xlx.ar-dns.net</string>
+	<key>DCX998</key>
+	<string>xlx998.xlx.ar-dns.net</string>
+	<key>DCX999</key>
+	<string>xlx999.xlx.ar-dns.net</string>
 </dict>
 </plist>

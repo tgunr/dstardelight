@@ -34,7 +34,13 @@
 	<string>Your location is needed for display to others</string>
 	<key>NSMainStoryboardFile</key>
 	<string>New</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>You r microphone is need for communications</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>NSServices</key>
+	<array>
+		<dict/>
+	</array>
 </dict>
 </plist>
