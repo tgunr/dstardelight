@@ -1,6 +1,6 @@
 
 
-#import "DSMainWindowViewController.h"
+#import "DSQSOViewController.h"
 
 //#import "DSAppDelegate.h"
 #import "MASShortcut.h"
@@ -14,7 +14,7 @@
 
 @import MapKit;
 
-@interface DSMainWindowViewController ()
+@interface DSQSOViewController ()
 
 @property (nonatomic) dispatch_source_t qsoTimer;
 @property (nonatomic) NSInteger txButtonState;
@@ -27,7 +27,7 @@
 
 @end
 
-@implementation DSMainWindowViewController
+@implementation DSQSOViewController
 
 +(NSUInteger)findQsoId:(NSNumber *)streamId inArray:(NSArray *)array {
     return [array indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
@@ -42,7 +42,7 @@
 }
 
 -(BOOL)updateQsoId:(NSNumber *)streamId usingBlock:(void(^)(NSMutableDictionary *, NSUInteger))block {
-    NSUInteger qsoIndex = [DSMainWindowViewController findQsoId:streamId inArray:self.qsoList];
+    NSUInteger qsoIndex = [DSQSOViewController findQsoId:streamId inArray:self.qsoList];
     if(qsoIndex == NSNotFound)
         return NO;
 
@@ -79,7 +79,7 @@
         [self.qsoList addObject:header];
         [self.heardTableController rearrangeObjects];
         
-        DSMainWindowViewController __weak *weakSelf = self;
+        DSQSOViewController __weak *weakSelf = self;
         self.qsoTimer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_main_queue());
         dispatch_source_set_timer(self.qsoTimer, dispatch_time(DISPATCH_TIME_NOW, 100ull * NSEC_PER_MSEC), 100ull * NSEC_PER_MSEC, 10ull * NSEC_PER_MSEC);
         dispatch_source_set_event_handler(self.qsoTimer, ^{
@@ -103,7 +103,7 @@
             qso[@"color"] = [NSColor blackColor];
     }];
     
-    NSUInteger qsoIndex = [DSMainWindowViewController findQsoId:streamId inArray:self.heardTableController.arrangedObjects];
+    NSUInteger qsoIndex = [DSQSOViewController findQsoId:streamId inArray:self.heardTableController.arrangedObjects];
     
     //  If we can't find the QSO, it's probably not visible and we don't need to reset its color.
     if(qsoIndex != NSNotFound)
@@ -440,7 +440,7 @@
     [self resetColorForRowView:rowView atRow:row];
     
     if(self.mapPopover.isShown) {
-        NSUInteger popoverRow = [DSMainWindowViewController findQsoId:((DSMapPopupController *)self.mapPopover.contentViewController).qsoId inArray:self.heardTableController.arrangedObjects];
+        NSUInteger popoverRow = [DSQSOViewController findQsoId:((DSMapPopupController *)self.mapPopover.contentViewController).qsoId inArray:self.heardTableController.arrangedObjects];
         
         NSAssert(popoverRow != NSNotFound, @"QSO ID %ld not found in popover relocation", popoverRow);
         

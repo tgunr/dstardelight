@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7502EC9420ECF139003A11F1 /* DSAddPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945C8620EC62F2003A11F1 /* DSAddPopupController.m */; };
-		7502EC9520ECF139003A11F1 /* DSMainWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945C9420EC62F2003A11F1 /* DSMainWindowViewController.m */; };
+		7502EC9520ECF139003A11F1 /* DSQSOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945C9420EC62F2003A11F1 /* DSQSOViewController.m */; };
 		7502EC9620ECF139003A11F1 /* DSPrefVocoderNetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945CAE20EC62F2003A11F1 /* DSPrefVocoderNetworkViewController.m */; };
 		7502EC9720ECF139003A11F1 /* DSPrefVocoderSerialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945CB020EC62F2003A11F1 /* DSPrefVocoderSerialViewController.m */; };
 		7502ECA320EEE320003A11F1 /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7502ECA220EEE320003A11F1 /* Preferences.storyboard */; };
@@ -166,8 +166,8 @@
 		75945C8E20EC62F2003A11F1 /* DSCallFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSCallFormatter.m; sourceTree = "<group>"; };
 		75945C8F20EC62F2003A11F1 /* DSDestinationCallFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSDestinationCallFormatter.h; sourceTree = "<group>"; };
 		75945C9020EC62F2003A11F1 /* DSDestinationCallFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSDestinationCallFormatter.m; sourceTree = "<group>"; };
-		75945C9320EC62F2003A11F1 /* DSMainWindowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSMainWindowViewController.h; sourceTree = "<group>"; };
-		75945C9420EC62F2003A11F1 /* DSMainWindowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSMainWindowViewController.m; sourceTree = "<group>"; };
+		75945C9320EC62F2003A11F1 /* DSQSOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSQSOViewController.h; sourceTree = "<group>"; };
+		75945C9420EC62F2003A11F1 /* DSQSOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSQSOViewController.m; sourceTree = "<group>"; };
 		75945C9520EC62F2003A11F1 /* DSMapPopupController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSMapPopupController.h; sourceTree = "<group>"; };
 		75945C9720EC62F2003A11F1 /* DSMessageFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSMessageFormatter.h; sourceTree = "<group>"; };
 		75945C9820EC62F2003A11F1 /* DSMessageFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSMessageFormatter.m; sourceTree = "<group>"; };
@@ -356,8 +356,6 @@
 		75945CAC20EC62F2003A11F1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				75945C9320EC62F2003A11F1 /* DSMainWindowViewController.h */,
-				75945C9420EC62F2003A11F1 /* DSMainWindowViewController.m */,
 				75945C8520EC62F2003A11F1 /* DSAddPopupController.h */,
 				75945C8620EC62F2003A11F1 /* DSAddPopupController.m */,
 				75945C9520EC62F2003A11F1 /* DSMapPopupController.h */,
@@ -374,10 +372,12 @@
 				75945CB020EC62F2003A11F1 /* DSPrefVocoderSerialViewController.m */,
 				75945CAD20EC62F2003A11F1 /* DSPrefVocoderNetworkViewController.h */,
 				75945CAE20EC62F2003A11F1 /* DSPrefVocoderNetworkViewController.m */,
-				75D870E220F6FD0D003A11F1 /* DSQSOReflectorsViewController.h */,
-				75D870E020F6FCE8003A11F1 /* DSQSOReflectorsViewController.m */,
+				75945C9320EC62F2003A11F1 /* DSQSOViewController.h */,
+				75945C9420EC62F2003A11F1 /* DSQSOViewController.m */,
 				75476C3F20F7CF57003A11F1 /* DSQSOCQViewController.h */,
 				75476C4020F7CF57003A11F1 /* DSQSOCQViewController.m */,
+				75D870E220F6FD0D003A11F1 /* DSQSOReflectorsViewController.h */,
+				75D870E020F6FCE8003A11F1 /* DSQSOReflectorsViewController.m */,
 				75476C4220F7CF8B003A11F1 /* DSQSOSettingsViewController.h */,
 				75476C4320F7CF8B003A11F1 /* DSQSOSettingsViewController.m */,
 			);
@@ -556,7 +556,7 @@
 				758B49D420E41F0D003A11F1 /* DSDestinationCallFormatter.m in Sources */,
 				75E0886E20E3177F003A11F1 /* DSMessageFormatter.m in Sources */,
 				7502EC9420ECF139003A11F1 /* DSAddPopupController.m in Sources */,
-				7502EC9520ECF139003A11F1 /* DSMainWindowViewController.m in Sources */,
+				7502EC9520ECF139003A11F1 /* DSQSOViewController.m in Sources */,
 				7502EC9620ECF139003A11F1 /* DSPrefVocoderNetworkViewController.m in Sources */,
 				75D870E120F6FCE8003A11F1 /* DSQSOReflectorsViewController.m in Sources */,
 				7502EC9720ECF139003A11F1 /* DSPrefVocoderSerialViewController.m in Sources */,

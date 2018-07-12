@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="SSE-PL-FSr">
     <dependencies>
-        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14295.6"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,7 +8,7 @@
         <!--QSO-->
         <scene sceneID="9Ex-xE-P7p">
             <objects>
-                <viewController title="QSO" id="SSE-PL-FSr" customClass="DSMainWindowViewController" sceneMemberID="viewController">
+                <viewController title="QSO" id="SSE-PL-FSr" customClass="DSQSOViewController" sceneMemberID="viewController">
                     <view key="view" id="wk3-rg-2Rg">
                         <rect key="frame" x="0.0" y="0.0" width="886" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -88,7 +87,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <clipView key="contentView" focusRingType="none" ambiguous="YES" id="dgd-Iy-n0e">
                                     <rect key="frame" x="1" y="0.0" width="844" height="232"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <tableView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="63" rowSizeStyle="automatic" headerView="GXp-eb-WN2" viewBased="YES" id="QBK-EF-Ocj">
                                             <rect key="frame" x="0.0" y="0.0" width="844" height="207"/>
