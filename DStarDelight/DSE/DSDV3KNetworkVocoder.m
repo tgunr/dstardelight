@@ -5,16 +5,12 @@
 #import "DSEDataEngine.h"
 #import "DSEDV3KVocoderSubclass.h"
 #import "DSPrefVocoderNetworkViewController.h"
+#import "DSAppDelegate.h"
+
+#import <AppKit/AppKit.h>
 
 #import <arpa/inet.h>
 #import <sys/ioctl.h>
-
-@interface DSEDV3KNetworkVocoder () {
-//    DSPrefVocoderNetworkViewController *_configurationViewController;
-}
-//@property (nonatomic)     DSPrefVocoderNetworkViewController *configurationViewController;
-
-@end
 
 @implementation DSEDV3KNetworkVocoder
 
@@ -29,8 +25,6 @@
         _port = 2460;
         
         DSEDV3KNetworkVocoder __weak *weakSelf = self;
-        _configurationViewController = [[DSPrefVocoderNetworkViewController alloc] initWithNibName:@"DSPrefVocoderNetworkViewController" bundle:nil];
-        
         DSVars.shared.networkDriver = self;
         
         [[NSNotificationCenter defaultCenter] addObserverForName:NSUserDefaultsDidChangeNotification
@@ -88,15 +82,24 @@
     [self start];
 }
 
--(NSViewController *)configurationViewController {
-    if(!_configurationViewController) {
-        _configurationViewController = [[DSPrefVocoderNetworkViewController alloc] initWithNibName:nil bundle:nil];
-
-        _configurationViewController.driver = self;
+- (void)stop {
+    if (self.delegate) {
+        [self.delegate setStatus: stopped];
     }
-    return _configurationViewController;
+    [super stop];
 }
 
+- (BOOL)start {
+    BOOL result = [super start];
+    if (self.delegate) {
+        if (result) {
+            [self.delegate setStatus: started];
+        } else {
+            [self.delegate setStatus: stopped];
+        }
+    }
+    return result;
+}
 
 - (BOOL) openPort {
     NSHost *destination = [NSHost hostWithAddress:self.address];

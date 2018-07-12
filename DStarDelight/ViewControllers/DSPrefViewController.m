@@ -20,7 +20,7 @@
 }
 
 - (void) viewDidAppear: (id) sender {
-    
+    NSLog(@"viewDidAppear:");
 }
 
 - (void)tabView:(NSTabView *)tabView didSelectTabViewItem:(NSTabViewItem *) tabViewItem {

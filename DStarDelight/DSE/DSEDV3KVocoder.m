@@ -119,10 +119,6 @@ static const struct dv3k_packet dv3k_audio = {
     [self doesNotRecognizeSelector:_cmd];
 }
 
--(NSViewController *)configurationViewController {
-    [self doesNotRecognizeSelector:_cmd];
-}
-
 #pragma clang diagnostic pop
 
 #pragma mark - Packet sending

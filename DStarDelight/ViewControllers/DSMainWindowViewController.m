@@ -2,7 +2,7 @@
 
 #import "DSMainWindowViewController.h"
 
-//#import "DSEAppDelegate.h"
+//#import "DSAppDelegate.h"
 #import "MASShortcut.h"
 #import "MASDictionaryTransformer.h"
 #import "DSESlowDataCoder.h"
@@ -64,10 +64,10 @@
     if([header[@"direction"] isEqualToString:@"TX"]) {
         header[@"color"] = [NSColor redColor];
         header[@"message"] = [[NSUserDefaults standardUserDefaults] stringForKey:@"slowDataMessage"];
-        self.statusLED.image = [NSImage imageNamed:@"Red LED"];
+        self.statusLED.image = [NSImage imageNamed:@"Red"];
     } else {
         header[@"color"] = [NSColor colorWithCalibratedRed:0.088 green:0.373 blue:0.139 alpha:1.000];
-        self.statusLED.image = [NSImage imageNamed:@"Green LED"];
+        self.statusLED.image = [NSImage imageNamed:@"Green"];
     }
     
     NSNumber *streamId = header[@"streamId"];
@@ -109,7 +109,7 @@
     if(qsoIndex != NSNotFound)
         [self resetColorForRowView:[self.heardTableView rowViewAtRow:qsoIndex makeIfNecessary:NO] atRow:qsoIndex];
 
-    self.statusLED.image = [NSImage imageNamed:@"Gray LED"];
+    self.statusLED.image = [NSImage imageNamed:@"Grey"];
 }
 
 -(void)slowDataReceived:(NSString *)slowData forStreamId:(NSNumber *)streamId {
@@ -342,7 +342,7 @@
 -(void)endTx {
     DSAudioHandler *audio = (DSAudioHandler *)[DSEDataEngine sharedInstance].audio;
     audio.xmit = NO;
-    self.statusLED.image = [NSImage imageNamed:@"Gray LED"];
+    self.statusLED.image = [NSImage imageNamed:@"Grey"];
 }
 
 - (IBAction)doTx:(id)sender {    

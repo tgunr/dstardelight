@@ -10,6 +10,7 @@
 #import "DStarEngine.h"
 
 @class DSEDV3KNetworkVocoder;
+@class DSPrefVocoderNetworkViewController;
 
 @interface DSVars: NSObject
 
@@ -18,7 +19,7 @@
 @property NSString *DV3KProductID;
 @property NSString *DV3KVersion;
 @property DSEDV3KNetworkVocoder *networkDriver;
-//@property id networkConfigurationViewController;
+@property DSPrefVocoderNetworkViewController *networkConfigurationViewController;
 //@property id serialConfigurationViewController;
 
 + (DSVars *) shared;

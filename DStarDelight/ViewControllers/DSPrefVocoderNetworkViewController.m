@@ -12,11 +12,45 @@
 @implementation DSPrefVocoderNetworkViewController
 
 - (id) init {
-    _productId.stringValue = @"";
-    _version.stringValue = @"";
-    DSVars.shared.DV3KProductID = _productId.stringValue;
-    DSVars.shared.DV3KVersion = _version.stringValue;
+    self.productId.stringValue = @"";
+    self.version.stringValue = @"";
+    self.statusImageView.image = [NSImage imageNamed:@"Grey"];
+
+    DSVars.shared.DV3KProductID = self.productId.stringValue;
+    DSVars.shared.DV3KVersion = self.version.stringValue;
     DSVars.shared.networkDriver = nil;
+    return self;
+}
+
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    NSArray *viewObjects;
+    
+    // Custom initialization.
+    BOOL r = [[NSBundle mainBundle] loadNibNamed:@"DSPrefVocoderNetworkViewController" owner:self topLevelObjects:&viewObjects];
+    if (r) {
+        NSLog(@"DSPrefVocoderNetworkViewController loaded: %@", self);
+    }
+    
+    return self;
+}
+
+- (void)clearConnection {
+    self.productId.stringValue = @"";
+    self.version.stringValue = @"";
+    self.connectionStatus.stringValue = @"Disconnected";
+}
+
+- (id)initWithCoder:(NSCoder *)decoder {
+    self = [super initWithCoder: decoder];
+    [self clearConnection];
+    self.statusImageView.image = [NSImage imageNamed:@"Grey"];
+    
+    DSVars.shared.DV3KProductID = self.productId.stringValue;
+    DSVars.shared.DV3KVersion = self.version.stringValue;
+    self.driver = DSVars.shared.networkDriver;
+    self.driver.delegate = self;
     return self;
 }
 
@@ -25,7 +59,7 @@
 }
 
 - (void)viewWillAppear {
-    CGFloat newHeight = 29;
+//    CGFloat newHeight = 29;
 //    NSArray *contents = self.view.subviews;
 //    for (NSView *aView in contents) {
 //        newHeight += aView.bounds.size.height;
@@ -40,19 +74,44 @@
 }
 
 - (void)viewDidAppear{
-    _vocoderAddress.stringValue = [[NSUserDefaults standardUserDefaults] stringForKey:@"DV3KNetworkVocoderAddress"];
-    _vocoderPort.stringValue = [[NSUserDefaults standardUserDefaults] stringForKey:@"DV3KNetworkVocoderPort"];
+//    DSPrefVocoderNetworkViewController *controller = DSVars.shared.networkConfigurationViewController;
+    self.vocoderAddress.stringValue = [[NSUserDefaults standardUserDefaults] stringForKey:@"DV3KNetworkVocoderAddress"];
+    self.vocoderPort.stringValue = [[NSUserDefaults standardUserDefaults] stringForKey:@"DV3KNetworkVocoderPort"];
     
-    _driver = DSVars.shared.networkDriver;
-    if (_driver) {
-        self.version.stringValue = _driver.version;
-        self.productId.stringValue = _driver.productId;
+    self.driver = DSVars.shared.networkDriver;
+    if (self.driver) {
+        self.version.stringValue = self.driver.version;
+        self.productId.stringValue = self.driver.productId;
+        if ([[self.driver version] isEqualToString: @""]) {
+            [self setStatus: stopped];
+        } else {
+            [self setStatus: started];
+        }
     }
 }
 
--(IBAction)doTest:(id)sender {
-    [_driver stop];
-    [_driver start];
+- (void)setStatus: (DriverStatus)status {
+    switch(status) {
+        case undefined:
+            self.statusImageView.image = [NSImage imageNamed:@"Grey"];
+            NSLog(@"Grey");
+            break;
+        case stopped:
+            self.statusImageView.image = [NSImage imageNamed:@"Red"];
+            [self clearConnection];
+            NSLog(@"Red");
+            break;
+        case started:
+            self.statusImageView.image = [NSImage imageNamed:@"Green"];
+            self.connectionStatus.stringValue = @"Connected";
+            NSLog(@"Green");
+            break;
+    }
+}
+
+-(IBAction)tryConnection:(id)sender {
+    [self.driver stop];
+    [self.driver start];
 }
 
 @end

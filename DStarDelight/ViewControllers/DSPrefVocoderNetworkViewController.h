@@ -3,13 +3,21 @@
 
 @class DSEDV3KNetworkVocoder;
 
+typedef enum : NSUInteger {
+    undefined,
+    stopped,
+    started,
+} DriverStatus;
+
 @interface DSPrefVocoderNetworkViewController : NSViewController
-@property (weak) IBOutlet NSTextField *vocoderAddress;
-@property (weak) IBOutlet NSTextField *vocoderPort;
-@property (weak) IBOutlet NSTextField *productId;
-@property (weak) IBOutlet NSTextField *version;
+@property IBOutlet NSTextField *vocoderAddress;
+@property IBOutlet NSTextField *vocoderPort;
+@property IBOutlet NSTextField *productId;
+@property IBOutlet NSTextField *version;
+@property IBOutlet NSImageView *statusImageView;
+@property (weak) IBOutlet NSTextField *connectionStatus;
 
-@property (weak) DSEDV3KNetworkVocoder *driver;
+@property DSEDV3KNetworkVocoder *driver;
 
--(IBAction)doTest:(id)sender;
+- (void)setStatus: (DriverStatus)status;
 @end
