@@ -9,36 +9,16 @@
         <!--Preferences-->
         <scene sceneID="lmm-p7-N0X">
             <objects>
-                <tabViewController title="Preferences" storyboardIdentifier="NSTabViewController-aw7-oo-70e" showSeguePresentationStyle="single" tabStyle="toolbar" id="aw7-oo-70e" customClass="DSPrefViewController" sceneMemberID="viewController">
+                <tabViewController title="Preferences" storyboardIdentifier="NSTabViewController-aw7-oo-70e" showSeguePresentationStyle="single" selectedTabViewItemIndex="0" id="aw7-oo-70e" customClass="DSPrefViewController" sceneMemberID="viewController">
                     <tabViewItems>
-                        <tabViewItem label="General" image="NSInfo" id="K1g-Yo-kn9"/>
-                        <tabViewItem label="Audio" image="Microphone" id="OOM-sY-Bo2"/>
-                        <tabViewItem label="Vocoder" image="Chip" id="HBA-jA-giJ"/>
+                        <tabViewItem label="General" id="K1g-Yo-kn9"/>
+                        <tabViewItem label="Audio" id="OOM-sY-Bo2"/>
+                        <tabViewItem label="Vocoder" id="HBA-jA-giJ"/>
                     </tabViewItems>
                     <tabView key="tabView" type="noTabsNoBorder" id="ZBZ-fl-NSf">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="200"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <font key="font" metaFont="message"/>
-                        <tabViewItems>
-                            <tabViewItem label="Item 0" identifier="" id="TPM-0i-xbn">
-                                <view key="view" id="S4m-1A-7YA">
-                                    <rect key="frame" x="0.0" y="0.0" width="450" height="200"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </view>
-                            </tabViewItem>
-                            <tabViewItem label="Item 1" identifier="" id="6H0-99-GDk">
-                                <view key="view" id="eeI-1m-WKC">
-                                    <rect key="frame" x="10" y="33" width="430" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </view>
-                            </tabViewItem>
-                            <tabViewItem label="Item 2" identifier="" id="4Aa-SF-3bM">
-                                <view key="view" id="Epe-2W-KSm">
-                                    <rect key="frame" x="10" y="33" width="430" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </view>
-                            </tabViewItem>
-                        </tabViewItems>
                     </tabView>
                     <connections>
                         <outlet property="AudioTabView" destination="OOM-sY-Bo2" id="plP-6b-QM1"/>
@@ -50,39 +30,32 @@
                     </connections>
                 </tabViewController>
                 <customObject id="FKA-t3-fup" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <userDefaultsController appliesImmediately="NO" id="SgX-1v-9BM"/>
             </objects>
             <point key="canvasLocation" x="306" y="-0.5"/>
         </scene>
-        <!--PreferencesGeneral-->
+        <!--PrefsGeneral-->
         <scene sceneID="pMI-Bc-vJV">
             <objects>
-                <controllerPlaceholder storyboardIdentifier="PrefGeneral" storyboardName="PreferencesGeneral" id="tt5-rn-InE" sceneMemberID="viewController"/>
+                <controllerPlaceholder storyboardIdentifier="PrefGeneral" storyboardName="PrefsGeneral" id="tt5-rn-InE" sceneMemberID="viewController"/>
                 <customObject id="ZcD-Jk-QDn" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <userDefaultsController id="KEL-aH-dje"/>
             </objects>
             <point key="canvasLocation" x="127" y="320"/>
         </scene>
-        <!--VocoderNetwork-->
+        <!--PrefsVocoderNetwork-->
         <scene sceneID="wEV-rR-Zrr">
             <objects>
-                <controllerPlaceholder storyboardIdentifier="PrefVocoder" storyboardName="VocoderNetwork" id="gju-tv-Ehp" sceneMemberID="viewController"/>
+                <controllerPlaceholder storyboardIdentifier="PrefVocoder" storyboardName="PrefsVocoderNetwork" id="gju-tv-Ehp" sceneMemberID="viewController"/>
                 <customObject id="Vas-AG-f5v" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="495" y="320"/>
         </scene>
-        <!--PreferencesAudio-->
+        <!--PrefsAudio-->
         <scene sceneID="HCG-jD-EBH">
             <objects>
-                <controllerPlaceholder storyboardIdentifier="PrefAudio" storyboardName="PreferencesAudio" id="5bg-OS-r7z" sceneMemberID="viewController"/>
+                <controllerPlaceholder storyboardIdentifier="PrefAudio" storyboardName="PrefsAudio" id="5bg-OS-r7z" sceneMemberID="viewController"/>
                 <customObject id="VuK-NO-vr4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="306" y="320"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Chip" width="170.66667175292969" height="141.33332824707031"/>
-        <image name="Microphone" width="1024" height="1024"/>
-        <image name="NSInfo" width="32" height="32"/>
-    </resources>
 </document>

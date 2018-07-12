@@ -17,19 +17,19 @@
                             <box autoresizesSubviews="NO" borderType="line" title="My Info" translatesAutoresizingMaskIntoConstraints="NO" id="Egh-6W-SY1">
                                 <rect key="frame" x="17" y="79" width="416" height="83"/>
                                 <view key="contentView" id="wen-Ks-40b">
-                                    <rect key="frame" x="1" y="1" width="414" height="67"/>
+                                    <rect key="frame" x="3" y="3" width="410" height="65"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="In3-mF-eFZ">
-                                            <rect key="frame" x="48" y="45" width="27" height="17"/>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="In3-mF-eFZ" userLabel="Call Sign Label">
+                                            <rect key="frame" x="46" y="43" width="27" height="17"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Call" id="Z0e-RZ-RyE">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rx6-cQ-DFw">
-                                            <rect key="frame" x="81" y="42" width="61" height="24"/>
+                                        <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rx6-cQ-DFw" userLabel="Call Sign">
+                                            <rect key="frame" x="79" y="40" width="61" height="24"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="24" id="286-Fi-M8E"/>
                                                 <constraint firstAttribute="width" constant="61" id="yzP-y8-Hw6"/>
@@ -40,25 +40,20 @@
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
+                                            <connections>
+                                                <binding destination="pLX-YW-Qch" name="value" keyPath="values.myCall" id="84E-a7-Ha4"/>
+                                            </connections>
                                         </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BmD-hr-Qzf">
-                                            <rect key="frame" x="148" y="45" width="9" height="17"/>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BmD-hr-Qzf" userLabel="Stroke Label">
+                                            <rect key="frame" x="146" y="43" width="9" height="17"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="/" id="G9x-Tu-5NQ">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4wq-bQ-ClG">
-                                            <rect key="frame" x="16" y="13" width="59" height="24"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Message" id="kJe-1B-IV9">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Vyd-KN-uv6">
-                                            <rect key="frame" x="163" y="42" width="35" height="24"/>
+                                        <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Vyd-KN-uv6" userLabel="Stroke">
+                                            <rect key="frame" x="161" y="40" width="35" height="24"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="24" id="OaH-Nr-7Eb"/>
                                                 <constraint firstAttribute="width" constant="35" id="nQL-Zj-38Q"/>
@@ -75,9 +70,20 @@
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
+                                            <connections>
+                                                <binding destination="pLX-YW-Qch" name="value" keyPath="values.myCall2" id="glF-dc-BYF"/>
+                                            </connections>
                                         </textField>
-                                        <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cjh-nh-DIG">
-                                            <rect key="frame" x="81" y="14" width="315" height="22"/>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4wq-bQ-ClG" userLabel="Data Message Label">
+                                            <rect key="frame" x="14" y="11" width="59" height="24"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Message" id="kJe-1B-IV9">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cjh-nh-DIG" userLabel="Data Message">
+                                            <rect key="frame" x="79" y="12" width="315" height="22"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="22" id="EK5-lw-P3t"/>
                                             </constraints>
@@ -87,6 +93,9 @@
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
+                                            <connections>
+                                                <binding destination="pLX-YW-Qch" name="value" keyPath="values.slowDataMessage" id="24l-hl-VGL"/>
+                                            </connections>
                                         </textField>
                                     </subviews>
                                 </view>
@@ -111,11 +120,11 @@
                             <box autoresizesSubviews="NO" borderType="line" title="Transmit Key" translatesAutoresizingMaskIntoConstraints="NO" id="kG8-cF-kgG">
                                 <rect key="frame" x="17" y="16" width="416" height="59"/>
                                 <view key="contentView" id="xE0-Bo-EPC">
-                                    <rect key="frame" x="1" y="1" width="414" height="43"/>
+                                    <rect key="frame" x="3" y="3" width="410" height="41"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <customView focusRingType="none" translatesAutoresizingMaskIntoConstraints="NO" id="xt6-wQ-qOz" customClass="MASShortcutView">
-                                            <rect key="frame" x="111" y="14" width="163" height="19"/>
+                                            <rect key="frame" x="109" y="12" width="163" height="19"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="163" id="fYB-Lt-DaP"/>
                                                 <constraint firstAttribute="height" constant="19" id="owy-9J-PIZ"/>
@@ -146,6 +155,7 @@
                 </viewController>
                 <customObject id="gSa-GS-ok0" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController appliesImmediately="NO" id="eDD-IH-9g9"/>
+                <userDefaultsController representsSharedInstance="YES" id="pLX-YW-Qch"/>
             </objects>
             <point key="canvasLocation" x="694" y="326"/>
         </scene>
