@@ -22,8 +22,6 @@
     [NSDictionary dictionaryWithContentsOfURL:defaultPrefsFile];
     [[NSUserDefaults standardUserDefaults] registerDefaults:defaultPrefs];
     
-//    NSStoryboard *sb = [NSStoryboard storyboardWithName:@"VocoderNetwork" bundle:nil];
-//    self.networkConfigurationController = [sb instantiateInitialController];
 }
 
 - (void)applicationWillFinishLaunching:(NSNotification *)aNotification {

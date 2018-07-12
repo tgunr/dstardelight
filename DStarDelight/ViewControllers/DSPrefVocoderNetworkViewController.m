@@ -17,7 +17,7 @@
     self.statusImageView.image = [NSImage imageNamed:@"Grey"];
 
     DSVars.shared.DV3KProductID = self.productId.stringValue;
-    DSVars.shared.DV3KVersion = self.version.stringValue;
+    DSVars.shared.DV3KVersion = self.x`version.stringValue;
     DSVars.shared.networkDriver = nil;
     return self;
 }
@@ -58,23 +58,7 @@
     NSLog(@"Deallocate");
 }
 
-- (void)viewWillAppear {
-//    CGFloat newHeight = 29;
-//    NSArray *contents = self.view.subviews;
-//    for (NSView *aView in contents) {
-//        newHeight += aView.bounds.size.height;
-//    }
-//    CGFloat myWidth = self.view.bounds.size.width;
-//    CGFloat myHeight = self.view.bounds.size.height;
-//    NSSize oldSize = self.preferredContentSize;
-//    NSSize size = NSMakeSize(myWidth, newHeight);
-//    [self setPreferredContentSize:size];
-//    NSRect newBounds = NSMakeRect(self.view.bounds.origin.x, self.view.bounds.origin.y, 497, 283);
-//    self.view.bounds = newBounds;
-}
-
 - (void)viewDidAppear{
-//    DSPrefVocoderNetworkViewController *controller = DSVars.shared.networkConfigurationViewController;
     self.vocoderAddress.stringValue = [[NSUserDefaults standardUserDefaults] stringForKey:@"DV3KNetworkVocoderAddress"];
     self.vocoderPort.stringValue = [[NSUserDefaults standardUserDefaults] stringForKey:@"DV3KNetworkVocoderPort"];
     
