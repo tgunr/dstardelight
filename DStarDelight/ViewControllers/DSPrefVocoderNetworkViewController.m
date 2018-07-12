@@ -17,7 +17,7 @@
     self.statusImageView.image = [NSImage imageNamed:@"Grey"];
 
     DSVars.shared.DV3KProductID = self.productId.stringValue;
-    DSVars.shared.DV3KVersion = self.x`version.stringValue;
+    DSVars.shared.DV3KVersion = self.version.stringValue;
     DSVars.shared.networkDriver = nil;
     return self;
 }

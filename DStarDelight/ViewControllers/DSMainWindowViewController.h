@@ -5,7 +5,7 @@
 
 @class MASShortcut;
 
-@interface DSMainWindowViewController : NSViewController <NSTableViewDelegate, NSTableViewDataSource, NSControlTextEditingDelegate, DSEDataEngineDelegate>
+@interface DSMainWindowViewController : NSTabViewController <NSTableViewDelegate, NSTableViewDataSource, NSControlTextEditingDelegate, DSEDataEngineDelegate>
 
 @property (nonatomic, strong) IBOutlet NSArrayController *heardTableController;
 @property (nonatomic, weak) IBOutlet NSTableView *heardTableView;
@@ -17,6 +17,7 @@
 @property (nonatomic, readonly) NSMutableArray <NSMutableDictionary *> *qsoList;
 @property MASShortcut *txKeyCode;
 @property (weak) IBOutlet NSSlider *volumeSlider;
+@property (weak) IBOutlet NSPopUpButton *reflectorPopup;
 
 
 - (IBAction)doReflectorDoubleClick:(id)sender;
@@ -26,6 +27,7 @@
 - (IBAction)doTx:(id)sender;
 - (IBAction)doUnlink:(id)sender;
 - (IBAction)doVolumeChange:(id)sender;
+- (IBAction)reflectorChanged:(id)sender;
 
 @end
 

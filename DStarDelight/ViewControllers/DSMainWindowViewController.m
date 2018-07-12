@@ -324,6 +324,9 @@
     [[NSUserDefaults standardUserDefaults] setFloat:self.volumeSlider.floatValue forKey:@"outputVolume"];
 }
 
+- (IBAction)reflectorChanged:(id)sender {
+}
+
 
 -(void) addReflector:(id)sender {
     [self.addPopover showRelativeToRect:NSMakeRect(0, 0, 300, 300) ofView:sender preferredEdge:NSRectEdgeMaxY];
