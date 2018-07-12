@@ -33,7 +33,7 @@
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Your location is needed for display to others</string>
 	<key>NSMainStoryboardFile</key>
-	<string>New</string>
+	<string>Main</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>You r microphone is need for communications</string>
 	<key>NSPrincipalClass</key>
