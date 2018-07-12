@@ -1,7 +1,11 @@
 
 #import <AppKit/AppKit.h>
 
-@interface DSEAppDelegate : NSObject <NSApplicationDelegate>
+@class DSPrefVocoderNetworkViewController;
+@interface DSAppDelegate : NSObject <NSApplicationDelegate> {
+}
+
++(DSAppDelegate*)sharedAppdelegate;
 
 @end
 

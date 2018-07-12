@@ -4,7 +4,12 @@
 #import "DSAudioHandler.h"
 #import "DStarUtils.h"
 
-@implementation DSEAppDelegate
+@implementation DSAppDelegate
+
++(DSAppDelegate*)sharedAppdelegate
+{
+    return (DSAppDelegate*)[[NSApplication sharedApplication] delegate];
+}
 
 -(void) awakeFromNib {
     DSAudioHandler *audioHandler = [[DSAudioHandler alloc] init];
@@ -16,6 +21,9 @@
     NSDictionary *defaultPrefs =
     [NSDictionary dictionaryWithContentsOfURL:defaultPrefsFile];
     [[NSUserDefaults standardUserDefaults] registerDefaults:defaultPrefs];
+    
+//    NSStoryboard *sb = [NSStoryboard storyboardWithName:@"VocoderNetwork" bundle:nil];
+//    self.networkConfigurationController = [sb instantiateInitialController];
 }
 
 - (void)applicationWillFinishLaunching:(NSNotification *)aNotification {
