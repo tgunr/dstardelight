@@ -41,7 +41,7 @@ static NSMutableArray <Class> *linkDriverClasses = nil;
         id vocoderDriverString = [[NSUserDefaults standardUserDefaults] stringForKey:@"VocoderDriver"];
         Class vocoderDriver = NSClassFromString(vocoderDriverString);
         if (vocoderDriver == nil) {
-            vocoderDriver = NSClassFromString(DEFAULT_VOCODER);
+            vocoderDriver = NSClassFromString((NSString *)DEFAULT_VOCODER);
         }
         self.vocoder = [[vocoderDriver alloc] init];
         

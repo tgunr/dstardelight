@@ -20,7 +20,7 @@
 @property (nonatomic, strong) IBOutlet NSArrayController *reflectorTableController;
 @property (weak) IBOutlet WKWebView *webView;
 
-- (IBAction)doReflectorDoubleClick:(id)sender;
-- (IBAction)addReflector:(id)sender;
+//- (IBAction)doReflectorDoubleClick:(id)sender;
+//- (IBAction)addReflector:(id)sender;
 
 @end

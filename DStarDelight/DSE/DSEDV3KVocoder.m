@@ -58,6 +58,7 @@ static const struct dv3k_packet dv3k_audio = {
 
 @implementation DSEDV3KVocoder
 
+@synthesize configurationViewController;
 @synthesize network = _network;
 @synthesize audio;
 

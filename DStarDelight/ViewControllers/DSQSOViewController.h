@@ -19,10 +19,10 @@
 @property (weak) IBOutlet NSButton *connectReflector;
 
 
-- (IBAction)doHeardDoubleClick:(id)sender;
-- (IBAction)doLink:(id)sender;
+//- (IBAction)doHeardDoubleClick:(id)sender;
+//- (IBAction)doLink:(id)sender;
 - (IBAction)doTx:(id)sender;
-- (IBAction)doUnlink:(id)sender;
+//- (IBAction)doUnlink:(id)sender;
 - (IBAction)doVolumeChange:(id)sender;
 - (IBAction)reflectorChanged:(id)sender;
 - (IBAction)connectReflector:(NSButton *)sender;
