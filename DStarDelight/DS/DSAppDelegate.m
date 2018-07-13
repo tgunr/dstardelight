@@ -3,6 +3,7 @@
 #import "DSAppDelegate.h"
 #import "DSAudioHandler.h"
 #import "DStarUtils.h"
+#import "DSReflectors.h"
 
 @implementation DSAppDelegate
 
@@ -12,9 +13,10 @@
 }
 
 -(void) awakeFromNib {
-    DSAudioHandler *audioHandler = [[DSAudioHandler alloc] init];
+    DSAudioHandler *audioHandler = [DSAudioHandler new];
     [[DSVars shared] setAudioHandler:audioHandler];
 
+    self.reflectors = [DSReflectors new];
     
     NSURL *defaultPrefsFile = [[NSBundle mainBundle]
                                URLForResource:@"DefaultPreferences" withExtension:@"plist"];
@@ -70,6 +72,10 @@
         
         [engine.vocoder start];
     });
+}
+
+- (void)applicationDidFinishLaunching:(NSNotification *)notification {
+    [self.reflectors updateReflectors];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {

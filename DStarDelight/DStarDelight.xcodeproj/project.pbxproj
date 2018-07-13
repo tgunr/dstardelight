@@ -30,6 +30,7 @@
 		75476C5020F7E62E003A11F1 /* QSOCQ.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75476C4F20F7E62E003A11F1 /* QSOCQ.storyboard */; };
 		75476C5220F7E650003A11F1 /* QSOReflectors.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75476C5120F7E650003A11F1 /* QSOReflectors.storyboard */; };
 		75476C5420F7E82B003A11F1 /* QSOSettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75476C5320F7E82B003A11F1 /* QSOSettings.storyboard */; };
+		75476C5720F901DE003A11F1 /* DSReflectors.m in Sources */ = {isa = PBXBuildFile; fileRef = 75476C5620F901DE003A11F1 /* DSReflectors.m */; };
 		754A461B20EC6DDE003A11F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945C9C20EC62F2003A11F1 /* main.m */; };
 		754A461C20EC6E4B003A11F1 /* MASDictionaryTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945C9F20EC62F2003A11F1 /* MASDictionaryTransformer.m */; };
 		754A461D20EC6E65003A11F1 /* MASShortcut.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945CA220EC62F2003A11F1 /* MASShortcut.m */; };
@@ -105,6 +106,8 @@
 		75476C4F20F7E62E003A11F1 /* QSOCQ.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QSOCQ.storyboard; sourceTree = "<group>"; };
 		75476C5120F7E650003A11F1 /* QSOReflectors.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QSOReflectors.storyboard; sourceTree = "<group>"; };
 		75476C5320F7E82B003A11F1 /* QSOSettings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QSOSettings.storyboard; sourceTree = "<group>"; };
+		75476C5520F901DE003A11F1 /* DSReflectors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSReflectors.h; sourceTree = "<group>"; };
+		75476C5620F901DE003A11F1 /* DSReflectors.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSReflectors.m; sourceTree = "<group>"; };
 		754A462020ECC1BB003A11F1 /* DSDV3KNetworkVocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDV3KNetworkVocoder.h; sourceTree = "<group>"; };
 		754A462120ECC1BB003A11F1 /* DSDV3KNetworkVocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDV3KNetworkVocoder.m; sourceTree = "<group>"; };
 		756A408D20EC607B003A11F1 /* DSEDataEngineDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEDataEngineDelegate.h; sourceTree = "<group>"; };
@@ -319,8 +322,8 @@
 				7525480B20E6FDD5003A11F1 /* DSAudioHandler.m */,
 				75E0881A20E3177F003A11F1 /* DSCallFormatter.h */,
 				75E0881B20E3177F003A11F1 /* DSCallFormatter.m */,
-				758B49D320E41F0D003A11F1 /* DSDestinationCallFormatter.m */,
 				758B49D220E41F0C003A11F1 /* DSDestinationCallFormatter.h */,
+				758B49D320E41F0D003A11F1 /* DSDestinationCallFormatter.m */,
 				75E0883020E3177F003A11F1 /* DSMessageFormatter.h */,
 				75E0883120E3177F003A11F1 /* DSMessageFormatter.m */,
 				75945C8D20EC62F2003A11F1 /* DSCallFormatter.h */,
@@ -331,6 +334,8 @@
 				75945C9820EC62F2003A11F1 /* DSMessageFormatter.m */,
 				75945C9C20EC62F2003A11F1 /* main.m */,
 				75945C9D20EC62F2003A11F1 /* MASShortcut */,
+				75476C5520F901DE003A11F1 /* DSReflectors.h */,
+				75476C5620F901DE003A11F1 /* DSReflectors.m */,
 			);
 			path = DS;
 			sourceTree = "<group>";
@@ -565,6 +570,7 @@
 				756A40CE20EC60D8003A11F1 /* DSEDExtraLink.m in Sources */,
 				756A40C620EC60D8003A11F1 /* DSEDPlusAuthenticator.m in Sources */,
 				756A40A620EC60B7003A11F1 /* DSDV3KSerialVocoder.m in Sources */,
+				75476C5720F901DE003A11F1 /* DSReflectors.m in Sources */,
 				752F94D820ECEACA003A11F1 /* DSMapPopupController.m in Sources */,
 				756A40CD20EC60D8003A11F1 /* DSEDCSLink.m in Sources */,
 				752F94DD20ECEB05003A11F1 /* DSPrefAudioViewController.m in Sources */,

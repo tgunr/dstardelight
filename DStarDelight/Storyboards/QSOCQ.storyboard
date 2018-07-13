@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="SSE-PL-FSr">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14295.6"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -87,7 +88,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <clipView key="contentView" focusRingType="none" ambiguous="YES" id="dgd-Iy-n0e">
                                     <rect key="frame" x="1" y="0.0" width="844" height="232"/>
-                                    <autoresizingMask key="autoresizingMask"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="63" rowSizeStyle="automatic" headerView="GXp-eb-WN2" viewBased="YES" id="QBK-EF-Ocj">
                                             <rect key="frame" x="0.0" y="0.0" width="844" height="207"/>
@@ -414,9 +415,21 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iIH-Ot-5dN">
+                                <rect key="frame" x="583" y="260" width="91" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="recessed" title="Connect" bezelStyle="recessed" alignment="right" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="PBa-Qz-gnW">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                    <font key="font" metaFont="systemBold" size="12"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="connectReflector:" target="SSE-PL-FSr" id="9br-nY-P1P"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="connectReflector" destination="iIH-Ot-5dN" id="07J-Jg-Mcx"/>
                         <outlet property="heardTableController" destination="uew-ju-c1o" id="xTd-YJ-yUf"/>
                         <outlet property="heardTableView" destination="QBK-EF-Ocj" id="9lM-DJ-Kt7"/>
                         <outlet property="reflectorPopup" destination="SBV-gd-8SH" id="EF8-Cx-zZx"/>

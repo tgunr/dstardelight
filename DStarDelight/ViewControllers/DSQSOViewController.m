@@ -153,6 +153,31 @@
     }];
 }
 
+- (void)destinationDidConnect:(NSString *)destination {
+    
+}
+
+
+- (void)destinationDidError:(NSString *)destination error:(NSError *)error {
+    
+}
+
+
+- (void)destinationDidLink:(NSString *)destination {
+    
+}
+
+
+- (void)destinationDidUnlink:(NSString *)destination {
+    
+}
+
+
+- (void)destinationWillLink:(NSString *)destination {
+    
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -165,7 +190,7 @@
     
     self.addPopover = [[NSPopover alloc] init];
     DSAddPopupController *addController = [[DSAddPopupController alloc] initWithNibName:nil bundle:nil];
-    addController.reflectorArrayController = self.reflectorTableController;
+    //    addController.reflectorArrayController = self.reflectorTableController;
     self.addPopover.contentViewController = addController;
     self.addPopover.behavior = NSPopoverBehaviorSemitransient;
     self.addPopover.delegate = addController;
@@ -176,9 +201,6 @@
     self.view.window.initialFirstResponder = self.view;
     
     [DSEDataEngine sharedInstance].delegate = self;
-    
-    [self.reflectorTableView registerForDraggedTypes:@[ @"net.polymicro.Dummy.reflector" ]];
-    self.reflectorTableView.dataSource = self;
     
     self.heardTableView.delegate = self;
     self.heardTableController.sortDescriptors = @[ [[NSSortDescriptor alloc] initWithKey:@"time" ascending:NO] ];
@@ -196,127 +218,122 @@
     self.volumeSlider.floatValue = [[NSUserDefaults standardUserDefaults] floatForKey:@"outputVolume"];
 }
 
--(void)destinationDidLink:(NSString *)destination {
-    self.repeaterInfo.stringValue = [NSString stringWithFormat:@"Linked to %@", destination];
+//-(void)destinationDidLink:(NSString *)destination {
+//    self.repeaterInfo.stringValue = [NSString stringWithFormat:@"Linked to %@", destination];
+//
+//    if([[NSUserDefaults standardUserDefaults] boolForKey:@"voiceAnnounceOnStatusChange"])
+//        [self.speechSynth startSpeakingString:[[NSString stringWithFormat:@"Linked to [[char LTRL]] %@ [[char NORM]]", destination] lowercaseString]];
+//
+//    NSDockTile *dockTile = [NSApplication sharedApplication].dockTile;
+//    dockTile.badgeLabel = destination;
+//    [dockTile display];
+//
+//    self.txButton.enabled = YES;
+//
+//}
+//
+//-(void)destinationDidUnlink:(NSString *)destination {
+//    self.repeaterInfo.stringValue = @"Unlinked";
+//
+//    if([[NSUserDefaults standardUserDefaults] boolForKey:@"voiceAnnounceOnStatusChange"])
+//        [self.speechSynth startSpeakingString:self.repeaterInfo.stringValue];
+//
+//    NSDockTile *dockTile = [NSApplication sharedApplication].dockTile;
+//    dockTile.badgeLabel = nil;
+//    [dockTile display];
+//
+//    self.txButton.enabled = NO;
 
-    if([[NSUserDefaults standardUserDefaults] boolForKey:@"voiceAnnounceOnStatusChange"])
-        [self.speechSynth startSpeakingString:[[NSString stringWithFormat:@"Linked to [[char LTRL]] %@ [[char NORM]]", destination] lowercaseString]];
-    
-    NSDockTile *dockTile = [NSApplication sharedApplication].dockTile;
-    dockTile.badgeLabel = destination;
-    [dockTile display];
-    
-    self.txButton.enabled = YES;
-    
-    [self.reflectorTableView enumerateAvailableRowViewsUsingBlock:^void(NSTableRowView *rowView, NSInteger row) {
-        NSTextField *reflectorView = ((NSTableCellView *)[rowView viewAtColumn:0]).textField;
-        if([reflectorView.objectValue isEqualToString:destination])
-            reflectorView.textColor = [NSColor redColor];
-    }];
-}
+//    [self.reflectorTableView enumerateAvailableRowViewsUsingBlock:^void(NSTableRowView *rowView, NSInteger row) {
+//        NSTextField *reflectorsView = ((NSTableCellView *)[rowView viewAtColumn:0]).textField;
+//        if([reflectorsView.objectValue isEqualToString:destination])
+//            reflectorsView.textColor = [NSColor blackColor];
+//    }];
+//}
 
--(void)destinationDidUnlink:(NSString *)destination {
-    self.repeaterInfo.stringValue = @"Unlinked";
-    
-    if([[NSUserDefaults standardUserDefaults] boolForKey:@"voiceAnnounceOnStatusChange"])
-        [self.speechSynth startSpeakingString:self.repeaterInfo.stringValue];
-    
-    NSDockTile *dockTile = [NSApplication sharedApplication].dockTile;
-    dockTile.badgeLabel = nil;
-    [dockTile display];
-    
-    self.txButton.enabled = NO;
-    
-    [self.reflectorTableView enumerateAvailableRowViewsUsingBlock:^void(NSTableRowView *rowView, NSInteger row) {
-        NSTextField *reflectorView = ((NSTableCellView *)[rowView viewAtColumn:0]).textField;
-        if([reflectorView.objectValue isEqualToString:destination])
-            reflectorView.textColor = [NSColor blackColor];
-    }];
-}
+//-(void)destinationDidError:(NSString *)destination error:(NSError *)error {
+//    NSAlert *alert = [NSAlert alertWithError:error];
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        [alert beginSheetModalForWindow:self.view.window completionHandler:^(NSModalResponse response){}];
+//    });
+//}
+//
+//-(void)destinationWillLink:(NSString *)destination {
+//    self.repeaterInfo.stringValue = [NSString stringWithFormat:@"Linking to %@", destination];
+//}
+//-(void)destinationDidConnect:(NSString *)destination {
+//    self.repeaterInfo.stringValue = [NSString stringWithFormat:@"Connected to %@. Attempting to establish link.", destination];
+//}
+//
+//
+//- (IBAction)doHeardDoubleClick:(id)sender {
+//    NSLog(@"Got double click, row %ld column %ld", self.heardTableView.clickedRow, self.heardTableView.clickedColumn);
+//    if(self.heardTableView.clickedRow < 0)
+//        return;
+//
+//    NSDictionary *qso = self.heardTableController.arrangedObjects[self.heardTableView.clickedRow];
+//
+//    if(qso[@"location"]) {
+//        DSEAprsLocation *location = qso[@"location"];
+//        if(!location.callsign)
+//            location.callsign = qso[@"myCall"];
+//
+//        ((DSMapPopupController *)self.mapPopover.contentViewController).annotation = qso[@"location"];
+//        ((DSMapPopupController *)self.mapPopover.contentViewController).qsoId = qso[@"streamId"];
+//        NSView *clickedView = [self.heardTableView viewAtColumn:[self.heardTableView columnWithIdentifier:@"Location"] row:self.heardTableView.clickedRow makeIfNecessary:NO];
+//        [self.mapPopover showRelativeToRect:NSMakeRect(0, 0, 300, 300) ofView:clickedView preferredEdge:NSRectEdgeMaxY];
+//    }
+//}
 
--(void)destinationDidError:(NSString *)destination error:(NSError *)error {
-    NSAlert *alert = [NSAlert alertWithError:error];
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [alert beginSheetModalForWindow:self.view.window completionHandler:^(NSModalResponse response){}];
-    });
-}
+//-(IBAction)doReflectorDoubleClick:(id)sender {
+//    if(self.reflectorTableController.selectedObjects.count != 1) {
+//        NSBeep();
+//        return;
+//    }
+//
+//    NSString *reflector = self.reflectorTableController.selectedObjects[0][@"reflector"];
+//
+//    if(reflector.length < 8)
+//        return;
+//
+//    if([reflector isEqualToString:[DSEDataEngine sharedInstance].network.linkTarget]) {
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+//            [[DSEDataEngine sharedInstance] unlink];
+//        });
+//    } else {
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+//            [[DSEDataEngine sharedInstance] linkTo:reflector];
+//        });
+//    }
+//
+//    [self.reflectorTableView deselectAll:self];
+//}
 
--(void)destinationWillLink:(NSString *)destination {
-    self.repeaterInfo.stringValue = [NSString stringWithFormat:@"Linking to %@", destination];
-}
--(void)destinationDidConnect:(NSString *)destination {
-    self.repeaterInfo.stringValue = [NSString stringWithFormat:@"Connected to %@. Attempting to establish link.", destination];
-}
+//- (IBAction)doLink:(id)sender {
+//    if(self.reflectorTableController.selectedObjects.count != 1) {
+//        NSBeep();
+//        return;
+//    }
+//
+//    NSString *reflector = self.reflectorTableController.selectedObjects[0][@"reflector"];
+//
+//    if(reflector.length < 8)
+//        return;
+//
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+//        [[DSEDataEngine sharedInstance] linkTo:reflector];
+//    });
+//
+//    [self.reflectorTableView deselectAll:self];
+//}
 
-
-- (IBAction)doHeardDoubleClick:(id)sender {
-    NSLog(@"Got double click, row %ld column %ld", self.heardTableView.clickedRow, self.heardTableView.clickedColumn);
-    if(self.heardTableView.clickedRow < 0)
-        return;
-    
-    NSDictionary *qso = self.heardTableController.arrangedObjects[self.heardTableView.clickedRow];
-    
-    if(qso[@"location"]) {
-        DSEAprsLocation *location = qso[@"location"];
-        if(!location.callsign)
-            location.callsign = qso[@"myCall"];
-
-        ((DSMapPopupController *)self.mapPopover.contentViewController).annotation = qso[@"location"];
-        ((DSMapPopupController *)self.mapPopover.contentViewController).qsoId = qso[@"streamId"];
-        NSView *clickedView = [self.heardTableView viewAtColumn:[self.heardTableView columnWithIdentifier:@"Location"] row:self.heardTableView.clickedRow makeIfNecessary:NO];
-        [self.mapPopover showRelativeToRect:NSMakeRect(0, 0, 300, 300) ofView:clickedView preferredEdge:NSRectEdgeMaxY];
-    }
-}
-
--(IBAction)doReflectorDoubleClick:(id)sender {
-    if(self.reflectorTableController.selectedObjects.count != 1) {
-        NSBeep();
-        return;
-    }
-    
-    NSString *reflector = self.reflectorTableController.selectedObjects[0][@"reflector"];
-    
-    if(reflector.length < 8)
-        return;
-
-    if([reflector isEqualToString:[DSEDataEngine sharedInstance].network.linkTarget]) {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-            [[DSEDataEngine sharedInstance] unlink];
-        });
-    } else {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-            [[DSEDataEngine sharedInstance] linkTo:reflector];
-        });
-    }
-    
-    [self.reflectorTableView deselectAll:self];
-}
-
-- (IBAction)doLink:(id)sender {
-    if(self.reflectorTableController.selectedObjects.count != 1) {
-        NSBeep();
-        return;
-    }
-
-    NSString *reflector = self.reflectorTableController.selectedObjects[0][@"reflector"];
-    
-    if(reflector.length < 8)
-        return;
-    
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-        [[DSEDataEngine sharedInstance] linkTo:reflector];
-    });
-    
-    [self.reflectorTableView deselectAll:self];
-}
-
-- (IBAction)doUnlink:(id)sender {
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-        [[DSEDataEngine sharedInstance] unlink];
-    });
-    
-    [self.reflectorTableView deselectAll:self];
-}
+//- (IBAction)doUnlink:(id)sender {
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+//        [[DSEDataEngine sharedInstance] unlink];
+//    });
+//
+//    [self.reflectorTableView deselectAll:self];
+//}
 
 - (IBAction)doVolumeChange:(id)sender {
     DSAudioHandler *engineaudio = (DSAudioHandler *)[DSEDataEngine sharedInstance].audio;
@@ -325,6 +342,19 @@
 }
 
 - (IBAction)reflectorChanged:(id)sender {
+}
+
+- (IBAction)connectReflector:(NSButton *)sender {
+    switch (sender.state) {
+        case NSOnState:
+            sender.title = @"Disconnect";
+            break;
+        case NSOffState:
+            sender.title = @"Connect";
+            break;
+        default:
+            break;
+    }
 }
 
 
@@ -348,7 +378,7 @@
     self.statusLED.image = [NSImage imageNamed:@"Grey"];
 }
 
-- (IBAction)doTx:(id)sender {    
+- (IBAction)doTx:(id)sender {
     if(self.txButton.state == self.txButtonState)
         [self startTx];
     else
@@ -368,64 +398,24 @@
     return YES;
 }
 
-
-#pragma mark - Reflector Drag and Drop support
-
-- (id <NSPasteboardWriting>) tableView:(NSTableView *)tableView pasteboardWriterForRow:(NSInteger)row {
-    if(tableView != self.reflectorTableView)
-        return nil;
-
-    NSDictionary *reflector = self.reflectorTableController.arrangedObjects[row];
-    
-    NSPasteboardItem *item = [[NSPasteboardItem alloc] init];
-    [item setPropertyList:reflector forType:@"net.polymicro.Dummy.reflector"];
-    
-    return item;
-}
-
--(NSDragOperation) tableView:(NSTableView *)tableView validateDrop:(id<NSDraggingInfo>)info proposedRow:(NSInteger)row proposedDropOperation:(NSTableViewDropOperation)dropOperation {
-    if(tableView != self.reflectorTableView)
-        return NO;
-
-    [tableView setDropRow:row dropOperation:NSTableViewDropAbove];
-    return NSDragOperationMove;
-}
-
--(BOOL)tableView:(NSTableView *)tableView acceptDrop:(id<NSDraggingInfo>)info row:(NSInteger)row dropOperation:(NSTableViewDropOperation)dropOperation {
-    NSDictionary *reflector = [info.draggingPasteboard propertyListForType:@"net.polymicro.Dummy.reflector"];
-    
-    if(tableView != self.reflectorTableView)
-        return NO;
-    
-    NSInteger oldIndex = [self.reflectorTableController.arrangedObjects indexOfObject:reflector];
-    
-    [self.reflectorTableController removeObject:reflector];
-    if(row < oldIndex)
-        [self.reflectorTableController insertObject:reflector atArrangedObjectIndex:row];
-    else
-        [self.reflectorTableController insertObject:reflector atArrangedObjectIndex:row - 1];
-    
-    return YES;
-}
-
 #pragma mark - Reflector cell validation
 
--(BOOL)control:(NSControl *)control didFailToFormatString:(NSString *)string errorDescription:(NSString *)error {
-    if(control != self.reflectorTableView) {
-        NSLog(@"Control is not reflector list");
-        return NO;
-    }
-    NSLog(@"Reflector string is invalid: %@", string);
-    
-    [self.reflectorTableController remove:string];
-    
-    NSAlert *alert = [[NSAlert alloc] init];
-    alert.messageText = error;
-    [alert beginSheetModalForWindow:self.view.window completionHandler:^(NSModalResponse response){ }];
-    
-    return YES;
-}
-
+//-(BOOL)control:(NSControl *)control didFailToFormatString:(NSString *)string errorDescription:(NSString *)error {
+//    if(control != self.reflectorTableView) {
+//        NSLog(@"Control is not reflector list");
+//        return NO;
+//    }
+//    NSLog(@"Reflector string is invalid: %@", string);
+//
+//    [self.reflectorTableController remove:string];
+//
+//    NSAlert *alert = [[NSAlert alloc] init];
+//    alert.messageText = error;
+//    [alert beginSheetModalForWindow:self.view.window completionHandler:^(NSModalResponse response){ }];
+//
+//    return YES;
+//}
+//
 #pragma mark - Heard List QSO Coloring
 
 -(void)resetColorForRowView:(NSTableRowView *)rowView atRow:(NSUInteger)row {
@@ -436,7 +426,7 @@
 -(void)tableView:(NSTableView *)tableView didAddRowView:(NSTableRowView *)rowView forRow:(NSInteger)row {
     if(tableView != self.heardTableView)
         return;
-
+    
     [self resetColorForRowView:rowView atRow:row];
     
     if(self.mapPopover.isShown) {
@@ -449,7 +439,7 @@
             [self.mapPopover showRelativeToRect:NSMakeRect(0, 0, 300, 300) ofView:popoverAnchorView preferredEdge:NSRectEdgeMaxY];
             ((DSMapPopupController *)self.mapPopover.contentViewController).suppressClose = NO;
         }
-
+        
     }
 }
 
@@ -475,4 +465,12 @@
         if(!theEvent.isARepeat)
             [self endTx];
 }
+- (BOOL)commitEditingAndReturnError:(NSError * _Nullable __autoreleasing * _Nullable)error {
+    return false;
+}
+
+- (void)encodeWithCoder:(nonnull NSCoder *)aCoder {
+    
+}
+
 @end
