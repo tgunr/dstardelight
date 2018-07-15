@@ -33,11 +33,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     override func awakeFromNib() {
         let audioHandler = DSAudioHandler()
         DSVars.shared().audioHandler = audioHandler
-        let defaultPrefsFile: URL? = Bundle.main.url(forResource: "DefaultPreferences", withExtension: "plist")
-        var defaultPrefs: [AnyHashable : Any]? = nil
-        let aFile = defaultPrefsFile
-        defaultPrefs = NSDictionary(contentsOfFile:  (aFile?.absoluteString)!) as? [AnyHashable : Any]
 
+        let path = Bundle.main.path(forResource: "DefaultPreferences", ofType: "plist")
+        let defaultPrefs: NSDictionary? = NSDictionary(contentsOfFile: path!)
         if let aPrefs = defaultPrefs {
             UserDefaults.standard.register(defaults: aPrefs as! [String : Any])
         }
