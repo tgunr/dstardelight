@@ -8,7 +8,6 @@
 #import "DSELinkDriverProtocol.h"
 #import "DStarUtils.h"
 #import "DSAudioHandler.h"
-#import "DSEDV3KNetworkVocoder.h"
 
 static NSMutableArray *vocoderDrivers = nil;
 static NSMutableArray <Class> *linkDriverClasses = nil;
