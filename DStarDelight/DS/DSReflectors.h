@@ -20,11 +20,12 @@ extern const NSString *SOURCE_HEADER;
 // Dictionary of reflector
 @property NSMutableArray *reflectors;
 
-- (void)createDefaultFile:(NSURL *)url;
-
 - (DSReflectors *)init;
-- (void)loadReflectors;
+
+void checkIfOutdated();
 - (void)updateReflectors;
+
+- (void)checkForOutDated;
 @end
 
 NS_ASSUME_NONNULL_END

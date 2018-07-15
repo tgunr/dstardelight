@@ -12,17 +12,9 @@
 
 @implementation DSReflectors
 
-const NSString *masterGatewaysListURL = @"https://ar-dns.net/gateways";
 const NSString *SOURCE_HEADER = @"# Prepared at ar-dns.net - ";
-const NSString *kCurrentSettingsFilename = @"Hamster/Reflectors";
-
-- (void)createDefaultFile:(NSURL *)url {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self loadReflectors];
-        [self writeToFile:[url absoluteString] atomically:YES];
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"reflectorsAreReady" object:self];
-    });
-}
+const NSString *HAMSTER_APPSUPPORT = @"Hamster";
+const NSString *HAMSTER_REFLECTORS = @"Hamster/Reflectors.plist";
 
 - (DSReflectors *)init {
     self = [super init];
@@ -30,31 +22,50 @@ const NSString *kCurrentSettingsFilename = @"Hamster/Reflectors";
         _reflectorSources = [NSMutableArray arrayWithCapacity:5];
         _reflectors = [NSMutableArray arrayWithCapacity:0];
 
-        NSFileManager *fileManager = [[NSFileManager alloc] init];
-        NSError *err = nil;
+        NSError *error = nil;
+        BOOL result = false;
 
+        NSFileManager *fileManager = [[NSFileManager alloc] init];
+        // Saved appReflectors are in the Application Support folder
         NSURL *dir = [fileManager URLForDirectory:NSApplicationSupportDirectory
                                          inDomain:NSUserDomainMask
                                 appropriateForURL:nil
                                            create:YES
-                                            error:&err];
-        if (err) {
-            NSLog(@"error finding app support directory %@", err);
+                                            error:&error];
+        if (error) {
+            NSLog(@"Error finding app support directory %@", error);
         }
-
+        // folder = reference to Application Support
         NSURL *folder = [[NSURL alloc] initFileURLWithPath:[dir path] isDirectory:YES];
-        NSURL *currentSettingsURL = [NSURL URLWithString:(NSString *) kCurrentSettingsFilename relativeToURL:folder];
+        NSURL *appSupportFolderURL = [NSURL URLWithString:HAMSTER_APPSUPPORT relativeToURL:folder];
+        NSURL *hamsterReflectorsURL = [NSURL URLWithString:(NSString *) HAMSTER_REFLECTORS relativeToURL:folder];
+        result = [[NSFileManager defaultManager] createDirectoryAtURL:appSupportFolderURL withIntermediateDirectories:NO attributes:nil error:&error];
 
-        if (![fileManager fileExistsAtPath:[currentSettingsURL absoluteString]])
-            [self createDefaultFile:currentSettingsURL];
-        NSString *savePath = [[currentSettingsURL baseURL] absoluteString];
-        NSArray *files = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:savePath error:&err];
-        NSLog(@"files %@", files);
+        if (result != 0) {
+            NSLog(@"Could not create Application Support folder for Hamster");
+            return self;
+        }
+        // See if we have a saved list
+        DSReflectors *savedReflectors = [DSReflectors objectWithContentsOfFile: [hamsterReflectorsURL path]];
 
+        if (!savedReflectors) { // no list, so create one and save it
+            // Do this async as it takes a few seconds to gather the data
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self loadReflectors];
+                    [self writeToFile:[hamsterReflectorsURL path] atomically:YES];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:@"reflectorsAreReady" object:self];
+            });
+        } else {
+            [savedReflectors checkForOutDated];
+            self = savedReflectors;
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"reflectorsAreReady" object:savedReflectors];
+        }
     }
     return self;
 }
 
+// checkOutOfDate looks for the default list of sources in the preferences
+// then pings them to see if alive. If alive, the source is added to the list for sources.
 - (void)loadReflectors {
     NSArray *reflectorSourceDefaults = [[NSUserDefaults standardUserDefaults] objectForKey:@"reflectorSources"];
     for (NSString *theSource in reflectorSourceDefaults) {
@@ -64,11 +75,14 @@ const NSString *kCurrentSettingsFilename = @"Hamster/Reflectors";
             [self.reflectorSources addObject:reflectorSource];
         }
     }
-//    NSUInteger c = _reflectorSources.count;
+    [self checkForOutDated];
+}
+
+- (void)checkForOutDated {
     NSDate *reflectorsUpdated = [[NSUserDefaults standardUserDefaults] objectForKey:@"reflectorsUpdated"];
     NSDate *today = [NSDate date];
     NSTimeInterval since = fabs([reflectorsUpdated timeIntervalSinceNow]);
-    if (since < (24 * 60 * 60)) {
+    if (since > (24 * 60 * 60)) {
             [self updateReflectors];
             [[NSUserDefaults standardUserDefaults] setObject:today forKey:@"reflectorsUpdated"];
     }

@@ -10,7 +10,7 @@ import AppKit
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-    var reflectors: DSReflectors?
+    var appReflectors: DSReflectors?
     
     let shared = NSApplication.shared.delegate
     
@@ -40,10 +40,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             UserDefaults.standard.register(defaults: aPrefs as! [String : Any])
         }
         NotificationCenter.default.addObserver(self, selector: #selector(self.reflectorsAreReady(_:)), name: NSNotification.Name("reflectorsAreReady"), object: nil)
-        reflectors = DSReflectors()
+        appReflectors = DSReflectors()
+        print("Reflectors: %@", appReflectors?.reflectors.count)
     }
     
     @objc func reflectorsAreReady(_ notification: Notification?) {
+        if appReflectors == nil {
+            let reflectors: DSReflectors = notification?.object as! DSReflectors
+            appReflectors = reflectors
+        }
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name("reflectorsAreReady"), object: nil)
     }
     
@@ -100,7 +105,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     func applicationDidFinishLaunching(_ notification: Notification) {
-        UserDefaults.standard.set(reflectors, forKey: "reflectors")
+        UserDefaults.standard.set(appReflectors, forKey: "appReflectors")
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
