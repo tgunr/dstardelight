@@ -8,7 +8,8 @@
 
 import AppKit
 
-class DSAppDelegate <NSApplicationDelegate> {
+@NSApplicationMain
+class AppDelegate: NSObject, NSApplicationDelegate {
     var reflectors: DSReflectors?
     
     let shared = NSApplication.shared.delegate
@@ -29,7 +30,7 @@ class DSAppDelegate <NSApplicationDelegate> {
         }
     }
     
-    func awakeFromNib() {
+    override func awakeFromNib() {
         let audioHandler = DSAudioHandler()
         DSVars.shared().audioHandler = audioHandler
         let defaultPrefsFile: URL? = Bundle.main.url(forResource: "DefaultPreferences", withExtension: "plist")

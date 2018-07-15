@@ -35,13 +35,12 @@
 		75476C5220F7E650003A11F1 /* QSOReflectors.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75476C5120F7E650003A11F1 /* QSOReflectors.storyboard */; };
 		75476C5420F7E82B003A11F1 /* QSOSettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75476C5320F7E82B003A11F1 /* QSOSettings.storyboard */; };
 		75476C5720F901DE003A11F1 /* DSReflectors.m in Sources */ = {isa = PBXBuildFile; fileRef = 75476C5620F901DE003A11F1 /* DSReflectors.m */; };
-		754A461B20EC6DDE003A11F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945C9C20EC62F2003A11F1 /* main.m */; };
 		754A461C20EC6E4B003A11F1 /* MASDictionaryTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945C9F20EC62F2003A11F1 /* MASDictionaryTransformer.m */; };
 		754A461D20EC6E65003A11F1 /* MASShortcut.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945CA220EC62F2003A11F1 /* MASShortcut.m */; };
 		754A461E20EC6E65003A11F1 /* MASShortcutValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945CA420EC62F2003A11F1 /* MASShortcutValidator.m */; };
 		754A461F20EC6E65003A11F1 /* MASShortcutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945CA620EC62F2003A11F1 /* MASShortcutView.m */; };
 		754A462220ECC1BB003A11F1 /* DSDV3KNetworkVocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 754A462120ECC1BB003A11F1 /* DSDV3KNetworkVocoder.m */; };
-		755A2EAE20FBCB30003A11F1 /* DSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0881320E3177F003A11F1 /* DSAppDelegate.m */; };
+		755A2EAF20FBCD1D003A11F1 /* HAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755A2EAA20FB7974003A11F1 /* HAppDelegate.swift */; };
 		756A40A120EC60B7003A11F1 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 756A409120EC60B6003A11F1 /* README.markdown */; };
 		756A40A220EC60B7003A11F1 /* TPCircularBuffer+AudioBufferList.c in Sources */ = {isa = PBXBuildFile; fileRef = 756A409220EC60B6003A11F1 /* TPCircularBuffer+AudioBufferList.c */; };
 		756A40A320EC60B7003A11F1 /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 756A409420EC60B6003A11F1 /* TPCircularBuffer.c */; };
@@ -659,7 +658,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				755A2EAE20FBCB30003A11F1 /* DSAppDelegate.m in Sources */,
+				755A2EAF20FBCD1D003A11F1 /* HAppDelegate.swift in Sources */,
 				75E0886420E3177F003A11F1 /* DSCallFormatter.m in Sources */,
 				758B49D420E41F0D003A11F1 /* DSDestinationCallFormatter.m in Sources */,
 				75E0886E20E3177F003A11F1 /* DSMessageFormatter.m in Sources */,
@@ -700,7 +699,6 @@
 				756A40A220EC60B7003A11F1 /* TPCircularBuffer+AudioBufferList.c in Sources */,
 				5AF0DCCFE53D78E395758293 /* DSReflectorSource.m in Sources */,
 				5AF0D5FDEB456747948CA079 /* DSReflector.m in Sources */,
-				754A461B20EC6DDE003A11F1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -867,7 +865,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.polymicro.DStarDelight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "DStarDelight-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Sources/HAM/DStarDelight/DStarDelight/DStarDelight-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 			};
@@ -895,7 +893,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.polymicro.DStarDelight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "DStarDelight-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Sources/HAM/DStarDelight/DStarDelight/DStarDelight-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
@@ -904,6 +902,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 148C821C9B0F5A50DA0131CA /* Pods-DStarDelightUITests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = NL3267E99V;
@@ -923,6 +922,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 055B2231BFAA1ABB9458C344 /* Pods-DStarDelightUITests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = NL3267E99V;

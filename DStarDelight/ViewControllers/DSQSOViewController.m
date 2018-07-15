@@ -2,7 +2,6 @@
 
 #import "DSQSOViewController.h"
 
-//#import "DSAppDelegate.h"
 #import "MASShortcut.h"
 #import "MASDictionaryTransformer.h"
 #import "DSESlowDataCoder.h"
