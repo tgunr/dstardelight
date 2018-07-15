@@ -5,5 +5,11 @@
 
 #import <Foundation/Foundation.h>
 
+// References a reflector
+@interface DSReflector : NSObject
 
-@interface DSReflector : NSObject @end
+@property NSString *name;
+@property NSString *ip;
+@property BOOL active;
+
+@end

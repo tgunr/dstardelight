@@ -4,6 +4,11 @@
 #import "DSAudioHandler.h"
 #import "DStarUtils.h"
 #import "DSReflectors.h"
+#import <AutoCoding/AutoCoding.h>
+
+@interface DSAppDelegate ()
+- (void)reflectorsAreReady:(NSNotification *)notification;
+@end
 
 @implementation DSAppDelegate
 
@@ -16,14 +21,19 @@
     DSAudioHandler *audioHandler = [DSAudioHandler new];
     [[DSVars shared] setAudioHandler:audioHandler];
 
-    self.reflectors = [DSReflectors new];
-    
     NSURL *defaultPrefsFile = [[NSBundle mainBundle]
                                URLForResource:@"DefaultPreferences" withExtension:@"plist"];
     NSDictionary *defaultPrefs =
     [NSDictionary dictionaryWithContentsOfURL:defaultPrefsFile];
     [[NSUserDefaults standardUserDefaults] registerDefaults:defaultPrefs];
-    
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reflectorsAreReady:) name:@"reflectorsAreReady" object:nil];
+    self.reflectors = [DSReflectors new];
+}
+
+- (void)reflectorsAreReady: (NSNotification *)notification {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"reflectorsAreReady" object:nil];
+
 }
 
 - (void)applicationWillFinishLaunching:(NSNotification *)aNotification {
@@ -75,7 +85,7 @@
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notification {
-    [self.reflectors updateReflectors];
+    [[NSUserDefaults standardUserDefaults] setObject:_reflectors forKey:@"reflectors"];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
