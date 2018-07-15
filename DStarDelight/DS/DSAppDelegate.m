@@ -47,7 +47,7 @@
     } else {
         for(NSDictionary *entry in [DSAudioHandler enumerateInputDevices])
             if([entry[@"uid"] isEqualToString:inputUid])
-                engine.audio.inputDevice = ((NSNumber *)entry[@"id"]).intValue;
+                engine.audio.inputDevice = (AudioDeviceID) ((NSNumber *)entry[@"id"]).intValue;
      }
     
     NSString *outputUid = [[NSUserDefaults standardUserDefaults] stringForKey:@"outputAudioDevice"];
@@ -56,7 +56,7 @@
     } else {
         for(NSDictionary *entry in [DSAudioHandler enumerateOutputDevices])
             if([entry[@"uid"] isEqualToString:outputUid])
-                engine.audio.outputDevice = ((NSNumber *)entry[@"id"]).intValue;
+                engine.audio.outputDevice = (AudioDeviceID) ((NSNumber *)entry[@"id"]).intValue;
     }
     
     [[NSNotificationCenter defaultCenter] addObserverForName: DSAudioDeviceChanged
