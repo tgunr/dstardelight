@@ -41,7 +41,7 @@
 		754A461E20EC6E65003A11F1 /* MASShortcutValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945CA420EC62F2003A11F1 /* MASShortcutValidator.m */; };
 		754A461F20EC6E65003A11F1 /* MASShortcutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945CA620EC62F2003A11F1 /* MASShortcutView.m */; };
 		754A462220ECC1BB003A11F1 /* DSDV3KNetworkVocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 754A462120ECC1BB003A11F1 /* DSDV3KNetworkVocoder.m */; };
-		755A2EAC20FB7B83003A11F1 /* DSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0881320E3177F003A11F1 /* DSAppDelegate.m */; };
+		755A2EAD20FB7E42003A11F1 /* HAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755A2EAA20FB7974003A11F1 /* HAppDelegate.swift */; };
 		756A40A120EC60B7003A11F1 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 756A409120EC60B6003A11F1 /* README.markdown */; };
 		756A40A220EC60B7003A11F1 /* TPCircularBuffer+AudioBufferList.c in Sources */ = {isa = PBXBuildFile; fileRef = 756A409220EC60B6003A11F1 /* TPCircularBuffer+AudioBufferList.c */; };
 		756A40A320EC60B7003A11F1 /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 756A409420EC60B6003A11F1 /* TPCircularBuffer.c */; };
@@ -123,7 +123,7 @@
 		754A462020ECC1BB003A11F1 /* DSDV3KNetworkVocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDV3KNetworkVocoder.h; sourceTree = "<group>"; };
 		754A462120ECC1BB003A11F1 /* DSDV3KNetworkVocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDV3KNetworkVocoder.m; sourceTree = "<group>"; };
 		755A2EA220FB6B20003A11F1 /* DStarDelight-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DStarDelight-Bridging-Header.h"; sourceTree = "<group>"; };
-		755A2EAA20FB7974003A11F1 /* HAMAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HAMAppDelegate.swift; sourceTree = "<group>"; };
+		755A2EAA20FB7974003A11F1 /* HAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HAppDelegate.swift; sourceTree = "<group>"; };
 		756A408D20EC607B003A11F1 /* DSEDataEngineDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEDataEngineDelegate.h; sourceTree = "<group>"; };
 		756A409120EC60B6003A11F1 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.markdown; sourceTree = "<group>"; };
 		756A409220EC60B6003A11F1 /* TPCircularBuffer+AudioBufferList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "TPCircularBuffer+AudioBufferList.c"; sourceTree = "<group>"; };
@@ -167,7 +167,6 @@
 		756A40C120EC60D7003A11F1 /* DSEAprsLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEAprsLocation.h; sourceTree = "<group>"; };
 		756A40C220EC60D8003A11F1 /* DSELinkDriverProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSELinkDriverProtocol.h; sourceTree = "<group>"; };
 		756A40C320EC60D8003A11F1 /* DSESlowDataCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSESlowDataCoder.h; sourceTree = "<group>"; };
-		756A40CF20EC610B003A11F1 /* DStarDelight-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DStarDelight-Bridging-Header.h"; sourceTree = "<group>"; };
 		756A40D020EC610C003A11F1 /* DStarEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DStarEngine.h; sourceTree = "<group>"; };
 		758B49BF20E41302003A11F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../../Old/DStarDelight/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		758B49CA20E41BD8003A11F1 /* DSAddPopupController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSAddPopupController.xib; sourceTree = "<group>"; };
@@ -177,15 +176,9 @@
 		75945C8520EC62F2003A11F1 /* DSAddPopupController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSAddPopupController.h; sourceTree = "<group>"; };
 		75945C8620EC62F2003A11F1 /* DSAddPopupController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSAddPopupController.m; sourceTree = "<group>"; };
 		75945C8720EC62F2003A11F1 /* DSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSAppDelegate.h; sourceTree = "<group>"; };
-		75945C8D20EC62F2003A11F1 /* DSCallFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSCallFormatter.h; sourceTree = "<group>"; };
-		75945C8E20EC62F2003A11F1 /* DSCallFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSCallFormatter.m; sourceTree = "<group>"; };
-		75945C8F20EC62F2003A11F1 /* DSDestinationCallFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSDestinationCallFormatter.h; sourceTree = "<group>"; };
-		75945C9020EC62F2003A11F1 /* DSDestinationCallFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSDestinationCallFormatter.m; sourceTree = "<group>"; };
 		75945C9320EC62F2003A11F1 /* DSQSOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSQSOViewController.h; sourceTree = "<group>"; };
 		75945C9420EC62F2003A11F1 /* DSQSOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSQSOViewController.m; sourceTree = "<group>"; };
 		75945C9520EC62F2003A11F1 /* DSMapPopupController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSMapPopupController.h; sourceTree = "<group>"; };
-		75945C9720EC62F2003A11F1 /* DSMessageFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSMessageFormatter.h; sourceTree = "<group>"; };
-		75945C9820EC62F2003A11F1 /* DSMessageFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSMessageFormatter.m; sourceTree = "<group>"; };
 		75945C9A20EC62F2003A11F1 /* DSPrefVocoderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSPrefVocoderViewController.h; sourceTree = "<group>"; };
 		75945C9C20EC62F2003A11F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		75945C9E20EC62F2003A11F1 /* MASDictionaryTransformer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASDictionaryTransformer.h; sourceTree = "<group>"; };
@@ -259,7 +252,7 @@
 		755A2EA920FB7917003A11F1 /* HAM */ = {
 			isa = PBXGroup;
 			children = (
-				755A2EAA20FB7974003A11F1 /* HAMAppDelegate.swift */,
+				755A2EAA20FB7974003A11F1 /* HAppDelegate.swift */,
 			);
 			name = HAM;
 			path = DS/HAM;
@@ -270,7 +263,6 @@
 			children = (
 				756A409020EC60B6003A11F1 /* TPCircularBuffer */,
 				756A40D020EC610C003A11F1 /* DStarEngine.h */,
-				756A40CF20EC610B003A11F1 /* DStarDelight-Bridging-Header.h */,
 				756A409F20EC60B7003A11F1 /* DStarUtils.h */,
 				756A409D20EC60B7003A11F1 /* DStarUtils.m */,
 				756A40A020EC60B7003A11F1 /* DSDV3KPacket.h */,
@@ -351,12 +343,6 @@
 				758B49D320E41F0D003A11F1 /* DSDestinationCallFormatter.m */,
 				75E0883020E3177F003A11F1 /* DSMessageFormatter.h */,
 				75E0883120E3177F003A11F1 /* DSMessageFormatter.m */,
-				75945C8D20EC62F2003A11F1 /* DSCallFormatter.h */,
-				75945C8E20EC62F2003A11F1 /* DSCallFormatter.m */,
-				75945C8F20EC62F2003A11F1 /* DSDestinationCallFormatter.h */,
-				75945C9020EC62F2003A11F1 /* DSDestinationCallFormatter.m */,
-				75945C9720EC62F2003A11F1 /* DSMessageFormatter.h */,
-				75945C9820EC62F2003A11F1 /* DSMessageFormatter.m */,
 				75945C9C20EC62F2003A11F1 /* main.m */,
 				75945C9D20EC62F2003A11F1 /* MASShortcut */,
 				75476C5520F901DE003A11F1 /* DSReflectors.h */,
@@ -673,6 +659,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				755A2EAD20FB7E42003A11F1 /* HAppDelegate.swift in Sources */,
 				75E0886420E3177F003A11F1 /* DSCallFormatter.m in Sources */,
 				758B49D420E41F0D003A11F1 /* DSDestinationCallFormatter.m in Sources */,
 				75E0886E20E3177F003A11F1 /* DSMessageFormatter.m in Sources */,
@@ -709,12 +696,11 @@
 				756A40CC20EC60D8003A11F1 /* DSEIRCDDBGateways.m in Sources */,
 				756A40A520EC60B7003A11F1 /* DSEDataEngine.m in Sources */,
 				756A40C520EC60D8003A11F1 /* PortMapper.m in Sources */,
-				754A461B20EC6DDE003A11F1 /* main.m in Sources */,
 				756A40A320EC60B7003A11F1 /* TPCircularBuffer.c in Sources */,
 				756A40A220EC60B7003A11F1 /* TPCircularBuffer+AudioBufferList.c in Sources */,
 				5AF0DCCFE53D78E395758293 /* DSReflectorSource.m in Sources */,
 				5AF0D5FDEB456747948CA079 /* DSReflector.m in Sources */,
-				755A2EAC20FB7B83003A11F1 /* DSAppDelegate.m in Sources */,
+				754A461B20EC6DDE003A11F1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -918,6 +904,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 148C821C9B0F5A50DA0131CA /* Pods-DStarDelightUITests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = NL3267E99V;
@@ -937,6 +924,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 055B2231BFAA1ABB9458C344 /* Pods-DStarDelightUITests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = NL3267E99V;
