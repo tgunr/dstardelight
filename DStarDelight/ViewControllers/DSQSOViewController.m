@@ -216,6 +216,8 @@
     NSAssert(self.geocoder != nil, @"Geocoder did not initialize");
     
     self.volumeSlider.floatValue = [[NSUserDefaults standardUserDefaults] floatForKey:@"outputVolume"];
+    
+//    self.spinnerView.animate = true;
 }
 
 //-(void)destinationDidLink:(NSString *)destination {

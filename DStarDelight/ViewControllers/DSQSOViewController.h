@@ -1,5 +1,6 @@
 
 #import <AppKit/AppKit.h>
+#import <ProgressKit/ProgressKit-umbrella.h>
 
 #import "DSEDataEngineDelegate.h"
 
@@ -17,6 +18,7 @@
 @property (weak) IBOutlet NSSlider *volumeSlider;
 @property (weak) IBOutlet NSPopUpButton *reflectorPopup;
 @property (weak) IBOutlet NSButton *connectReflector;
+@property (weak) IBOutlet Spinner *spinnerView;
 
 
 //- (IBAction)doHeardDoubleClick:(id)sender;
@@ -26,6 +28,28 @@
 - (IBAction)doVolumeChange:(id)sender;
 - (IBAction)reflectorChanged:(id)sender;
 - (IBAction)connectReflector:(NSButton *)sender;
+
+- (void)destinationDidConnect:(NSString *)destination;
+
+- (void)destinationDidError:(NSString *)destination error:(NSError *)error;
+
+- (void)destinationDidLink:(NSString *)destination;
+
+- (void)destinationDidUnlink:(NSString *)destination;
+
+- (void)destinationWillLink:(NSString *)destination;
+
+- (void)locationReceived:(CLLocation *)location forStreamId:(NSNumber *)streamId;
+
+- (void)slowDataReceived:(NSString *)slowData forStreamId:(NSNumber *)streamId;
+
+- (void)streamDidEnd:(NSNumber *)streamId atTime:(NSDate *)date;
+
+- (void)streamDidStart:(NSDictionary *)header;
+
+- (BOOL)commitEditingAndReturnError:(NSError * _Nullable __autoreleasing * _Nullable)error;
+
+- (void)encodeWithCoder:(nonnull NSCoder *)aCoder;
 
 @end
 
