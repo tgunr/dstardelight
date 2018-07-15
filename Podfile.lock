@@ -1,16 +1,20 @@
 PODS:
-  - SwiftSocket (2.0.2)
+  - AutoCoding (2.2.3)
+  - ProgressKit (0.7)
 
 DEPENDENCIES:
-  - SwiftSocket
+  - AutoCoding
+  - ProgressKit
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - SwiftSocket
+    - AutoCoding
+    - ProgressKit
 
 SPEC CHECKSUMS:
-  SwiftSocket: 6f4c9c63fbc5c1d61188936bb3c599fd546f40ae
+  AutoCoding: 90ca3cbc0d77a37cfff75167d705b44148c5fc51
+  ProgressKit: 47145a4a267a9b4262c481d8c46e1d527dd9e024
 
-PODFILE CHECKSUM: 17c684f45589051cf276c2ed66c69d3a5888e9d4
+PODFILE CHECKSUM: 2cd4ac69954e7b8852611773bbfb33c516b7b1ce
 
 COCOAPODS: 1.5.3

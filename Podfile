@@ -3,16 +3,6 @@
 
 workspace 'DStarDelight.xcworkspace'
 
-target 'DStarEngine' do
-    use_frameworks!
-    project 'Frameworks/DStarEngine/DStarEngine.xcodeproj'
-    inherit! :search_paths
-    platform :osx, 10.13
-
-    pod 'SwiftSocket'
-
-end
-
 target 'DStarDelight' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
@@ -21,8 +11,8 @@ target 'DStarDelight' do
   inherit! :search_paths
 
   # Pods for DStarDelight
-  pod 'SwiftSocket'
-
+  pod 'AutoCoding'
+  pod 'ProgressKit'
   target 'DStarDelightUITests' do
     inherit! :search_paths
     # Pods for testing
@@ -30,19 +20,3 @@ target 'DStarDelight' do
 
 end
 
-target 'DStarDelightIOS' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
-  project 'DStarDelightIOS/DStarDelightIOS.xcodeproj'
-  platform :ios, '12.0'
-  inherit! :search_paths
-
-  # Pods for DStarDelightIOS
-  pod 'SwiftSocket'
-
-  target 'DStarDelightIOSUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-end
