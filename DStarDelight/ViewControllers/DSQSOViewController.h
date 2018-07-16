@@ -1,6 +1,6 @@
 
 #import <AppKit/AppKit.h>
-#import <ProgressKit/ProgressKit-umbrella.h>
+#import <ProgressKit/ProgressKit-Swift.h>
 
 #import "DSEDataEngineDelegate.h"
 
@@ -45,11 +45,14 @@
 
 - (void)streamDidEnd:(NSNumber *)streamId atTime:(NSDate *)date;
 
+- (void)reflectorsAreReady;
+
 - (void)streamDidStart:(NSDictionary *)header;
 
 - (BOOL)commitEditingAndReturnError:(NSError * _Nullable __autoreleasing * _Nullable)error;
 
 - (void)encodeWithCoder:(nonnull NSCoder *)aCoder;
 
+-(void)resetColorForRowView:(NSTableRowView *)rowView atRow:(NSUInteger)row;
 @end
 

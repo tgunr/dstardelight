@@ -8,10 +8,11 @@
 
 import AppKit
 
+
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
+@objc class AppDelegate: NSObject, NSApplicationDelegate {
     var appReflectors: DSReflectors?
-    
+
     let shared = NSApplication.shared.delegate
     
     //MARK: Data reading and writing functions
@@ -50,6 +51,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             appReflectors = reflectors
         }
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name("reflectorsAreReady"), object: nil)
+        NSLog("Reflectors loaded: %d", (appReflectors?.reflectors.count)!)
     }
     
     func applicationWillFinishLaunching(_ aNotification: Notification) {
@@ -105,7 +107,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     func applicationDidFinishLaunching(_ notification: Notification) {
-        UserDefaults.standard.set(appReflectors, forKey: "appReflectors")
+
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

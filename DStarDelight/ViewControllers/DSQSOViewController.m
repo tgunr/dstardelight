@@ -2,14 +2,15 @@
 
 #import "DSQSOViewController.h"
 
+#import "DStarDelight-Swift.h"
+
+#import "DStarDelight.h"
+#import "DStarEngine.h"
+
 #import "MASShortcut.h"
 #import "MASDictionaryTransformer.h"
-#import "DSESlowDataCoder.h"
-#import "DSAudioHandler.h"
 #import "DSMapPopupController.h"
-#import "DSEAprsLocation.h"
 #import "DSAddPopupController.h"
-#import "DSEDataEngine.h"
 
 @import MapKit;
 
@@ -27,6 +28,10 @@
 @end
 
 @implementation DSQSOViewController
+
+- (void)reflectorsAreReady {
+    [self.spinnerView removeFromSuperview];
+}
 
 +(NSUInteger)findQsoId:(NSNumber *)streamId inArray:(NSArray *)array {
     return [array indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
@@ -83,7 +88,7 @@
         dispatch_source_set_timer(self.qsoTimer, dispatch_time(DISPATCH_TIME_NOW, 100ull * NSEC_PER_MSEC), 100ull * NSEC_PER_MSEC, 10ull * NSEC_PER_MSEC);
         dispatch_source_set_event_handler(self.qsoTimer, ^{
             [weakSelf updateQsoId:streamId usingBlock:^(NSMutableDictionary *qso, NSUInteger qsoIndex) {
-                qso[@"duration"] = [NSNumber numberWithDouble:[[NSDate date] timeIntervalSinceDate:qso[@"time"]]];
+                qso[@"duration"] = @([[NSDate date] timeIntervalSinceDate:qso[@"time"]]);
             }];
         });
         dispatch_resume(self.qsoTimer);
@@ -95,7 +100,7 @@
     
     [self updateQsoId:streamId usingBlock:^(NSMutableDictionary *qso, NSUInteger qsoIndex) {
         NSDate *headerTime = time;
-        qso[@"duration"] = [NSNumber numberWithDouble:[headerTime timeIntervalSinceDate:qso[@"time"]]];
+        qso[@"duration"] = @([headerTime timeIntervalSinceDate:qso[@"time"]]);
         if([qso[@"direction"] isEqualToString:@"TX"])
             qso[@"color"] = [NSColor colorWithCalibratedRed:1.0 green:0.0 blue:0.0 alpha:0.5];
         else
@@ -179,44 +184,46 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     self.qsoList = [[NSMutableArray alloc] init];
-    
+
     self.mapPopover = [[NSPopover alloc] init];
     self.mapPopover.contentViewController = [[DSMapPopupController alloc] initWithNibName:nil bundle:nil];
     self.mapPopover.behavior = NSPopoverBehaviorTransient;
     self.mapPopover.delegate = (DSMapPopupController *) self.mapPopover.contentViewController;
-    
+
     self.addPopover = [[NSPopover alloc] init];
     DSAddPopupController *addController = [[DSAddPopupController alloc] initWithNibName:nil bundle:nil];
     //    addController.reflectorArrayController = self.reflectorTableController;
     self.addPopover.contentViewController = addController;
     self.addPopover.behavior = NSPopoverBehaviorSemitransient;
     self.addPopover.delegate = addController;
-    
+
     [self bind:@"txKeyCode" toObject:[NSUserDefaultsController sharedUserDefaultsController] withKeyPath:@"values.shortcutValue" options:@{NSValueTransformerNameBindingOption: MASDictionaryTransformerName}];
-    
+
     [self.view.window makeFirstResponder:self.view];
     self.view.window.initialFirstResponder = self.view;
-    
+
     [DSEDataEngine sharedInstance].delegate = self;
-    
+
     self.heardTableView.delegate = self;
-    self.heardTableController.sortDescriptors = @[ [[NSSortDescriptor alloc] initWithKey:@"time" ascending:NO] ];
-    
+    self.heardTableController.sortDescriptors = @[[[NSSortDescriptor alloc] initWithKey:@"time" ascending:NO]];
+
     [self.txButton setPeriodicDelay:.1f interval:.1f];
     self.txButtonState = NSOffState;
-    
+
     self.speechSynth = [[NSSpeechSynthesizer alloc] initWithVoice:@"com.apple.speech.synthesis.voice.samantha"];
-    if(self.speechSynth == nil) {
+    if (self.speechSynth == nil) {
         NSLog(@"Could not initialize speech synthesizer.");
     }
     self.geocoder = [[CLGeocoder alloc] init];
     NSAssert(self.geocoder != nil, @"Geocoder did not initialize");
-    
+
     self.volumeSlider.floatValue = [[NSUserDefaults standardUserDefaults] floatForKey:@"outputVolume"];
-    
+
 //    self.spinnerView.animate = true;
+    [[DSVars shared] setQSOCQController: self];
+
 }
 
 //-(void)destinationDidLink:(NSString *)destination {
@@ -337,7 +344,7 @@
 //}
 
 - (IBAction)doVolumeChange:(id)sender {
-    DSAudioHandler *engineaudio = (DSAudioHandler *)[DSEDataEngine sharedInstance].audio;
+    DSAudioHandler *engineaudio = [DSEDataEngine sharedInstance].audio;
     engineaudio.outputVolume = self.volumeSlider.floatValue;
     [[NSUserDefaults standardUserDefaults] setFloat:self.volumeSlider.floatValue forKey:@"outputVolume"];
 }
@@ -369,12 +376,12 @@
         return;
     }
     [self.view.window makeFirstResponder:self.view];
-    DSAudioHandler *audio = (DSAudioHandler *)[DSEDataEngine sharedInstance].audio;
+    DSAudioHandler *audio = [DSEDataEngine sharedInstance].audio;
     audio.xmit = YES;
 }
 
 -(void)endTx {
-    DSAudioHandler *audio = (DSAudioHandler *)[DSEDataEngine sharedInstance].audio;
+    DSAudioHandler *audio = [DSEDataEngine sharedInstance].audio;
     audio.xmit = NO;
     self.statusLED.image = [NSImage imageNamed:@"Grey"];
 }
@@ -393,7 +400,7 @@
 -(BOOL)control:(NSControl *)control textShouldEndEditing:(NSText *)fieldEditor {
     dispatch_async(dispatch_get_main_queue(), ^{
         BOOL result = [control.window makeFirstResponder:self.view];
-        if(result == NO)
+        if(!result)
             NSLog(@"Would not resign first responder");
     });
     return YES;
@@ -427,8 +434,8 @@
 -(void)tableView:(NSTableView *)tableView didAddRowView:(NSTableRowView *)rowView forRow:(NSInteger)row {
     if(tableView != self.heardTableView)
         return;
-    
-    [self resetColorForRowView:rowView atRow:row];
+
+    [self resetColorForRowView:rowView atRow:(NSUInteger) row];
     
     if(self.mapPopover.isShown) {
         NSUInteger popoverRow = [DSQSOViewController findQsoId:((DSMapPopupController *)self.mapPopover.contentViewController).qsoId inArray:self.heardTableController.arrangedObjects];
@@ -473,5 +480,7 @@
 - (void)encodeWithCoder:(nonnull NSCoder *)aCoder {
     
 }
+
+#pragma mark - Data Source
 
 @end

@@ -85,7 +85,7 @@
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notification {
-    [[NSUserDefaults standardUserDefaults] setObject:_reflectors forKey:@"reflectors"];
+
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {

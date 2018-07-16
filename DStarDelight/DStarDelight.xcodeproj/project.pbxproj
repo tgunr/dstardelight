@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5AF0D5FDEB456747948CA079 /* DSReflector.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0DEAA7E639B3A9DFB23D6 /* DSReflector.m */; };
 		5AF0DCCFE53D78E395758293 /* DSReflectorSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0D1EE2654818086ADD427 /* DSReflectorSource.m */; };
+		5AF0DD1DFA0B72DF2152DD85 /* DSQSOViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0D45150A3F674E7786E24 /* DSQSOViewController.swift */; };
 		6891CE84592F68FFD75B9580 /* Pods_DStarDelightUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC981FCCF635432B44467462 /* Pods_DStarDelightUITests.framework */; };
 		70E0477957C690C33631C7AE /* Pods_DStarDelight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBFD5970E5D8ACF1425391D /* Pods_DStarDelight.framework */; };
 		7502EC9420ECF139003A11F1 /* DSAddPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945C8620EC62F2003A11F1 /* DSAddPopupController.m */; };
@@ -88,6 +89,7 @@
 		31C4CEB872CC61347D86A7C4 /* Pods-DStarDelight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DStarDelight.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-DStarDelight/Pods-DStarDelight.debug.xcconfig"; sourceTree = "<group>"; };
 		4673CA55F1EFE01F6C0D071D /* Pods-DStarDelight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DStarDelight.release.xcconfig"; path = "../Pods/Target Support Files/Pods-DStarDelight/Pods-DStarDelight.release.xcconfig"; sourceTree = "<group>"; };
 		5AF0D1EE2654818086ADD427 /* DSReflectorSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSReflectorSource.m; sourceTree = "<group>"; };
+		5AF0D45150A3F674E7786E24 /* DSQSOViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSQSOViewController.swift; sourceTree = "<group>"; };
 		5AF0DA883D5FDE102EDB2370 /* DSReflector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSReflector.h; sourceTree = "<group>"; };
 		5AF0DEAA7E639B3A9DFB23D6 /* DSReflector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSReflector.m; sourceTree = "<group>"; };
 		5AF0DFDAC07F1FE2CC783670 /* DSReflectorSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSReflectorSource.h; sourceTree = "<group>"; };
@@ -397,6 +399,7 @@
 				75D870E020F6FCE8003A11F1 /* DSQSOReflectorsViewController.m */,
 				75476C4220F7CF8B003A11F1 /* DSQSOSettingsViewController.h */,
 				75476C4320F7CF8B003A11F1 /* DSQSOSettingsViewController.m */,
+				5AF0D45150A3F674E7786E24 /* DSQSOViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -699,6 +702,7 @@
 				756A40A220EC60B7003A11F1 /* TPCircularBuffer+AudioBufferList.c in Sources */,
 				5AF0DCCFE53D78E395758293 /* DSReflectorSource.m in Sources */,
 				5AF0D5FDEB456747948CA079 /* DSReflector.m in Sources */,
+				5AF0DD1DFA0B72DF2152DD85 /* DSQSOViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -867,7 +871,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Sources/HAM/DStarDelight/DStarDelight/DStarDelight-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -894,7 +898,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Sources/HAM/DStarDelight/DStarDelight/DStarDelight-Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

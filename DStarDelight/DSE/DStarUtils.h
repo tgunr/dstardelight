@@ -8,10 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "DStarEngine.h"
+#import "DStarDelight.h"
+
 //#import "/Sources/HAM/DStarDelight/DerivedData/Build/Intermediates.noindex/DStarDelight.build/Debug/DStarDelight.build/DerivedSources/DStarDelight-Swift.h"
 
 @class DSEDV3KNetworkVocoder;
 @class DSPrefVocoderNetworkViewController;
+@class DSQSOViewController;
 
 @interface DSVars: NSObject
 
@@ -21,7 +24,7 @@
 @property NSString *DV3KVersion;
 @property DSEDV3KNetworkVocoder *networkDriver;
 @property DSPrefVocoderNetworkViewController *networkConfigurationViewController;
-//@property id serialConfigurationViewController;
+@property DSQSOViewController *QSOCQController;
 
 + (DSVars *) shared;
 

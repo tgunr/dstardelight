@@ -460,7 +460,7 @@
                                     <action selector="connectReflector:" target="SSE-PL-FSr" id="9br-nY-P1P"/>
                                 </connections>
                             </button>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z9Z-ka-0wG" customClass="Spinner" customModule="ProgressKit">
+                            <customView hidden="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z9Z-ka-0wG" customClass="Spinner" customModule="ProgressKit">
                                 <rect key="frame" x="370" y="70" width="160" height="160"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </customView>
