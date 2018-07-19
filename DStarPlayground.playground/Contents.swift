@@ -1,43 +1,110 @@
 //: A UIKit based Playground for presenting user interface
   
-import UIKit
 import PlaygroundSupport
 
-class MyViewController : UIViewController {
-    override func loadView() {
-        let view = UIView()
-        view.backgroundColor = .white
+#if os(OSX)
+import AppKit
+import Cocoa
+typealias ColorType = NSColor
+typealias ViewType = NSView
+typealias LabelType = NSLable
+#elseif os(iOS)
+import UIKit
+typealias ColorType = UIColor
+typealias ImageType = UIImage
+typealias ViewType = UIView
+#endif
 
-        let label = UILabel()
-        label.frame = CGRect(x: 150, y: 200, width: 200, height: 20)
-        label.text = "Hello World!"
-        label.textColor = .black
-        
-        view.addSubview(label)
-        self.view = view
+func makeIncrementer(forIncrement amount: Int) -> () -> Int {
+    var rt = 0
+    func inc() -> Int {
+        rt += amount
+        return rt
+    }
+    return inc
+}
+
+let inc2 = makeIncrementer(forIncrement: 2)
+inc2()
+inc2()
+let inc3 = makeIncrementer(forIncrement: 3)
+inc3()
+inc3()
+
+let clos1 = { () -> Void in
+    print("Hello")
+}
+clos1()
+
+let clos2 = {
+    (name: String) -> Void in
+    print("Hello \(name)")
+}
+
+clos2("test")
+
+func testClosure(handler: (String) -> Void) {
+    handler("Dasher")
+}
+
+let clos3 = {
+    (name: String) -> String in
+    return "Hello \(name)"
+}
+
+testClosure(handler: clos2)
+
+var message = clos3("Buddy")
+
+func test2(_ aString: String) {
+    print("aString: \(aString)")
+}
+
+test2("one")
+test2(clos3("two"))
+
+func testFunction(num: Int, handler: () -> Void ) {
+    for _ in 0..<num {
+        handler()
     }
 }
-// Present the view controller in the Live View window
-//PlaygroundPage.current.liveView = MyViewController()
 
-struct dplus_packet {
-    var length: UInt = 0
-    var type = 0
-    var padding = 0
-    //    var frame: dstar_frame?
-    subscript(attr: String) -> Any? {
-        get {
-            if attr == "length" { return length }
-            if attr == "size" { return length & 0x0fff }
-            if attr == "type" { return type }
-            return nil
-        }
-        set {
-            if attr == "length" { length = newValue as! UInt }
-            if attr == "type" { type = newValue as! Int }
-        }
-    }
+let clos = {
+    () -> Void in
+    print("Hello from standard sytax")
 }
-private var linkModuleTemplate = dplus_packet()
-linkModuleTemplate["length"] = 0xc01c as UInt
-linkModuleTemplate["length"]
+
+testFunction(num: 3, handler: clos)
+testFunction(num: 4, handler: { print("Hello again") })
+
+func testFunction2(num: Int, handler: (_ : String)->Void) {
+  for _ in 0..<num {
+    handler("Me")
+  }
+}
+
+testFunction2(num: 5){
+  print("Hello from \($0)")
+}
+
+private var qsoList: [ [AnyHashable : Any] ]  = [ [ : ] ]
+
+func updateQsoId(_ streamId: Int?, usingBlock block: @escaping ([AnyHashable : Any], Int) -> Void) -> Bool {
+    let qsoIndex: Int = 0
+    if qsoIndex == NSNotFound {
+        return false
+    }
+    var qso = qsoList[qsoIndex]
+    block(qso, qsoIndex)
+    return true
+}
+
+var updated = updateQsoId(1, usingBlock: { qso, qsoIndex in })
+var test = updateQsoId(1, usingBlock: { qso, qsoIndex in
+    print("here")
+    var aQso = Date()
+    if aQso != nil {
+        qso["duration"] = Date().timeIntervalSince(aQso)
+    }
+})
+

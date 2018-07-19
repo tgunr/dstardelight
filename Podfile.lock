@@ -1,20 +1,24 @@
 PODS:
   - AutoCoding (2.2.3)
+  - Dispatch (2.0.4)
   - ProgressKit (0.7)
 
 DEPENDENCIES:
   - AutoCoding
+  - Dispatch
   - ProgressKit
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AutoCoding
+    - Dispatch
     - ProgressKit
 
 SPEC CHECKSUMS:
   AutoCoding: 90ca3cbc0d77a37cfff75167d705b44148c5fc51
+  Dispatch: 7ed89f2845001c4161ad83f43988b584fae8fff4
   ProgressKit: 47145a4a267a9b4262c481d8c46e1d527dd9e024
 
-PODFILE CHECKSUM: 2cd4ac69954e7b8852611773bbfb33c516b7b1ce
+PODFILE CHECKSUM: f3c5c1889703efa40959876efac61923b412dafa
 
 COCOAPODS: 1.5.3

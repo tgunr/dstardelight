@@ -96,6 +96,10 @@
                                                     </prototypeCellViews>
                                                 </tableColumn>
                                             </tableColumns>
+                                            <connections>
+                                                <outlet property="dataSource" destination="ab1-Ae-4dh" id="34m-Hi-FXf"/>
+                                                <outlet property="delegate" destination="ab1-Ae-4dh" id="kQa-dc-y5M"/>
+                                            </connections>
                                         </tableView>
                                     </subviews>
                                 </clipView>

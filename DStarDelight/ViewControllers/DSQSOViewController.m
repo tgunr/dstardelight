@@ -2,8 +2,6 @@
 
 #import "DSQSOViewController.h"
 
-#import "DStarDelight-Swift.h"
-
 #import "DStarDelight.h"
 #import "DStarEngine.h"
 

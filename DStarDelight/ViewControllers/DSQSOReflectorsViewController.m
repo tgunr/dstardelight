@@ -22,7 +22,7 @@
     }
     return self;
 }
-// Data Source
+#pragma - mark Data Source
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     return self.reflectorsView;
 }

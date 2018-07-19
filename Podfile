@@ -13,6 +13,8 @@ target 'DStarDelight' do
   # Pods for DStarDelight
   pod 'AutoCoding'
   pod 'ProgressKit'
+  pod 'Dispatch'
+
   target 'DStarDelightUITests' do
     inherit! :search_paths
     # Pods for testing
