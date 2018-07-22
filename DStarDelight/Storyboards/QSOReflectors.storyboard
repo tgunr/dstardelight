@@ -3,14 +3,13 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14295.6"/>
-        <plugIn identifier="com.apple.WebKit2IBPlugin" version="14295.6"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Reflectors-->
         <scene sceneID="SmQ-Or-dST">
             <objects>
-                <viewController title="Reflectors" id="ab1-Ae-4dh" customClass="DSQSOReflectorsViewController" sceneMemberID="viewController">
+                <viewController title="Reflectors" id="ab1-Ae-4dh" customClass="QSOReflectorsViewController" customModule="DStarDelight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="onh-iO-9tW">
                         <rect key="frame" x="0.0" y="0.0" width="706" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -29,7 +28,7 @@
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn width="118" minWidth="40" maxWidth="1000" id="b5B-hz-vQf">
+                                                <tableColumn identifier="ReflectorName" width="118" minWidth="40" maxWidth="1000" id="b5B-hz-vQf">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Reflector">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -56,13 +55,10 @@
                                                                     </textFieldCell>
                                                                 </textField>
                                                             </subviews>
-                                                            <connections>
-                                                                <outlet property="textField" destination="pG1-yK-MB1" id="maA-qK-fk0"/>
-                                                            </connections>
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
-                                                <tableColumn width="114" minWidth="40" maxWidth="1000" id="Tk4-Vh-da4">
+                                                <tableColumn identifier="ReflectorIP" width="114" minWidth="40" maxWidth="1000" id="Tk4-Vh-da4">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="IP Address">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -89,16 +85,13 @@
                                                                     </textFieldCell>
                                                                 </textField>
                                                             </subviews>
-                                                            <connections>
-                                                                <outlet property="textField" destination="67k-4G-GoE" id="TWd-0J-4jX"/>
-                                                            </connections>
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
                                             </tableColumns>
                                             <connections>
-                                                <outlet property="dataSource" destination="ab1-Ae-4dh" id="34m-Hi-FXf"/>
-                                                <outlet property="delegate" destination="ab1-Ae-4dh" id="kQa-dc-y5M"/>
+                                                <outlet property="dataSource" destination="ab1-Ae-4dh" id="SdB-jI-3Hf"/>
+                                                <outlet property="delegate" destination="ab1-Ae-4dh" id="Ysk-Y3-GS7"/>
                                             </connections>
                                         </tableView>
                                     </subviews>
@@ -116,23 +109,15 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
-                            <wkWebView wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qt6-Uv-nGn">
-                                <rect key="frame" x="284" y="20" width="402" height="260"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="webView" destination="Qt6-Uv-nGn" id="5Vz-vO-kTh"/>
+                        <outlet property="reflectorsTableView" destination="rT2-1P-lQc" id="PpW-F4-YnT"/>
                     </connections>
                 </viewController>
                 <customObject id="hzd-o4-gog" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="971" y="291"/>
+            <point key="canvasLocation" x="864" y="22"/>
         </scene>
     </scenes>
 </document>

@@ -14,7 +14,7 @@
 
 @class DSEDV3KNetworkVocoder;
 @class DSPrefVocoderNetworkViewController;
-@class DSQSOViewController;
+@class QSOCQViewController;
 
 @interface DSVars: NSObject
 
@@ -24,7 +24,7 @@
 @property NSString *DV3KVersion;
 @property DSEDV3KNetworkVocoder *networkDriver;
 @property DSPrefVocoderNetworkViewController *networkConfigurationViewController;
-@property DSQSOViewController *QSOCQController;
+@property QSOCQViewController *QSOCQController;
 
 + (DSVars *) shared;
 

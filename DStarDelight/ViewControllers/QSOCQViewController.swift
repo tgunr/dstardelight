@@ -60,7 +60,7 @@ struct StreamInfo {
     }
 }
 
-extension DSQSOViewController: NSTableViewDataSource{
+extension HQSOCQViewController: NSTableViewDataSource {
     func numberOfRows(in tableView: NSTableView) -> Int {
         let count = reflectors?.reflectorGateways.count
         print("numberOfRows: \(count ?? 0)")
@@ -100,7 +100,7 @@ extension DSQSOViewController: NSTableViewDataSource{
 }
 
 
-class DSQSOViewController: NSViewController {
+class HQSOCQViewController: NSViewController {
     private var qsoTimer: DispatchSource?
     private var txButtonState: Int = 0
     private var speechSynth: NSSpeechSynthesizer?
@@ -114,18 +114,22 @@ class DSQSOViewController: NSViewController {
     var reflectorGateways: NSMutableArray?
     let appDelegate = NSApplication.shared.delegate as! HAppDelegate
 
+    @IBOutlet var heardArrayController: NSArrayController!
     @IBOutlet var heardTableController: NSArrayController!
     @IBOutlet weak var heardTableView: NSTableView!
     @IBOutlet weak var statusLED: NSImageView!
-    @IBOutlet weak var txButton: NSButton!
+
+    @IBOutlet var transmitButton: NSButton!
     @IBOutlet weak var repeaterInfo: NSTextField!
-    @IBOutlet weak var volumeSlider: NSSlider!
+
+    @IBOutlet var volumeSlider: NSSlider!
     @IBOutlet weak var reflectorPopup: NSPopUpButton!
-    @IBOutlet weak var connectReflector: NSButton!
+
+    @IBOutlet var connectReflector: NSButton!
     @IBOutlet weak var spinnerView: Spinner!
     @IBOutlet var reflectorsTabViewItem: NSTabViewItem!
     
-
+    // MARK: - Methods
     class func findQsoId(_ streamId: Int?, inArray array: [Any]?) -> Int {
         return (array as NSArray?)?.indexOfObject(passingTest: { obj, idx, stop in
             let entry = obj as? [AnyHashable : Any]
@@ -147,7 +151,7 @@ class DSQSOViewController: NSViewController {
     }
 
     func updateQsoId(_ streamId: Int?, usingBlock block: @escaping ([AnyHashable : Any], Int) -> Void) -> Bool {
-        let qsoIndex: Int = DSQSOViewController.findQsoId(streamId, inArray: qsoList)
+        let qsoIndex: Int = HQSOCQViewController.findQsoId(streamId, inArray: qsoList)
         if qsoIndex == NSNotFound {
             return false
         }
@@ -207,12 +211,12 @@ class DSQSOViewController: NSViewController {
         var updated = updateQsoId(streamInfo.streamId, usingBlock: { qso, qsoIndex in })
         if (updated == false) {
             if mapPopover?.isShown != nil {
-                (mapPopover?.contentViewController as? DSMapPopupController)?.suppressClose = true
+//                (mapPopover?.contentViewController as? DSMapPopupController)?.suppressClose = true
             }
             
             qsoList.append(streamInfo.asHashableDictionary())
             heardTableController.rearrangeObjects()
-            weak var weakSelf: DSQSOViewController? = self
+            weak var weakSelf: HQSOCQViewController? = self
             var dTime = (100 * NSEC_PER_MSEC)
                dTime += (100 * NSEC_PER_MSEC) + 10 * NSEC_PER_MSEC
             let interval = TimeInterval.init(exactly: 0.01)
@@ -235,7 +239,7 @@ class DSQSOViewController: NSViewController {
 //            qsoTimer.resume()
             }
     }
-}
+
 //    
 //    func streamDidEnd(_ streamId: NSNumber?, atTime time: Date?) {
 //        dispatch_source_cancel(qsoTimer)
@@ -250,7 +254,7 @@ class DSQSOViewController: NSViewController {
 //                qso?["color"] = NSColor.black
 //            }
 //        })
-//        let qsoIndex: Int = DSQSOViewController.findQsoId(streamId, inArray: heardTableController.arrangedObjects as? [Any])
+//        let qsoIndex: Int = QSOCQViewController.findQsoId(streamId, inArray: heardTableController.arrangedObjects as? [Any])
 //        //  If we can't find the QSO, it's probably not visible and we don't need to reset its color.
 //        if qsoIndex != NSNotFound {
 //            resetColor(for: heardTableView.rowView(atRow: qsoIndex, makeIfNecessary: false), atRow: qsoIndex)
@@ -464,57 +468,58 @@ class DSQSOViewController: NSViewController {
     //
     //    [self.reflectorTableView deselectAll:self];
     //}
-//    @IBAction func doVolumeChange(_ sender: Any) {
-//        let engineaudio: DSAudioHandler? = DSEDataEngine.sharedInstance().audio
-//        engineaudio?.outputVolume = volumeSlider
-//        UserDefaults.standard.set(volumeSlider, forKey: "outputVolume")
-//    }
-//
-//    @IBAction func reflectorChanged(_ sender: Any) {
-//    }
+    @IBAction func doVolumeChange(_ sender: Any) {
+        //        let engineaudio: DSAudioHandler? = DSEDataEngine.sharedInstance().audio
+        //        engineaudio?.outputVolume = volumeSlider
+        //        UserDefaults.standard.set(volumeSlider, forKey: "outputVolume")
+    }
 
-//    @IBAction func connectReflector(_ sender: NSButton) {
-//        switch sender.state {
-//            case .on:
-//                sender.title = "Disconnect"
-//            case .off:
-//                sender.title = "Connect"
-//            default:
-//                break
-//        }
-//    }
-//
+    @IBAction func reflectorChanged(_ sender: Any) {
+    }
+    
+    @IBAction func connectReflector(_ sender: NSButton) {
+        switch sender.state {
+        case .on:
+            sender.title = "Disconnect"
+        case .off:
+            sender.title = "Connect"
+        default:
+            break
+        }
+}
+
 //    func addReflector(_ sender: Any?) {
 //        if let aSender = sender as? NSView {
 //            addPopover?.show(relativeTo: NSMakeRect(0, 0, 300, 300), of: aSender, preferredEdge: .maxY)
 //        }
 //    }
-//
-//    func startTx() {
+
+    func startTx() {
 //        if !DSEDataEngine.sharedInstance().network {
+        
 //            NSBeep()
 //            return
 //        }
 //        view.window.makeFirstResponder(view)
 //        let audio: DSAudioHandler? = DSEDataEngine.sharedInstance().audio
 //        audio?.xmit = true
-//    }
+    }
 
-//    func endTx() {
+    func endTx() {
 //        let audio: DSAudioHandler? = DSEDataEngine.sharedInstance().audio
 //        audio?.xmit = false
 //        statusLED.image = NSImage(named: NSImage.Name("Grey"))
-//    }
-//
-//    @IBAction func doTx(_ sender: Any) {
+    }
+
+    @IBAction func doTx(_ sender: Any) {
 //        if txButton.state == txButtonState {
 //            startTx()
 //        } else {
 //            endTx()
 //        }
 //        txButtonState = txButton.state
-//    }
-//
+    }
+
 //// MARK: - Text Editing Control
 //    func control(_ control: NSControl, textShouldEndEditing fieldEditor: NSText) -> Bool {
 //        DispatchQueue.main.async(execute: {
@@ -556,7 +561,7 @@ class DSQSOViewController: NSViewController {
 //        }
 //        resetColor(for: rowView, atRow: row)
 //        if mapPopover?.isShown != nil {
-//            let popoverRow: Int = DSQSOViewController.findQsoId((mapPopover?.contentViewController as? DSMapPopupController)?.qsoId, inArray: heardTableController.arrangedObjects as? [Any])
+//            let popoverRow: Int = QSOCQViewController.findQsoId((mapPopover?.contentViewController as? DSMapPopupController)?.qsoId, inArray: heardTableController.arrangedObjects as? [Any])
 //            assert(popoverRow != NSNotFound, "QSO ID \(popoverRow) not found in popover relocation")
 //            let popoverAnchorView: NSView? = heardTableView.view(atColumn: heardTableView.column(withIdentifier: NSUserInterfaceItemIdentifier("Location")), row: popoverRow, makeIfNecessary: false)
 //            if popoverAnchorView != nil && popoverRow == row {
@@ -602,3 +607,4 @@ class DSQSOViewController: NSViewController {
 //    func encode(with aCoder: NSCoder) {
 //    }
 
+}

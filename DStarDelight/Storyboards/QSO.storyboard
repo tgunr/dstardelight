@@ -9,7 +9,7 @@
         <!--Main-->
         <scene sceneID="H4H-K5-N02">
             <objects>
-                <tabViewController title="Main" selectedTabViewItemIndex="0" id="ZpT-NJ-0h8" customClass="DSQSOViewController" sceneMemberID="viewController">
+                <tabViewController title="Main" selectedTabViewItemIndex="0" id="ZpT-NJ-0h8" customClass="QSOViewController" customModule="DStarDelight" customModuleProvider="target" sceneMemberID="viewController">
                     <tabViewItems>
                         <tabViewItem label="QSO" id="RZW-SV-HRo" userLabel="QSO"/>
                         <tabViewItem label="Reflectors" id="jsJ-mv-6jf" userLabel="Reflectors"/>

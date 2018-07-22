@@ -9,7 +9,7 @@
         <!--QSO-->
         <scene sceneID="9Ex-xE-P7p">
             <objects>
-                <viewController title="QSO" id="SSE-PL-FSr" customClass="DSQSOViewController" sceneMemberID="viewController">
+                <viewController title="QSO" id="SSE-PL-FSr" customClass="HQSOCQViewController" customModule="DStarDelight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="wk3-rg-2Rg">
                         <rect key="frame" x="0.0" y="0.0" width="900" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -430,6 +430,7 @@
                                                 </tableColumn>
                                             </tableColumns>
                                             <connections>
+                                                <binding destination="uew-ju-c1o" name="content" keyPath="arrangedObjects" id="oVY-AY-2ej"/>
                                                 <outlet property="dataSource" destination="SSE-PL-FSr" id="gVV-Yv-Cam"/>
                                                 <outlet property="delegate" destination="SSE-PL-FSr" id="Rhc-Ax-dT0"/>
                                             </connections>

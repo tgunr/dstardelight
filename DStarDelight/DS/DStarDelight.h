@@ -29,7 +29,7 @@
 //#import "DSPrefVocoderViewController.h"
 //#import "DSPrefVocoderSerialViewController.h"
 //#import "DSPrefVocoderNetworkViewController.h"
-//#import "DSQSOViewController.h"
+//#import "QSOCQViewController.h"
 //#import "DSQSOCQViewController.h"
 //#import "DSQSOReflectorsViewController.h"
 //#import "DSQSOSettingsViewController.h"

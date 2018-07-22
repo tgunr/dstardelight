@@ -8,9 +8,8 @@
 
 import AppKit
 
-
 @NSApplicationMain
-@objc class AppDelegate: NSObject, NSApplicationDelegate {
+@objc class HAppDelegate: NSObject, NSApplicationDelegate {
     var appReflectors: DSReflectors?
 
     let shared = NSApplication.shared.delegate
@@ -41,8 +40,8 @@ import AppKit
             UserDefaults.standard.register(defaults: aPrefs as! [String : Any])
         }
         NotificationCenter.default.addObserver(self, selector: #selector(self.reflectorsAreReady(_:)), name: NSNotification.Name("reflectorsAreReady"), object: nil)
+        NSLog("HAppDelegate: finding reflectors")
         appReflectors = DSReflectors()
-        print("Reflectors: %@", appReflectors?.reflectors.count)
     }
     
     @objc func reflectorsAreReady(_ notification: Notification?) {
@@ -51,36 +50,38 @@ import AppKit
             appReflectors = reflectors
         }
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name("reflectorsAreReady"), object: nil)
-        NSLog("Reflectors loaded: %d", (appReflectors?.reflectors.count)!)
+        print("HAppDelegate: reflectorsAreReady: %@", appReflectors?.reflectorGateways.count)
     }
     
     func applicationWillFinishLaunching(_ aNotification: Notification) {
         let engine: DSEDataEngine = DSEDataEngine.sharedInstance()
         engine.slowData.bind(NSBindingName("message"), to: NSUserDefaultsController.shared, withKeyPath: "values.slowDataMessage", options: nil)
         let inputUid: String? = UserDefaults.standard.string(forKey: "inputAudioDevice")
-        if inputUid == nil {
-            engine.audio.inputDevice = engine.audio.defaultInputDevice()
-        } else {
-            for entry in DSAudioHandler.enumerateInputDevices() {
-                let dictItem: [ String : Any ] = entry as! [String : Any]
-                let dictItemUID = dictItem["uid"] as! String
-                    if dictItemUID == inputUid {
-                    engine.audio.inputDevice = 0
-                }
-            }
-        }
+//        engine.audio.inputDevice = engine.audio.defaultInputDevice()
+//        if inputUid == nil {
+//            engine.audio.inputDevice = engine.audio.defaultInputDevice()
+//        } else {
+//            for entry in DSAudioHandler.enumerateInputDevices() {
+//                let dictItem: [ String : Any ] = entry as! [String : Any]
+//                let dictItemUID = dictItem["uid"] as! String
+//                    if dictItemUID == inputUid {
+//                    engine.audio.inputDevice = 0
+//                }
+//            }
+//        }
         let outputUid = UserDefaults.standard.string(forKey: "outputAudioDevice")
-        if outputUid == nil {
-            engine.audio.outputDevice = engine.audio.defaultOutputDevice()
-        } else {
-            for entry in DSAudioHandler.enumerateOutputDevices() {
-                let dictItem: [ String : Any ] = entry as! [String : Any]
-                let dictItemUID = dictItem["uid"] as! String
-                if dictItemUID == inputUid {
-                    engine.audio.outputDevice = 0
-                }
-            }
-        }
+//        engine.audio.outputDevice = engine.audio.defaultOutputDevice()
+//        if outputUid == nil {
+//            engine.audio.outputDevice = engine.audio.defaultOutputDevice()
+//        } else {
+//            for entry in DSAudioHandler.enumerateOutputDevices() {
+//                let dictItem: [ String : Any ] = entry as! [String : Any]
+//                let dictItemUID = dictItem["uid"] as! String
+//                if dictItemUID == inputUid {
+//                    engine.audio.outputDevice = 0
+//                }
+//            }
+//        }
         let nName: NSNotification.Name = NSNotification.Name(rawValue: DSAudioDeviceChanged)
         NotificationCenter.default.addObserver(forName: nName, object: nil, queue: OperationQueue.main, using:
         { notification in
