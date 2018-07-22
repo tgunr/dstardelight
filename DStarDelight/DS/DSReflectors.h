@@ -18,14 +18,16 @@ extern const NSString *SOURCE_HEADER;
 // Array of DSReflectorSource
 @property NSMutableArray *reflectorSources;
 // Dictionary of reflector
-@property NSMutableArray *reflectors;
+@property NSMutableArray *reflectorGateways;
 
 - (DSReflectors *)init;
 
-void checkIfOutdated();
-- (void)updateReflectors;
+- (void)loadReflectors:(NSURL *)url;
 
 - (void)checkForOutDated;
+
+- (void)updateReflectors;
+
 @end
 
 NS_ASSUME_NONNULL_END

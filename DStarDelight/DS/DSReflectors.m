@@ -20,7 +20,7 @@ const NSString *HAMSTER_REFLECTORS = @"Hamster/Reflectors.plist";
     self = [super init];
     if (self) {
         _reflectorSources = [NSMutableArray arrayWithCapacity:5];
-        _reflectors = [NSMutableArray arrayWithCapacity:0];
+        _reflectorGateways = [NSMutableArray arrayWithCapacity:0];
 
         NSError *error = nil;
         BOOL result = false;
@@ -48,13 +48,11 @@ const NSString *HAMSTER_REFLECTORS = @"Hamster/Reflectors.plist";
         // See if we have a saved list
         DSReflectors *savedReflectors = [DSReflectors objectWithContentsOfFile: [hamsterReflectorsURL path]];
 
-        if (!savedReflectors) { // no list, so create one and save it
+        if (savedReflectors == nil |
+                savedReflectors.reflectorGateways == nil |
+                savedReflectors.reflectorGateways.count == 0) { // no list, so create one and save it
             // Do this async as it takes a few seconds to gather the data
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [self loadReflectors];
-                    [self writeToFile:[hamsterReflectorsURL path] atomically:YES];
-                    [[NSNotificationCenter defaultCenter] postNotificationName:@"reflectorsAreReady" object:self];
-            });
+            [self loadReflectors: hamsterReflectorsURL];
         } else {
             [savedReflectors checkForOutDated];
             self = savedReflectors;
@@ -66,29 +64,37 @@ const NSString *HAMSTER_REFLECTORS = @"Hamster/Reflectors.plist";
 
 // checkOutOfDate looks for the default list of sources in the preferences
 // then pings them to see if alive. If alive, the source is added to the list for sources.
-- (void)loadReflectors {
-    NSArray *reflectorSourceDefaults = [[NSUserDefaults standardUserDefaults] objectForKey:@"reflectorSources"];
-    for (NSString *theSource in reflectorSourceDefaults) {
-        DSReflectorSource *reflectorSource = [DSReflectorSource new];
-        [reflectorSource initWithName:theSource];
-        if (reflectorSource.active) {
-            [self.reflectorSources addObject:reflectorSource];
+- (void)loadReflectors:(NSURL *)url {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSLog(@"DSReflectors: loadReflectors");
+        NSArray *reflectorSourceDefaults = [[NSUserDefaults standardUserDefaults] objectForKey:@"reflectorSources"];
+        for (NSString *theSource in reflectorSourceDefaults) {
+            DSReflectorSource *reflectorSource = [DSReflectorSource new];
+            [reflectorSource initWithName:theSource];
+            if (reflectorSource.active) {
+                [self.reflectorSources addObject:reflectorSource];
+            }
         }
-    }
-    [self checkForOutDated];
+        [self checkForOutDated];
+        [self writeToFile:[url path] atomically:YES];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"reflectorsAreReady" object:self];
+    });
+
 }
 
 - (void)checkForOutDated {
+    NSLog(@"DSReflectors: checkForOutDated");
     NSDate *reflectorsUpdated = [[NSUserDefaults standardUserDefaults] objectForKey:@"reflectorsUpdated"];
     NSDate *today = [NSDate date];
     NSTimeInterval since = fabs([reflectorsUpdated timeIntervalSinceNow]);
-    if (since > (24 * 60 * 60)) {
+    NSUInteger numGateways = self.reflectorGateways.count;
+    if (since > (24 * 60 * 60) | numGateways == 0) {
             [self updateReflectors];
-            [[NSUserDefaults standardUserDefaults] setObject:today forKey:@"reflectorsUpdated"];
     }
 }
 
 - (void)updateReflectors {
+    NSLog(@"DSReflectors: updateReflectors");
     // update reflector lists
     for (DSReflectorSource *source in _reflectorSources) {
         NSURL *aSourceURL = source.url;
@@ -103,6 +109,7 @@ const NSString *HAMSTER_REFLECTORS = @"Hamster/Reflectors.plist";
             NSString *headerDateString = [first substringFromIndex:headerLength];
             NSDateFormatter *dateFormatter = [NSDateFormatter new];
             dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+            // TODO: Fix this date problem
             dateFormatter.dateFormat = @"EEE, dd MMM yyyy HH:mm:ss zzz";
             NSDate *date = [dateFormatter dateFromString:headerDateString];
             NSLog(@"Date: %@", date);
@@ -117,7 +124,7 @@ const NSString *HAMSTER_REFLECTORS = @"Hamster/Reflectors.plist";
                     aReflector.ip = lineItems[1];
                     if (reflectorList[aReflector.name] == nil) {
                         reflectorList[aReflector.name] = aReflector;
-                        [_reflectors addObject:aReflector];
+                        [_reflectorGateways addObject:aReflector];
                     } else {
                         NSLog(@"Duplicate reflector: %@", aReflector.name);
                     }
@@ -129,7 +136,6 @@ const NSString *HAMSTER_REFLECTORS = @"Hamster/Reflectors.plist";
         }
     }
 }
-
 
 @end
 
