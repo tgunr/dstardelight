@@ -88,7 +88,8 @@ const NSString *HAMSTER_REFLECTORS = @"Hamster/Reflectors.plist";
     NSDate *today = [NSDate date];
     NSTimeInterval since = fabs([reflectorsUpdated timeIntervalSinceNow]);
     NSUInteger numGateways = self.reflectorGateways.count;
-    if (since > (24 * 60 * 60) | numGateways == 0) {
+    // TODO: Check monthly while debugging
+    if (since > (30 * 24 * 60 * 60) | numGateways == 0) {
             [self updateReflectors];
     }
 }
