@@ -17,24 +17,14 @@ extension QSOReflectorsViewController: NSTableViewDataSource{
         return count ?? 0
     }
 
-    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView?{
-        var result:NSTableCellView
-        result  = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "firstName"), owner: self) as! NSTableCellView
-        result.textField?.stringValue = "test"
-        return result
-    }
-
-    func tableView(_: NSTableView, objectValueFor: NSTableColumn?, row: Int) -> Any? {
+    func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
         let aReflector = reflectorGateways?.object(at: row) as? DSReflector
-        return aReflector
-        if let id = objectValueFor?.identifier.rawValue {
-            let column: NSTableColumn = (objectValueFor as? NSTableColumn)!
-            let columnView = column.tableView
-            switch id {
-            case "ReflectorName":
+        if let colID = tableColumn?.identifier.rawValue {
+            switch colID {
+            case "reflectorName":
                 return aReflector?.name
 
-            case "ReflectorIP":
+            case "reflectorIP":
                 return aReflector?.ip
 
             default:

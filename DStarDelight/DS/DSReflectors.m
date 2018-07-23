@@ -85,7 +85,6 @@ const NSString *HAMSTER_REFLECTORS = @"Hamster/Reflectors.plist";
 - (void)checkForOutDated {
     NSLog(@"DSReflectors: checkForOutDated");
     NSDate *reflectorsUpdated = [[NSUserDefaults standardUserDefaults] objectForKey:@"reflectorsUpdated"];
-    NSDate *today = [NSDate date];
     NSTimeInterval since = fabs([reflectorsUpdated timeIntervalSinceNow]);
     NSUInteger numGateways = self.reflectorGateways.count;
     // TODO: Check monthly while debugging
@@ -131,8 +130,8 @@ const NSString *HAMSTER_REFLECTORS = @"Hamster/Reflectors.plist";
                     }
                 }
                 // TODO: Debug code
-                if ([reflectorList count] > 2)
-                    break;
+//                if ([reflectorList count] > 2)
+//                    break;
             }
         }
     }
