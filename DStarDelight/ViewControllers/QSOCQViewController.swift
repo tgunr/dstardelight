@@ -1,6 +1,6 @@
 import MapKit
-import ProgressKit
-import DispatchFramework
+
+//import DispatchFramework
 
 #if os(OSX)
 import AppKit
@@ -60,46 +60,6 @@ struct StreamInfo {
     }
 }
 
-extension HQSOCQViewController: NSTableViewDataSource {
-    func numberOfRows(in tableView: NSTableView) -> Int {
-        let count = reflectors?.reflectorGateways.count
-        print("numberOfRows: \(count ?? 0)")
-        return count ?? 0
-    }
-
-    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView?{
-        var result:NSTableCellView
-        result  = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "firstName"), owner: self) as! NSTableCellView
-        result.textField?.stringValue = "test"
-        return result
-    }
-
-    func tableView(_: NSTableView, objectValueFor: NSTableColumn?, row: Int) -> Any? {
-        let aReflector = reflectorGateways?.object(at: row) as? DSReflector
-        if let object = objectValueFor?.identifier {
-            switch object.rawValue {
-            case "ReflectorName":
-                let value = object.rawValue
-                return aReflector?.name
-
-            case "ReflectorIP":
-                return aReflector?.ip
-
-            default:
-                return "NONE"
-            }
-        }
-        return "NONE"
-    }
-
-    func tableView(_ tableView: NSTableView, setObjectValue object: Any?, for tableColumn: NSTableColumn?, row: Int) {
-        let aReflector = reflectorGateways?.object(at: row) as? DSReflector
-
-    }
-
-}
-
-
 class HQSOCQViewController: NSViewController {
     private var qsoTimer: DispatchSource?
     private var txButtonState: Int = 0
@@ -126,7 +86,6 @@ class HQSOCQViewController: NSViewController {
     @IBOutlet weak var reflectorPopup: NSPopUpButton!
 
     @IBOutlet var connectReflector: NSButton!
-    @IBOutlet weak var spinnerView: Spinner!
     @IBOutlet var reflectorsTabViewItem: NSTabViewItem!
     
     // MARK: - Methods
@@ -143,7 +102,7 @@ class HQSOCQViewController: NSViewController {
 
      override func viewDidLoad() {
         reflectors = appDelegate.appReflectors
-        reflectorGateways = reflectors?.reflectorGateways
+//        reflectorGateways = reflectors?.reflectorGateways
     }
 
     func reflectorsAreReady() {
@@ -608,3 +567,43 @@ class HQSOCQViewController: NSViewController {
 //    }
 
 }
+
+extension HQSOCQViewController: NSTableViewDataSource {
+    func numberOfRows(in tableView: NSTableView) -> Int {
+        let count = reflectors?.reflectorGateways.count
+        print("numberOfRows: \(count ?? 0)")
+        return count ?? 0
+    }
+
+    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        var result: NSTableCellView
+        result = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "firstName"), owner: self) as! NSTableCellView
+        result.textField?.stringValue = "test"
+        return result
+    }
+
+    func tableView(_: NSTableView, objectValueFor: NSTableColumn?, row: Int) -> Any? {
+        let aReflector = reflectorGateways?.object(at: row) as? DSReflector
+        if let object = objectValueFor?.identifier {
+            switch object.rawValue {
+            case "ReflectorName":
+                let value = object.rawValue
+                return aReflector?.name
+
+            case "ReflectorIP":
+                return aReflector?.ip
+
+            default:
+                return "NONE"
+            }
+        }
+        return "NONE"
+    }
+
+    func tableView(_ tableView: NSTableView, setObjectValue object: Any?, for tableColumn: NSTableColumn?, row: Int) {
+        let aReflector = reflectorGateways?.object(at: row) as? DSReflector
+
+    }
+
+}
+

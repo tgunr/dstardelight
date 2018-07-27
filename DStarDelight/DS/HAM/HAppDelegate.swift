@@ -7,11 +7,27 @@
 //
 
 import AppKit
+import Log
+
+extension LogFormatters {
+    static let detailedPMN = LogFormatter("[%@] %@.%@:%@ %@: %@", [
+        .date("yyyy-MM-dd HH:mm:ss.SSS"),
+        .file(fullPath: false, fileExtension: false),
+        .function,
+        .line,
+        .level,
+        .message
+    ])
+}
+
+func HLog() -> Logger {
+    return (NSApplication.shared.delegate as! HAppDelegate).Log
+}
 
 @NSApplicationMain
 @objc class HAppDelegate: NSObject, NSApplicationDelegate {
     var appReflectors: DSReflectors?
-
+    var Log = Logger(formatter: LogFormatters.detailedPMN)
     let shared = NSApplication.shared.delegate
     
     //MARK: Data reading and writing functions
@@ -31,7 +47,9 @@ import AppKit
     }
     
     override func awakeFromNib() {
-        let audioHandler = DSAudioHandler()
+        HLog().info("Starting up...")
+        let audioHandler: DSAudioHandler? = nil
+//        let audioHandler = DSAudioHandler()
         DSVars.shared().audioHandler = audioHandler
 
         let path = Bundle.main.path(forResource: "DefaultPreferences", ofType: "plist")
@@ -40,7 +58,7 @@ import AppKit
             UserDefaults.standard.register(defaults: aPrefs as! [String : Any])
         }
         NotificationCenter.default.addObserver(self, selector: #selector(self.reflectorsAreReady(_:)), name: NSNotification.Name("reflectorsAreReady"), object: nil)
-        NSLog("HAppDelegate: finding reflectors")
+        HLog().info("load reflectors")
         appReflectors = DSReflectors()
     }
     
@@ -50,7 +68,7 @@ import AppKit
             appReflectors = reflectors
         }
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name("reflectorsAreReady"), object: nil)
-        print("HAppDelegate: reflectorsAreReady: %@", appReflectors?.reflectorGateways.count)
+        HLog().info("count: %@", appReflectors?.reflectorGateways.count)
     }
     
     func applicationWillFinishLaunching(_ aNotification: Notification) {
@@ -100,11 +118,12 @@ import AppKit
                 }
             }
         })
-        DispatchQueue.global(qos: .default).async(execute: {
-            engine.audio.start()
-            engine.audio.setOutputVolume(UserDefaults.standard.float(forKey: "outputVolume"))
-            engine.vocoder.start()
-        })
+// TODO: Enable audio
+//        DispatchQueue.global(qos: .default).async(execute: {
+//            engine.audio.start()
+//            engine.audio.setOutputVolume(UserDefaults.standard.float(forKey: "outputVolume"))
+//            engine.vocoder.start()
+//        })
     }
 
     func applicationDidFinishLaunching(_ notification: Notification) {

@@ -4,3 +4,4 @@
 
 #import "DStarEngine.h"
 #import "DStarDelight.h"
+#import <AutoCoding/AutoCoding.h>

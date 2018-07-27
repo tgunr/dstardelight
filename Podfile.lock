@@ -1,24 +1,28 @@
 PODS:
   - AutoCoding (2.2.3)
   - Dispatch (2.0.4)
-  - ProgressKit (0.7)
+  - Log (1.0)
+  - NSObjectCoder (1.0)
 
 DEPENDENCIES:
   - AutoCoding
   - Dispatch
-  - ProgressKit
+  - Log
+  - NSObjectCoder
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AutoCoding
     - Dispatch
-    - ProgressKit
+    - Log
+    - NSObjectCoder
 
 SPEC CHECKSUMS:
   AutoCoding: 90ca3cbc0d77a37cfff75167d705b44148c5fc51
   Dispatch: 7ed89f2845001c4161ad83f43988b584fae8fff4
-  ProgressKit: 47145a4a267a9b4262c481d8c46e1d527dd9e024
+  Log: 5e368c9528db07517d18d2d04ff5fe2b6f5a1e21
+  NSObjectCoder: edc8e96528ee81693d37dd014df573ca37ba9cac
 
-PODFILE CHECKSUM: f3c5c1889703efa40959876efac61923b412dafa
+PODFILE CHECKSUM: 2439a09c31c165e0d673d1b92d86f98e439b1a87
 
 COCOAPODS: 1.5.3

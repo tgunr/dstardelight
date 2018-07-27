@@ -9,55 +9,31 @@
 
 import AppKit
 
-// MARK: Data Source
-extension QSOReflectorsViewController: NSTableViewDataSource{
-    func numberOfRows(in tableView: NSTableView) -> Int {
-        let count = reflectors?.reflectorGateways.count
-        print("numberOfRows: \(count ?? 0)")
-        return count ?? 0
-    }
-
-    func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
-        let aReflector = reflectorGateways?.object(at: row) as? DSReflector
-        if let colID = tableColumn?.identifier.rawValue {
-            switch colID {
-            case "reflectorName":
-                return aReflector?.name
-
-            case "reflectorIP":
-                return aReflector?.ip
-
-            default:
-                return "NONE"
-            }
-        }
-        return "NONE"
-    }
-
-    func tableView(_ tableView: NSTableView, setObjectValue object: Any?, for tableColumn: NSTableColumn?, row: Int) {
-        let aReflector = reflectorGateways?.object(at: row) as? DSReflector
-
-    }
-
-}
-
 class QSOReflectorsViewController: NSViewController  {
     var reflectors: DSReflectors?
-    var reflectorGateways: NSMutableArray?
+    var reflectorGateways: [DSReflector]?
         
     let appDelegate = NSApplication.shared.delegate as! HAppDelegate
 
     @IBOutlet var reflectorsTableView: NSTableView!
     @IBOutlet var reflectorsArrayController: NSArrayController!
-    
-// MARK: View Methods
+    @IBOutlet var updateNowButton: NSButton!
+    @IBOutlet var updateWhenPopUp: NSPopUpButton!
+
+    @IBOutlet var progressView: NSProgressIndicator!
+
+    // MARK: View Methods
     override func awakeFromNib() {
+        HLog().debug("")
         reflectors = appDelegate.appReflectors
         reflectorGateways = reflectors?.reflectorGateways
         reflectorsArrayController = NSArrayController.init(content: reflectorGateways)
-        
     }
+
     override func viewDidLoad() {
+        HLog().debug("")
+        progressView.isHidden = false
+        progressView.startAnimation(self)
 //        reflectorsTableView.registerForDraggedTypes([NSPasteboard.PasteboardType(rawValue: "net.polymicro.Dummy.reflector")])
 //        reflectorsTableView.dataSource = self as? NSTableViewDataSource
 //        reflectorsTableView.delegate = (self as! NSTableViewDelegate)
@@ -69,7 +45,31 @@ class QSOReflectorsViewController: NSViewController  {
 //        })
     }
 
-// MARK: Reflector Drag and Drop support
+    // MARK: Actions
+    @objc
+    func reflectorsAreReady(_ notification: Notification?) {
+        let newReflectors: DSReflectors = notification?.object as! DSReflectors
+        reflectors = newReflectors
+        progressView.stopAnimation(self)
+        reflectorsTableView.reloadData()
+//        NotificationCenter.default.removeObserver(self, name: NSNotification.Name("reflectorsAreReady"), object: nil)
+    }
+
+    @IBAction func updateNow(_ sender: Any) {
+        NotificationCenter.default.addObserver(self, selector: #selector(self.reflectorsAreReady(_:)), name: NSNotification.Name("reflectorsAreReady"), object: nil)
+        reflectors = nil
+        progressView.startAnimation(self)
+        let aCoder = NSCoder()
+        reflectors = DSReflectors(coder: aCoder)
+        reflectors?.reload()
+        reflectorsTableView.reloadData()
+    }
+
+    @IBAction func updateWhen(_ sender: Any) {
+    }
+
+
+    // MARK: Reflector Drag and Drop support
 
 //    func tableView(_ tableView: NSTableView, pasteboardWriterForRow row: Int) -> NSPasteboardWriting? {
 //        if tableView != reflectorsTableView {
@@ -119,3 +119,36 @@ class QSOReflectorsViewController: NSViewController  {
         self.reflectorsTableView.reloadData()
     }
 }
+
+// MARK: Data Source
+extension QSOReflectorsViewController: NSTableViewDataSource {
+    func numberOfRows(in tableView: NSTableView) -> Int {
+        let count = reflectors?.reflectorGateways.count
+        HLog().debug("numberOfRows: \(count ?? 0)")
+        return count ?? 0
+    }
+
+    func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
+        let aReflector = reflectorGateways![row] as? DSReflector
+        if let colID = tableColumn?.identifier.rawValue {
+            switch colID {
+            case "reflectorName":
+                return aReflector?.name
+
+            case "reflectorIP":
+                return aReflector?.ip
+
+            default:
+                return "NONE"
+            }
+        }
+        return "NONE"
+    }
+
+    func tableView(_ tableView: NSTableView, setObjectValue object: Any?, for tableColumn: NSTableColumn?, row: Int) {
+        let aReflector = reflectorGateways?[row] as? DSReflector
+
+    }
+
+}
+

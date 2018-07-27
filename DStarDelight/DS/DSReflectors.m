@@ -16,55 +16,49 @@ const NSString *SOURCE_HEADER = @"# Prepared at ar-dns.net - ";
 const NSString *HAMSTER_APPSUPPORT = @"Hamster";
 const NSString *HAMSTER_REFLECTORS = @"Hamster/Reflectors.plist";
 
-- (DSReflectors *)init {
-    self = [super init];
-    if (self) {
-        _reflectorSources = [NSMutableArray arrayWithCapacity:5];
-        _reflectorGateways = [NSMutableArray arrayWithCapacity:0];
+- (DSReflectors *)savedReflectors {
+    _reflectorSources = [NSMutableArray arrayWithCapacity:5];
+    _reflectorGateways = [NSMutableArray arrayWithCapacity:0];
 
-        NSError *error = nil;
-        BOOL result = false;
+    NSURL *reflectorsURL = [self reflectorsURL];
+    // See if we have a saved list
+    DSReflectors *reflectorList = [DSReflectors objectWithContentsOfFile:[reflectorsURL path]];
 
-        NSFileManager *fileManager = [[NSFileManager alloc] init];
-        // Saved appReflectors are in the Application Support folder
-        NSURL *dir = [fileManager URLForDirectory:NSApplicationSupportDirectory
-                                         inDomain:NSUserDomainMask
-                                appropriateForURL:nil
-                                           create:YES
-                                            error:&error];
-        if (error) {
-            NSLog(@"Error finding app support directory %@", error);
-        }
-        // folder = reference to Application Support
-        NSURL *folder = [[NSURL alloc] initFileURLWithPath:[dir path] isDirectory:YES];
-        NSURL *appSupportFolderURL = [NSURL URLWithString:HAMSTER_APPSUPPORT relativeToURL:folder];
-        NSURL *hamsterReflectorsURL = [NSURL URLWithString:(NSString *) HAMSTER_REFLECTORS relativeToURL:folder];
-        result = [[NSFileManager defaultManager] createDirectoryAtURL:appSupportFolderURL withIntermediateDirectories:NO attributes:nil error:&error];
-
-        if (result != 0) {
-            NSLog(@"Could not create Application Support folder for Hamster");
-            return self;
-        }
-        // See if we have a saved list
-        DSReflectors *savedReflectors = [DSReflectors objectWithContentsOfFile: [hamsterReflectorsURL path]];
-
-        if (savedReflectors == nil |
-                savedReflectors.reflectorGateways == nil |
-                savedReflectors.reflectorGateways.count == 0) { // no list, so create one and save it
-            // Do this async as it takes a few seconds to gather the data
-            [self loadReflectors: hamsterReflectorsURL];
-        } else {
-            [savedReflectors checkForOutDated];
-            self = savedReflectors;
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"reflectorsAreReady" object:savedReflectors];
-        }
+    if (reflectorList == nil | reflectorList.reflectorGateways == nil | reflectorList.reflectorGateways.count == 0) { // no list, so create one and save it
+        // Do this async as it takes a few seconds to gather the data
+        [self loadReflectors:reflectorsURL];
+    } else {
+        [reflectorList checkForOutDated];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"reflectorsAreReady" object:reflectorList];
     }
     return self;
 }
 
+- (NSURL *)reflectorsURL {
+    NSError *error = nil;
+
+    NSFileManager *fileManager = [[NSFileManager alloc] init];
+    // Saved appReflectors are in the Application Support folder
+    NSURL *dir = [fileManager URLForDirectory:NSApplicationSupportDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:YES error:&error];
+    if (error) {
+        NSLog(@"Error finding app support directory %@", error);
+    }
+    // folder = reference to Application Support
+    NSURL *folder = [[NSURL alloc] initFileURLWithPath:[dir path] isDirectory:YES];
+    NSURL *appSupportFolderURL = [NSURL URLWithString:HAMSTER_APPSUPPORT relativeToURL:folder];
+    NSURL *hamsterReflectorsURL = [NSURL URLWithString:(NSString *) HAMSTER_REFLECTORS relativeToURL:folder];
+    BOOL result = [[NSFileManager defaultManager] createDirectoryAtURL:appSupportFolderURL withIntermediateDirectories:NO attributes:nil error:&error];
+
+    if (result != 0) {
+        NSLog(@"Could not create Application Support folder for Hamster");
+    }
+
+    return hamsterReflectorsURL;
+}
+
 // checkOutOfDate looks for the default list of sources in the preferences
 // then pings them to see if alive. If alive, the source is added to the list for sources.
-- (void)loadReflectors:(NSURL *)url {
+- (void)asyncLoadReflectors:(NSURL *)url usingBlock:(void (^)(void))block {
     dispatch_async(dispatch_get_main_queue(), ^{
         NSLog(@"DSReflectors: loadReflectors");
         NSArray *reflectorSourceDefaults = [[NSUserDefaults standardUserDefaults] objectForKey:@"reflectorSources"];
@@ -75,16 +69,33 @@ const NSString *HAMSTER_REFLECTORS = @"Hamster/Reflectors.plist";
                 [self.reflectorSources addObject:reflectorSource];
             }
         }
+        block();
+    });
+
+}
+
+- (void)loadReflectors:(NSURL *)url {
+    [self asyncLoadReflectors:url usingBlock:^{
         [self checkForOutDated];
         [self writeToFile:[url path] atomically:YES];
         [[NSNotificationCenter defaultCenter] postNotificationName:@"reflectorsAreReady" object:self];
-    });
+    }];
+}
 
+- (void)reloadReflectors {
+    NSURL *reflectorsURL = [self reflectorsURL];
+    [self asyncLoadReflectors:reflectorsURL usingBlock:^{
+        [self updateReflectors];
+        NSURL *reflectorsURL = [self reflectorsURL];
+        [self writeToFile:[reflectorsURL path] atomically:YES];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"reflectorsAreReady" object:self];
+    }];
 }
 
 - (void)checkForOutDated {
     NSLog(@"DSReflectors: checkForOutDated");
     NSDate *reflectorsUpdated = [[NSUserDefaults standardUserDefaults] objectForKey:@"reflectorsUpdated"];
+
     NSTimeInterval since = fabs([reflectorsUpdated timeIntervalSinceNow]);
     NSUInteger numGateways = self.reflectorGateways.count;
     // TODO: Check monthly while debugging
@@ -130,11 +141,14 @@ const NSString *HAMSTER_REFLECTORS = @"Hamster/Reflectors.plist";
                     }
                 }
                 // TODO: Debug code
-//                if ([reflectorList count] > 2)
-//                    break;
+                if ([reflectorList count] > 2)
+                    break;
             }
         }
     }
+    NSDate *today = [NSDate date];
+    [[NSUserDefaults standardUserDefaults] setObject:today forKey:@"reflectorsUpdated"];
+    
 }
 
 @end

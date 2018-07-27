@@ -1,13 +1,9 @@
 
 #import "DSAudioHandler.h"
 
-#import <Foundation/Foundation.h>
-#import <AudioUnit/AudioUnit.h>
-#import <AudioToolbox/AudioToolbox.h>
 #import "TPCircularBuffer.h"
 #import "TPCircularBuffer+AudioBufferList.h"
 #import "DSEVocoderDriver.h"
-#import "DSELinkDriverProtocol.h"
 
 static const AudioComponentDescription componentDescription = {
     .componentType = kAudioUnitType_Output,
@@ -167,8 +163,8 @@ static OSStatus AudioDevicesChanged(AudioObjectID inObjectID, UInt32 inNumberAdd
             kAudioObjectPropertyScopeGlobal,
             kAudioObjectPropertyElementMaster
         };
-        
-        AudioObjectAddPropertyListener(kAudioObjectSystemObject, &propertyAddress, AudioDevicesChanged, (__bridge void *) self);
+//        TODO: Why does this hang?
+//        AudioObjectAddPropertyListener(kAudioObjectSystemObject, &propertyAddress, AudioDevicesChanged, (__bridge void *) self);
     }
     
     return self;

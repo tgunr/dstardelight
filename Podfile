@@ -7,13 +7,14 @@ target 'DStarDelight' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   project 'DStarDelight/DStarDelight.xcodeproj'
-  platform :osx, 10.13
+  platform :osx, 10.14
   inherit! :search_paths
 
   # Pods for DStarDelight
-  pod 'AutoCoding'
-  pod 'ProgressKit'
   pod 'Dispatch'
+  pod 'NSObjectCoder'
+  pod 'AutoCoding'
+  pod 'Log'
 
   target 'DStarDelightUITests' do
     inherit! :search_paths

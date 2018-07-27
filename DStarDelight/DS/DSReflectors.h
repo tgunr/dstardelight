@@ -20,9 +20,15 @@ extern const NSString *SOURCE_HEADER;
 // Dictionary of reflector
 @property NSMutableArray *reflectorGateways;
 
-- (DSReflectors *)init;
+- (DSReflectors *)savedReflectors;
+
+- (NSURL *)reflectorsURL;
+
+- (void)asyncLoadReflectors:(NSURL *)url usingBlock:(void (^)(void))block;
 
 - (void)loadReflectors:(NSURL *)url;
+
+- (void)reloadReflectors;
 
 - (void)checkForOutDated;
 
