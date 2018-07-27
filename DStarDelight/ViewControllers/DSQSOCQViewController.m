@@ -26,7 +26,6 @@
 @implementation QSOCQViewController
 
 - (void)reflectorsAreReady {
-    [self.spinnerView removeFromSuperview];
 }
 
 +(NSUInteger)findQsoId:(NSNumber *)streamId inArray:(NSArray *)array {
@@ -217,7 +216,6 @@
 
     self.volumeSlider.floatValue = [[NSUserDefaults standardUserDefaults] floatForKey:@"outputVolume"];
 
-//    self.spinnerView.animate = true;
     [[DSVars shared] setQSOCQController: self];
 
 }

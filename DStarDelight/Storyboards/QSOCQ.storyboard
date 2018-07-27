@@ -472,8 +472,8 @@
                         <outlet property="heardTableController" destination="uew-ju-c1o" id="xTd-YJ-yUf"/>
                         <outlet property="heardTableView" destination="QBK-EF-Ocj" id="9lM-DJ-Kt7"/>
                         <outlet property="reflectorPopup" destination="SBV-gd-8SH" id="EF8-Cx-zZx"/>
-                        <outlet property="spinnerView" destination="Z9Z-ka-0wG" id="Tlh-cJ-tyF"/>
                         <outlet property="statusLED" destination="Crk-am-YhE" id="eRa-rE-Ajv"/>
+                        <outlet property="transmitButton" destination="9Yf-zL-qoe" id="wcY-cr-S0O"/>
                         <outlet property="volumeSlider" destination="fHs-9A-5ZW" id="1p6-6C-F8v"/>
                     </connections>
                 </viewController>

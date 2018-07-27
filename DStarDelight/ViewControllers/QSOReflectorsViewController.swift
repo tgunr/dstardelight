@@ -12,16 +12,21 @@ import AppKit
 class QSOReflectorsViewController: NSViewController  {
     var reflectors: DSReflectors?
     var reflectorGateways: [DSReflector]?
-        
+    var updateWhenButtons: [NSButton]!
+    
     let appDelegate = NSApplication.shared.delegate as! HAppDelegate
 
     @IBOutlet var reflectorsTableView: NSTableView!
+    @IBOutlet var enabledTableView: NSTableView!
     @IBOutlet var reflectorsArrayController: NSArrayController!
     @IBOutlet var updateNowButton: NSButton!
-    @IBOutlet var updateWhenPopUp: NSPopUpButton!
-
     @IBOutlet var progressView: NSProgressIndicator!
-
+    @IBOutlet var updateDailyButton: NSButton!
+    @IBOutlet var updateWeeklyButton: NSButton!
+    @IBOutlet var updateMonthlyButton: NSButton!
+    @IBOutlet var enableButton: NSButton!
+    @IBOutlet var disableButton: NSButton!
+    
     // MARK: View Methods
     override func awakeFromNib() {
         HLog().debug("")
@@ -34,6 +39,7 @@ class QSOReflectorsViewController: NSViewController  {
         HLog().debug("")
         progressView.isHidden = false
         progressView.startAnimation(self)
+        updateWhenButtons = [updateDailyButton, updateWeeklyButton, updateMonthlyButton]
 //        reflectorsTableView.registerForDraggedTypes([NSPasteboard.PasteboardType(rawValue: "net.polymicro.Dummy.reflector")])
 //        reflectorsTableView.dataSource = self as? NSTableViewDataSource
 //        reflectorsTableView.delegate = (self as! NSTableViewDelegate)
@@ -52,23 +58,33 @@ class QSOReflectorsViewController: NSViewController  {
         reflectors = newReflectors
         progressView.stopAnimation(self)
         reflectorsTableView.reloadData()
-//        NotificationCenter.default.removeObserver(self, name: NSNotification.Name("reflectorsAreReady"), object: nil)
+    }
+
+    @objc
+    func newReflectorFound(_ notification: Notification?) {
+        let newReflector: DSReflector = notification?.object as! DSReflector
+        HLog().debug("New reflector found", newReflector.name )
     }
 
     @IBAction func updateNow(_ sender: Any) {
-        NotificationCenter.default.addObserver(self, selector: #selector(self.reflectorsAreReady(_:)), name: NSNotification.Name("reflectorsAreReady"), object: nil)
-        reflectors = nil
+        NotificationCenter.default.addObserver(self, selector: #selector(self.reflectorsAreReady(_:)), name: NSNotification.Name(REFLECTORS_READY), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.newReflectorFound(_:)), name: NSNotification.Name(NEW_REFLECTOR_FOUND), object: nil)
         progressView.startAnimation(self)
-        let aCoder = NSCoder()
-        reflectors = DSReflectors(coder: aCoder)
-        reflectors?.reload()
+        reflectors?.reloadReflectors()
         reflectorsTableView.reloadData()
     }
 
-    @IBAction func updateWhen(_ sender: Any) {
+    @IBAction func updateWhen(_ sender: NSButton) {
+        updateWhenButtons.forEach { $0.state = NSControl.StateValue.off } // uncheck everything
+        sender.state = NSControl.StateValue.on // check the button that is clicked o
     }
 
-
+    @IBAction func enableClicked(_ sender: NSButton) {
+    }
+    
+    @IBAction func disableClicked(_ sender: NSButton) {
+    }
+    
     // MARK: Reflector Drag and Drop support
 
 //    func tableView(_ tableView: NSTableView, pasteboardWriterForRow row: Int) -> NSPasteboardWriting? {

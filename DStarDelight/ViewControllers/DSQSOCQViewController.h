@@ -18,7 +18,6 @@
 @property (weak) IBOutlet NSSlider *volumeSlider;
 @property (weak) IBOutlet NSPopUpButton *reflectorPopup;
 @property (weak) IBOutlet NSButton *connectReflector;
-@property (weak) IBOutlet Spinner *spinnerView;
 
 
 //- (IBAction)doHeardDoubleClick:(id)sender;

@@ -106,7 +106,6 @@ class HQSOCQViewController: NSViewController {
     }
 
     func reflectorsAreReady() {
-//        spinnerView.removeFromSuperview()
     }
 
     func updateQsoId(_ streamId: Int?, usingBlock block: @escaping ([AnyHashable : Any], Int) -> Void) -> Bool {
@@ -312,7 +311,6 @@ class HQSOCQViewController: NSViewController {
 //        geocoder = CLGeocoder()
 //        assert(geocoder != nil, "Geocoder did not initialize")
 //        volumeSlider = UserDefaults.standard.float(forKey: "outputVolume")
-//        //    self.spinnerView.animate = true;
 //        DSVars.shared().QSOCQController = self
 //    }
 //
