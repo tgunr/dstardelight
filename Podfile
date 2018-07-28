@@ -15,6 +15,8 @@ target 'DStarDelight' do
   pod 'NSObjectCoder'
   pod 'AutoCoding'
   pod 'Log'
+  pod 'RxSwift',    '~> 4.0'
+  pod 'RxCocoa',    '~> 4.0'
 
   target 'DStarDelightUITests' do
     inherit! :search_paths

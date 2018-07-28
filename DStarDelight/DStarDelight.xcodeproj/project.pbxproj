@@ -13,6 +13,7 @@
 		5AF0D5E3A2022B514A54F9A5 /* QSOReflectorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0DA9023BE9883E0F226F6 /* QSOReflectorsViewController.swift */; };
 		5AF0D5FDEB456747948CA079 /* DSReflector.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0DEAA7E639B3A9DFB23D6 /* DSReflector.m */; };
 		5AF0DBD49E8F2A3D71D578CA /* DSReflectorSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0D277132C9C8DDC2BA453 /* DSReflectorSource.swift */; };
+		5AF0DC90CFC4D94236DAEC66 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0D470E5607AF1817F92C8 /* UserDefaultsManager.swift */; };
 		5AF0DCCFE53D78E395758293 /* DSReflectorSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0D1EE2654818086ADD427 /* DSReflectorSource.m */; };
 		5AF0DD1DFA0B72DF2152DD85 /* QSOCQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0D45150A3F674E7786E24 /* QSOCQViewController.swift */; };
 		6891CE84592F68FFD75B9580 /* Pods_DStarDelightUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC981FCCF635432B44467462 /* Pods_DStarDelightUITests.framework */; };
@@ -93,6 +94,7 @@
 		5AF0D1EE2654818086ADD427 /* DSReflectorSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSReflectorSource.m; sourceTree = "<group>"; };
 		5AF0D277132C9C8DDC2BA453 /* DSReflectorSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSReflectorSource.swift; sourceTree = "<group>"; };
 		5AF0D45150A3F674E7786E24 /* QSOCQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QSOCQViewController.swift; sourceTree = "<group>"; };
+		5AF0D470E5607AF1817F92C8 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		5AF0DA2A2556E4A0462FF4AE /* QSOViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QSOViewController.swift; sourceTree = "<group>"; };
 		5AF0DA883D5FDE102EDB2370 /* DSReflector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSReflector.h; sourceTree = "<group>"; };
 		5AF0DA9023BE9883E0F226F6 /* QSOReflectorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QSOReflectorsViewController.swift; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				755A2EAA20FB7974003A11F1 /* HAppDelegate.swift */,
+				5AF0D470E5607AF1817F92C8 /* UserDefaultsManager.swift */,
 			);
 			name = HAM;
 			path = DS/HAM;
@@ -621,6 +624,8 @@
 				"${BUILT_PRODUCTS_DIR}/Dispatch/DispatchFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/Log/Log.framework",
 				"${BUILT_PRODUCTS_DIR}/NSObjectCoder/NSObjectCoder.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -628,6 +633,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DispatchFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Log.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NSObjectCoder.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -720,6 +727,7 @@
 				5AF0D3624E640F9B5524CE55 /* DSReflectors.swift in Sources */,
 				5AF0DBD49E8F2A3D71D578CA /* DSReflectorSource.swift in Sources */,
 				5AF0D33B78ACA2B70A064F00 /* DSReflector.swift in Sources */,
+				5AF0DC90CFC4D94236DAEC66 /* UserDefaultsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
