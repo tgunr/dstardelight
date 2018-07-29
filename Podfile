@@ -13,7 +13,6 @@ target 'DStarDelight' do
   # Pods for DStarDelight
   pod 'Dispatch'
   pod 'NSObjectCoder'
-  pod 'AutoCoding'
   pod 'Log'
   pod 'RxSwift',    '~> 4.0'
   pod 'RxCocoa',    '~> 4.0'

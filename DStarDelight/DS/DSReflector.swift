@@ -8,6 +8,7 @@ import Foundation
 
 // References a reflector
 class DSReflector: NSObject {
+
     var name = ""
     var ip = ""
     var active = false
@@ -17,32 +18,31 @@ class DSReflector: NSObject {
     }
 
     required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
 
         self.name = ""
         self.ip = ""
         self.active = false
-        super.init()
 
         if let archivedName = aDecoder.decodeObject(forKey: "reflectorName") as? String {
             self.name = archivedName
         }
 
-        if let archiveIP: String = aDecoder.decodeObject(forKey: "reflectorIP") as? String {
+        if let archiveIP = aDecoder.decodeObject(forKey: "reflectorIP") as? String {
             self.ip = archiveIP
         }
 
-        if aDecoder.containsValue(forKey: "reflectorActive") {
-            self.active = aDecoder.decodeBool(forKey: "reflectorActive")
+        if let isActive: Bool = aDecoder.decodeBool(forKey: "reflectorActive") {
+            self.active = isActive
         }
-
     }
 
-//
-//    override func encode(with aCoder: NSCoder) {
-//        aCoder.encode(name, forKey: "reflectorName")
-//        aCoder.encode(ip, forKey: "reflectorIP")
-//        aCoder.encode(active, forKey: "reflectorActive")
-//
-//    }
+
+    override func encode(with aCoder: NSCoder) {
+        aCoder.encode(name, forKey: "reflectorName")
+        aCoder.encode(ip, forKey: "reflectorIP")
+        aCoder.encode(active, forKey: "reflectorActive")
+        super.encode(with: aCoder)
+    }
 
 }

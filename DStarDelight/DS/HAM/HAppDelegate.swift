@@ -27,7 +27,7 @@ func HLog() -> Logger {
 @NSApplicationMain
 @objc class HAppDelegate: NSObject, NSApplicationDelegate {
     var appReflectors: DSReflectors?
-    var Log = Logger(formatter: LogFormatters.detailedPMN)
+    var Log = Logger(formatter: LogFormatters.detailedPMN, minLevel: .debug)
     let shared = NSApplication.shared.delegate
     
     //MARK: Data reading and writing functions
@@ -59,7 +59,7 @@ func HLog() -> Logger {
         }
         NotificationCenter.default.addObserver(self, selector: #selector(self.reflectorsAreReady(_:)), name: NSNotification.Name(REFLECTORS_READY), object: nil)
         HLog().debug("load reflectors")
-        appReflectors = DSReflectors()
+        appReflectors = DSReflectors().loadSavedReflectors()
     }
     
     @objc func reflectorsAreReady(_ notification: Notification?) {

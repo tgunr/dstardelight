@@ -32,11 +32,13 @@ class DSReflectorSource: DSReflector {
     }
 
     required init?(coder aDecoder: NSCoder) {
+        HLog().debug("")
+
+        super.init(coder: aDecoder)
 
         self.sourceURL = nil
         self.lastResponse = nil
         self.lastUpdate = nil
-        super.init(coder: aDecoder)
 
         if let archivedURL: URL = aDecoder.decodeObject(forKey: "reflectorURL") as? URL {
             self.sourceURL = archivedURL
@@ -47,15 +49,17 @@ class DSReflectorSource: DSReflector {
         }
 
         if aDecoder.containsValue(forKey: "reflectorLastUpdate") {
+            self.active = ( aDecoder.decodeObject(forKey: "reflectorLastUpdate") != nil )
         }
-        self.active = (aDecoder.decodeObject(forKey: "reflectorLastUpdate") != nil)
+
     }
 
 
     override func encode(with aCoder: NSCoder) {
+        HLog().debug("")
         aCoder.encode(sourceURL, forKey: "reflectorURL")
-        aCoder.encode(lastResponse, forKey: "reflectorError")
         aCoder.encode(lastUpdate, forKey: "reflectorLastUpdate")
+        super.encode(with: aCoder)
     }
 
     func testURL() {

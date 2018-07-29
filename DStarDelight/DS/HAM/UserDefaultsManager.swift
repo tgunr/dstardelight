@@ -4,13 +4,15 @@
 //
 
 import Foundation
+import Log
 
 enum UpdateFrequency: Int {
     case daily = 1, weekly = 7, monthly = 30
 }
 
+
 let kUpdateFrequencyDefaultsKey  = "updateFrequency"
-let kSavedEnvironmentDefaultsKey = "environmentDefault"
+let kLogLevel = "logLevel"
 
 class UserDefaultsManager {
 
@@ -27,5 +29,4 @@ class UserDefaultsManager {
             UserDefaults.standard.set(updateFrequency?.rawValue, forKey: kUpdateFrequencyDefaultsKey)
         }
     }
-
 }

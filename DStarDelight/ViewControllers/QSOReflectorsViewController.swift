@@ -30,17 +30,21 @@ class QSOReflectorsViewController: NSViewController  {
     
     // MARK: View Methods
     override func awakeFromNib() {
+        super.awakeFromNib()
         HLog().debug("")
-        reflectorsPending = true
+    }
+
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        HLog().debug("")
+        progressView.isHidden = true
+        reflectorsPending = false
         reflectors = appDelegate.appReflectors
         reflectorGateways = reflectors?.reflectorGateways
         NotificationCenter.default.addObserver(self, selector: #selector(self.reflectorsAreReady(_:)), name: NSNotification.Name(REFLECTORS_READY), object: nil)
-    }
 
-    override func viewDidLoad() {
-        HLog().debug("")
         updateWhenButtons = [updateDailyButton, updateWeeklyButton, updateMonthlyButton]
-        progressView.isHidden = true
         updateWhenButtons.forEach { $0.state = NSControl.StateValue.off } // uncheck everything
         if let updateFrequency = UserDefaultsManager.shared.updateFrequency {
             switch updateFrequency {
@@ -52,7 +56,7 @@ class QSOReflectorsViewController: NSViewController  {
                     updateMonthlyButton.state = NSControl.StateValue.on // check the button that is clicked
             }
         } else {
-            HLog().error("environment data not saved in UserDefaults")
+            HLog().error("updateFrequency data not saved in UserDefaults")
         }
 
 //        reflectorsTableView.registerForDraggedTypes([NSPasteboard.PasteboardType(rawValue: "net.polymicro.Dummy.reflector")])
@@ -67,6 +71,7 @@ class QSOReflectorsViewController: NSViewController  {
     }
 
     override func viewDidAppear() {
+        super.viewDidAppear()
         if reflectorsPending {
             if progressView != nil {
                 progressView.isHidden = false
@@ -107,7 +112,7 @@ class QSOReflectorsViewController: NSViewController  {
     @objc
     func newReflectorFound(_ notification: Notification?) {
         let newReflector: DSReflector = notification?.object as! DSReflector
-        HLog().debug("New reflector found", newReflector.name )
+        HLog().trace("New reflector found", newReflector.name )
     }
 
     @IBAction func updateNow(_ sender: Any) {
@@ -128,7 +133,7 @@ class QSOReflectorsViewController: NSViewController  {
             defaultsManager.updateFrequency = UpdateFrequency.daily
         case "Weekly":
             defaultsManager.updateFrequency = UpdateFrequency.weekly
-        case "Montly":
+        case "Monthly":
             defaultsManager.updateFrequency = UpdateFrequency.monthly
         default:
             defaultsManager.updateFrequency = UpdateFrequency.weekly
@@ -136,9 +141,11 @@ class QSOReflectorsViewController: NSViewController  {
     }
 
     @IBAction func enableClicked(_ sender: NSButton) {
+        progressView.isHidden = true
     }
     
     @IBAction func disableClicked(_ sender: NSButton) {
+        progressView.isHidden = false
     }
     
     // MARK: Drag and Drop support

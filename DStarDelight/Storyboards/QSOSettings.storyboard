@@ -9,11 +9,73 @@
         <!--Settings-->
         <scene sceneID="9lQ-Lw-eqB">
             <objects>
-                <viewController title="Settings" id="53L-H2-qQg" customClass="DSQSOSettingsViewController" sceneMemberID="viewController">
+                <viewController title="Settings" id="53L-H2-qQg" customClass="QSOSettingsViewController" customModule="DStarDelight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="IU6-zr-SIM">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <box autoresizesSubviews="NO" fixedFrame="YES" borderType="line" title="Minimum Logging" translatesAutoresizingMaskIntoConstraints="NO" id="2OX-3g-nqs">
+                                <rect key="frame" x="17" y="139" width="129" height="141"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <view key="contentView" id="hmx-nL-B3V">
+                                    <rect key="frame" x="3" y="3" width="123" height="122"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4R7-03-HP4">
+                                            <rect key="frame" x="19" y="41" width="71" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="radio" title="Info" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="EbV-t8-gBW">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="logLevelClick:" target="53L-H2-qQg" id="ql2-rV-2Qu"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="03Y-RG-VZc">
+                                            <rect key="frame" x="19" y="85" width="71" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="radio" title="Trace" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="sp8-RF-6Eu">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="logLevelClick:" target="53L-H2-qQg" id="CQf-em-Tvf"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c7c-Kq-6e5">
+                                            <rect key="frame" x="19" y="63" width="71" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="radio" title="Debug" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="yOf-kL-rDh">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="logLevelClick:" target="53L-H2-qQg" id="Hnb-yf-Cg2"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yKD-PL-16S">
+                                            <rect key="frame" x="19" y="19" width="72" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="radio" title="Warning" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="tU5-6o-QLP">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="logLevelClick:" target="53L-H2-qQg" id="I2w-aI-kIi"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </view>
+                            </box>
+                        </subviews>
                     </view>
+                    <connections>
+                        <outlet property="debugButton" destination="c7c-Kq-6e5" id="JRD-Xz-NCj"/>
+                        <outlet property="infoButton" destination="4R7-03-HP4" id="6XD-Ub-0bq"/>
+                        <outlet property="traceButton" destination="03Y-RG-VZc" id="lOm-SS-zZn"/>
+                        <outlet property="warningButton" destination="yKD-PL-16S" id="9J2-5O-aVm"/>
+                    </connections>
                 </viewController>
                 <customObject id="Ohh-KQ-Q1V" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
