@@ -157,7 +157,7 @@ class DSReflectors: NSObject {
         do {
             sourceContent = try String(contentsOf: aSourceURL!)
         } catch {
-            HLog().info("DSReflectors: update: Error loading sources from %@", aSourceURL)
+            HLog().error("DSReflectors: update: Error loading sources from %@", aSourceURL)
             return
         }
         let contentLines = sourceContent?.components(separatedBy: lineSet)
