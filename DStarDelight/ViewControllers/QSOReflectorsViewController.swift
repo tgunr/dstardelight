@@ -155,6 +155,7 @@ class QSOReflectorsViewController: NSViewController  {
         let selection = reflectorsTableView.selectedRow
         if selection >= 0 {
             reflectorGateways()![selection].active = true
+            reflectors?.saveReflectorsToFile()
             enabledTableView.reloadData()
         } else {
             AudioServicesPlaySystemSound(kSystemSoundID_UserPreferredAlert)
@@ -165,6 +166,7 @@ class QSOReflectorsViewController: NSViewController  {
         let selection = enabledTableView.selectedRow
         if selection >= 0 {
             reflectorsActive()![ selection ].active = false
+            reflectors?.saveReflectorsToFile()
             enabledTableView.reloadData()
         } else {
             AudioServicesPlaySystemSound(kSystemSoundID_UserPreferredAlert)
