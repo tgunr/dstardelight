@@ -150,6 +150,7 @@ class QSOReflectorsViewController: NSViewController  {
         }
     }
 
+    // TODO: enable/disable according to focus
     @IBAction func enableClicked(_ sender: NSButton) {
         let selection = reflectorsTableView.selectedRow
         if selection >= 0 {
