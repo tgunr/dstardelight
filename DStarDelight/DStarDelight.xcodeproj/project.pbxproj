@@ -183,7 +183,6 @@
 		756A40C220EC60D8003A11F1 /* DSELinkDriverProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSELinkDriverProtocol.h; sourceTree = "<group>"; };
 		756A40C320EC60D8003A11F1 /* DSESlowDataCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSESlowDataCoder.h; sourceTree = "<group>"; };
 		756A40D020EC610C003A11F1 /* DStarEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DStarEngine.h; sourceTree = "<group>"; };
-		758A88902106741C003A11F1 /* AutoCoding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AutoCoding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		758B49BF20E41302003A11F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../../Old/DStarDelight/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		758B49CA20E41BD8003A11F1 /* DSAddPopupController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSAddPopupController.xib; sourceTree = "<group>"; };
 		758B49CC20E41C92003A11F1 /* DefaultPreferences.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DefaultPreferences.plist; sourceTree = "<group>"; };
@@ -359,7 +358,6 @@
 		757DEE9920E6D98E003A11F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				758A88902106741C003A11F1 /* AutoCoding.framework */,
 				8EBFD5970E5D8ACF1425391D /* Pods_DStarDelight.framework */,
 				FC981FCCF635432B44467462 /* Pods_DStarDelightUITests.framework */,
 				5AF0D35F699DEC13772B965E /* ArchiverEasy */,
@@ -654,7 +652,6 @@
 				"${BUILT_PRODUCTS_DIR}/Dispatch/DispatchFramework.framework",
 				"${BUILT_PRODUCTS_DIR}/Log/Log.framework",
 				"${BUILT_PRODUCTS_DIR}/NSObjectCoder/NSObjectCoder.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -663,7 +660,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DispatchFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Log.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NSObjectCoder.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
