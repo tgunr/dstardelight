@@ -3,8 +3,6 @@ PODS:
   - Dispatch (2.0.4)
   - Log (1.0)
   - NSObjectCoder (1.0)
-  - RxCocoa (4.2.0):
-    - RxSwift (~> 4.0)
   - RxSwift (4.2.0)
 
 DEPENDENCIES:
@@ -12,8 +10,7 @@ DEPENDENCIES:
   - Dispatch
   - Log
   - NSObjectCoder
-  - RxCocoa (~> 4.0)
-  - RxSwift (~> 4.0)
+  - RxSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -21,7 +18,6 @@ SPEC REPOS:
     - Dispatch
     - Log
     - NSObjectCoder
-    - RxCocoa
     - RxSwift
 
 SPEC CHECKSUMS:
@@ -29,9 +25,8 @@ SPEC CHECKSUMS:
   Dispatch: 7ed89f2845001c4161ad83f43988b584fae8fff4
   Log: 5e368c9528db07517d18d2d04ff5fe2b6f5a1e21
   NSObjectCoder: edc8e96528ee81693d37dd014df573ca37ba9cac
-  RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
   RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
 
-PODFILE CHECKSUM: 3fe83fd3ae7a3862b1d1ece8acbf6e7567367663
+PODFILE CHECKSUM: 94ec25c467d5e3ce5cedc3d5fe68afa09fe875b6
 
 COCOAPODS: 1.5.3
