@@ -9,11 +9,11 @@
         <!--Main-->
         <scene sceneID="H4H-K5-N02">
             <objects>
-                <tabViewController title="Main" selectedTabViewItemIndex="0" id="ZpT-NJ-0h8" customClass="QSOViewController" customModule="DStarDelight" customModuleProvider="target" sceneMemberID="viewController">
+                <tabViewController title="Main" selectedTabViewItemIndex="1" id="ZpT-NJ-0h8" customClass="QSOViewController" customModule="DStarDelight" customModuleProvider="target" sceneMemberID="viewController">
                     <tabViewItems>
                         <tabViewItem label="QSO" id="RZW-SV-HRo" userLabel="QSO"/>
-                        <tabViewItem label="Reflectors" id="jsJ-mv-6jf" userLabel="Reflectors"/>
-                        <tabViewItem id="aW8-18-75r"/>
+                        <tabViewItem label="Connection" id="3Ux-oc-SOP" userLabel="Connection"/>
+                        <tabViewItem label="Settings" id="aW8-18-75r" userLabel="Settings"/>
                     </tabViewItems>
                     <tabView key="tabView" type="noTabsNoBorder" id="UAx-UL-xlq">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
@@ -24,9 +24,12 @@
                         </connections>
                     </tabView>
                     <connections>
+                        <outlet property="connectionTabViewItem" destination="3Ux-oc-SOP" id="bNg-Op-HS2"/>
+                        <outlet property="qsoTabViewItem" destination="RZW-SV-HRo" id="ASb-re-c1D"/>
+                        <outlet property="settingsTabViewItem" destination="aW8-18-75r" id="ahS-Fh-Liz"/>
                         <outlet property="tabView" destination="UAx-UL-xlq" id="80q-Ul-T2B"/>
                         <segue destination="WdL-Zi-Kit" kind="relationship" relationship="tabItems" id="vSY-th-hPB"/>
-                        <segue destination="7NW-kV-ain" kind="relationship" relationship="tabItems" id="XsI-GQ-EhT"/>
+                        <segue destination="TTX-en-Jxf" kind="relationship" relationship="tabItems" id="3TJ-yq-r3I"/>
                         <segue destination="hr9-1b-xaq" kind="relationship" relationship="tabItems" id="hXJ-fO-xHk"/>
                     </connections>
                 </tabViewController>
@@ -42,11 +45,11 @@
             </objects>
             <point key="canvasLocation" x="231" y="229"/>
         </scene>
-        <!--QSOReflectors-->
-        <scene sceneID="Urs-XV-6kS">
+        <!--Connection-->
+        <scene sceneID="eOB-M5-HvG">
             <objects>
-                <controllerPlaceholder storyboardName="QSOReflectors" id="7NW-kV-ain" sceneMemberID="viewController"/>
-                <customObject id="Kvw-4c-1ZH" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <controllerPlaceholder storyboardName="Connection" id="TTX-en-Jxf" sceneMemberID="viewController"/>
+                <customObject id="Hfe-xs-PtG" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="376" y="229"/>
         </scene>

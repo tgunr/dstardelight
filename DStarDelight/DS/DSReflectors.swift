@@ -136,8 +136,9 @@ class DSReflectors: NSObject {
     func checkForOutDated() {
         let reflectorsUpdated = UserDefaults.standard.object(forKey: "reflectorsUpdated") as? Date
         let since = TimeInterval(fabs(Float(reflectorsUpdated?.timeIntervalSinceNow ?? 0.0)))
+        let nextUpdate = Date()+since
         let numGateways       = reflectorGateways.count
-        HLog().debug("Last update: \( reflectorsUpdated ) since: \( since )")
+        HLog().debug("Last update: \(String(describing:  reflectorsUpdated )) nextUpdate: \( nextUpdate )")
         let days = UserDefaultsManager.shared.updateFrequency?.rawValue
         let expired = TimeInterval(days! * 24 * 60 * 60)
         if ( since > expired) || ( numGateways == 0 ) {
@@ -148,23 +149,21 @@ class DSReflectors: NSObject {
     }
 
     func updateReflectorsForSource(_ reflectorSource: DSReflectorSource) {
-        HLog().debug("reflectorSource \( reflectorSource.sourceURL?.description )")
+        HLog().debug("reflectorSource \(String(describing:  reflectorSource.sourceURL?.description ))")
         let aSourceURL:    URL?    = reflectorSource.sourceURL
-        var error:         Error?
-        var encoded:       String.Encoding
         var lineSet                = CharacterSet.newlines
         var sourceContent: String? = nil
         do {
             sourceContent = try String(contentsOf: aSourceURL!)
         } catch {
-            HLog().error("DSReflectors: update: Error loading sources from %@", aSourceURL)
+            HLog().error("Error loading sources from", aSourceURL?.path ?? "PATH?")
             return
         }
         let contentLines = sourceContent?.components(separatedBy: lineSet)
         let first        = contentLines?.first
         if first?.hasPrefix(SOURCE_HEADER) ?? false {
             let headerLength: Int = SOURCE_HEADER.count
-            let headerDateString  = ( first as? NSString )?.substring(from: headerLength)
+            let headerDateString  = ( first as NSString? )?.substring(from: headerLength)
             let dateFormatter     = DateFormatter()
             dateFormatter.locale = NSLocale(localeIdentifier: "en_US") as Locale
             // TODO: Fix this date problem
@@ -179,7 +178,6 @@ class DSReflectors: NSObject {
             for aLine in contentLines ?? [String?]() {
                 let lineItems = aLine?.components(separatedBy: lineSet)
                 if lineItems?.count == 2 {
-                    let aCoder                   = NSCoder()
                     let aReflector: DSReflector? = DSReflector()
                     aReflector?.name = ( lineItems?[ 0 ] )!
                     aReflector?.ip = ( lineItems?[ 1 ] )!
@@ -188,7 +186,7 @@ class DSReflectors: NSObject {
                         reflectorGateways.append(aReflector!)
                         NotificationCenter.default.post(name: NSNotification.Name("newReflectorFound"), object: aReflector)
                     } else {
-                        HLog().warning("Duplicate reflector: \( aReflector?.name )")
+                        HLog().warning("Duplicate reflector: ", aReflector?.name)
                     }
                 }
                 if HLog().minLevel < LogLevel.info {
@@ -230,13 +228,13 @@ class DSReflectors: NSObject {
         }
     }
 
-    func loadSavedReflectors() -> DSReflectors {
+    func loadSavedReflectors() -> DSReflectors? {
         var reflectorList: DSReflectors?
         // See if we have a saved list
-        do {
-            reflectorList = try DSReflectors(contentsOfFile: defaultSourcesFile!.path)
-        } catch {
+        reflectorList = DSReflectors(contentsOfFile: defaultSourcesFile!.path)
+        if reflectorList == nil {
             HLog().error("Error loading saved reflectors")
+            return nil
         }
         if ( reflectorList == nil ) ||
                    ( reflectorList?.reflectorGateways == nil ) ||
@@ -251,7 +249,7 @@ class DSReflectors: NSObject {
             HLog().info("Local reflectorList found")
             reflectorList?.checkForOutDated()
         }
-        return reflectorList!
+        return reflectorList
     }
 
 }

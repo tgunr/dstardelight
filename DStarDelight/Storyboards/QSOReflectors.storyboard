@@ -71,20 +71,21 @@
                                         <customView translatesAutoresizingMaskIntoConstraints="NO" id="6V3-qu-hQG">
                                             <rect key="frame" x="8" y="138" width="262" height="196"/>
                                             <subviews>
-                                                <scrollView autohidesScrollers="YES" horizontalLineScroll="34" horizontalPageScroll="10" verticalLineScroll="34" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKK-Qn-5FR">
+                                                <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKK-Qn-5FR">
                                                     <rect key="frame" x="0.0" y="0.0" width="262" height="196"/>
-                                                    <clipView key="contentView" id="aUf-lL-W0k">
+                                                    <clipView key="contentView" drawsBackground="NO" id="aUf-lL-W0k">
                                                         <rect key="frame" x="1" y="0.0" width="260" height="195"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
-                                                            <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="32" rowSizeStyle="automatic" headerView="U83-YC-ONl" viewBased="YES" id="rT2-1P-lQc">
+                                                            <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" rowSizeStyle="automatic" headerView="dYM-vN-gjg" viewBased="YES" id="rT2-1P-lQc">
                                                                 <rect key="frame" x="0.0" y="0.0" width="260" height="170"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <size key="intercellSpacing" width="3" height="2"/>
                                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                <tableViewGridLines key="gridStyleMask" vertical="YES" horizontal="YES"/>
                                                                 <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                                 <tableColumns>
-                                                                    <tableColumn identifier="reflectorName" width="97" minWidth="40" maxWidth="1000" id="b5B-hz-vQf">
+                                                                    <tableColumn identifier="reflectorName" editable="NO" width="97" minWidth="40" maxWidth="1000" id="b5B-hz-vQf">
                                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Reflector">
                                                                             <font key="font" metaFont="smallSystem"/>
                                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -97,7 +98,7 @@
                                                                         </textFieldCell>
                                                                         <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                     </tableColumn>
-                                                                    <tableColumn identifier="reflectorIP" width="157" minWidth="40" maxWidth="1000" id="Tk4-Vh-da4">
+                                                                    <tableColumn identifier="reflectorIP" editable="NO" width="157" minWidth="40" maxWidth="1000" id="Tk4-Vh-da4">
                                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="IP Address">
                                                                             <font key="font" metaFont="smallSystem"/>
                                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -117,6 +118,7 @@
                                                                 </connections>
                                                             </tableView>
                                                         </subviews>
+                                                        <nil key="backgroundColor"/>
                                                     </clipView>
                                                     <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="93k-cA-iE5">
                                                         <rect key="frame" x="1" y="179" width="237" height="16"/>
@@ -126,7 +128,7 @@
                                                         <rect key="frame" x="224" y="17" width="15" height="102"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                     </scroller>
-                                                    <tableHeaderView key="headerView" id="U83-YC-ONl">
+                                                    <tableHeaderView key="headerView" id="dYM-vN-gjg">
                                                         <rect key="frame" x="0.0" y="0.0" width="260" height="25"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                     </tableHeaderView>
@@ -181,7 +183,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="enableClicked:" target="ab1-Ae-4dh" id="ozx-TS-WwB"/>
+                                    <action selector="enableClicked:" target="ab1-Ae-4dh" id="AkZ-VG-EpE"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xt7-m5-g9g">
@@ -198,7 +200,7 @@
                                 <rect key="frame" x="399" y="26" width="177" height="374"/>
                                 <view key="contentView" id="24Z-8r-XxZ">
                                     <rect key="frame" x="3" y="3" width="171" height="355"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yhk-cL-xjU">
                                             <rect key="frame" x="20" y="20" width="131" height="315"/>
@@ -206,7 +208,7 @@
                                                 <rect key="frame" x="1" y="0.0" width="129" height="314"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" rowSizeStyle="automatic" headerView="xWd-Wf-AIv" viewBased="YES" id="612-tY-H9w">
+                                                    <tableView verticalHuggingPriority="750" tag="1" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" multipleSelection="NO" autosaveColumns="NO" typeSelect="NO" rowSizeStyle="automatic" headerView="xWd-Wf-AIv" viewBased="YES" id="612-tY-H9w">
                                                         <rect key="frame" x="0.0" y="0.0" width="129" height="289"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <size key="intercellSpacing" width="3" height="2"/>
@@ -227,6 +229,10 @@
                                                                 <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             </tableColumn>
                                                         </tableColumns>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="ab1-Ae-4dh" id="ek1-Bx-K13"/>
+                                                            <outlet property="delegate" destination="ab1-Ae-4dh" id="o1f-J1-YuF"/>
+                                                        </connections>
                                                     </tableView>
                                                 </subviews>
                                             </clipView>
@@ -275,7 +281,9 @@
                         <outlet property="enableButton" destination="mk3-Jc-n3L" id="gon-ta-xNB"/>
                         <outlet property="enabledTableView" destination="612-tY-H9w" id="6u8-BI-b2y"/>
                         <outlet property="progressView" destination="UOb-az-eXA" id="cp9-Jr-AIc"/>
+                        <outlet property="reflectorsArrayController" destination="l2K-tv-bQs" id="fQE-Mt-dop"/>
                         <outlet property="reflectorsTableView" destination="rT2-1P-lQc" id="PpW-F4-YnT"/>
+                        <outlet property="reflectorsView" destination="6V3-qu-hQG" id="LUj-iu-QOr"/>
                         <outlet property="updateDailyButton" destination="3IH-yc-Ond" id="Roz-Qy-oC6"/>
                         <outlet property="updateMonthlyButton" destination="ViH-ZX-VoC" id="KQD-zO-tcp"/>
                         <outlet property="updateNowButton" destination="Bgj-PL-hYj" id="UPC-pv-5UD"/>
@@ -284,6 +292,11 @@
                 </viewController>
                 <customObject id="hzd-o4-gog" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="XTk-WV-M3j"/>
+                <arrayController editable="NO" id="l2K-tv-bQs" userLabel="ConnectionsArray">
+                    <declaredKeys>
+                        <string>reflectorName</string>
+                    </declaredKeys>
+                </arrayController>
             </objects>
             <point key="canvasLocation" x="361" y="-140"/>
         </scene>

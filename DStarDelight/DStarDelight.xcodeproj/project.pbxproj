@@ -26,6 +26,8 @@
 		7502EC9720ECF139003A11F1 /* DSPrefVocoderSerialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945CB020EC62F2003A11F1 /* DSPrefVocoderSerialViewController.m */; };
 		7502ECA320EEE320003A11F1 /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7502ECA220EEE320003A11F1 /* Preferences.storyboard */; };
 		7502ECA620EFD980003A11F1 /* DSPrefViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502ECA520EFD97F003A11F1 /* DSPrefViewController.m */; };
+		750973B22110539C003A11F1 /* QSOConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750973B12110539C003A11F1 /* QSOConnection.swift */; };
+		750973B421105847003A11F1 /* Connection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 750973B321105847003A11F1 /* Connection.storyboard */; };
 		750A58D620F020FB003A11F1 /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = 750A58D520F020FA003A11F1 /* Credits.html */; };
 		750A58D820F02108003A11F1 /* DCSReflectors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 750A58D720F02107003A11F1 /* DCSReflectors.plist */; };
 		750A58DA20F02113003A11F1 /* DExtraReflectors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 750A58D920F02113003A11F1 /* DExtraReflectors.plist */; };
@@ -112,6 +114,8 @@
 		7502ECA220EEE320003A11F1 /* Preferences.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Preferences.storyboard; sourceTree = "<group>"; };
 		7502ECA420EFD97F003A11F1 /* DSPrefViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPrefViewController.h; sourceTree = "<group>"; };
 		7502ECA520EFD97F003A11F1 /* DSPrefViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSPrefViewController.m; sourceTree = "<group>"; };
+		750973B12110539C003A11F1 /* QSOConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QSOConnection.swift; sourceTree = "<group>"; };
+		750973B321105847003A11F1 /* Connection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Connection.storyboard; sourceTree = "<group>"; };
 		750A58D520F020FA003A11F1 /* Credits.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Credits.html; sourceTree = "<group>"; };
 		750A58D720F02107003A11F1 /* DCSReflectors.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = DCSReflectors.plist; sourceTree = "<group>"; };
 		750A58D920F02113003A11F1 /* DExtraReflectors.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = DExtraReflectors.plist; sourceTree = "<group>"; };
@@ -209,6 +213,7 @@
 		75945CAE20EC62F2003A11F1 /* DSPrefVocoderNetworkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSPrefVocoderNetworkViewController.m; sourceTree = "<group>"; };
 		75945CAF20EC62F2003A11F1 /* DSPrefVocoderSerialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSPrefVocoderSerialViewController.h; sourceTree = "<group>"; };
 		75945CB020EC62F2003A11F1 /* DSPrefVocoderSerialViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSPrefVocoderSerialViewController.m; sourceTree = "<group>"; };
+		75BB3FE2210FB536003A11F1 /* DStarPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = DStarPlayground.playground; path = ../DStarPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		75D870DE20F68E4C003A11F1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		75D870E020F6FCE8003A11F1 /* DSQSOReflectorsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSQSOReflectorsViewController.m; sourceTree = "<group>"; };
 		75D870E220F6FD0D003A11F1 /* DSQSOReflectorsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSQSOReflectorsViewController.h; sourceTree = "<group>"; };
@@ -436,6 +441,7 @@
 				75476C4220F7CF8B003A11F1 /* DSQSOSettingsViewController.h */,
 				75476C4320F7CF8B003A11F1 /* DSQSOSettingsViewController.m */,
 				5AF0DA2A2556E4A0462FF4AE /* QSOViewController.swift */,
+				750973B12110539C003A11F1 /* QSOConnection.swift */,
 				5AF0D45150A3F674E7786E24 /* QSOCQViewController.swift */,
 				5AF0DA9023BE9883E0F226F6 /* QSOReflectorsViewController.swift */,
 				5AF0DD0139C9B29AAA10667E /* QSOSettingsViewController.swift */,
@@ -446,6 +452,7 @@
 		75E087E120E31572003A11F1 = {
 			isa = PBXGroup;
 			children = (
+				75BB3FE2210FB536003A11F1 /* DStarPlayground.playground */,
 				756A408B20EC5FAB003A11F1 /* DSE */,
 				755A2EA920FB7917003A11F1 /* HAM */,
 				75945C8120EC62F2003A11F1 /* DS */,
@@ -476,6 +483,7 @@
 				758B49CA20E41BD8003A11F1 /* DSAddPopupController.xib */,
 				758B49BE20E41301003A11F1 /* Main.storyboard */,
 				75476C3D20F70B04003A11F1 /* QSO.storyboard */,
+				750973B321105847003A11F1 /* Connection.storyboard */,
 				75476C4F20F7E62E003A11F1 /* QSOCQ.storyboard */,
 				75476C5120F7E650003A11F1 /* QSOReflectors.storyboard */,
 				75476C5320F7E82B003A11F1 /* QSOSettings.storyboard */,
@@ -609,6 +617,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				750973B421105847003A11F1 /* Connection.storyboard in Resources */,
 				750A58DC20F02286003A11F1 /* PrefsVocoderSerial.storyboard in Resources */,
 				75476C5420F7E82B003A11F1 /* QSOSettings.storyboard in Resources */,
 				75476C5220F7E650003A11F1 /* QSOReflectors.storyboard in Resources */,
@@ -653,6 +662,8 @@
 				"${BUILT_PRODUCTS_DIR}/Log/Log.framework",
 				"${BUILT_PRODUCTS_DIR}/NSObjectCoder/NSObjectCoder.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/WKZombie/WKZombie.framework",
+				"${BUILT_PRODUCTS_DIR}/hpple/hpple.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -661,6 +672,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Log.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NSObjectCoder.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WKZombie.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/hpple.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -711,6 +724,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				755A2EAF20FBCD1D003A11F1 /* HAppDelegate.swift in Sources */,
+				750973B22110539C003A11F1 /* QSOConnection.swift in Sources */,
 				5AF0D4FFEEC07845D6931CF1 /* QSOViewController.swift in Sources */,
 				5AF0DD1DFA0B72DF2152DD85 /* QSOCQViewController.swift in Sources */,
 				5AF0D5E3A2022B514A54F9A5 /* QSOReflectorsViewController.swift in Sources */,
@@ -912,7 +926,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = NL3267E99V;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -925,7 +942,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Sources/HAM/DStarDelight/DStarDelight/DStarDelight-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -940,7 +957,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = NL3267E99V;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -952,7 +972,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Sources/HAM/DStarDelight/DStarDelight/DStarDelight-Bridging-Header.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

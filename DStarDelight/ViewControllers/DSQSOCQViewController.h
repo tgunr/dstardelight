@@ -1,6 +1,5 @@
 
 #import <AppKit/AppKit.h>
-#import <ProgressKit/ProgressKit-Swift.h>
 
 #import "DSEDataEngineDelegate.h"
 

@@ -8,6 +8,9 @@
 //
 
 class QSOViewController: NSTabViewController {
+    @IBOutlet var qsoTabViewItem: NSTabViewItem!
+    @IBOutlet var connectionTabViewItem: NSTabViewItem!
+    @IBOutlet var settingsTabViewItem: NSTabViewItem!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.

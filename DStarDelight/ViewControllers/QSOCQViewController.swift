@@ -42,7 +42,7 @@ struct StreamInfo {
     }
     
     func asHashableDictionary() -> [ AnyHashable: Any ] {
-        let hashable = self.asDictionary() as! [ AnyHashable: Any ]
+        let hashable = self.asDictionary() as [ AnyHashable: Any ]
         return hashable
     }
     

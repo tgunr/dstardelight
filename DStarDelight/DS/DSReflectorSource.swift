@@ -13,7 +13,7 @@ class DSReflectorSource: DSReflector {
     var isLast: Bool = false
     var lastUpdate: Date?
     var decscription: String {
-        return "\(sourceURL?.path)"
+        return (sourceURL?.path)!
     }
 
     override init() {
@@ -63,11 +63,11 @@ class DSReflectorSource: DSReflector {
     }
 
     func testURL() {
-        var error: Error?
-        var response: HTTPURLResponse?
+//        var error: Error?
+//        var response: HTTPURLResponse?
         var headRequest = NSMutableURLRequest(url: sourceURL!, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 30.0)
         headRequest.httpMethod = "HEAD"
-        HLog().info("Testing: \(sourceURL?.description)")
+        HLog().info("Testing: \(sourceURL?.description ?? "NO URL")")
 
 //        if NSURLConnection.canHandle(headRequest as URLRequest) {
 //            do {
@@ -76,12 +76,12 @@ class DSReflectorSource: DSReflector {
 //                HLog().info("HEAD request failed: %s", sourceURL?.absoluteString)
 //            }
 //        }
-        var session = URLSession.shared
+        let session = URLSession.shared
         if let aString = URL(string: (sourceURL?.absoluteString)!) {
             (session.dataTask(with: aString, completionHandler: { data, response, error in
                 // handle response
                 if error != nil {
-                    if let aKey: Any = (error as! NSError).userInfo[NSURLErrorFailingURLStringErrorKey] {
+                    if let aKey: Any = (error! as NSError).userInfo[NSURLErrorFailingURLStringErrorKey] {
                         HLog().error("Connection failed! Error:%s Key:%s", error?.localizedDescription ?? "", aKey)
                     }
                 } else {

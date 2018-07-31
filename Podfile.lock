@@ -1,9 +1,12 @@
 PODS:
   - AutoCoding (2.2.3)
   - Dispatch (2.0.4)
+  - hpple (0.2.0)
   - Log (1.0)
   - NSObjectCoder (1.0)
   - RxSwift (4.2.0)
+  - WKZombie (1.1.1):
+    - hpple (= 0.2.0)
 
 DEPENDENCIES:
   - AutoCoding
@@ -11,22 +14,27 @@ DEPENDENCIES:
   - Log
   - NSObjectCoder
   - RxSwift
+  - WKZombie
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AutoCoding
     - Dispatch
+    - hpple
     - Log
     - NSObjectCoder
     - RxSwift
+    - WKZombie
 
 SPEC CHECKSUMS:
   AutoCoding: 90ca3cbc0d77a37cfff75167d705b44148c5fc51
   Dispatch: 7ed89f2845001c4161ad83f43988b584fae8fff4
+  hpple: 3b765f96fc2cd56ad1a49aef6f7be5cb2aa64b57
   Log: 5e368c9528db07517d18d2d04ff5fe2b6f5a1e21
   NSObjectCoder: edc8e96528ee81693d37dd014df573ca37ba9cac
   RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
+  WKZombie: 345930c44980d4d3529d5b54b131df0dc04bbb0a
 
-PODFILE CHECKSUM: 94ec25c467d5e3ce5cedc3d5fe68afa09fe875b6
+PODFILE CHECKSUM: 491da4e035fa40f12d8b6b4e2f61b6e1ac1cd915
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.5.2

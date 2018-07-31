@@ -16,6 +16,7 @@ target 'DStarDelight' do
   pod 'AutoCoding'
   pod 'Log'
   pod 'RxSwift'
+  pod 'WKZombie'
 
   target 'DStarDelightUITests' do
     inherit! :search_paths
