@@ -6,10 +6,9 @@
 #import "DSELinkDriverDelegate.h"
 #import "DSESlowDataCoder.h"
 #import "DSEDataEngineDelegate.h"
-#import "DSEVocoderDriver.h"
+//#import "/Sources/HAM/DStarDelight/DerivedData/Build/Intermediates.noindex/DStarDelight.build/Debug/DStarDelight.build/DerivedSources/DStarDelight-Swift.h"
 
-@class AppDelegate;
-@class DSEAudioHandler, DSEVocoderProtocol, DSESlowDataCoder;
+@class HAppDelegate;
 
 @interface DSEDataEngine : NSObject <DSELinkDriverDelegate, DSESlowDataDelegate>
 
@@ -19,7 +18,7 @@
 @property (nonatomic, readonly) DSESlowDataCoder *slowData;
 @property (nonatomic) NSObject <DSEDataEngineDelegate> *delegate;
 @property (nonatomic, readonly) NSArray<NSString *> *linkDriverDestinations;
-@property AppDelegate *appDelegate;
+@property HAppDelegate *appDelegate;
 
 +(DSEDataEngine *)sharedInstance;
 

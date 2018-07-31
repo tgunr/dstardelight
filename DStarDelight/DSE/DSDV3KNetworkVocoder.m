@@ -5,7 +5,6 @@
 #import "DSEDataEngine.h"
 #import "DSEDV3KVocoderSubclass.h"
 #import "DSPrefVocoderNetworkViewController.h"
-#import "DSAppDelegate.h"
 
 #import <AppKit/AppKit.h>
 

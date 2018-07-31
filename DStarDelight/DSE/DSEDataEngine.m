@@ -8,7 +8,6 @@
 #import "DSELinkDriverProtocol.h"
 #import "DStarUtils.h"
 #import "DSAudioHandler.h"
-#import "DSEDV3KNetworkVocoder.h"
 
 static NSMutableArray *vocoderDrivers = nil;
 static NSMutableArray <Class> *linkDriverClasses = nil;
@@ -41,7 +40,7 @@ static NSMutableArray <Class> *linkDriverClasses = nil;
         id vocoderDriverString = [[NSUserDefaults standardUserDefaults] stringForKey:@"VocoderDriver"];
         Class vocoderDriver = NSClassFromString(vocoderDriverString);
         if (vocoderDriver == nil) {
-            vocoderDriver = NSClassFromString(DEFAULT_VOCODER);
+            vocoderDriver = NSClassFromString((NSString *)DEFAULT_VOCODER);
         }
         self.vocoder = [[vocoderDriver alloc] init];
         

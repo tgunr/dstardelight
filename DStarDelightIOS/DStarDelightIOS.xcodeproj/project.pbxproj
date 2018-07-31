@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		16DCE1BE4209EF3169648CFF /* Pods_DStarDelightIOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE95EAA9A6E6D6A1912DC106 /* Pods_DStarDelightIOSUITests.framework */; };
-		7510E79C20EAE0D0003A11F1 /* DStarEngineIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7510E79420EAC572003A11F1 /* DStarEngineIOS.framework */; };
 		757DEE2720E54153003A11F1 /* DefaultPreferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 757DEE2220E54152003A11F1 /* DefaultPreferences.plist */; };
 		75F7D25820E30620003A11F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D25720E30620003A11F1 /* AppDelegate.swift */; };
 		75F7D25A20E30620003A11F1 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7D25920E30620003A11F1 /* RootViewController.swift */; };
@@ -22,27 +21,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7510E79120EAC572003A11F1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7510E78C20EAC572003A11F1 /* DStarEngine.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 757DEE4120E6D45A003A11F1;
-			remoteInfo = DStarEngine;
-		};
-		7510E79320EAC572003A11F1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7510E78C20EAC572003A11F1 /* DStarEngine.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 757DEEBF20E6E28B003A11F1;
-			remoteInfo = DStarEngineIOS;
-		};
-		7510E79A20EAE0C0003A11F1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7510E78C20EAC572003A11F1 /* DStarEngine.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 757DEEBE20E6E28B003A11F1;
-			remoteInfo = DStarEngineIOS;
-		};
 		75F7D26D20E30622003A11F1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 75F7D24C20E30620003A11F1 /* Project object */;
@@ -68,7 +46,6 @@
 /* Begin PBXFileReference section */
 		3192EC3E528C8A7D67564A06 /* Pods-DStarDelightIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DStarDelightIOS.release.xcconfig"; path = "../Pods/Target Support Files/Pods-DStarDelightIOS/Pods-DStarDelightIOS.release.xcconfig"; sourceTree = "<group>"; };
 		54582B8DAD417F8A3EE75E2A /* Pods-DStarDelightIOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DStarDelightIOSUITests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-DStarDelightIOSUITests/Pods-DStarDelightIOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		7510E78C20EAC572003A11F1 /* DStarEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DStarEngine.xcodeproj; path = ../Frameworks/DStarEngine/DStarEngine.xcodeproj; sourceTree = "<group>"; };
 		7510E79820EACBF9003A11F1 /* DStarEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DStarEngine.h; sourceTree = "<group>"; };
 		7510E79920EAD0B9003A11F1 /* DStarDelightIOS-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DStarDelightIOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		7510E79D20EAE2F6003A11F1 /* DStarEngineIOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DStarEngineIOS.h; sourceTree = "<group>"; };
@@ -118,7 +95,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7510E79C20EAE0D0003A11F1 /* DStarEngineIOS.framework in Frameworks */,
 				7C5A71B12D43F082CC71423D /* Pods_DStarDelightIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,15 +119,6 @@
 				FEC0AEAD206219F4B16C6A0D /* Pods-DStarDelightIOSUITests.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		7510E78D20EAC572003A11F1 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				7510E79220EAC572003A11F1 /* DStarEngine.framework */,
-				7510E79420EAC572003A11F1 /* DStarEngineIOS.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		753AB20E20E45C44003A11F1 /* DSI */ = {
@@ -198,7 +165,6 @@
 		75F7D24B20E30620003A11F1 = {
 			isa = PBXGroup;
 			children = (
-				7510E78C20EAC572003A11F1 /* DStarEngine.xcodeproj */,
 				7510E79920EAD0B9003A11F1 /* DStarDelightIOS-Bridging-Header.h */,
 				7510E79D20EAE2F6003A11F1 /* DStarEngineIOS.h */,
 				7510E79820EACBF9003A11F1 /* DStarEngine.h */,
@@ -285,7 +251,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				7510E79B20EAE0C0003A11F1 /* PBXTargetDependency */,
 			);
 			name = DStarDelightIOS;
 			productName = DStarDelightIOS;
@@ -342,12 +307,6 @@
 			mainGroup = 75F7D24B20E30620003A11F1;
 			productRefGroup = 75F7D25520E30620003A11F1 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 7510E78D20EAC572003A11F1 /* Products */;
-					ProjectRef = 7510E78C20EAC572003A11F1 /* DStarEngine.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				75F7D25320E30620003A11F1 /* DStarDelightIOS */,
@@ -355,23 +314,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		7510E79220EAC572003A11F1 /* DStarEngine.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = DStarEngine.framework;
-			remoteRef = 7510E79120EAC572003A11F1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		7510E79420EAC572003A11F1 /* DStarEngineIOS.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = DStarEngineIOS.framework;
-			remoteRef = 7510E79320EAC572003A11F1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		75F7D25220E30620003A11F1 /* Resources */ = {
@@ -474,11 +416,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7510E79B20EAE0C0003A11F1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = DStarEngineIOS;
-			targetProxy = 7510E79A20EAE0C0003A11F1 /* PBXContainerItemProxy */;
-		};
 		75F7D26E20E30622003A11F1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 75F7D25320E30620003A11F1 /* DStarDelightIOS */;

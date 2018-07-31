@@ -3,6 +3,12 @@
 #import "DSAppDelegate.h"
 #import "DSAudioHandler.h"
 #import "DStarUtils.h"
+#import "DSReflectors.h"
+#import <AutoCoding/AutoCoding.h>
+
+@interface DSAppDelegate ()
+- (void)reflectorsAreReady:(NSNotification *)notification;
+@end
 
 @implementation DSAppDelegate
 
@@ -12,16 +18,22 @@
 }
 
 -(void) awakeFromNib {
-    DSAudioHandler *audioHandler = [[DSAudioHandler alloc] init];
+    DSAudioHandler *audioHandler = [DSAudioHandler new];
     [[DSVars shared] setAudioHandler:audioHandler];
 
-    
     NSURL *defaultPrefsFile = [[NSBundle mainBundle]
                                URLForResource:@"DefaultPreferences" withExtension:@"plist"];
     NSDictionary *defaultPrefs =
     [NSDictionary dictionaryWithContentsOfURL:defaultPrefsFile];
     [[NSUserDefaults standardUserDefaults] registerDefaults:defaultPrefs];
-    
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reflectorsAreReady:) name:@"reflectorsAreReady" object:nil];
+    self.reflectors = [DSReflectors new];
+}
+
+- (void)reflectorsAreReady: (NSNotification *)notification {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"reflectorsAreReady" object:nil];
+
 }
 
 - (void)applicationWillFinishLaunching:(NSNotification *)aNotification {
@@ -35,7 +47,7 @@
     } else {
         for(NSDictionary *entry in [DSAudioHandler enumerateInputDevices])
             if([entry[@"uid"] isEqualToString:inputUid])
-                engine.audio.inputDevice = ((NSNumber *)entry[@"id"]).intValue;
+                engine.audio.inputDevice = (AudioDeviceID) ((NSNumber *)entry[@"id"]).intValue;
      }
     
     NSString *outputUid = [[NSUserDefaults standardUserDefaults] stringForKey:@"outputAudioDevice"];
@@ -44,7 +56,7 @@
     } else {
         for(NSDictionary *entry in [DSAudioHandler enumerateOutputDevices])
             if([entry[@"uid"] isEqualToString:outputUid])
-                engine.audio.outputDevice = ((NSNumber *)entry[@"id"]).intValue;
+                engine.audio.outputDevice = (AudioDeviceID) ((NSNumber *)entry[@"id"]).intValue;
     }
     
     [[NSNotificationCenter defaultCenter] addObserverForName: DSAudioDeviceChanged
@@ -70,6 +82,10 @@
         
         [engine.vocoder start];
     });
+}
+
+- (void)applicationDidFinishLaunching:(NSNotification *)notification {
+
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {

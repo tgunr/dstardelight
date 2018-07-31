@@ -41,5 +41,15 @@
 	</dict>
 	<key>outputVolume</key>
 	<integer>1</integer>
+	<key>updateFrequency</key>
+	<integer>1</integer>
+	<key>reflectorSources</key>
+	<array>
+		<string>https://ar-dns.net/gateways</string>
+		<string>https://ar-dns.net/dcs</string>
+		<string>https://ar-dns.net/dextra-gw</string>
+		<string>https://ar-dns.net/dplus-gw</string>
+		<string>https://ar-dns.net/xlx</string>
+	</array>
 </dict>
 </plist>

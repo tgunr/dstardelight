@@ -6,7 +6,7 @@
 
 @protocol DSEDataEngineDelegate <NSObject>
 
--(void)streamDidStart:(NSDictionary *)header;
+-(void)streamDidStart:(NSMutableDictionary *)header;
 -(void)streamDidEnd:(NSNumber *)streamId atTime:(NSDate *)date;
 -(void)slowDataReceived:(NSString *)slowData forStreamId:(NSNumber *)streamId;
 -(void)locationReceived:(CLLocation *)location forStreamId:(NSNumber *)streamId;

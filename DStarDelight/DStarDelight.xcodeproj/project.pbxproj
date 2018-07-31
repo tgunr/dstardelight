@@ -7,8 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5AF0D33B78ACA2B70A064F00 /* DSReflector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0D179B545B8517848DC80 /* DSReflector.swift */; };
+		5AF0D3409B70C56F73AD8286 /* NSKeyedUnarchiver+Key.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0DAC10C10B12A7FDE4C2D /* NSKeyedUnarchiver+Key.m */; };
+		5AF0D3624E640F9B5524CE55 /* DSReflectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0DC08DE257E415E32DB3D /* DSReflectors.swift */; };
+		5AF0D4FFEEC07845D6931CF1 /* QSOViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0DA2A2556E4A0462FF4AE /* QSOViewController.swift */; };
+		5AF0D5E3A2022B514A54F9A5 /* QSOReflectorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0DA9023BE9883E0F226F6 /* QSOReflectorsViewController.swift */; };
+		5AF0D5FDEB456747948CA079 /* DSReflector.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0DEAA7E639B3A9DFB23D6 /* DSReflector.m */; };
+		5AF0D9FEC2FAD6D19691A27E /* NSKeyedArchiver+Key.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0D73805C4DE6D45675905 /* NSKeyedArchiver+Key.m */; };
+		5AF0DBD49E8F2A3D71D578CA /* DSReflectorSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0D277132C9C8DDC2BA453 /* DSReflectorSource.swift */; };
+		5AF0DC90CFC4D94236DAEC66 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0D470E5607AF1817F92C8 /* UserDefaultsManager.swift */; };
+		5AF0DCCFE53D78E395758293 /* DSReflectorSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0D1EE2654818086ADD427 /* DSReflectorSource.m */; };
+		5AF0DCF5649D52D9D4C06F2B /* QSOSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0DD0139C9B29AAA10667E /* QSOSettingsViewController.swift */; };
+		5AF0DD1DFA0B72DF2152DD85 /* QSOCQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0D45150A3F674E7786E24 /* QSOCQViewController.swift */; };
+		6891CE84592F68FFD75B9580 /* Pods_DStarDelightUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC981FCCF635432B44467462 /* Pods_DStarDelightUITests.framework */; };
+		70E0477957C690C33631C7AE /* Pods_DStarDelight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBFD5970E5D8ACF1425391D /* Pods_DStarDelight.framework */; };
 		7502EC9420ECF139003A11F1 /* DSAddPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945C8620EC62F2003A11F1 /* DSAddPopupController.m */; };
-		7502EC9520ECF139003A11F1 /* DSQSOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945C9420EC62F2003A11F1 /* DSQSOViewController.m */; };
 		7502EC9620ECF139003A11F1 /* DSPrefVocoderNetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945CAE20EC62F2003A11F1 /* DSPrefVocoderNetworkViewController.m */; };
 		7502EC9720ECF139003A11F1 /* DSPrefVocoderSerialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945CB020EC62F2003A11F1 /* DSPrefVocoderSerialViewController.m */; };
 		7502ECA320EEE320003A11F1 /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7502ECA220EEE320003A11F1 /* Preferences.storyboard */; };
@@ -25,17 +38,16 @@
 		752F94DA20ECEAE0003A11F1 /* DSPrefVocoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 752F94D920ECEAE0003A11F1 /* DSPrefVocoderViewController.m */; };
 		752F94DD20ECEB05003A11F1 /* DSPrefAudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 752F94DC20ECEB05003A11F1 /* DSPrefAudioViewController.m */; };
 		75476C3E20F70B04003A11F1 /* QSO.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75476C3D20F70B04003A11F1 /* QSO.storyboard */; };
-		75476C4120F7CF57003A11F1 /* DSQSOCQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75476C4020F7CF57003A11F1 /* DSQSOCQViewController.m */; };
 		75476C4520F7CF8B003A11F1 /* DSQSOSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75476C4320F7CF8B003A11F1 /* DSQSOSettingsViewController.m */; };
 		75476C5020F7E62E003A11F1 /* QSOCQ.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75476C4F20F7E62E003A11F1 /* QSOCQ.storyboard */; };
 		75476C5220F7E650003A11F1 /* QSOReflectors.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75476C5120F7E650003A11F1 /* QSOReflectors.storyboard */; };
 		75476C5420F7E82B003A11F1 /* QSOSettings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75476C5320F7E82B003A11F1 /* QSOSettings.storyboard */; };
-		754A461B20EC6DDE003A11F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945C9C20EC62F2003A11F1 /* main.m */; };
 		754A461C20EC6E4B003A11F1 /* MASDictionaryTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945C9F20EC62F2003A11F1 /* MASDictionaryTransformer.m */; };
 		754A461D20EC6E65003A11F1 /* MASShortcut.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945CA220EC62F2003A11F1 /* MASShortcut.m */; };
 		754A461E20EC6E65003A11F1 /* MASShortcutValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945CA420EC62F2003A11F1 /* MASShortcutValidator.m */; };
 		754A461F20EC6E65003A11F1 /* MASShortcutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945CA620EC62F2003A11F1 /* MASShortcutView.m */; };
 		754A462220ECC1BB003A11F1 /* DSDV3KNetworkVocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 754A462120ECC1BB003A11F1 /* DSDV3KNetworkVocoder.m */; };
+		755A2EAF20FBCD1D003A11F1 /* HAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755A2EAA20FB7974003A11F1 /* HAppDelegate.swift */; };
 		756A40A120EC60B7003A11F1 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 756A409120EC60B6003A11F1 /* README.markdown */; };
 		756A40A220EC60B7003A11F1 /* TPCircularBuffer+AudioBufferList.c in Sources */ = {isa = PBXBuildFile; fileRef = 756A409220EC60B6003A11F1 /* TPCircularBuffer+AudioBufferList.c */; };
 		756A40A320EC60B7003A11F1 /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 756A409420EC60B6003A11F1 /* TPCircularBuffer.c */; };
@@ -60,9 +72,7 @@
 		758B49D420E41F0D003A11F1 /* DSDestinationCallFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 758B49D320E41F0D003A11F1 /* DSDestinationCallFormatter.m */; };
 		75D870DD20F68D7C003A11F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75E087F320E31574003A11F1 /* Assets.xcassets */; };
 		75D870DF20F68E4C003A11F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75D870DE20F68E4C003A11F1 /* Images.xcassets */; };
-		75D870E120F6FCE8003A11F1 /* DSQSOReflectorsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D870E020F6FCE8003A11F1 /* DSQSOReflectorsViewController.m */; };
 		75E0880520E31575003A11F1 /* DStarDelightUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0880420E31575003A11F1 /* DStarDelightUITests.m */; };
-		75E0886020E3177F003A11F1 /* DSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0881320E3177F003A11F1 /* DSAppDelegate.m */; };
 		75E0886420E3177F003A11F1 /* DSCallFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0881B20E3177F003A11F1 /* DSCallFormatter.m */; };
 		75E0886920E3177F003A11F1 /* DSPrefGeneralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0882420E3177F003A11F1 /* DSPrefGeneralViewController.m */; };
 		75E0886E20E3177F003A11F1 /* DSMessageFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0883120E3177F003A11F1 /* DSMessageFormatter.m */; };
@@ -79,6 +89,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		055B2231BFAA1ABB9458C344 /* Pods-DStarDelightUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DStarDelightUITests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-DStarDelightUITests/Pods-DStarDelightUITests.release.xcconfig"; sourceTree = "<group>"; };
+		148C821C9B0F5A50DA0131CA /* Pods-DStarDelightUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DStarDelightUITests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-DStarDelightUITests/Pods-DStarDelightUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		31C4CEB872CC61347D86A7C4 /* Pods-DStarDelight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DStarDelight.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-DStarDelight/Pods-DStarDelight.debug.xcconfig"; sourceTree = "<group>"; };
+		4673CA55F1EFE01F6C0D071D /* Pods-DStarDelight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DStarDelight.release.xcconfig"; path = "../Pods/Target Support Files/Pods-DStarDelight/Pods-DStarDelight.release.xcconfig"; sourceTree = "<group>"; };
+		5AF0D179B545B8517848DC80 /* DSReflector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSReflector.swift; sourceTree = "<group>"; };
+		5AF0D1EE2654818086ADD427 /* DSReflectorSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSReflectorSource.m; sourceTree = "<group>"; };
+		5AF0D277132C9C8DDC2BA453 /* DSReflectorSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSReflectorSource.swift; sourceTree = "<group>"; };
+		5AF0D45150A3F674E7786E24 /* QSOCQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QSOCQViewController.swift; sourceTree = "<group>"; };
+		5AF0D470E5607AF1817F92C8 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		5AF0D4C698CD38AAC9D6A002 /* NSKeyedArchiver+Key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSKeyedArchiver+Key.h"; sourceTree = "<group>"; };
+		5AF0D73805C4DE6D45675905 /* NSKeyedArchiver+Key.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSKeyedArchiver+Key.m"; sourceTree = "<group>"; };
+		5AF0D9FEF00034D592A8CFD9 /* NSKeyedUnarchiver+Key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSKeyedUnarchiver+Key.h"; sourceTree = "<group>"; };
+		5AF0DA2A2556E4A0462FF4AE /* QSOViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QSOViewController.swift; sourceTree = "<group>"; };
+		5AF0DA883D5FDE102EDB2370 /* DSReflector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSReflector.h; sourceTree = "<group>"; };
+		5AF0DA9023BE9883E0F226F6 /* QSOReflectorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QSOReflectorsViewController.swift; sourceTree = "<group>"; };
+		5AF0DAC10C10B12A7FDE4C2D /* NSKeyedUnarchiver+Key.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSKeyedUnarchiver+Key.m"; sourceTree = "<group>"; };
+		5AF0DC08DE257E415E32DB3D /* DSReflectors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSReflectors.swift; sourceTree = "<group>"; };
+		5AF0DD0139C9B29AAA10667E /* QSOSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QSOSettingsViewController.swift; sourceTree = "<group>"; };
+		5AF0DEAA7E639B3A9DFB23D6 /* DSReflector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSReflector.m; sourceTree = "<group>"; };
+		5AF0DFDAC07F1FE2CC783670 /* DSReflectorSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSReflectorSource.h; sourceTree = "<group>"; };
 		7502ECA220EEE320003A11F1 /* Preferences.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Preferences.storyboard; sourceTree = "<group>"; };
 		7502ECA420EFD97F003A11F1 /* DSPrefViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPrefViewController.h; sourceTree = "<group>"; };
 		7502ECA520EFD97F003A11F1 /* DSPrefViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSPrefViewController.m; sourceTree = "<group>"; };
@@ -98,15 +128,17 @@
 		752F94DB20ECEB05003A11F1 /* DSPrefAudioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPrefAudioViewController.h; sourceTree = "<group>"; };
 		752F94DC20ECEB05003A11F1 /* DSPrefAudioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSPrefAudioViewController.m; sourceTree = "<group>"; };
 		75476C3D20F70B04003A11F1 /* QSO.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QSO.storyboard; sourceTree = "<group>"; };
-		75476C3F20F7CF57003A11F1 /* DSQSOCQViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSQSOCQViewController.h; sourceTree = "<group>"; };
-		75476C4020F7CF57003A11F1 /* DSQSOCQViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSQSOCQViewController.m; sourceTree = "<group>"; };
 		75476C4220F7CF8B003A11F1 /* DSQSOSettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSQSOSettingsViewController.h; sourceTree = "<group>"; };
 		75476C4320F7CF8B003A11F1 /* DSQSOSettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSQSOSettingsViewController.m; sourceTree = "<group>"; };
 		75476C4F20F7E62E003A11F1 /* QSOCQ.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QSOCQ.storyboard; sourceTree = "<group>"; };
 		75476C5120F7E650003A11F1 /* QSOReflectors.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QSOReflectors.storyboard; sourceTree = "<group>"; };
 		75476C5320F7E82B003A11F1 /* QSOSettings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QSOSettings.storyboard; sourceTree = "<group>"; };
+		75476C5520F901DE003A11F1 /* DSReflectors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSReflectors.h; sourceTree = "<group>"; };
+		75476C5620F901DE003A11F1 /* DSReflectors.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSReflectors.m; sourceTree = "<group>"; };
 		754A462020ECC1BB003A11F1 /* DSDV3KNetworkVocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSDV3KNetworkVocoder.h; sourceTree = "<group>"; };
 		754A462120ECC1BB003A11F1 /* DSDV3KNetworkVocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSDV3KNetworkVocoder.m; sourceTree = "<group>"; };
+		755A2EA220FB6B20003A11F1 /* DStarDelight-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DStarDelight-Bridging-Header.h"; sourceTree = "<group>"; };
+		755A2EAA20FB7974003A11F1 /* HAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HAppDelegate.swift; sourceTree = "<group>"; };
 		756A408D20EC607B003A11F1 /* DSEDataEngineDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEDataEngineDelegate.h; sourceTree = "<group>"; };
 		756A409120EC60B6003A11F1 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.markdown; sourceTree = "<group>"; };
 		756A409220EC60B6003A11F1 /* TPCircularBuffer+AudioBufferList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "TPCircularBuffer+AudioBufferList.c"; sourceTree = "<group>"; };
@@ -150,8 +182,8 @@
 		756A40C120EC60D7003A11F1 /* DSEAprsLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSEAprsLocation.h; sourceTree = "<group>"; };
 		756A40C220EC60D8003A11F1 /* DSELinkDriverProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSELinkDriverProtocol.h; sourceTree = "<group>"; };
 		756A40C320EC60D8003A11F1 /* DSESlowDataCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSESlowDataCoder.h; sourceTree = "<group>"; };
-		756A40CF20EC610B003A11F1 /* DStarDelight-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DStarDelight-Bridging-Header.h"; sourceTree = "<group>"; };
 		756A40D020EC610C003A11F1 /* DStarEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DStarEngine.h; sourceTree = "<group>"; };
+		758A88902106741C003A11F1 /* AutoCoding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AutoCoding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		758B49BF20E41302003A11F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../../Old/DStarDelight/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		758B49CA20E41BD8003A11F1 /* DSAddPopupController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSAddPopupController.xib; sourceTree = "<group>"; };
 		758B49CC20E41C92003A11F1 /* DefaultPreferences.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DefaultPreferences.plist; sourceTree = "<group>"; };
@@ -160,15 +192,9 @@
 		75945C8520EC62F2003A11F1 /* DSAddPopupController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSAddPopupController.h; sourceTree = "<group>"; };
 		75945C8620EC62F2003A11F1 /* DSAddPopupController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSAddPopupController.m; sourceTree = "<group>"; };
 		75945C8720EC62F2003A11F1 /* DSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSAppDelegate.h; sourceTree = "<group>"; };
-		75945C8D20EC62F2003A11F1 /* DSCallFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSCallFormatter.h; sourceTree = "<group>"; };
-		75945C8E20EC62F2003A11F1 /* DSCallFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSCallFormatter.m; sourceTree = "<group>"; };
-		75945C8F20EC62F2003A11F1 /* DSDestinationCallFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSDestinationCallFormatter.h; sourceTree = "<group>"; };
-		75945C9020EC62F2003A11F1 /* DSDestinationCallFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSDestinationCallFormatter.m; sourceTree = "<group>"; };
-		75945C9320EC62F2003A11F1 /* DSQSOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSQSOViewController.h; sourceTree = "<group>"; };
-		75945C9420EC62F2003A11F1 /* DSQSOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSQSOViewController.m; sourceTree = "<group>"; };
+		75945C9320EC62F2003A11F1 /* DSQSOCQViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSQSOCQViewController.h; sourceTree = "<group>"; };
+		75945C9420EC62F2003A11F1 /* DSQSOCQViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSQSOCQViewController.m; sourceTree = "<group>"; };
 		75945C9520EC62F2003A11F1 /* DSMapPopupController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSMapPopupController.h; sourceTree = "<group>"; };
-		75945C9720EC62F2003A11F1 /* DSMessageFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSMessageFormatter.h; sourceTree = "<group>"; };
-		75945C9820EC62F2003A11F1 /* DSMessageFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSMessageFormatter.m; sourceTree = "<group>"; };
 		75945C9A20EC62F2003A11F1 /* DSPrefVocoderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSPrefVocoderViewController.h; sourceTree = "<group>"; };
 		75945C9C20EC62F2003A11F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		75945C9E20EC62F2003A11F1 /* MASDictionaryTransformer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASDictionaryTransformer.h; sourceTree = "<group>"; };
@@ -200,8 +226,8 @@
 		75E0882420E3177F003A11F1 /* DSPrefGeneralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSPrefGeneralViewController.m; sourceTree = "<group>"; };
 		75E0883020E3177F003A11F1 /* DSMessageFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSMessageFormatter.h; sourceTree = "<group>"; };
 		75E0883120E3177F003A11F1 /* DSMessageFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSMessageFormatter.m; sourceTree = "<group>"; };
-		EEB7436A6B48A35A03347650 /* libPods-DStarDelight.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DStarDelight.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FBD8596DEF8A4BB1161AA109 /* libPods-DStarDelightUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DStarDelightUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EBFD5970E5D8ACF1425391D /* Pods_DStarDelight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DStarDelight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC981FCCF635432B44467462 /* Pods_DStarDelightUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DStarDelightUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +235,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70E0477957C690C33631C7AE /* Pods_DStarDelight.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,12 +243,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6891CE84592F68FFD75B9580 /* Pods_DStarDelightUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5AF0D232995F0951CC97A4C5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5AF0D35F699DEC13772B965E /* ArchiverEasy */ = {
+			isa = PBXGroup;
+			children = (
+				5AF0D4C698CD38AAC9D6A002 /* NSKeyedArchiver+Key.h */,
+				5AF0D73805C4DE6D45675905 /* NSKeyedArchiver+Key.m */,
+				5AF0D9FEF00034D592A8CFD9 /* NSKeyedUnarchiver+Key.h */,
+				5AF0DAC10C10B12A7FDE4C2D /* NSKeyedUnarchiver+Key.m */,
+			);
+			name = ArchiverEasy;
+			path = ../Frameworks/ArchiverEasy/ArchiverEasy;
+			sourceTree = "<group>";
+		};
 		7525485220E988D0003A11F1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,12 +284,21 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		755A2EA920FB7917003A11F1 /* HAM */ = {
+			isa = PBXGroup;
+			children = (
+				755A2EAA20FB7974003A11F1 /* HAppDelegate.swift */,
+				5AF0D470E5607AF1817F92C8 /* UserDefaultsManager.swift */,
+			);
+			name = HAM;
+			path = DS/HAM;
+			sourceTree = "<group>";
+		};
 		756A408B20EC5FAB003A11F1 /* DSE */ = {
 			isa = PBXGroup;
 			children = (
 				756A409020EC60B6003A11F1 /* TPCircularBuffer */,
 				756A40D020EC610C003A11F1 /* DStarEngine.h */,
-				756A40CF20EC610B003A11F1 /* DStarDelight-Bridging-Header.h */,
 				756A409F20EC60B7003A11F1 /* DStarUtils.h */,
 				756A409D20EC60B7003A11F1 /* DStarUtils.m */,
 				756A40A020EC60B7003A11F1 /* DSDV3KPacket.h */,
@@ -303,8 +359,10 @@
 		757DEE9920E6D98E003A11F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EEB7436A6B48A35A03347650 /* libPods-DStarDelight.a */,
-				FBD8596DEF8A4BB1161AA109 /* libPods-DStarDelightUITests.a */,
+				758A88902106741C003A11F1 /* AutoCoding.framework */,
+				8EBFD5970E5D8ACF1425391D /* Pods_DStarDelight.framework */,
+				FC981FCCF635432B44467462 /* Pods_DStarDelightUITests.framework */,
+				5AF0D35F699DEC13772B965E /* ArchiverEasy */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -319,18 +377,21 @@
 				7525480B20E6FDD5003A11F1 /* DSAudioHandler.m */,
 				75E0881A20E3177F003A11F1 /* DSCallFormatter.h */,
 				75E0881B20E3177F003A11F1 /* DSCallFormatter.m */,
-				758B49D320E41F0D003A11F1 /* DSDestinationCallFormatter.m */,
 				758B49D220E41F0C003A11F1 /* DSDestinationCallFormatter.h */,
+				758B49D320E41F0D003A11F1 /* DSDestinationCallFormatter.m */,
 				75E0883020E3177F003A11F1 /* DSMessageFormatter.h */,
 				75E0883120E3177F003A11F1 /* DSMessageFormatter.m */,
-				75945C8D20EC62F2003A11F1 /* DSCallFormatter.h */,
-				75945C8E20EC62F2003A11F1 /* DSCallFormatter.m */,
-				75945C8F20EC62F2003A11F1 /* DSDestinationCallFormatter.h */,
-				75945C9020EC62F2003A11F1 /* DSDestinationCallFormatter.m */,
-				75945C9720EC62F2003A11F1 /* DSMessageFormatter.h */,
-				75945C9820EC62F2003A11F1 /* DSMessageFormatter.m */,
 				75945C9C20EC62F2003A11F1 /* main.m */,
 				75945C9D20EC62F2003A11F1 /* MASShortcut */,
+				75476C5520F901DE003A11F1 /* DSReflectors.h */,
+				75476C5620F901DE003A11F1 /* DSReflectors.m */,
+				5AF0D1EE2654818086ADD427 /* DSReflectorSource.m */,
+				5AF0DFDAC07F1FE2CC783670 /* DSReflectorSource.h */,
+				5AF0DEAA7E639B3A9DFB23D6 /* DSReflector.m */,
+				5AF0DA883D5FDE102EDB2370 /* DSReflector.h */,
+				5AF0D179B545B8517848DC80 /* DSReflector.swift */,
+				5AF0D277132C9C8DDC2BA453 /* DSReflectorSource.swift */,
+				5AF0DC08DE257E415E32DB3D /* DSReflectors.swift */,
 			);
 			path = DS;
 			sourceTree = "<group>";
@@ -370,14 +431,16 @@
 				75945CB020EC62F2003A11F1 /* DSPrefVocoderSerialViewController.m */,
 				75945CAD20EC62F2003A11F1 /* DSPrefVocoderNetworkViewController.h */,
 				75945CAE20EC62F2003A11F1 /* DSPrefVocoderNetworkViewController.m */,
-				75945C9320EC62F2003A11F1 /* DSQSOViewController.h */,
-				75945C9420EC62F2003A11F1 /* DSQSOViewController.m */,
-				75476C3F20F7CF57003A11F1 /* DSQSOCQViewController.h */,
-				75476C4020F7CF57003A11F1 /* DSQSOCQViewController.m */,
+				75945C9320EC62F2003A11F1 /* DSQSOCQViewController.h */,
+				75945C9420EC62F2003A11F1 /* DSQSOCQViewController.m */,
 				75D870E220F6FD0D003A11F1 /* DSQSOReflectorsViewController.h */,
 				75D870E020F6FCE8003A11F1 /* DSQSOReflectorsViewController.m */,
 				75476C4220F7CF8B003A11F1 /* DSQSOSettingsViewController.h */,
 				75476C4320F7CF8B003A11F1 /* DSQSOSettingsViewController.m */,
+				5AF0DA2A2556E4A0462FF4AE /* QSOViewController.swift */,
+				5AF0D45150A3F674E7786E24 /* QSOCQViewController.swift */,
+				5AF0DA9023BE9883E0F226F6 /* QSOReflectorsViewController.swift */,
+				5AF0DD0139C9B29AAA10667E /* QSOSettingsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -386,6 +449,7 @@
 			isa = PBXGroup;
 			children = (
 				756A408B20EC5FAB003A11F1 /* DSE */,
+				755A2EA920FB7917003A11F1 /* HAM */,
 				75945C8120EC62F2003A11F1 /* DS */,
 				7525485220E988D0003A11F1 /* Resources */,
 				75945CAC20EC62F2003A11F1 /* ViewControllers */,
@@ -393,6 +457,9 @@
 				75E0880320E31575003A11F1 /* DStarDelightUITests */,
 				75E087EB20E31572003A11F1 /* Products */,
 				757DEE9920E6D98E003A11F1 /* Frameworks */,
+				80F68BCFF13EFC7E4021D816 /* Pods */,
+				755A2EA220FB6B20003A11F1 /* DStarDelight-Bridging-Header.h */,
+				5AF0D232995F0951CC97A4C5 /* Extensions */,
 			);
 			sourceTree = "<group>";
 		};
@@ -432,6 +499,17 @@
 			path = DStarDelightUITests;
 			sourceTree = "<group>";
 		};
+		80F68BCFF13EFC7E4021D816 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				31C4CEB872CC61347D86A7C4 /* Pods-DStarDelight.debug.xcconfig */,
+				4673CA55F1EFE01F6C0D071D /* Pods-DStarDelight.release.xcconfig */,
+				148C821C9B0F5A50DA0131CA /* Pods-DStarDelightUITests.debug.xcconfig */,
+				055B2231BFAA1ABB9458C344 /* Pods-DStarDelightUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -439,9 +517,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75E0880920E31575003A11F1 /* Build configuration list for PBXNativeTarget "DStarDelight" */;
 			buildPhases = (
+				F3ED72CC965E281E39603AA9 /* [CP] Check Pods Manifest.lock */,
 				75E087E620E31572003A11F1 /* Sources */,
 				75E087E720E31572003A11F1 /* Frameworks */,
 				75E087E820E31572003A11F1 /* Resources */,
+				1B18C722EF90D497E9D8BD90 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -456,6 +536,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75E0880C20E31575003A11F1 /* Build configuration list for PBXNativeTarget "DStarDelightUITests" */;
 			buildPhases = (
+				2EA43AA22F971CC53067C161 /* [CP] Check Pods Manifest.lock */,
 				75E087FC20E31575003A11F1 /* Sources */,
 				75E087FD20E31575003A11F1 /* Frameworks */,
 				75E087FE20E31575003A11F1 /* Resources */,
@@ -481,6 +562,24 @@
 				TargetAttributes = {
 					75E087E920E31572003A11F1 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 0;
+							};
+							com.apple.Maps.Mac = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
 					};
 					75E087FF20E31575003A11F1 = {
 						CreatedOnToolsVersion = 10.0;
@@ -543,18 +642,87 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1B18C722EF90D497E9D8BD90 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/../Pods/Target Support Files/Pods-DStarDelight/Pods-DStarDelight-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AutoCoding/AutoCoding.framework",
+				"${BUILT_PRODUCTS_DIR}/Dispatch/DispatchFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/Log/Log.framework",
+				"${BUILT_PRODUCTS_DIR}/NSObjectCoder/NSObjectCoder.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AutoCoding.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DispatchFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Log.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NSObjectCoder.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-DStarDelight/Pods-DStarDelight-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2EA43AA22F971CC53067C161 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DStarDelightUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3ED72CC965E281E39603AA9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DStarDelight-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		75E087E620E31572003A11F1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				755A2EAF20FBCD1D003A11F1 /* HAppDelegate.swift in Sources */,
+				5AF0D4FFEEC07845D6931CF1 /* QSOViewController.swift in Sources */,
+				5AF0DD1DFA0B72DF2152DD85 /* QSOCQViewController.swift in Sources */,
+				5AF0D5E3A2022B514A54F9A5 /* QSOReflectorsViewController.swift in Sources */,
 				75E0886420E3177F003A11F1 /* DSCallFormatter.m in Sources */,
 				758B49D420E41F0D003A11F1 /* DSDestinationCallFormatter.m in Sources */,
 				75E0886E20E3177F003A11F1 /* DSMessageFormatter.m in Sources */,
 				7502EC9420ECF139003A11F1 /* DSAddPopupController.m in Sources */,
-				7502EC9520ECF139003A11F1 /* DSQSOViewController.m in Sources */,
 				7502EC9620ECF139003A11F1 /* DSPrefVocoderNetworkViewController.m in Sources */,
-				75D870E120F6FCE8003A11F1 /* DSQSOReflectorsViewController.m in Sources */,
 				7502EC9720ECF139003A11F1 /* DSPrefVocoderSerialViewController.m in Sources */,
 				754A461D20EC6E65003A11F1 /* MASShortcut.m in Sources */,
 				754A461E20EC6E65003A11F1 /* MASShortcutValidator.m in Sources */,
@@ -569,9 +737,7 @@
 				756A40CD20EC60D8003A11F1 /* DSEDCSLink.m in Sources */,
 				752F94DD20ECEB05003A11F1 /* DSPrefAudioViewController.m in Sources */,
 				756A40C920EC60D8003A11F1 /* DNSHost.m in Sources */,
-				75476C4120F7CF57003A11F1 /* DSQSOCQViewController.m in Sources */,
 				75476C4520F7CF8B003A11F1 /* DSQSOSettingsViewController.m in Sources */,
-				75E0886020E3177F003A11F1 /* DSAppDelegate.m in Sources */,
 				756A40C820EC60D8003A11F1 /* DSELinkDriver.m in Sources */,
 				756A40C420EC60D8003A11F1 /* DSEDPlusLink.m in Sources */,
 				756A40C720EC60D8003A11F1 /* DSESlowDataCoder.m in Sources */,
@@ -584,9 +750,17 @@
 				756A40CC20EC60D8003A11F1 /* DSEIRCDDBGateways.m in Sources */,
 				756A40A520EC60B7003A11F1 /* DSEDataEngine.m in Sources */,
 				756A40C520EC60D8003A11F1 /* PortMapper.m in Sources */,
-				754A461B20EC6DDE003A11F1 /* main.m in Sources */,
 				756A40A320EC60B7003A11F1 /* TPCircularBuffer.c in Sources */,
 				756A40A220EC60B7003A11F1 /* TPCircularBuffer+AudioBufferList.c in Sources */,
+				5AF0DCCFE53D78E395758293 /* DSReflectorSource.m in Sources */,
+				5AF0D5FDEB456747948CA079 /* DSReflector.m in Sources */,
+				5AF0D3624E640F9B5524CE55 /* DSReflectors.swift in Sources */,
+				5AF0DBD49E8F2A3D71D578CA /* DSReflectorSource.swift in Sources */,
+				5AF0D33B78ACA2B70A064F00 /* DSReflector.swift in Sources */,
+				5AF0DC90CFC4D94236DAEC66 /* UserDefaultsManager.swift in Sources */,
+				5AF0D9FEC2FAD6D19691A27E /* NSKeyedArchiver+Key.m in Sources */,
+				5AF0D3409B70C56F73AD8286 /* NSKeyedUnarchiver+Key.m in Sources */,
+				5AF0DCF5649D52D9D4C06F2B /* QSOSettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -733,30 +907,10 @@
 		};
 		75E0880A20E31575003A11F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31C4CEB872CC61347D86A7C4 /* Pods-DStarDelight.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = NL3267E99V;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = Resources/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				OTHER_CODE_SIGN_FLAGS = "--deep";
-				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = net.polymicro.DStarDelight;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		75E0880B20E31575003A11F1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Resources/DStarDelight.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -772,12 +926,45 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = net.polymicro.DStarDelight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Sources/HAM/DStarDelight/DStarDelight/DStarDelight-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		75E0880B20E31575003A11F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4673CA55F1EFE01F6C0D071D /* Pods-DStarDelight.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Resources/DStarDelight.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = NL3267E99V;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				OTHER_CODE_SIGN_FLAGS = "--deep";
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = net.polymicro.DStarDelight;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Sources/HAM/DStarDelight/DStarDelight/DStarDelight-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
 		75E0880D20E31575003A11F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 148C821C9B0F5A50DA0131CA /* Pods-DStarDelightUITests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = NL3267E99V;
@@ -795,7 +982,9 @@
 		};
 		75E0880E20E31575003A11F1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 055B2231BFAA1ABB9458C344 /* Pods-DStarDelightUITests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = NL3267E99V;

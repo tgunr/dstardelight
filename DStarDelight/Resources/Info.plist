@@ -22,6 +22,12 @@
 	<string>1</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <!--Include to allow all connections (DANGER)-->
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2018 Polymicro Systems. All rights reserved.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
@@ -35,7 +41,7 @@
 	<key>NSMainStoryboardFile</key>
 	<string>Main</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>You r microphone is need for communications</string>
+	<string>Your microphone is needed if you want to talk to others.</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 	<key>NSServices</key>

@@ -8,7 +8,7 @@
 
 @property (nonatomic) NSViewController *configurationViewController;
 
--(void)replaceConfigurationViewControllerWith:(NSViewController *)viewController;
+//-(void)replaceConfigurationViewControllerWith:(NSViewController *)viewController;
 
 @end
 

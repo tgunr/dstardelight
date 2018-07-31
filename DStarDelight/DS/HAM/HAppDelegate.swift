@@ -1,0 +1,136 @@
+//
+//  HAppDelegate.swift
+//  DStarDelight
+//
+//  Created by Dave Carlton on 7/15/18.
+//  Copyright © 2018 Polymicro Systems. All rights reserved.
+//
+
+import AppKit
+import Log
+
+extension LogFormatters {
+    static let detailedPMN = LogFormatter("[%@] %@.%@:%@ %@: %@", [
+        .date("yyyy-MM-dd HH:mm:ss.SSS"),
+        .file(fullPath: false, fileExtension: false),
+        .function,
+        .line,
+        .level,
+        .message
+    ])
+}
+
+func HLog() -> Logger {
+    return (NSApplication.shared.delegate as! HAppDelegate).Log
+}
+
+@NSApplicationMain
+@objc class HAppDelegate: NSObject, NSApplicationDelegate {
+    var appReflectors: DSReflectors?
+    var Log = Logger(formatter: LogFormatters.detailedPMN, minLevel: .debug)
+    let shared = NSApplication.shared.delegate
+    
+    //MARK: Data reading and writing functions
+    
+    func readStringFromFile(fileName:String) -> String!{
+        guard let filepath = Bundle.main.path(forResource: fileName, ofType: "txt")
+            
+            else {return nil}
+        do { //Error showing following line
+            let contents = try String(contentsOfFile: filepath, encoding: String.Encoding.utf8)
+            
+            return contents
+        }catch{
+            print ("File Read Error")
+            return nil
+        }
+    }
+    
+    override func awakeFromNib() {
+        HLog().info("Starting up...")
+        let audioHandler: DSAudioHandler? = nil
+//        let audioHandler = DSAudioHandler()
+        DSVars.shared().audioHandler = audioHandler
+
+        let path = Bundle.main.path(forResource: "DefaultPreferences", ofType: "plist")
+        let defaultPrefs: NSDictionary? = NSDictionary(contentsOfFile: path!)
+        if let aPrefs = defaultPrefs {
+            UserDefaults.standard.register(defaults: aPrefs as! [String : Any])
+        }
+        NotificationCenter.default.addObserver(self, selector: #selector(self.reflectorsAreReady(_:)), name: NSNotification.Name(REFLECTORS_READY), object: nil)
+        HLog().debug("load reflectors")
+        appReflectors = DSReflectors().loadSavedReflectors()
+    }
+    
+    @objc func reflectorsAreReady(_ notification: Notification?) {
+        if appReflectors == nil {
+            let reflectors: DSReflectors = notification?.object as! DSReflectors
+            appReflectors = reflectors
+        }
+        HLog().info("count: ", appReflectors?.reflectorGateways.count)
+    }
+    
+    func applicationWillFinishLaunching(_ aNotification: Notification) {
+        let engine: DSEDataEngine = DSEDataEngine.sharedInstance()
+        engine.slowData.bind(NSBindingName("message"), to: NSUserDefaultsController.shared, withKeyPath: "values.slowDataMessage", options: nil)
+        let inputUid: String? = UserDefaults.standard.string(forKey: "inputAudioDevice")
+//        engine.audio.inputDevice = engine.audio.defaultInputDevice()
+//        if inputUid == nil {
+//            engine.audio.inputDevice = engine.audio.defaultInputDevice()
+//        } else {
+//            for entry in DSAudioHandler.enumerateInputDevices() {
+//                let dictItem: [ String : Any ] = entry as! [String : Any]
+//                let dictItemUID = dictItem["uid"] as! String
+//                    if dictItemUID == inputUid {
+//                    engine.audio.inputDevice = 0
+//                }
+//            }
+//        }
+        let outputUid = UserDefaults.standard.string(forKey: "outputAudioDevice")
+//        engine.audio.outputDevice = engine.audio.defaultOutputDevice()
+//        if outputUid == nil {
+//            engine.audio.outputDevice = engine.audio.defaultOutputDevice()
+//        } else {
+//            for entry in DSAudioHandler.enumerateOutputDevices() {
+//                let dictItem: [ String : Any ] = entry as! [String : Any]
+//                let dictItemUID = dictItem["uid"] as! String
+//                if dictItemUID == inputUid {
+//                    engine.audio.outputDevice = 0
+//                }
+//            }
+//        }
+        let nName: NSNotification.Name = NSNotification.Name(rawValue: DSAudioDeviceChanged)
+        NotificationCenter.default.addObserver(forName: nName, object: nil, queue: OperationQueue.main, using:
+        { notification in
+            for entry in DSAudioHandler.enumerateInputDevices() {
+                let dictItem: [ String : Any ] = entry as! [String : Any]
+                let itemUID:AudioDeviceID = dictItem["id"] as! AudioDeviceID
+                if itemUID == engine.audio.inputDevice {
+                    UserDefaults.standard.set(itemUID, forKey: "inputAudioDevice")
+                }
+            }
+            for entry in DSAudioHandler.enumerateOutputDevices() {
+                let dictItem: [ String : Any ] = entry as! [String : Any]
+                let itemUID:AudioDeviceID = dictItem["id"] as! AudioDeviceID
+                if itemUID == engine.audio.inputDevice {
+                    UserDefaults.standard.set(itemUID, forKey: "outputAudioDevice")
+                }
+            }
+        })
+// TODO: Enable audio
+//        DispatchQueue.global(qos: .default).async(execute: {
+//            engine.audio.start()
+//            engine.audio.setOutputVolume(UserDefaults.standard.float(forKey: "outputVolume"))
+//            engine.vocoder.start()
+//        })
+    }
+
+    func applicationDidFinishLaunching(_ notification: Notification) {
+
+    }
+
+    func applicationWillTerminate(_ aNotification: Notification) {
+        // Insert code here to tear down your application
+    }
+
+}

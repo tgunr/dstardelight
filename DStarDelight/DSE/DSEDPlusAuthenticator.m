@@ -87,7 +87,7 @@ static const unsigned long long NSEC_PER_HOUR = 3600ull * NSEC_PER_SEC;
 - (id) init {
     self = [super init];
     if(self) {
-        _authenticationHost = [DNSHost hostWithName: DSTARAUTHHOST];
+        _authenticationHost = [DNSHost hostWithName: (NSString *)DSTARAUTHHOST];
         _reflectorList = nil;
         _authCall = @"WD6EZL";
         _suffix = '2';

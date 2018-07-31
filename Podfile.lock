@@ -1,16 +1,37 @@
 PODS:
-  - SwiftSocket (2.0.2)
+  - AutoCoding (2.2.3)
+  - Dispatch (2.0.4)
+  - Log (1.0)
+  - NSObjectCoder (1.0)
+  - RxCocoa (4.2.0):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.2.0)
 
 DEPENDENCIES:
-  - SwiftSocket
+  - AutoCoding
+  - Dispatch
+  - Log
+  - NSObjectCoder
+  - RxCocoa (~> 4.0)
+  - RxSwift (~> 4.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - SwiftSocket
+    - AutoCoding
+    - Dispatch
+    - Log
+    - NSObjectCoder
+    - RxCocoa
+    - RxSwift
 
 SPEC CHECKSUMS:
-  SwiftSocket: 6f4c9c63fbc5c1d61188936bb3c599fd546f40ae
+  AutoCoding: 90ca3cbc0d77a37cfff75167d705b44148c5fc51
+  Dispatch: 7ed89f2845001c4161ad83f43988b584fae8fff4
+  Log: 5e368c9528db07517d18d2d04ff5fe2b6f5a1e21
+  NSObjectCoder: edc8e96528ee81693d37dd014df573ca37ba9cac
+  RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
+  RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
 
-PODFILE CHECKSUM: 17c684f45589051cf276c2ed66c69d3a5888e9d4
+PODFILE CHECKSUM: 3fe83fd3ae7a3862b1d1ece8acbf6e7567367663
 
 COCOAPODS: 1.5.3
