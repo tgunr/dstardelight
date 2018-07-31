@@ -30,13 +30,6 @@ class QSOReflectorsViewController: NSViewController  {
     @IBOutlet var disableButton: NSButton!
 
     // MARK: Access
-    func reflectorGateways() -> [DSReflector]? {
-        return reflectors?.reflectorGateways
-    }
-
-    func reflectorsActive() -> [DSReflector]? {
-        return reflectorGateways()?.filter { $0.active }
-    }
 
     // MARK: View Methods
     override func awakeFromNib() {
@@ -52,7 +45,7 @@ class QSOReflectorsViewController: NSViewController  {
         progressView.isHidden = true
         reflectorsPending = false
         reflectors = appDelegate.appReflectors
-        NotificationCenter.default.addObserver(self, selector: #selector(self.reflectorsAreReady(_:)), name: NSNotification.Name(REFLECTORS_READY), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.reflectorsAreReady(_:)), name: NSNotification.Name(kReflectorsAreReady), object: nil)
 
         updateWhenButtons = [updateDailyButton, updateWeeklyButton, updateMonthlyButton]
         updateWhenButtons.forEach { $0.state = NSControl.StateValue.off } // uncheck everything
@@ -103,7 +96,7 @@ class QSOReflectorsViewController: NSViewController  {
     @objc
     func reflectorsAreReady(_ notification: Notification?) {
         let newReflectors: DSReflectors = notification?.object as! DSReflectors
-        HLog().debug("new reflectors:", newReflectors.reflectorGateways.count)
+        HLog().debug("new reflectors:", newReflectors.reflectorGateways()?.count)
         reflectors = newReflectors
         reflectorsPending = false
         if progressView != nil {
@@ -126,7 +119,7 @@ class QSOReflectorsViewController: NSViewController  {
     }
 
     @IBAction func updateNow(_ sender: Any) {
-        NotificationCenter.default.addObserver(self, selector: #selector(self.newReflectorFound(_:)), name: NSNotification.Name(NEW_REFLECTOR_FOUND), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.newReflectorFound(_:)), name: NSNotification.Name(kNewReflectorFound), object: nil)
         progressView.isHidden = false
         progressView.startAnimation(self)
         reflectors?.reloadReflectors()
@@ -154,7 +147,7 @@ class QSOReflectorsViewController: NSViewController  {
     @IBAction func enableClicked(_ sender: NSButton) {
         let selection = reflectorsTableView.selectedRow
         if selection >= 0 {
-            reflectorGateways()![selection].active = true
+            reflectors?.reflectorGateways()![ selection ].active = true
             reflectors?.saveReflectorsToFile()
             enabledTableView.reloadData()
         } else {
@@ -165,7 +158,7 @@ class QSOReflectorsViewController: NSViewController  {
     @IBAction func disableClicked(_ sender: NSButton) {
         let selection = enabledTableView.selectedRow
         if selection >= 0 {
-            reflectorsActive()![ selection ].active = false
+            reflectors?.actives[ selection ].active = false
             reflectors?.saveReflectorsToFile()
             enabledTableView.reloadData()
         } else {
@@ -181,11 +174,11 @@ extension QSOReflectorsViewController: NSTableViewDataSource {
         let tag = tableView.tag
         switch tag {
             case 0:
-                if let gateways = reflectorGateways() {
+                if let gateways: [ DSReflector ] = reflectors?.reflectorGateways() {
                     count = gateways.count
                 }
             case 1:
-                if let actives = reflectorsActive() {
+                if let actives: [ DSReflector ] = reflectors?.actives {
                     count = actives.count
                 }
             default: break
@@ -198,22 +191,22 @@ extension QSOReflectorsViewController: NSTableViewDataSource {
         let tag = tableView.tag
         switch tag {
             case 0:
-                if reflectorGateways()?.count != 0 {
-                    let aReflector: DSReflector = self.reflectorGateways()![ row ]
-                    if let colID = tableColumn?.identifier.rawValue {
+                if reflectors?.reflectorGateways()?.count != 0 {
+                    let aReflector: DSReflector? = reflectors?.gateways[ row ]
+                    if let colID: String = tableColumn?.identifier.rawValue {
                         switch colID {
                             case "reflectorName":
-                                return aReflector.name
+                                return aReflector?.name
                             case "reflectorIP":
-                                return aReflector.ip
+                                return aReflector?.ip
                             default:
                                 break
                         }
                     }
                 }
             case 1:
-                if self.reflectorsActive()!.count != 0 {
-                    let aReflector = self.reflectorsActive()![ row ]
+                if reflectors?.reflectorsActive()!.count != 0 {
+                    let aReflector: DSReflector = ( reflectors?.actives[ row ] )!
                     return aReflector.name
                 }
             default:
@@ -223,7 +216,7 @@ extension QSOReflectorsViewController: NSTableViewDataSource {
     }
 
     func tableView(_ tableView: NSTableView, setObjectValue object: Any?, for tableColumn: NSTableColumn?, row: Int) {
-        let aReflector = reflectorGateways()![row] as? DSReflector
+        let aReflector: DSReflector? = reflectors?.reflectorGateways()?[ row ] as? DSReflector
 
     }
 

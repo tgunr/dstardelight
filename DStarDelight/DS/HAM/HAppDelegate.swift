@@ -57,7 +57,7 @@ func HLog() -> Logger {
         if let aPrefs = defaultPrefs {
             UserDefaults.standard.register(defaults: aPrefs as! [String : Any])
         }
-        NotificationCenter.default.addObserver(self, selector: #selector(self.reflectorsAreReady(_:)), name: NSNotification.Name(REFLECTORS_READY), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.reflectorsAreReady(_:)), name: NSNotification.Name(kReflectorsAreReady), object: nil)
         HLog().debug("load reflectors")
         appReflectors = DSReflectors().loadSavedReflectors()
     }
@@ -67,7 +67,7 @@ func HLog() -> Logger {
             let reflectors: DSReflectors = notification?.object as! DSReflectors
             appReflectors = reflectors
         }
-        HLog().info("count: ", appReflectors?.reflectorGateways.count)
+        HLog().info("count: ", appReflectors?.gateways.count)
     }
     
     func applicationWillFinishLaunching(_ aNotification: Notification) {

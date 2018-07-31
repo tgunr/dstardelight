@@ -71,12 +71,12 @@ class HQSOCQViewController: NSViewController {
 //    var txKeyCode: MASShortcut?
 
     var reflectors: DSReflectors?
-    var reflectorGateways: NSMutableArray?
     let appDelegate = NSApplication.shared.delegate as! HAppDelegate
 
     @IBOutlet var heardArrayController: NSArrayController!
     @IBOutlet var heardTableController: NSArrayController!
     @IBOutlet weak var heardTableView: NSTableView!
+    @IBOutlet var connectionTableView: NSTableView!
     @IBOutlet weak var statusLED: NSImageView!
 
     @IBOutlet var transmitButton: NSButton!
@@ -568,7 +568,7 @@ class HQSOCQViewController: NSViewController {
 
 extension HQSOCQViewController: NSTableViewDataSource {
     func numberOfRows(in tableView: NSTableView) -> Int {
-        let count = reflectors?.reflectorGateways.count
+        let count = reflectors?.gateways.count
         print("numberOfRows: \(count ?? 0)")
         return count ?? 0
     }
@@ -581,8 +581,8 @@ extension HQSOCQViewController: NSTableViewDataSource {
     }
 
     func tableView(_: NSTableView, objectValueFor: NSTableColumn?, row: Int) -> Any? {
-        let aReflector = reflectorGateways?.object(at: row) as? DSReflector
-        if let object = objectValueFor?.identifier {
+        let aReflector: DSReflector? = reflectors?.reflectorGateways()?[ row ] as? DSReflector
+        if let object: NSUserInterfaceItemIdentifier = objectValueFor?.identifier {
             switch object.rawValue {
             case "ReflectorName":
                 let value = object.rawValue
@@ -599,7 +599,7 @@ extension HQSOCQViewController: NSTableViewDataSource {
     }
 
     func tableView(_ tableView: NSTableView, setObjectValue object: Any?, for tableColumn: NSTableColumn?, row: Int) {
-        let aReflector = reflectorGateways?.object(at: row) as? DSReflector
+        let aReflector: DSReflector? = reflectors?.reflectorGateways()?[ row ] as? DSReflector
 
     }
 

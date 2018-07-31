@@ -11,17 +11,26 @@ import NSObjectCoder
 import AutoCoding
 import Log
 
-let SOURCE_HEADER          = "# Prepared at ar-dns.net - "
-let kHamster = "Hamster"
-let HAMSTER_APPSUPPORT     = kHamster
-let HAMSTER_REFLECTORS     = HAMSTER_APPSUPPORT + "Reflectors.plist"
-let REFLECTORS_READY       = "reflectorsAreReady"
-let REFLECTOR_SOURCE_READY = "reflectorSourceIsReady"
-let NEW_REFLECTOR_FOUND = "newReflectorFound"
+let SOURCE_HEADER           = "# Prepared at ar-dns.net - "
+let kHamster                = "Hamster"
+let kHamsterAppSupport      = kHamster
+let kHamsterReflectors      = "Reflectors.plist"
+let kReflectorsAreReady     = "reflectorsAreReady"
+let kReflectorSourceIsReady = "reflectorSourceIsReady"
+let kNewReflectorFound      = "newReflectorFound"
+let kReflectorSources       = "reflectorSources"
+let kReflectorGateways      = "reflectorGateways"
 
 class DSReflectors: NSObject {
-    var reflectorSources:   [ DSReflectorSource ] = []
-    var reflectorGateways:  [ DSReflector ]       = []
+    var reflectorSources: [ DSReflectorSource ] = []
+    var gateways:         [ DSReflector ]       = []
+    var actives: [ DSReflector ] {
+        get {
+            return gateways.filter {
+                $0.active
+            }
+        }
+    }
     var lastTask:           URLSessionDataTask?
     var defaultSourcesFile: URL?
 
@@ -37,8 +46,8 @@ class DSReflectors: NSObject {
         }
         // folder = reference to Application Support
         let folder               = URL(fileURLWithPath: dir?.path ?? "", isDirectory: true)
-        let appSupportFolderURL  = folder.appendingPathComponent(HAMSTER_APPSUPPORT, isDirectory: true)
-        let hamsterReflectorsURL = appSupportFolderURL.appendingPathComponent(HAMSTER_REFLECTORS)
+        let appSupportFolderURL  = folder.appendingPathComponent(kHamsterAppSupport, isDirectory: true)
+        let hamsterReflectorsURL = appSupportFolderURL.appendingPathComponent(kHamsterReflectors)
         if !FileManager.default.fileExists(atPath: appSupportFolderURL.path) {
             do {
                 try FileManager.default.createDirectory(at: appSupportFolderURL, withIntermediateDirectories: false, attributes: nil)
@@ -59,8 +68,8 @@ class DSReflectors: NSObject {
     init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         do {
-            try reflectorGateways = aDecoder.decodeObject(forKey: "reflectorGateways") as! [ DSReflector ]
-            try reflectorSources = aDecoder.decodeObject(forKey: "reflectorSources") as! [ DSReflectorSource ]
+            try gateways = aDecoder.decodeObject(forKey: kReflectorGateways) as! [ DSReflector ]
+            try reflectorSources = aDecoder.decodeObject(forKey: kReflectorSources) as! [ DSReflectorSource ]
             HLog().debug("DECODED")
         } catch {
             HLog().error("DECODE FAILED")
@@ -71,8 +80,8 @@ class DSReflectors: NSObject {
     override
     func encode(with aCoder: NSCoder) {
         HLog().trace("Encoder")
-        aCoder.encode(reflectorGateways, forKey: "reflectorGateways")
-        aCoder.encode(reflectorSources, forKey: "reflectorSources")
+        aCoder.encode(gateways, forKey: kReflectorGateways)
+        aCoder.encode(reflectorSources, forKey: kReflectorSources)
         super.encode(with: aCoder)
     }
 
@@ -95,7 +104,7 @@ class DSReflectors: NSObject {
         DispatchQueue.main.async(execute: {
             HLog().debug("")
             let reflectorSourceDefaults: [ String ]?
-                    = UserDefaults.standard.object(forKey: "reflectorSources") as? [ String ]
+                    = UserDefaults.standard.object(forKey: kReflectorSources) as? [ String ]
             var lastReflectorSource:     DSReflectorSource?
             self.reflectorSources = []
             // build list of default sources
@@ -129,15 +138,15 @@ class DSReflectors: NSObject {
     }
 
     func reloadReflectors() {
-        self.reflectorGateways = []
+        self.gateways = []
         checkForOutDated()
     }
 
     func checkForOutDated() {
         let reflectorsUpdated = UserDefaults.standard.object(forKey: "reflectorsUpdated") as? Date
-        let since = TimeInterval(fabs(Float(reflectorsUpdated?.timeIntervalSinceNow ?? 0.0)))
-        let nextUpdate = Date()+since
-        let numGateways       = reflectorGateways.count
+        let since             = TimeInterval(fabs(Float(reflectorsUpdated?.timeIntervalSinceNow ?? 0.0)))
+        let nextUpdate        = Date()+since
+        let numGateways       = gateways.count
         HLog().debug("Last update: \(String(describing:  reflectorsUpdated )) nextUpdate: \( nextUpdate )")
         let days = UserDefaultsManager.shared.updateFrequency?.rawValue
         let expired = TimeInterval(days! * 24 * 60 * 60)
@@ -183,7 +192,7 @@ class DSReflectors: NSObject {
                     aReflector?.ip = ( lineItems?[ 1 ] )!
                     if reflectorList[ ( aReflector?.name )! ] == nil {
                         reflectorList[ ( aReflector?.name )! ] = aReflector
-                        reflectorGateways.append(aReflector!)
+                        gateways.append(aReflector!)
                         NotificationCenter.default.post(name: NSNotification.Name("newReflectorFound"), object: aReflector)
                     } else {
                         HLog().warning("Duplicate reflector: ", aReflector?.name)
@@ -197,13 +206,13 @@ class DSReflectors: NSObject {
                 }
             }
         }
-        NotificationCenter.default.post(name: NSNotification.Name(REFLECTOR_SOURCE_READY), object: reflectorSource)
+        NotificationCenter.default.post(name: NSNotification.Name(kReflectorSourceIsReady), object: reflectorSource)
     }
 
     func update() {
         // update reflector lists
         HLog().debug("")
-        reflectorGateways = []
+        gateways = []
         for reflectorSource in reflectorSources {
             updateReflectorsForSource(reflectorSource)
         }
@@ -217,14 +226,14 @@ class DSReflectors: NSObject {
     }
 
     func saveReflectorsToFile() {
-        if ( self.reflectorSources.count != 0 ) && ( self.reflectorGateways.count != 0 ) {
+        if ( self.reflectorSources.count != 0 ) && ( self.gateways.count != 0 ) {
             HLog().info("Saving reflectors")
             self.write(toFile: ( defaultSourcesURL()?.path )!, atomically: false)
-            NotificationCenter.default.post(name: NSNotification.Name(REFLECTORS_READY), object: self)
+            NotificationCenter.default.post(name: NSNotification.Name(kReflectorsAreReady), object: self)
         } else {
             HLog().error("Saving reflectors failed!")
-            HLog().error("reflectorSources count: &d reflectorGateways count: %d",
-                         self.reflectorSources.count, self.reflectorGateways.count)
+            HLog().error("reflectorSources count: &d gateways count: %d",
+                         self.reflectorSources.count, self.gateways.count)
         }
     }
 
@@ -237,12 +246,12 @@ class DSReflectors: NSObject {
             return nil
         }
         if ( reflectorList == nil ) ||
-                   ( reflectorList?.reflectorGateways == nil ) ||
-                   ( reflectorList?.reflectorGateways.count == 0 ) ||
+                   ( reflectorList?.gateways == nil ) ||
+                   ( reflectorList?.gateways.count == 0 ) ||
                    ( reflectorList?.reflectorSources.count == 0 ) {
             // no list
-            NotificationCenter.default.addObserver(self, selector: #selector(self.reflectorSourceIsReady(_:)), name: NSNotification.Name(REFLECTOR_SOURCE_READY), object: nil)
-            HLog().info("No local reflectorlist, Waiting for \( REFLECTORS_READY )")
+            NotificationCenter.default.addObserver(self, selector: #selector(self.reflectorSourceIsReady(_:)), name: NSNotification.Name(kReflectorSourceIsReady), object: nil)
+            HLog().info("No local reflectorlist, Waiting for \( kReflectorsAreReady )")
             loadDefaultSources()
         } else {
             // we have a list, check if outdated
@@ -250,6 +259,17 @@ class DSReflectors: NSObject {
             reflectorList?.checkForOutDated()
         }
         return reflectorList
+    }
+
+    // MARK: Access
+    func reflectorGateways() -> [ DSReflector ]? {
+        return gateways
+    }
+
+    func reflectorsActive() -> [ DSReflector ]? {
+        return reflectorGateways()?.filter {
+            $0.active
+        }
     }
 
 }
