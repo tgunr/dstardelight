@@ -24,6 +24,10 @@ func HLog() -> Logger {
     return (NSApplication.shared.delegate as! HAppDelegate).Log
 }
 
+func Beep() {
+    AudioServicesPlaySystemSound(kSystemSoundID_UserPreferredAlert)
+}
+
 @NSApplicationMain
 @objc class HAppDelegate: NSObject, NSApplicationDelegate {
     var appReflectors: DSReflectors?
