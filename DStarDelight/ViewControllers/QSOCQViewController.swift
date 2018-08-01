@@ -60,6 +60,8 @@ struct StreamInfo {
     }
 }
 
+let kConnectionRowIdentifier = "Connection"
+
 class HQSOCQViewController: NSViewController {
     private var qsoTimer: DispatchSource?
     private var txButtonState: Int = 0
@@ -71,6 +73,8 @@ class HQSOCQViewController: NSViewController {
 //    var txKeyCode: MASShortcut?
 
     var reflectors: DSReflectors?
+    var connection: DSReflector?
+
     let appDelegate = NSApplication.shared.delegate as! HAppDelegate
 
     @IBOutlet var heardArrayController: NSArrayController!
@@ -102,7 +106,6 @@ class HQSOCQViewController: NSViewController {
 
      override func viewDidLoad() {
         reflectors = appDelegate.appReflectors
-//        reflectorGateways = reflectors?.reflectorGateways
     }
 
     func reflectorsAreReady() {
@@ -378,53 +381,45 @@ class HQSOCQViewController: NSViewController {
     //        [self.mapPopover showRelativeToRect:NSMakeRect(0, 0, 300, 300) ofView:clickedView preferredEdge:NSRectEdgeMaxY];
     //    }
     //}
-    //-(IBAction)doReflectorDoubleClick:(id)sender {
-    //    if(self.reflectorTableController.selectedObjects.count != 1) {
-    //        NSBeep();
-    //        return;
-    //    }
-    //
-    //    NSString *reflector = self.reflectorTableController.selectedObjects[0][@"reflector"];
-    //
-    //    if(reflector.length < 8)
-    //        return;
-    //
-    //    if([reflector isEqualToString:[DSEDataEngine sharedInstance].network.linkTarget]) {
-    //        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-    //            [[DSEDataEngine sharedInstance] unlink];
-    //        });
-    //    } else {
-    //        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-    //            [[DSEDataEngine sharedInstance] linkTo:reflector];
-    //        });
-    //    }
-    //
-    //    [self.reflectorTableView deselectAll:self];
-    //}
-    //- (IBAction)doLink:(id)sender {
-    //    if(self.reflectorTableController.selectedObjects.count != 1) {
-    //        NSBeep();
-    //        return;
-    //    }
-    //
-    //    NSString *reflector = self.reflectorTableController.selectedObjects[0][@"reflector"];
-    //
-    //    if(reflector.length < 8)
-    //        return;
-    //
-    //    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-    //        [[DSEDataEngine sharedInstance] linkTo:reflector];
-    //    });
-    //
-    //    [self.reflectorTableView deselectAll:self];
-    //}
-    //- (IBAction)doUnlink:(id)sender {
-    //    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-    //        [[DSEDataEngine sharedInstance] unlink];
-    //    });
-    //
-    //    [self.reflectorTableView deselectAll:self];
-    //}
+
+    // MARK: Actions
+
+    @IBAction func doReflectorDoubleClick(_ sender: Any) {
+        if connection == nil {
+            Beep()
+            return
+        }
+        var reflectorName: String? = connection?.name
+        if (reflectorName == DSEDataEngine.sharedInstance().network.linkTarget) {
+            DispatchQueue.global(qos: .default).async(execute: {
+                DSEDataEngine.sharedInstance().unlink()
+            })
+        } else {
+            DispatchQueue.global(qos: .default).async(execute: {
+                DSEDataEngine.sharedInstance().link(to: reflectorName)
+            })
+        }
+    }
+
+    @IBAction func doLink(_ sender: Any) {
+        HLog().debug("")
+        if connection == nil {
+            Beep()
+            HLog().debug("No connection")
+            return
+        }
+        DispatchQueue.global(qos: .default).async(execute: {
+            DSEDataEngine.sharedInstance().link(to: self.connection?.name)
+        })
+    }
+
+    @IBAction func doUnlink(_ sender: Any) {
+        HLog().debug("")
+        DispatchQueue.global(qos: .default).async(execute: {
+            DSEDataEngine.sharedInstance().unlink()
+        })
+    }
+
     @IBAction func doVolumeChange(_ sender: Any) {
         //        let engineaudio: DSAudioHandler? = DSEDataEngine.sharedInstance().audio
         //        engineaudio?.outputVolume = volumeSlider
@@ -438,18 +433,14 @@ class HQSOCQViewController: NSViewController {
         switch sender.state {
         case .on:
             sender.title = "Disconnect"
+            doLink(sender)
         case .off:
             sender.title = "Connect"
+            doUnlink(sender)
         default:
             break
         }
 }
-
-//    func addReflector(_ sender: Any?) {
-//        if let aSender = sender as? NSView {
-//            addPopover?.show(relativeTo: NSMakeRect(0, 0, 300, 300), of: aSender, preferredEdge: .maxY)
-//        }
-//    }
 
     func startTx() {
 //        if !DSEDataEngine.sharedInstance().network {
@@ -566,42 +557,72 @@ class HQSOCQViewController: NSViewController {
 
 }
 
+extension HQSOCQViewController: NSTableViewDelegate {
+    func tableViewSelectionDidChange(_ notification: Notification) {
+        let tableView = notification.object as? NSTableView
+        let tag       = tableView?.tag
+        switch tag {
+            case 1:
+                if let selectedRow = ( notification.object as AnyObject ).selectedRow {
+                    if (selectedRow >= 0) {
+                        let selectedItem = reflectors?.actives[ selectedRow ]
+                        connection = selectedItem
+                    }
+                }
+            default: break
+        }
+    }
+}
+
 extension HQSOCQViewController: NSTableViewDataSource {
     func numberOfRows(in tableView: NSTableView) -> Int {
-        let count = reflectors?.gateways.count
-        print("numberOfRows: \(count ?? 0)")
-        return count ?? 0
+        var count: Int = 0
+        let tag        = tableView.tag
+        switch tag {
+            case 0:
+                count = 0
+            case 1:
+                if let actives: [ DSReflector ] = reflectors?.actives {
+                    count = actives.count
+                }
+            default:break
+        }
+        HLog().debug("numberOfRows: \( count )")
+        return count
     }
 
-    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        var result: NSTableCellView
-        result = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "firstName"), owner: self) as! NSTableCellView
-        result.textField?.stringValue = "test"
-        return result
-    }
-
-    func tableView(_: NSTableView, objectValueFor: NSTableColumn?, row: Int) -> Any? {
-        let aReflector: DSReflector? = reflectors?.reflectorGateways()?[ row ] as? DSReflector
-        if let object: NSUserInterfaceItemIdentifier = objectValueFor?.identifier {
-            switch object.rawValue {
-            case "ReflectorName":
-                let value = object.rawValue
-                return aReflector?.name
-
-            case "ReflectorIP":
-                return aReflector?.ip
-
-            default:
+    func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
+        let aReflector: DSReflector                    = ( reflectors?.actives[ row ] )!
+        let identifier: NSUserInterfaceItemIdentifier? = tableColumn?.identifier
+        let tag                                        = tableView.tag
+        switch tag {
+            case 0:
                 return "NONE"
-            }
+            case 1:
+                if reflectors?.actives.count != 0 {
+                    let aReflector: DSReflector = ( reflectors?.actives[ row ] )!
+                    var textValue:  String      = ""
+                    if let colID: String = tableColumn?.identifier.rawValue {
+                        switch colID {
+                            case "ConnectionType":
+                                textValue = "DS"
+                            case "ConnectionID":
+                                textValue = aReflector.name
+                            default:
+                                textValue = "NONE"
+                        }
+                    }
+                    let tableCellView = NSTableCellView()
+                    HLog().debug("row: ", row, " column: ", tableColumn?.identifier.rawValue, "value: ", textValue)
+                    return textValue
+                }
+            default:
+                HLog().error("No reflectors!")
         }
         return "NONE"
     }
 
     func tableView(_ tableView: NSTableView, setObjectValue object: Any?, for tableColumn: NSTableColumn?, row: Int) {
-        let aReflector: DSReflector? = reflectors?.reflectorGateways()?[ row ] as? DSReflector
 
     }
-
 }
-

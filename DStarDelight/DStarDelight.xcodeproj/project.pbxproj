@@ -19,6 +19,7 @@
 		5AF0DCCFE53D78E395758293 /* DSReflectorSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0D1EE2654818086ADD427 /* DSReflectorSource.m */; };
 		5AF0DCF5649D52D9D4C06F2B /* QSOSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0DD0139C9B29AAA10667E /* QSOSettingsViewController.swift */; };
 		5AF0DD1DFA0B72DF2152DD85 /* QSOCQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0D45150A3F674E7786E24 /* QSOCQViewController.swift */; };
+		5AF0DFA03B1DE2EADC8BD925 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0D8C7AFE2F06B60D35D4A /* Connection.swift */; };
 		6891CE84592F68FFD75B9580 /* Pods_DStarDelightUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC981FCCF635432B44467462 /* Pods_DStarDelightUITests.framework */; };
 		70E0477957C690C33631C7AE /* Pods_DStarDelight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBFD5970E5D8ACF1425391D /* Pods_DStarDelight.framework */; };
 		7502EC9420ECF139003A11F1 /* DSAddPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75945C8620EC62F2003A11F1 /* DSAddPopupController.m */; };
@@ -102,6 +103,7 @@
 		5AF0D470E5607AF1817F92C8 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		5AF0D4C698CD38AAC9D6A002 /* NSKeyedArchiver+Key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSKeyedArchiver+Key.h"; sourceTree = "<group>"; };
 		5AF0D73805C4DE6D45675905 /* NSKeyedArchiver+Key.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSKeyedArchiver+Key.m"; sourceTree = "<group>"; };
+		5AF0D8C7AFE2F06B60D35D4A /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		5AF0D9FEF00034D592A8CFD9 /* NSKeyedUnarchiver+Key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSKeyedUnarchiver+Key.h"; sourceTree = "<group>"; };
 		5AF0DA2A2556E4A0462FF4AE /* QSOViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QSOViewController.swift; sourceTree = "<group>"; };
 		5AF0DA883D5FDE102EDB2370 /* DSReflector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSReflector.h; sourceTree = "<group>"; };
@@ -395,6 +397,7 @@
 				5AF0D179B545B8517848DC80 /* DSReflector.swift */,
 				5AF0D277132C9C8DDC2BA453 /* DSReflectorSource.swift */,
 				5AF0DC08DE257E415E32DB3D /* DSReflectors.swift */,
+				5AF0D8C7AFE2F06B60D35D4A /* Connection.swift */,
 			);
 			path = DS;
 			sourceTree = "<group>";
@@ -771,6 +774,7 @@
 				5AF0D9FEC2FAD6D19691A27E /* NSKeyedArchiver+Key.m in Sources */,
 				5AF0D3409B70C56F73AD8286 /* NSKeyedUnarchiver+Key.m in Sources */,
 				5AF0DCF5649D52D9D4C06F2B /* QSOSettingsViewController.swift in Sources */,
+				5AF0DFA03B1DE2EADC8BD925 /* Connection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
