@@ -220,122 +220,124 @@
 
 }
 
-//-(void)destinationDidLink:(NSString *)destination {
-//    self.repeaterInfo.stringValue = [NSString stringWithFormat:@"Linked to %@", destination];
-//
-//    if([[NSUserDefaults standardUserDefaults] boolForKey:@"voiceAnnounceOnStatusChange"])
-//        [self.speechSynth startSpeakingString:[[NSString stringWithFormat:@"Linked to [[char LTRL]] %@ [[char NORM]]", destination] lowercaseString]];
-//
-//    NSDockTile *dockTile = [NSApplication sharedApplication].dockTile;
-//    dockTile.badgeLabel = destination;
-//    [dockTile display];
-//
-//    self.txButton.enabled = YES;
-//
-//}
-//
-//-(void)destinationDidUnlink:(NSString *)destination {
-//    self.repeaterInfo.stringValue = @"Unlinked";
-//
-//    if([[NSUserDefaults standardUserDefaults] boolForKey:@"voiceAnnounceOnStatusChange"])
-//        [self.speechSynth startSpeakingString:self.repeaterInfo.stringValue];
-//
-//    NSDockTile *dockTile = [NSApplication sharedApplication].dockTile;
-//    dockTile.badgeLabel = nil;
-//    [dockTile display];
-//
-//    self.txButton.enabled = NO;
+- (void)destinationDidLink:(NSString *)destination {
+    self.repeaterInfo.stringValue = [NSString stringWithFormat:@"Linked to %@", destination];
 
-//    [self.reflectorTableView enumerateAvailableRowViewsUsingBlock:^void(NSTableRowView *rowView, NSInteger row) {
-//        NSTextField *reflectorsView = ((NSTableCellView *)[rowView viewAtColumn:0]).textField;
-//        if([reflectorsView.objectValue isEqualToString:destination])
-//            reflectorsView.textColor = [NSColor blackColor];
-//    }];
-//}
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"voiceAnnounceOnStatusChange"])
+        [self.speechSynth startSpeakingString:[[NSString stringWithFormat:@"Linked to [[char LTRL]] %@ [[char NORM]]", destination] lowercaseString]];
 
-//-(void)destinationDidError:(NSString *)destination error:(NSError *)error {
-//    NSAlert *alert = [NSAlert alertWithError:error];
-//    dispatch_async(dispatch_get_main_queue(), ^{
-//        [alert beginSheetModalForWindow:self.view.window completionHandler:^(NSModalResponse response){}];
-//    });
-//}
-//
-//-(void)destinationWillLink:(NSString *)destination {
-//    self.repeaterInfo.stringValue = [NSString stringWithFormat:@"Linking to %@", destination];
-//}
-//-(void)destinationDidConnect:(NSString *)destination {
-//    self.repeaterInfo.stringValue = [NSString stringWithFormat:@"Connected to %@. Attempting to establish link.", destination];
-//}
-//
-//
-//- (IBAction)doHeardDoubleClick:(id)sender {
-//    NSLog(@"Got double click, row %ld column %ld", self.heardTableView.clickedRow, self.heardTableView.clickedColumn);
-//    if(self.heardTableView.clickedRow < 0)
-//        return;
-//
-//    NSDictionary *qso = self.heardTableController.arrangedObjects[self.heardTableView.clickedRow];
-//
-//    if(qso[@"location"]) {
-//        DSEAprsLocation *location = qso[@"location"];
-//        if(!location.callsign)
-//            location.callsign = qso[@"myCall"];
-//
-//        ((DSMapPopupController *)self.mapPopover.contentViewController).annotation = qso[@"location"];
-//        ((DSMapPopupController *)self.mapPopover.contentViewController).qsoId = qso[@"streamId"];
-//        NSView *clickedView = [self.heardTableView viewAtColumn:[self.heardTableView columnWithIdentifier:@"Location"] row:self.heardTableView.clickedRow makeIfNecessary:NO];
-//        [self.mapPopover showRelativeToRect:NSMakeRect(0, 0, 300, 300) ofView:clickedView preferredEdge:NSRectEdgeMaxY];
-//    }
-//}
+    NSDockTile *dockTile = [NSApplication sharedApplication].dockTile;
+    dockTile.badgeLabel = destination;
+    [dockTile display];
 
-//-(IBAction)doReflectorDoubleClick:(id)sender {
-//    if(self.reflectorTableController.selectedObjects.count != 1) {
-//        NSBeep();
-//        return;
-//    }
-//
-//    NSString *reflector = self.reflectorTableController.selectedObjects[0][@"reflector"];
-//
-//    if(reflector.length < 8)
-//        return;
-//
-//    if([reflector isEqualToString:[DSEDataEngine sharedInstance].network.linkTarget]) {
-//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-//            [[DSEDataEngine sharedInstance] unlink];
-//        });
-//    } else {
-//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-//            [[DSEDataEngine sharedInstance] linkTo:reflector];
-//        });
-//    }
-//
-//    [self.reflectorTableView deselectAll:self];
-//}
+    self.txButton.enabled = YES;
 
-//- (IBAction)doLink:(id)sender {
-//    if(self.reflectorTableController.selectedObjects.count != 1) {
-//        NSBeep();
-//        return;
-//    }
-//
-//    NSString *reflector = self.reflectorTableController.selectedObjects[0][@"reflector"];
-//
-//    if(reflector.length < 8)
-//        return;
-//
-//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-//        [[DSEDataEngine sharedInstance] linkTo:reflector];
-//    });
-//
-//    [self.reflectorTableView deselectAll:self];
-//}
+}
 
-//- (IBAction)doUnlink:(id)sender {
-//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-//        [[DSEDataEngine sharedInstance] unlink];
-//    });
-//
-//    [self.reflectorTableView deselectAll:self];
-//}
+- (void)destinationDidUnlink:(NSString *)destination {
+    self.repeaterInfo.stringValue = @"Unlinked";
+
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"voiceAnnounceOnStatusChange"])
+        [self.speechSynth startSpeakingString:self.repeaterInfo.stringValue];
+
+    NSDockTile *dockTile = [NSApplication sharedApplication].dockTile;
+    dockTile.badgeLabel = nil;
+    [dockTile display];
+
+    self.txButton.enabled = NO;
+
+    [self.reflectorTableView enumerateAvailableRowViewsUsingBlock:^void(NSTableRowView *rowView, NSInteger row) {
+        NSTextField *reflectorsView = ((NSTableCellView *) [rowView viewAtColumn:0]).textField;
+        if ([reflectorsView.objectValue isEqualToString:destination])
+            reflectorsView.textColor = [NSColor blackColor];
+    }];
+}
+
+- (void)destinationDidError:(NSString *)destination error:(NSError *)error {
+    NSAlert *alert = [NSAlert alertWithError:error];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [alert beginSheetModalForWindow:self.view.window completionHandler:^(NSModalResponse response) {
+        }];
+    });
+}
+
+- (void)destinationWillLink:(NSString *)destination {
+    self.repeaterInfo.stringValue = [NSString stringWithFormat:@"Linking to %@", destination];
+}
+
+- (void)destinationDidConnect:(NSString *)destination {
+    self.repeaterInfo.stringValue = [NSString stringWithFormat:@"Connected to %@. Attempting to establish link.", destination];
+}
+
+
+- (IBAction)doHeardDoubleClick:(id)sender {
+    NSLog(@"Got double click, row %ld column %ld", self.heardTableView.clickedRow, self.heardTableView.clickedColumn);
+    if (self.heardTableView.clickedRow < 0)
+        return;
+
+    NSDictionary *qso = self.heardTableController.arrangedObjects[self.heardTableView.clickedRow];
+
+    if (qso[@"location"]) {
+        DSEAprsLocation *location = qso[@"location"];
+        if (!location.callsign)
+            location.callsign = qso[@"myCall"];
+
+        ((DSMapPopupController *) self.mapPopover.contentViewController).annotation = qso[@"location"];
+        ((DSMapPopupController *) self.mapPopover.contentViewController).qsoId = qso[@"streamId"];
+        NSView *clickedView = [self.heardTableView viewAtColumn:[self.heardTableView columnWithIdentifier:@"Location"] row:self.heardTableView.clickedRow makeIfNecessary:NO];
+        [self.mapPopover showRelativeToRect:NSMakeRect(0, 0, 300, 300) ofView:clickedView preferredEdge:NSRectEdgeMaxY];
+    }
+}
+
+- (IBAction)doReflectorDoubleClick:(id)sender {
+    if (self.reflectorTableController.selectedObjects.count != 1) {
+        NSBeep();
+        return;
+    }
+
+    NSString *reflector = self.reflectorTableController.selectedObjects[0][@"reflector"];
+
+    if (reflector.length < 8)
+        return;
+
+    if ([reflector isEqualToString:[DSEDataEngine sharedInstance].network.linkTarget]) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+            [[DSEDataEngine sharedInstance] unlink];
+        });
+    } else {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+            [[DSEDataEngine sharedInstance] linkTo:reflector];
+        });
+    }
+
+    [self.reflectorTableView deselectAll:self];
+}
+
+- (IBAction)doLink:(id)sender {
+    if (self.reflectorTableController.selectedObjects.count != 1) {
+        NSBeep();
+        return;
+    }
+
+    NSString *reflector = self.reflectorTableController.selectedObjects[0][@"reflector"];
+
+    if (reflector.length < 8)
+        return;
+
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        [[DSEDataEngine sharedInstance] linkTo:reflector];
+    });
+
+    [self.reflectorTableView deselectAll:self];
+}
+
+- (IBAction)doUnlink:(id)sender {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        [[DSEDataEngine sharedInstance] unlink];
+    });
+
+    [self.reflectorTableView deselectAll:self];
+}
 
 - (IBAction)doVolumeChange:(id)sender {
     DSAudioHandler *engineaudio = [DSEDataEngine sharedInstance].audio;
