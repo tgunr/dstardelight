@@ -32,7 +32,7 @@ class DSReflectorSource: DSReflector {
     }
 
     required init?(coder aDecoder: NSCoder) {
-        HLog().debug("")
+//        HLog().debug("")
 
         super.init(coder: aDecoder)
 
@@ -56,7 +56,7 @@ class DSReflectorSource: DSReflector {
 
 
     override func encode(with aCoder: NSCoder) {
-        HLog().debug("")
+//        HLog().debug("")
         aCoder.encode(sourceURL, forKey: "reflectorURL")
         aCoder.encode(lastUpdate, forKey: "reflectorLastUpdate")
         super.encode(with: aCoder)
