@@ -9,9 +9,9 @@ import Foundation
 // References a reflector
 class DSReflector: NSObject {
 
-    var name = ""
-    var ip = ""
-    var active = false
+    var name:   String = ""
+    var ip:     String = ""
+    var active: Bool   = false
 
     override init() {
         super.init()

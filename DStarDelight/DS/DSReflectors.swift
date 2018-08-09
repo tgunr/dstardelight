@@ -11,15 +11,17 @@ import NSObjectCoder
 import AutoCoding
 import Log
 
-let SOURCE_HEADER           = "# Prepared at ar-dns.net - "
-let kHamster                = "Hamster"
-let kHamsterAppSupport      = kHamster
-let kHamsterReflectors      = "Reflectors.plist"
-let kReflectorsAreReady     = "reflectorsAreReady"
-let kReflectorSourceIsReady = "reflectorSourceIsReady"
-let kNewReflectorFound      = "newReflectorFound"
-let kReflectorSources       = "reflectorSources"
-let kReflectorGateways      = "reflectorGateways"
+let SOURCE_HEADER:           String = "# Prepared at ar-dns.net - "
+let kHamster:                String = "Hamster"
+let kHamsterAppSupport:      String = kHamster
+let kHamsterReflectors:      String = "Reflectors.plist"
+let kHamsterConnections:     String = "Connections.plist"
+let kReflectorsAreReady:     String = "reflectorsAreReady"
+let kReflectorSourceIsReady: String = "reflectorSourceIsReady"
+let kNewReflectorFound:      String = "newReflectorFound"
+let kReflectorSources:       String = "reflectorSources"
+let kReflectorGateways:      String = "reflectorGateways"
+let kConnectionsAreReady:    String = "connectionsAreReady"
 
 class DSReflectors: NSObject {
     var reflectorSources: [ DSReflectorSource ] = []
@@ -143,14 +145,14 @@ class DSReflectors: NSObject {
     }
 
     func checkForOutDated() {
-        let reflectorsUpdated = UserDefaults.standard.object(forKey: "reflectorsUpdated") as? Date
-        let since             = TimeInterval(fabs(Float(reflectorsUpdated?.timeIntervalSinceNow ?? 0.0)))
-        let nextUpdate        = Date()+since
-        let numGateways       = gateways.count
-        HLog().debug("Last update: \(String(describing:  reflectorsUpdated )) nextUpdate: \( nextUpdate )")
-        let days = UserDefaultsManager.shared.updateFrequency?.rawValue
-        let expired = TimeInterval(days! * 24 * 60 * 60)
-        if ( since > expired) || ( numGateways == 0 ) {
+        let reflectorsUpdated: Date?  = UserDefaults.standard.object(forKey: "reflectorsUpdated") as? Date
+        let since:             Double = TimeInterval(fabs(Float(reflectorsUpdated?.timeIntervalSinceNow ?? 0.0)))
+        let numGateways:       Int    = gateways.count
+        let days:              Int?   = UserDefaultsManager.shared.updateFrequency?.rawValue
+        let expired:           Double = TimeInterval(days! * 24 * 60 * 60)
+        let nextUpdate:        Date   = reflectorsUpdated! + expired
+        HLog().debug("Last update: \( String(describing: reflectorsUpdated) ) nextUpdate: \( nextUpdate )")
+        if ( since > expired ) || ( numGateways == 0 ) {
             HLog().info("Sources are outdated, updating now")
             update()
         }
@@ -158,7 +160,7 @@ class DSReflectors: NSObject {
     }
 
     func updateReflectorsForSource(_ reflectorSource: DSReflectorSource) {
-        HLog().debug("reflectorSource \(String(describing:  reflectorSource.sourceURL?.description ))")
+        HLog().debug("reflectorSource \( String(describing: reflectorSource.sourceURL?.description) )")
         let aSourceURL:    URL?    = reflectorSource.sourceURL
         var lineSet                = CharacterSet.newlines
         var sourceContent: String? = nil
@@ -271,5 +273,4 @@ class DSReflectors: NSObject {
             $0.active
         }
     }
-
 }

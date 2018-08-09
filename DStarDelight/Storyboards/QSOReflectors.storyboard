@@ -85,7 +85,7 @@
                                                                 <tableViewGridLines key="gridStyleMask" vertical="YES" horizontal="YES"/>
                                                                 <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                                 <tableColumns>
-                                                                    <tableColumn identifier="reflectorName" editable="NO" width="97" minWidth="40" maxWidth="1000" id="b5B-hz-vQf">
+                                                                    <tableColumn identifier="ReflectorName" editable="NO" width="97" minWidth="40" maxWidth="1000" id="b5B-hz-vQf">
                                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Reflector">
                                                                             <font key="font" metaFont="smallSystem"/>
                                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -98,7 +98,7 @@
                                                                         </textFieldCell>
                                                                         <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                     </tableColumn>
-                                                                    <tableColumn identifier="reflectorIP" editable="NO" width="157" minWidth="40" maxWidth="1000" id="Tk4-Vh-da4">
+                                                                    <tableColumn identifier="ReflectorIP" editable="NO" width="157" minWidth="40" maxWidth="1000" id="Tk4-Vh-da4">
                                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="IP Address">
                                                                             <font key="font" metaFont="smallSystem"/>
                                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -238,7 +238,7 @@
                                     <action selector="disableClicked:" target="ab1-Ae-4dh" id="tyX-Fz-ojf"/>
                                 </connections>
                             </button>
-                            <box autoresizesSubviews="NO" borderType="line" title="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="n5j-X6-KkY">
+                            <box autoresizesSubviews="NO" borderType="line" title="Connections" translatesAutoresizingMaskIntoConstraints="NO" id="n5j-X6-KkY">
                                 <rect key="frame" x="449" y="26" width="140" height="364"/>
                                 <view key="contentView" id="24Z-8r-XxZ">
                                     <rect key="frame" x="3" y="3" width="134" height="345"/>
@@ -257,7 +257,7 @@
                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                         <tableColumns>
-                                                            <tableColumn identifier="reflectorName" width="63" minWidth="40" maxWidth="1000" id="dRh-g6-eRL">
+                                                            <tableColumn identifier="ReflectorName" width="63" minWidth="40" maxWidth="1000" id="dRh-g6-eRL">
                                                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Reflector">
                                                                     <font key="font" metaFont="smallSystem"/>
                                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -270,7 +270,7 @@
                                                                 </textFieldCell>
                                                                 <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             </tableColumn>
-                                                            <tableColumn width="53" minWidth="10" maxWidth="3.4028234663852886e+38" id="Uji-m5-5SP">
+                                                            <tableColumn identifier="ReflectorChannel" width="53" minWidth="10" maxWidth="3.4028234663852886e+38" id="Uji-m5-5SP">
                                                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="Channel">
                                                                     <font key="font" metaFont="smallSystem"/>
                                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -284,10 +284,6 @@
                                                                 <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             </tableColumn>
                                                         </tableColumns>
-                                                        <connections>
-                                                            <outlet property="dataSource" destination="ab1-Ae-4dh" id="ek1-Bx-K13"/>
-                                                            <outlet property="delegate" destination="ab1-Ae-4dh" id="o1f-J1-YuF"/>
-                                                        </connections>
                                                     </tableView>
                                                 </subviews>
                                             </clipView>
@@ -333,9 +329,9 @@
                     </view>
                     <connections>
                         <outlet property="channelTableView" destination="NUh-jf-vln" id="1A8-Bw-6CQ"/>
+                        <outlet property="connectionsTableView" destination="612-tY-H9w" id="6u8-BI-b2y"/>
                         <outlet property="disableButton" destination="xt7-m5-g9g" id="FTO-XM-g3o"/>
                         <outlet property="enableButton" destination="mk3-Jc-n3L" id="gon-ta-xNB"/>
-                        <outlet property="enabledTableView" destination="612-tY-H9w" id="6u8-BI-b2y"/>
                         <outlet property="progressView" destination="UOb-az-eXA" id="cp9-Jr-AIc"/>
                         <outlet property="reflectorsArrayController" destination="l2K-tv-bQs" id="fQE-Mt-dop"/>
                         <outlet property="reflectorsTableView" destination="rT2-1P-lQc" id="PpW-F4-YnT"/>
@@ -355,7 +351,7 @@
                 </arrayController>
                 <customObject id="dH0-Io-AYi" customClass="ReflectorsTable" customModule="DStarDelight" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="231" y="-215"/>
+            <point key="canvasLocation" x="163" y="-226"/>
         </scene>
     </scenes>
 </document>
