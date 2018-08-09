@@ -10,155 +10,158 @@
 import AppKit
 import AudioToolbox
 
+let alpha: [ String ]
+        = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+
 class ReflectorsTableControl: NSObject, NSTableViewDataSource, NSTableViewDelegate {
     var appDelegate: HAppDelegate
-    var reflectors:  DSReflectors?
+    var connections: Connectors
     var tableView:   NSTableView?
+    var controller:  QSOReflectorsViewController?
 
     override
     init() {
         appDelegate = NSApplication.shared.delegate as! HAppDelegate
-        reflectors = appDelegate.appReflectors
+        connections = appDelegate.connections
         super.init()
+        HLog().debug("class: ", self.className)
     }
 
-    init(view: NSTableView) {
+    init(controller: QSOReflectorsViewController, view: NSTableView) {
         appDelegate = NSApplication.shared.delegate as! HAppDelegate
-        reflectors = appDelegate.appReflectors
-        tableView = view
+        self.controller = controller
+        self.tableView = view
+        self.connections = appDelegate.connections
         super.init()
+        HLog().debug("class: ", self.className)
     }
 
     required
     init?(coder aDecoder: NSCoder) {
         self.appDelegate = NSApplication.shared.delegate as! HAppDelegate
-        reflectors = appDelegate.appReflectors
+        connections = appDelegate.connections
         super.init(coder: aDecoder)
     }
 }
 
 class ReflectorsTable: ReflectorsTableControl {
+    var reflectors: DSReflectors?
+
+    override init() {
+        super.init()
+        HLog().debug("class: ", self.className)
+    }
+
+    override init(controller: QSOReflectorsViewController, view: NSTableView) {
+        super.init(controller: controller, view: view)
+    }
+
+    required
+    init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.appDelegate = NSApplication.shared.delegate as! HAppDelegate
+        reflectors = controller?.reflectors
+    }
 
     func numberOfRows(in tableView: NSTableView) -> Int {
         var count: Int = 0
-        let tag        = tableView.tag
-        switch tag {
-            case 0:
-                if let gateways: [ DSReflector ] = reflectors?.reflectorGateways() {
-                    count = gateways.count
-                }
-            case 1:
-                if let actives: [ DSReflector ] = reflectors?.actives {
-                    count = actives.count
-                }
-            default: break
+        if let gateways: [ DSReflector ] = controller?.reflectors?.reflectorGateways() {
+            count = gateways.count
         }
-        HLog().debug("numberOfRows: \( count ?? 0 )")
+        HLog().debug("ReflectorsTable numberOfRows: \( count ?? 0 )")
         return count ?? 0
     }
 
     func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
 //        HLog().debug("row: ", row, " column: ", tableColumn?.identifier.rawValue)
-        let tag = tableView.tag
-        switch tag {
-            case 0:
-                if reflectors?.reflectorGateways()?.count != 0 {
-                    let aReflector: DSReflector? = reflectors?.gateways[ row ]
-                    if let colID: String = tableColumn?.identifier.rawValue {
-                        switch colID {
-                            case "reflectorName":
-                                return aReflector?.name
-                            case "reflectorIP":
-                                return aReflector?.ip
-                            default:
-                                break
-                        }
-                    }
+        if controller?.reflectors?.reflectorGateways()?.count != 0 {
+            let aReflector: DSReflector? = controller?.reflectors?.gateways[ row ]
+            if let columnID: String = tableColumn?.identifier.rawValue {
+                switch columnID {
+                    case "ReflectorName":
+                        return aReflector?.name
+                    case "ReflectorIP":
+                        return aReflector?.ip
+                    default: break
                 }
-            case 1:
-                if reflectors?.reflectorsActive()!.count != 0 {
-                    let aReflector: DSReflector = ( reflectors?.actives[ row ] )!
-                    return aReflector.name
-                }
-            default:
-                HLog().error("No reflectors!")
+            }
+            return "NONE"
         }
-        return "NONE"
-    }
-
-    func tableView(_ tableView: NSTableView, setObjectcValue object: Any?, for tableColumn: NSTableColumn?, row: Int) {
-        let aReflector: DSReflector? = reflectors?.reflectorGateways()?[ row ] as? DSReflector
+        return nil
     }
 }
 
 class ChannelsTable: ReflectorsTableControl {
 
-    let alpha: [ String ]
-            = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+    override init() {
+        super.init()
+        HLog().debug("class: ", self.className)
+    }
+
+    override init(controller: QSOReflectorsViewController, view: NSTableView) {
+        super.init(controller: controller, view: view)
+    }
+
+    required
+    init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.appDelegate = NSApplication.shared.delegate as! HAppDelegate
+        HLog().debug("class: ", self.className)
+    }
 
     func numberOfRows(in tableView: NSTableView) -> Int {
         return 26
+        HLog().debug("ChannelsTable numberOfRows: 26 )")
     }
 
     func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
         return alpha[ row ]
     }
 
-    func tableView(_ tableView: NSTableView, setObjectcValue object: Any?, for tableColumn: NSTableColumn?, row: Int) {
-        let aReflector: DSReflector? = reflectors?.reflectorGateways()?[ row ] as? DSReflector
-    }
 }
 
 class ConnectionsTable: ReflectorsTableControl {
+    override init() {
+        super.init()
+        HLog().debug("class: ", self.className)
+    }
+
+    override init(controller: QSOReflectorsViewController, view: NSTableView) {
+        super.init(controller: controller, view: view)
+    }
+
+    required
+    init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.appDelegate = NSApplication.shared.delegate as! HAppDelegate
+    }
+
     func numberOfRows(in tableView: NSTableView) -> Int {
         var count: Int = 0
-        let tag        = tableView.tag
-        switch tag {
-            case 0:
-                if let gateways: [ DSReflector ] = reflectors?.reflectorGateways() {
-                    count = gateways.count
-                }
-            case 1:
-                if let actives: [ DSReflector ] = reflectors?.actives {
-                    count = actives.count
-                }
-            default: break
-        }
-        HLog().debug("numberOfRows: \( count ?? 0 )")
-        return count ?? 0
+        let list = connections.list
+        count = list.count
+        HLog().debug("ConnectionsTable numberOfRows: \( count ?? 0 )")
+        return count
     }
 
     func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
 //        HLog().debug("row: ", row, " column: ", tableColumn?.identifier.rawValue)
         let tag = tableView.tag
-        switch tag {
-            case 0:
-                if reflectors?.reflectorGateways()?.count != 0 {
-                    let aReflector: DSReflector? = reflectors?.gateways[ row ]
-                    if let colID: String = tableColumn?.identifier.rawValue {
-                        switch colID {
-                            case "reflectorName":
-                                return aReflector?.name
-                            case "reflectorIP":
-                                return aReflector?.ip
-                            default:
-                                break
-                        }
-                    }
+        if connections.list.count > 0 {
+            if let columnID: String = tableColumn?.identifier.rawValue {
+                let theConnector:   Connector    = connections.list[row]
+                switch columnID {
+                    case "ReflectorName":
+                        let theReflector: DSReflector? = theConnector.connection as! DSReflector
+                        return theReflector?.name
+                    case "ReflectorChannel":
+                        let theChannel: String? = (theConnector as! DSConnector).connectionChannel
+                        return theChannel
+                    default: break
                 }
-            case 1:
-                if reflectors?.reflectorsActive()!.count != 0 {
-                    let aReflector: DSReflector = ( reflectors?.actives[ row ] )!
-                    return aReflector.name
-                }
-            default:
-                HLog().error("No reflectors!")
+            }
         }
-        return "NONE"
-    }
-
-    func tableView(_ tableView: NSTableView, setObjectcValue object: Any?, for tableColumn: NSTableColumn?, row: Int) {
-        let aReflector: DSReflector? = reflectors?.reflectorGateways()?[ row ] as? DSReflector
+        return nil
     }
 }
 
@@ -168,17 +171,22 @@ class QSOReflectorsViewController: NSViewController  {
     var updateWhenButtons: [NSButton]!
     let appDelegate = NSApplication.shared.delegate as! HAppDelegate
     let defaultsManager:   UserDefaultsManager = UserDefaultsManager.shared
+
     var reflectorsTable:   ReflectorsTable?
     var channelsTable:     ChannelsTable?
     var connectionsTable:  ConnectionsTable?
 
+    private
+    var connectors: Connectors = Connectors()
+
+
     @IBOutlet var reflectorsView:            NSView!
     @IBOutlet var reflectorsTableView:       NSTableView!
-    @IBOutlet var enabledTableView:          NSTableView!
+    @IBOutlet var connectionsTableView:      NSTableView!
     @IBOutlet var channelTableView:          NSTableView!
+    @IBOutlet var progressView:              NSProgressIndicator!
     @IBOutlet var reflectorsArrayController: NSArrayController!
     @IBOutlet var updateNowButton:           NSButton!
-    @IBOutlet var progressView:              NSProgressIndicator!
     @IBOutlet var updateDailyButton:         NSButton!
     @IBOutlet var updateWeeklyButton:        NSButton!
     @IBOutlet var updateMonthlyButton:       NSButton!
@@ -187,7 +195,7 @@ class QSOReflectorsViewController: NSViewController  {
 
     // MARK: Access
 
-    // MARK: View Methods
+// MARK: View Methods
     override func awakeFromNib() {
         super.awakeFromNib()
         HLog().debug("")
@@ -198,19 +206,28 @@ class QSOReflectorsViewController: NSViewController  {
     func viewDidLoad() {
         super.viewDidLoad()
         HLog().debug("")
-        progressView.isHidden = true
-        reflectorsPending = false
-        reflectors = appDelegate.appReflectors
-        reflectorsTable = ReflectorsTable(view: reflectorsTableView)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.reflectorsAreReady(_:)), name: NSNotification.Name(kReflectorsAreReady), object: nil)
+
+        progressView.isHidden = false
+        reflectorsPending = true
+        progressView.startAnimation(self)
+
+        HLog().debug("loading reflectors")
+        reflectors = DSReflectors().loadSavedReflectors()!
+        connectors = appDelegate.connections
+
+        reflectorsTable = ReflectorsTable(controller: self, view: reflectorsTableView)
         reflectorsTableView.delegate = reflectorsTable
         reflectorsTableView.dataSource = reflectorsTable
-        channelsTable = ChannelsTable(view: channelTableView)
+
+        channelsTable = ChannelsTable(controller: self, view: channelTableView)
         channelTableView.delegate = channelsTable
         channelTableView.dataSource = channelsTable
-        connectionsTable = ConnectionsTable(view: enabledTableView)
-        enabledTableView.delegate = connectionsTable
-        enabledTableView.dataSource = connectionsTable
-        NotificationCenter.default.addObserver(self, selector: #selector(self.reflectorsAreReady(_:)), name: NSNotification.Name(kReflectorsAreReady), object: nil)
+
+        connectionsTable = ConnectionsTable(controller: self, view: connectionsTableView)
+        connectionsTableView.delegate = connectionsTable
+        connectionsTableView.dataSource = connectionsTable
+
         updateWhenButtons = [updateDailyButton, updateWeeklyButton, updateMonthlyButton]
         updateWhenButtons.forEach {
             $0.state = NSControl.StateValue.off
@@ -259,11 +276,10 @@ class QSOReflectorsViewController: NSViewController  {
     }
 
     // MARK: Actions
-    @objc
-    func reflectorsAreReady(_ notification: Notification?) {
-        let newReflectors: DSReflectors = notification?.object as! DSReflectors
-        HLog().debug("new reflectors:", newReflectors.reflectorGateways()?.count)
-        reflectors = newReflectors
+    @objc func reflectorsAreReady(_ notification: Notification?) {
+        if reflectors == nil {
+             reflectors = notification?.object as! DSReflectors
+        }
         reflectorsPending = false
         if progressView != nil {
             progressView.isHidden = true
@@ -273,9 +289,11 @@ class QSOReflectorsViewController: NSViewController  {
         }
         if reflectorsTableView != nil {
             reflectorsTableView.reloadData()
+            connectionsTableView.reloadData()
         } else {
             HLog().warning("reflectorsTableView: nil")
         }
+        HLog().info("count: ", reflectors?.gateways.count)
     }
 
     @objc
@@ -311,26 +329,33 @@ class QSOReflectorsViewController: NSViewController  {
 
     // TODO: enable/disable according to focus
     @IBAction func enableClicked(_ sender: NSButton) {
-        let selection = reflectorsTableView.selectedRow
-        if selection >= 0 {
-            reflectors?.reflectorGateways()![ selection ].active = true
+        let reflectorSelection = reflectorsTableView.selectedRow
+        let channelSelection = channelTableView.selectedRow
+        if reflectorSelection >= 0 && channelSelection >= 0 {
+            let theReflector = reflectors?.gateways[reflectorSelection]
+            let theChannel = alpha[channelSelection]
+            let theConnection = DSConnector(reflector: theReflector!, channel: theChannel)
+            theReflector?.active = true
             reflectors?.saveReflectorsToFile()
-            enabledTableView.reloadData()
+            connectors.dictionary[(theReflector?.name)!] = theConnection
+            connectors.saveConnectionsToFile()
+            connectionsTableView.reloadData()
         } else {
             Beep()
         }
     }
     
     @IBAction func disableClicked(_ sender: NSButton) {
-        let selection = enabledTableView.selectedRow
+        let selection = connectionsTableView.selectedRow
         if selection >= 0 {
             reflectors?.actives[ selection ].active = false
             reflectors?.saveReflectorsToFile()
-            enabledTableView.reloadData()
+            connectionsTableView.reloadData()
         } else {
             AudioServicesPlaySystemSound(kSystemSoundID_UserPreferredAlert)
         }
     }
-    
+
+
 }
 

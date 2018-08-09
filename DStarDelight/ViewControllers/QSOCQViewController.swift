@@ -105,7 +105,6 @@ class HQSOCQViewController: NSViewController {
     }
 
      override func viewDidLoad() {
-        reflectors = appDelegate.appReflectors
     }
 
     func reflectorsAreReady() {
