@@ -30,7 +30,9 @@ func Beep() {
 
 @NSApplicationMain
 @objc class HAppDelegate: NSObject, NSApplicationDelegate {
-    var appReflectors: DSReflectors?
+//    var appReflectors: DSReflectors?
+    var connections: Connectors = Connectors()
+
     var Log = Logger(formatter: LogFormatters.detailedPMN, minLevel: .debug)
     let shared = NSApplication.shared.delegate
     
@@ -52,8 +54,8 @@ func Beep() {
     
     override func awakeFromNib() {
         HLog().info("Starting up...")
-        let audioHandler: DSAudioHandler? = nil
-//        let audioHandler = DSAudioHandler()
+//        let audioHandler: DSAudioHandler? = nil
+        let audioHandler = DSAudioHandler()
         DSVars.shared().audioHandler = audioHandler
 
         let path = Bundle.main.path(forResource: "DefaultPreferences", ofType: "plist")
@@ -61,17 +63,6 @@ func Beep() {
         if let aPrefs = defaultPrefs {
             UserDefaults.standard.register(defaults: aPrefs as! [String : Any])
         }
-        NotificationCenter.default.addObserver(self, selector: #selector(self.reflectorsAreReady(_:)), name: NSNotification.Name(kReflectorsAreReady), object: nil)
-        HLog().debug("load reflectors")
-        appReflectors = DSReflectors().loadSavedReflectors()
-    }
-    
-    @objc func reflectorsAreReady(_ notification: Notification?) {
-        if appReflectors == nil {
-            let reflectors: DSReflectors = notification?.object as! DSReflectors
-            appReflectors = reflectors
-        }
-        HLog().info("count: ", appReflectors?.gateways.count)
     }
     
     func applicationWillFinishLaunching(_ aNotification: Notification) {
