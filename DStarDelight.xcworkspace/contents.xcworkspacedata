@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Buster/Buster.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:DStarDelight/DStarDelight.xcodeproj">
    </FileRef>
    <FileRef

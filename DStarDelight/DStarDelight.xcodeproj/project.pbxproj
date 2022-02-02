@@ -10,39 +10,6 @@
 		75E087F420E31574003A11F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75E087F320E31574003A11F1 /* Assets.xcassets */; };
 		75E087FA20E31574003A11F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E087F920E31574003A11F1 /* main.m */; };
 		75E0880520E31575003A11F1 /* DStarDelightUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0880420E31575003A11F1 /* DStarDelightUITests.m */; };
-		75E0885F20E3177F003A11F1 /* BTRAddPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0881120E3177F003A11F1 /* BTRAddPopupController.m */; };
-		75E0886020E3177F003A11F1 /* BTRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0881320E3177F003A11F1 /* BTRAppDelegate.m */; };
-		75E0886120E3177F003A11F1 /* BTRAprsLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0881520E3177F003A11F1 /* BTRAprsLocation.m */; };
-		75E0886220E3177F003A11F1 /* BTRAudioHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0881720E3177F003A11F1 /* BTRAudioHandler.m */; };
-		75E0886320E3177F003A11F1 /* BTRAudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0881920E3177F003A11F1 /* BTRAudioViewController.m */; };
-		75E0886420E3177F003A11F1 /* BTRCallFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0881B20E3177F003A11F1 /* BTRCallFormatter.m */; };
-		75E0886520E3177F003A11F1 /* BTRDCSLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0881C20E3177F003A11F1 /* BTRDCSLink.m */; };
-		75E0886620E3177F003A11F1 /* BTRDExtraLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0881E20E3177F003A11F1 /* BTRDExtraLink.m */; };
-		75E0886720E3177F003A11F1 /* BTRDPlusAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0882020E3177F003A11F1 /* BTRDPlusAuthenticator.m */; };
-		75E0886820E3177F003A11F1 /* BTRDPlusLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0882220E3177F003A11F1 /* BTRDPlusLink.m */; };
-		75E0886920E3177F003A11F1 /* BTRGeneralPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0882420E3177F003A11F1 /* BTRGeneralPreferencesController.m */; };
-		75E0886A20E3177F003A11F1 /* BTRIRCDDBGateways.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0882620E3177F003A11F1 /* BTRIRCDDBGateways.m */; };
-		75E0886B20E3177F003A11F1 /* BTRLinkDriver.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0882820E3177F003A11F1 /* BTRLinkDriver.m */; };
-		75E0886C20E3177F003A11F1 /* BTRMainWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0882D20E3177F003A11F1 /* BTRMainWindowViewController.m */; };
-		75E0886D20E3177F003A11F1 /* BTRMapPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0882F20E3177F003A11F1 /* BTRMapPopupController.m */; };
-		75E0886E20E3177F003A11F1 /* BTRMessageFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0883120E3177F003A11F1 /* BTRMessageFormatter.m */; };
-		75E0886F20E3177F003A11F1 /* BTRSlowDataCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0883320E3177F003A11F1 /* BTRSlowDataCoder.m */; };
-		75E0887020E3177F003A11F1 /* BTRVocoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0883620E3177F003A11F1 /* BTRVocoderViewController.m */; };
-		75E0887120E3177F003A11F1 /* BTRDataEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0883A20E3177F003A11F1 /* BTRDataEngine.m */; };
-		75E0887220E3177F003A11F1 /* MASDictionaryTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0883E20E3177F003A11F1 /* MASDictionaryTransformer.m */; };
-		75E0887320E3177F003A11F1 /* MASShortcut.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0884120E3177F003A11F1 /* MASShortcut.m */; };
-		75E0887420E3177F003A11F1 /* MASShortcutValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0884320E3177F003A11F1 /* MASShortcutValidator.m */; };
-		75E0887520E3177F003A11F1 /* MASShortcutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0884520E3177F003A11F1 /* MASShortcutView.m */; };
-		75E0887720E3177F003A11F1 /* PortMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0884920E3177F003A11F1 /* PortMapper.m */; };
-		75E0887820E3177F003A11F1 /* TPCircularBuffer+AudioBufferList.c in Sources */ = {isa = PBXBuildFile; fileRef = 75E0884B20E3177F003A11F1 /* TPCircularBuffer+AudioBufferList.c */; };
-		75E0887920E3177F003A11F1 /* TPCircularBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 75E0884D20E3177F003A11F1 /* TPCircularBuffer.c */; };
-		75E0887A20E3177F003A11F1 /* BTRDV3KNetworkVocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0885120E3177F003A11F1 /* BTRDV3KNetworkVocoder.m */; };
-		75E0887B20E3177F003A11F1 /* BTRDV3KSerialVocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0885420E3177F003A11F1 /* BTRDV3KSerialVocoder.m */; };
-		75E0887C20E3177F003A11F1 /* BTRDV3KVocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0885620E3177F003A11F1 /* BTRDV3KVocoder.m */; };
-		75E0887D20E3177F003A11F1 /* BTRNetworkVocoderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75E0885820E3177F003A11F1 /* BTRNetworkVocoderView.xib */; };
-		75E0887E20E3177F003A11F1 /* BTRNetworkVocoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0885A20E3177F003A11F1 /* BTRNetworkVocoderViewController.m */; };
-		75E0887F20E3177F003A11F1 /* BTRSerialVocoderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75E0885B20E3177F003A11F1 /* BTRSerialVocoderView.xib */; };
-		75E0888020E3177F003A11F1 /* BTRSerialVocoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0885D20E3177F003A11F1 /* BTRSerialVocoderViewController.m */; };
 		75E0888320E319B4003A11F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75E0888120E319B4003A11F1 /* Main.storyboard */; };
 		75E0888520E31A8C003A11F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75E0888420E31A8C003A11F1 /* Images.xcassets */; };
 /* End PBXBuildFile section */
@@ -66,79 +33,6 @@
 		75E0880020E31575003A11F1 /* DStarDelightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DStarDelightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75E0880420E31575003A11F1 /* DStarDelightUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DStarDelightUITests.m; sourceTree = "<group>"; };
 		75E0880620E31575003A11F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		75E0881020E3177F003A11F1 /* BTRAddPopupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRAddPopupController.h; sourceTree = "<group>"; };
-		75E0881120E3177F003A11F1 /* BTRAddPopupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRAddPopupController.m; sourceTree = "<group>"; };
-		75E0881220E3177F003A11F1 /* BTRAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRAppDelegate.h; sourceTree = "<group>"; };
-		75E0881320E3177F003A11F1 /* BTRAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRAppDelegate.m; sourceTree = "<group>"; };
-		75E0881420E3177F003A11F1 /* BTRAprsLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRAprsLocation.h; sourceTree = "<group>"; };
-		75E0881520E3177F003A11F1 /* BTRAprsLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRAprsLocation.m; sourceTree = "<group>"; };
-		75E0881620E3177F003A11F1 /* BTRAudioHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRAudioHandler.h; sourceTree = "<group>"; };
-		75E0881720E3177F003A11F1 /* BTRAudioHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRAudioHandler.m; sourceTree = "<group>"; };
-		75E0881820E3177F003A11F1 /* BTRAudioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRAudioViewController.h; sourceTree = "<group>"; };
-		75E0881920E3177F003A11F1 /* BTRAudioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRAudioViewController.m; sourceTree = "<group>"; };
-		75E0881A20E3177F003A11F1 /* BTRCallFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRCallFormatter.h; sourceTree = "<group>"; };
-		75E0881B20E3177F003A11F1 /* BTRCallFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRCallFormatter.m; sourceTree = "<group>"; };
-		75E0881C20E3177F003A11F1 /* BTRDCSLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRDCSLink.m; sourceTree = "<group>"; };
-		75E0881D20E3177F003A11F1 /* BTRDExtraLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRDExtraLink.h; sourceTree = "<group>"; };
-		75E0881E20E3177F003A11F1 /* BTRDExtraLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRDExtraLink.m; sourceTree = "<group>"; };
-		75E0881F20E3177F003A11F1 /* BTRDPlusAuthenticator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRDPlusAuthenticator.h; sourceTree = "<group>"; };
-		75E0882020E3177F003A11F1 /* BTRDPlusAuthenticator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRDPlusAuthenticator.m; sourceTree = "<group>"; };
-		75E0882120E3177F003A11F1 /* BTRDPlusLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRDPlusLink.h; sourceTree = "<group>"; };
-		75E0882220E3177F003A11F1 /* BTRDPlusLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRDPlusLink.m; sourceTree = "<group>"; };
-		75E0882320E3177F003A11F1 /* BTRGeneralPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRGeneralPreferencesController.h; sourceTree = "<group>"; };
-		75E0882420E3177F003A11F1 /* BTRGeneralPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRGeneralPreferencesController.m; sourceTree = "<group>"; };
-		75E0882520E3177F003A11F1 /* BTRIRCDDBGateways.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRIRCDDBGateways.h; sourceTree = "<group>"; };
-		75E0882620E3177F003A11F1 /* BTRIRCDDBGateways.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRIRCDDBGateways.m; sourceTree = "<group>"; };
-		75E0882720E3177F003A11F1 /* BTRLinkDriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRLinkDriver.h; sourceTree = "<group>"; };
-		75E0882820E3177F003A11F1 /* BTRLinkDriver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRLinkDriver.m; sourceTree = "<group>"; };
-		75E0882920E3177F003A11F1 /* BTRLinkDriverDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRLinkDriverDelegate.h; sourceTree = "<group>"; };
-		75E0882A20E3177F003A11F1 /* BTRLinkDriverProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRLinkDriverProtocol.h; sourceTree = "<group>"; };
-		75E0882B20E3177F003A11F1 /* BTRLinkDriverSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRLinkDriverSubclass.h; sourceTree = "<group>"; };
-		75E0882C20E3177F003A11F1 /* BTRMainWindowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRMainWindowViewController.h; sourceTree = "<group>"; };
-		75E0882D20E3177F003A11F1 /* BTRMainWindowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRMainWindowViewController.m; sourceTree = "<group>"; };
-		75E0882E20E3177F003A11F1 /* BTRMapPopupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRMapPopupController.h; sourceTree = "<group>"; };
-		75E0882F20E3177F003A11F1 /* BTRMapPopupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRMapPopupController.m; sourceTree = "<group>"; };
-		75E0883020E3177F003A11F1 /* BTRMessageFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRMessageFormatter.h; sourceTree = "<group>"; };
-		75E0883120E3177F003A11F1 /* BTRMessageFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRMessageFormatter.m; sourceTree = "<group>"; };
-		75E0883220E3177F003A11F1 /* BTRSlowDataCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRSlowDataCoder.h; sourceTree = "<group>"; };
-		75E0883320E3177F003A11F1 /* BTRSlowDataCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRSlowDataCoder.m; sourceTree = "<group>"; };
-		75E0883420E3177F003A11F1 /* BTRSlowDataDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRSlowDataDelegate.h; sourceTree = "<group>"; };
-		75E0883520E3177F003A11F1 /* BTRVocoderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRVocoderViewController.h; sourceTree = "<group>"; };
-		75E0883620E3177F003A11F1 /* BTRVocoderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRVocoderViewController.m; sourceTree = "<group>"; };
-		75E0883720E3177F003A11F1 /* DStarUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DStarUtils.h; sourceTree = "<group>"; };
-		75E0883920E3177F003A11F1 /* BTRDataEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRDataEngine.h; sourceTree = "<group>"; };
-		75E0883A20E3177F003A11F1 /* BTRDataEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRDataEngine.m; sourceTree = "<group>"; };
-		75E0883B20E3177F003A11F1 /* BTRDataEngineDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRDataEngineDelegate.h; sourceTree = "<group>"; };
-		75E0883D20E3177F003A11F1 /* MASDictionaryTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASDictionaryTransformer.h; sourceTree = "<group>"; };
-		75E0883E20E3177F003A11F1 /* MASDictionaryTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASDictionaryTransformer.m; sourceTree = "<group>"; };
-		75E0883F20E3177F003A11F1 /* MASKeyCodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASKeyCodes.h; sourceTree = "<group>"; };
-		75E0884020E3177F003A11F1 /* MASShortcut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASShortcut.h; sourceTree = "<group>"; };
-		75E0884120E3177F003A11F1 /* MASShortcut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASShortcut.m; sourceTree = "<group>"; };
-		75E0884220E3177F003A11F1 /* MASShortcutValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASShortcutValidator.h; sourceTree = "<group>"; };
-		75E0884320E3177F003A11F1 /* MASShortcutValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASShortcutValidator.m; sourceTree = "<group>"; };
-		75E0884420E3177F003A11F1 /* MASShortcutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASShortcutView.h; sourceTree = "<group>"; };
-		75E0884520E3177F003A11F1 /* MASShortcutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASShortcutView.m; sourceTree = "<group>"; };
-		75E0884820E3177F003A11F1 /* PortMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PortMapper.h; sourceTree = "<group>"; };
-		75E0884920E3177F003A11F1 /* PortMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PortMapper.m; sourceTree = "<group>"; };
-		75E0884B20E3177F003A11F1 /* TPCircularBuffer+AudioBufferList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "TPCircularBuffer+AudioBufferList.c"; sourceTree = "<group>"; };
-		75E0884C20E3177F003A11F1 /* TPCircularBuffer+AudioBufferList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TPCircularBuffer+AudioBufferList.h"; sourceTree = "<group>"; };
-		75E0884D20E3177F003A11F1 /* TPCircularBuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TPCircularBuffer.c; sourceTree = "<group>"; };
-		75E0884E20E3177F003A11F1 /* TPCircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPCircularBuffer.h; sourceTree = "<group>"; };
-		75E0885020E3177F003A11F1 /* BTRDV3KNetworkVocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRDV3KNetworkVocoder.h; sourceTree = "<group>"; };
-		75E0885120E3177F003A11F1 /* BTRDV3KNetworkVocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRDV3KNetworkVocoder.m; sourceTree = "<group>"; };
-		75E0885220E3177F003A11F1 /* BTRDV3KPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRDV3KPacket.h; sourceTree = "<group>"; };
-		75E0885320E3177F003A11F1 /* BTRDV3KSerialVocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRDV3KSerialVocoder.h; sourceTree = "<group>"; };
-		75E0885420E3177F003A11F1 /* BTRDV3KSerialVocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRDV3KSerialVocoder.m; sourceTree = "<group>"; };
-		75E0885520E3177F003A11F1 /* BTRDV3KVocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRDV3KVocoder.h; sourceTree = "<group>"; };
-		75E0885620E3177F003A11F1 /* BTRDV3KVocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRDV3KVocoder.m; sourceTree = "<group>"; };
-		75E0885720E3177F003A11F1 /* BTRDV3KVocoderSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRDV3KVocoderSubclass.h; sourceTree = "<group>"; };
-		75E0885820E3177F003A11F1 /* BTRNetworkVocoderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BTRNetworkVocoderView.xib; sourceTree = "<group>"; };
-		75E0885920E3177F003A11F1 /* BTRNetworkVocoderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRNetworkVocoderViewController.h; sourceTree = "<group>"; };
-		75E0885A20E3177F003A11F1 /* BTRNetworkVocoderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRNetworkVocoderViewController.m; sourceTree = "<group>"; };
-		75E0885B20E3177F003A11F1 /* BTRSerialVocoderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BTRSerialVocoderView.xib; sourceTree = "<group>"; };
-		75E0885C20E3177F003A11F1 /* BTRSerialVocoderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRSerialVocoderViewController.h; sourceTree = "<group>"; };
-		75E0885D20E3177F003A11F1 /* BTRSerialVocoderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTRSerialVocoderViewController.m; sourceTree = "<group>"; };
-		75E0885E20E3177F003A11F1 /* BTRVocoderDriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTRVocoderDriver.h; sourceTree = "<group>"; };
 		75E0888220E319B4003A11F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ../../DStarDelight1/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		75E0888420E31A8C003A11F1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../../Resources/Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -182,7 +76,6 @@
 		75E087EC20E31572003A11F1 /* DStarDelight */ = {
 			isa = PBXGroup;
 			children = (
-				75E0880F20E3177F003A11F1 /* BTR */,
 				75E087F320E31574003A11F1 /* Assets.xcassets */,
 				75E0888420E31A8C003A11F1 /* Images.xcassets */,
 				75E087F820E31574003A11F1 /* Info.plist */,
@@ -200,127 +93,6 @@
 				75E0880620E31575003A11F1 /* Info.plist */,
 			);
 			path = DStarDelightUITests;
-			sourceTree = "<group>";
-		};
-		75E0880F20E3177F003A11F1 /* BTR */ = {
-			isa = PBXGroup;
-			children = (
-				75E0881020E3177F003A11F1 /* BTRAddPopupController.h */,
-				75E0881120E3177F003A11F1 /* BTRAddPopupController.m */,
-				75E0881220E3177F003A11F1 /* BTRAppDelegate.h */,
-				75E0881320E3177F003A11F1 /* BTRAppDelegate.m */,
-				75E0881420E3177F003A11F1 /* BTRAprsLocation.h */,
-				75E0881520E3177F003A11F1 /* BTRAprsLocation.m */,
-				75E0881620E3177F003A11F1 /* BTRAudioHandler.h */,
-				75E0881720E3177F003A11F1 /* BTRAudioHandler.m */,
-				75E0881820E3177F003A11F1 /* BTRAudioViewController.h */,
-				75E0881920E3177F003A11F1 /* BTRAudioViewController.m */,
-				75E0881A20E3177F003A11F1 /* BTRCallFormatter.h */,
-				75E0881B20E3177F003A11F1 /* BTRCallFormatter.m */,
-				75E0881C20E3177F003A11F1 /* BTRDCSLink.m */,
-				75E0881D20E3177F003A11F1 /* BTRDExtraLink.h */,
-				75E0881E20E3177F003A11F1 /* BTRDExtraLink.m */,
-				75E0881F20E3177F003A11F1 /* BTRDPlusAuthenticator.h */,
-				75E0882020E3177F003A11F1 /* BTRDPlusAuthenticator.m */,
-				75E0882120E3177F003A11F1 /* BTRDPlusLink.h */,
-				75E0882220E3177F003A11F1 /* BTRDPlusLink.m */,
-				75E0882320E3177F003A11F1 /* BTRGeneralPreferencesController.h */,
-				75E0882420E3177F003A11F1 /* BTRGeneralPreferencesController.m */,
-				75E0882520E3177F003A11F1 /* BTRIRCDDBGateways.h */,
-				75E0882620E3177F003A11F1 /* BTRIRCDDBGateways.m */,
-				75E0882720E3177F003A11F1 /* BTRLinkDriver.h */,
-				75E0882820E3177F003A11F1 /* BTRLinkDriver.m */,
-				75E0882920E3177F003A11F1 /* BTRLinkDriverDelegate.h */,
-				75E0882A20E3177F003A11F1 /* BTRLinkDriverProtocol.h */,
-				75E0882B20E3177F003A11F1 /* BTRLinkDriverSubclass.h */,
-				75E0882C20E3177F003A11F1 /* BTRMainWindowViewController.h */,
-				75E0882D20E3177F003A11F1 /* BTRMainWindowViewController.m */,
-				75E0882E20E3177F003A11F1 /* BTRMapPopupController.h */,
-				75E0882F20E3177F003A11F1 /* BTRMapPopupController.m */,
-				75E0883020E3177F003A11F1 /* BTRMessageFormatter.h */,
-				75E0883120E3177F003A11F1 /* BTRMessageFormatter.m */,
-				75E0883220E3177F003A11F1 /* BTRSlowDataCoder.h */,
-				75E0883320E3177F003A11F1 /* BTRSlowDataCoder.m */,
-				75E0883420E3177F003A11F1 /* BTRSlowDataDelegate.h */,
-				75E0883520E3177F003A11F1 /* BTRVocoderViewController.h */,
-				75E0883620E3177F003A11F1 /* BTRVocoderViewController.m */,
-				75E0883720E3177F003A11F1 /* DStarUtils.h */,
-				75E0883820E3177F003A11F1 /* Engine */,
-				75E0883C20E3177F003A11F1 /* MASShortcut */,
-				75E0884720E3177F003A11F1 /* Portmapper */,
-				75E0884A20E3177F003A11F1 /* TPCircularBuffer */,
-				75E0884F20E3177F003A11F1 /* Vocoder Drivers */,
-			);
-			name = BTR;
-			path = ../../BTR;
-			sourceTree = "<group>";
-		};
-		75E0883820E3177F003A11F1 /* Engine */ = {
-			isa = PBXGroup;
-			children = (
-				75E0883920E3177F003A11F1 /* BTRDataEngine.h */,
-				75E0883A20E3177F003A11F1 /* BTRDataEngine.m */,
-				75E0883B20E3177F003A11F1 /* BTRDataEngineDelegate.h */,
-			);
-			path = Engine;
-			sourceTree = "<group>";
-		};
-		75E0883C20E3177F003A11F1 /* MASShortcut */ = {
-			isa = PBXGroup;
-			children = (
-				75E0883D20E3177F003A11F1 /* MASDictionaryTransformer.h */,
-				75E0883E20E3177F003A11F1 /* MASDictionaryTransformer.m */,
-				75E0883F20E3177F003A11F1 /* MASKeyCodes.h */,
-				75E0884020E3177F003A11F1 /* MASShortcut.h */,
-				75E0884120E3177F003A11F1 /* MASShortcut.m */,
-				75E0884220E3177F003A11F1 /* MASShortcutValidator.h */,
-				75E0884320E3177F003A11F1 /* MASShortcutValidator.m */,
-				75E0884420E3177F003A11F1 /* MASShortcutView.h */,
-				75E0884520E3177F003A11F1 /* MASShortcutView.m */,
-			);
-			path = MASShortcut;
-			sourceTree = "<group>";
-		};
-		75E0884720E3177F003A11F1 /* Portmapper */ = {
-			isa = PBXGroup;
-			children = (
-				75E0884820E3177F003A11F1 /* PortMapper.h */,
-				75E0884920E3177F003A11F1 /* PortMapper.m */,
-			);
-			path = Portmapper;
-			sourceTree = "<group>";
-		};
-		75E0884A20E3177F003A11F1 /* TPCircularBuffer */ = {
-			isa = PBXGroup;
-			children = (
-				75E0884B20E3177F003A11F1 /* TPCircularBuffer+AudioBufferList.c */,
-				75E0884C20E3177F003A11F1 /* TPCircularBuffer+AudioBufferList.h */,
-				75E0884D20E3177F003A11F1 /* TPCircularBuffer.c */,
-				75E0884E20E3177F003A11F1 /* TPCircularBuffer.h */,
-			);
-			path = TPCircularBuffer;
-			sourceTree = "<group>";
-		};
-		75E0884F20E3177F003A11F1 /* Vocoder Drivers */ = {
-			isa = PBXGroup;
-			children = (
-				75E0885020E3177F003A11F1 /* BTRDV3KNetworkVocoder.h */,
-				75E0885120E3177F003A11F1 /* BTRDV3KNetworkVocoder.m */,
-				75E0885220E3177F003A11F1 /* BTRDV3KPacket.h */,
-				75E0885320E3177F003A11F1 /* BTRDV3KSerialVocoder.h */,
-				75E0885420E3177F003A11F1 /* BTRDV3KSerialVocoder.m */,
-				75E0885520E3177F003A11F1 /* BTRDV3KVocoder.h */,
-				75E0885620E3177F003A11F1 /* BTRDV3KVocoder.m */,
-				75E0885720E3177F003A11F1 /* BTRDV3KVocoderSubclass.h */,
-				75E0885820E3177F003A11F1 /* BTRNetworkVocoderView.xib */,
-				75E0885920E3177F003A11F1 /* BTRNetworkVocoderViewController.h */,
-				75E0885A20E3177F003A11F1 /* BTRNetworkVocoderViewController.m */,
-				75E0885B20E3177F003A11F1 /* BTRSerialVocoderView.xib */,
-				75E0885C20E3177F003A11F1 /* BTRSerialVocoderViewController.h */,
-				75E0885D20E3177F003A11F1 /* BTRSerialVocoderViewController.m */,
-				75E0885E20E3177F003A11F1 /* BTRVocoderDriver.h */,
-			);
-			path = "Vocoder Drivers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,8 +177,6 @@
 			files = (
 				75E087F420E31574003A11F1 /* Assets.xcassets in Resources */,
 				75E0888520E31A8C003A11F1 /* Images.xcassets in Resources */,
-				75E0887F20E3177F003A11F1 /* BTRSerialVocoderView.xib in Resources */,
-				75E0887D20E3177F003A11F1 /* BTRNetworkVocoderView.xib in Resources */,
 				75E0888320E319B4003A11F1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,38 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75E0886420E3177F003A11F1 /* BTRCallFormatter.m in Sources */,
-				75E0887420E3177F003A11F1 /* MASShortcutValidator.m in Sources */,
-				75E0886220E3177F003A11F1 /* BTRAudioHandler.m in Sources */,
-				75E0887B20E3177F003A11F1 /* BTRDV3KSerialVocoder.m in Sources */,
-				75E0887C20E3177F003A11F1 /* BTRDV3KVocoder.m in Sources */,
-				75E0886020E3177F003A11F1 /* BTRAppDelegate.m in Sources */,
-				75E0886820E3177F003A11F1 /* BTRDPlusLink.m in Sources */,
-				75E0887320E3177F003A11F1 /* MASShortcut.m in Sources */,
-				75E0886F20E3177F003A11F1 /* BTRSlowDataCoder.m in Sources */,
-				75E0888020E3177F003A11F1 /* BTRSerialVocoderViewController.m in Sources */,
-				75E0887120E3177F003A11F1 /* BTRDataEngine.m in Sources */,
 				75E087FA20E31574003A11F1 /* main.m in Sources */,
-				75E0886720E3177F003A11F1 /* BTRDPlusAuthenticator.m in Sources */,
-				75E0887820E3177F003A11F1 /* TPCircularBuffer+AudioBufferList.c in Sources */,
-				75E0886C20E3177F003A11F1 /* BTRMainWindowViewController.m in Sources */,
-				75E0886A20E3177F003A11F1 /* BTRIRCDDBGateways.m in Sources */,
-				75E0887220E3177F003A11F1 /* MASDictionaryTransformer.m in Sources */,
-				75E0886620E3177F003A11F1 /* BTRDExtraLink.m in Sources */,
-				75E0886920E3177F003A11F1 /* BTRGeneralPreferencesController.m in Sources */,
-				75E0887920E3177F003A11F1 /* TPCircularBuffer.c in Sources */,
-				75E0886320E3177F003A11F1 /* BTRAudioViewController.m in Sources */,
-				75E0886B20E3177F003A11F1 /* BTRLinkDriver.m in Sources */,
-				75E0886E20E3177F003A11F1 /* BTRMessageFormatter.m in Sources */,
-				75E0887020E3177F003A11F1 /* BTRVocoderViewController.m in Sources */,
-				75E0886520E3177F003A11F1 /* BTRDCSLink.m in Sources */,
-				75E0887A20E3177F003A11F1 /* BTRDV3KNetworkVocoder.m in Sources */,
-				75E0885F20E3177F003A11F1 /* BTRAddPopupController.m in Sources */,
-				75E0886D20E3177F003A11F1 /* BTRMapPopupController.m in Sources */,
-				75E0887720E3177F003A11F1 /* PortMapper.m in Sources */,
-				75E0887E20E3177F003A11F1 /* BTRNetworkVocoderViewController.m in Sources */,
-				75E0887520E3177F003A11F1 /* MASShortcutView.m in Sources */,
-				75E0886120E3177F003A11F1 /* BTRAprsLocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
